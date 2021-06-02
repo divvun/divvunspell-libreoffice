@@ -16,6 +16,28 @@ from com.sun.star.lang import (  # type: ignore
     Locale,
 )
 
+def find_spellers_windows():
+    speller_paths = {}
+    for (path, _dirs, files) in os.walk("C:\\Program Files\\WinDivvun\\spellers"):
+        speller_files = [x for x in files if x.endswith(".zhfst") or x.endswith(".bhfst")]
+        for f in speller_files:
+            p = os.path.join(path, f)
+            tag = os.path.splitext(f)[0].replace("_", "-")
+            if "-" in tag:
+                base_tag = tag.split("-")[0]
+                speller_paths[base_tag] = p
+            speller_paths[tag] = p
+    return speller_paths
+
+def find_spellers_macos():
+    pass
+
+def find_spellers():
+    if sys.platform == "win32":
+        return find_spellers_windows()
+    elif sys.platform == "darwin":
+        return find_spellers_macos()
+
 logging.info("Loading divvunspell")
 
 # This is a ctypes wrapper around the native DivvunSpell libraries build with
@@ -34,6 +56,7 @@ from ctypes import (
     c_ulong,
     c_void_p,
     create_string_buffer,
+    create_unicode_buffer,
     pointer,
     sizeof,
 )
@@ -41,16 +64,16 @@ from typing import List
 
 
 def python_arch_name():
-    return "%s-%s" % (sys.platform, platform.machine())
+    return "%s-%s" % (sys.platform, platform.machine().lower())
 
 
 def python_lib_name():
-    s = platform.system().lower()
+    s = sys.platform
     l = "libdivvunspell"
     if s == "darwin":
         return "%s.dylib" % l
     elif s == "win32":
-        return "%s.dll" % l
+        return "divvunspell.dll"
     else:
         return "%s.so" % l
 
@@ -101,18 +124,30 @@ class PathPointer(ctypes.Structure):
 
     @staticmethod
     def from_path(input: PathLike):
-        str_bytes = input.encode("utf-8")
-        data = ctypes.cast(
-            pointer(create_string_buffer(str_bytes, size=len(str_bytes))), c_void_p
-        )
-        ptr = StringPointer(data, c_void_p(len(str_bytes)))
+        if sys.platform == "win32":
+            str_bytes = input.encode("utf-16-le")
+            data = ctypes.cast(
+                pointer(create_string_buffer(str_bytes, size=len(str_bytes))), c_void_p
+            )
+            str_len = int(len(str_bytes) / 2)
+            print(str_len)
+        else:
+            str_bytes = input.encode("utf-8")
+            data = ctypes.cast(
+                pointer(create_string_buffer(str_bytes, size=len(str_bytes))), c_void_p
+            )
+            str_len = len(str_bytes)
+        ptr = PathPointer(data, c_void_p(str_len))
         return ptr
 
     def as_bytes(self) -> bytes:
         return ctypes.string_at(self.data, self.len)
 
     def __str__(self) -> str:
-        return self.as_bytes().decode("utf-8")
+        if sys.platform == "win32":
+            return self.as_bytes().decode("utf-16-le")
+        else:
+            return self.as_bytes().decode("utf-8")
 
 
 class SlicePointer(ctypes.Structure):
@@ -137,7 +172,11 @@ class TraitObjectPointer(ctypes.Structure):
 
 
 # Time to import the dylib and hook things
-lib = CDLL(native_lib_path())
+try:
+    lib = CDLL(native_lib_path())
+except Exception as e:
+    print("Failed to load %s" % native_lib_path())
+    raise e
 lib.divvun_speller_archive_open.restype = TraitObjectPointer
 lib.divvun_speller_archive_speller.restype = TraitObjectPointer
 lib.divvun_speller_is_correct.restype = c_ubyte
@@ -268,16 +307,8 @@ class SpellChecker(
 
     def __init__(self, ctx, *args):
         logging.info("Init happened")
-        self.speller_paths: Mapping[Bcp47Tag, os.PathLike] = {}
+        self.speller_paths: Mapping[Bcp47Tag, os.PathLike] = find_spellers()
         self.spellers: Mapping[Locale, Speller] = {}
-
-        logging.info("Initialize called")
-        # Iterate the directories of spellers
-
-        # Cache the results
-        self.speller_paths[
-            "se-NO"
-        ] = "/Library/Services/se.bundle/Contents/Resources/se.zhfst"
 
     # XServiceInfo
     def getImplementationName(self):
@@ -295,12 +326,42 @@ class SpellChecker(
     def getLocales(self):
         # Iterate the directories for the .bhfst or .zhfst files
         # raise NotImplementedError()
-        return [Locale("se", "NO", "")]
+        locales = []
+
+        for tag in self.speller_paths.keys():
+            if tag.count("-") > 1:
+                # This is a special one, we can't handle it yet.
+                continue
+            elif tag.count("-") == 1:
+                # Language and country
+                [lang, country] = tag.split("-")
+                locales.append(Locale(lang, country, ""))
+            else:
+                # Just language
+                locales.append(Locale(tag, "", ""))
+
+                if tag == "se":
+                    locales.append(Locale("se", "NO", ""))
+                    locales.append(Locale("se", "SE", ""))
+                    locales.append(Locale("se", "FI", ""))
+                elif tag == "sma":
+                    locales.append(Locale("sma", "NO", ""))
+                    locales.append(Locale("sma", "SE", ""))
+                elif tag == "sms":
+                    locales.append(Locale("sms", "FI", ""))
+                elif tag == "smn":
+                    locales.append(Locale("smn", "FI", ""))
+        
+        return locales
 
     # XSupportedLocales
     def hasLocale(self, locale: Locale):
         tag = bcp47_tag(locale)
-        return tag == "se-NO"
+        if tag in self.speller_paths:
+            return True
+        if locale.Language in self.speller_paths:
+            return True
+        return False
 
     # XSpellChecker
     def isValid(self, word: str, locale: Locale, properties):
@@ -341,8 +402,12 @@ class SpellChecker(
         return "DivvunSpell"
 
     def speller(self, tag: Bcp47Tag):
-        if tag not in self.speller_paths:
+        base_tag = tag.split("-")[0]
+        if tag not in self.speller_paths and base_tag not in self.speller_paths:
             raise IllegalArgumentException(tag)
+
+        if tag not in self.speller_paths:
+            tag = base_tag
 
         if tag not in self.spellers:
             ar = SpellerArchive.open(self.speller_paths[tag])
