@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns="http://openoffice.org/2010/uno-components">
+  <component loader="com.sun.star.loader.Python" uri="entry.py">
+    <implementation name="no.divvun.DivvunSpell">
+      <service name="com.sun.star.linguistic2.SpellChecker"/>
+    </implementation>
+  </component>
+</components>
