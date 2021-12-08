@@ -1,0 +1,33 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - main
+      - ci
+
+jobs:
+  build-libreoffice:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Download divvunspell
+        uses: dawidd6/action-download-artifact@v2
+        with:
+          workflow: ci.yml
+          branch: main
+          name: lib-windows-x86_64
+          repo: divvun/divvunspell
+      - name: Bundle libreoffice OXT
+        run: |
+          mkdir -p lib/win32-amd64
+          mv *.dll lib/win32-amd64
+          zip -r divvunspell.zip *
+          mv divvunspell.zip divvunspell.oxt
+        shell: bash
+      - name: Upload OXT
+        uses: actions/upload-artifact@v2
+        with:
+          name: divvunspell.oxt
+          path: divvunspell.oxt
