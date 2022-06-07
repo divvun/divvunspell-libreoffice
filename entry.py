@@ -16,9 +16,9 @@ from com.sun.star.lang import (  # type: ignore
     Locale,
 )
 
-def find_spellers_windows():
+def _find_spellers(speller_base_path):
     speller_paths = {}
-    for (path, _dirs, files) in os.walk("C:\\Program Files\\WinDivvun\\spellers"):
+    for (path, _dirs, files) in os.walk(speller_base_path):
         speller_files = [x for x in files if x.endswith(".zhfst") or x.endswith(".bhfst")]
         for f in speller_files:
             p = os.path.join(path, f)
@@ -29,14 +29,11 @@ def find_spellers_windows():
             speller_paths[tag] = p
     return speller_paths
 
-def find_spellers_macos():
-    pass
-
 def find_spellers():
     if sys.platform == "win32":
-        return find_spellers_windows()
+        return _find_spellers("C:\\Program Files\\WinDivvun\\spellers")
     elif sys.platform == "darwin":
-        return find_spellers_macos()
+        return _find_spellers("/Library/Services")
 
 logging.info("Loading divvunspell")
 
