@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+find /Applications -name Xcode.app -prune -false -o -type f -name soffice \
+-exec bash -c '
+set -e
+set -o pipefail
+realpath() {
+  /usr/bin/python3 -c "import os; import sys; print(os.path.realpath(sys.argv[1]))" $1
+}
+x=`dirname {}`
+x=`realpath $x/../Resources/extensions`
+mkdir -p $x/divvunspell
+cd $x/divvunspell
+unzip -o "/Library/Application Support/divvun-libreoffice/divvunspell-libreoffice.bundle/Contents/Resources/divvunspell.oxt"
+' \;
