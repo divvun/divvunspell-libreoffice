@@ -1,6 +1,7 @@
 import os
 from typing import Mapping, NamedTuple, Optional, NewType
 import logging
+import json
 
 # logging.basicConfig(filename='/tmp/divvunspell-libreoffice.log', level=logging.DEBUG)
 logging.info("Started")
@@ -80,6 +81,13 @@ def native_lib_path():
         os.path.join(os.path.dirname(__file__), "lib", python_arch_name(), python_lib_name())
     )
 
+def locales_json_path():
+    return os.path.abspath(
+        os.path.join(os.path.dirname(__file__), "locales.json")
+    )
+
+with open(locales_json_path()) as f:
+    LOCALES = json.load(f)
 
 class ForeignFuncError(Exception):
     pass
@@ -322,7 +330,6 @@ class SpellChecker(
     # XSupportedLocales
     def getLocales(self):
         # Iterate the directories for the .bhfst or .zhfst files
-        # raise NotImplementedError()
         locales = []
 
         for tag in self.speller_paths.keys():
@@ -337,22 +344,20 @@ class SpellChecker(
                 # Just language
                 locales.append(Locale(tag, "", ""))
 
-                if tag == "se":
-                    locales.append(Locale("se", "NO", ""))
-                    locales.append(Locale("se", "SE", ""))
-                    locales.append(Locale("se", "FI", ""))
-                elif tag == "sma":
-                    locales.append(Locale("sma", "NO", ""))
-                    locales.append(Locale("sma", "SE", ""))
-                elif tag == "sms":
-                    locales.append(Locale("sms", "FI", ""))
-                elif tag == "smn":
-                    locales.append(Locale("smn", "FI", ""))
+                lo_countries = LOCALES.get(tag, None)
+                if lo_countries is not None:
+                    for country in lo_countries:
+                        locales.append(Locale(tag, country, ""))
+
+        logging.info("Locales:")
+        for locale in locales:
+            logging.info("%r" % locale)
         
         return locales
 
     # XSupportedLocales
     def hasLocale(self, locale: Locale):
+        logging.info("Has locale? %r" % locale)
         tag = bcp47_tag(locale)
         if tag in self.speller_paths:
             return True
