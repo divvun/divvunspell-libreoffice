@@ -1,3 +1,4 @@
 *.bundle
 *.oxt
 *.pkg
+.DS_Store
