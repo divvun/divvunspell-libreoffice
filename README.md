@@ -9,7 +9,7 @@ There's no way of installing the OXT automatically using Divvun Manager, it must
 - [LibreOffice extension page](https://extensions.libreoffice.org)
 - [LO extension management](https://extensions.libreoffice.org/admin/extensions/LibreOffice-Extensions-Extension) (requires login)
 
-The data used in the listing can be found [here](docs/).
+The data used in the listing can be found [here](docs/index.md).
 
 ## License
 
