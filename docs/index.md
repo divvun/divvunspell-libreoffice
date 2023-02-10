@@ -41,3 +41,8 @@ URL to the repository's source:
 
 Screenshots:
 > ![Screenshot of LO with North Sámi speller](img/screenshot_LO_with_SE_speller.png)
+
+Release data:
+- Platform comp: macOS only (Windows is installed via Divvun Manager)
+- Minimum version of LO supported: 7.0 (might work with earlier, but not tested)
+- License: MIT
