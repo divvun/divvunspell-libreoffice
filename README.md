@@ -4,7 +4,7 @@ LibreOffice extension for divvunspell, supporting Windows and macOS. Support for
 
 ## LibreOffice extension listing (macOS)
 
-There's no way of installing the OXT automatically using Divvun Manager, it must be installed manually by downloading the OXT and installing it using the GUI. To increase discoverability and ease of access, it should be listed on the LO extension page;:
+There's no way of installing the OXT automatically using Divvun Manager, it must be installed manually by downloading the OXT and installing it using the LibreOffice extension GUI. To increase discoverability and ease of access, the extension is also listed on the LO extension site:
 
 - [LibreOffice extension page](https://extensions.libreoffice.org)
     - [The Divvun speller extension](https://extensions.libreoffice.org/en/extensions/show/27383)
