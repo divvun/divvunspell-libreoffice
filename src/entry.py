@@ -445,12 +445,10 @@ class GrammarChecker( unohelper.Base, XProofreader, XServiceInfo, XServiceName, 
         result.xProofreader = self
         result.aErrors = ()
         
-        # # PATCH FOR LO 4
-        # # Fix for http://nabble.documentfoundation.org/Grammar-checker-Undocumented-change-in-the-API-for-LO-4-td4030639.html
+        # # PATCH LibreOffice 4
         # if nStartOfSentencePos != 0:
         #     return aRes
         # aRes.nStartOfNextSentencePosition = len(rText)
-        # # END OF PATCH
 
         # One grammar error
         grammarErr = uno.createUnoStruct("com.sun.star.linguistic2.SingleProofreadingError")
