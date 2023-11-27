@@ -4,10 +4,10 @@ import logging
 import json
 
 # logging.basicConfig(filename='/tmp/divvunspell-libreoffice.log', level=logging.DEBUG)
-logging.info("Started")
 
+import uno # type: ignore
 import unohelper  # type: ignore
-from com.sun.star.linguistic2 import XSpellChecker, XLinguServiceEventBroadcaster, XSpellAlternatives  # type: ignore
+from com.sun.star.linguistic2 import XSpellChecker, XLinguServiceEventBroadcaster, XSpellAlternatives, XProofreader, XSupportedLocales  # type: ignore
 from com.sun.star.linguistic2.SpellFailure import SPELLING_ERROR  # type: ignore
 from com.sun.star.lang import (  # type: ignore
     XServiceInfo,
@@ -15,7 +15,9 @@ from com.sun.star.lang import (  # type: ignore
     XServiceDisplayName,
     IllegalArgumentException,
     Locale,
+    XServiceName,
 )
+from com.sun.star.text.TextMarkupType import PROOFREADING
 
 def _find_spellers(speller_base_path):
     speller_paths = {}
@@ -417,12 +419,127 @@ class SpellChecker(
 
         return self.spellers[tag]
 
+# -------- GRAMMAR CHECKER --------
+class GrammarChecker( unohelper.Base, XProofreader, XServiceInfo, XServiceName, XServiceDisplayName, XSupportedLocales):
+    IMPLEMENTATION_NAME = "no.divvun.DivvunGrammar"
+    SUPPORTED_SERVICE_NAMES = ("com.sun.star.linguistic2.Proofreader",)
+
+    def __init__( self, ctx, *args ):
+        logging.info("GRAMMAR CHECKER INIT")
+        self.speller_paths: Mapping[Bcp47Tag, os.PathLike] = find_spellers()
+
+    # XProofreader
+    def isSpellChecker(self):
+        return False
+
+    # XProofreader
+    def doProofreading(self, docId, text, locale, startOfSentencePos, suggestedSentenceEndPos, properties):
+        logging.info("Proofreading paragraph")
+        result = uno.createUnoStruct("com.sun.star.linguistic2.ProofreadingResult")
+        result.aDocumentIdentifier = docId
+        result.aText = text
+        result.aLocale = locale
+        result.nStartOfSentencePosition = startOfSentencePos
+        result.nStartOfNextSentencePosition = suggestedSentenceEndPos
+        result.aProperties = ()
+        result.xProofreader = self
+        result.aErrors = ()
+        
+        # # PATCH FOR LO 4
+        # # Fix for http://nabble.documentfoundation.org/Grammar-checker-Undocumented-change-in-the-API-for-LO-4-td4030639.html
+        # if nStartOfSentencePos != 0:
+        #     return aRes
+        # aRes.nStartOfNextSentencePosition = len(rText)
+        # # END OF PATCH
+
+        # One grammar error
+        grammarErr = uno.createUnoStruct("com.sun.star.linguistic2.SingleProofreadingError")
+        grammarErr.nErrorStart = startOfSentencePos
+        grammarErr.nErrorLength = startOfSentencePos + 8 # aRes.nBehindEndOfSentencePosition
+        grammarErr.nErrorType = PROOFREADING
+        grammarErr.aRuleIdentifier = "test"
+        grammarErr.aShortComment = "Test Test"
+        # aErr.aLongComment = "Test Long Comment"
+
+        result.aErrors = tuple([grammarErr]) # All grammar errors
+
+        return result
+
+    # XProofreader
+    def ignoreRule(self, ruleId, locale):
+        logging.info("IGNORE RULE")
+        # Save ignored rules
+
+    # XProofreader
+    def resetIgnoreRules(self):
+        logging.info("RESET IGNORE RULES")
+        # Clear ignored rules
+
+    # XSupportedLocales
+    def getLocales(self):
+        # Iterate the directories for the .bhfst or .zhfst files
+        locales = []
+
+        for tag in self.speller_paths.keys():
+            if tag.count("-") > 1:
+                # This is a special one, we can't handle it yet.
+                continue
+            elif tag.count("-") == 1:
+                # Language and country
+                [lang, country] = tag.split("-")
+                locales.append(Locale(lang, country, ""))
+            else:
+                # Just language
+                locales.append(Locale(tag, "", ""))
+
+                lo_countries = LOCALES.get(tag, None)
+                if lo_countries is not None:
+                    for country in lo_countries:
+                        locales.append(Locale(tag, country, ""))
+
+        logging.info("Locales:")
+        for locale in locales:
+            logging.info("%r" % locale)
+        
+        return locales
+
+    # XSupportedLocales
+    def hasLocale(self, locale: Locale):
+        logging.info("Has locale? %r" % locale)
+        tag = bcp47_tag(locale)
+        if tag in self.speller_paths:
+            return True
+        if locale.Language in self.speller_paths:
+            return True
+        return False
+
+    # XServiceName
+    def getServiceName(self):
+        return GrammarChecker.IMPLEMENTATION_NAME
+
+    # XServiceInfo
+    def getImplementationName (self):
+        return GrammarChecker.IMPLEMENTATION_NAME
+
+    # XServiceInfo
+    def supportsService(self, name):
+        return (name in self.getSupportedServiceNames())
+    # XServiceInfo
+    def getSupportedServiceNames (self):
+        return self.SUPPORTED_SERVICE_NAMES
+
+    # XServiceDisplayName
+    def getServiceDisplayName(self, locale):
+        return "DivvunGrammar"
 
 # This is the registration point for the speller.
 try:
     g_ImplementationHelper = unohelper.ImplementationHelper()
     g_ImplementationHelper.addImplementation(
         SpellChecker, SpellChecker.IMPLEMENTATION_NAME, SpellChecker.SUPPORTED_SERVICE_NAMES
+    )
+    g_ImplementationHelper.addImplementation(
+        GrammarChecker, GrammarChecker.IMPLEMENTATION_NAME, GrammarChecker.SUPPORTED_SERVICE_NAMES
     )
 except Exception as e:
     logging.error(e)

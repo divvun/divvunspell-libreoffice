@@ -1,4 +1,7 @@
 *.bundle
 *.oxt
 *.pkg
+*.tar
+*.txz
+*.zip
 .DS_Store

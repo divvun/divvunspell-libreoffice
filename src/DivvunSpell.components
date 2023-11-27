@@ -4,5 +4,8 @@
     <implementation name="no.divvun.DivvunSpell">
       <service name="com.sun.star.linguistic2.SpellChecker"/>
     </implementation>
+    <implementation name="no.divvun.DivvunGrammar">
+      <service name="com.sun.star.linguistic2.Proofreader"/>
+    </implementation>
   </component>
 </components>

@@ -20,3 +20,24 @@ The repository for `divvunspell-libreoffice` is licensed under either of
  * MIT license ([LICENSE-MIT](LICENSE-MIT) or http://opensource.org/licenses/MIT)
 
 at your option.
+
+## Build
+
+### macOS
+
+```
+curl -Ls "https://pahkat.uit.no/devtools/download/libdivvunspell?platform=macos&channel=nightly" -o libdivvunspell.txz
+xz -d libdivvunspell.txz
+tar xvf libdivvunspell.tar
+mkdir -p src/lib/darwin-x86_64
+mkdir -p src/lib/darwin-arm64
+mv lib/x86_64/* src/lib/darwin-x86_64
+mv lib/aarch64/* src/lib/darwin-arm64
+rm -Rf lib
+
+cd src
+zip -r divvunspell.zip *
+mv divvunspell.zip divvunspell.oxt
+cd ..
+rm -Rf src/lib
+```
