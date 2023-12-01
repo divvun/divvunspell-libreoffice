@@ -1,8 +1,8 @@
 import logging
-
 import unohelper # type: ignore
-import spelling
+
 import grammar
+import spelling
 
 # Uncomment for debugging purposes
 logging.basicConfig(filename='/tmp/divvunspell-libreoffice.log', level=logging.DEBUG)
