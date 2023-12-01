@@ -6,9 +6,11 @@ from os import PathLike
 from typing import Mapping, Optional, NewType, List
 import ctypes
 import logging
-import json
+from pathlib import Path
 
 from com.sun.star.lang import ( Locale ) # type: ignore 
+
+PARENT_DIR = Path(__file__).parent
 
 # -------- Speller files --------
 def _find_spellers(speller_base_path):
@@ -44,19 +46,19 @@ def _python_lib_name(libname: str):
     else:
         return "%s.so" % libname
 
-def native_lib_path(base: str, libname: str):
+def native_lib_path(libname: str):
     return os.path.abspath(
-        os.path.join(os.path.dirname(base), "lib", _python_arch_name(), _python_lib_name(libname))
+        os.path.join(os.path.dirname(PARENT_DIR), "lib", _python_arch_name(), _python_lib_name(libname))
     )
 
-def box_path(base: str, filename: str):
+def box_path(filename: str):
     return os.path.abspath(
-        os.path.join(os.path.dirname(base), "resources", "%s.drb" % filename)
+        os.path.join(os.path.dirname(PARENT_DIR), "resources", "%s.drb" % filename)
     )
 
-def locales_json_path(base: str):
+def locales_json_path():
     return os.path.abspath(
-        os.path.join(os.path.dirname(base), "locales.json")
+        os.path.join(os.path.dirname(PARENT_DIR), "locales.json")
     )
 
 
