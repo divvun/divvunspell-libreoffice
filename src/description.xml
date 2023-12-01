@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <description xmlns="http://openoffice.org/extensions/description/2006" xmlns:d="http://openoffice.org/extensions/description/2006" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <identifier value="no.divvun.Divvun"/>
+  <identifier value="no.divvun.DivvunSpell"/>
   <display-name>
-    <name lang="en">Divvun</name>
+    <name lang="en">DivvunSpell</name>
   </display-name>
 </description>

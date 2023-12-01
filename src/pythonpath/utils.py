@@ -9,15 +9,18 @@ import logging
 from pathlib import Path
 import json
 
-from com.sun.star.lang import ( Locale ) # type: ignore 
+from com.sun.star.lang import Locale  # type: ignore
 
 PARENT_DIR = Path(__file__).parent
+
 
 # -------- Speller files --------
 def _find_spellers(speller_base_path):
     speller_paths = {}
-    for (path, _dirs, files) in os.walk(speller_base_path):
-        speller_files = [x for x in files if x.endswith(".zhfst") or x.endswith(".bhfst")]
+    for path, _dirs, files in os.walk(speller_base_path):
+        speller_files = [
+            x for x in files if x.endswith(".zhfst") or x.endswith(".bhfst")
+        ]
         for f in speller_files:
             p = os.path.join(path, f)
             tag = os.path.splitext(f)[0].replace("_", "-")
@@ -26,6 +29,7 @@ def _find_spellers(speller_base_path):
                 speller_paths[base_tag] = p
             speller_paths[tag] = p
     return speller_paths
+
 
 def find_spellers():
     if sys.platform == "win32":
@@ -38,6 +42,7 @@ def find_spellers():
 def _python_arch_name():
     return "%s-%s" % (sys.platform, platform.machine().lower())
 
+
 def _python_lib_name(libname: str):
     s = sys.platform
     if s == "darwin":
@@ -47,20 +52,27 @@ def _python_lib_name(libname: str):
     else:
         return "%s.so" % libname
 
+
 def native_lib_path(libname: str):
     return os.path.abspath(
-        os.path.join(os.path.dirname(PARENT_DIR), "lib", _python_arch_name(), _python_lib_name(libname))
+        os.path.join(
+            os.path.dirname(PARENT_DIR),
+            "lib",
+            _python_arch_name(),
+            _python_lib_name(libname),
+        )
     )
+
 
 def box_path(filename: str):
     return os.path.abspath(
         os.path.join(os.path.dirname(PARENT_DIR), "resources", "%s.drb" % filename)
     )
 
+
 def locales_json_path():
-    return os.path.abspath(
-        os.path.join(os.path.dirname(PARENT_DIR), "locales.json")
-    )
+    return os.path.abspath(os.path.join(os.path.dirname(PARENT_DIR), "locales.json"))
+
 
 with open(locales_json_path()) as f:
     LOCALES = json.load(f)
@@ -68,6 +80,7 @@ with open(locales_json_path()) as f:
 
 # -------- Locales --------
 Bcp47Tag = NewType("Bcp47Tag", str)
+
 
 def bcp47_tag(locale: Locale) -> Optional[Bcp47Tag]:
     if locale.Language == "qlt":
@@ -78,6 +91,7 @@ def bcp47_tag(locale: Locale) -> Optional[Bcp47Tag]:
         return locale.Language
     return "%s-%s" % (locale.Language, locale.Country)
 
+
 def has_locale(speller_paths: Mapping[Bcp47Tag, PathLike], locale: Locale) -> bool:
     logging.info("Has locale? %r" % locale)
     tag = bcp47_tag(locale)
@@ -86,6 +100,7 @@ def has_locale(speller_paths: Mapping[Bcp47Tag, PathLike], locale: Locale) -> bo
     if locale.Language in speller_paths:
         return True
     return False
+
 
 def get_locales(speller_paths: Mapping[Bcp47Tag, PathLike]) -> List:
     # Iterate the directories for the .bhfst or .zhfst files
@@ -110,7 +125,7 @@ def get_locales(speller_paths: Mapping[Bcp47Tag, PathLike]) -> List:
     logging.info("Locales:")
     for locale in locales:
         logging.info("%r" % locale)
-    
+
     return locales
 
 
@@ -132,7 +147,8 @@ class StringPointer(ctypes.Structure):
     def from_str(input: str):
         str_bytes = input.encode("utf-8")
         data = ctypes.cast(
-            ctypes.pointer(ctypes.create_string_buffer(str_bytes, size=len(str_bytes))), ctypes.c_void_p
+            ctypes.pointer(ctypes.create_string_buffer(str_bytes, size=len(str_bytes))),
+            ctypes.c_void_p,
         )
         ptr = StringPointer(data, ctypes.c_void_p(len(str_bytes)))
         return ptr
@@ -142,7 +158,7 @@ class StringPointer(ctypes.Structure):
 
     def __str__(self) -> str:
         return self.as_bytes().decode("utf-8")
-    
+
 
 class PathPointer(ctypes.Structure):
     data: ctypes.c_void_p
@@ -158,14 +174,20 @@ class PathPointer(ctypes.Structure):
         if sys.platform == "win32":
             str_bytes = input.encode("utf-16-le")
             data = ctypes.cast(
-                ctypes.pointer(ctypes.create_string_buffer(str_bytes, size=len(str_bytes))), ctypes.c_void_p
+                ctypes.pointer(
+                    ctypes.create_string_buffer(str_bytes, size=len(str_bytes))
+                ),
+                ctypes.c_void_p,
             )
             str_len = int(len(str_bytes) / 2)
             print(str_len)
         else:
             str_bytes = input.encode("utf-8")
             data = ctypes.cast(
-                ctypes.pointer(ctypes.create_string_buffer(str_bytes, size=len(str_bytes))), ctypes.c_void_p
+                ctypes.pointer(
+                    ctypes.create_string_buffer(str_bytes, size=len(str_bytes))
+                ),
+                ctypes.c_void_p,
             )
             str_len = len(str_bytes)
         ptr = PathPointer(data, ctypes.c_void_p(str_len))
@@ -200,4 +222,3 @@ class TraitObjectPointer(ctypes.Structure):
     @staticmethod
     def from_return_value(ptr: ctypes.c_void_p):
         return TraitObjectPointer(ptr, ptr + ctypes.sizeof(ctypes.c_void_p))
-    

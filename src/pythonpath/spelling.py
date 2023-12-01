@@ -9,11 +9,11 @@ import unohelper  # type: ignore
 from com.sun.star.linguistic2 import XSpellChecker, XLinguServiceEventBroadcaster, XSpellAlternatives  # type: ignore
 from com.sun.star.linguistic2.SpellFailure import SPELLING_ERROR  # type: ignore
 from com.sun.star.lang import (  # type: ignore
-    XServiceInfo, # type: ignore
-    XInitialization, # type: ignore
-    XServiceDisplayName, # type: ignore
-    IllegalArgumentException, # type: ignore
-    Locale, # type: ignore
+    XServiceInfo,  # type: ignore
+    XInitialization,  # type: ignore
+    XServiceDisplayName,  # type: ignore
+    IllegalArgumentException,  # type: ignore
+    Locale,  # type: ignore
 )
 import utils
 
@@ -43,10 +43,12 @@ def assert_no_error():
         _last_error = None
         raise utils.ForeignFuncError(e)
 
+
 @ctypes.CFUNCTYPE(ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p)
 def error_callback(error: ctypes.c_void_p, size: ctypes.c_void_p):
     global _last_error
     _last_error = str(utils.StringPointer(error, size))
+
 
 class SpellerArchive:
     @staticmethod
@@ -97,12 +99,16 @@ class Speller:
 
         out = []
         for i in range(0, vec_len):
-            res = lib.divvun_vec_suggestion_get_value(suggs, ctypes.c_long(i), error_callback)
+            res = lib.divvun_vec_suggestion_get_value(
+                suggs, ctypes.c_long(i), error_callback
+            )
             assert_no_error()
             out.append(str(res))
         return out
 
+
 logging.info("Loaded divvunspell")
+
 
 # -------- SPELL CHECKER --------
 class SpellAlternatives(unohelper.Base, XSpellAlternatives):
@@ -214,4 +220,3 @@ class SpellChecker(
             self.spellers[tag] = ar.speller()
 
         return self.spellers[tag]
-    
