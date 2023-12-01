@@ -7,6 +7,7 @@ from typing import Mapping, Optional, NewType, List
 import ctypes
 import logging
 from pathlib import Path
+import json
 
 from com.sun.star.lang import ( Locale ) # type: ignore 
 
@@ -61,6 +62,9 @@ def locales_json_path():
         os.path.join(os.path.dirname(PARENT_DIR), "locales.json")
     )
 
+with open(locales_json_path()) as f:
+    LOCALES = json.load(f)
+
 
 # -------- Locales --------
 Bcp47Tag = NewType("Bcp47Tag", str)
@@ -83,7 +87,7 @@ def has_locale(speller_paths: Mapping[Bcp47Tag, PathLike], locale: Locale) -> bo
         return True
     return False
 
-def get_locales(LOCALES, speller_paths: Mapping[Bcp47Tag, PathLike]) -> List:
+def get_locales(speller_paths: Mapping[Bcp47Tag, PathLike]) -> List:
     # Iterate the directories for the .bhfst or .zhfst files
     locales = []
     for tag in speller_paths.keys():

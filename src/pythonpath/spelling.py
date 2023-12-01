@@ -2,13 +2,8 @@ import os
 from typing import Mapping
 import logging
 import ctypes
-import json
 import os.path
 from typing import Mapping, List
-
-logging.basicConfig(filename='/tmp/divvunspell-libreoffice.log', level=logging.DEBUG)
-
-import utils # type: ignore
 
 import unohelper  # type: ignore
 from com.sun.star.linguistic2 import XSpellChecker, XLinguServiceEventBroadcaster, XSpellAlternatives  # type: ignore
@@ -20,9 +15,7 @@ from com.sun.star.lang import (  # type: ignore
     IllegalArgumentException, # type: ignore
     Locale, # type: ignore
 )
-
-with open(utils.locales_json_path()) as f:
-    LOCALES = json.load(f)
+import utils
 
 logging.info("Loading divvunspell")
 
@@ -164,7 +157,7 @@ class SpellChecker(
 
     # XSupportedLocales
     def getLocales(self):
-        return utils.get_locales(LOCALES, self.speller_paths)
+        return utils.get_locales(self.speller_paths)
 
     # XSupportedLocales
     def hasLocale(self, locale: Locale):
@@ -221,3 +214,4 @@ class SpellChecker(
             self.spellers[tag] = ar.speller()
 
         return self.spellers[tag]
+    
