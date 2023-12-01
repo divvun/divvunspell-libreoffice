@@ -1,7 +1,17 @@
-*.bundle
-*.oxt
-*.pkg
 *.tar
 *.txz
 *.zip
+*.drb
+
+# Dynamic libraries
+*.dylib
+*.so
+*.dll
+
+# Bundling
+*.bundle
+*.oxt
+*.pkg
+
+# Metadata
 .DS_Store

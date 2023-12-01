@@ -1,5 +1,5 @@
 import os
-from typing import Mapping, NamedTuple, Optional, NewType
+from typing import Mapping, Optional, NewType
 import logging
 import json
 
@@ -55,8 +55,8 @@ from ctypes import (
     c_ubyte,
     c_ulong,
     c_void_p,
+    c_char_p,
     create_string_buffer,
-    create_unicode_buffer,
     pointer,
     sizeof,
 )
@@ -67,20 +67,23 @@ def python_arch_name():
     return "%s-%s" % (sys.platform, platform.machine().lower())
 
 
-def python_lib_name():
+def python_lib_name(libname: str):
     s = sys.platform
-    l = "libdivvunspell"
     if s == "darwin":
-        return "%s.dylib" % l
+        return "%s.dylib" % libname
     elif s == "win32":
         return "divvunspell.dll"
     else:
-        return "%s.so" % l
+        return "%s.so" % libname
 
-
-def native_lib_path():
+def native_lib_path(libname: str):
     return os.path.abspath(
-        os.path.join(os.path.dirname(__file__), "lib", python_arch_name(), python_lib_name())
+        os.path.join(os.path.dirname(__file__), "lib", python_arch_name(), python_lib_name(libname))
+    )
+
+def box_path(filename: str):
+    return os.path.abspath(
+        os.path.join(os.path.dirname(__file__), "resources", "%s.drb" % filename)
     )
 
 def locales_json_path():
@@ -179,10 +182,12 @@ class TraitObjectPointer(ctypes.Structure):
 
 
 # Time to import the dylib and hook things
+logging.info(native_lib_path("libdivvunspell"))
+
 try:
-    lib = CDLL(native_lib_path())
+    lib = CDLL(native_lib_path("libdivvunspell"))
 except Exception as e:
-    print("Failed to load %s" % native_lib_path())
+    print("Failed to load %s" % native_lib_path("libdivvunspell"))
     raise e
 lib.divvun_speller_archive_open.restype = TraitObjectPointer
 lib.divvun_speller_archive_speller.restype = TraitObjectPointer
@@ -263,11 +268,27 @@ class Speller:
             out.append(str(res))
         return out
 
-
 logging.info("Loaded divvunspell")
 
-Bcp47Tag = NewType("Bcp47Tag", str)
 
+logging.info("Loading divvunruntime")
+
+try:
+    divvun_runtime = ctypes.CDLL(native_lib_path("libdivvun_runtime"))
+except Exception as e:
+    logging.info(e)
+    raise e
+divvun_runtime.bundle_load.argtypes = [ctypes.c_char_p]
+divvun_runtime.bundle_load.restype = ctypes.c_void_p
+divvun_runtime.bundle_run_pipeline.argtypes = [ctypes.c_void_p, ctypes.c_char_p]
+divvun_runtime.bundle_run_pipeline.restype = ctypes.c_char_p
+logging.info("Loading bundle...")
+bundle = divvun_runtime.bundle_load(box_path("sme").encode("utf-8"))
+logging.info("Bundle loaded")
+
+logging.info("Loaded divvun_runtime")
+
+Bcp47Tag = NewType("Bcp47Tag", str)
 
 def bcp47_tag(locale: Locale) -> Optional[Bcp47Tag]:
     if locale.Language == "qlt":
@@ -278,7 +299,42 @@ def bcp47_tag(locale: Locale) -> Optional[Bcp47Tag]:
         return locale.Language
     return "%s-%s" % (locale.Language, locale.Country)
 
+def has_locale(speller_paths: Mapping[Bcp47Tag, os.PathLike], locale: Locale) -> bool:
+    logging.info("Has locale? %r" % locale)
+    tag = bcp47_tag(locale)
+    if tag in speller_paths:
+        return True
+    if locale.Language in speller_paths:
+        return True
+    return False
 
+def get_locales(speller_paths: Mapping[Bcp47Tag, os.PathLike]) -> List:
+    # Iterate the directories for the .bhfst or .zhfst files
+    locales = []
+    for tag in speller_paths.keys():
+        if tag.count("-") > 1:
+            # This is a special one, we can't handle it yet.
+            continue
+        elif tag.count("-") == 1:
+            # Language and country
+            [lang, country] = tag.split("-")
+            locales.append(Locale(lang, country, ""))
+        else:
+            # Just language
+            locales.append(Locale(tag, "", ""))
+
+            lo_countries = LOCALES.get(tag, None)
+            if lo_countries is not None:
+                for country in lo_countries:
+                    locales.append(Locale(tag, country, ""))
+
+    logging.info("Locales:")
+    for locale in locales:
+        logging.info("%r" % locale)
+    
+    return locales
+
+# -------- SPELL CHECKER --------
 class SpellAlternatives(unohelper.Base, XSpellAlternatives):
     def __init__(self, word, alternatives, locale):
         self.word = word
@@ -331,41 +387,11 @@ class SpellChecker(
 
     # XSupportedLocales
     def getLocales(self):
-        # Iterate the directories for the .bhfst or .zhfst files
-        locales = []
-
-        for tag in self.speller_paths.keys():
-            if tag.count("-") > 1:
-                # This is a special one, we can't handle it yet.
-                continue
-            elif tag.count("-") == 1:
-                # Language and country
-                [lang, country] = tag.split("-")
-                locales.append(Locale(lang, country, ""))
-            else:
-                # Just language
-                locales.append(Locale(tag, "", ""))
-
-                lo_countries = LOCALES.get(tag, None)
-                if lo_countries is not None:
-                    for country in lo_countries:
-                        locales.append(Locale(tag, country, ""))
-
-        logging.info("Locales:")
-        for locale in locales:
-            logging.info("%r" % locale)
-        
-        return locales
+        return get_locales(self.speller_paths)
 
     # XSupportedLocales
     def hasLocale(self, locale: Locale):
-        logging.info("Has locale? %r" % locale)
-        tag = bcp47_tag(locale)
-        if tag in self.speller_paths:
-            return True
-        if locale.Language in self.speller_paths:
-            return True
-        return False
+        return has_locale(self.speller_paths, locale)
 
     # XSpellChecker
     def isValid(self, word: str, locale: Locale, properties):
@@ -425,7 +451,7 @@ class GrammarChecker( unohelper.Base, XProofreader, XServiceInfo, XServiceName, 
     SUPPORTED_SERVICE_NAMES = ("com.sun.star.linguistic2.Proofreader",)
 
     def __init__( self, ctx, *args ):
-        logging.info("GRAMMAR CHECKER INIT")
+        logging.info("Grammar checker init")
         self.speller_paths: Mapping[Bcp47Tag, os.PathLike] = find_spellers()
 
     # XProofreader
@@ -444,72 +470,49 @@ class GrammarChecker( unohelper.Base, XProofreader, XServiceInfo, XServiceName, 
         result.aProperties = ()
         result.xProofreader = self
         result.aErrors = ()
-        
-        # # PATCH LibreOffice 4
-        # if nStartOfSentencePos != 0:
-        #     return aRes
-        # aRes.nStartOfNextSentencePosition = len(rText)
 
-        # One grammar error
-        grammarErr = uno.createUnoStruct("com.sun.star.linguistic2.SingleProofreadingError")
-        grammarErr.nErrorStart = startOfSentencePos
-        grammarErr.nErrorLength = startOfSentencePos + 8 # aRes.nBehindEndOfSentencePosition
-        grammarErr.nErrorType = PROOFREADING
-        grammarErr.aRuleIdentifier = "test"
-        grammarErr.aShortComment = "Test Test"
-        # aErr.aLongComment = "Test Long Comment"
+        logging.info("Running pipeline...")
+        res = divvun_runtime.bundle_run_pipeline(c_void_p(bundle).value, text.encode("utf-8"))
+        logging.info("Pipeline finished")
 
-        result.aErrors = tuple([grammarErr]) # All grammar errors
+        bytes = c_char_p(res).value
+        logging.info(bytes)
+        grammarErrors = []
+        if bytes:
+            data = json.loads(bytes.decode())
+
+            for err in data["errs"]:
+                grammarErr = uno.createUnoStruct("com.sun.star.linguistic2.SingleProofreadingError")
+                grammarErr.nErrorStart = err[1]
+                grammarErr.nErrorLength = err[2] - err[1]
+                grammarErr.nErrorType = PROOFREADING
+                grammarErr.aRuleIdentifier = err[3]
+                grammarErr.aShortComment = err[4]
+                grammarErr.aSuggestions = err[5]
+
+                grammarErrors.append(grammarErr)
+
+        result.aErrors = tuple(grammarErrors) # All grammar errors
 
         return result
 
     # XProofreader
     def ignoreRule(self, ruleId, locale):
-        logging.info("IGNORE RULE")
-        # Save ignored rules
+        # TODO: Save ignored rules
+        logging.info("Ignore rule")
 
     # XProofreader
     def resetIgnoreRules(self):
-        logging.info("RESET IGNORE RULES")
-        # Clear ignored rules
+        # TODO: Clear ignored rules
+        logging.info("Reset ignore rules")
 
     # XSupportedLocales
     def getLocales(self):
-        # Iterate the directories for the .bhfst or .zhfst files
-        locales = []
-
-        for tag in self.speller_paths.keys():
-            if tag.count("-") > 1:
-                # This is a special one, we can't handle it yet.
-                continue
-            elif tag.count("-") == 1:
-                # Language and country
-                [lang, country] = tag.split("-")
-                locales.append(Locale(lang, country, ""))
-            else:
-                # Just language
-                locales.append(Locale(tag, "", ""))
-
-                lo_countries = LOCALES.get(tag, None)
-                if lo_countries is not None:
-                    for country in lo_countries:
-                        locales.append(Locale(tag, country, ""))
-
-        logging.info("Locales:")
-        for locale in locales:
-            logging.info("%r" % locale)
-        
-        return locales
+        return get_locales(self.speller_paths)
 
     # XSupportedLocales
     def hasLocale(self, locale: Locale):
-        logging.info("Has locale? %r" % locale)
-        tag = bcp47_tag(locale)
-        if tag in self.speller_paths:
-            return True
-        if locale.Language in self.speller_paths:
-            return True
-        return False
+        return has_locale(self.speller_paths, locale)
 
     # XServiceName
     def getServiceName(self):
@@ -530,7 +533,7 @@ class GrammarChecker( unohelper.Base, XProofreader, XServiceInfo, XServiceName, 
     def getServiceDisplayName(self, locale):
         return "DivvunGrammar"
 
-# This is the registration point for the speller.
+# -------- REGISTER SERVICES --------
 try:
     g_ImplementationHelper = unohelper.ImplementationHelper()
     g_ImplementationHelper.addImplementation(

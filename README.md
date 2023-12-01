@@ -25,7 +25,13 @@ at your option.
 
 ### macOS
 
-```
+To run this script you need to have the files `libdivvun_runtime.dylib` and `sme.drb` in this directory.
+
+```zsh
+# Remove the previous bundle
+rm src/divvunspell.oxt
+
+# Spell checking
 curl -Ls "https://pahkat.uit.no/devtools/download/libdivvunspell?platform=macos&channel=nightly" -o libdivvunspell.txz
 xz -d libdivvunspell.txz
 tar xvf libdivvunspell.tar
@@ -35,9 +41,16 @@ mv lib/x86_64/* src/lib/darwin-x86_64
 mv lib/aarch64/* src/lib/darwin-arm64
 rm -Rf lib
 
+# Grammar checking
+cp libdivvun_runtime.dylib src/lib/darwin-arm64
+mkdir -p src/resources
+cp sme.drb src/resources
+
+# Bundling
 cd src
 zip -r divvunspell.zip *
 mv divvunspell.zip divvunspell.oxt
 cd ..
 rm -Rf src/lib
+rm -Rf src/resources
 ```
