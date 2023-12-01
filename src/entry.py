@@ -1,5 +1,5 @@
 import logging
-import unohelper  # type: ignore
+import unohelper # type: ignore
 
 import grammar
 import spelling

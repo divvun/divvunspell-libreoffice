@@ -25,7 +25,7 @@ at your option.
 
 ### macOS
 
-To run this script you need to have the files `libdivvun_runtime.dylib` and `sme.drb` in this directory.
+To run this script you need to have the files `libdivvun_runtime.dylib`(for your architecture) and `sme.drb` in this directory.
 
 ```zsh
 # Remove the previous bundle
