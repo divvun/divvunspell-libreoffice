@@ -1,0 +1,27 @@
+#ifndef INCLUDED_OOO_VBA_ADODB_FIELDATTRIBUTEENUM_HDL
+#define INCLUDED_OOO_VBA_ADODB_FIELDATTRIBUTEENUM_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace adodb { namespace FieldAttributeEnum {
+
+static const ::sal_Int32 adFldCacheDeferred = (sal_Int32)4096;
+static const ::sal_Int32 adFldFixed = (sal_Int32)16;
+static const ::sal_Int32 adFldIsNullable = (sal_Int32)32;
+static const ::sal_Int32 adFldKeyColumn = (sal_Int32)32768;
+static const ::sal_Int32 adFldLong = (sal_Int32)128;
+static const ::sal_Int32 adFldMayBeNull = (sal_Int32)64;
+static const ::sal_Int32 adFldMayDefer = (sal_Int32)2;
+static const ::sal_Int32 adFldNegativeScale = (sal_Int32)16384;
+static const ::sal_Int32 adFldRowID = (sal_Int32)256;
+static const ::sal_Int32 adFldRowVersion = (sal_Int32)512;
+static const ::sal_Int32 adFldUnknownUpdatable = (sal_Int32)8;
+static const ::sal_Int32 adFldUnspecified = (sal_Int32)-1;
+static const ::sal_Int32 adFldUpdatable = (sal_Int32)4;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_ADODB_FIELDATTRIBUTEENUM_HDL

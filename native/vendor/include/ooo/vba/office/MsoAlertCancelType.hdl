@@ -1,0 +1,20 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOALERTCANCELTYPE_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOALERTCANCELTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoAlertCancelType {
+
+static const ::sal_Int32 msoAlertCancelDefault = (sal_Int32)-1;
+static const ::sal_Int32 msoAlertCancelFifth = (sal_Int32)4;
+static const ::sal_Int32 msoAlertCancelFirst = (sal_Int32)0;
+static const ::sal_Int32 msoAlertCancelFourth = (sal_Int32)3;
+static const ::sal_Int32 msoAlertCancelSecond = (sal_Int32)1;
+static const ::sal_Int32 msoAlertCancelThird = (sal_Int32)2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOALERTCANCELTYPE_HDL

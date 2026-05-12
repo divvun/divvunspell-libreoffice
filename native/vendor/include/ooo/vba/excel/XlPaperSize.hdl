@@ -1,0 +1,56 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLPAPERSIZE_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLPAPERSIZE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlPaperSize {
+
+static const ::sal_Int32 xlPaper10x14 = (sal_Int32)16;
+static const ::sal_Int32 xlPaper11x17 = (sal_Int32)17;
+static const ::sal_Int32 xlPaperA3 = (sal_Int32)8;
+static const ::sal_Int32 xlPaperA4 = (sal_Int32)9;
+static const ::sal_Int32 xlPaperA4Small = (sal_Int32)10;
+static const ::sal_Int32 xlPaperA5 = (sal_Int32)11;
+static const ::sal_Int32 xlPaperB4 = (sal_Int32)12;
+static const ::sal_Int32 xlPaperB5 = (sal_Int32)13;
+static const ::sal_Int32 xlPaperCsheet = (sal_Int32)24;
+static const ::sal_Int32 xlPaperDsheet = (sal_Int32)25;
+static const ::sal_Int32 xlPaperEnvelope10 = (sal_Int32)20;
+static const ::sal_Int32 xlPaperEnvelope11 = (sal_Int32)21;
+static const ::sal_Int32 xlPaperEnvelope12 = (sal_Int32)22;
+static const ::sal_Int32 xlPaperEnvelope14 = (sal_Int32)23;
+static const ::sal_Int32 xlPaperEnvelope9 = (sal_Int32)19;
+static const ::sal_Int32 xlPaperEnvelopeB4 = (sal_Int32)33;
+static const ::sal_Int32 xlPaperEnvelopeB5 = (sal_Int32)34;
+static const ::sal_Int32 xlPaperEnvelopeB6 = (sal_Int32)35;
+static const ::sal_Int32 xlPaperEnvelopeC3 = (sal_Int32)29;
+static const ::sal_Int32 xlPaperEnvelopeC4 = (sal_Int32)30;
+static const ::sal_Int32 xlPaperEnvelopeC5 = (sal_Int32)28;
+static const ::sal_Int32 xlPaperEnvelopeC6 = (sal_Int32)31;
+static const ::sal_Int32 xlPaperEnvelopeC65 = (sal_Int32)32;
+static const ::sal_Int32 xlPaperEnvelopeDL = (sal_Int32)27;
+static const ::sal_Int32 xlPaperEnvelopeItaly = (sal_Int32)36;
+static const ::sal_Int32 xlPaperEnvelopeMonarch = (sal_Int32)37;
+static const ::sal_Int32 xlPaperEnvelopePersonal = (sal_Int32)38;
+static const ::sal_Int32 xlPaperEsheet = (sal_Int32)26;
+static const ::sal_Int32 xlPaperExecutive = (sal_Int32)7;
+static const ::sal_Int32 xlPaperFanfoldLegalGerman = (sal_Int32)41;
+static const ::sal_Int32 xlPaperFanfoldStdGerman = (sal_Int32)40;
+static const ::sal_Int32 xlPaperFanfoldUS = (sal_Int32)39;
+static const ::sal_Int32 xlPaperFolio = (sal_Int32)14;
+static const ::sal_Int32 xlPaperLedger = (sal_Int32)4;
+static const ::sal_Int32 xlPaperLegal = (sal_Int32)5;
+static const ::sal_Int32 xlPaperLetter = (sal_Int32)1;
+static const ::sal_Int32 xlPaperLetterSmall = (sal_Int32)2;
+static const ::sal_Int32 xlPaperNote = (sal_Int32)18;
+static const ::sal_Int32 xlPaperQuarto = (sal_Int32)15;
+static const ::sal_Int32 xlPaperStatement = (sal_Int32)6;
+static const ::sal_Int32 xlPaperTabloid = (sal_Int32)3;
+static const ::sal_Int32 xlPaperUser = (sal_Int32)256;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLPAPERSIZE_HDL

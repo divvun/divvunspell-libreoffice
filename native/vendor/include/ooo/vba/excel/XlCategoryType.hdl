@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLCATEGORYTYPE_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLCATEGORYTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlCategoryType {
+
+static const ::sal_Int32 xlAutomaticScale = (sal_Int32)-4105;
+static const ::sal_Int32 xlCategoryScale = (sal_Int32)2;
+static const ::sal_Int32 xlTimeScale = (sal_Int32)3;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLCATEGORYTYPE_HDL

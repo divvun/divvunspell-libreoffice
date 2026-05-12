@@ -1,0 +1,18 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDXMLNODELEVEL_HDL
+#define INCLUDED_OOO_VBA_WORD_WDXMLNODELEVEL_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdXMLNodeLevel {
+
+static const ::sal_Int32 wdXMLNodeLevelCell = (sal_Int32)3;
+static const ::sal_Int32 wdXMLNodeLevelInline = (sal_Int32)0;
+static const ::sal_Int32 wdXMLNodeLevelParagraph = (sal_Int32)1;
+static const ::sal_Int32 wdXMLNodeLevelRow = (sal_Int32)2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDXMLNODELEVEL_HDL

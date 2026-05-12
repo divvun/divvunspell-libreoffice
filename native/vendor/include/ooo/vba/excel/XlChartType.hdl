@@ -1,0 +1,87 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLCHARTTYPE_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLCHARTTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlChartType {
+
+static const ::sal_Int32 xl3DArea = (sal_Int32)-4098;
+static const ::sal_Int32 xl3DAreaStacked = (sal_Int32)78;
+static const ::sal_Int32 xl3DAreaStacked100 = (sal_Int32)79;
+static const ::sal_Int32 xl3DBarClustered = (sal_Int32)60;
+static const ::sal_Int32 xl3DBarStacked = (sal_Int32)61;
+static const ::sal_Int32 xl3DBarStacked100 = (sal_Int32)62;
+static const ::sal_Int32 xl3DColumn = (sal_Int32)-4100;
+static const ::sal_Int32 xl3DColumnClustered = (sal_Int32)54;
+static const ::sal_Int32 xl3DColumnStacked = (sal_Int32)55;
+static const ::sal_Int32 xl3DColumnStacked100 = (sal_Int32)56;
+static const ::sal_Int32 xl3DLine = (sal_Int32)-4101;
+static const ::sal_Int32 xl3DPie = (sal_Int32)-4102;
+static const ::sal_Int32 xl3DPieExploded = (sal_Int32)70;
+static const ::sal_Int32 xlArea = (sal_Int32)1;
+static const ::sal_Int32 xlAreaStacked = (sal_Int32)76;
+static const ::sal_Int32 xlAreaStacked100 = (sal_Int32)77;
+static const ::sal_Int32 xlBarClustered = (sal_Int32)57;
+static const ::sal_Int32 xlBarOfPie = (sal_Int32)71;
+static const ::sal_Int32 xlBarStacked = (sal_Int32)58;
+static const ::sal_Int32 xlBarStacked100 = (sal_Int32)59;
+static const ::sal_Int32 xlBubble = (sal_Int32)15;
+static const ::sal_Int32 xlBubble3DEffect = (sal_Int32)87;
+static const ::sal_Int32 xlColumnClustered = (sal_Int32)51;
+static const ::sal_Int32 xlColumnStacked = (sal_Int32)52;
+static const ::sal_Int32 xlColumnStacked100 = (sal_Int32)53;
+static const ::sal_Int32 xlConeBarClustered = (sal_Int32)102;
+static const ::sal_Int32 xlConeBarStacked = (sal_Int32)103;
+static const ::sal_Int32 xlConeBarStacked100 = (sal_Int32)104;
+static const ::sal_Int32 xlConeCol = (sal_Int32)105;
+static const ::sal_Int32 xlConeColClustered = (sal_Int32)99;
+static const ::sal_Int32 xlConeColStacked = (sal_Int32)100;
+static const ::sal_Int32 xlConeColStacked100 = (sal_Int32)101;
+static const ::sal_Int32 xlCylinderBarClustered = (sal_Int32)95;
+static const ::sal_Int32 xlCylinderBarStacked = (sal_Int32)96;
+static const ::sal_Int32 xlCylinderBarStacked100 = (sal_Int32)97;
+static const ::sal_Int32 xlCylinderCol = (sal_Int32)98;
+static const ::sal_Int32 xlCylinderColClustered = (sal_Int32)92;
+static const ::sal_Int32 xlCylinderColStacked = (sal_Int32)93;
+static const ::sal_Int32 xlCylinderColStacked100 = (sal_Int32)94;
+static const ::sal_Int32 xlDoughnut = (sal_Int32)-4120;
+static const ::sal_Int32 xlDoughnutExploded = (sal_Int32)80;
+static const ::sal_Int32 xlLine = (sal_Int32)4;
+static const ::sal_Int32 xlLineMarkers = (sal_Int32)65;
+static const ::sal_Int32 xlLineMarkersStacked = (sal_Int32)66;
+static const ::sal_Int32 xlLineMarkersStacked100 = (sal_Int32)67;
+static const ::sal_Int32 xlLineStacked = (sal_Int32)63;
+static const ::sal_Int32 xlLineStacked100 = (sal_Int32)64;
+static const ::sal_Int32 xlPie = (sal_Int32)5;
+static const ::sal_Int32 xlPieExploded = (sal_Int32)69;
+static const ::sal_Int32 xlPieOfPie = (sal_Int32)68;
+static const ::sal_Int32 xlPyramidBarClustered = (sal_Int32)109;
+static const ::sal_Int32 xlPyramidBarStacked = (sal_Int32)110;
+static const ::sal_Int32 xlPyramidBarStacked100 = (sal_Int32)111;
+static const ::sal_Int32 xlPyramidCol = (sal_Int32)112;
+static const ::sal_Int32 xlPyramidColClustered = (sal_Int32)106;
+static const ::sal_Int32 xlPyramidColStacked = (sal_Int32)107;
+static const ::sal_Int32 xlPyramidColStacked100 = (sal_Int32)108;
+static const ::sal_Int32 xlRadar = (sal_Int32)-4151;
+static const ::sal_Int32 xlRadarFilled = (sal_Int32)82;
+static const ::sal_Int32 xlRadarMarkers = (sal_Int32)81;
+static const ::sal_Int32 xlStockHLC = (sal_Int32)88;
+static const ::sal_Int32 xlStockOHLC = (sal_Int32)89;
+static const ::sal_Int32 xlStockVHLC = (sal_Int32)90;
+static const ::sal_Int32 xlStockVOHLC = (sal_Int32)91;
+static const ::sal_Int32 xlSurface = (sal_Int32)83;
+static const ::sal_Int32 xlSurfaceTopView = (sal_Int32)85;
+static const ::sal_Int32 xlSurfaceTopViewWireframe = (sal_Int32)86;
+static const ::sal_Int32 xlSurfaceWireframe = (sal_Int32)84;
+static const ::sal_Int32 xlXYScatter = (sal_Int32)-4169;
+static const ::sal_Int32 xlXYScatterLines = (sal_Int32)74;
+static const ::sal_Int32 xlXYScatterLinesNoMarkers = (sal_Int32)75;
+static const ::sal_Int32 xlXYScatterSmooth = (sal_Int32)72;
+static const ::sal_Int32 xlXYScatterSmoothNoMarkers = (sal_Int32)73;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLCHARTTYPE_HDL

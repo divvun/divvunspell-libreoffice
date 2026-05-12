@@ -1,0 +1,25 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOBLACKWHITEMODE_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOBLACKWHITEMODE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoBlackWhiteMode {
+
+static const ::sal_Int32 msoBlackWhiteAutomatic = (sal_Int32)1;
+static const ::sal_Int32 msoBlackWhiteBlack = (sal_Int32)8;
+static const ::sal_Int32 msoBlackWhiteBlackTextAndLine = (sal_Int32)6;
+static const ::sal_Int32 msoBlackWhiteDontShow = (sal_Int32)10;
+static const ::sal_Int32 msoBlackWhiteGrayOutline = (sal_Int32)5;
+static const ::sal_Int32 msoBlackWhiteGrayScale = (sal_Int32)2;
+static const ::sal_Int32 msoBlackWhiteHighContrast = (sal_Int32)7;
+static const ::sal_Int32 msoBlackWhiteInverseGrayScale = (sal_Int32)4;
+static const ::sal_Int32 msoBlackWhiteLightGrayScale = (sal_Int32)3;
+static const ::sal_Int32 msoBlackWhiteMixed = (sal_Int32)-2;
+static const ::sal_Int32 msoBlackWhiteWhite = (sal_Int32)9;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOBLACKWHITEMODE_HDL

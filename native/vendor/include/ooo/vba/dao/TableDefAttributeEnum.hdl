@@ -1,0 +1,20 @@
+#ifndef INCLUDED_OOO_VBA_DAO_TABLEDEFATTRIBUTEENUM_HDL
+#define INCLUDED_OOO_VBA_DAO_TABLEDEFATTRIBUTEENUM_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace dao { namespace TableDefAttributeEnum {
+
+static const ::sal_Int32 dbAttachExclusive = (sal_Int32)65536;
+static const ::sal_Int32 dbAttachSavePWD = (sal_Int32)131072;
+static const ::sal_Int32 dbAttachedODBC = (sal_Int32)536870912;
+static const ::sal_Int32 dbAttachedTable = (sal_Int32)1073741824;
+static const ::sal_Int32 dbHiddenObject = (sal_Int32)1;
+static const ::sal_Int32 dbSystemObject = (sal_Int32)-2147483646;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_DAO_TABLEDEFATTRIBUTEENUM_HDL

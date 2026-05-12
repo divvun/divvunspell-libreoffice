@@ -1,0 +1,24 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDPASTEDATATYPE_HDL
+#define INCLUDED_OOO_VBA_WORD_WDPASTEDATATYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdPasteDataType {
+
+static const ::sal_Int32 wdPasteBitmap = (sal_Int32)4;
+static const ::sal_Int32 wdPasteDeviceIndependentBitmap = (sal_Int32)5;
+static const ::sal_Int32 wdPasteEnhancedMetafile = (sal_Int32)9;
+static const ::sal_Int32 wdPasteHTML = (sal_Int32)10;
+static const ::sal_Int32 wdPasteHyperlink = (sal_Int32)7;
+static const ::sal_Int32 wdPasteMetafilePicture = (sal_Int32)3;
+static const ::sal_Int32 wdPasteOLEObject = (sal_Int32)0;
+static const ::sal_Int32 wdPasteRTF = (sal_Int32)1;
+static const ::sal_Int32 wdPasteShape = (sal_Int32)8;
+static const ::sal_Int32 wdPasteText = (sal_Int32)2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDPASTEDATATYPE_HDL

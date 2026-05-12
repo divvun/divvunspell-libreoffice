@@ -1,0 +1,18 @@
+#ifndef INCLUDED_OOO_VBA_VBFIRSTWEEKOFYEAR_HDL
+#define INCLUDED_OOO_VBA_VBFIRSTWEEKOFYEAR_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace VbFirstWeekOfYear {
+
+static const ::sal_Int32 vbFirstFourDays = (sal_Int32)2;
+static const ::sal_Int32 vbFirstFullWeek = (sal_Int32)3;
+static const ::sal_Int32 vbFirstJan1 = (sal_Int32)1;
+static const ::sal_Int32 vbUseSystem = (sal_Int32)0;
+
+} } }
+
+#endif // INCLUDED_OOO_VBA_VBFIRSTWEEKOFYEAR_HDL

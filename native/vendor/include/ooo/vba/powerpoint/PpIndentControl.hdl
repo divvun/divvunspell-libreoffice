@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_POWERPOINT_PPINDENTCONTROL_HDL
+#define INCLUDED_OOO_VBA_POWERPOINT_PPINDENTCONTROL_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace powerpoint { namespace PpIndentControl {
+
+static const ::sal_Int32 ppIndentControlMixed = (sal_Int32)-2;
+static const ::sal_Int32 ppIndentKeepAttr = (sal_Int32)2;
+static const ::sal_Int32 ppIndentReplaceAttr = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_POWERPOINT_PPINDENTCONTROL_HDL

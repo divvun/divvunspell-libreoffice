@@ -1,0 +1,21 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLPTSELECTIONMODE_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLPTSELECTIONMODE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlPTSelectionMode {
+
+static const ::sal_Int32 xlBlanks = (sal_Int32)4;
+static const ::sal_Int32 xlButton = (sal_Int32)15;
+static const ::sal_Int32 xlDataAndLabel = (sal_Int32)0;
+static const ::sal_Int32 xlDataOnly = (sal_Int32)2;
+static const ::sal_Int32 xlFirstRow = (sal_Int32)256;
+static const ::sal_Int32 xlLabelOnly = (sal_Int32)1;
+static const ::sal_Int32 xlOrigin = (sal_Int32)3;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLPTSELECTIONMODE_HDL

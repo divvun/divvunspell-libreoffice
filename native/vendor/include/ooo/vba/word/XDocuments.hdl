@@ -1,0 +1,47 @@
+#ifndef INCLUDED_OOO_VBA_WORD_XDOCUMENTS_HDL
+#define INCLUDED_OOO_VBA_WORD_XDOCUMENTS_HDL
+
+#include "sal/config.h"
+
+#include "com/sun/star/uno/XInterface.hdl"
+#include "com/sun/star/uno/Any.h"
+#include "com/sun/star/uno/Reference.h"
+#include "cppu/macros.hxx"
+#include "rtl/ustring.hxx"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace ooo { namespace vba { namespace word {
+
+class SAL_NO_VTABLE SAL_DLLPUBLIC_RTTI XDocuments : public ::css::uno::XInterface
+{
+public:
+#if defined LIBO_INTERNAL_ONLY
+    XDocuments() = default;
+    XDocuments(XDocuments const &) = default;
+    XDocuments(XDocuments &&) = default;
+    XDocuments & operator =(XDocuments const &) = default;
+    XDocuments & operator =(XDocuments &&) = default;
+#endif
+
+
+    // Methods
+    virtual ::css::uno::Any SAL_CALL Add( const ::css::uno::Any& Template, const ::css::uno::Any& NewTemplate, const ::css::uno::Any& DocumentType, const ::css::uno::Any& Visible ) = 0;
+    virtual ::css::uno::Any SAL_CALL Open( const ::rtl::OUString& Filename, const ::css::uno::Any& ConfirmConversions, const ::css::uno::Any& ReadOnly, const ::css::uno::Any& AddToRecentFiles, const ::css::uno::Any& PasswordDocument, const ::css::uno::Any& PasswordTemplate, const ::css::uno::Any& Revert, const ::css::uno::Any& WritePasswordDocument, const ::css::uno::Any& WritePasswordTemplate, const ::css::uno::Any& Format, const ::css::uno::Any& Encoding, const ::css::uno::Any& Visible, const ::css::uno::Any& OpenAndRepair, const ::css::uno::Any& DocumentDirection, const ::css::uno::Any& NoEncodingDialog, const ::css::uno::Any& XMLTransform ) = 0;
+    virtual ::css::uno::Any SAL_CALL OpenNoRepairDialog( const ::rtl::OUString& Filename, const ::css::uno::Any& ConfirmConversions, const ::css::uno::Any& ReadOnly, const ::css::uno::Any& AddToRecentFiles, const ::css::uno::Any& PasswordDocument, const ::css::uno::Any& PasswordTemplate, const ::css::uno::Any& Revert, const ::css::uno::Any& WritePasswordDocument, const ::css::uno::Any& WritePasswordTemplate, const ::css::uno::Any& Format, const ::css::uno::Any& Encoding, const ::css::uno::Any& Visible, const ::css::uno::Any& OpenAndRepair, const ::css::uno::Any& DocumentDirection, const ::css::uno::Any& NoEncodingDialog, const ::css::uno::Any& XMLTransform ) = 0;
+    virtual ::css::uno::Any SAL_CALL OpenOld( const ::rtl::OUString& FileName, const ::css::uno::Any& ConfirmConversions, const ::css::uno::Any& ReadOnly, const ::css::uno::Any& AddToRecentFiles, const ::css::uno::Any& PasswordDocument, const ::css::uno::Any& PasswordTemplate, const ::css::uno::Any& Revert, const ::css::uno::Any& WritePasswordDocument, const ::css::uno::Any& WritePasswordTemplate, const ::css::uno::Any& Format ) = 0;
+    virtual void SAL_CALL Close( const ::css::uno::Any& SaveChanges, const ::css::uno::Any& OriginalFormat, const ::css::uno::Any& RouteDocument ) = 0;
+
+    static inline ::css::uno::Type const & SAL_CALL static_type(void * = 0);
+
+protected:
+    ~XDocuments() SAL_NOEXCEPT {} // avoid warnings about virtual members and non-virtual dtor
+};
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::ooo::vba::word::XDocuments const *);
+} } }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::uno::Reference< ::ooo::vba::word::XDocuments > *);
+
+#endif

@@ -1,0 +1,16 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLERRORBARDIRECTION_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLERRORBARDIRECTION_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlErrorBarDirection {
+
+static const ::sal_Int32 xlX = (sal_Int32)-4168;
+static const ::sal_Int32 xlY = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLERRORBARDIRECTION_HDL

@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDCOMPARETARGET_HDL
+#define INCLUDED_OOO_VBA_WORD_WDCOMPARETARGET_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdCompareTarget {
+
+static const ::sal_Int32 wdCompareTargetCurrent = (sal_Int32)1;
+static const ::sal_Int32 wdCompareTargetNew = (sal_Int32)2;
+static const ::sal_Int32 wdCompareTargetSelected = (sal_Int32)0;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDCOMPARETARGET_HDL

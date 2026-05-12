@@ -1,0 +1,16 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOCONNECTOR_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOCONNECTOR_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoConnector {
+
+static const ::sal_Int32 msoConnectorAnd = (sal_Int32)1;
+static const ::sal_Int32 msoConnectorOr = (sal_Int32)2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOCONNECTOR_HDL

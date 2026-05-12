@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_VBCOMPAREMETHOD_HDL
+#define INCLUDED_OOO_VBA_VBCOMPAREMETHOD_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace VbCompareMethod {
+
+static const ::sal_Int32 vbBinaryCompare = (sal_Int32)0;
+static const ::sal_Int32 vbDatabaseCompare = (sal_Int32)2;
+static const ::sal_Int32 vbTextCompare = (sal_Int32)1;
+
+} } }
+
+#endif // INCLUDED_OOO_VBA_VBCOMPAREMETHOD_HDL

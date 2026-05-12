@@ -1,0 +1,54 @@
+#ifndef INCLUDED_OOO_VBA_WORD_XWINDOW_HDL
+#define INCLUDED_OOO_VBA_WORD_XWINDOW_HDL
+
+#include "sal/config.h"
+
+#include "com/sun/star/uno/XInterface.hdl"
+#include "com/sun/star/uno/Any.h"
+#include "com/sun/star/uno/Reference.h"
+#include "cppu/macros.hxx"
+#include "rtl/ustring.hxx"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace ooo { namespace vba { namespace word {
+
+class SAL_NO_VTABLE SAL_DLLPUBLIC_RTTI XWindow : public ::css::uno::XInterface
+{
+public:
+#if defined LIBO_INTERNAL_ONLY
+    XWindow() = default;
+    XWindow(XWindow const &) = default;
+    XWindow(XWindow &&) = default;
+    XWindow & operator =(XWindow const &) = default;
+    XWindow & operator =(XWindow &&) = default;
+#endif
+
+
+    // Attributes
+    virtual ::css::uno::Any SAL_CALL getView() = 0;
+    virtual void SAL_CALL setView( const ::css::uno::Any& _view ) = 0;
+    virtual ::css::uno::Any SAL_CALL getWindowState() = 0;
+    virtual void SAL_CALL setWindowState( const ::css::uno::Any& _windowstate ) = 0;
+    virtual ::rtl::OUString SAL_CALL getCaption() = 0;
+    virtual void SAL_CALL setCaption( const ::rtl::OUString& _caption ) = 0;
+
+    // Methods
+    virtual void SAL_CALL Activate() = 0;
+    virtual void SAL_CALL Close( const ::css::uno::Any& SaveChanges, const ::css::uno::Any& RouteDocument ) = 0;
+    virtual ::css::uno::Any SAL_CALL Panes( const ::css::uno::Any& Index ) = 0;
+    virtual ::css::uno::Any SAL_CALL ActivePane() = 0;
+
+    static inline ::css::uno::Type const & SAL_CALL static_type(void * = 0);
+
+protected:
+    ~XWindow() SAL_NOEXCEPT {} // avoid warnings about virtual members and non-virtual dtor
+};
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::ooo::vba::word::XWindow const *);
+} } }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::uno::Reference< ::ooo::vba::word::XWindow > *);
+
+#endif

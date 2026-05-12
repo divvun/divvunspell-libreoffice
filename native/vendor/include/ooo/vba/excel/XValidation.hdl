@@ -1,0 +1,68 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XVALIDATION_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XVALIDATION_HDL
+
+#include "sal/config.h"
+
+#include "ooo/vba/XHelperInterface.hdl"
+#include "com/sun/star/uno/Any.h"
+#include "com/sun/star/uno/Reference.h"
+#include "cppu/macros.hxx"
+#include "rtl/ustring.hxx"
+#include "sal/types.h"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace ooo { namespace vba { namespace excel {
+
+class SAL_NO_VTABLE SAL_DLLPUBLIC_RTTI XValidation : public ::ooo::vba::XHelperInterface
+{
+public:
+#if defined LIBO_INTERNAL_ONLY
+    XValidation() = default;
+    XValidation(XValidation const &) = default;
+    XValidation(XValidation &&) = default;
+    XValidation & operator =(XValidation const &) = default;
+    XValidation & operator =(XValidation &&) = default;
+#endif
+
+
+    // Attributes
+    virtual ::sal_Bool SAL_CALL getIgnoreBlank() = 0;
+    virtual void SAL_CALL setIgnoreBlank( ::sal_Bool _ignoreblank ) = 0;
+    virtual ::sal_Bool SAL_CALL getInCellDropdown() = 0;
+    virtual void SAL_CALL setInCellDropdown( ::sal_Bool _incelldropdown ) = 0;
+    virtual ::sal_Bool SAL_CALL getShowInput() = 0;
+    virtual void SAL_CALL setShowInput( ::sal_Bool _showinput ) = 0;
+    virtual ::sal_Bool SAL_CALL getShowError() = 0;
+    virtual void SAL_CALL setShowError( ::sal_Bool _showerror ) = 0;
+    virtual ::rtl::OUString SAL_CALL getInputTitle() = 0;
+    virtual void SAL_CALL setInputTitle( const ::rtl::OUString& _inputtitle ) = 0;
+    virtual ::rtl::OUString SAL_CALL getErrorTitle() = 0;
+    virtual void SAL_CALL setErrorTitle( const ::rtl::OUString& _errortitle ) = 0;
+    virtual ::rtl::OUString SAL_CALL getInputMessage() = 0;
+    virtual void SAL_CALL setInputMessage( const ::rtl::OUString& _inputmessage ) = 0;
+    virtual ::rtl::OUString SAL_CALL getErrorMessage() = 0;
+    virtual void SAL_CALL setErrorMessage( const ::rtl::OUString& _errormessage ) = 0;
+    virtual ::rtl::OUString SAL_CALL getFormula1() = 0;
+    virtual ::rtl::OUString SAL_CALL getFormula2() = 0;
+    virtual ::sal_Int32 SAL_CALL getType() = 0;
+    virtual ::sal_Bool SAL_CALL getCaseSensitive() = 0;
+    virtual void SAL_CALL setCaseSensitive( ::sal_Bool _casesensitive ) = 0;
+
+    // Methods
+    virtual void SAL_CALL Delete() = 0;
+    virtual void SAL_CALL Add( const ::css::uno::Any& Type, const ::css::uno::Any& AlertStyle, const ::css::uno::Any& Operator, const ::css::uno::Any& Formula1, const ::css::uno::Any& Formula2 ) = 0;
+
+    static inline ::css::uno::Type const & SAL_CALL static_type(void * = 0);
+
+protected:
+    ~XValidation() SAL_NOEXCEPT {} // avoid warnings about virtual members and non-virtual dtor
+};
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::ooo::vba::excel::XValidation const *);
+} } }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::uno::Reference< ::ooo::vba::excel::XValidation > *);
+
+#endif

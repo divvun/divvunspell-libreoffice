@@ -1,0 +1,48 @@
+#ifndef INCLUDED_OOO_VBA_WORD_XSYSTEM_HDL
+#define INCLUDED_OOO_VBA_WORD_XSYSTEM_HDL
+
+#include "sal/config.h"
+
+#include "ooo/vba/XHelperInterface.hdl"
+#include "com/sun/star/uno/Any.h"
+#include "com/sun/star/uno/Reference.h"
+#include "cppu/macros.hxx"
+#include "rtl/ustring.hxx"
+#include "sal/types.h"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace ooo { namespace vba { namespace word {
+
+class SAL_NO_VTABLE SAL_DLLPUBLIC_RTTI XSystem : public ::ooo::vba::XHelperInterface
+{
+public:
+#if defined LIBO_INTERNAL_ONLY
+    XSystem() = default;
+    XSystem(XSystem const &) = default;
+    XSystem(XSystem &&) = default;
+    XSystem & operator =(XSystem const &) = default;
+    XSystem & operator =(XSystem &&) = default;
+#endif
+
+
+    // Attributes
+    virtual ::sal_Int32 SAL_CALL getCursor() = 0;
+    virtual void SAL_CALL setCursor( ::sal_Int32 _cursor ) = 0;
+
+    // Methods
+    virtual ::css::uno::Any SAL_CALL PrivateProfileString( const ::rtl::OUString& Filename, const ::rtl::OUString& Section, const ::rtl::OUString& Key ) = 0;
+
+    static inline ::css::uno::Type const & SAL_CALL static_type(void * = 0);
+
+protected:
+    ~XSystem() SAL_NOEXCEPT {} // avoid warnings about virtual members and non-virtual dtor
+};
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::ooo::vba::word::XSystem const *);
+} } }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::uno::Reference< ::ooo::vba::word::XSystem > *);
+
+#endif

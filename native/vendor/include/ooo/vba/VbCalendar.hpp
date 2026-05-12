@@ -1,0 +1,6 @@
+#ifndef INCLUDED_OOO_VBA_VBCALENDAR_HPP
+#define INCLUDED_OOO_VBA_VBCALENDAR_HPP
+
+#include "ooo/vba/VbCalendar.hdl"
+
+#endif // INCLUDED_OOO_VBA_VBCALENDAR_HPP

@@ -1,0 +1,18 @@
+#ifndef INCLUDED_COM_SUN_STAR_SDBC_PSEUDOCOLUMNUSAGE_HDL
+#define INCLUDED_COM_SUN_STAR_SDBC_PSEUDOCOLUMNUSAGE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace com { namespace sun { namespace star { namespace sdbc { namespace PseudoColumnUsage {
+
+static const ::sal_Int32 NO_USAGE_RESTRICTIONS = (sal_Int32)0;
+static const ::sal_Int32 SELECT_LIST_ONLY = (sal_Int32)1;
+static const ::sal_Int32 USAGE_UNKNOWN = (sal_Int32)2;
+static const ::sal_Int32 WHERE_CLAUSE_ONLY = (sal_Int32)3;
+
+} } } } }
+
+#endif // INCLUDED_COM_SUN_STAR_SDBC_PSEUDOCOLUMNUSAGE_HDL

@@ -1,0 +1,79 @@
+#ifndef INCLUDED_OOO_VBA_MSFORMS_XCOMBOBOX_HDL
+#define INCLUDED_OOO_VBA_MSFORMS_XCOMBOBOX_HDL
+
+#include "sal/config.h"
+
+#include "com/sun/star/uno/XInterface.hdl"
+namespace ooo { namespace vba { namespace msforms { class XNewFont; } } }
+#include "com/sun/star/uno/Any.h"
+#include "com/sun/star/uno/Reference.h"
+#include "cppu/macros.hxx"
+#include "rtl/ustring.hxx"
+#include "sal/types.h"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace ooo { namespace vba { namespace msforms {
+
+class SAL_NO_VTABLE SAL_DLLPUBLIC_RTTI XComboBox : public ::css::uno::XInterface
+{
+public:
+#if defined LIBO_INTERNAL_ONLY
+    XComboBox() = default;
+    XComboBox(XComboBox const &) = default;
+    XComboBox(XComboBox &&) = default;
+    XComboBox & operator =(XComboBox const &) = default;
+    XComboBox & operator =(XComboBox &&) = default;
+#endif
+
+
+    // Attributes
+    virtual ::css::uno::Any SAL_CALL getValue() = 0;
+    virtual void SAL_CALL setValue( const ::css::uno::Any& _value ) = 0;
+    virtual ::css::uno::Any SAL_CALL getListIndex() = 0;
+    virtual void SAL_CALL setListIndex( const ::css::uno::Any& _listindex ) = 0;
+    virtual ::sal_Int32 SAL_CALL getListCount() = 0;
+    virtual ::rtl::OUString SAL_CALL getText() = 0;
+    virtual void SAL_CALL setText( const ::rtl::OUString& _text ) = 0;
+    virtual ::sal_Int32 SAL_CALL getStyle() = 0;
+    virtual void SAL_CALL setStyle( ::sal_Int32 _style ) = 0;
+    virtual ::sal_Int32 SAL_CALL getDropButtonStyle() = 0;
+    virtual void SAL_CALL setDropButtonStyle( ::sal_Int32 _dropbuttonstyle ) = 0;
+    virtual ::sal_Int32 SAL_CALL getDragBehavior() = 0;
+    virtual void SAL_CALL setDragBehavior( ::sal_Int32 _dragbehavior ) = 0;
+    virtual ::sal_Int32 SAL_CALL getEnterFieldBehavior() = 0;
+    virtual void SAL_CALL setEnterFieldBehavior( ::sal_Int32 _enterfieldbehavior ) = 0;
+    virtual ::sal_Int32 SAL_CALL getListStyle() = 0;
+    virtual void SAL_CALL setListStyle( ::sal_Int32 _liststyle ) = 0;
+    virtual ::sal_Int32 SAL_CALL getTextAlign() = 0;
+    virtual void SAL_CALL setTextAlign( ::sal_Int32 _textalign ) = 0;
+    virtual ::sal_Int32 SAL_CALL getBackColor() = 0;
+    virtual void SAL_CALL setBackColor( ::sal_Int32 _backcolor ) = 0;
+    virtual ::sal_Bool SAL_CALL getAutoSize() = 0;
+    virtual void SAL_CALL setAutoSize( ::sal_Bool _autosize ) = 0;
+    virtual ::sal_Bool SAL_CALL getLocked() = 0;
+    virtual void SAL_CALL setLocked( ::sal_Bool _locked ) = 0;
+    virtual ::sal_Int32 SAL_CALL getTextLength() = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::msforms::XNewFont > SAL_CALL getFont() = 0;
+    virtual ::rtl::OUString SAL_CALL getLinkedCell() = 0;
+    virtual void SAL_CALL setLinkedCell( const ::rtl::OUString& _linkedcell ) = 0;
+
+    // Methods
+    virtual void SAL_CALL AddItem( const ::css::uno::Any& pvargItem, const ::css::uno::Any& pvargIndex ) = 0;
+    virtual void SAL_CALL removeItem( const ::css::uno::Any& index ) = 0;
+    virtual void SAL_CALL Clear() = 0;
+    virtual ::css::uno::Any SAL_CALL List( const ::css::uno::Any& pvargIndex, const ::css::uno::Any& pvarColumn ) = 0;
+
+    static inline ::css::uno::Type const & SAL_CALL static_type(void * = 0);
+
+protected:
+    ~XComboBox() SAL_NOEXCEPT {} // avoid warnings about virtual members and non-virtual dtor
+};
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::ooo::vba::msforms::XComboBox const *);
+} } }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::uno::Reference< ::ooo::vba::msforms::XComboBox > *);
+
+#endif

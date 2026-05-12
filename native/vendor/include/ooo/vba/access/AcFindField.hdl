@@ -1,0 +1,16 @@
+#ifndef INCLUDED_OOO_VBA_ACCESS_ACFINDFIELD_HDL
+#define INCLUDED_OOO_VBA_ACCESS_ACFINDFIELD_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace access { namespace AcFindField {
+
+static const ::sal_Int32 acAll = (sal_Int32)0;
+static const ::sal_Int32 acCurrent = (sal_Int32)-1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_ACCESS_ACFINDFIELD_HDL

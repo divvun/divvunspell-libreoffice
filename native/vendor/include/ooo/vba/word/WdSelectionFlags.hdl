@@ -1,0 +1,19 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDSELECTIONFLAGS_HDL
+#define INCLUDED_OOO_VBA_WORD_WDSELECTIONFLAGS_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdSelectionFlags {
+
+static const ::sal_Int32 wdSelActive = (sal_Int32)8;
+static const ::sal_Int32 wdSelAtEOL = (sal_Int32)2;
+static const ::sal_Int32 wdSelOvertype = (sal_Int32)4;
+static const ::sal_Int32 wdSelReplace = (sal_Int32)16;
+static const ::sal_Int32 wdSelStartActive = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDSELECTIONFLAGS_HDL

@@ -1,0 +1,18 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDCHEVRONCONVERTRULE_HDL
+#define INCLUDED_OOO_VBA_WORD_WDCHEVRONCONVERTRULE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdChevronConvertRule {
+
+static const ::sal_Int32 wdAlwaysConvert = (sal_Int32)1;
+static const ::sal_Int32 wdAskToConvert = (sal_Int32)3;
+static const ::sal_Int32 wdAskToNotConvert = (sal_Int32)2;
+static const ::sal_Int32 wdNeverConvert = (sal_Int32)0;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDCHEVRONCONVERTRULE_HDL

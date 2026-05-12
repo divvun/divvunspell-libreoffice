@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLENABLESELECTION_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLENABLESELECTION_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlEnableSelection {
+
+static const ::sal_Int32 xlNoRestrictions = (sal_Int32)0;
+static const ::sal_Int32 xlNoSelection = (sal_Int32)-4142;
+static const ::sal_Int32 xlUnlockedCells = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLENABLESELECTION_HDL

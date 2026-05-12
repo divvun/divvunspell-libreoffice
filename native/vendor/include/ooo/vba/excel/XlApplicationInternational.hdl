@@ -1,0 +1,59 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLAPPLICATIONINTERNATIONAL_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLAPPLICATIONINTERNATIONAL_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlApplicationInternational {
+
+static const ::sal_Int32 xl24HourClock = (sal_Int32)33;
+static const ::sal_Int32 xl4DigitYears = (sal_Int32)43;
+static const ::sal_Int32 xlAlternateArraySeparator = (sal_Int32)16;
+static const ::sal_Int32 xlColumnSeparator = (sal_Int32)14;
+static const ::sal_Int32 xlCountryCode = (sal_Int32)1;
+static const ::sal_Int32 xlCountrySetting = (sal_Int32)2;
+static const ::sal_Int32 xlCurrencyBefore = (sal_Int32)37;
+static const ::sal_Int32 xlCurrencyCode = (sal_Int32)25;
+static const ::sal_Int32 xlCurrencyDigits = (sal_Int32)27;
+static const ::sal_Int32 xlCurrencyLeadingZeros = (sal_Int32)40;
+static const ::sal_Int32 xlCurrencyMinusSign = (sal_Int32)38;
+static const ::sal_Int32 xlCurrencyNegative = (sal_Int32)28;
+static const ::sal_Int32 xlCurrencySpaceBefore = (sal_Int32)36;
+static const ::sal_Int32 xlCurrencyTrailingZeros = (sal_Int32)39;
+static const ::sal_Int32 xlDateOrder = (sal_Int32)32;
+static const ::sal_Int32 xlDateSeparator = (sal_Int32)17;
+static const ::sal_Int32 xlDayCode = (sal_Int32)21;
+static const ::sal_Int32 xlDayLeadingZero = (sal_Int32)42;
+static const ::sal_Int32 xlDecimalSeparator = (sal_Int32)3;
+static const ::sal_Int32 xlGeneralFormatName = (sal_Int32)26;
+static const ::sal_Int32 xlHourCode = (sal_Int32)22;
+static const ::sal_Int32 xlLeftBrace = (sal_Int32)12;
+static const ::sal_Int32 xlLeftBracket = (sal_Int32)10;
+static const ::sal_Int32 xlListSeparator = (sal_Int32)5;
+static const ::sal_Int32 xlLowerCaseColumnLetter = (sal_Int32)9;
+static const ::sal_Int32 xlLowerCaseRowLetter = (sal_Int32)8;
+static const ::sal_Int32 xlMDY = (sal_Int32)44;
+static const ::sal_Int32 xlMetric = (sal_Int32)35;
+static const ::sal_Int32 xlMinuteCode = (sal_Int32)23;
+static const ::sal_Int32 xlMonthCode = (sal_Int32)20;
+static const ::sal_Int32 xlMonthLeadingZero = (sal_Int32)41;
+static const ::sal_Int32 xlMonthNameChars = (sal_Int32)30;
+static const ::sal_Int32 xlNonEnglishFunctions = (sal_Int32)34;
+static const ::sal_Int32 xlNoncurrencyDigits = (sal_Int32)29;
+static const ::sal_Int32 xlRightBrace = (sal_Int32)13;
+static const ::sal_Int32 xlRightBracket = (sal_Int32)11;
+static const ::sal_Int32 xlRowSeparator = (sal_Int32)15;
+static const ::sal_Int32 xlSecondCode = (sal_Int32)24;
+static const ::sal_Int32 xlThousandsSeparator = (sal_Int32)4;
+static const ::sal_Int32 xlTimeLeadingZero = (sal_Int32)45;
+static const ::sal_Int32 xlTimeSeparator = (sal_Int32)18;
+static const ::sal_Int32 xlUpperCaseColumnLetter = (sal_Int32)7;
+static const ::sal_Int32 xlUpperCaseRowLetter = (sal_Int32)6;
+static const ::sal_Int32 xlWeekdayNameChars = (sal_Int32)31;
+static const ::sal_Int32 xlYearCode = (sal_Int32)19;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLAPPLICATIONINTERNATIONAL_HDL

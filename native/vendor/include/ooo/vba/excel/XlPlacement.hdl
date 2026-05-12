@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLPLACEMENT_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLPLACEMENT_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlPlacement {
+
+static const ::sal_Int32 xlFreeFloating = (sal_Int32)3;
+static const ::sal_Int32 xlMove = (sal_Int32)2;
+static const ::sal_Int32 xlMoveAndSize = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLPLACEMENT_HDL

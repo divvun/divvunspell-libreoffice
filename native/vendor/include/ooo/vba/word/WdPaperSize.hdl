@@ -1,0 +1,56 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDPAPERSIZE_HDL
+#define INCLUDED_OOO_VBA_WORD_WDPAPERSIZE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdPaperSize {
+
+static const ::sal_Int32 wdPaper10x14 = (sal_Int32)0;
+static const ::sal_Int32 wdPaper11x17 = (sal_Int32)1;
+static const ::sal_Int32 wdPaperA3 = (sal_Int32)6;
+static const ::sal_Int32 wdPaperA4 = (sal_Int32)7;
+static const ::sal_Int32 wdPaperA4Small = (sal_Int32)8;
+static const ::sal_Int32 wdPaperA5 = (sal_Int32)9;
+static const ::sal_Int32 wdPaperB4 = (sal_Int32)10;
+static const ::sal_Int32 wdPaperB5 = (sal_Int32)11;
+static const ::sal_Int32 wdPaperCSheet = (sal_Int32)12;
+static const ::sal_Int32 wdPaperCustom = (sal_Int32)41;
+static const ::sal_Int32 wdPaperDSheet = (sal_Int32)13;
+static const ::sal_Int32 wdPaperESheet = (sal_Int32)14;
+static const ::sal_Int32 wdPaperEnvelope10 = (sal_Int32)25;
+static const ::sal_Int32 wdPaperEnvelope11 = (sal_Int32)26;
+static const ::sal_Int32 wdPaperEnvelope12 = (sal_Int32)27;
+static const ::sal_Int32 wdPaperEnvelope14 = (sal_Int32)28;
+static const ::sal_Int32 wdPaperEnvelope9 = (sal_Int32)24;
+static const ::sal_Int32 wdPaperEnvelopeB4 = (sal_Int32)29;
+static const ::sal_Int32 wdPaperEnvelopeB5 = (sal_Int32)30;
+static const ::sal_Int32 wdPaperEnvelopeB6 = (sal_Int32)31;
+static const ::sal_Int32 wdPaperEnvelopeC3 = (sal_Int32)32;
+static const ::sal_Int32 wdPaperEnvelopeC4 = (sal_Int32)33;
+static const ::sal_Int32 wdPaperEnvelopeC5 = (sal_Int32)34;
+static const ::sal_Int32 wdPaperEnvelopeC6 = (sal_Int32)35;
+static const ::sal_Int32 wdPaperEnvelopeC65 = (sal_Int32)36;
+static const ::sal_Int32 wdPaperEnvelopeDL = (sal_Int32)37;
+static const ::sal_Int32 wdPaperEnvelopeItaly = (sal_Int32)38;
+static const ::sal_Int32 wdPaperEnvelopeMonarch = (sal_Int32)39;
+static const ::sal_Int32 wdPaperEnvelopePersonal = (sal_Int32)40;
+static const ::sal_Int32 wdPaperExecutive = (sal_Int32)5;
+static const ::sal_Int32 wdPaperFanfoldLegalGerman = (sal_Int32)15;
+static const ::sal_Int32 wdPaperFanfoldStdGerman = (sal_Int32)16;
+static const ::sal_Int32 wdPaperFanfoldUS = (sal_Int32)17;
+static const ::sal_Int32 wdPaperFolio = (sal_Int32)18;
+static const ::sal_Int32 wdPaperLedger = (sal_Int32)19;
+static const ::sal_Int32 wdPaperLegal = (sal_Int32)4;
+static const ::sal_Int32 wdPaperLetter = (sal_Int32)2;
+static const ::sal_Int32 wdPaperLetterSmall = (sal_Int32)3;
+static const ::sal_Int32 wdPaperNote = (sal_Int32)20;
+static const ::sal_Int32 wdPaperQuarto = (sal_Int32)21;
+static const ::sal_Int32 wdPaperStatement = (sal_Int32)22;
+static const ::sal_Int32 wdPaperTabloid = (sal_Int32)23;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDPAPERSIZE_HDL

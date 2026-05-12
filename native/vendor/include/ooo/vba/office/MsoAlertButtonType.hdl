@@ -1,0 +1,21 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOALERTBUTTONTYPE_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOALERTBUTTONTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoAlertButtonType {
+
+static const ::sal_Int32 msoAlertButtonAbortRetryIgnore = (sal_Int32)2;
+static const ::sal_Int32 msoAlertButtonOK = (sal_Int32)0;
+static const ::sal_Int32 msoAlertButtonOKCancel = (sal_Int32)1;
+static const ::sal_Int32 msoAlertButtonRetryCancel = (sal_Int32)5;
+static const ::sal_Int32 msoAlertButtonYesAllNoCancel = (sal_Int32)6;
+static const ::sal_Int32 msoAlertButtonYesNo = (sal_Int32)4;
+static const ::sal_Int32 msoAlertButtonYesNoCancel = (sal_Int32)3;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOALERTBUTTONTYPE_HDL

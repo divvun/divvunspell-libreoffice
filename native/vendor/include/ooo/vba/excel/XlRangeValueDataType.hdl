@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLRANGEVALUEDATATYPE_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLRANGEVALUEDATATYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlRangeValueDataType {
+
+static const ::sal_Int32 xlRangeValueDefault = (sal_Int32)10;
+static const ::sal_Int32 xlRangeValueMSPersistXML = (sal_Int32)12;
+static const ::sal_Int32 xlRangeValueXMLSpreadsheet = (sal_Int32)11;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLRANGEVALUEDATATYPE_HDL

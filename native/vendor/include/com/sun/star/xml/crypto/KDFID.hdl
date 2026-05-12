@@ -1,0 +1,17 @@
+#ifndef INCLUDED_COM_SUN_STAR_XML_CRYPTO_KDFID_HDL
+#define INCLUDED_COM_SUN_STAR_XML_CRYPTO_KDFID_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace com { namespace sun { namespace star { namespace xml { namespace crypto { namespace KDFID {
+
+static const ::sal_Int32 Argon2id = (sal_Int32)3;
+static const ::sal_Int32 PBKDF2 = (sal_Int32)1;
+static const ::sal_Int32 PGP_RSA_OAEP_MGF1P = (sal_Int32)2;
+
+} } } } } }
+
+#endif // INCLUDED_COM_SUN_STAR_XML_CRYPTO_KDFID_HDL

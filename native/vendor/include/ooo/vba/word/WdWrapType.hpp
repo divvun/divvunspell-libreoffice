@@ -1,0 +1,6 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDWRAPTYPE_HPP
+#define INCLUDED_OOO_VBA_WORD_WDWRAPTYPE_HPP
+
+#include "ooo/vba/word/WdWrapType.hdl"
+
+#endif // INCLUDED_OOO_VBA_WORD_WDWRAPTYPE_HPP

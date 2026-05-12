@@ -1,0 +1,23 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDMAILMERGEACTIVERECORD_HDL
+#define INCLUDED_OOO_VBA_WORD_WDMAILMERGEACTIVERECORD_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdMailMergeActiveRecord {
+
+static const ::sal_Int32 wdFirstDataSourceRecord = (sal_Int32)-6;
+static const ::sal_Int32 wdFirstRecord = (sal_Int32)-4;
+static const ::sal_Int32 wdLastDataSourceRecord = (sal_Int32)-7;
+static const ::sal_Int32 wdLastRecord = (sal_Int32)-5;
+static const ::sal_Int32 wdNextDataSourceRecord = (sal_Int32)-8;
+static const ::sal_Int32 wdNextRecord = (sal_Int32)-2;
+static const ::sal_Int32 wdNoActiveRecord = (sal_Int32)-1;
+static const ::sal_Int32 wdPreviousDataSourceRecord = (sal_Int32)-9;
+static const ::sal_Int32 wdPreviousRecord = (sal_Int32)-3;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDMAILMERGEACTIVERECORD_HDL

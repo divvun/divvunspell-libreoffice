@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLLINKINFO_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLLINKINFO_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlLinkInfo {
+
+static const ::sal_Int32 xlEditionDate = (sal_Int32)2;
+static const ::sal_Int32 xlLinkInfoStatus = (sal_Int32)3;
+static const ::sal_Int32 xlUpdateState = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLLINKINFO_HDL

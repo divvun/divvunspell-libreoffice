@@ -1,0 +1,66 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XWORKBOOK_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XWORKBOOK_HDL
+
+#include "sal/config.h"
+
+#include "com/sun/star/lang/XUnoTunnel.hdl"
+namespace ooo { namespace vba { namespace excel { class XWorksheet; } } }
+#include "com/sun/star/uno/Any.h"
+#include "com/sun/star/uno/Reference.h"
+#include "cppu/macros.hxx"
+#include "rtl/ustring.hxx"
+#include "sal/types.h"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace ooo { namespace vba { namespace excel {
+
+class SAL_NO_VTABLE SAL_DLLPUBLIC_RTTI XWorkbook : public ::css::lang::XUnoTunnel
+{
+public:
+#if defined LIBO_INTERNAL_ONLY
+    XWorkbook() = default;
+    XWorkbook(XWorkbook const &) = default;
+    XWorkbook(XWorkbook &&) = default;
+    XWorkbook & operator =(XWorkbook const &) = default;
+    XWorkbook & operator =(XWorkbook &&) = default;
+#endif
+
+
+    // Attributes
+    virtual ::sal_Bool SAL_CALL getProtectStructure() = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::excel::XWorksheet > SAL_CALL getActiveSheet() = 0;
+    virtual ::rtl::OUString SAL_CALL getCodeName() = 0;
+    virtual ::sal_Int32 SAL_CALL getFileFormat() = 0;
+    virtual ::sal_Bool SAL_CALL getPrecisionAsDisplayed() = 0;
+    virtual void SAL_CALL setPrecisionAsDisplayed( ::sal_Bool _precisionasdisplayed ) = 0;
+    virtual ::rtl::OUString SAL_CALL getAuthor() = 0;
+    virtual void SAL_CALL setAuthor( const ::rtl::OUString& _author ) = 0;
+
+    // Methods
+    virtual ::css::uno::Any SAL_CALL Worksheets( const ::css::uno::Any& Index ) = 0;
+    virtual ::css::uno::Any SAL_CALL Styles( const ::css::uno::Any& Index ) = 0;
+    virtual ::css::uno::Any SAL_CALL Sheets( const ::css::uno::Any& Index ) = 0;
+    virtual ::css::uno::Any SAL_CALL Windows( const ::css::uno::Any& Index ) = 0;
+    virtual void SAL_CALL ResetColors() = 0;
+    virtual void SAL_CALL Activate() = 0;
+    virtual ::css::uno::Any SAL_CALL Names( const ::css::uno::Any& Index ) = 0;
+    virtual ::css::uno::Any SAL_CALL Colors( const ::css::uno::Any& Index ) = 0;
+    virtual void SAL_CALL SaveCopyAs( const ::rtl::OUString& Filename ) = 0;
+    virtual void SAL_CALL Protect( const ::css::uno::Any& Password ) = 0;
+    virtual void SAL_CALL SaveAs( const ::css::uno::Any& FileName, const ::css::uno::Any& FileFormat, const ::css::uno::Any& Password, const ::css::uno::Any& WriteResPassword, const ::css::uno::Any& ReadOnlyRecommended, const ::css::uno::Any& CreateBackup, const ::css::uno::Any& AccessMode, const ::css::uno::Any& ConflictResolution, const ::css::uno::Any& AddToMru, const ::css::uno::Any& TextCodepage, const ::css::uno::Any& TextVisualLayout, const ::css::uno::Any& Local ) = 0;
+    virtual void SAL_CALL ExportAsFixedFormat( const ::css::uno::Any& Type, const ::css::uno::Any& FileName, const ::css::uno::Any& Quality, const ::css::uno::Any& IncludeDocProperties, const ::css::uno::Any& IgnorePrintAreas, const ::css::uno::Any& From, const ::css::uno::Any& To, const ::css::uno::Any& OpenAfterPublish, const ::css::uno::Any& FixedFormatExtClassPtr ) = 0;
+
+    static inline ::css::uno::Type const & SAL_CALL static_type(void * = 0);
+
+protected:
+    ~XWorkbook() SAL_NOEXCEPT {} // avoid warnings about virtual members and non-virtual dtor
+};
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::ooo::vba::excel::XWorkbook const *);
+} } }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::uno::Reference< ::ooo::vba::excel::XWorkbook > *);
+
+#endif

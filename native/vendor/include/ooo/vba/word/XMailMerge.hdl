@@ -1,0 +1,48 @@
+#ifndef INCLUDED_OOO_VBA_WORD_XMAILMERGE_HDL
+#define INCLUDED_OOO_VBA_WORD_XMAILMERGE_HDL
+
+#include "sal/config.h"
+
+#include "ooo/vba/XHelperInterface.hdl"
+#include "com/sun/star/uno/Any.h"
+#include "com/sun/star/uno/Reference.h"
+#include "cppu/macros.hxx"
+#include "rtl/ustring.hxx"
+#include "sal/types.h"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace ooo { namespace vba { namespace word {
+
+class SAL_NO_VTABLE SAL_DLLPUBLIC_RTTI XMailMerge : public ::ooo::vba::XHelperInterface
+{
+public:
+#if defined LIBO_INTERNAL_ONLY
+    XMailMerge() = default;
+    XMailMerge(XMailMerge const &) = default;
+    XMailMerge(XMailMerge &&) = default;
+    XMailMerge & operator =(XMailMerge const &) = default;
+    XMailMerge & operator =(XMailMerge &&) = default;
+#endif
+
+
+    // Attributes
+    virtual ::sal_Int32 SAL_CALL getMainDocumentType() = 0;
+    virtual void SAL_CALL setMainDocumentType( ::sal_Int32 _maindocumenttype ) = 0;
+
+    // Methods
+    virtual void SAL_CALL OpenDataSource( const ::rtl::OUString& Name, const ::css::uno::Any& Format, const ::css::uno::Any& ConfirmConversions, const ::css::uno::Any& ReadOnly, const ::css::uno::Any& LinkToSource, const ::css::uno::Any& AddToRecentFiles, const ::css::uno::Any& PasswordDocument, const ::css::uno::Any& PasswordTemplate, const ::css::uno::Any& Revert, const ::css::uno::Any& WritePasswordDocument, const ::css::uno::Any& WritePasswordTemplate, const ::css::uno::Any& Connection, const ::css::uno::Any& SQLStatement, const ::css::uno::Any& SQLStatement1, const ::css::uno::Any& OpenExclusive, const ::css::uno::Any& SubType ) = 0;
+
+    static inline ::css::uno::Type const & SAL_CALL static_type(void * = 0);
+
+protected:
+    ~XMailMerge() SAL_NOEXCEPT {} // avoid warnings about virtual members and non-virtual dtor
+};
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::ooo::vba::word::XMailMerge const *);
+} } }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::uno::Reference< ::ooo::vba::word::XMailMerge > *);
+
+#endif

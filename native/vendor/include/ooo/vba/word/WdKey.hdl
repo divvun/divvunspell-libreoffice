@@ -1,0 +1,112 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDKEY_HDL
+#define INCLUDED_OOO_VBA_WORD_WDKEY_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdKey {
+
+static const ::sal_Int32 wdKey0 = (sal_Int32)48;
+static const ::sal_Int32 wdKey1 = (sal_Int32)49;
+static const ::sal_Int32 wdKey2 = (sal_Int32)50;
+static const ::sal_Int32 wdKey3 = (sal_Int32)51;
+static const ::sal_Int32 wdKey4 = (sal_Int32)52;
+static const ::sal_Int32 wdKey5 = (sal_Int32)53;
+static const ::sal_Int32 wdKey6 = (sal_Int32)54;
+static const ::sal_Int32 wdKey7 = (sal_Int32)55;
+static const ::sal_Int32 wdKey8 = (sal_Int32)56;
+static const ::sal_Int32 wdKey9 = (sal_Int32)57;
+static const ::sal_Int32 wdKeyA = (sal_Int32)65;
+static const ::sal_Int32 wdKeyAlt = (sal_Int32)1024;
+static const ::sal_Int32 wdKeyB = (sal_Int32)66;
+static const ::sal_Int32 wdKeyBackSingleQuote = (sal_Int32)192;
+static const ::sal_Int32 wdKeyBackSlash = (sal_Int32)220;
+static const ::sal_Int32 wdKeyBackspace = (sal_Int32)8;
+static const ::sal_Int32 wdKeyC = (sal_Int32)67;
+static const ::sal_Int32 wdKeyCloseSquareBrace = (sal_Int32)221;
+static const ::sal_Int32 wdKeyComma = (sal_Int32)188;
+static const ::sal_Int32 wdKeyCommand = (sal_Int32)512;
+static const ::sal_Int32 wdKeyControl = (sal_Int32)512;
+static const ::sal_Int32 wdKeyD = (sal_Int32)68;
+static const ::sal_Int32 wdKeyDelete = (sal_Int32)46;
+static const ::sal_Int32 wdKeyE = (sal_Int32)69;
+static const ::sal_Int32 wdKeyEnd = (sal_Int32)35;
+static const ::sal_Int32 wdKeyEquals = (sal_Int32)187;
+static const ::sal_Int32 wdKeyEsc = (sal_Int32)27;
+static const ::sal_Int32 wdKeyF = (sal_Int32)70;
+static const ::sal_Int32 wdKeyF1 = (sal_Int32)112;
+static const ::sal_Int32 wdKeyF10 = (sal_Int32)121;
+static const ::sal_Int32 wdKeyF11 = (sal_Int32)122;
+static const ::sal_Int32 wdKeyF12 = (sal_Int32)123;
+static const ::sal_Int32 wdKeyF13 = (sal_Int32)124;
+static const ::sal_Int32 wdKeyF14 = (sal_Int32)125;
+static const ::sal_Int32 wdKeyF15 = (sal_Int32)126;
+static const ::sal_Int32 wdKeyF16 = (sal_Int32)127;
+static const ::sal_Int32 wdKeyF2 = (sal_Int32)113;
+static const ::sal_Int32 wdKeyF3 = (sal_Int32)114;
+static const ::sal_Int32 wdKeyF4 = (sal_Int32)115;
+static const ::sal_Int32 wdKeyF5 = (sal_Int32)116;
+static const ::sal_Int32 wdKeyF6 = (sal_Int32)117;
+static const ::sal_Int32 wdKeyF7 = (sal_Int32)118;
+static const ::sal_Int32 wdKeyF8 = (sal_Int32)119;
+static const ::sal_Int32 wdKeyF9 = (sal_Int32)120;
+static const ::sal_Int32 wdKeyG = (sal_Int32)71;
+static const ::sal_Int32 wdKeyH = (sal_Int32)72;
+static const ::sal_Int32 wdKeyHome = (sal_Int32)36;
+static const ::sal_Int32 wdKeyHyphen = (sal_Int32)189;
+static const ::sal_Int32 wdKeyI = (sal_Int32)73;
+static const ::sal_Int32 wdKeyInsert = (sal_Int32)45;
+static const ::sal_Int32 wdKeyJ = (sal_Int32)74;
+static const ::sal_Int32 wdKeyK = (sal_Int32)75;
+static const ::sal_Int32 wdKeyL = (sal_Int32)76;
+static const ::sal_Int32 wdKeyM = (sal_Int32)77;
+static const ::sal_Int32 wdKeyN = (sal_Int32)78;
+static const ::sal_Int32 wdKeyNumeric0 = (sal_Int32)96;
+static const ::sal_Int32 wdKeyNumeric1 = (sal_Int32)97;
+static const ::sal_Int32 wdKeyNumeric2 = (sal_Int32)98;
+static const ::sal_Int32 wdKeyNumeric3 = (sal_Int32)99;
+static const ::sal_Int32 wdKeyNumeric4 = (sal_Int32)100;
+static const ::sal_Int32 wdKeyNumeric5 = (sal_Int32)101;
+static const ::sal_Int32 wdKeyNumeric5Special = (sal_Int32)12;
+static const ::sal_Int32 wdKeyNumeric6 = (sal_Int32)102;
+static const ::sal_Int32 wdKeyNumeric7 = (sal_Int32)103;
+static const ::sal_Int32 wdKeyNumeric8 = (sal_Int32)104;
+static const ::sal_Int32 wdKeyNumeric9 = (sal_Int32)105;
+static const ::sal_Int32 wdKeyNumericAdd = (sal_Int32)107;
+static const ::sal_Int32 wdKeyNumericDecimal = (sal_Int32)110;
+static const ::sal_Int32 wdKeyNumericDivide = (sal_Int32)111;
+static const ::sal_Int32 wdKeyNumericMultiply = (sal_Int32)106;
+static const ::sal_Int32 wdKeyNumericSubtract = (sal_Int32)109;
+static const ::sal_Int32 wdKeyO = (sal_Int32)79;
+static const ::sal_Int32 wdKeyOpenSquareBrace = (sal_Int32)219;
+static const ::sal_Int32 wdKeyOption = (sal_Int32)1024;
+static const ::sal_Int32 wdKeyP = (sal_Int32)80;
+static const ::sal_Int32 wdKeyPageDown = (sal_Int32)34;
+static const ::sal_Int32 wdKeyPageUp = (sal_Int32)33;
+static const ::sal_Int32 wdKeyPause = (sal_Int32)19;
+static const ::sal_Int32 wdKeyPeriod = (sal_Int32)190;
+static const ::sal_Int32 wdKeyQ = (sal_Int32)81;
+static const ::sal_Int32 wdKeyR = (sal_Int32)82;
+static const ::sal_Int32 wdKeyReturn = (sal_Int32)13;
+static const ::sal_Int32 wdKeyS = (sal_Int32)83;
+static const ::sal_Int32 wdKeyScrollLock = (sal_Int32)145;
+static const ::sal_Int32 wdKeySemiColon = (sal_Int32)186;
+static const ::sal_Int32 wdKeyShift = (sal_Int32)256;
+static const ::sal_Int32 wdKeySingleQuote = (sal_Int32)222;
+static const ::sal_Int32 wdKeySlash = (sal_Int32)191;
+static const ::sal_Int32 wdKeySpacebar = (sal_Int32)32;
+static const ::sal_Int32 wdKeyT = (sal_Int32)84;
+static const ::sal_Int32 wdKeyTab = (sal_Int32)9;
+static const ::sal_Int32 wdKeyU = (sal_Int32)85;
+static const ::sal_Int32 wdKeyV = (sal_Int32)86;
+static const ::sal_Int32 wdKeyW = (sal_Int32)87;
+static const ::sal_Int32 wdKeyX = (sal_Int32)88;
+static const ::sal_Int32 wdKeyY = (sal_Int32)89;
+static const ::sal_Int32 wdKeyZ = (sal_Int32)90;
+static const ::sal_Int32 wdNoKey = (sal_Int32)255;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDKEY_HDL

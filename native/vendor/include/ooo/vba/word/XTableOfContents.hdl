@@ -1,0 +1,53 @@
+#ifndef INCLUDED_OOO_VBA_WORD_XTABLEOFCONTENTS_HDL
+#define INCLUDED_OOO_VBA_WORD_XTABLEOFCONTENTS_HDL
+
+#include "sal/config.h"
+
+#include "ooo/vba/XHelperInterface.hdl"
+#include "com/sun/star/uno/Reference.h"
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace ooo { namespace vba { namespace word {
+
+class SAL_NO_VTABLE SAL_DLLPUBLIC_RTTI XTableOfContents : public ::ooo::vba::XHelperInterface
+{
+public:
+#if defined LIBO_INTERNAL_ONLY
+    XTableOfContents() = default;
+    XTableOfContents(XTableOfContents const &) = default;
+    XTableOfContents(XTableOfContents &&) = default;
+    XTableOfContents & operator =(XTableOfContents const &) = default;
+    XTableOfContents & operator =(XTableOfContents &&) = default;
+#endif
+
+
+    // Attributes
+    virtual ::sal_Int32 SAL_CALL getLowerHeadingLevel() = 0;
+    virtual void SAL_CALL setLowerHeadingLevel( ::sal_Int32 _lowerheadinglevel ) = 0;
+    virtual ::sal_Int32 SAL_CALL getTabLeader() = 0;
+    virtual void SAL_CALL setTabLeader( ::sal_Int32 _tableader ) = 0;
+    virtual ::sal_Bool SAL_CALL getUseFields() = 0;
+    virtual void SAL_CALL setUseFields( ::sal_Bool _usefields ) = 0;
+    virtual ::sal_Bool SAL_CALL getUseOutlineLevels() = 0;
+    virtual void SAL_CALL setUseOutlineLevels( ::sal_Bool _useoutlinelevels ) = 0;
+
+    // Methods
+    virtual void SAL_CALL Delete() = 0;
+    virtual void SAL_CALL Update() = 0;
+
+    static inline ::css::uno::Type const & SAL_CALL static_type(void * = 0);
+
+protected:
+    ~XTableOfContents() SAL_NOEXCEPT {} // avoid warnings about virtual members and non-virtual dtor
+};
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::ooo::vba::word::XTableOfContents const *);
+} } }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::uno::Reference< ::ooo::vba::word::XTableOfContents > *);
+
+#endif

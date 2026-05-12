@@ -1,0 +1,39 @@
+#ifndef INCLUDED_OOO_VBA_DAO_COLLATINGORDERENUM_HDL
+#define INCLUDED_OOO_VBA_DAO_COLLATINGORDERENUM_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace dao { namespace CollatingOrderEnum {
+
+static const ::sal_Int32 dbSortArabic = (sal_Int32)1025;
+static const ::sal_Int32 dbSortChineseSimplified = (sal_Int32)2052;
+static const ::sal_Int32 dbSortChineseTraditional = (sal_Int32)1028;
+static const ::sal_Int32 dbSortCyrillic = (sal_Int32)1049;
+static const ::sal_Int32 dbSortCzech = (sal_Int32)1029;
+static const ::sal_Int32 dbSortDutch = (sal_Int32)1043;
+static const ::sal_Int32 dbSortGeneral = (sal_Int32)1033;
+static const ::sal_Int32 dbSortGreek = (sal_Int32)1032;
+static const ::sal_Int32 dbSortHebrew = (sal_Int32)1037;
+static const ::sal_Int32 dbSortHungarian = (sal_Int32)1038;
+static const ::sal_Int32 dbSortIcelandic = (sal_Int32)1039;
+static const ::sal_Int32 dbSortJapanese = (sal_Int32)1041;
+static const ::sal_Int32 dbSortKorean = (sal_Int32)1042;
+static const ::sal_Int32 dbSortNeutral = (sal_Int32)1024;
+static const ::sal_Int32 dbSortNorwdan = (sal_Int32)1030;
+static const ::sal_Int32 dbSortPDXIntl = (sal_Int32)1033;
+static const ::sal_Int32 dbSortPDXNor = (sal_Int32)1030;
+static const ::sal_Int32 dbSortPDXSwe = (sal_Int32)1053;
+static const ::sal_Int32 dbSortPolish = (sal_Int32)1045;
+static const ::sal_Int32 dbSortSlovenian = (sal_Int32)1060;
+static const ::sal_Int32 dbSortSpanish = (sal_Int32)1034;
+static const ::sal_Int32 dbSortSwedFin = (sal_Int32)1053;
+static const ::sal_Int32 dbSortThai = (sal_Int32)1054;
+static const ::sal_Int32 dbSortTurkish = (sal_Int32)1055;
+static const ::sal_Int32 dbSortUndefined = (sal_Int32)-1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_DAO_COLLATINGORDERENUM_HDL

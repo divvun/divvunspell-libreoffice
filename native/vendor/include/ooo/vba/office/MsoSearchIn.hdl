@@ -1,0 +1,18 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOSEARCHIN_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOSEARCHIN_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoSearchIn {
+
+static const ::sal_Int32 msoSearchInCustom = (sal_Int32)3;
+static const ::sal_Int32 msoSearchInMyComputer = (sal_Int32)0;
+static const ::sal_Int32 msoSearchInMyNetworkPlaces = (sal_Int32)2;
+static const ::sal_Int32 msoSearchInOutlook = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOSEARCHIN_HDL

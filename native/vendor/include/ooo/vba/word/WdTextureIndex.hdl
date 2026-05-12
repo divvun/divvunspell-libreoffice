@@ -1,0 +1,67 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDTEXTUREINDEX_HDL
+#define INCLUDED_OOO_VBA_WORD_WDTEXTUREINDEX_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdTextureIndex {
+
+static const ::sal_Int32 wdTexture10Percent = (sal_Int32)100;
+static const ::sal_Int32 wdTexture12Pt5Percent = (sal_Int32)125;
+static const ::sal_Int32 wdTexture15Percent = (sal_Int32)150;
+static const ::sal_Int32 wdTexture17Pt5Percent = (sal_Int32)175;
+static const ::sal_Int32 wdTexture20Percent = (sal_Int32)200;
+static const ::sal_Int32 wdTexture22Pt5Percent = (sal_Int32)225;
+static const ::sal_Int32 wdTexture25Percent = (sal_Int32)250;
+static const ::sal_Int32 wdTexture27Pt5Percent = (sal_Int32)275;
+static const ::sal_Int32 wdTexture2Pt5Percent = (sal_Int32)25;
+static const ::sal_Int32 wdTexture30Percent = (sal_Int32)300;
+static const ::sal_Int32 wdTexture32Pt5Percent = (sal_Int32)325;
+static const ::sal_Int32 wdTexture35Percent = (sal_Int32)350;
+static const ::sal_Int32 wdTexture37Pt5Percent = (sal_Int32)375;
+static const ::sal_Int32 wdTexture40Percent = (sal_Int32)400;
+static const ::sal_Int32 wdTexture42Pt5Percent = (sal_Int32)425;
+static const ::sal_Int32 wdTexture45Percent = (sal_Int32)450;
+static const ::sal_Int32 wdTexture47Pt5Percent = (sal_Int32)475;
+static const ::sal_Int32 wdTexture50Percent = (sal_Int32)500;
+static const ::sal_Int32 wdTexture52Pt5Percent = (sal_Int32)525;
+static const ::sal_Int32 wdTexture55Percent = (sal_Int32)550;
+static const ::sal_Int32 wdTexture57Pt5Percent = (sal_Int32)575;
+static const ::sal_Int32 wdTexture5Percent = (sal_Int32)50;
+static const ::sal_Int32 wdTexture60Percent = (sal_Int32)600;
+static const ::sal_Int32 wdTexture62Pt5Percent = (sal_Int32)625;
+static const ::sal_Int32 wdTexture65Percent = (sal_Int32)650;
+static const ::sal_Int32 wdTexture67Pt5Percent = (sal_Int32)675;
+static const ::sal_Int32 wdTexture70Percent = (sal_Int32)700;
+static const ::sal_Int32 wdTexture72Pt5Percent = (sal_Int32)725;
+static const ::sal_Int32 wdTexture75Percent = (sal_Int32)750;
+static const ::sal_Int32 wdTexture77Pt5Percent = (sal_Int32)775;
+static const ::sal_Int32 wdTexture7Pt5Percent = (sal_Int32)75;
+static const ::sal_Int32 wdTexture80Percent = (sal_Int32)800;
+static const ::sal_Int32 wdTexture82Pt5Percent = (sal_Int32)825;
+static const ::sal_Int32 wdTexture85Percent = (sal_Int32)850;
+static const ::sal_Int32 wdTexture87Pt5Percent = (sal_Int32)875;
+static const ::sal_Int32 wdTexture90Percent = (sal_Int32)900;
+static const ::sal_Int32 wdTexture92Pt5Percent = (sal_Int32)925;
+static const ::sal_Int32 wdTexture95Percent = (sal_Int32)950;
+static const ::sal_Int32 wdTexture97Pt5Percent = (sal_Int32)975;
+static const ::sal_Int32 wdTextureCross = (sal_Int32)-11;
+static const ::sal_Int32 wdTextureDarkCross = (sal_Int32)-5;
+static const ::sal_Int32 wdTextureDarkDiagonalCross = (sal_Int32)-6;
+static const ::sal_Int32 wdTextureDarkDiagonalDown = (sal_Int32)-3;
+static const ::sal_Int32 wdTextureDarkDiagonalUp = (sal_Int32)-4;
+static const ::sal_Int32 wdTextureDarkHorizontal = (sal_Int32)-1;
+static const ::sal_Int32 wdTextureDarkVertical = (sal_Int32)-2;
+static const ::sal_Int32 wdTextureDiagonalCross = (sal_Int32)-12;
+static const ::sal_Int32 wdTextureDiagonalDown = (sal_Int32)-9;
+static const ::sal_Int32 wdTextureDiagonalUp = (sal_Int32)-10;
+static const ::sal_Int32 wdTextureHorizontal = (sal_Int32)-7;
+static const ::sal_Int32 wdTextureNone = (sal_Int32)0;
+static const ::sal_Int32 wdTextureSolid = (sal_Int32)1000;
+static const ::sal_Int32 wdTextureVertical = (sal_Int32)-8;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDTEXTUREINDEX_HDL

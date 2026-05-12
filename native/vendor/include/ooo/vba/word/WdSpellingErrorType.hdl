@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDSPELLINGERRORTYPE_HDL
+#define INCLUDED_OOO_VBA_WORD_WDSPELLINGERRORTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdSpellingErrorType {
+
+static const ::sal_Int32 wdSpellingCapitalization = (sal_Int32)2;
+static const ::sal_Int32 wdSpellingCorrect = (sal_Int32)0;
+static const ::sal_Int32 wdSpellingNotInDictionary = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDSPELLINGERRORTYPE_HDL

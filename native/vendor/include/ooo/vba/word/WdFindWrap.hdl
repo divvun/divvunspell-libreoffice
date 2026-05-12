@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDFINDWRAP_HDL
+#define INCLUDED_OOO_VBA_WORD_WDFINDWRAP_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdFindWrap {
+
+static const ::sal_Int32 wdFindAsk = (sal_Int32)2;
+static const ::sal_Int32 wdFindContinue = (sal_Int32)1;
+static const ::sal_Int32 wdFindStop = (sal_Int32)0;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDFINDWRAP_HDL

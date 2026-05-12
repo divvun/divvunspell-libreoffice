@@ -1,0 +1,16 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDMOVEMENTTYPE_HDL
+#define INCLUDED_OOO_VBA_WORD_WDMOVEMENTTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdMovementType {
+
+static const ::sal_Int32 wdExtend = (sal_Int32)1;
+static const ::sal_Int32 wdMove = (sal_Int32)0;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDMOVEMENTTYPE_HDL

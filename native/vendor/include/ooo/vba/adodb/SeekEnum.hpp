@@ -1,0 +1,6 @@
+#ifndef INCLUDED_OOO_VBA_ADODB_SEEKENUM_HPP
+#define INCLUDED_OOO_VBA_ADODB_SEEKENUM_HPP
+
+#include "ooo/vba/adodb/SeekEnum.hdl"
+
+#endif // INCLUDED_OOO_VBA_ADODB_SEEKENUM_HPP

@@ -1,0 +1,15 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLCREATOR_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLCREATOR_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlCreator {
+
+static const ::sal_Int32 xlCreatorCode = (sal_Int32)1480803660;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLCREATOR_HDL

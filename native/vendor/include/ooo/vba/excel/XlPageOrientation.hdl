@@ -1,0 +1,16 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLPAGEORIENTATION_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLPAGEORIENTATION_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlPageOrientation {
+
+static const ::sal_Int32 xlLandscape = (sal_Int32)2;
+static const ::sal_Int32 xlPortrait = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLPAGEORIENTATION_HDL

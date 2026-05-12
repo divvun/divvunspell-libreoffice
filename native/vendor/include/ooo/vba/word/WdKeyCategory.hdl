@@ -1,0 +1,23 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDKEYCATEGORY_HDL
+#define INCLUDED_OOO_VBA_WORD_WDKEYCATEGORY_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdKeyCategory {
+
+static const ::sal_Int32 wdKeyCategoryAutoText = (sal_Int32)4;
+static const ::sal_Int32 wdKeyCategoryCommand = (sal_Int32)1;
+static const ::sal_Int32 wdKeyCategoryDisable = (sal_Int32)0;
+static const ::sal_Int32 wdKeyCategoryFont = (sal_Int32)3;
+static const ::sal_Int32 wdKeyCategoryMacro = (sal_Int32)2;
+static const ::sal_Int32 wdKeyCategoryNil = (sal_Int32)-1;
+static const ::sal_Int32 wdKeyCategoryPrefix = (sal_Int32)7;
+static const ::sal_Int32 wdKeyCategoryStyle = (sal_Int32)5;
+static const ::sal_Int32 wdKeyCategorySymbol = (sal_Int32)6;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDKEYCATEGORY_HDL

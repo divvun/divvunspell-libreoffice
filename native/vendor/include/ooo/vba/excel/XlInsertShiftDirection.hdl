@@ -1,0 +1,16 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLINSERTSHIFTDIRECTION_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLINSERTSHIFTDIRECTION_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlInsertShiftDirection {
+
+static const ::sal_Int32 xlShiftDown = (sal_Int32)-4121;
+static const ::sal_Int32 xlShiftToRight = (sal_Int32)-4161;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLINSERTSHIFTDIRECTION_HDL

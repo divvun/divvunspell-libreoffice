@@ -1,0 +1,49 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOANIMATIONTYPE_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOANIMATIONTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoAnimationType {
+
+static const ::sal_Int32 msoAnimationAppear = (sal_Int32)32;
+static const ::sal_Int32 msoAnimationBeginSpeaking = (sal_Int32)4;
+static const ::sal_Int32 msoAnimationCharacterSuccessMajor = (sal_Int32)6;
+static const ::sal_Int32 msoAnimationCheckingSomething = (sal_Int32)103;
+static const ::sal_Int32 msoAnimationDisappear = (sal_Int32)31;
+static const ::sal_Int32 msoAnimationEmptyTrash = (sal_Int32)116;
+static const ::sal_Int32 msoAnimationGestureDown = (sal_Int32)113;
+static const ::sal_Int32 msoAnimationGestureLeft = (sal_Int32)114;
+static const ::sal_Int32 msoAnimationGestureRight = (sal_Int32)19;
+static const ::sal_Int32 msoAnimationGestureUp = (sal_Int32)115;
+static const ::sal_Int32 msoAnimationGetArtsy = (sal_Int32)100;
+static const ::sal_Int32 msoAnimationGetAttentionMajor = (sal_Int32)11;
+static const ::sal_Int32 msoAnimationGetAttentionMinor = (sal_Int32)12;
+static const ::sal_Int32 msoAnimationGetTechy = (sal_Int32)101;
+static const ::sal_Int32 msoAnimationGetWizardy = (sal_Int32)102;
+static const ::sal_Int32 msoAnimationGoodbye = (sal_Int32)3;
+static const ::sal_Int32 msoAnimationGreeting = (sal_Int32)2;
+static const ::sal_Int32 msoAnimationIdle = (sal_Int32)1;
+static const ::sal_Int32 msoAnimationListensToComputer = (sal_Int32)26;
+static const ::sal_Int32 msoAnimationLookDown = (sal_Int32)104;
+static const ::sal_Int32 msoAnimationLookDownLeft = (sal_Int32)105;
+static const ::sal_Int32 msoAnimationLookDownRight = (sal_Int32)106;
+static const ::sal_Int32 msoAnimationLookLeft = (sal_Int32)107;
+static const ::sal_Int32 msoAnimationLookRight = (sal_Int32)108;
+static const ::sal_Int32 msoAnimationLookUp = (sal_Int32)109;
+static const ::sal_Int32 msoAnimationLookUpLeft = (sal_Int32)110;
+static const ::sal_Int32 msoAnimationLookUpRight = (sal_Int32)111;
+static const ::sal_Int32 msoAnimationPrinting = (sal_Int32)18;
+static const ::sal_Int32 msoAnimationRestPose = (sal_Int32)5;
+static const ::sal_Int32 msoAnimationSaving = (sal_Int32)112;
+static const ::sal_Int32 msoAnimationSearching = (sal_Int32)13;
+static const ::sal_Int32 msoAnimationSendingMail = (sal_Int32)25;
+static const ::sal_Int32 msoAnimationThinking = (sal_Int32)24;
+static const ::sal_Int32 msoAnimationWorkingAtSomething = (sal_Int32)23;
+static const ::sal_Int32 msoAnimationWritingNotingSomething = (sal_Int32)22;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOANIMATIONTYPE_HDL

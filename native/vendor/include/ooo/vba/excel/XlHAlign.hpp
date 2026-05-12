@@ -1,0 +1,6 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLHALIGN_HPP
+#define INCLUDED_OOO_VBA_EXCEL_XLHALIGN_HPP
+
+#include "ooo/vba/excel/XlHAlign.hdl"
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLHALIGN_HPP

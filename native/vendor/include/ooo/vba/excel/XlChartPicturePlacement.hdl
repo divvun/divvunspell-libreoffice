@@ -1,0 +1,21 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLCHARTPICTUREPLACEMENT_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLCHARTPICTUREPLACEMENT_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlChartPicturePlacement {
+
+static const ::sal_Int32 xlAllFaces = (sal_Int32)7;
+static const ::sal_Int32 xlEnd = (sal_Int32)2;
+static const ::sal_Int32 xlEndSides = (sal_Int32)3;
+static const ::sal_Int32 xlFront = (sal_Int32)4;
+static const ::sal_Int32 xlFrontEnd = (sal_Int32)6;
+static const ::sal_Int32 xlFrontSides = (sal_Int32)5;
+static const ::sal_Int32 xlSides = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLCHARTPICTUREPLACEMENT_HDL

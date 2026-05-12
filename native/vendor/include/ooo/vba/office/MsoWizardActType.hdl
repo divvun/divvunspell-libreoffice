@@ -1,0 +1,18 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOWIZARDACTTYPE_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOWIZARDACTTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoWizardActType {
+
+static const ::sal_Int32 msoWizardActActive = (sal_Int32)1;
+static const ::sal_Int32 msoWizardActInactive = (sal_Int32)0;
+static const ::sal_Int32 msoWizardActResume = (sal_Int32)3;
+static const ::sal_Int32 msoWizardActSuspend = (sal_Int32)2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOWIZARDACTTYPE_HDL

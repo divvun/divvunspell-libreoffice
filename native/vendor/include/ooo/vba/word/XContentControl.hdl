@@ -1,0 +1,94 @@
+#ifndef INCLUDED_OOO_VBA_WORD_XCONTENTCONTROL_HDL
+#define INCLUDED_OOO_VBA_WORD_XCONTENTCONTROL_HDL
+
+#include "sal/config.h"
+
+#include "ooo/vba/XHelperInterface.hdl"
+namespace ooo { namespace vba { namespace word { class XRange; } } }
+#include "com/sun/star/uno/Any.h"
+#include "com/sun/star/uno/Reference.h"
+#include "cppu/macros.hxx"
+#include "rtl/ustring.hxx"
+#include "sal/types.h"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace ooo { namespace vba { namespace word {
+
+class SAL_NO_VTABLE SAL_DLLPUBLIC_RTTI XContentControl : public ::ooo::vba::XHelperInterface
+{
+public:
+#if defined LIBO_INTERNAL_ONLY
+    XContentControl() = default;
+    XContentControl(XContentControl const &) = default;
+    XContentControl(XContentControl &&) = default;
+    XContentControl & operator =(XContentControl const &) = default;
+    XContentControl & operator =(XContentControl &&) = default;
+#endif
+
+
+    // Attributes
+    virtual ::sal_Bool SAL_CALL getAllowInsertDeleteSection() = 0;
+    virtual void SAL_CALL setAllowInsertDeleteSection( ::sal_Bool _allowinsertdeletesection ) = 0;
+    virtual ::sal_Int32 SAL_CALL getAppearance() = 0;
+    virtual void SAL_CALL setAppearance( ::sal_Int32 _appearance ) = 0;
+    virtual ::rtl::OUString SAL_CALL getBuildingBlockCategory() = 0;
+    virtual void SAL_CALL setBuildingBlockCategory( const ::rtl::OUString& _buildingblockcategory ) = 0;
+    virtual ::sal_Int32 SAL_CALL getBuildingBlockType() = 0;
+    virtual void SAL_CALL setBuildingBlockType( ::sal_Int32 _buildingblocktype ) = 0;
+    virtual ::sal_Bool SAL_CALL getChecked() = 0;
+    virtual void SAL_CALL setChecked( ::sal_Bool _checked ) = 0;
+    virtual ::sal_Int32 SAL_CALL getColor() = 0;
+    virtual void SAL_CALL setColor( ::sal_Int32 _color ) = 0;
+    virtual ::sal_Int32 SAL_CALL getDateCalendarType() = 0;
+    virtual void SAL_CALL setDateCalendarType( ::sal_Int32 _datecalendartype ) = 0;
+    virtual ::rtl::OUString SAL_CALL getDateDisplayFormat() = 0;
+    virtual void SAL_CALL setDateDisplayFormat( const ::rtl::OUString& _datedisplayformat ) = 0;
+    virtual ::sal_Int32 SAL_CALL getDateDisplayLocale() = 0;
+    virtual ::sal_Int32 SAL_CALL getDateStorageFormat() = 0;
+    virtual void SAL_CALL setDateStorageFormat( ::sal_Int32 _datestorageformat ) = 0;
+    virtual ::css::uno::Any SAL_CALL getDropdownListEntries() = 0;
+    virtual ::rtl::OUString SAL_CALL getID() = 0;
+    virtual ::sal_Int32 SAL_CALL getLevel() = 0;
+    virtual ::sal_Bool SAL_CALL getLockContentControl() = 0;
+    virtual void SAL_CALL setLockContentControl( ::sal_Bool _lockcontentcontrol ) = 0;
+    virtual ::sal_Bool SAL_CALL getLockContents() = 0;
+    virtual void SAL_CALL setLockContents( ::sal_Bool _lockcontents ) = 0;
+    virtual ::sal_Bool SAL_CALL getMultiLine() = 0;
+    virtual void SAL_CALL setMultiLine( ::sal_Bool _multiline ) = 0;
+    virtual ::rtl::OUString SAL_CALL getPlaceholderText() = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::word::XRange > SAL_CALL getRange() = 0;
+    virtual ::rtl::OUString SAL_CALL getRepeatingSectionItemTitle() = 0;
+    virtual void SAL_CALL setRepeatingSectionItemTitle( const ::rtl::OUString& _repeatingsectionitemtitle ) = 0;
+    virtual ::sal_Bool SAL_CALL getShowingPlaceholderText() = 0;
+    virtual ::rtl::OUString SAL_CALL getTag() = 0;
+    virtual void SAL_CALL setTag( const ::rtl::OUString& _tag ) = 0;
+    virtual ::sal_Bool SAL_CALL getTemporary() = 0;
+    virtual void SAL_CALL setTemporary( ::sal_Bool _temporary ) = 0;
+    virtual ::rtl::OUString SAL_CALL getTitle() = 0;
+    virtual void SAL_CALL setTitle( const ::rtl::OUString& _title ) = 0;
+    virtual ::sal_Int32 SAL_CALL getType() = 0;
+    virtual void SAL_CALL setType( ::sal_Int32 _type ) = 0;
+
+    // Methods
+    virtual void SAL_CALL Copy() = 0;
+    virtual void SAL_CALL Cut() = 0;
+    virtual void SAL_CALL Delete( const ::css::uno::Any& bDeleteContents ) = 0;
+    virtual void SAL_CALL SetCheckedSymbol( ::sal_Int32 Character, const ::css::uno::Any& sFont ) = 0;
+    virtual void SAL_CALL SetUnCheckedSymbol( ::sal_Int32 Character, const ::css::uno::Any& sFont ) = 0;
+    virtual void SAL_CALL SetPlaceholderText( const ::css::uno::Any& BuildingBlock, const ::css::uno::Any& Range, const ::css::uno::Any& sFont ) = 0;
+    virtual void SAL_CALL Ungroup() = 0;
+
+    static inline ::css::uno::Type const & SAL_CALL static_type(void * = 0);
+
+protected:
+    ~XContentControl() SAL_NOEXCEPT {} // avoid warnings about virtual members and non-virtual dtor
+};
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::ooo::vba::word::XContentControl const *);
+} } }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::uno::Reference< ::ooo::vba::word::XContentControl > *);
+
+#endif

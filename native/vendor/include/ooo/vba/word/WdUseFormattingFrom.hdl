@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDUSEFORMATTINGFROM_HDL
+#define INCLUDED_OOO_VBA_WORD_WDUSEFORMATTINGFROM_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdUseFormattingFrom {
+
+static const ::sal_Int32 wdFormattingFromCurrent = (sal_Int32)0;
+static const ::sal_Int32 wdFormattingFromPrompt = (sal_Int32)2;
+static const ::sal_Int32 wdFormattingFromSelected = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDUSEFORMATTINGFROM_HDL

@@ -1,0 +1,6 @@
+#ifndef INCLUDED_OOO_VBA_VBVARTYPE_HPP
+#define INCLUDED_OOO_VBA_VBVARTYPE_HPP
+
+#include "ooo/vba/VbVarType.hdl"
+
+#endif // INCLUDED_OOO_VBA_VBVARTYPE_HPP

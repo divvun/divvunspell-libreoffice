@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDREVISIONSMODE_HDL
+#define INCLUDED_OOO_VBA_WORD_WDREVISIONSMODE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdRevisionsMode {
+
+static const ::sal_Int32 wdBalloonRevisions = (sal_Int32)0;
+static const ::sal_Int32 wdInLineRevisions = (sal_Int32)1;
+static const ::sal_Int32 wdMixedRevisions = (sal_Int32)2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDREVISIONSMODE_HDL

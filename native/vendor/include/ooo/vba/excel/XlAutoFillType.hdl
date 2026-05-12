@@ -1,0 +1,25 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLAUTOFILLTYPE_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLAUTOFILLTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlAutoFillType {
+
+static const ::sal_Int32 xlFillCopy = (sal_Int32)1;
+static const ::sal_Int32 xlFillDays = (sal_Int32)5;
+static const ::sal_Int32 xlFillDefault = (sal_Int32)0;
+static const ::sal_Int32 xlFillFormats = (sal_Int32)3;
+static const ::sal_Int32 xlFillMonths = (sal_Int32)7;
+static const ::sal_Int32 xlFillSeries = (sal_Int32)2;
+static const ::sal_Int32 xlFillValues = (sal_Int32)4;
+static const ::sal_Int32 xlFillWeekdays = (sal_Int32)6;
+static const ::sal_Int32 xlFillYears = (sal_Int32)8;
+static const ::sal_Int32 xlGrowthTrend = (sal_Int32)10;
+static const ::sal_Int32 xlLinearTrend = (sal_Int32)9;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLAUTOFILLTYPE_HDL

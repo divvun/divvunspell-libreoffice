@@ -1,0 +1,19 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDEMPHASISMARK_HDL
+#define INCLUDED_OOO_VBA_WORD_WDEMPHASISMARK_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdEmphasisMark {
+
+static const ::sal_Int32 wdEmphasisMarkNone = (sal_Int32)0;
+static const ::sal_Int32 wdEmphasisMarkOverComma = (sal_Int32)2;
+static const ::sal_Int32 wdEmphasisMarkOverSolidCircle = (sal_Int32)1;
+static const ::sal_Int32 wdEmphasisMarkOverWhiteCircle = (sal_Int32)3;
+static const ::sal_Int32 wdEmphasisMarkUnderSolidCircle = (sal_Int32)4;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDEMPHASISMARK_HDL

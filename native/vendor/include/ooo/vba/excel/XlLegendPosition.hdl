@@ -1,0 +1,19 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLLEGENDPOSITION_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLLEGENDPOSITION_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlLegendPosition {
+
+static const ::sal_Int32 xlLegendPositionBottom = (sal_Int32)-4107;
+static const ::sal_Int32 xlLegendPositionCorner = (sal_Int32)2;
+static const ::sal_Int32 xlLegendPositionLeft = (sal_Int32)-4131;
+static const ::sal_Int32 xlLegendPositionRight = (sal_Int32)-4152;
+static const ::sal_Int32 xlLegendPositionTop = (sal_Int32)-4160;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLLEGENDPOSITION_HDL

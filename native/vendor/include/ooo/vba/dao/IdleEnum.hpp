@@ -1,0 +1,6 @@
+#ifndef INCLUDED_OOO_VBA_DAO_IDLEENUM_HPP
+#define INCLUDED_OOO_VBA_DAO_IDLEENUM_HPP
+
+#include "ooo/vba/dao/IdleEnum.hdl"
+
+#endif // INCLUDED_OOO_VBA_DAO_IDLEENUM_HPP

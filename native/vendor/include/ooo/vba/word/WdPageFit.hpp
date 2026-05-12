@@ -1,0 +1,6 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDPAGEFIT_HPP
+#define INCLUDED_OOO_VBA_WORD_WDPAGEFIT_HPP
+
+#include "ooo/vba/word/WdPageFit.hdl"
+
+#endif // INCLUDED_OOO_VBA_WORD_WDPAGEFIT_HPP

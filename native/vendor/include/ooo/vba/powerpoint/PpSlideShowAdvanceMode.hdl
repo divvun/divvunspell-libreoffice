@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_POWERPOINT_PPSLIDESHOWADVANCEMODE_HDL
+#define INCLUDED_OOO_VBA_POWERPOINT_PPSLIDESHOWADVANCEMODE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace powerpoint { namespace PpSlideShowAdvanceMode {
+
+static const ::sal_Int32 ppSlideShowManualAdvance = (sal_Int32)1;
+static const ::sal_Int32 ppSlideShowRehearseNewTimings = (sal_Int32)3;
+static const ::sal_Int32 ppSlideShowUseSlideTimings = (sal_Int32)2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_POWERPOINT_PPSLIDESHOWADVANCEMODE_HDL

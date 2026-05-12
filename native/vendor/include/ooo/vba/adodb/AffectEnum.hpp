@@ -1,0 +1,6 @@
+#ifndef INCLUDED_OOO_VBA_ADODB_AFFECTENUM_HPP
+#define INCLUDED_OOO_VBA_ADODB_AFFECTENUM_HPP
+
+#include "ooo/vba/adodb/AffectEnum.hdl"
+
+#endif // INCLUDED_OOO_VBA_ADODB_AFFECTENUM_HPP

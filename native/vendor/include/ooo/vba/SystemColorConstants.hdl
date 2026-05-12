@@ -1,0 +1,39 @@
+#ifndef INCLUDED_OOO_VBA_SYSTEMCOLORCONSTANTS_HDL
+#define INCLUDED_OOO_VBA_SYSTEMCOLORCONSTANTS_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace SystemColorConstants {
+
+static const ::sal_Int32 vb3DDKShadow = (sal_Int32)-2147483627;
+static const ::sal_Int32 vb3DHighlight = (sal_Int32)-2147483628;
+static const ::sal_Int32 vb3DLight = (sal_Int32)-2147483626;
+static const ::sal_Int32 vbActiveBorder = (sal_Int32)-2147483638;
+static const ::sal_Int32 vbActiveTitleBar = (sal_Int32)-2147483646;
+static const ::sal_Int32 vbApplicationWorkspace = (sal_Int32)-2147483636;
+static const ::sal_Int32 vbButtonFace = (sal_Int32)-2147483633;
+static const ::sal_Int32 vbButtonShadow = (sal_Int32)-2147483632;
+static const ::sal_Int32 vbButtonText = (sal_Int32)-2147483630;
+static const ::sal_Int32 vbDesktop = (sal_Int32)-2147483647;
+static const ::sal_Int32 vbGrayText = (sal_Int32)-2147483631;
+static const ::sal_Int32 vbHighlight = (sal_Int32)-2147483635;
+static const ::sal_Int32 vbHighlightText = (sal_Int32)-2147483634;
+static const ::sal_Int32 vbInactiveBorder = (sal_Int32)-2147483637;
+static const ::sal_Int32 vbInactiveCaptionText = (sal_Int32)-2147483629;
+static const ::sal_Int32 vbInactiveTitleBar = (sal_Int32)-2147483645;
+static const ::sal_Int32 vbInfoBackground = (sal_Int32)-2147483624;
+static const ::sal_Int32 vbInfoText = (sal_Int32)-2147483625;
+static const ::sal_Int32 vbMenuBar = (sal_Int32)-2147483644;
+static const ::sal_Int32 vbMenuText = (sal_Int32)-2147483641;
+static const ::sal_Int32 vbScrollBars = SAL_MIN_INT32;
+static const ::sal_Int32 vbTitleBarText = (sal_Int32)-2147483639;
+static const ::sal_Int32 vbWindowBackground = (sal_Int32)-2147483643;
+static const ::sal_Int32 vbWindowFrame = (sal_Int32)-2147483642;
+static const ::sal_Int32 vbWindowText = (sal_Int32)-2147483640;
+
+} } }
+
+#endif // INCLUDED_OOO_VBA_SYSTEMCOLORCONSTANTS_HDL

@@ -1,0 +1,71 @@
+#ifndef INCLUDED_COM_SUN_STAR_SHEET_XSOLVERSETTINGS_HDL
+#define INCLUDED_COM_SUN_STAR_SHEET_XSOLVERSETTINGS_HDL
+
+#include "sal/config.h"
+
+#include "com/sun/star/beans/PropertyValue.hdl"
+#include "com/sun/star/sheet/ModelConstraint.hdl"
+#include "com/sun/star/uno/XInterface.hdl"
+#include "com/sun/star/uno/Any.h"
+#include "com/sun/star/uno/Reference.h"
+#include "com/sun/star/uno/Sequence.h"
+#include "cppu/macros.hxx"
+#include "rtl/ustring.hxx"
+#include "sal/types.h"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace com { namespace sun { namespace star { namespace sheet {
+
+class SAL_NO_VTABLE SAL_DLLPUBLIC_RTTI XSolverSettings : public ::css::uno::XInterface
+{
+public:
+#if defined LIBO_INTERNAL_ONLY
+    XSolverSettings() = default;
+    XSolverSettings(XSolverSettings const &) = default;
+    XSolverSettings(XSolverSettings &&) = default;
+    XSolverSettings & operator =(XSolverSettings const &) = default;
+    XSolverSettings & operator =(XSolverSettings &&) = default;
+#endif
+
+
+    // Attributes
+    virtual ::sal_Int8 SAL_CALL getObjectiveType() = 0;
+    virtual void SAL_CALL setObjectiveType( ::sal_Int8 _objectivetype ) = 0;
+    virtual ::css::uno::Any SAL_CALL getObjectiveCell() = 0;
+    virtual void SAL_CALL setObjectiveCell( const ::css::uno::Any& _objectivecell ) = 0;
+    virtual ::css::uno::Any SAL_CALL getGoalValue() = 0;
+    virtual void SAL_CALL setGoalValue( const ::css::uno::Any& _goalvalue ) = 0;
+    virtual ::rtl::OUString SAL_CALL getEngine() = 0;
+    virtual void SAL_CALL setEngine( const ::rtl::OUString& _engine ) = 0;
+    virtual ::css::uno::Sequence< ::rtl::OUString > SAL_CALL getAvailableEngines() = 0;
+    virtual ::css::uno::Sequence< ::css::uno::Any > SAL_CALL getVariableCells() = 0;
+    virtual void SAL_CALL setVariableCells( const ::css::uno::Sequence< ::css::uno::Any >& _variablecells ) = 0;
+    virtual ::css::uno::Sequence< ::css::sheet::ModelConstraint > SAL_CALL getConstraints() = 0;
+    virtual void SAL_CALL setConstraints( const ::css::uno::Sequence< ::css::sheet::ModelConstraint >& _constraints ) = 0;
+    virtual ::sal_Int32 SAL_CALL getConstraintCount() = 0;
+    virtual ::css::uno::Sequence< ::css::beans::PropertyValue > SAL_CALL getEngineOptions() = 0;
+    virtual void SAL_CALL setEngineOptions( const ::css::uno::Sequence< ::css::beans::PropertyValue >& _engineoptions ) = 0;
+    virtual ::sal_Int8 SAL_CALL getStatus() = 0;
+    virtual ::rtl::OUString SAL_CALL getErrorMessage() = 0;
+    virtual ::sal_Bool SAL_CALL getSuppressDialog() = 0;
+    virtual void SAL_CALL setSuppressDialog( ::sal_Bool _suppressdialog ) = 0;
+
+    // Methods
+    virtual void SAL_CALL reset() = 0;
+    virtual void SAL_CALL solve() = 0;
+    virtual void SAL_CALL saveToFile() = 0;
+
+    static inline ::css::uno::Type const & SAL_CALL static_type(void * = 0);
+
+protected:
+    ~XSolverSettings() SAL_NOEXCEPT {} // avoid warnings about virtual members and non-virtual dtor
+};
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::css::sheet::XSolverSettings const *);
+} } } }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::uno::Reference< ::css::sheet::XSolverSettings > *);
+
+#endif

@@ -1,0 +1,19 @@
+#ifndef INCLUDED_OOO_VBA_MSFORMS_FMSPECIALEFFECT_HDL
+#define INCLUDED_OOO_VBA_MSFORMS_FMSPECIALEFFECT_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace msforms { namespace fmSpecialEffect {
+
+static const ::sal_Int32 fmSpecialEffectBump = (sal_Int32)6;
+static const ::sal_Int32 fmSpecialEffectEtched = (sal_Int32)3;
+static const ::sal_Int32 fmSpecialEffectFlat = (sal_Int32)0;
+static const ::sal_Int32 fmSpecialEffectRaised = (sal_Int32)1;
+static const ::sal_Int32 fmSpecialEffectSunken = (sal_Int32)2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_MSFORMS_FMSPECIALEFFECT_HDL

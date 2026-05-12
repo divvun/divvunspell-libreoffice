@@ -1,0 +1,22 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLFORMATCONDITIONOPERATOR_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLFORMATCONDITIONOPERATOR_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlFormatConditionOperator {
+
+static const ::sal_Int32 xlBetween = (sal_Int32)1;
+static const ::sal_Int32 xlEqual = (sal_Int32)3;
+static const ::sal_Int32 xlGreater = (sal_Int32)5;
+static const ::sal_Int32 xlGreaterEqual = (sal_Int32)7;
+static const ::sal_Int32 xlLess = (sal_Int32)6;
+static const ::sal_Int32 xlLessEqual = (sal_Int32)8;
+static const ::sal_Int32 xlNotBetween = (sal_Int32)2;
+static const ::sal_Int32 xlNotEqual = (sal_Int32)4;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLFORMATCONDITIONOPERATOR_HDL

@@ -1,0 +1,28 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDCUSTOMLABELPAGESIZE_HDL
+#define INCLUDED_OOO_VBA_WORD_WDCUSTOMLABELPAGESIZE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdCustomLabelPageSize {
+
+static const ::sal_Int32 wdCustomLabelA4 = (sal_Int32)2;
+static const ::sal_Int32 wdCustomLabelA4LS = (sal_Int32)3;
+static const ::sal_Int32 wdCustomLabelA5 = (sal_Int32)4;
+static const ::sal_Int32 wdCustomLabelA5LS = (sal_Int32)5;
+static const ::sal_Int32 wdCustomLabelB4JIS = (sal_Int32)13;
+static const ::sal_Int32 wdCustomLabelB5 = (sal_Int32)6;
+static const ::sal_Int32 wdCustomLabelFanfold = (sal_Int32)8;
+static const ::sal_Int32 wdCustomLabelHigaki = (sal_Int32)11;
+static const ::sal_Int32 wdCustomLabelHigakiLS = (sal_Int32)12;
+static const ::sal_Int32 wdCustomLabelLetter = (sal_Int32)0;
+static const ::sal_Int32 wdCustomLabelLetterLS = (sal_Int32)1;
+static const ::sal_Int32 wdCustomLabelMini = (sal_Int32)7;
+static const ::sal_Int32 wdCustomLabelVertHalfSheet = (sal_Int32)9;
+static const ::sal_Int32 wdCustomLabelVertHalfSheetLS = (sal_Int32)10;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDCUSTOMLABELPAGESIZE_HDL

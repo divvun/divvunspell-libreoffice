@@ -1,0 +1,15 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLDATALABELSEPARATOR_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLDATALABELSEPARATOR_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlDataLabelSeparator {
+
+static const ::sal_Int32 xlDataLabelSeparatorDefault = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLDATALABELSEPARATOR_HDL

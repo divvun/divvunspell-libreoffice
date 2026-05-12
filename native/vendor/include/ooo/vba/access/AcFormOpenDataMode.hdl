@@ -1,0 +1,18 @@
+#ifndef INCLUDED_OOO_VBA_ACCESS_ACFORMOPENDATAMODE_HDL
+#define INCLUDED_OOO_VBA_ACCESS_ACFORMOPENDATAMODE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace access { namespace AcFormOpenDataMode {
+
+static const ::sal_Int32 acFormAdd = (sal_Int32)0;
+static const ::sal_Int32 acFormEdit = (sal_Int32)1;
+static const ::sal_Int32 acFormPropertySettings = (sal_Int32)-1;
+static const ::sal_Int32 acFormReadOnly = (sal_Int32)2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_ACCESS_ACFORMOPENDATAMODE_HDL

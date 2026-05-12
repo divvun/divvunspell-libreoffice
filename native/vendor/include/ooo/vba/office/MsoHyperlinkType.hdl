@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOHYPERLINKTYPE_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOHYPERLINKTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoHyperlinkType {
+
+static const ::sal_Int32 msoHyperlinkInlineShape = (sal_Int32)2;
+static const ::sal_Int32 msoHyperlinkRange = (sal_Int32)0;
+static const ::sal_Int32 msoHyperlinkShape = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOHYPERLINKTYPE_HDL

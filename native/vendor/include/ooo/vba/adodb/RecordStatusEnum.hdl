@@ -1,0 +1,32 @@
+#ifndef INCLUDED_OOO_VBA_ADODB_RECORDSTATUSENUM_HDL
+#define INCLUDED_OOO_VBA_ADODB_RECORDSTATUSENUM_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace adodb { namespace RecordStatusEnum {
+
+static const ::sal_Int32 adRecCanceled = (sal_Int32)256;
+static const ::sal_Int32 adRecCantRelease = (sal_Int32)1024;
+static const ::sal_Int32 adRecConcurrencyViolation = (sal_Int32)2048;
+static const ::sal_Int32 adRecDBDeleted = (sal_Int32)262144;
+static const ::sal_Int32 adRecDeleted = (sal_Int32)4;
+static const ::sal_Int32 adRecIntegrityViolation = (sal_Int32)4096;
+static const ::sal_Int32 adRecInvalid = (sal_Int32)16;
+static const ::sal_Int32 adRecMaxChangesExceeded = (sal_Int32)8192;
+static const ::sal_Int32 adRecModified = (sal_Int32)2;
+static const ::sal_Int32 adRecMultipleChanges = (sal_Int32)64;
+static const ::sal_Int32 adRecNew = (sal_Int32)1;
+static const ::sal_Int32 adRecOK = (sal_Int32)0;
+static const ::sal_Int32 adRecObjectOpen = (sal_Int32)16384;
+static const ::sal_Int32 adRecOutOfMemory = (sal_Int32)32768;
+static const ::sal_Int32 adRecPendingChanges = (sal_Int32)128;
+static const ::sal_Int32 adRecPermissionDenied = (sal_Int32)65536;
+static const ::sal_Int32 adRecSchemaViolation = (sal_Int32)131072;
+static const ::sal_Int32 adRecUnmodified = (sal_Int32)8;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_ADODB_RECORDSTATUSENUM_HDL

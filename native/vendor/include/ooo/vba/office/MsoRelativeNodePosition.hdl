@@ -1,0 +1,18 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSORELATIVENODEPOSITION_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSORELATIVENODEPOSITION_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoRelativeNodePosition {
+
+static const ::sal_Int32 msoAfterLastSibling = (sal_Int32)4;
+static const ::sal_Int32 msoAfterNode = (sal_Int32)2;
+static const ::sal_Int32 msoBeforeFirstSibling = (sal_Int32)3;
+static const ::sal_Int32 msoBeforeNode = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSORELATIVENODEPOSITION_HDL

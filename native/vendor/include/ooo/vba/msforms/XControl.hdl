@@ -1,0 +1,77 @@
+#ifndef INCLUDED_OOO_VBA_MSFORMS_XCONTROL_HDL
+#define INCLUDED_OOO_VBA_MSFORMS_XCONTROL_HDL
+
+#include "sal/config.h"
+
+#include "com/sun/star/script/ScriptEvent.hdl"
+namespace com { namespace sun { namespace star { namespace uno { class XInterface; } } } }
+#include "ooo/vba/XHelperInterface.hdl"
+#include "com/sun/star/uno/Any.h"
+#include "com/sun/star/uno/Reference.h"
+#include "cppu/macros.hxx"
+#include "rtl/ustring.hxx"
+#include "sal/types.h"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace ooo { namespace vba { namespace msforms {
+
+class SAL_NO_VTABLE SAL_DLLPUBLIC_RTTI XControl : public ::ooo::vba::XHelperInterface
+{
+public:
+#if defined LIBO_INTERNAL_ONLY
+    XControl() = default;
+    XControl(XControl const &) = default;
+    XControl(XControl &&) = default;
+    XControl & operator =(XControl const &) = default;
+    XControl & operator =(XControl &&) = default;
+#endif
+
+
+    // Attributes
+    virtual ::css::uno::Reference< ::css::uno::XInterface > SAL_CALL getObject() = 0;
+    virtual ::rtl::OUString SAL_CALL getControlSource() = 0;
+    virtual void SAL_CALL setControlSource( const ::rtl::OUString& _controlsource ) = 0;
+    virtual ::rtl::OUString SAL_CALL getRowSource() = 0;
+    virtual void SAL_CALL setRowSource( const ::rtl::OUString& _rowsource ) = 0;
+    virtual ::sal_Bool SAL_CALL getEnabled() = 0;
+    virtual void SAL_CALL setEnabled( ::sal_Bool _enabled ) = 0;
+    virtual ::sal_Bool SAL_CALL getVisible() = 0;
+    virtual void SAL_CALL setVisible( ::sal_Bool _visible ) = 0;
+    virtual ::sal_Int32 SAL_CALL getMousePointer() = 0;
+    virtual void SAL_CALL setMousePointer( ::sal_Int32 _mousepointer ) = 0;
+    virtual double SAL_CALL getHeight() = 0;
+    virtual void SAL_CALL setHeight( double _height ) = 0;
+    virtual double SAL_CALL getWidth() = 0;
+    virtual void SAL_CALL setWidth( double _width ) = 0;
+    virtual double SAL_CALL getLeft() = 0;
+    virtual void SAL_CALL setLeft( double _left ) = 0;
+    virtual double SAL_CALL getTop() = 0;
+    virtual void SAL_CALL setTop( double _top ) = 0;
+    virtual ::rtl::OUString SAL_CALL getName() = 0;
+    virtual void SAL_CALL setName( const ::rtl::OUString& _name ) = 0;
+    virtual ::rtl::OUString SAL_CALL getControlTipText() = 0;
+    virtual void SAL_CALL setControlTipText( const ::rtl::OUString& _controltiptext ) = 0;
+    virtual ::rtl::OUString SAL_CALL getTag() = 0;
+    virtual void SAL_CALL setTag( const ::rtl::OUString& _tag ) = 0;
+    virtual ::sal_Int32 SAL_CALL getTabIndex() = 0;
+    virtual void SAL_CALL setTabIndex( ::sal_Int32 _tabindex ) = 0;
+
+    // Methods
+    virtual void SAL_CALL SetFocus() = 0;
+    virtual void SAL_CALL Move( double Left, double Top, const ::css::uno::Any& Width, const ::css::uno::Any& Height ) = 0;
+    virtual void SAL_CALL fireEvent( const ::css::script::ScriptEvent& evt ) = 0;
+
+    static inline ::css::uno::Type const & SAL_CALL static_type(void * = 0);
+
+protected:
+    ~XControl() SAL_NOEXCEPT {} // avoid warnings about virtual members and non-virtual dtor
+};
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::ooo::vba::msforms::XControl const *);
+} } }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::uno::Reference< ::ooo::vba::msforms::XControl > *);
+
+#endif

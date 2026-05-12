@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLCHARTPICTURETYPE_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLCHARTPICTURETYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlChartPictureType {
+
+static const ::sal_Int32 xlStack = (sal_Int32)2;
+static const ::sal_Int32 xlStackScale = (sal_Int32)3;
+static const ::sal_Int32 xlStretch = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLCHARTPICTURETYPE_HDL

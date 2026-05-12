@@ -1,0 +1,37 @@
+#ifndef INCLUDED_OOO_VBA_TYPEANDIID_HDL
+#define INCLUDED_OOO_VBA_TYPEANDIID_HDL
+
+#include "sal/config.h"
+
+#include "com/sun/star/uno/Type.h"
+#include "cppu/macros.hxx"
+#include "rtl/ustring.hxx"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace ooo { namespace vba {
+
+#ifdef _WIN32
+#   pragma pack(push, 8)
+#endif
+
+struct SAL_DLLPUBLIC_RTTI SAL_WARN_UNUSED TypeAndIID {
+    inline TypeAndIID();
+
+    inline TypeAndIID(const ::css::uno::Type& Type_, const ::rtl::OUString& IID_);
+
+    ::css::uno::Type Type;
+    ::rtl::OUString IID;
+};
+
+#ifdef _WIN32
+#   pragma pack(pop)
+#endif
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::ooo::vba::TypeAndIID const *);
+} }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::ooo::vba::TypeAndIID *);
+
+#endif

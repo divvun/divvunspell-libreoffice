@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_POWERPOINT_MSOANIMEFFECTRESTART_HDL
+#define INCLUDED_OOO_VBA_POWERPOINT_MSOANIMEFFECTRESTART_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace powerpoint { namespace MsoAnimEffectRestart {
+
+static const ::sal_Int32 msoAnimEffectRestartAlways = (sal_Int32)1;
+static const ::sal_Int32 msoAnimEffectRestartNever = (sal_Int32)3;
+static const ::sal_Int32 msoAnimEffectRestartWhenOff = (sal_Int32)2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_POWERPOINT_MSOANIMEFFECTRESTART_HDL

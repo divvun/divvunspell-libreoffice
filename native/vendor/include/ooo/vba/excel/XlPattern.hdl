@@ -1,0 +1,34 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLPATTERN_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLPATTERN_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlPattern {
+
+static const ::sal_Int32 xlPatternAutomatic = (sal_Int32)-4105;
+static const ::sal_Int32 xlPatternChecker = (sal_Int32)9;
+static const ::sal_Int32 xlPatternCrissCross = (sal_Int32)16;
+static const ::sal_Int32 xlPatternDown = (sal_Int32)-4121;
+static const ::sal_Int32 xlPatternGray16 = (sal_Int32)17;
+static const ::sal_Int32 xlPatternGray25 = (sal_Int32)-4124;
+static const ::sal_Int32 xlPatternGray50 = (sal_Int32)-4125;
+static const ::sal_Int32 xlPatternGray75 = (sal_Int32)-4126;
+static const ::sal_Int32 xlPatternGray8 = (sal_Int32)18;
+static const ::sal_Int32 xlPatternGrid = (sal_Int32)15;
+static const ::sal_Int32 xlPatternHorizontal = (sal_Int32)-4128;
+static const ::sal_Int32 xlPatternLightDown = (sal_Int32)13;
+static const ::sal_Int32 xlPatternLightHorizontal = (sal_Int32)11;
+static const ::sal_Int32 xlPatternLightUp = (sal_Int32)14;
+static const ::sal_Int32 xlPatternLightVertical = (sal_Int32)12;
+static const ::sal_Int32 xlPatternNone = (sal_Int32)-4142;
+static const ::sal_Int32 xlPatternSemiGray75 = (sal_Int32)10;
+static const ::sal_Int32 xlPatternSolid = (sal_Int32)1;
+static const ::sal_Int32 xlPatternUp = (sal_Int32)-4162;
+static const ::sal_Int32 xlPatternVertical = (sal_Int32)-4166;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLPATTERN_HDL

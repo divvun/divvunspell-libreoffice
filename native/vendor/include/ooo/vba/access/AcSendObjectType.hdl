@@ -1,0 +1,21 @@
+#ifndef INCLUDED_OOO_VBA_ACCESS_ACSENDOBJECTTYPE_HDL
+#define INCLUDED_OOO_VBA_ACCESS_ACSENDOBJECTTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace access { namespace AcSendObjectType {
+
+static const ::sal_Int32 acSendDataAccessPage = (sal_Int32)6;
+static const ::sal_Int32 acSendForm = (sal_Int32)2;
+static const ::sal_Int32 acSendModule = (sal_Int32)5;
+static const ::sal_Int32 acSendNoObject = (sal_Int32)-1;
+static const ::sal_Int32 acSendQuery = (sal_Int32)1;
+static const ::sal_Int32 acSendReport = (sal_Int32)3;
+static const ::sal_Int32 acSendTable = (sal_Int32)0;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_ACCESS_ACSENDOBJECTTYPE_HDL

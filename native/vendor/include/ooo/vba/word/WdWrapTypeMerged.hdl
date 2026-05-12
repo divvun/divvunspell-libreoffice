@@ -1,0 +1,21 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDWRAPTYPEMERGED_HDL
+#define INCLUDED_OOO_VBA_WORD_WDWRAPTYPEMERGED_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdWrapTypeMerged {
+
+static const ::sal_Int32 wdWrapMergeBehind = (sal_Int32)3;
+static const ::sal_Int32 wdWrapMergeFront = (sal_Int32)4;
+static const ::sal_Int32 wdWrapMergeInline = (sal_Int32)0;
+static const ::sal_Int32 wdWrapMergeSquare = (sal_Int32)1;
+static const ::sal_Int32 wdWrapMergeThrough = (sal_Int32)5;
+static const ::sal_Int32 wdWrapMergeTight = (sal_Int32)2;
+static const ::sal_Int32 wdWrapMergeTopBottom = (sal_Int32)6;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDWRAPTYPEMERGED_HDL

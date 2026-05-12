@@ -1,0 +1,25 @@
+#ifndef INCLUDED_OOO_VBA_ACCESS_ACSPREADSHEETTYPE_HDL
+#define INCLUDED_OOO_VBA_ACCESS_ACSPREADSHEETTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace access { namespace AcSpreadSheetType {
+
+static const ::sal_Int32 acSpreadsheetTypeExcel3 = (sal_Int32)0;
+static const ::sal_Int32 acSpreadsheetTypeExcel4 = (sal_Int32)6;
+static const ::sal_Int32 acSpreadsheetTypeExcel5 = (sal_Int32)5;
+static const ::sal_Int32 acSpreadsheetTypeExcel7 = (sal_Int32)5;
+static const ::sal_Int32 acSpreadsheetTypeExcel8 = (sal_Int32)8;
+static const ::sal_Int32 acSpreadsheetTypeExcel9 = (sal_Int32)8;
+static const ::sal_Int32 acSpreadsheetTypeExcel97 = (sal_Int32)8;
+static const ::sal_Int32 acSpreadsheetTypeLotusWJ2 = (sal_Int32)4;
+static const ::sal_Int32 acSpreadsheetTypeLotusWK1 = (sal_Int32)2;
+static const ::sal_Int32 acSpreadsheetTypeLotusWK3 = (sal_Int32)3;
+static const ::sal_Int32 acSpreadsheetTypeLotusWK4 = (sal_Int32)7;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_ACCESS_ACSPREADSHEETTYPE_HDL

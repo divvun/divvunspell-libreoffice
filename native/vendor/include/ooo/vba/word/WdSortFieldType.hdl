@@ -1,0 +1,21 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDSORTFIELDTYPE_HDL
+#define INCLUDED_OOO_VBA_WORD_WDSORTFIELDTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdSortFieldType {
+
+static const ::sal_Int32 wdSortFieldAlphanumeric = (sal_Int32)0;
+static const ::sal_Int32 wdSortFieldDate = (sal_Int32)2;
+static const ::sal_Int32 wdSortFieldJapanJIS = (sal_Int32)4;
+static const ::sal_Int32 wdSortFieldKoreaKS = (sal_Int32)6;
+static const ::sal_Int32 wdSortFieldNumeric = (sal_Int32)1;
+static const ::sal_Int32 wdSortFieldStroke = (sal_Int32)5;
+static const ::sal_Int32 wdSortFieldSyllable = (sal_Int32)3;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDSORTFIELDTYPE_HDL

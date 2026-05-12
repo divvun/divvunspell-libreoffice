@@ -1,0 +1,52 @@
+#ifndef INCLUDED_COM_SUN_STAR_SYSTEM_WINDOWS_XJUMPLIST_HDL
+#define INCLUDED_COM_SUN_STAR_SYSTEM_WINDOWS_XJUMPLIST_HDL
+
+#include "sal/config.h"
+
+#include "com/sun/star/system/windows/JumpListItem.hdl"
+#include "com/sun/star/uno/XInterface.hdl"
+#include "com/sun/star/uno/Reference.h"
+#include "com/sun/star/uno/Sequence.h"
+#include "cppu/macros.hxx"
+#include "rtl/ustring.hxx"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace com { namespace sun { namespace star { namespace system { namespace windows {
+
+class SAL_NO_VTABLE SAL_DLLPUBLIC_RTTI XJumpList : public ::css::uno::XInterface
+{
+public:
+#if defined LIBO_INTERNAL_ONLY
+    XJumpList() = default;
+    XJumpList(XJumpList const &) = default;
+    XJumpList(XJumpList &&) = default;
+    XJumpList & operator =(XJumpList const &) = default;
+    XJumpList & operator =(XJumpList &&) = default;
+#endif
+
+
+    // Methods
+    virtual void SAL_CALL beginList( const ::rtl::OUString& application ) = 0;
+    virtual void SAL_CALL appendCategory( const ::rtl::OUString& category, const ::css::uno::Sequence< ::css::system::windows::JumpListItem >& jumpListItems ) = 0;
+    virtual void SAL_CALL addTasks( const ::css::uno::Sequence< ::css::system::windows::JumpListItem >& jumpListItems ) = 0;
+    virtual void SAL_CALL showRecentFiles() = 0;
+    virtual void SAL_CALL showFrequentFiles() = 0;
+    virtual void SAL_CALL commitList() = 0;
+    virtual void SAL_CALL abortList() = 0;
+    virtual void SAL_CALL deleteList( const ::rtl::OUString& application ) = 0;
+    virtual ::css::uno::Sequence< ::css::system::windows::JumpListItem > SAL_CALL getRemovedItems( const ::rtl::OUString& application ) = 0;
+
+    static inline ::css::uno::Type const & SAL_CALL static_type(void * = 0);
+
+protected:
+    ~XJumpList() SAL_NOEXCEPT {} // avoid warnings about virtual members and non-virtual dtor
+};
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::css::system::windows::XJumpList const *);
+} } } } }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::uno::Reference< ::css::system::windows::XJumpList > *);
+
+#endif

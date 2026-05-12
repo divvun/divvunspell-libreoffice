@@ -1,0 +1,57 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLRANGEAUTOFORMAT_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLRANGEAUTOFORMAT_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlRangeAutoFormat {
+
+static const ::sal_Int32 xlRangeAutoFormat3DEffects1 = (sal_Int32)13;
+static const ::sal_Int32 xlRangeAutoFormat3DEffects2 = (sal_Int32)14;
+static const ::sal_Int32 xlRangeAutoFormatAccounting1 = (sal_Int32)4;
+static const ::sal_Int32 xlRangeAutoFormatAccounting2 = (sal_Int32)5;
+static const ::sal_Int32 xlRangeAutoFormatAccounting3 = (sal_Int32)6;
+static const ::sal_Int32 xlRangeAutoFormatAccounting4 = (sal_Int32)17;
+static const ::sal_Int32 xlRangeAutoFormatClassic1 = (sal_Int32)1;
+static const ::sal_Int32 xlRangeAutoFormatClassic2 = (sal_Int32)2;
+static const ::sal_Int32 xlRangeAutoFormatClassic3 = (sal_Int32)3;
+static const ::sal_Int32 xlRangeAutoFormatClassicPivotTable = (sal_Int32)31;
+static const ::sal_Int32 xlRangeAutoFormatColor1 = (sal_Int32)7;
+static const ::sal_Int32 xlRangeAutoFormatColor2 = (sal_Int32)8;
+static const ::sal_Int32 xlRangeAutoFormatColor3 = (sal_Int32)9;
+static const ::sal_Int32 xlRangeAutoFormatList1 = (sal_Int32)10;
+static const ::sal_Int32 xlRangeAutoFormatList2 = (sal_Int32)11;
+static const ::sal_Int32 xlRangeAutoFormatList3 = (sal_Int32)12;
+static const ::sal_Int32 xlRangeAutoFormatLocalFormat1 = (sal_Int32)15;
+static const ::sal_Int32 xlRangeAutoFormatLocalFormat2 = (sal_Int32)16;
+static const ::sal_Int32 xlRangeAutoFormatLocalFormat3 = (sal_Int32)19;
+static const ::sal_Int32 xlRangeAutoFormatLocalFormat4 = (sal_Int32)20;
+static const ::sal_Int32 xlRangeAutoFormatNone = (sal_Int32)-4142;
+static const ::sal_Int32 xlRangeAutoFormatPTNone = (sal_Int32)42;
+static const ::sal_Int32 xlRangeAutoFormatReport1 = (sal_Int32)21;
+static const ::sal_Int32 xlRangeAutoFormatReport10 = (sal_Int32)30;
+static const ::sal_Int32 xlRangeAutoFormatReport2 = (sal_Int32)22;
+static const ::sal_Int32 xlRangeAutoFormatReport3 = (sal_Int32)23;
+static const ::sal_Int32 xlRangeAutoFormatReport4 = (sal_Int32)24;
+static const ::sal_Int32 xlRangeAutoFormatReport5 = (sal_Int32)25;
+static const ::sal_Int32 xlRangeAutoFormatReport6 = (sal_Int32)26;
+static const ::sal_Int32 xlRangeAutoFormatReport7 = (sal_Int32)27;
+static const ::sal_Int32 xlRangeAutoFormatReport8 = (sal_Int32)28;
+static const ::sal_Int32 xlRangeAutoFormatReport9 = (sal_Int32)29;
+static const ::sal_Int32 xlRangeAutoFormatSimple = (sal_Int32)-4154;
+static const ::sal_Int32 xlRangeAutoFormatTable1 = (sal_Int32)32;
+static const ::sal_Int32 xlRangeAutoFormatTable10 = (sal_Int32)41;
+static const ::sal_Int32 xlRangeAutoFormatTable2 = (sal_Int32)33;
+static const ::sal_Int32 xlRangeAutoFormatTable3 = (sal_Int32)34;
+static const ::sal_Int32 xlRangeAutoFormatTable4 = (sal_Int32)35;
+static const ::sal_Int32 xlRangeAutoFormatTable5 = (sal_Int32)36;
+static const ::sal_Int32 xlRangeAutoFormatTable6 = (sal_Int32)37;
+static const ::sal_Int32 xlRangeAutoFormatTable7 = (sal_Int32)38;
+static const ::sal_Int32 xlRangeAutoFormatTable8 = (sal_Int32)39;
+static const ::sal_Int32 xlRangeAutoFormatTable9 = (sal_Int32)40;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLRANGEAUTOFORMAT_HDL

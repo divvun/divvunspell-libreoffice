@@ -1,0 +1,47 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLCLIPBOARDFORMAT_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLCLIPBOARDFORMAT_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlClipboardFormat {
+
+static const ::sal_Int32 xlClipboardFormatBIFF = (sal_Int32)8;
+static const ::sal_Int32 xlClipboardFormatBIFF2 = (sal_Int32)18;
+static const ::sal_Int32 xlClipboardFormatBIFF3 = (sal_Int32)20;
+static const ::sal_Int32 xlClipboardFormatBIFF4 = (sal_Int32)30;
+static const ::sal_Int32 xlClipboardFormatBinary = (sal_Int32)15;
+static const ::sal_Int32 xlClipboardFormatBitmap = (sal_Int32)9;
+static const ::sal_Int32 xlClipboardFormatCGM = (sal_Int32)13;
+static const ::sal_Int32 xlClipboardFormatCSV = (sal_Int32)5;
+static const ::sal_Int32 xlClipboardFormatDIF = (sal_Int32)4;
+static const ::sal_Int32 xlClipboardFormatDspText = (sal_Int32)12;
+static const ::sal_Int32 xlClipboardFormatEmbedSource = (sal_Int32)22;
+static const ::sal_Int32 xlClipboardFormatEmbeddedObject = (sal_Int32)21;
+static const ::sal_Int32 xlClipboardFormatLink = (sal_Int32)11;
+static const ::sal_Int32 xlClipboardFormatLinkSource = (sal_Int32)23;
+static const ::sal_Int32 xlClipboardFormatLinkSourceDesc = (sal_Int32)32;
+static const ::sal_Int32 xlClipboardFormatMovie = (sal_Int32)24;
+static const ::sal_Int32 xlClipboardFormatNative = (sal_Int32)14;
+static const ::sal_Int32 xlClipboardFormatObjectDesc = (sal_Int32)31;
+static const ::sal_Int32 xlClipboardFormatObjectLink = (sal_Int32)19;
+static const ::sal_Int32 xlClipboardFormatOwnerLink = (sal_Int32)17;
+static const ::sal_Int32 xlClipboardFormatPICT = (sal_Int32)2;
+static const ::sal_Int32 xlClipboardFormatPrintPICT = (sal_Int32)3;
+static const ::sal_Int32 xlClipboardFormatRTF = (sal_Int32)7;
+static const ::sal_Int32 xlClipboardFormatSYLK = (sal_Int32)6;
+static const ::sal_Int32 xlClipboardFormatScreenPICT = (sal_Int32)29;
+static const ::sal_Int32 xlClipboardFormatStandardFont = (sal_Int32)28;
+static const ::sal_Int32 xlClipboardFormatStandardScale = (sal_Int32)27;
+static const ::sal_Int32 xlClipboardFormatTable = (sal_Int32)16;
+static const ::sal_Int32 xlClipboardFormatText = (sal_Int32)0;
+static const ::sal_Int32 xlClipboardFormatToolFace = (sal_Int32)25;
+static const ::sal_Int32 xlClipboardFormatToolFacePICT = (sal_Int32)26;
+static const ::sal_Int32 xlClipboardFormatVALU = (sal_Int32)1;
+static const ::sal_Int32 xlClipboardFormatWK1 = (sal_Int32)10;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLCLIPBOARDFORMAT_HDL

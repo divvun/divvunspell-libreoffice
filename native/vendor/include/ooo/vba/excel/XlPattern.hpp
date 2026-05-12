@@ -1,0 +1,6 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLPATTERN_HPP
+#define INCLUDED_OOO_VBA_EXCEL_XLPATTERN_HPP
+
+#include "ooo/vba/excel/XlPattern.hdl"
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLPATTERN_HPP

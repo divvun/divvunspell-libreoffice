@@ -1,0 +1,45 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOPRESETTEXTEFFECT_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOPRESETTEXTEFFECT_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoPresetTextEffect {
+
+static const ::sal_Int32 msoTextEffect1 = (sal_Int32)0;
+static const ::sal_Int32 msoTextEffect10 = (sal_Int32)9;
+static const ::sal_Int32 msoTextEffect11 = (sal_Int32)10;
+static const ::sal_Int32 msoTextEffect12 = (sal_Int32)11;
+static const ::sal_Int32 msoTextEffect13 = (sal_Int32)12;
+static const ::sal_Int32 msoTextEffect14 = (sal_Int32)13;
+static const ::sal_Int32 msoTextEffect15 = (sal_Int32)14;
+static const ::sal_Int32 msoTextEffect16 = (sal_Int32)15;
+static const ::sal_Int32 msoTextEffect17 = (sal_Int32)16;
+static const ::sal_Int32 msoTextEffect18 = (sal_Int32)17;
+static const ::sal_Int32 msoTextEffect19 = (sal_Int32)18;
+static const ::sal_Int32 msoTextEffect2 = (sal_Int32)1;
+static const ::sal_Int32 msoTextEffect20 = (sal_Int32)19;
+static const ::sal_Int32 msoTextEffect21 = (sal_Int32)20;
+static const ::sal_Int32 msoTextEffect22 = (sal_Int32)21;
+static const ::sal_Int32 msoTextEffect23 = (sal_Int32)22;
+static const ::sal_Int32 msoTextEffect24 = (sal_Int32)23;
+static const ::sal_Int32 msoTextEffect25 = (sal_Int32)24;
+static const ::sal_Int32 msoTextEffect26 = (sal_Int32)25;
+static const ::sal_Int32 msoTextEffect27 = (sal_Int32)26;
+static const ::sal_Int32 msoTextEffect28 = (sal_Int32)27;
+static const ::sal_Int32 msoTextEffect29 = (sal_Int32)28;
+static const ::sal_Int32 msoTextEffect3 = (sal_Int32)2;
+static const ::sal_Int32 msoTextEffect30 = (sal_Int32)29;
+static const ::sal_Int32 msoTextEffect4 = (sal_Int32)3;
+static const ::sal_Int32 msoTextEffect5 = (sal_Int32)4;
+static const ::sal_Int32 msoTextEffect6 = (sal_Int32)5;
+static const ::sal_Int32 msoTextEffect7 = (sal_Int32)6;
+static const ::sal_Int32 msoTextEffect8 = (sal_Int32)7;
+static const ::sal_Int32 msoTextEffect9 = (sal_Int32)8;
+static const ::sal_Int32 msoTextEffectMixed = (sal_Int32)-2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOPRESETTEXTEFFECT_HDL

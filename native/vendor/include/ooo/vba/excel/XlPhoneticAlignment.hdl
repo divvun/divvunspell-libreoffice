@@ -1,0 +1,18 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLPHONETICALIGNMENT_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLPHONETICALIGNMENT_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlPhoneticAlignment {
+
+static const ::sal_Int32 xlPhoneticAlignCenter = (sal_Int32)2;
+static const ::sal_Int32 xlPhoneticAlignDistributed = (sal_Int32)3;
+static const ::sal_Int32 xlPhoneticAlignLeft = (sal_Int32)1;
+static const ::sal_Int32 xlPhoneticAlignNoControl = (sal_Int32)0;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLPHONETICALIGNMENT_HDL

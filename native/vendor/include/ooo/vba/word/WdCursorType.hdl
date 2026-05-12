@@ -1,0 +1,18 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDCURSORTYPE_HDL
+#define INCLUDED_OOO_VBA_WORD_WDCURSORTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdCursorType {
+
+static const ::sal_Int32 wdCursorIBeam = (sal_Int32)1;
+static const ::sal_Int32 wdCursorNormal = (sal_Int32)2;
+static const ::sal_Int32 wdCursorNorthwestArrow = (sal_Int32)3;
+static const ::sal_Int32 wdCursorWait = (sal_Int32)0;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDCURSORTYPE_HDL

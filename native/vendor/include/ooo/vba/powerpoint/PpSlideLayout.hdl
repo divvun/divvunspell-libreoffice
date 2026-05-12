@@ -1,0 +1,46 @@
+#ifndef INCLUDED_OOO_VBA_POWERPOINT_PPSLIDELAYOUT_HDL
+#define INCLUDED_OOO_VBA_POWERPOINT_PPSLIDELAYOUT_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace powerpoint { namespace PpSlideLayout {
+
+static const ::sal_Int32 ppLayoutBlank = (sal_Int32)12;
+static const ::sal_Int32 ppLayoutChart = (sal_Int32)8;
+static const ::sal_Int32 ppLayoutChartAndText = (sal_Int32)6;
+static const ::sal_Int32 ppLayoutClipArtAndVerticalText = (sal_Int32)26;
+static const ::sal_Int32 ppLayoutClipartAndText = (sal_Int32)10;
+static const ::sal_Int32 ppLayoutFourObjects = (sal_Int32)24;
+static const ::sal_Int32 ppLayoutLargeObject = (sal_Int32)15;
+static const ::sal_Int32 ppLayoutMediaClipAndText = (sal_Int32)18;
+static const ::sal_Int32 ppLayoutMixed = (sal_Int32)-2;
+static const ::sal_Int32 ppLayoutObject = (sal_Int32)16;
+static const ::sal_Int32 ppLayoutObjectAndText = (sal_Int32)14;
+static const ::sal_Int32 ppLayoutObjectAndTwoObjects = (sal_Int32)30;
+static const ::sal_Int32 ppLayoutObjectOverText = (sal_Int32)19;
+static const ::sal_Int32 ppLayoutOrgchart = (sal_Int32)7;
+static const ::sal_Int32 ppLayoutTable = (sal_Int32)4;
+static const ::sal_Int32 ppLayoutText = (sal_Int32)2;
+static const ::sal_Int32 ppLayoutTextAndChart = (sal_Int32)5;
+static const ::sal_Int32 ppLayoutTextAndClipart = (sal_Int32)9;
+static const ::sal_Int32 ppLayoutTextAndMediaClip = (sal_Int32)17;
+static const ::sal_Int32 ppLayoutTextAndObject = (sal_Int32)13;
+static const ::sal_Int32 ppLayoutTextAndTwoObjects = (sal_Int32)21;
+static const ::sal_Int32 ppLayoutTextOverObject = (sal_Int32)20;
+static const ::sal_Int32 ppLayoutTitle = (sal_Int32)1;
+static const ::sal_Int32 ppLayoutTitleOnly = (sal_Int32)11;
+static const ::sal_Int32 ppLayoutTwoColumnText = (sal_Int32)3;
+static const ::sal_Int32 ppLayoutTwoObjects = (sal_Int32)29;
+static const ::sal_Int32 ppLayoutTwoObjectsAndObject = (sal_Int32)31;
+static const ::sal_Int32 ppLayoutTwoObjectsAndText = (sal_Int32)22;
+static const ::sal_Int32 ppLayoutTwoObjectsOverText = (sal_Int32)23;
+static const ::sal_Int32 ppLayoutVerticalText = (sal_Int32)25;
+static const ::sal_Int32 ppLayoutVerticalTitleAndText = (sal_Int32)27;
+static const ::sal_Int32 ppLayoutVerticalTitleAndTextOverChart = (sal_Int32)28;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_POWERPOINT_PPSLIDELAYOUT_HDL

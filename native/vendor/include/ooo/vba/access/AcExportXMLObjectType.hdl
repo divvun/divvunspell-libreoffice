@@ -1,0 +1,21 @@
+#ifndef INCLUDED_OOO_VBA_ACCESS_ACEXPORTXMLOBJECTTYPE_HDL
+#define INCLUDED_OOO_VBA_ACCESS_ACEXPORTXMLOBJECTTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace access { namespace AcExportXMLObjectType {
+
+static const ::sal_Int32 acExportForm = (sal_Int32)2;
+static const ::sal_Int32 acExportFunction = (sal_Int32)10;
+static const ::sal_Int32 acExportQuery = (sal_Int32)1;
+static const ::sal_Int32 acExportReport = (sal_Int32)3;
+static const ::sal_Int32 acExportServerView = (sal_Int32)7;
+static const ::sal_Int32 acExportStoredProcedure = (sal_Int32)9;
+static const ::sal_Int32 acExportTable = (sal_Int32)0;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_ACCESS_ACEXPORTXMLOBJECTTYPE_HDL

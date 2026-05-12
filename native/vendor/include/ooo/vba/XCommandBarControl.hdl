@@ -1,0 +1,58 @@
+#ifndef INCLUDED_OOO_VBA_XCOMMANDBARCONTROL_HDL
+#define INCLUDED_OOO_VBA_XCOMMANDBARCONTROL_HDL
+
+#include "sal/config.h"
+
+#include "ooo/vba/XHelperInterface.hdl"
+#include "com/sun/star/uno/Any.h"
+#include "com/sun/star/uno/Reference.h"
+#include "cppu/macros.hxx"
+#include "rtl/ustring.hxx"
+#include "sal/types.h"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace ooo { namespace vba {
+
+class SAL_NO_VTABLE SAL_DLLPUBLIC_RTTI XCommandBarControl : public ::ooo::vba::XHelperInterface
+{
+public:
+#if defined LIBO_INTERNAL_ONLY
+    XCommandBarControl() = default;
+    XCommandBarControl(XCommandBarControl const &) = default;
+    XCommandBarControl(XCommandBarControl &&) = default;
+    XCommandBarControl & operator =(XCommandBarControl const &) = default;
+    XCommandBarControl & operator =(XCommandBarControl &&) = default;
+#endif
+
+
+    // Attributes
+    virtual ::rtl::OUString SAL_CALL getCaption() = 0;
+    virtual void SAL_CALL setCaption( const ::rtl::OUString& _caption ) = 0;
+    virtual ::rtl::OUString SAL_CALL getOnAction() = 0;
+    virtual void SAL_CALL setOnAction( const ::rtl::OUString& _onaction ) = 0;
+    virtual ::sal_Bool SAL_CALL getVisible() = 0;
+    virtual void SAL_CALL setVisible( ::sal_Bool _visible ) = 0;
+    virtual ::sal_Int32 SAL_CALL getType() = 0;
+    virtual ::sal_Bool SAL_CALL getEnabled() = 0;
+    virtual void SAL_CALL setEnabled( ::sal_Bool _enabled ) = 0;
+    virtual ::sal_Bool SAL_CALL getBeginGroup() = 0;
+    virtual void SAL_CALL setBeginGroup( ::sal_Bool _begingroup ) = 0;
+
+    // Methods
+    virtual void SAL_CALL Delete() = 0;
+    virtual ::css::uno::Any SAL_CALL Controls( const ::css::uno::Any& Index ) = 0;
+
+    static inline ::css::uno::Type const & SAL_CALL static_type(void * = 0);
+
+protected:
+    ~XCommandBarControl() SAL_NOEXCEPT {} // avoid warnings about virtual members and non-virtual dtor
+};
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::ooo::vba::XCommandBarControl const *);
+} }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::uno::Reference< ::ooo::vba::XCommandBarControl > *);
+
+#endif

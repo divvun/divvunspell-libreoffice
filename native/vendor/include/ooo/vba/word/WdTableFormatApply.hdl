@@ -1,0 +1,23 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDTABLEFORMATAPPLY_HDL
+#define INCLUDED_OOO_VBA_WORD_WDTABLEFORMATAPPLY_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdTableFormatApply {
+
+static const ::sal_Int32 wdTableFormatApplyAutoFit = (sal_Int32)16;
+static const ::sal_Int32 wdTableFormatApplyBorders = (sal_Int32)1;
+static const ::sal_Int32 wdTableFormatApplyColor = (sal_Int32)8;
+static const ::sal_Int32 wdTableFormatApplyFirstColumn = (sal_Int32)128;
+static const ::sal_Int32 wdTableFormatApplyFont = (sal_Int32)4;
+static const ::sal_Int32 wdTableFormatApplyHeadingRows = (sal_Int32)32;
+static const ::sal_Int32 wdTableFormatApplyLastColumn = (sal_Int32)256;
+static const ::sal_Int32 wdTableFormatApplyLastRow = (sal_Int32)64;
+static const ::sal_Int32 wdTableFormatApplyShading = (sal_Int32)2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDTABLEFORMATAPPLY_HDL

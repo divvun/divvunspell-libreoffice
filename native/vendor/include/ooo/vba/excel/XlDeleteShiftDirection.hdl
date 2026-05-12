@@ -1,0 +1,16 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLDELETESHIFTDIRECTION_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLDELETESHIFTDIRECTION_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlDeleteShiftDirection {
+
+static const ::sal_Int32 xlShiftToLeft = (sal_Int32)-4159;
+static const ::sal_Int32 xlShiftUp = (sal_Int32)-4162;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLDELETESHIFTDIRECTION_HDL

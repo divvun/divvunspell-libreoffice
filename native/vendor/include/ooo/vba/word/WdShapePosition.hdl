@@ -1,0 +1,21 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDSHAPEPOSITION_HDL
+#define INCLUDED_OOO_VBA_WORD_WDSHAPEPOSITION_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdShapePosition {
+
+static const ::sal_Int32 wdShapeBottom = (sal_Int32)-999997;
+static const ::sal_Int32 wdShapeCenter = (sal_Int32)-999995;
+static const ::sal_Int32 wdShapeInside = (sal_Int32)-999994;
+static const ::sal_Int32 wdShapeLeft = (sal_Int32)-999998;
+static const ::sal_Int32 wdShapeOutside = (sal_Int32)-999993;
+static const ::sal_Int32 wdShapeRight = (sal_Int32)-999996;
+static const ::sal_Int32 wdShapeTop = (sal_Int32)-999999;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDSHAPEPOSITION_HDL

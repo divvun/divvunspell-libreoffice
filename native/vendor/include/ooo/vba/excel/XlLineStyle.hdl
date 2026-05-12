@@ -1,0 +1,22 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLLINESTYLE_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLLINESTYLE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlLineStyle {
+
+static const ::sal_Int32 xlContinuous = (sal_Int32)1;
+static const ::sal_Int32 xlDash = (sal_Int32)-4115;
+static const ::sal_Int32 xlDashDot = (sal_Int32)4;
+static const ::sal_Int32 xlDashDotDot = (sal_Int32)5;
+static const ::sal_Int32 xlDot = (sal_Int32)-4118;
+static const ::sal_Int32 xlDouble = (sal_Int32)-4119;
+static const ::sal_Int32 xlLineStyleNone = (sal_Int32)-4142;
+static const ::sal_Int32 xlSlantDashDot = (sal_Int32)13;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLLINESTYLE_HDL

@@ -1,0 +1,44 @@
+#ifndef INCLUDED_OOO_VBA_WORD_XLISTFORMAT_HDL
+#define INCLUDED_OOO_VBA_WORD_XLISTFORMAT_HDL
+
+#include "sal/config.h"
+
+#include "ooo/vba/XHelperInterface.hdl"
+namespace ooo { namespace vba { namespace word { class XListTemplate; } } }
+#include "com/sun/star/uno/Any.h"
+#include "com/sun/star/uno/Reference.h"
+#include "cppu/macros.hxx"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace ooo { namespace vba { namespace word {
+
+class SAL_NO_VTABLE SAL_DLLPUBLIC_RTTI XListFormat : public ::ooo::vba::XHelperInterface
+{
+public:
+#if defined LIBO_INTERNAL_ONLY
+    XListFormat() = default;
+    XListFormat(XListFormat const &) = default;
+    XListFormat(XListFormat &&) = default;
+    XListFormat & operator =(XListFormat const &) = default;
+    XListFormat & operator =(XListFormat &&) = default;
+#endif
+
+
+    // Methods
+    virtual void SAL_CALL ApplyListTemplate( const ::css::uno::Reference< ::ooo::vba::word::XListTemplate >& ListTemplate, const ::css::uno::Any& ContinuePreviousList, const ::css::uno::Any& ApplyTo, const ::css::uno::Any& DefaultListBehavior ) = 0;
+    virtual void SAL_CALL ConvertNumbersToText() = 0;
+
+    static inline ::css::uno::Type const & SAL_CALL static_type(void * = 0);
+
+protected:
+    ~XListFormat() SAL_NOEXCEPT {} // avoid warnings about virtual members and non-virtual dtor
+};
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::ooo::vba::word::XListFormat const *);
+} } }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::uno::Reference< ::ooo::vba::word::XListFormat > *);
+
+#endif

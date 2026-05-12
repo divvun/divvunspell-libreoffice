@@ -1,0 +1,22 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDMAILMERGEMAINDOCTYPE_HDL
+#define INCLUDED_OOO_VBA_WORD_WDMAILMERGEMAINDOCTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdMailMergeMainDocType {
+
+static const ::sal_Int32 wdCatalog = (sal_Int32)3;
+static const ::sal_Int32 wdDirectory = (sal_Int32)3;
+static const ::sal_Int32 wdEMail = (sal_Int32)4;
+static const ::sal_Int32 wdEnvelopes = (sal_Int32)2;
+static const ::sal_Int32 wdFax = (sal_Int32)5;
+static const ::sal_Int32 wdFormLetters = (sal_Int32)0;
+static const ::sal_Int32 wdMailingLabels = (sal_Int32)1;
+static const ::sal_Int32 wdNotAMergeDocument = (sal_Int32)-1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDMAILMERGEMAINDOCTYPE_HDL

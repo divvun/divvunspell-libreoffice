@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDFRAMESETSIZETYPE_HDL
+#define INCLUDED_OOO_VBA_WORD_WDFRAMESETSIZETYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdFramesetSizeType {
+
+static const ::sal_Int32 wdFramesetSizeTypeFixed = (sal_Int32)1;
+static const ::sal_Int32 wdFramesetSizeTypePercent = (sal_Int32)0;
+static const ::sal_Int32 wdFramesetSizeTypeRelative = (sal_Int32)2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDFRAMESETSIZETYPE_HDL

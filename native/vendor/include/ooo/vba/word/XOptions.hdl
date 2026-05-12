@@ -1,0 +1,71 @@
+#ifndef INCLUDED_OOO_VBA_WORD_XOPTIONS_HDL
+#define INCLUDED_OOO_VBA_WORD_XOPTIONS_HDL
+
+#include "sal/config.h"
+
+#include "ooo/vba/XHelperInterface.hdl"
+#include "com/sun/star/uno/Any.h"
+#include "com/sun/star/uno/Reference.h"
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace ooo { namespace vba { namespace word {
+
+class SAL_NO_VTABLE SAL_DLLPUBLIC_RTTI XOptions : public ::ooo::vba::XHelperInterface
+{
+public:
+#if defined LIBO_INTERNAL_ONLY
+    XOptions() = default;
+    XOptions(XOptions const &) = default;
+    XOptions(XOptions &&) = default;
+    XOptions & operator =(XOptions const &) = default;
+    XOptions & operator =(XOptions &&) = default;
+#endif
+
+
+    // Attributes
+    virtual ::sal_Int32 SAL_CALL getDefaultBorderLineStyle() = 0;
+    virtual void SAL_CALL setDefaultBorderLineStyle( ::sal_Int32 _defaultborderlinestyle ) = 0;
+    virtual ::sal_Int32 SAL_CALL getDefaultBorderLineWidth() = 0;
+    virtual void SAL_CALL setDefaultBorderLineWidth( ::sal_Int32 _defaultborderlinewidth ) = 0;
+    virtual ::sal_Int32 SAL_CALL getDefaultBorderColorIndex() = 0;
+    virtual void SAL_CALL setDefaultBorderColorIndex( ::sal_Int32 _defaultbordercolorindex ) = 0;
+    virtual ::sal_Bool SAL_CALL getReplaceSelection() = 0;
+    virtual void SAL_CALL setReplaceSelection( ::sal_Bool _replaceselection ) = 0;
+    virtual ::sal_Bool SAL_CALL getMapPaperSize() = 0;
+    virtual void SAL_CALL setMapPaperSize( ::sal_Bool _mappapersize ) = 0;
+    virtual ::sal_Bool SAL_CALL getAutoFormatAsYouTypeApplyHeadings() = 0;
+    virtual void SAL_CALL setAutoFormatAsYouTypeApplyHeadings( ::sal_Bool _autoformatasyoutypeapplyheadings ) = 0;
+    virtual ::sal_Bool SAL_CALL getAutoFormatAsYouTypeApplyBulletedLists() = 0;
+    virtual void SAL_CALL setAutoFormatAsYouTypeApplyBulletedLists( ::sal_Bool _autoformatasyoutypeapplybulletedlists ) = 0;
+    virtual ::sal_Bool SAL_CALL getAutoFormatAsYouTypeApplyNumberedLists() = 0;
+    virtual void SAL_CALL setAutoFormatAsYouTypeApplyNumberedLists( ::sal_Bool _autoformatasyoutypeapplynumberedlists ) = 0;
+    virtual ::sal_Bool SAL_CALL getAutoFormatAsYouTypeFormatListItemBeginning() = 0;
+    virtual void SAL_CALL setAutoFormatAsYouTypeFormatListItemBeginning( ::sal_Bool _autoformatasyoutypeformatlistitembeginning ) = 0;
+    virtual ::sal_Bool SAL_CALL getAutoFormatAsYouTypeDefineStyles() = 0;
+    virtual void SAL_CALL setAutoFormatAsYouTypeDefineStyles( ::sal_Bool _autoformatasyoutypedefinestyles ) = 0;
+    virtual ::sal_Bool SAL_CALL getAutoFormatApplyHeadings() = 0;
+    virtual void SAL_CALL setAutoFormatApplyHeadings( ::sal_Bool _autoformatapplyheadings ) = 0;
+    virtual ::sal_Bool SAL_CALL getAutoFormatApplyLists() = 0;
+    virtual void SAL_CALL setAutoFormatApplyLists( ::sal_Bool _autoformatapplylists ) = 0;
+    virtual ::sal_Bool SAL_CALL getAutoFormatApplyBulletedLists() = 0;
+    virtual void SAL_CALL setAutoFormatApplyBulletedLists( ::sal_Bool _autoformatapplybulletedlists ) = 0;
+
+    // Methods
+    virtual ::css::uno::Any SAL_CALL DefaultFilePath( ::sal_Int32 Path ) = 0;
+
+    static inline ::css::uno::Type const & SAL_CALL static_type(void * = 0);
+
+protected:
+    ~XOptions() SAL_NOEXCEPT {} // avoid warnings about virtual members and non-virtual dtor
+};
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::ooo::vba::word::XOptions const *);
+} } }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::uno::Reference< ::ooo::vba::word::XOptions > *);
+
+#endif

@@ -1,0 +1,16 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDWORDDIALOGTABHID_HDL
+#define INCLUDED_OOO_VBA_WORD_WDWORDDIALOGTABHID_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdWordDialogTabHID {
+
+static const ::sal_Int32 wdDialogFilePageSetupTabPaperSize = (sal_Int32)150001;
+static const ::sal_Int32 wdDialogFilePageSetupTabPaperSource = (sal_Int32)150002;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDWORDDIALOGTABHID_HDL

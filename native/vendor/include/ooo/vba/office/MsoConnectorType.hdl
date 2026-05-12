@@ -1,0 +1,18 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOCONNECTORTYPE_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOCONNECTORTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoConnectorType {
+
+static const ::sal_Int32 msoConnectorCurve = (sal_Int32)3;
+static const ::sal_Int32 msoConnectorElbow = (sal_Int32)2;
+static const ::sal_Int32 msoConnectorStraight = (sal_Int32)1;
+static const ::sal_Int32 msoConnectorTypeMixed = (sal_Int32)-2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOCONNECTORTYPE_HDL

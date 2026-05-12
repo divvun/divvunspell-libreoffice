@@ -1,0 +1,16 @@
+#ifndef INCLUDED_OOO_VBA_ACCESS_ACPRINTITEMLAYOUT_HDL
+#define INCLUDED_OOO_VBA_ACCESS_ACPRINTITEMLAYOUT_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace access { namespace AcPrintItemLayout {
+
+static const ::sal_Int32 acPRHorizontalColumnLayout = (sal_Int32)1953;
+static const ::sal_Int32 acPRVerticalColumnLayout = (sal_Int32)1954;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_ACCESS_ACPRINTITEMLAYOUT_HDL

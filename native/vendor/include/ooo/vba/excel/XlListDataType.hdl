@@ -1,0 +1,27 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLLISTDATATYPE_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLLISTDATATYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlListDataType {
+
+static const ::sal_Int32 xlListDataTypeCheckbox = (sal_Int32)9;
+static const ::sal_Int32 xlListDataTypeChoice = (sal_Int32)6;
+static const ::sal_Int32 xlListDataTypeChoiceMulti = (sal_Int32)7;
+static const ::sal_Int32 xlListDataTypeCounter = (sal_Int32)11;
+static const ::sal_Int32 xlListDataTypeCurrency = (sal_Int32)4;
+static const ::sal_Int32 xlListDataTypeDateTime = (sal_Int32)5;
+static const ::sal_Int32 xlListDataTypeHyperLink = (sal_Int32)10;
+static const ::sal_Int32 xlListDataTypeListLookup = (sal_Int32)8;
+static const ::sal_Int32 xlListDataTypeMultiLineRichText = (sal_Int32)12;
+static const ::sal_Int32 xlListDataTypeMultiLineText = (sal_Int32)2;
+static const ::sal_Int32 xlListDataTypeNone = (sal_Int32)0;
+static const ::sal_Int32 xlListDataTypeNumber = (sal_Int32)3;
+static const ::sal_Int32 xlListDataTypeText = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLLISTDATATYPE_HDL

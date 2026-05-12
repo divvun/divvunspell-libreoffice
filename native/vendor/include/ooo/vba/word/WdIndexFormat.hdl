@@ -1,0 +1,21 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDINDEXFORMAT_HDL
+#define INCLUDED_OOO_VBA_WORD_WDINDEXFORMAT_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdIndexFormat {
+
+static const ::sal_Int32 wdIndexBulleted = (sal_Int32)4;
+static const ::sal_Int32 wdIndexClassic = (sal_Int32)1;
+static const ::sal_Int32 wdIndexFancy = (sal_Int32)2;
+static const ::sal_Int32 wdIndexFormal = (sal_Int32)5;
+static const ::sal_Int32 wdIndexModern = (sal_Int32)3;
+static const ::sal_Int32 wdIndexSimple = (sal_Int32)6;
+static const ::sal_Int32 wdIndexTemplate = (sal_Int32)0;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDINDEXFORMAT_HDL

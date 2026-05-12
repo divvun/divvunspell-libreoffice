@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_ACCESS_ACTRANSFORMXMLSCRIPTOPTION_HDL
+#define INCLUDED_OOO_VBA_ACCESS_ACTRANSFORMXMLSCRIPTOPTION_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace access { namespace AcTransformXMLScriptOption {
+
+static const ::sal_Int32 acDisableScript = (sal_Int32)2;
+static const ::sal_Int32 acEnableScript = (sal_Int32)0;
+static const ::sal_Int32 acPromptScript = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_ACCESS_ACTRANSFORMXMLSCRIPTOPTION_HDL

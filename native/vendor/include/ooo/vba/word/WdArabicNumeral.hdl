@@ -1,0 +1,18 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDARABICNUMERAL_HDL
+#define INCLUDED_OOO_VBA_WORD_WDARABICNUMERAL_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdArabicNumeral {
+
+static const ::sal_Int32 wdNumeralArabic = (sal_Int32)0;
+static const ::sal_Int32 wdNumeralContext = (sal_Int32)2;
+static const ::sal_Int32 wdNumeralHindi = (sal_Int32)1;
+static const ::sal_Int32 wdNumeralSystem = (sal_Int32)3;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDARABICNUMERAL_HDL

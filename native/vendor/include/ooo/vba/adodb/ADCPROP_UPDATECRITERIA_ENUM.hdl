@@ -1,0 +1,18 @@
+#ifndef INCLUDED_OOO_VBA_ADODB_ADCPROP_UPDATECRITERIA_ENUM_HDL
+#define INCLUDED_OOO_VBA_ADODB_ADCPROP_UPDATECRITERIA_ENUM_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace adodb { namespace ADCPROP_UPDATECRITERIA_ENUM {
+
+static const ::sal_Int32 adCriteriaAllCols = (sal_Int32)1;
+static const ::sal_Int32 adCriteriaKey = (sal_Int32)0;
+static const ::sal_Int32 adCriteriaTimeStamp = (sal_Int32)3;
+static const ::sal_Int32 adCriteriaUpdCols = (sal_Int32)2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_ADODB_ADCPROP_UPDATECRITERIA_ENUM_HDL

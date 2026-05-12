@@ -1,0 +1,64 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDCOMPATIBILITY_HDL
+#define INCLUDED_OOO_VBA_WORD_WDCOMPATIBILITY_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdCompatibility {
+
+static const ::sal_Int32 wdAlignTablesRowByRow = (sal_Int32)39;
+static const ::sal_Int32 wdApplyBreakingRules = (sal_Int32)46;
+static const ::sal_Int32 wdAutospaceLikeWW7 = (sal_Int32)38;
+static const ::sal_Int32 wdConvMailMergeEsc = (sal_Int32)6;
+static const ::sal_Int32 wdDontAdjustLineHeightInTable = (sal_Int32)36;
+static const ::sal_Int32 wdDontBalanceSingleByteDoubleByteWidth = (sal_Int32)16;
+static const ::sal_Int32 wdDontBreakWrappedTables = (sal_Int32)43;
+static const ::sal_Int32 wdDontSnapTextToGridInTableWithObjects = (sal_Int32)44;
+static const ::sal_Int32 wdDontULTrailSpace = (sal_Int32)15;
+static const ::sal_Int32 wdDontUseAsianBreakRulesInGrid = (sal_Int32)48;
+static const ::sal_Int32 wdDontUseHTMLParagraphAutoSpacing = (sal_Int32)35;
+static const ::sal_Int32 wdDontWrapTextWithPunctuation = (sal_Int32)47;
+static const ::sal_Int32 wdExactOnTop = (sal_Int32)28;
+static const ::sal_Int32 wdExpandShiftReturn = (sal_Int32)14;
+static const ::sal_Int32 wdFootnoteLayoutLikeWW8 = (sal_Int32)34;
+static const ::sal_Int32 wdForgetLastTabAlignment = (sal_Int32)37;
+static const ::sal_Int32 wdGrowAutofit = (sal_Int32)50;
+static const ::sal_Int32 wdLayoutRawTableWidth = (sal_Int32)40;
+static const ::sal_Int32 wdLayoutTableRowsApart = (sal_Int32)41;
+static const ::sal_Int32 wdLeaveBackslashAlone = (sal_Int32)13;
+static const ::sal_Int32 wdLineWrapLikeWord6 = (sal_Int32)32;
+static const ::sal_Int32 wdMWSmallCaps = (sal_Int32)22;
+static const ::sal_Int32 wdNoColumnBalance = (sal_Int32)5;
+static const ::sal_Int32 wdNoExtraLineSpacing = (sal_Int32)23;
+static const ::sal_Int32 wdNoLeading = (sal_Int32)20;
+static const ::sal_Int32 wdNoSpaceForUL = (sal_Int32)21;
+static const ::sal_Int32 wdNoSpaceRaiseLower = (sal_Int32)2;
+static const ::sal_Int32 wdNoTabHangIndent = (sal_Int32)1;
+static const ::sal_Int32 wdOrigWordTableRules = (sal_Int32)9;
+static const ::sal_Int32 wdPrintBodyTextBeforeHeader = (sal_Int32)19;
+static const ::sal_Int32 wdPrintColBlack = (sal_Int32)3;
+static const ::sal_Int32 wdSelectFieldWithFirstOrLastCharacter = (sal_Int32)45;
+static const ::sal_Int32 wdShapeLayoutLikeWW8 = (sal_Int32)33;
+static const ::sal_Int32 wdShowBreaksInFrames = (sal_Int32)11;
+static const ::sal_Int32 wdSpacingInWholePoints = (sal_Int32)18;
+static const ::sal_Int32 wdSubFontBySize = (sal_Int32)25;
+static const ::sal_Int32 wdSuppressBottomSpacing = (sal_Int32)29;
+static const ::sal_Int32 wdSuppressSpBfAfterPgBrk = (sal_Int32)7;
+static const ::sal_Int32 wdSuppressTopSpacing = (sal_Int32)8;
+static const ::sal_Int32 wdSuppressTopSpacingMac5 = (sal_Int32)17;
+static const ::sal_Int32 wdSwapBordersFacingPages = (sal_Int32)12;
+static const ::sal_Int32 wdTransparentMetafiles = (sal_Int32)10;
+static const ::sal_Int32 wdTruncateFontHeight = (sal_Int32)24;
+static const ::sal_Int32 wdUsePrinterMetrics = (sal_Int32)26;
+static const ::sal_Int32 wdUseWord2002TableStyleRules = (sal_Int32)49;
+static const ::sal_Int32 wdUseWord97LineBreakingRules = (sal_Int32)42;
+static const ::sal_Int32 wdWPJustification = (sal_Int32)31;
+static const ::sal_Int32 wdWPSpaceWidth = (sal_Int32)30;
+static const ::sal_Int32 wdWW6BorderRules = (sal_Int32)27;
+static const ::sal_Int32 wdWrapTrailSpaces = (sal_Int32)4;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDCOMPATIBILITY_HDL

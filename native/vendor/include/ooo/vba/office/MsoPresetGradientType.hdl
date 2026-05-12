@@ -1,0 +1,39 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOPRESETGRADIENTTYPE_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOPRESETGRADIENTTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoPresetGradientType {
+
+static const ::sal_Int32 msoGradientBrass = (sal_Int32)20;
+static const ::sal_Int32 msoGradientCalmWater = (sal_Int32)8;
+static const ::sal_Int32 msoGradientChrome = (sal_Int32)21;
+static const ::sal_Int32 msoGradientChromeII = (sal_Int32)22;
+static const ::sal_Int32 msoGradientDaybreak = (sal_Int32)4;
+static const ::sal_Int32 msoGradientDesert = (sal_Int32)6;
+static const ::sal_Int32 msoGradientEarlySunset = (sal_Int32)1;
+static const ::sal_Int32 msoGradientFire = (sal_Int32)9;
+static const ::sal_Int32 msoGradientFog = (sal_Int32)10;
+static const ::sal_Int32 msoGradientGold = (sal_Int32)18;
+static const ::sal_Int32 msoGradientGoldII = (sal_Int32)19;
+static const ::sal_Int32 msoGradientHorizon = (sal_Int32)5;
+static const ::sal_Int32 msoGradientLateSunset = (sal_Int32)2;
+static const ::sal_Int32 msoGradientMahogany = (sal_Int32)15;
+static const ::sal_Int32 msoGradientMoss = (sal_Int32)11;
+static const ::sal_Int32 msoGradientNightfall = (sal_Int32)3;
+static const ::sal_Int32 msoGradientOcean = (sal_Int32)7;
+static const ::sal_Int32 msoGradientParchment = (sal_Int32)14;
+static const ::sal_Int32 msoGradientPeacock = (sal_Int32)12;
+static const ::sal_Int32 msoGradientRainbow = (sal_Int32)16;
+static const ::sal_Int32 msoGradientRainbowII = (sal_Int32)17;
+static const ::sal_Int32 msoGradientSapphire = (sal_Int32)24;
+static const ::sal_Int32 msoGradientSilver = (sal_Int32)23;
+static const ::sal_Int32 msoGradientWheat = (sal_Int32)13;
+static const ::sal_Int32 msoPresetGradientMixed = (sal_Int32)-2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOPRESETGRADIENTTYPE_HDL

@@ -1,0 +1,21 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOTEXTEFFECTALIGNMENT_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOTEXTEFFECTALIGNMENT_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoTextEffectAlignment {
+
+static const ::sal_Int32 msoTextEffectAlignmentCentered = (sal_Int32)2;
+static const ::sal_Int32 msoTextEffectAlignmentLeft = (sal_Int32)1;
+static const ::sal_Int32 msoTextEffectAlignmentLetterJustify = (sal_Int32)4;
+static const ::sal_Int32 msoTextEffectAlignmentMixed = (sal_Int32)-2;
+static const ::sal_Int32 msoTextEffectAlignmentRight = (sal_Int32)3;
+static const ::sal_Int32 msoTextEffectAlignmentStretchJustify = (sal_Int32)6;
+static const ::sal_Int32 msoTextEffectAlignmentWordJustify = (sal_Int32)5;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOTEXTEFFECTALIGNMENT_HDL

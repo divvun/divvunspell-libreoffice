@@ -1,0 +1,42 @@
+#ifndef INCLUDED_COM_SUN_STAR_DRAWING_XSLIDESORTERSELECTIONSUPPLIER_HDL
+#define INCLUDED_COM_SUN_STAR_DRAWING_XSLIDESORTERSELECTIONSUPPLIER_HDL
+
+#include "sal/config.h"
+
+#include "com/sun/star/uno/XInterface.hdl"
+#include "com/sun/star/uno/Any.h"
+#include "com/sun/star/uno/Reference.h"
+#include "cppu/macros.hxx"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace com { namespace sun { namespace star { namespace drawing {
+
+class SAL_NO_VTABLE SAL_DLLPUBLIC_RTTI XSlideSorterSelectionSupplier : public ::css::uno::XInterface
+{
+public:
+#if defined LIBO_INTERNAL_ONLY
+    XSlideSorterSelectionSupplier() = default;
+    XSlideSorterSelectionSupplier(XSlideSorterSelectionSupplier const &) = default;
+    XSlideSorterSelectionSupplier(XSlideSorterSelectionSupplier &&) = default;
+    XSlideSorterSelectionSupplier & operator =(XSlideSorterSelectionSupplier const &) = default;
+    XSlideSorterSelectionSupplier & operator =(XSlideSorterSelectionSupplier &&) = default;
+#endif
+
+
+    // Methods
+    virtual ::css::uno::Any SAL_CALL getSlideSorterSelection() = 0;
+
+    static inline ::css::uno::Type const & SAL_CALL static_type(void * = 0);
+
+protected:
+    ~XSlideSorterSelectionSupplier() SAL_NOEXCEPT {} // avoid warnings about virtual members and non-virtual dtor
+};
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::css::drawing::XSlideSorterSelectionSupplier const *);
+} } } }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::uno::Reference< ::css::drawing::XSlideSorterSelectionSupplier > *);
+
+#endif

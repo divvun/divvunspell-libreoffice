@@ -1,0 +1,16 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSODISTRIBUTECMD_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSODISTRIBUTECMD_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoDistributeCmd {
+
+static const ::sal_Int32 msoDistributeHorizontally = (sal_Int32)0;
+static const ::sal_Int32 msoDistributeVertically = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSODISTRIBUTECMD_HDL

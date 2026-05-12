@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOBALLOONTYPE_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOBALLOONTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoBalloonType {
+
+static const ::sal_Int32 msoBalloonTypeBullets = (sal_Int32)1;
+static const ::sal_Int32 msoBalloonTypeButtons = (sal_Int32)0;
+static const ::sal_Int32 msoBalloonTypeNumbers = (sal_Int32)2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOBALLOONTYPE_HDL

@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDSCROLLBARTYPE_HDL
+#define INCLUDED_OOO_VBA_WORD_WDSCROLLBARTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdScrollbarType {
+
+static const ::sal_Int32 wdScrollbarTypeAuto = (sal_Int32)0;
+static const ::sal_Int32 wdScrollbarTypeNo = (sal_Int32)2;
+static const ::sal_Int32 wdScrollbarTypeYes = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDSCROLLBARTYPE_HDL

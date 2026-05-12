@@ -1,0 +1,18 @@
+#ifndef INCLUDED_OOO_VBA_MSFORMS_FMBORDERS_HDL
+#define INCLUDED_OOO_VBA_MSFORMS_FMBORDERS_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace msforms { namespace fmBorders {
+
+static const ::sal_Int32 fmBordersBox = (sal_Int32)1;
+static const ::sal_Int32 fmBordersLeft = (sal_Int32)2;
+static const ::sal_Int32 fmBordersNone = (sal_Int32)0;
+static const ::sal_Int32 fmBordersTop = (sal_Int32)3;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_MSFORMS_FMBORDERS_HDL

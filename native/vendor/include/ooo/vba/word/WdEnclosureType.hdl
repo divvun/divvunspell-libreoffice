@@ -1,0 +1,18 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDENCLOSURETYPE_HDL
+#define INCLUDED_OOO_VBA_WORD_WDENCLOSURETYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdEnclosureType {
+
+static const ::sal_Int32 wdEnclosureCircle = (sal_Int32)0;
+static const ::sal_Int32 wdEnclosureDiamond = (sal_Int32)3;
+static const ::sal_Int32 wdEnclosureSquare = (sal_Int32)1;
+static const ::sal_Int32 wdEnclosureTriangle = (sal_Int32)2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDENCLOSURETYPE_HDL

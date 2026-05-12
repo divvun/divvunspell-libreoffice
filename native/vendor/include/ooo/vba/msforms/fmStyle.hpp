@@ -1,0 +1,6 @@
+#ifndef INCLUDED_OOO_VBA_MSFORMS_FMSTYLE_HPP
+#define INCLUDED_OOO_VBA_MSFORMS_FMSTYLE_HPP
+
+#include "ooo/vba/msforms/fmStyle.hdl"
+
+#endif // INCLUDED_OOO_VBA_MSFORMS_FMSTYLE_HPP

@@ -1,0 +1,59 @@
+#ifndef INCLUDED_OOO_VBA_POWERPOINT_MSOANIMDIRECTION_HDL
+#define INCLUDED_OOO_VBA_POWERPOINT_MSOANIMDIRECTION_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace powerpoint { namespace MsoAnimDirection {
+
+static const ::sal_Int32 msoAnimDirectionAcross = (sal_Int32)18;
+static const ::sal_Int32 msoAnimDirectionBottom = (sal_Int32)11;
+static const ::sal_Int32 msoAnimDirectionBottomLeft = (sal_Int32)15;
+static const ::sal_Int32 msoAnimDirectionBottomRight = (sal_Int32)14;
+static const ::sal_Int32 msoAnimDirectionCenter = (sal_Int32)28;
+static const ::sal_Int32 msoAnimDirectionClockwise = (sal_Int32)21;
+static const ::sal_Int32 msoAnimDirectionCounterclockwise = (sal_Int32)22;
+static const ::sal_Int32 msoAnimDirectionCycleClockwise = (sal_Int32)43;
+static const ::sal_Int32 msoAnimDirectionCycleCounterclockwise = (sal_Int32)44;
+static const ::sal_Int32 msoAnimDirectionDown = (sal_Int32)3;
+static const ::sal_Int32 msoAnimDirectionDownLeft = (sal_Int32)9;
+static const ::sal_Int32 msoAnimDirectionDownRight = (sal_Int32)8;
+static const ::sal_Int32 msoAnimDirectionFontAllCaps = (sal_Int32)40;
+static const ::sal_Int32 msoAnimDirectionFontBold = (sal_Int32)35;
+static const ::sal_Int32 msoAnimDirectionFontItalic = (sal_Int32)36;
+static const ::sal_Int32 msoAnimDirectionFontShadow = (sal_Int32)39;
+static const ::sal_Int32 msoAnimDirectionFontStrikethrough = (sal_Int32)38;
+static const ::sal_Int32 msoAnimDirectionFontUnderline = (sal_Int32)37;
+static const ::sal_Int32 msoAnimDirectionGradual = (sal_Int32)42;
+static const ::sal_Int32 msoAnimDirectionHorizontal = (sal_Int32)16;
+static const ::sal_Int32 msoAnimDirectionHorizontalIn = (sal_Int32)23;
+static const ::sal_Int32 msoAnimDirectionHorizontalOut = (sal_Int32)24;
+static const ::sal_Int32 msoAnimDirectionIn = (sal_Int32)19;
+static const ::sal_Int32 msoAnimDirectionInBottom = (sal_Int32)31;
+static const ::sal_Int32 msoAnimDirectionInCenter = (sal_Int32)30;
+static const ::sal_Int32 msoAnimDirectionInSlightly = (sal_Int32)29;
+static const ::sal_Int32 msoAnimDirectionInstant = (sal_Int32)41;
+static const ::sal_Int32 msoAnimDirectionLeft = (sal_Int32)4;
+static const ::sal_Int32 msoAnimDirectionNone = (sal_Int32)0;
+static const ::sal_Int32 msoAnimDirectionOrdinalMask = (sal_Int32)5;
+static const ::sal_Int32 msoAnimDirectionOut = (sal_Int32)20;
+static const ::sal_Int32 msoAnimDirectionOutBottom = (sal_Int32)34;
+static const ::sal_Int32 msoAnimDirectionOutCenter = (sal_Int32)33;
+static const ::sal_Int32 msoAnimDirectionOutSlightly = (sal_Int32)32;
+static const ::sal_Int32 msoAnimDirectionRight = (sal_Int32)2;
+static const ::sal_Int32 msoAnimDirectionSlightly = (sal_Int32)27;
+static const ::sal_Int32 msoAnimDirectionTop = (sal_Int32)10;
+static const ::sal_Int32 msoAnimDirectionTopLeft = (sal_Int32)12;
+static const ::sal_Int32 msoAnimDirectionTopRight = (sal_Int32)13;
+static const ::sal_Int32 msoAnimDirectionUp = (sal_Int32)1;
+static const ::sal_Int32 msoAnimDirectionUpLeft = (sal_Int32)6;
+static const ::sal_Int32 msoAnimDirectionUpRight = (sal_Int32)7;
+static const ::sal_Int32 msoAnimDirectionVertical = (sal_Int32)17;
+static const ::sal_Int32 msoAnimDirectionVerticalIn = (sal_Int32)25;
+static const ::sal_Int32 msoAnimDirectionVerticalOut = (sal_Int32)26;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_POWERPOINT_MSOANIMDIRECTION_HDL

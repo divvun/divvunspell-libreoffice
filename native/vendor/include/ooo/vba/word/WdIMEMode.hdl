@@ -1,0 +1,24 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDIMEMODE_HDL
+#define INCLUDED_OOO_VBA_WORD_WDIMEMODE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdIMEMode {
+
+static const ::sal_Int32 wdIMEModeAlpha = (sal_Int32)8;
+static const ::sal_Int32 wdIMEModeAlphaFull = (sal_Int32)7;
+static const ::sal_Int32 wdIMEModeHangul = (sal_Int32)10;
+static const ::sal_Int32 wdIMEModeHangulFull = (sal_Int32)9;
+static const ::sal_Int32 wdIMEModeHiragana = (sal_Int32)4;
+static const ::sal_Int32 wdIMEModeKatakana = (sal_Int32)5;
+static const ::sal_Int32 wdIMEModeKatakanaHalf = (sal_Int32)6;
+static const ::sal_Int32 wdIMEModeNoControl = (sal_Int32)0;
+static const ::sal_Int32 wdIMEModeOff = (sal_Int32)2;
+static const ::sal_Int32 wdIMEModeOn = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDIMEMODE_HDL

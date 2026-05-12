@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLDISPLAYDRAWINGOBJECTS_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLDISPLAYDRAWINGOBJECTS_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlDisplayDrawingObjects {
+
+static const ::sal_Int32 xlDisplayShapes = (sal_Int32)-4104;
+static const ::sal_Int32 xlHide = (sal_Int32)3;
+static const ::sal_Int32 xlPlaceholders = (sal_Int32)2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLDISPLAYDRAWINGOBJECTS_HDL

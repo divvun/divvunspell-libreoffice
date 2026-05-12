@@ -1,0 +1,46 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLCHARTITEM_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLCHARTITEM_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlChartItem {
+
+static const ::sal_Int32 xlAxis = (sal_Int32)21;
+static const ::sal_Int32 xlAxisTitle = (sal_Int32)17;
+static const ::sal_Int32 xlChartArea = (sal_Int32)2;
+static const ::sal_Int32 xlChartTitle = (sal_Int32)4;
+static const ::sal_Int32 xlCorners = (sal_Int32)6;
+static const ::sal_Int32 xlDataLabel = (sal_Int32)0;
+static const ::sal_Int32 xlDataTable = (sal_Int32)7;
+static const ::sal_Int32 xlDisplayUnitLabel = (sal_Int32)30;
+static const ::sal_Int32 xlDownBars = (sal_Int32)20;
+static const ::sal_Int32 xlDropLines = (sal_Int32)26;
+static const ::sal_Int32 xlErrorBars = (sal_Int32)9;
+static const ::sal_Int32 xlFloor = (sal_Int32)23;
+static const ::sal_Int32 xlHiLoLines = (sal_Int32)25;
+static const ::sal_Int32 xlLeaderLines = (sal_Int32)29;
+static const ::sal_Int32 xlLegend = (sal_Int32)24;
+static const ::sal_Int32 xlLegendEntry = (sal_Int32)12;
+static const ::sal_Int32 xlLegendKey = (sal_Int32)13;
+static const ::sal_Int32 xlMajorGridlines = (sal_Int32)15;
+static const ::sal_Int32 xlMinorGridlines = (sal_Int32)16;
+static const ::sal_Int32 xlNothing = (sal_Int32)28;
+static const ::sal_Int32 xlPivotChartDropZone = (sal_Int32)32;
+static const ::sal_Int32 xlPivotChartFieldButton = (sal_Int32)31;
+static const ::sal_Int32 xlPlotArea = (sal_Int32)19;
+static const ::sal_Int32 xlRadarAxisLabels = (sal_Int32)27;
+static const ::sal_Int32 xlSeries = (sal_Int32)3;
+static const ::sal_Int32 xlSeriesLines = (sal_Int32)22;
+static const ::sal_Int32 xlShape = (sal_Int32)14;
+static const ::sal_Int32 xlTrendline = (sal_Int32)8;
+static const ::sal_Int32 xlUpBars = (sal_Int32)18;
+static const ::sal_Int32 xlWalls = (sal_Int32)5;
+static const ::sal_Int32 xlXErrorBars = (sal_Int32)10;
+static const ::sal_Int32 xlYErrorBars = (sal_Int32)11;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLCHARTITEM_HDL

@@ -1,0 +1,6 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLPRIORITY_HPP
+#define INCLUDED_OOO_VBA_EXCEL_XLPRIORITY_HPP
+
+#include "ooo/vba/excel/XlPriority.hdl"
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLPRIORITY_HPP

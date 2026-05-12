@@ -1,0 +1,153 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOAUTOSHAPETYPE_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOAUTOSHAPETYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoAutoShapeType {
+
+static const ::sal_Int32 msoShape16pointStar = (sal_Int32)94;
+static const ::sal_Int32 msoShape24pointStar = (sal_Int32)95;
+static const ::sal_Int32 msoShape32pointStar = (sal_Int32)96;
+static const ::sal_Int32 msoShape4pointStar = (sal_Int32)91;
+static const ::sal_Int32 msoShape5pointStar = (sal_Int32)92;
+static const ::sal_Int32 msoShape8pointStar = (sal_Int32)93;
+static const ::sal_Int32 msoShapeActionButtonBackorPrevious = (sal_Int32)129;
+static const ::sal_Int32 msoShapeActionButtonBeginning = (sal_Int32)131;
+static const ::sal_Int32 msoShapeActionButtonCustom = (sal_Int32)125;
+static const ::sal_Int32 msoShapeActionButtonDocument = (sal_Int32)134;
+static const ::sal_Int32 msoShapeActionButtonEnd = (sal_Int32)132;
+static const ::sal_Int32 msoShapeActionButtonForwardorNext = (sal_Int32)130;
+static const ::sal_Int32 msoShapeActionButtonHelp = (sal_Int32)127;
+static const ::sal_Int32 msoShapeActionButtonHome = (sal_Int32)126;
+static const ::sal_Int32 msoShapeActionButtonInformation = (sal_Int32)128;
+static const ::sal_Int32 msoShapeActionButtonMovie = (sal_Int32)136;
+static const ::sal_Int32 msoShapeActionButtonReturn = (sal_Int32)133;
+static const ::sal_Int32 msoShapeActionButtonSound = (sal_Int32)135;
+static const ::sal_Int32 msoShapeArc = (sal_Int32)25;
+static const ::sal_Int32 msoShapeBalloon = (sal_Int32)137;
+static const ::sal_Int32 msoShapeBentArrow = (sal_Int32)41;
+static const ::sal_Int32 msoShapeBentUpArrow = (sal_Int32)44;
+static const ::sal_Int32 msoShapeBevel = (sal_Int32)15;
+static const ::sal_Int32 msoShapeBlockArc = (sal_Int32)20;
+static const ::sal_Int32 msoShapeCan = (sal_Int32)13;
+static const ::sal_Int32 msoShapeChevron = (sal_Int32)52;
+static const ::sal_Int32 msoShapeCircularArrow = (sal_Int32)60;
+static const ::sal_Int32 msoShapeCloudCallout = (sal_Int32)108;
+static const ::sal_Int32 msoShapeCross = (sal_Int32)11;
+static const ::sal_Int32 msoShapeCube = (sal_Int32)14;
+static const ::sal_Int32 msoShapeCurvedDownArrow = (sal_Int32)48;
+static const ::sal_Int32 msoShapeCurvedDownRibbon = (sal_Int32)100;
+static const ::sal_Int32 msoShapeCurvedLeftArrow = (sal_Int32)46;
+static const ::sal_Int32 msoShapeCurvedRightArrow = (sal_Int32)45;
+static const ::sal_Int32 msoShapeCurvedUpArrow = (sal_Int32)47;
+static const ::sal_Int32 msoShapeCurvedUpRibbon = (sal_Int32)99;
+static const ::sal_Int32 msoShapeDiamond = (sal_Int32)4;
+static const ::sal_Int32 msoShapeDonut = (sal_Int32)18;
+static const ::sal_Int32 msoShapeDoubleBrace = (sal_Int32)27;
+static const ::sal_Int32 msoShapeDoubleBracket = (sal_Int32)26;
+static const ::sal_Int32 msoShapeDoubleWave = (sal_Int32)104;
+static const ::sal_Int32 msoShapeDownArrow = (sal_Int32)36;
+static const ::sal_Int32 msoShapeDownArrowCallout = (sal_Int32)56;
+static const ::sal_Int32 msoShapeDownRibbon = (sal_Int32)98;
+static const ::sal_Int32 msoShapeExplosion1 = (sal_Int32)89;
+static const ::sal_Int32 msoShapeExplosion2 = (sal_Int32)90;
+static const ::sal_Int32 msoShapeFlowchartAlternateProcess = (sal_Int32)62;
+static const ::sal_Int32 msoShapeFlowchartCard = (sal_Int32)75;
+static const ::sal_Int32 msoShapeFlowchartCollate = (sal_Int32)79;
+static const ::sal_Int32 msoShapeFlowchartConnector = (sal_Int32)73;
+static const ::sal_Int32 msoShapeFlowchartData = (sal_Int32)64;
+static const ::sal_Int32 msoShapeFlowchartDecision = (sal_Int32)63;
+static const ::sal_Int32 msoShapeFlowchartDelay = (sal_Int32)84;
+static const ::sal_Int32 msoShapeFlowchartDirectAccessStorage = (sal_Int32)87;
+static const ::sal_Int32 msoShapeFlowchartDisplay = (sal_Int32)88;
+static const ::sal_Int32 msoShapeFlowchartDocument = (sal_Int32)67;
+static const ::sal_Int32 msoShapeFlowchartExtract = (sal_Int32)81;
+static const ::sal_Int32 msoShapeFlowchartInternalStorage = (sal_Int32)66;
+static const ::sal_Int32 msoShapeFlowchartMagneticDisk = (sal_Int32)86;
+static const ::sal_Int32 msoShapeFlowchartManualInput = (sal_Int32)71;
+static const ::sal_Int32 msoShapeFlowchartManualOperation = (sal_Int32)72;
+static const ::sal_Int32 msoShapeFlowchartMerge = (sal_Int32)82;
+static const ::sal_Int32 msoShapeFlowchartMultidocument = (sal_Int32)68;
+static const ::sal_Int32 msoShapeFlowchartOffpageConnector = (sal_Int32)74;
+static const ::sal_Int32 msoShapeFlowchartOr = (sal_Int32)78;
+static const ::sal_Int32 msoShapeFlowchartPredefinedProcess = (sal_Int32)65;
+static const ::sal_Int32 msoShapeFlowchartPreparation = (sal_Int32)70;
+static const ::sal_Int32 msoShapeFlowchartProcess = (sal_Int32)61;
+static const ::sal_Int32 msoShapeFlowchartPunchedTape = (sal_Int32)76;
+static const ::sal_Int32 msoShapeFlowchartSequentialAccessStorage = (sal_Int32)85;
+static const ::sal_Int32 msoShapeFlowchartSort = (sal_Int32)80;
+static const ::sal_Int32 msoShapeFlowchartStoredData = (sal_Int32)83;
+static const ::sal_Int32 msoShapeFlowchartSummingJunction = (sal_Int32)77;
+static const ::sal_Int32 msoShapeFlowchartTerminator = (sal_Int32)69;
+static const ::sal_Int32 msoShapeFoldedCorner = (sal_Int32)16;
+static const ::sal_Int32 msoShapeHeart = (sal_Int32)21;
+static const ::sal_Int32 msoShapeHexagon = (sal_Int32)10;
+static const ::sal_Int32 msoShapeHorizontalScroll = (sal_Int32)102;
+static const ::sal_Int32 msoShapeIsoscelesTriangle = (sal_Int32)7;
+static const ::sal_Int32 msoShapeLeftArrow = (sal_Int32)34;
+static const ::sal_Int32 msoShapeLeftArrowCallout = (sal_Int32)54;
+static const ::sal_Int32 msoShapeLeftBrace = (sal_Int32)31;
+static const ::sal_Int32 msoShapeLeftBracket = (sal_Int32)29;
+static const ::sal_Int32 msoShapeLeftRightArrow = (sal_Int32)37;
+static const ::sal_Int32 msoShapeLeftRightArrowCallout = (sal_Int32)57;
+static const ::sal_Int32 msoShapeLeftRightUpArrow = (sal_Int32)40;
+static const ::sal_Int32 msoShapeLeftUpArrow = (sal_Int32)43;
+static const ::sal_Int32 msoShapeLightningBolt = (sal_Int32)22;
+static const ::sal_Int32 msoShapeLineCallout1 = (sal_Int32)109;
+static const ::sal_Int32 msoShapeLineCallout1AccentBar = (sal_Int32)113;
+static const ::sal_Int32 msoShapeLineCallout1BorderandAccentBar = (sal_Int32)121;
+static const ::sal_Int32 msoShapeLineCallout1NoBorder = (sal_Int32)117;
+static const ::sal_Int32 msoShapeLineCallout2 = (sal_Int32)110;
+static const ::sal_Int32 msoShapeLineCallout2AccentBar = (sal_Int32)114;
+static const ::sal_Int32 msoShapeLineCallout2BorderandAccentBar = (sal_Int32)122;
+static const ::sal_Int32 msoShapeLineCallout2NoBorder = (sal_Int32)118;
+static const ::sal_Int32 msoShapeLineCallout3 = (sal_Int32)111;
+static const ::sal_Int32 msoShapeLineCallout3AccentBar = (sal_Int32)115;
+static const ::sal_Int32 msoShapeLineCallout3BorderandAccentBar = (sal_Int32)123;
+static const ::sal_Int32 msoShapeLineCallout3NoBorder = (sal_Int32)119;
+static const ::sal_Int32 msoShapeLineCallout4 = (sal_Int32)112;
+static const ::sal_Int32 msoShapeLineCallout4AccentBar = (sal_Int32)116;
+static const ::sal_Int32 msoShapeLineCallout4BorderandAccentBar = (sal_Int32)124;
+static const ::sal_Int32 msoShapeLineCallout4NoBorder = (sal_Int32)120;
+static const ::sal_Int32 msoShapeMixed = (sal_Int32)-2;
+static const ::sal_Int32 msoShapeMoon = (sal_Int32)24;
+static const ::sal_Int32 msoShapeNoSymbol = (sal_Int32)19;
+static const ::sal_Int32 msoShapeNotPrimitive = (sal_Int32)138;
+static const ::sal_Int32 msoShapeNotchedRightArrow = (sal_Int32)50;
+static const ::sal_Int32 msoShapeOctagon = (sal_Int32)6;
+static const ::sal_Int32 msoShapeOval = (sal_Int32)9;
+static const ::sal_Int32 msoShapeOvalCallout = (sal_Int32)107;
+static const ::sal_Int32 msoShapeParallelogram = (sal_Int32)2;
+static const ::sal_Int32 msoShapePentagon = (sal_Int32)51;
+static const ::sal_Int32 msoShapePlaque = (sal_Int32)28;
+static const ::sal_Int32 msoShapeQuadArrow = (sal_Int32)39;
+static const ::sal_Int32 msoShapeQuadArrowCallout = (sal_Int32)59;
+static const ::sal_Int32 msoShapeRectangle = (sal_Int32)1;
+static const ::sal_Int32 msoShapeRectangularCallout = (sal_Int32)105;
+static const ::sal_Int32 msoShapeRegularPentagon = (sal_Int32)12;
+static const ::sal_Int32 msoShapeRightArrow = (sal_Int32)33;
+static const ::sal_Int32 msoShapeRightArrowCallout = (sal_Int32)53;
+static const ::sal_Int32 msoShapeRightBrace = (sal_Int32)32;
+static const ::sal_Int32 msoShapeRightBracket = (sal_Int32)30;
+static const ::sal_Int32 msoShapeRightTriangle = (sal_Int32)8;
+static const ::sal_Int32 msoShapeRoundedRectangle = (sal_Int32)5;
+static const ::sal_Int32 msoShapeRoundedRectangularCallout = (sal_Int32)106;
+static const ::sal_Int32 msoShapeSmileyFace = (sal_Int32)17;
+static const ::sal_Int32 msoShapeStripedRightArrow = (sal_Int32)49;
+static const ::sal_Int32 msoShapeSun = (sal_Int32)23;
+static const ::sal_Int32 msoShapeTrapezoid = (sal_Int32)3;
+static const ::sal_Int32 msoShapeUTurnArrow = (sal_Int32)42;
+static const ::sal_Int32 msoShapeUpArrow = (sal_Int32)35;
+static const ::sal_Int32 msoShapeUpArrowCallout = (sal_Int32)55;
+static const ::sal_Int32 msoShapeUpDownArrow = (sal_Int32)38;
+static const ::sal_Int32 msoShapeUpDownArrowCallout = (sal_Int32)58;
+static const ::sal_Int32 msoShapeUpRibbon = (sal_Int32)97;
+static const ::sal_Int32 msoShapeVerticalScroll = (sal_Int32)101;
+static const ::sal_Int32 msoShapeWave = (sal_Int32)103;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOAUTOSHAPETYPE_HDL

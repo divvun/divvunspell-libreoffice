@@ -1,0 +1,6 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDLINKTYPE_HPP
+#define INCLUDED_OOO_VBA_WORD_WDLINKTYPE_HPP
+
+#include "ooo/vba/word/WdLinkType.hdl"
+
+#endif // INCLUDED_OOO_VBA_WORD_WDLINKTYPE_HPP

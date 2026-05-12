@@ -1,0 +1,22 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLDVTYPE_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLDVTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlDVType {
+
+static const ::sal_Int32 xlValidateCustom = (sal_Int32)7;
+static const ::sal_Int32 xlValidateDate = (sal_Int32)4;
+static const ::sal_Int32 xlValidateDecimal = (sal_Int32)2;
+static const ::sal_Int32 xlValidateInputOnly = (sal_Int32)0;
+static const ::sal_Int32 xlValidateList = (sal_Int32)3;
+static const ::sal_Int32 xlValidateTextLength = (sal_Int32)6;
+static const ::sal_Int32 xlValidateTime = (sal_Int32)5;
+static const ::sal_Int32 xlValidateWholeNumber = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLDVTYPE_HDL

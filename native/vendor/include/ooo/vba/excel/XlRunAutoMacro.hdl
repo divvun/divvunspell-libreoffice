@@ -1,0 +1,18 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLRUNAUTOMACRO_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLRUNAUTOMACRO_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlRunAutoMacro {
+
+static const ::sal_Int32 xlAutoActivate = (sal_Int32)3;
+static const ::sal_Int32 xlAutoClose = (sal_Int32)2;
+static const ::sal_Int32 xlAutoDeactivate = (sal_Int32)4;
+static const ::sal_Int32 xlAutoOpen = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLRUNAUTOMACRO_HDL

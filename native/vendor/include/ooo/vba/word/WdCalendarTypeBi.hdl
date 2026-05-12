@@ -1,0 +1,16 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDCALENDARTYPEBI_HDL
+#define INCLUDED_OOO_VBA_WORD_WDCALENDARTYPEBI_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdCalendarTypeBi {
+
+static const ::sal_Int32 wdCalendarTypeBidi = (sal_Int32)99;
+static const ::sal_Int32 wdCalendarTypeGregorian = (sal_Int32)100;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDCALENDARTYPEBI_HDL

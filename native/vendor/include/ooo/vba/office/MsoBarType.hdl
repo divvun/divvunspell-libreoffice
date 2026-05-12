@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOBARTYPE_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOBARTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoBarType {
+
+static const ::sal_Int32 msoBarTypeMenuBar = (sal_Int32)1;
+static const ::sal_Int32 msoBarTypeNormal = (sal_Int32)0;
+static const ::sal_Int32 msoBarTypePopup = (sal_Int32)2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOBARTYPE_HDL

@@ -1,0 +1,24 @@
+#ifndef INCLUDED_OOO_VBA_MSFORMS_FMSCROLLACTION_HDL
+#define INCLUDED_OOO_VBA_MSFORMS_FMSCROLLACTION_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace msforms { namespace fmScrollAction {
+
+static const ::sal_Int32 fmScrollActionBegin = (sal_Int32)5;
+static const ::sal_Int32 fmScrollActionControlRequest = (sal_Int32)9;
+static const ::sal_Int32 fmScrollActionEnd = (sal_Int32)6;
+static const ::sal_Int32 fmScrollActionFocusRequest = (sal_Int32)10;
+static const ::sal_Int32 fmScrollActionLineDown = (sal_Int32)2;
+static const ::sal_Int32 fmScrollActionLineUp = (sal_Int32)1;
+static const ::sal_Int32 fmScrollActionNoChange = (sal_Int32)0;
+static const ::sal_Int32 fmScrollActionPageDown = (sal_Int32)4;
+static const ::sal_Int32 fmScrollActionPageUp = (sal_Int32)3;
+static const ::sal_Int32 fmScrollActionPropertyChange = (sal_Int32)8;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_MSFORMS_FMSCROLLACTION_HDL

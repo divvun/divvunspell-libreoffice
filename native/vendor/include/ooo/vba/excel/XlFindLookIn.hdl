@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLFINDLOOKIN_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLFINDLOOKIN_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlFindLookIn {
+
+static const ::sal_Int32 xlComments = (sal_Int32)-4144;
+static const ::sal_Int32 xlFormulas = (sal_Int32)-4123;
+static const ::sal_Int32 xlValues = (sal_Int32)-4163;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLFINDLOOKIN_HDL

@@ -1,0 +1,30 @@
+#ifndef INCLUDED_OOO_VBA_ACCESS_ACCOLORINDEX_HDL
+#define INCLUDED_OOO_VBA_ACCESS_ACCOLORINDEX_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace access { namespace AcColorIndex {
+
+static const ::sal_Int32 acColorIndexAqua = (sal_Int32)14;
+static const ::sal_Int32 acColorIndexBlack = (sal_Int32)0;
+static const ::sal_Int32 acColorIndexBlue = (sal_Int32)12;
+static const ::sal_Int32 acColorIndexBrightGreen = (sal_Int32)10;
+static const ::sal_Int32 acColorIndexDarkBlue = (sal_Int32)4;
+static const ::sal_Int32 acColorIndexFuschia = (sal_Int32)13;
+static const ::sal_Int32 acColorIndexGray = (sal_Int32)7;
+static const ::sal_Int32 acColorIndexGreen = (sal_Int32)2;
+static const ::sal_Int32 acColorIndexMaroon = (sal_Int32)1;
+static const ::sal_Int32 acColorIndexOlive = (sal_Int32)3;
+static const ::sal_Int32 acColorIndexRed = (sal_Int32)9;
+static const ::sal_Int32 acColorIndexSilver = (sal_Int32)8;
+static const ::sal_Int32 acColorIndexTeal = (sal_Int32)6;
+static const ::sal_Int32 acColorIndexViolet = (sal_Int32)5;
+static const ::sal_Int32 acColorIndexWhite = (sal_Int32)15;
+static const ::sal_Int32 acColorIndexYellow = (sal_Int32)11;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_ACCESS_ACCOLORINDEX_HDL

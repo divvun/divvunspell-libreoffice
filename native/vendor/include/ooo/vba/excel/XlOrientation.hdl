@@ -1,0 +1,18 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLORIENTATION_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLORIENTATION_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlOrientation {
+
+static const ::sal_Int32 xlDownward = (sal_Int32)-4170;
+static const ::sal_Int32 xlHorizontal = (sal_Int32)-4128;
+static const ::sal_Int32 xlUpward = (sal_Int32)-4171;
+static const ::sal_Int32 xlVertical = (sal_Int32)-4166;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLORIENTATION_HDL

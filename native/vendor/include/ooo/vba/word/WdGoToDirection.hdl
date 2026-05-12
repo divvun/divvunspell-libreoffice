@@ -1,0 +1,20 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDGOTODIRECTION_HDL
+#define INCLUDED_OOO_VBA_WORD_WDGOTODIRECTION_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdGoToDirection {
+
+static const ::sal_Int32 wdGoToAbsolute = (sal_Int32)1;
+static const ::sal_Int32 wdGoToFirst = (sal_Int32)1;
+static const ::sal_Int32 wdGoToLast = (sal_Int32)-1;
+static const ::sal_Int32 wdGoToNext = (sal_Int32)2;
+static const ::sal_Int32 wdGoToPrevious = (sal_Int32)3;
+static const ::sal_Int32 wdGoToRelative = (sal_Int32)2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDGOTODIRECTION_HDL

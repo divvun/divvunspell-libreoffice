@@ -1,0 +1,21 @@
+#ifndef INCLUDED_OOO_VBA_DAO_DATABASETYPEENUM_HDL
+#define INCLUDED_OOO_VBA_DAO_DATABASETYPEENUM_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace dao { namespace DatabaseTypeEnum {
+
+static const ::sal_Int32 dbDecrypt = (sal_Int32)4;
+static const ::sal_Int32 dbEncrypt = (sal_Int32)2;
+static const ::sal_Int32 dbVersion10 = (sal_Int32)1;
+static const ::sal_Int32 dbVersion11 = (sal_Int32)8;
+static const ::sal_Int32 dbVersion20 = (sal_Int32)16;
+static const ::sal_Int32 dbVersion30 = (sal_Int32)32;
+static const ::sal_Int32 dbVersion40 = (sal_Int32)64;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_DAO_DATABASETYPEENUM_HDL

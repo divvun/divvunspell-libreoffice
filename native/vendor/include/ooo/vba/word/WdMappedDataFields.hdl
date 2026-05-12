@@ -1,0 +1,44 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDMAPPEDDATAFIELDS_HDL
+#define INCLUDED_OOO_VBA_WORD_WDMAPPEDDATAFIELDS_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdMappedDataFields {
+
+static const ::sal_Int32 wdAddress1 = (sal_Int32)10;
+static const ::sal_Int32 wdAddress2 = (sal_Int32)11;
+static const ::sal_Int32 wdAddress3 = (sal_Int32)29;
+static const ::sal_Int32 wdBusinessFax = (sal_Int32)17;
+static const ::sal_Int32 wdBusinessPhone = (sal_Int32)16;
+static const ::sal_Int32 wdCity = (sal_Int32)12;
+static const ::sal_Int32 wdCompany = (sal_Int32)9;
+static const ::sal_Int32 wdCountryRegion = (sal_Int32)15;
+static const ::sal_Int32 wdCourtesyTitle = (sal_Int32)2;
+static const ::sal_Int32 wdDepartment = (sal_Int32)30;
+static const ::sal_Int32 wdEmailAddress = (sal_Int32)20;
+static const ::sal_Int32 wdFirstName = (sal_Int32)3;
+static const ::sal_Int32 wdHomeFax = (sal_Int32)19;
+static const ::sal_Int32 wdHomePhone = (sal_Int32)18;
+static const ::sal_Int32 wdJobTitle = (sal_Int32)8;
+static const ::sal_Int32 wdLastName = (sal_Int32)5;
+static const ::sal_Int32 wdMiddleName = (sal_Int32)4;
+static const ::sal_Int32 wdNickname = (sal_Int32)7;
+static const ::sal_Int32 wdPostalCode = (sal_Int32)14;
+static const ::sal_Int32 wdRubyFirstName = (sal_Int32)27;
+static const ::sal_Int32 wdRubyLastName = (sal_Int32)28;
+static const ::sal_Int32 wdSpouseCourtesyTitle = (sal_Int32)22;
+static const ::sal_Int32 wdSpouseFirstName = (sal_Int32)23;
+static const ::sal_Int32 wdSpouseLastName = (sal_Int32)25;
+static const ::sal_Int32 wdSpouseMiddleName = (sal_Int32)24;
+static const ::sal_Int32 wdSpouseNickname = (sal_Int32)26;
+static const ::sal_Int32 wdState = (sal_Int32)13;
+static const ::sal_Int32 wdSuffix = (sal_Int32)6;
+static const ::sal_Int32 wdUniqueIdentifier = (sal_Int32)1;
+static const ::sal_Int32 wdWebPageURL = (sal_Int32)21;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDMAPPEDDATAFIELDS_HDL

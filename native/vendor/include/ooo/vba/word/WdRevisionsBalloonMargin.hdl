@@ -1,0 +1,16 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDREVISIONSBALLOONMARGIN_HDL
+#define INCLUDED_OOO_VBA_WORD_WDREVISIONSBALLOONMARGIN_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdRevisionsBalloonMargin {
+
+static const ::sal_Int32 wdLeftMargin = (sal_Int32)0;
+static const ::sal_Int32 wdRightMargin = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDREVISIONSBALLOONMARGIN_HDL

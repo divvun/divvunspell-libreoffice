@@ -1,0 +1,19 @@
+#ifndef INCLUDED_OOO_VBA_ADODB_EVENTSTATUSENUM_HDL
+#define INCLUDED_OOO_VBA_ADODB_EVENTSTATUSENUM_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace adodb { namespace EventStatusEnum {
+
+static const ::sal_Int32 adStatusCancel = (sal_Int32)4;
+static const ::sal_Int32 adStatusCantDeny = (sal_Int32)3;
+static const ::sal_Int32 adStatusErrorsOccurred = (sal_Int32)2;
+static const ::sal_Int32 adStatusOK = (sal_Int32)1;
+static const ::sal_Int32 adStatusUnwantedEvent = (sal_Int32)5;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_ADODB_EVENTSTATUSENUM_HDL

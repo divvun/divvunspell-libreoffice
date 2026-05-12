@@ -1,0 +1,20 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDTABLEADER_HDL
+#define INCLUDED_OOO_VBA_WORD_WDTABLEADER_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdTabLeader {
+
+static const ::sal_Int32 wdTabLeaderDashes = (sal_Int32)2;
+static const ::sal_Int32 wdTabLeaderDots = (sal_Int32)1;
+static const ::sal_Int32 wdTabLeaderHeavy = (sal_Int32)4;
+static const ::sal_Int32 wdTabLeaderLines = (sal_Int32)3;
+static const ::sal_Int32 wdTabLeaderMiddleDot = (sal_Int32)5;
+static const ::sal_Int32 wdTabLeaderSpaces = (sal_Int32)0;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDTABLEADER_HDL

@@ -1,0 +1,21 @@
+#ifndef INCLUDED_OOO_VBA_ADODB_COMMANDTYPEENUM_HDL
+#define INCLUDED_OOO_VBA_ADODB_COMMANDTYPEENUM_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace adodb { namespace CommandTypeEnum {
+
+static const ::sal_Int32 adCmdFile = (sal_Int32)256;
+static const ::sal_Int32 adCmdStoredProc = (sal_Int32)4;
+static const ::sal_Int32 adCmdTable = (sal_Int32)2;
+static const ::sal_Int32 adCmdTableDirect = (sal_Int32)512;
+static const ::sal_Int32 adCmdText = (sal_Int32)1;
+static const ::sal_Int32 adCmdUnknown = (sal_Int32)8;
+static const ::sal_Int32 adCmdUnspecified = (sal_Int32)-1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_ADODB_COMMANDTYPEENUM_HDL

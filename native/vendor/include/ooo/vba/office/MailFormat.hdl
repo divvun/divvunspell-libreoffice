@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MAILFORMAT_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MAILFORMAT_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MailFormat {
+
+static const ::sal_Int32 mfHTML = (sal_Int32)2;
+static const ::sal_Int32 mfPlainText = (sal_Int32)1;
+static const ::sal_Int32 mfRTF = (sal_Int32)3;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MAILFORMAT_HDL

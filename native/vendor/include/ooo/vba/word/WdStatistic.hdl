@@ -1,0 +1,21 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDSTATISTIC_HDL
+#define INCLUDED_OOO_VBA_WORD_WDSTATISTIC_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdStatistic {
+
+static const ::sal_Int32 wdStatisticCharacters = (sal_Int32)3;
+static const ::sal_Int32 wdStatisticCharactersWithSpaces = (sal_Int32)5;
+static const ::sal_Int32 wdStatisticFarEastCharacters = (sal_Int32)6;
+static const ::sal_Int32 wdStatisticLines = (sal_Int32)1;
+static const ::sal_Int32 wdStatisticPages = (sal_Int32)2;
+static const ::sal_Int32 wdStatisticParagraphs = (sal_Int32)4;
+static const ::sal_Int32 wdStatisticWords = (sal_Int32)0;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDSTATISTIC_HDL

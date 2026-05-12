@@ -1,0 +1,6 @@
+#ifndef INCLUDED_OOO_VBA_VBSTRCONV_HPP
+#define INCLUDED_OOO_VBA_VBSTRCONV_HPP
+
+#include "ooo/vba/VbStrConv.hdl"
+
+#endif // INCLUDED_OOO_VBA_VBSTRCONV_HPP

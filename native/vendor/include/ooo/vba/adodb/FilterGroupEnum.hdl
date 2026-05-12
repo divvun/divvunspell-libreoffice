@@ -1,0 +1,20 @@
+#ifndef INCLUDED_OOO_VBA_ADODB_FILTERGROUPENUM_HDL
+#define INCLUDED_OOO_VBA_ADODB_FILTERGROUPENUM_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace adodb { namespace FilterGroupEnum {
+
+static const ::sal_Int32 adFilterAffectedRecords = (sal_Int32)2;
+static const ::sal_Int32 adFilterConflictingRecords = (sal_Int32)5;
+static const ::sal_Int32 adFilterFetchedRecords = (sal_Int32)3;
+static const ::sal_Int32 adFilterNone = (sal_Int32)0;
+static const ::sal_Int32 adFilterPendingRecords = (sal_Int32)1;
+static const ::sal_Int32 adFilterPredicate = (sal_Int32)4;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_ADODB_FILTERGROUPENUM_HDL

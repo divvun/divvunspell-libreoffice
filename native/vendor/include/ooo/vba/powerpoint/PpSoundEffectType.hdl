@@ -1,0 +1,18 @@
+#ifndef INCLUDED_OOO_VBA_POWERPOINT_PPSOUNDEFFECTTYPE_HDL
+#define INCLUDED_OOO_VBA_POWERPOINT_PPSOUNDEFFECTTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace powerpoint { namespace PpSoundEffectType {
+
+static const ::sal_Int32 ppSoundEffectsMixed = (sal_Int32)-2;
+static const ::sal_Int32 ppSoundFile = (sal_Int32)2;
+static const ::sal_Int32 ppSoundNone = (sal_Int32)0;
+static const ::sal_Int32 ppSoundStopPrevious = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_POWERPOINT_PPSOUNDEFFECTTYPE_HDL

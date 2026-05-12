@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_MSFORMS_FMTABSTYLE_HDL
+#define INCLUDED_OOO_VBA_MSFORMS_FMTABSTYLE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace msforms { namespace fmTabStyle {
+
+static const ::sal_Int32 fmTabStyleButtons = (sal_Int32)1;
+static const ::sal_Int32 fmTabStyleNone = (sal_Int32)2;
+static const ::sal_Int32 fmTabStyleTabs = (sal_Int32)0;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_MSFORMS_FMTABSTYLE_HDL

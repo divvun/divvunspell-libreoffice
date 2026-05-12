@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_MSFORMS_FMMULTISELECT_HDL
+#define INCLUDED_OOO_VBA_MSFORMS_FMMULTISELECT_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace msforms { namespace fmMultiSelect {
+
+static const ::sal_Int32 fmMultiSelectExtended = (sal_Int32)2;
+static const ::sal_Int32 fmMultiSelectMulti = (sal_Int32)1;
+static const ::sal_Int32 fmMultiSelectSingle = (sal_Int32)0;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_MSFORMS_FMMULTISELECT_HDL

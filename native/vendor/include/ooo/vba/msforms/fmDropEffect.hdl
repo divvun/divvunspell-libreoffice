@@ -1,0 +1,18 @@
+#ifndef INCLUDED_OOO_VBA_MSFORMS_FMDROPEFFECT_HDL
+#define INCLUDED_OOO_VBA_MSFORMS_FMDROPEFFECT_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace msforms { namespace fmDropEffect {
+
+static const ::sal_Int32 fmDropEffectCopy = (sal_Int32)1;
+static const ::sal_Int32 fmDropEffectCopyOrMove = (sal_Int32)3;
+static const ::sal_Int32 fmDropEffectMove = (sal_Int32)2;
+static const ::sal_Int32 fmDropEffectNone = (sal_Int32)0;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_MSFORMS_FMDROPEFFECT_HDL

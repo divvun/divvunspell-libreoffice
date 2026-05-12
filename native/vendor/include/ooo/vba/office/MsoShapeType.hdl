@@ -1,0 +1,38 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOSHAPETYPE_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOSHAPETYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoShapeType {
+
+static const ::sal_Int32 msoAutoShape = (sal_Int32)1;
+static const ::sal_Int32 msoCallout = (sal_Int32)2;
+static const ::sal_Int32 msoCanvas = (sal_Int32)20;
+static const ::sal_Int32 msoChart = (sal_Int32)3;
+static const ::sal_Int32 msoComment = (sal_Int32)4;
+static const ::sal_Int32 msoDiagram = (sal_Int32)21;
+static const ::sal_Int32 msoEmbeddedOLEObject = (sal_Int32)7;
+static const ::sal_Int32 msoFormControl = (sal_Int32)8;
+static const ::sal_Int32 msoFreeform = (sal_Int32)5;
+static const ::sal_Int32 msoGroup = (sal_Int32)6;
+static const ::sal_Int32 msoInk = (sal_Int32)22;
+static const ::sal_Int32 msoInkComment = (sal_Int32)23;
+static const ::sal_Int32 msoLine = (sal_Int32)9;
+static const ::sal_Int32 msoLinkedOLEObject = (sal_Int32)10;
+static const ::sal_Int32 msoLinkedPicture = (sal_Int32)11;
+static const ::sal_Int32 msoMedia = (sal_Int32)16;
+static const ::sal_Int32 msoOLEControlObject = (sal_Int32)12;
+static const ::sal_Int32 msoPicture = (sal_Int32)13;
+static const ::sal_Int32 msoPlaceholder = (sal_Int32)14;
+static const ::sal_Int32 msoScriptAnchor = (sal_Int32)18;
+static const ::sal_Int32 msoShapeTypeMixed = (sal_Int32)-2;
+static const ::sal_Int32 msoTable = (sal_Int32)19;
+static const ::sal_Int32 msoTextBox = (sal_Int32)17;
+static const ::sal_Int32 msoTextEffect = (sal_Int32)15;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOSHAPETYPE_HDL

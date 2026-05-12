@@ -1,0 +1,18 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLARRANGESTYLE_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLARRANGESTYLE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlArrangeStyle {
+
+static const ::sal_Int32 xlArrangeStyleCascade = (sal_Int32)7;
+static const ::sal_Int32 xlArrangeStyleHorizontal = (sal_Int32)-4128;
+static const ::sal_Int32 xlArrangeStyleTiled = (sal_Int32)1;
+static const ::sal_Int32 xlArrangeStyleVertical = (sal_Int32)-4166;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLARRANGESTYLE_HDL

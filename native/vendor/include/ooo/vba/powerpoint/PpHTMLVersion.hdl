@@ -1,0 +1,18 @@
+#ifndef INCLUDED_OOO_VBA_POWERPOINT_PPHTMLVERSION_HDL
+#define INCLUDED_OOO_VBA_POWERPOINT_PPHTMLVERSION_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace powerpoint { namespace PpHTMLVersion {
+
+static const ::sal_Int32 ppHTMLAutodetect = (sal_Int32)4;
+static const ::sal_Int32 ppHTMLDual = (sal_Int32)3;
+static const ::sal_Int32 ppHTMLv3 = (sal_Int32)1;
+static const ::sal_Int32 ppHTMLv4 = (sal_Int32)2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_POWERPOINT_PPHTMLVERSION_HDL

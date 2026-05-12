@@ -1,0 +1,19 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOTARGETBROWSER_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOTARGETBROWSER_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoTargetBrowser {
+
+static const ::sal_Int32 msoTargetBrowserIE4 = (sal_Int32)2;
+static const ::sal_Int32 msoTargetBrowserIE5 = (sal_Int32)3;
+static const ::sal_Int32 msoTargetBrowserIE6 = (sal_Int32)4;
+static const ::sal_Int32 msoTargetBrowserV3 = (sal_Int32)0;
+static const ::sal_Int32 msoTargetBrowserV4 = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOTARGETBROWSER_HDL

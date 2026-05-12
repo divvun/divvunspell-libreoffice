@@ -1,0 +1,70 @@
+#ifndef INCLUDED_COM_SUN_STAR_SDBC_XDATABASEMETADATA3_HDL
+#define INCLUDED_COM_SUN_STAR_SDBC_XDATABASEMETADATA3_HDL
+
+#include "sal/config.h"
+
+#include "com/sun/star/beans/Optional.hdl"
+#include "com/sun/star/sdbc/XDatabaseMetaData2.hdl"
+namespace com { namespace sun { namespace star { namespace sdbc { class XResultSet; } } } }
+#include "com/sun/star/uno/Reference.h"
+#include "cppu/macros.hxx"
+#include "rtl/ustring.hxx"
+#include "sal/types.h"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace com { namespace sun { namespace star { namespace sdbc {
+
+class SAL_NO_VTABLE SAL_DLLPUBLIC_RTTI XDatabaseMetaData3 : public ::css::sdbc::XDatabaseMetaData2
+{
+public:
+#if defined LIBO_INTERNAL_ONLY
+    XDatabaseMetaData3() = default;
+    XDatabaseMetaData3(XDatabaseMetaData3 const &) = default;
+    XDatabaseMetaData3(XDatabaseMetaData3 &&) = default;
+    XDatabaseMetaData3 & operator =(XDatabaseMetaData3 const &) = default;
+    XDatabaseMetaData3 & operator =(XDatabaseMetaData3 &&) = default;
+#endif
+
+
+    // Methods
+    virtual ::sal_Bool SAL_CALL autoCommitFailureClosesAllResultSets() = 0;
+    virtual ::sal_Bool SAL_CALL generatedKeyAlwaysReturned() = 0;
+    virtual ::css::uno::Reference< ::css::sdbc::XResultSet > SAL_CALL getAttributes( const ::rtl::OUString& catalog, const ::rtl::OUString& schemaPattern, const ::rtl::OUString& typeNamePattern, const ::rtl::OUString& attributeNamePattern ) = 0;
+    virtual ::css::uno::Reference< ::css::sdbc::XResultSet > SAL_CALL getClientInfoProperties() = 0;
+    virtual ::sal_Int32 SAL_CALL getDatabaseMajorVersion() = 0;
+    virtual ::sal_Int32 SAL_CALL getDatabaseMinorVersion() = 0;
+    virtual ::css::uno::Reference< ::css::sdbc::XResultSet > SAL_CALL getFunctions( const ::rtl::OUString& catalog, const ::rtl::OUString& schemaPattern, const ::rtl::OUString& functionNamePattern ) = 0;
+    virtual ::css::uno::Reference< ::css::sdbc::XResultSet > SAL_CALL getFunctionColumns( const ::rtl::OUString& catalog, const ::rtl::OUString& schemaPattern, const ::rtl::OUString& functionNamePattern, const ::rtl::OUString& columnNamePattern ) = 0;
+    virtual ::sal_Int32 SAL_CALL getMaxLogicalLobSize() = 0;
+    virtual ::css::uno::Reference< ::css::sdbc::XResultSet > SAL_CALL getPseudoColumns( const ::rtl::OUString& catalog, const ::rtl::OUString& schemaPattern, const ::rtl::OUString& tableNamePattern, const ::rtl::OUString& columnNamePattern ) = 0;
+    virtual ::sal_Int32 SAL_CALL getResultSetHoldability() = 0;
+    virtual ::sal_Int32 SAL_CALL getRowIdLifetime() = 0;
+    virtual ::css::uno::Reference< ::css::sdbc::XResultSet > SAL_CALL getSchemasFiltered( const ::css::beans::Optional< ::rtl::OUString >& catalog, const ::css::beans::Optional< ::rtl::OUString >& schemaPattern ) = 0;
+    virtual ::sal_Int32 SAL_CALL getSQLStateType() = 0;
+    virtual ::css::uno::Reference< ::css::sdbc::XResultSet > SAL_CALL getSuperTables( const ::rtl::OUString& catalog, const ::rtl::OUString& schemaPattern, const ::rtl::OUString& tableNamePattern ) = 0;
+    virtual ::css::uno::Reference< ::css::sdbc::XResultSet > SAL_CALL getSuperTypes( const ::rtl::OUString& catalog, const ::rtl::OUString& schemaPattern, const ::rtl::OUString& typeNamePattern ) = 0;
+    virtual ::sal_Bool SAL_CALL locatorsUpdateCopy() = 0;
+    virtual ::sal_Bool SAL_CALL supportsConvertInGeneral() = 0;
+    virtual ::sal_Bool SAL_CALL supportsGetGeneratedKeys() = 0;
+    virtual ::sal_Bool SAL_CALL supportsMultipleOpenResults() = 0;
+    virtual ::sal_Bool SAL_CALL supportsNamedParameters() = 0;
+    virtual ::sal_Bool SAL_CALL supportsRefCursors() = 0;
+    virtual ::sal_Bool SAL_CALL supportsSavepoints() = 0;
+    virtual ::sal_Bool SAL_CALL supportsSharding() = 0;
+    virtual ::sal_Bool SAL_CALL supportsStatementPooling() = 0;
+    virtual ::sal_Bool SAL_CALL supportsStoredFunctionsUsingCallSyntax() = 0;
+
+    static inline ::css::uno::Type const & SAL_CALL static_type(void * = 0);
+
+protected:
+    ~XDatabaseMetaData3() SAL_NOEXCEPT {} // avoid warnings about virtual members and non-virtual dtor
+};
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::css::sdbc::XDatabaseMetaData3 const *);
+} } } }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::uno::Reference< ::css::sdbc::XDatabaseMetaData3 > *);
+
+#endif

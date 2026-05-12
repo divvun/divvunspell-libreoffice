@@ -1,0 +1,18 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLFORMULALABEL_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLFORMULALABEL_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlFormulaLabel {
+
+static const ::sal_Int32 xlColumnLabels = (sal_Int32)2;
+static const ::sal_Int32 xlMixedLabels = (sal_Int32)3;
+static const ::sal_Int32 xlNoLabels = (sal_Int32)-4142;
+static const ::sal_Int32 xlRowLabels = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLFORMULALABEL_HDL

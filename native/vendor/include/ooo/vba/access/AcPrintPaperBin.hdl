@@ -1,0 +1,27 @@
+#ifndef INCLUDED_OOO_VBA_ACCESS_ACPRINTPAPERBIN_HDL
+#define INCLUDED_OOO_VBA_ACCESS_ACPRINTPAPERBIN_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace access { namespace AcPrintPaperBin {
+
+static const ::sal_Int32 acPRBNAuto = (sal_Int32)7;
+static const ::sal_Int32 acPRBNCassette = (sal_Int32)14;
+static const ::sal_Int32 acPRBNEnvManual = (sal_Int32)6;
+static const ::sal_Int32 acPRBNEnvelope = (sal_Int32)5;
+static const ::sal_Int32 acPRBNFormSource = (sal_Int32)15;
+static const ::sal_Int32 acPRBNLargeCapacity = (sal_Int32)11;
+static const ::sal_Int32 acPRBNLargeFmt = (sal_Int32)10;
+static const ::sal_Int32 acPRBNLower = (sal_Int32)2;
+static const ::sal_Int32 acPRBNManual = (sal_Int32)4;
+static const ::sal_Int32 acPRBNMiddle = (sal_Int32)3;
+static const ::sal_Int32 acPRBNSmallFmt = (sal_Int32)9;
+static const ::sal_Int32 acPRBNTractor = (sal_Int32)8;
+static const ::sal_Int32 acPRBNUpper = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_ACCESS_ACPRINTPAPERBIN_HDL

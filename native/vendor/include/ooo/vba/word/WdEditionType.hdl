@@ -1,0 +1,16 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDEDITIONTYPE_HDL
+#define INCLUDED_OOO_VBA_WORD_WDEDITIONTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdEditionType {
+
+static const ::sal_Int32 wdPublisher = (sal_Int32)0;
+static const ::sal_Int32 wdSubscriber = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDEDITIONTYPE_HDL

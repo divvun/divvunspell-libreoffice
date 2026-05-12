@@ -1,0 +1,21 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDLISTTYPE_HDL
+#define INCLUDED_OOO_VBA_WORD_WDLISTTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdListType {
+
+static const ::sal_Int32 wdListBullet = (sal_Int32)2;
+static const ::sal_Int32 wdListListNumOnly = (sal_Int32)1;
+static const ::sal_Int32 wdListMixedNumbering = (sal_Int32)5;
+static const ::sal_Int32 wdListNoNumbering = (sal_Int32)0;
+static const ::sal_Int32 wdListOutlineNumbering = (sal_Int32)4;
+static const ::sal_Int32 wdListPictureBullet = (sal_Int32)6;
+static const ::sal_Int32 wdListSimpleNumbering = (sal_Int32)3;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDLISTTYPE_HDL

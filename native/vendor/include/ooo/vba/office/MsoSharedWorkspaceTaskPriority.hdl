@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOSHAREDWORKSPACETASKPRIORITY_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOSHAREDWORKSPACETASKPRIORITY_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoSharedWorkspaceTaskPriority {
+
+static const ::sal_Int32 msoSharedWorkspaceTaskPriorityHigh = (sal_Int32)1;
+static const ::sal_Int32 msoSharedWorkspaceTaskPriorityLow = (sal_Int32)3;
+static const ::sal_Int32 msoSharedWorkspaceTaskPriorityNormal = (sal_Int32)2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOSHAREDWORKSPACETASKPRIORITY_HDL

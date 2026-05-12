@@ -1,0 +1,53 @@
+#ifndef INCLUDED_OOO_VBA_WORD_XROWS_HDL
+#define INCLUDED_OOO_VBA_WORD_XROWS_HDL
+
+#include "sal/config.h"
+
+#include "ooo/vba/XCollection.hdl"
+#include "com/sun/star/uno/Any.h"
+#include "com/sun/star/uno/Reference.h"
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace ooo { namespace vba { namespace word {
+
+class SAL_NO_VTABLE SAL_DLLPUBLIC_RTTI XRows : public ::ooo::vba::XCollection
+{
+public:
+#if defined LIBO_INTERNAL_ONLY
+    XRows() = default;
+    XRows(XRows const &) = default;
+    XRows(XRows &&) = default;
+    XRows & operator =(XRows const &) = default;
+    XRows & operator =(XRows &&) = default;
+#endif
+
+
+    // Attributes
+    virtual ::sal_Int32 SAL_CALL getAlignment() = 0;
+    virtual void SAL_CALL setAlignment( ::sal_Int32 _alignment ) = 0;
+    virtual ::css::uno::Any SAL_CALL getAllowBreakAcrossPages() = 0;
+    virtual void SAL_CALL setAllowBreakAcrossPages( const ::css::uno::Any& _allowbreakacrosspages ) = 0;
+    virtual float SAL_CALL getSpaceBetweenColumns() = 0;
+    virtual void SAL_CALL setSpaceBetweenColumns( float _spacebetweencolumns ) = 0;
+
+    // Methods
+    virtual void SAL_CALL Delete() = 0;
+    virtual void SAL_CALL SetLeftIndent( float LeftIndent, ::sal_Int32 RulerStyle ) = 0;
+    virtual void SAL_CALL Select() = 0;
+
+    static inline ::css::uno::Type const & SAL_CALL static_type(void * = 0);
+
+protected:
+    ~XRows() SAL_NOEXCEPT {} // avoid warnings about virtual members and non-virtual dtor
+};
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::ooo::vba::word::XRows const *);
+} } }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::uno::Reference< ::ooo::vba::word::XRows > *);
+
+#endif

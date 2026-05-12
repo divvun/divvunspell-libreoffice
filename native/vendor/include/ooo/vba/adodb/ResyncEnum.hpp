@@ -1,0 +1,6 @@
+#ifndef INCLUDED_OOO_VBA_ADODB_RESYNCENUM_HPP
+#define INCLUDED_OOO_VBA_ADODB_RESYNCENUM_HPP
+
+#include "ooo/vba/adodb/ResyncEnum.hdl"
+
+#endif // INCLUDED_OOO_VBA_ADODB_RESYNCENUM_HPP

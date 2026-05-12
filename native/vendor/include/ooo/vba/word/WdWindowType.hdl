@@ -1,0 +1,16 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDWINDOWTYPE_HDL
+#define INCLUDED_OOO_VBA_WORD_WDWINDOWTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdWindowType {
+
+static const ::sal_Int32 wdWindowDocument = (sal_Int32)0;
+static const ::sal_Int32 wdWindowTemplate = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDWINDOWTYPE_HDL

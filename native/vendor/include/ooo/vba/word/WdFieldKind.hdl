@@ -1,0 +1,18 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDFIELDKIND_HDL
+#define INCLUDED_OOO_VBA_WORD_WDFIELDKIND_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdFieldKind {
+
+static const ::sal_Int32 wdFieldKindCold = (sal_Int32)3;
+static const ::sal_Int32 wdFieldKindHot = (sal_Int32)1;
+static const ::sal_Int32 wdFieldKindNone = (sal_Int32)0;
+static const ::sal_Int32 wdFieldKindWarm = (sal_Int32)2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDFIELDKIND_HDL

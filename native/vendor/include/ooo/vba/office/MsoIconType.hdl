@@ -1,0 +1,21 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOICONTYPE_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOICONTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoIconType {
+
+static const ::sal_Int32 msoIconAlert = (sal_Int32)2;
+static const ::sal_Int32 msoIconAlertCritical = (sal_Int32)7;
+static const ::sal_Int32 msoIconAlertInfo = (sal_Int32)4;
+static const ::sal_Int32 msoIconAlertQuery = (sal_Int32)6;
+static const ::sal_Int32 msoIconAlertWarning = (sal_Int32)5;
+static const ::sal_Int32 msoIconNone = (sal_Int32)0;
+static const ::sal_Int32 msoIconTip = (sal_Int32)3;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOICONTYPE_HDL

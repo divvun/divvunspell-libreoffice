@@ -1,0 +1,64 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XCHART_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XCHART_HDL
+
+#include "sal/config.h"
+
+#include "ooo/vba/XHelperInterface.hdl"
+namespace ooo { namespace vba { namespace excel { class XChartTitle; } } }
+namespace ooo { namespace vba { namespace excel { class XRange; } } }
+#include "com/sun/star/uno/Any.h"
+#include "com/sun/star/uno/Reference.h"
+#include "cppu/macros.hxx"
+#include "rtl/ustring.hxx"
+#include "sal/types.h"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace ooo { namespace vba { namespace excel {
+
+class SAL_NO_VTABLE SAL_DLLPUBLIC_RTTI XChart : public ::ooo::vba::XHelperInterface
+{
+public:
+#if defined LIBO_INTERNAL_ONLY
+    XChart() = default;
+    XChart(XChart const &) = default;
+    XChart(XChart &&) = default;
+    XChart & operator =(XChart const &) = default;
+    XChart & operator =(XChart &&) = default;
+#endif
+
+
+    // Attributes
+    virtual ::rtl::OUString SAL_CALL getName() = 0;
+
+    // Methods
+    virtual ::css::uno::Any SAL_CALL SeriesCollection( const ::css::uno::Any& Item ) = 0;
+    virtual ::sal_Int32 SAL_CALL getChartType() = 0;
+    virtual void SAL_CALL setChartType( ::sal_Int32 chartType ) = 0;
+    virtual void SAL_CALL Activate() = 0;
+    virtual void SAL_CALL setSourceData( const ::css::uno::Reference< ::ooo::vba::excel::XRange >& Source, const ::css::uno::Any& PlotBy ) = 0;
+    virtual ::sal_Int32 SAL_CALL Location() = 0;
+    virtual ::sal_Int32 SAL_CALL getLocation() = 0;
+    virtual void SAL_CALL setLocation( ::sal_Int32 where, const ::css::uno::Any& Name ) = 0;
+    virtual ::sal_Bool SAL_CALL getHasTitle() = 0;
+    virtual void SAL_CALL setHasTitle( ::sal_Bool bTitle ) = 0;
+    virtual ::sal_Bool SAL_CALL getHasLegend() = 0;
+    virtual void SAL_CALL setHasLegend( ::sal_Bool bLegend ) = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::excel::XChartTitle > SAL_CALL getChartTitle() = 0;
+    virtual void SAL_CALL setPlotBy( ::sal_Int32 xlRowCol ) = 0;
+    virtual ::sal_Int32 SAL_CALL getPlotBy() = 0;
+    virtual ::css::uno::Any SAL_CALL Axes( const ::css::uno::Any& Type, const ::css::uno::Any& AxisGroup ) = 0;
+
+    static inline ::css::uno::Type const & SAL_CALL static_type(void * = 0);
+
+protected:
+    ~XChart() SAL_NOEXCEPT {} // avoid warnings about virtual members and non-virtual dtor
+};
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::ooo::vba::excel::XChart const *);
+} } }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::uno::Reference< ::ooo::vba::excel::XChart > *);
+
+#endif

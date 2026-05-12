@@ -1,0 +1,19 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLTOOLBARPROTECTION_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLTOOLBARPROTECTION_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlToolbarProtection {
+
+static const ::sal_Int32 xlNoButtonChanges = (sal_Int32)1;
+static const ::sal_Int32 xlNoChanges = (sal_Int32)4;
+static const ::sal_Int32 xlNoDockingChanges = (sal_Int32)3;
+static const ::sal_Int32 xlNoShapeChanges = (sal_Int32)2;
+static const ::sal_Int32 xlToolbarProtectionNone = (sal_Int32)-4143;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLTOOLBARPROTECTION_HDL

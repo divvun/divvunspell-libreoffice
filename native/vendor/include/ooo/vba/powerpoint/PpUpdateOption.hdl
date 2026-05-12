@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_POWERPOINT_PPUPDATEOPTION_HDL
+#define INCLUDED_OOO_VBA_POWERPOINT_PPUPDATEOPTION_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace powerpoint { namespace PpUpdateOption {
+
+static const ::sal_Int32 ppUpdateOptionAutomatic = (sal_Int32)2;
+static const ::sal_Int32 ppUpdateOptionManual = (sal_Int32)1;
+static const ::sal_Int32 ppUpdateOptionMixed = (sal_Int32)-2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_POWERPOINT_PPUPDATEOPTION_HDL

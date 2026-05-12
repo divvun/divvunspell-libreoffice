@@ -1,0 +1,19 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOCALLOUTTYPE_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOCALLOUTTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoCalloutType {
+
+static const ::sal_Int32 msoCalloutFour = (sal_Int32)4;
+static const ::sal_Int32 msoCalloutMixed = (sal_Int32)-2;
+static const ::sal_Int32 msoCalloutOne = (sal_Int32)1;
+static const ::sal_Int32 msoCalloutThree = (sal_Int32)3;
+static const ::sal_Int32 msoCalloutTwo = (sal_Int32)2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOCALLOUTTYPE_HDL

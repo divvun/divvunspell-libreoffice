@@ -1,0 +1,28 @@
+#ifndef INCLUDED_OOO_VBA_POWERPOINT_PPSLIDESIZETYPE_HDL
+#define INCLUDED_OOO_VBA_POWERPOINT_PPSLIDESIZETYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace powerpoint { namespace PpSlideSizeType {
+
+static const ::sal_Int32 ppSlideSize35MM = (sal_Int32)4;
+static const ::sal_Int32 ppSlideSizeA3Paper = (sal_Int32)9;
+static const ::sal_Int32 ppSlideSizeA4Paper = (sal_Int32)3;
+static const ::sal_Int32 ppSlideSizeB4ISOPaper = (sal_Int32)10;
+static const ::sal_Int32 ppSlideSizeB4JISPaper = (sal_Int32)12;
+static const ::sal_Int32 ppSlideSizeB5ISOPaper = (sal_Int32)11;
+static const ::sal_Int32 ppSlideSizeB5JISPaper = (sal_Int32)13;
+static const ::sal_Int32 ppSlideSizeBanner = (sal_Int32)6;
+static const ::sal_Int32 ppSlideSizeCustom = (sal_Int32)7;
+static const ::sal_Int32 ppSlideSizeHagakiCard = (sal_Int32)14;
+static const ::sal_Int32 ppSlideSizeLedgerPaper = (sal_Int32)8;
+static const ::sal_Int32 ppSlideSizeLetterPaper = (sal_Int32)2;
+static const ::sal_Int32 ppSlideSizeOnScreen = (sal_Int32)1;
+static const ::sal_Int32 ppSlideSizeOverhead = (sal_Int32)5;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_POWERPOINT_PPSLIDESIZETYPE_HDL

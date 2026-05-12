@@ -1,0 +1,43 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDPAGENUMBERSTYLE_HDL
+#define INCLUDED_OOO_VBA_WORD_WDPAGENUMBERSTYLE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdPageNumberStyle {
+
+static const ::sal_Int32 wdPageNumberStyleArabic = (sal_Int32)0;
+static const ::sal_Int32 wdPageNumberStyleArabicFullWidth = (sal_Int32)14;
+static const ::sal_Int32 wdPageNumberStyleArabicLetter1 = (sal_Int32)46;
+static const ::sal_Int32 wdPageNumberStyleArabicLetter2 = (sal_Int32)48;
+static const ::sal_Int32 wdPageNumberStyleHanjaRead = (sal_Int32)41;
+static const ::sal_Int32 wdPageNumberStyleHanjaReadDigit = (sal_Int32)42;
+static const ::sal_Int32 wdPageNumberStyleHebrewLetter1 = (sal_Int32)45;
+static const ::sal_Int32 wdPageNumberStyleHebrewLetter2 = (sal_Int32)47;
+static const ::sal_Int32 wdPageNumberStyleHindiArabic = (sal_Int32)51;
+static const ::sal_Int32 wdPageNumberStyleHindiCardinalText = (sal_Int32)52;
+static const ::sal_Int32 wdPageNumberStyleHindiLetter1 = (sal_Int32)49;
+static const ::sal_Int32 wdPageNumberStyleHindiLetter2 = (sal_Int32)50;
+static const ::sal_Int32 wdPageNumberStyleKanji = (sal_Int32)10;
+static const ::sal_Int32 wdPageNumberStyleKanjiDigit = (sal_Int32)11;
+static const ::sal_Int32 wdPageNumberStyleKanjiTraditional = (sal_Int32)16;
+static const ::sal_Int32 wdPageNumberStyleLowercaseLetter = (sal_Int32)4;
+static const ::sal_Int32 wdPageNumberStyleLowercaseRoman = (sal_Int32)2;
+static const ::sal_Int32 wdPageNumberStyleNumberInCircle = (sal_Int32)18;
+static const ::sal_Int32 wdPageNumberStyleNumberInDash = (sal_Int32)57;
+static const ::sal_Int32 wdPageNumberStyleSimpChinNum1 = (sal_Int32)37;
+static const ::sal_Int32 wdPageNumberStyleSimpChinNum2 = (sal_Int32)38;
+static const ::sal_Int32 wdPageNumberStyleThaiArabic = (sal_Int32)54;
+static const ::sal_Int32 wdPageNumberStyleThaiCardinalText = (sal_Int32)55;
+static const ::sal_Int32 wdPageNumberStyleThaiLetter = (sal_Int32)53;
+static const ::sal_Int32 wdPageNumberStyleTradChinNum1 = (sal_Int32)33;
+static const ::sal_Int32 wdPageNumberStyleTradChinNum2 = (sal_Int32)34;
+static const ::sal_Int32 wdPageNumberStyleUppercaseLetter = (sal_Int32)3;
+static const ::sal_Int32 wdPageNumberStyleUppercaseRoman = (sal_Int32)1;
+static const ::sal_Int32 wdPageNumberStyleVietCardinalText = (sal_Int32)56;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDPAGENUMBERSTYLE_HDL

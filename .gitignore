@@ -1,4 +1,6 @@
 *.bundle
 *.oxt
 *.pkg
+*.o
+*.dylib
 .DS_Store

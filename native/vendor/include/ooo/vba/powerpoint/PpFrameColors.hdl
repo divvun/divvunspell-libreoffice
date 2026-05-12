@@ -1,0 +1,19 @@
+#ifndef INCLUDED_OOO_VBA_POWERPOINT_PPFRAMECOLORS_HDL
+#define INCLUDED_OOO_VBA_POWERPOINT_PPFRAMECOLORS_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace powerpoint { namespace PpFrameColors {
+
+static const ::sal_Int32 ppFrameColorsBlackTextOnWhite = (sal_Int32)5;
+static const ::sal_Int32 ppFrameColorsBrowserColors = (sal_Int32)1;
+static const ::sal_Int32 ppFrameColorsPresentationSchemeAccentColor = (sal_Int32)3;
+static const ::sal_Int32 ppFrameColorsPresentationSchemeTextColor = (sal_Int32)2;
+static const ::sal_Int32 ppFrameColorsWhiteTextOnBlack = (sal_Int32)4;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_POWERPOINT_PPFRAMECOLORS_HDL

@@ -1,0 +1,16 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLXMLEXPORTRESULT_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLXMLEXPORTRESULT_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlXmlExportResult {
+
+static const ::sal_Int32 xlXmlExportSuccess = (sal_Int32)0;
+static const ::sal_Int32 xlXmlExportValidationFailed = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLXMLEXPORTRESULT_HDL

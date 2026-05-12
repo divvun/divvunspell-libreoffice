@@ -1,0 +1,48 @@
+#ifndef INCLUDED_OOO_VBA_MSFORMS_XPICTUREFORMAT_HDL
+#define INCLUDED_OOO_VBA_MSFORMS_XPICTUREFORMAT_HDL
+
+#include "sal/config.h"
+
+#include "ooo/vba/XHelperInterface.hdl"
+#include "com/sun/star/uno/Reference.h"
+#include "cppu/macros.hxx"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace ooo { namespace vba { namespace msforms {
+
+class SAL_NO_VTABLE SAL_DLLPUBLIC_RTTI XPictureFormat : public ::ooo::vba::XHelperInterface
+{
+public:
+#if defined LIBO_INTERNAL_ONLY
+    XPictureFormat() = default;
+    XPictureFormat(XPictureFormat const &) = default;
+    XPictureFormat(XPictureFormat &&) = default;
+    XPictureFormat & operator =(XPictureFormat const &) = default;
+    XPictureFormat & operator =(XPictureFormat &&) = default;
+#endif
+
+
+    // Attributes
+    virtual double SAL_CALL getBrightness() = 0;
+    virtual void SAL_CALL setBrightness( double _brightness ) = 0;
+    virtual double SAL_CALL getContrast() = 0;
+    virtual void SAL_CALL setContrast( double _contrast ) = 0;
+
+    // Methods
+    virtual void SAL_CALL IncrementBrightness( double increment ) = 0;
+    virtual void SAL_CALL IncrementContrast( double increment ) = 0;
+
+    static inline ::css::uno::Type const & SAL_CALL static_type(void * = 0);
+
+protected:
+    ~XPictureFormat() SAL_NOEXCEPT {} // avoid warnings about virtual members and non-virtual dtor
+};
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::ooo::vba::msforms::XPictureFormat const *);
+} } }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::uno::Reference< ::ooo::vba::msforms::XPictureFormat > *);
+
+#endif

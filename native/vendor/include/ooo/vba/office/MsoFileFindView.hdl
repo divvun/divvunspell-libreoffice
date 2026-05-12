@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOFILEFINDVIEW_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOFILEFINDVIEW_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoFileFindView {
+
+static const ::sal_Int32 msoViewFileInfo = (sal_Int32)1;
+static const ::sal_Int32 msoViewPreview = (sal_Int32)2;
+static const ::sal_Int32 msoViewSummaryInfo = (sal_Int32)3;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOFILEFINDVIEW_HDL

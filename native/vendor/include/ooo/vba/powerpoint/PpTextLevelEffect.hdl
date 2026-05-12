@@ -1,0 +1,22 @@
+#ifndef INCLUDED_OOO_VBA_POWERPOINT_PPTEXTLEVELEFFECT_HDL
+#define INCLUDED_OOO_VBA_POWERPOINT_PPTEXTLEVELEFFECT_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace powerpoint { namespace PpTextLevelEffect {
+
+static const ::sal_Int32 ppAnimateByAllLevels = (sal_Int32)16;
+static const ::sal_Int32 ppAnimateByFifthLevel = (sal_Int32)5;
+static const ::sal_Int32 ppAnimateByFirstLevel = (sal_Int32)1;
+static const ::sal_Int32 ppAnimateByFourthLevel = (sal_Int32)4;
+static const ::sal_Int32 ppAnimateBySecondLevel = (sal_Int32)2;
+static const ::sal_Int32 ppAnimateByThirdLevel = (sal_Int32)3;
+static const ::sal_Int32 ppAnimateLevelMixed = (sal_Int32)-2;
+static const ::sal_Int32 ppAnimateLevelNone = (sal_Int32)0;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_POWERPOINT_PPTEXTLEVELEFFECT_HDL

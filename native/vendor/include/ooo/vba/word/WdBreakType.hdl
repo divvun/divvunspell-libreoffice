@@ -1,0 +1,24 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDBREAKTYPE_HDL
+#define INCLUDED_OOO_VBA_WORD_WDBREAKTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdBreakType {
+
+static const ::sal_Int32 wdColumnBreak = (sal_Int32)8;
+static const ::sal_Int32 wdLineBreak = (sal_Int32)6;
+static const ::sal_Int32 wdLineBreakClearLeft = (sal_Int32)9;
+static const ::sal_Int32 wdLineBreakClearRight = (sal_Int32)10;
+static const ::sal_Int32 wdPageBreak = (sal_Int32)7;
+static const ::sal_Int32 wdSectionBreakContinuous = (sal_Int32)3;
+static const ::sal_Int32 wdSectionBreakEvenPage = (sal_Int32)4;
+static const ::sal_Int32 wdSectionBreakNextPage = (sal_Int32)2;
+static const ::sal_Int32 wdSectionBreakOddPage = (sal_Int32)5;
+static const ::sal_Int32 wdTextWrappingBreak = (sal_Int32)11;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDBREAKTYPE_HDL

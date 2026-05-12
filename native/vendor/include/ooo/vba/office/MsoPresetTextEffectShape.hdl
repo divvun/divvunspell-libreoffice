@@ -1,0 +1,55 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOPRESETTEXTEFFECTSHAPE_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOPRESETTEXTEFFECTSHAPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoPresetTextEffectShape {
+
+static const ::sal_Int32 msoTextEffectShapeArchDownCurve = (sal_Int32)10;
+static const ::sal_Int32 msoTextEffectShapeArchDownPour = (sal_Int32)14;
+static const ::sal_Int32 msoTextEffectShapeArchUpCurve = (sal_Int32)9;
+static const ::sal_Int32 msoTextEffectShapeArchUpPour = (sal_Int32)13;
+static const ::sal_Int32 msoTextEffectShapeButtonCurve = (sal_Int32)12;
+static const ::sal_Int32 msoTextEffectShapeButtonPour = (sal_Int32)16;
+static const ::sal_Int32 msoTextEffectShapeCanDown = (sal_Int32)20;
+static const ::sal_Int32 msoTextEffectShapeCanUp = (sal_Int32)19;
+static const ::sal_Int32 msoTextEffectShapeCascadeDown = (sal_Int32)40;
+static const ::sal_Int32 msoTextEffectShapeCascadeUp = (sal_Int32)39;
+static const ::sal_Int32 msoTextEffectShapeChevronDown = (sal_Int32)6;
+static const ::sal_Int32 msoTextEffectShapeChevronUp = (sal_Int32)5;
+static const ::sal_Int32 msoTextEffectShapeCircleCurve = (sal_Int32)11;
+static const ::sal_Int32 msoTextEffectShapeCirclePour = (sal_Int32)15;
+static const ::sal_Int32 msoTextEffectShapeCurveDown = (sal_Int32)18;
+static const ::sal_Int32 msoTextEffectShapeCurveUp = (sal_Int32)17;
+static const ::sal_Int32 msoTextEffectShapeDeflate = (sal_Int32)26;
+static const ::sal_Int32 msoTextEffectShapeDeflateBottom = (sal_Int32)28;
+static const ::sal_Int32 msoTextEffectShapeDeflateInflate = (sal_Int32)31;
+static const ::sal_Int32 msoTextEffectShapeDeflateInflateDeflate = (sal_Int32)32;
+static const ::sal_Int32 msoTextEffectShapeDeflateTop = (sal_Int32)30;
+static const ::sal_Int32 msoTextEffectShapeDoubleWave1 = (sal_Int32)23;
+static const ::sal_Int32 msoTextEffectShapeDoubleWave2 = (sal_Int32)24;
+static const ::sal_Int32 msoTextEffectShapeFadeDown = (sal_Int32)36;
+static const ::sal_Int32 msoTextEffectShapeFadeLeft = (sal_Int32)34;
+static const ::sal_Int32 msoTextEffectShapeFadeRight = (sal_Int32)33;
+static const ::sal_Int32 msoTextEffectShapeFadeUp = (sal_Int32)35;
+static const ::sal_Int32 msoTextEffectShapeInflate = (sal_Int32)25;
+static const ::sal_Int32 msoTextEffectShapeInflateBottom = (sal_Int32)27;
+static const ::sal_Int32 msoTextEffectShapeInflateTop = (sal_Int32)29;
+static const ::sal_Int32 msoTextEffectShapeMixed = (sal_Int32)-2;
+static const ::sal_Int32 msoTextEffectShapePlainText = (sal_Int32)1;
+static const ::sal_Int32 msoTextEffectShapeRingInside = (sal_Int32)7;
+static const ::sal_Int32 msoTextEffectShapeRingOutside = (sal_Int32)8;
+static const ::sal_Int32 msoTextEffectShapeSlantDown = (sal_Int32)38;
+static const ::sal_Int32 msoTextEffectShapeSlantUp = (sal_Int32)37;
+static const ::sal_Int32 msoTextEffectShapeStop = (sal_Int32)2;
+static const ::sal_Int32 msoTextEffectShapeTriangleDown = (sal_Int32)4;
+static const ::sal_Int32 msoTextEffectShapeTriangleUp = (sal_Int32)3;
+static const ::sal_Int32 msoTextEffectShapeWave1 = (sal_Int32)21;
+static const ::sal_Int32 msoTextEffectShapeWave2 = (sal_Int32)22;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOPRESETTEXTEFFECTSHAPE_HDL

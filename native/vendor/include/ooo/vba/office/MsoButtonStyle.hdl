@@ -1,0 +1,22 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOBUTTONSTYLE_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOBUTTONSTYLE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoButtonStyle {
+
+static const ::sal_Int32 msoButtonAutomatic = (sal_Int32)0;
+static const ::sal_Int32 msoButtonCaption = (sal_Int32)2;
+static const ::sal_Int32 msoButtonIcon = (sal_Int32)1;
+static const ::sal_Int32 msoButtonIconAndCaption = (sal_Int32)3;
+static const ::sal_Int32 msoButtonIconAndCaptionBelow = (sal_Int32)11;
+static const ::sal_Int32 msoButtonIconAndWrapCaption = (sal_Int32)7;
+static const ::sal_Int32 msoButtonIconAndWrapCaptionBelow = (sal_Int32)15;
+static const ::sal_Int32 msoButtonWrapCaption = (sal_Int32)14;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOBUTTONSTYLE_HDL

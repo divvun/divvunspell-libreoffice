@@ -1,0 +1,26 @@
+#ifndef INCLUDED_OOO_VBA_DAO_RECORDSETOPTIONENUM_HDL
+#define INCLUDED_OOO_VBA_DAO_RECORDSETOPTIONENUM_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace dao { namespace RecordsetOptionEnum {
+
+static const ::sal_Int32 dbAppendOnly = (sal_Int32)8;
+static const ::sal_Int32 dbConsistent = (sal_Int32)32;
+static const ::sal_Int32 dbDenyRead = (sal_Int32)2;
+static const ::sal_Int32 dbDenyWrite = (sal_Int32)1;
+static const ::sal_Int32 dbExecDirect = (sal_Int32)2048;
+static const ::sal_Int32 dbFailOnError = (sal_Int32)128;
+static const ::sal_Int32 dbForwardOnly = (sal_Int32)256;
+static const ::sal_Int32 dbInconsistent = (sal_Int32)16;
+static const ::sal_Int32 dbReadOnly = (sal_Int32)4;
+static const ::sal_Int32 dbRunAsync = (sal_Int32)1024;
+static const ::sal_Int32 dbSQLPassThrough = (sal_Int32)64;
+static const ::sal_Int32 dbSeeChanges = (sal_Int32)512;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_DAO_RECORDSETOPTIONENUM_HDL

@@ -1,0 +1,24 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLPIVOTCELLTYPE_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLPIVOTCELLTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlPivotCellType {
+
+static const ::sal_Int32 xlPivotCellBlankCell = (sal_Int32)9;
+static const ::sal_Int32 xlPivotCellCustomSubtotal = (sal_Int32)7;
+static const ::sal_Int32 xlPivotCellDataField = (sal_Int32)4;
+static const ::sal_Int32 xlPivotCellDataPivotField = (sal_Int32)8;
+static const ::sal_Int32 xlPivotCellGrandTotal = (sal_Int32)3;
+static const ::sal_Int32 xlPivotCellPageFieldItem = (sal_Int32)6;
+static const ::sal_Int32 xlPivotCellPivotField = (sal_Int32)5;
+static const ::sal_Int32 xlPivotCellPivotItem = (sal_Int32)1;
+static const ::sal_Int32 xlPivotCellSubtotal = (sal_Int32)2;
+static const ::sal_Int32 xlPivotCellValue = (sal_Int32)0;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLPIVOTCELLTYPE_HDL

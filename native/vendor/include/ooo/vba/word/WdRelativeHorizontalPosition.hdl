@@ -1,0 +1,18 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDRELATIVEHORIZONTALPOSITION_HDL
+#define INCLUDED_OOO_VBA_WORD_WDRELATIVEHORIZONTALPOSITION_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdRelativeHorizontalPosition {
+
+static const ::sal_Int32 wdRelativeHorizontalPositionCharacter = (sal_Int32)3;
+static const ::sal_Int32 wdRelativeHorizontalPositionColumn = (sal_Int32)2;
+static const ::sal_Int32 wdRelativeHorizontalPositionMargin = (sal_Int32)0;
+static const ::sal_Int32 wdRelativeHorizontalPositionPage = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDRELATIVEHORIZONTALPOSITION_HDL

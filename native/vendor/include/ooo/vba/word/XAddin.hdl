@@ -1,0 +1,47 @@
+#ifndef INCLUDED_OOO_VBA_WORD_XADDIN_HDL
+#define INCLUDED_OOO_VBA_WORD_XADDIN_HDL
+
+#include "sal/config.h"
+
+#include "com/sun/star/container/XNamed.hdl"
+#include "ooo/vba/XHelperInterface.hdl"
+#include "com/sun/star/uno/Reference.h"
+#include "cppu/macros.hxx"
+#include "rtl/ustring.hxx"
+#include "sal/types.h"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace ooo { namespace vba { namespace word {
+
+class SAL_NO_VTABLE SAL_DLLPUBLIC_RTTI XAddin : public ::ooo::vba::XHelperInterface, public ::css::container::XNamed
+{
+public:
+#if defined LIBO_INTERNAL_ONLY
+    XAddin() = default;
+    XAddin(XAddin const &) = default;
+    XAddin(XAddin &&) = default;
+    XAddin & operator =(XAddin const &) = default;
+    XAddin & operator =(XAddin &&) = default;
+#endif
+
+
+    // Attributes
+    virtual ::rtl::OUString SAL_CALL getPath() = 0;
+    virtual ::sal_Bool SAL_CALL getAutoload() = 0;
+    virtual ::sal_Bool SAL_CALL getInstalled() = 0;
+    virtual void SAL_CALL setInstalled( ::sal_Bool _installed ) = 0;
+
+    static inline ::css::uno::Type const & SAL_CALL static_type(void * = 0);
+
+protected:
+    ~XAddin() SAL_NOEXCEPT {} // avoid warnings about virtual members and non-virtual dtor
+};
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::ooo::vba::word::XAddin const *);
+} } }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::uno::Reference< ::ooo::vba::word::XAddin > *);
+
+#endif

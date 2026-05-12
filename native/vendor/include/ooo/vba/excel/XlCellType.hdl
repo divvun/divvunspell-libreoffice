@@ -1,0 +1,24 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLCELLTYPE_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLCELLTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlCellType {
+
+static const ::sal_Int32 xlCellTypeAllFormatConditions = (sal_Int32)-4172;
+static const ::sal_Int32 xlCellTypeAllValidation = (sal_Int32)-4174;
+static const ::sal_Int32 xlCellTypeBlanks = (sal_Int32)4;
+static const ::sal_Int32 xlCellTypeComments = (sal_Int32)-4144;
+static const ::sal_Int32 xlCellTypeConstants = (sal_Int32)2;
+static const ::sal_Int32 xlCellTypeFormulas = (sal_Int32)-4123;
+static const ::sal_Int32 xlCellTypeLastCell = (sal_Int32)11;
+static const ::sal_Int32 xlCellTypeSameFormatConditions = (sal_Int32)-4173;
+static const ::sal_Int32 xlCellTypeSameValidation = (sal_Int32)-4175;
+static const ::sal_Int32 xlCellTypeVisible = (sal_Int32)12;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLCELLTYPE_HDL

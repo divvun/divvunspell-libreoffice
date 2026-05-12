@@ -1,0 +1,42 @@
+#ifndef INCLUDED_OOO_VBA_POWERPOINT_MSOANIMATEBYLEVEL_HDL
+#define INCLUDED_OOO_VBA_POWERPOINT_MSOANIMATEBYLEVEL_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace powerpoint { namespace MsoAnimateByLevel {
+
+static const ::sal_Int32 msoAnimateChartAllAtOnce = (sal_Int32)7;
+static const ::sal_Int32 msoAnimateChartByCategory = (sal_Int32)8;
+static const ::sal_Int32 msoAnimateChartByCategoryElements = (sal_Int32)9;
+static const ::sal_Int32 msoAnimateChartBySeries = (sal_Int32)10;
+static const ::sal_Int32 msoAnimateChartBySeriesElements = (sal_Int32)11;
+static const ::sal_Int32 msoAnimateDiagramAllAtOnce = (sal_Int32)12;
+static const ::sal_Int32 msoAnimateDiagramBreadthByLevel = (sal_Int32)16;
+static const ::sal_Int32 msoAnimateDiagramBreadthByNode = (sal_Int32)15;
+static const ::sal_Int32 msoAnimateDiagramClockwise = (sal_Int32)17;
+static const ::sal_Int32 msoAnimateDiagramClockwiseIn = (sal_Int32)18;
+static const ::sal_Int32 msoAnimateDiagramClockwiseOut = (sal_Int32)19;
+static const ::sal_Int32 msoAnimateDiagramCounterClockwise = (sal_Int32)20;
+static const ::sal_Int32 msoAnimateDiagramCounterClockwiseIn = (sal_Int32)21;
+static const ::sal_Int32 msoAnimateDiagramCounterClockwiseOut = (sal_Int32)22;
+static const ::sal_Int32 msoAnimateDiagramDepthByBranch = (sal_Int32)14;
+static const ::sal_Int32 msoAnimateDiagramDepthByNode = (sal_Int32)13;
+static const ::sal_Int32 msoAnimateDiagramDown = (sal_Int32)26;
+static const ::sal_Int32 msoAnimateDiagramInByRing = (sal_Int32)23;
+static const ::sal_Int32 msoAnimateDiagramOutByRing = (sal_Int32)24;
+static const ::sal_Int32 msoAnimateDiagramUp = (sal_Int32)25;
+static const ::sal_Int32 msoAnimateLevelMixed = (sal_Int32)-1;
+static const ::sal_Int32 msoAnimateLevelNone = (sal_Int32)0;
+static const ::sal_Int32 msoAnimateTextByAllLevels = (sal_Int32)1;
+static const ::sal_Int32 msoAnimateTextByFifthLevel = (sal_Int32)6;
+static const ::sal_Int32 msoAnimateTextByFirstLevel = (sal_Int32)2;
+static const ::sal_Int32 msoAnimateTextByFourthLevel = (sal_Int32)5;
+static const ::sal_Int32 msoAnimateTextBySecondLevel = (sal_Int32)3;
+static const ::sal_Int32 msoAnimateTextByThirdLevel = (sal_Int32)4;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_POWERPOINT_MSOANIMATEBYLEVEL_HDL

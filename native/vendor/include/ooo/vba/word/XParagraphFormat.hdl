@@ -1,0 +1,74 @@
+#ifndef INCLUDED_OOO_VBA_WORD_XPARAGRAPHFORMAT_HDL
+#define INCLUDED_OOO_VBA_WORD_XPARAGRAPHFORMAT_HDL
+
+#include "sal/config.h"
+
+#include "ooo/vba/XHelperInterface.hdl"
+#include "com/sun/star/uno/Any.h"
+#include "com/sun/star/uno/Reference.h"
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace ooo { namespace vba { namespace word {
+
+class SAL_NO_VTABLE SAL_DLLPUBLIC_RTTI XParagraphFormat : public ::ooo::vba::XHelperInterface
+{
+public:
+#if defined LIBO_INTERNAL_ONLY
+    XParagraphFormat() = default;
+    XParagraphFormat(XParagraphFormat const &) = default;
+    XParagraphFormat(XParagraphFormat &&) = default;
+    XParagraphFormat & operator =(XParagraphFormat const &) = default;
+    XParagraphFormat & operator =(XParagraphFormat &&) = default;
+#endif
+
+
+    // Attributes
+    virtual ::sal_Int32 SAL_CALL getAlignment() = 0;
+    virtual void SAL_CALL setAlignment( ::sal_Int32 _alignment ) = 0;
+    virtual float SAL_CALL getFirstLineIndent() = 0;
+    virtual void SAL_CALL setFirstLineIndent( float _firstlineindent ) = 0;
+    virtual ::css::uno::Any SAL_CALL getKeepTogether() = 0;
+    virtual void SAL_CALL setKeepTogether( const ::css::uno::Any& _keeptogether ) = 0;
+    virtual ::css::uno::Any SAL_CALL getKeepWithNext() = 0;
+    virtual void SAL_CALL setKeepWithNext( const ::css::uno::Any& _keepwithnext ) = 0;
+    virtual ::css::uno::Any SAL_CALL getHyphenation() = 0;
+    virtual void SAL_CALL setHyphenation( const ::css::uno::Any& _hyphenation ) = 0;
+    virtual float SAL_CALL getLineSpacing() = 0;
+    virtual void SAL_CALL setLineSpacing( float _linespacing ) = 0;
+    virtual ::sal_Int32 SAL_CALL getLineSpacingRule() = 0;
+    virtual void SAL_CALL setLineSpacingRule( ::sal_Int32 _linespacingrule ) = 0;
+    virtual ::css::uno::Any SAL_CALL getNoLineNumber() = 0;
+    virtual void SAL_CALL setNoLineNumber( const ::css::uno::Any& _nolinenumber ) = 0;
+    virtual ::sal_Int32 SAL_CALL getOutlineLevel() = 0;
+    virtual void SAL_CALL setOutlineLevel( ::sal_Int32 _outlinelevel ) = 0;
+    virtual ::css::uno::Any SAL_CALL getPageBreakBefore() = 0;
+    virtual void SAL_CALL setPageBreakBefore( const ::css::uno::Any& _pagebreakbefore ) = 0;
+    virtual float SAL_CALL getSpaceBefore() = 0;
+    virtual void SAL_CALL setSpaceBefore( float _spacebefore ) = 0;
+    virtual float SAL_CALL getSpaceAfter() = 0;
+    virtual void SAL_CALL setSpaceAfter( float _spaceafter ) = 0;
+    virtual float SAL_CALL getLeftIndent() = 0;
+    virtual void SAL_CALL setLeftIndent( float _leftindent ) = 0;
+    virtual float SAL_CALL getRightIndent() = 0;
+    virtual void SAL_CALL setRightIndent( float _rightindent ) = 0;
+    virtual ::css::uno::Any SAL_CALL getTabStops() = 0;
+    virtual void SAL_CALL setTabStops( const ::css::uno::Any& _tabstops ) = 0;
+    virtual ::css::uno::Any SAL_CALL getWidowControl() = 0;
+    virtual void SAL_CALL setWidowControl( const ::css::uno::Any& _widowcontrol ) = 0;
+
+    static inline ::css::uno::Type const & SAL_CALL static_type(void * = 0);
+
+protected:
+    ~XParagraphFormat() SAL_NOEXCEPT {} // avoid warnings about virtual members and non-virtual dtor
+};
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::ooo::vba::word::XParagraphFormat const *);
+} } }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::uno::Reference< ::ooo::vba::word::XParagraphFormat > *);
+
+#endif

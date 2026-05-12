@@ -1,0 +1,22 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDBORDERTYPE_HDL
+#define INCLUDED_OOO_VBA_WORD_WDBORDERTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdBorderType {
+
+static const ::sal_Int32 wdBorderBottom = (sal_Int32)-3;
+static const ::sal_Int32 wdBorderDiagonalDown = (sal_Int32)-7;
+static const ::sal_Int32 wdBorderDiagonalUp = (sal_Int32)-8;
+static const ::sal_Int32 wdBorderHorizontal = (sal_Int32)-5;
+static const ::sal_Int32 wdBorderLeft = (sal_Int32)-2;
+static const ::sal_Int32 wdBorderRight = (sal_Int32)-4;
+static const ::sal_Int32 wdBorderTop = (sal_Int32)-1;
+static const ::sal_Int32 wdBorderVertical = (sal_Int32)-6;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDBORDERTYPE_HDL

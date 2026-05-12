@@ -1,0 +1,18 @@
+#ifndef INCLUDED_OOO_VBA_ACCESS_ACIMESENTENCEMODE_HDL
+#define INCLUDED_OOO_VBA_ACCESS_ACIMESENTENCEMODE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace access { namespace AcImeSentenceMode {
+
+static const ::sal_Int32 acImeSentenceModeConversation = (sal_Int32)2;
+static const ::sal_Int32 acImeSentenceModeNone = (sal_Int32)3;
+static const ::sal_Int32 acImeSentenceModePhrasePredict = (sal_Int32)0;
+static const ::sal_Int32 acImeSentenceModePluralClause = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_ACCESS_ACIMESENTENCEMODE_HDL

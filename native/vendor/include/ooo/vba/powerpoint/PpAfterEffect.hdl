@@ -1,0 +1,19 @@
+#ifndef INCLUDED_OOO_VBA_POWERPOINT_PPAFTEREFFECT_HDL
+#define INCLUDED_OOO_VBA_POWERPOINT_PPAFTEREFFECT_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace powerpoint { namespace PpAfterEffect {
+
+static const ::sal_Int32 ppAfterEffectDim = (sal_Int32)2;
+static const ::sal_Int32 ppAfterEffectHide = (sal_Int32)1;
+static const ::sal_Int32 ppAfterEffectHideOnClick = (sal_Int32)3;
+static const ::sal_Int32 ppAfterEffectMixed = (sal_Int32)-2;
+static const ::sal_Int32 ppAfterEffectNothing = (sal_Int32)0;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_POWERPOINT_PPAFTEREFFECT_HDL

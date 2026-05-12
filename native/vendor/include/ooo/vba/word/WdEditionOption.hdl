@@ -1,0 +1,22 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDEDITIONOPTION_HDL
+#define INCLUDED_OOO_VBA_WORD_WDEDITIONOPTION_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdEditionOption {
+
+static const ::sal_Int32 wdAutomaticUpdate = (sal_Int32)3;
+static const ::sal_Int32 wdCancelPublisher = (sal_Int32)0;
+static const ::sal_Int32 wdChangeAttributes = (sal_Int32)5;
+static const ::sal_Int32 wdManualUpdate = (sal_Int32)4;
+static const ::sal_Int32 wdOpenSource = (sal_Int32)7;
+static const ::sal_Int32 wdSelectPublisher = (sal_Int32)2;
+static const ::sal_Int32 wdSendPublisher = (sal_Int32)1;
+static const ::sal_Int32 wdUpdateSubscriber = (sal_Int32)6;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDEDITIONOPTION_HDL

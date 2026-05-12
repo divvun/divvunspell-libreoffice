@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDTRAILINGCHARACTER_HDL
+#define INCLUDED_OOO_VBA_WORD_WDTRAILINGCHARACTER_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdTrailingCharacter {
+
+static const ::sal_Int32 wdTrailingNone = (sal_Int32)2;
+static const ::sal_Int32 wdTrailingSpace = (sal_Int32)1;
+static const ::sal_Int32 wdTrailingTab = (sal_Int32)0;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDTRAILINGCHARACTER_HDL

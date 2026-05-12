@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_MSFORMS_FMORIENTATION_HDL
+#define INCLUDED_OOO_VBA_MSFORMS_FMORIENTATION_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace msforms { namespace fmOrientation {
+
+static const ::sal_Int32 fmOrientationAuto = (sal_Int32)-1;
+static const ::sal_Int32 fmOrientationHorizontal = (sal_Int32)1;
+static const ::sal_Int32 fmOrientationVertical = (sal_Int32)0;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_MSFORMS_FMORIENTATION_HDL

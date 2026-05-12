@@ -1,0 +1,19 @@
+#ifndef INCLUDED_OOO_VBA_DAO_RECORDSETTYPEENUM_HDL
+#define INCLUDED_OOO_VBA_DAO_RECORDSETTYPEENUM_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace dao { namespace RecordsetTypeEnum {
+
+static const ::sal_Int32 dbOpenDynamic = (sal_Int32)16;
+static const ::sal_Int32 dbOpenDynaset = (sal_Int32)2;
+static const ::sal_Int32 dbOpenForwardOnly = (sal_Int32)8;
+static const ::sal_Int32 dbOpenSnapshot = (sal_Int32)4;
+static const ::sal_Int32 dbOpenTable = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_DAO_RECORDSETTYPEENUM_HDL

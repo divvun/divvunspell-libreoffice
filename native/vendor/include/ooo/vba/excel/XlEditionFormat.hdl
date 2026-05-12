@@ -1,0 +1,18 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLEDITIONFORMAT_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLEDITIONFORMAT_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlEditionFormat {
+
+static const ::sal_Int32 xlBIFF = (sal_Int32)2;
+static const ::sal_Int32 xlPICT = (sal_Int32)1;
+static const ::sal_Int32 xlRTF = (sal_Int32)4;
+static const ::sal_Int32 xlVALU = (sal_Int32)8;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLEDITIONFORMAT_HDL

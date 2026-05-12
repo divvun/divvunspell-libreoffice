@@ -1,0 +1,33 @@
+#ifndef INCLUDED_OOO_VBA_POWERPOINT_MSOANIMFILTEREFFECTTYPE_HDL
+#define INCLUDED_OOO_VBA_POWERPOINT_MSOANIMFILTEREFFECTTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace powerpoint { namespace MsoAnimFilterEffectType {
+
+static const ::sal_Int32 msoAnimFilterEffectTypeBarn = (sal_Int32)1;
+static const ::sal_Int32 msoAnimFilterEffectTypeBlinds = (sal_Int32)2;
+static const ::sal_Int32 msoAnimFilterEffectTypeBox = (sal_Int32)3;
+static const ::sal_Int32 msoAnimFilterEffectTypeCheckerboard = (sal_Int32)4;
+static const ::sal_Int32 msoAnimFilterEffectTypeCircle = (sal_Int32)5;
+static const ::sal_Int32 msoAnimFilterEffectTypeDiamond = (sal_Int32)6;
+static const ::sal_Int32 msoAnimFilterEffectTypeDissolve = (sal_Int32)7;
+static const ::sal_Int32 msoAnimFilterEffectTypeFade = (sal_Int32)8;
+static const ::sal_Int32 msoAnimFilterEffectTypeImage = (sal_Int32)9;
+static const ::sal_Int32 msoAnimFilterEffectTypeNone = (sal_Int32)0;
+static const ::sal_Int32 msoAnimFilterEffectTypePixelate = (sal_Int32)10;
+static const ::sal_Int32 msoAnimFilterEffectTypePlus = (sal_Int32)11;
+static const ::sal_Int32 msoAnimFilterEffectTypeRandomBar = (sal_Int32)12;
+static const ::sal_Int32 msoAnimFilterEffectTypeSlide = (sal_Int32)13;
+static const ::sal_Int32 msoAnimFilterEffectTypeStretch = (sal_Int32)14;
+static const ::sal_Int32 msoAnimFilterEffectTypeStrips = (sal_Int32)15;
+static const ::sal_Int32 msoAnimFilterEffectTypeWedge = (sal_Int32)16;
+static const ::sal_Int32 msoAnimFilterEffectTypeWheel = (sal_Int32)17;
+static const ::sal_Int32 msoAnimFilterEffectTypeWipe = (sal_Int32)18;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_POWERPOINT_MSOANIMFILTEREFFECTTYPE_HDL

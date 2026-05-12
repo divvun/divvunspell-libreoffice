@@ -1,0 +1,6 @@
+#ifndef INCLUDED_OOO_VBA_ACCESS_ACCOMMAND_HPP
+#define INCLUDED_OOO_VBA_ACCESS_ACCOMMAND_HPP
+
+#include "ooo/vba/access/AcCommand.hdl"
+
+#endif // INCLUDED_OOO_VBA_ACCESS_ACCOMMAND_HPP

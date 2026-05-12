@@ -1,0 +1,22 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDSUMMARYLENGTH_HDL
+#define INCLUDED_OOO_VBA_WORD_WDSUMMARYLENGTH_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdSummaryLength {
+
+static const ::sal_Int32 wd100Words = (sal_Int32)-4;
+static const ::sal_Int32 wd10Percent = (sal_Int32)-6;
+static const ::sal_Int32 wd10Sentences = (sal_Int32)-2;
+static const ::sal_Int32 wd20Sentences = (sal_Int32)-3;
+static const ::sal_Int32 wd25Percent = (sal_Int32)-7;
+static const ::sal_Int32 wd500Words = (sal_Int32)-5;
+static const ::sal_Int32 wd50Percent = (sal_Int32)-8;
+static const ::sal_Int32 wd75Percent = (sal_Int32)-9;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDSUMMARYLENGTH_HDL

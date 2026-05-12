@@ -1,0 +1,24 @@
+#ifndef INCLUDED_OOO_VBA_POWERPOINT_MSOANIMTYPE_HDL
+#define INCLUDED_OOO_VBA_POWERPOINT_MSOANIMTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace powerpoint { namespace MsoAnimType {
+
+static const ::sal_Int32 msoAnimTypeColor = (sal_Int32)2;
+static const ::sal_Int32 msoAnimTypeCommand = (sal_Int32)6;
+static const ::sal_Int32 msoAnimTypeFilter = (sal_Int32)7;
+static const ::sal_Int32 msoAnimTypeMixed = (sal_Int32)-2;
+static const ::sal_Int32 msoAnimTypeMotion = (sal_Int32)1;
+static const ::sal_Int32 msoAnimTypeNone = (sal_Int32)0;
+static const ::sal_Int32 msoAnimTypeProperty = (sal_Int32)5;
+static const ::sal_Int32 msoAnimTypeRotation = (sal_Int32)4;
+static const ::sal_Int32 msoAnimTypeScale = (sal_Int32)3;
+static const ::sal_Int32 msoAnimTypeSet = (sal_Int32)8;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_POWERPOINT_MSOANIMTYPE_HDL

@@ -1,0 +1,18 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOEDITINGTYPE_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOEDITINGTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoEditingType {
+
+static const ::sal_Int32 msoEditingAuto = (sal_Int32)0;
+static const ::sal_Int32 msoEditingCorner = (sal_Int32)1;
+static const ::sal_Int32 msoEditingSmooth = (sal_Int32)2;
+static const ::sal_Int32 msoEditingSymmetric = (sal_Int32)3;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOEDITINGTYPE_HDL

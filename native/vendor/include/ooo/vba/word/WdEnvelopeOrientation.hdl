@@ -1,0 +1,23 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDENVELOPEORIENTATION_HDL
+#define INCLUDED_OOO_VBA_WORD_WDENVELOPEORIENTATION_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdEnvelopeOrientation {
+
+static const ::sal_Int32 wdCenterClockwise = (sal_Int32)7;
+static const ::sal_Int32 wdCenterLandscape = (sal_Int32)4;
+static const ::sal_Int32 wdCenterPortrait = (sal_Int32)1;
+static const ::sal_Int32 wdLeftClockwise = (sal_Int32)6;
+static const ::sal_Int32 wdLeftLandscape = (sal_Int32)3;
+static const ::sal_Int32 wdLeftPortrait = (sal_Int32)0;
+static const ::sal_Int32 wdRightClockwise = (sal_Int32)8;
+static const ::sal_Int32 wdRightLandscape = (sal_Int32)5;
+static const ::sal_Int32 wdRightPortrait = (sal_Int32)2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDENVELOPEORIENTATION_HDL

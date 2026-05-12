@@ -1,0 +1,55 @@
+#ifndef INCLUDED_OOO_VBA_XASSISTANT_HDL
+#define INCLUDED_OOO_VBA_XASSISTANT_HDL
+
+#include "sal/config.h"
+
+#include "ooo/vba/XHelperInterface.hdl"
+#include "com/sun/star/uno/Reference.h"
+#include "cppu/macros.hxx"
+#include "rtl/ustring.hxx"
+#include "sal/types.h"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace ooo { namespace vba {
+
+class SAL_NO_VTABLE SAL_DLLPUBLIC_RTTI XAssistant : public ::ooo::vba::XHelperInterface
+{
+public:
+#if defined LIBO_INTERNAL_ONLY
+    XAssistant() = default;
+    XAssistant(XAssistant const &) = default;
+    XAssistant(XAssistant &&) = default;
+    XAssistant & operator =(XAssistant const &) = default;
+    XAssistant & operator =(XAssistant &&) = default;
+#endif
+
+
+    // Attributes
+    virtual ::sal_Bool SAL_CALL getOn() = 0;
+    virtual void SAL_CALL setOn( ::sal_Bool _on ) = 0;
+    virtual ::sal_Bool SAL_CALL getVisible() = 0;
+    virtual void SAL_CALL setVisible( ::sal_Bool _visible ) = 0;
+    virtual ::sal_Int32 SAL_CALL getTop() = 0;
+    virtual void SAL_CALL setTop( ::sal_Int32 _top ) = 0;
+    virtual ::sal_Int32 SAL_CALL getLeft() = 0;
+    virtual void SAL_CALL setLeft( ::sal_Int32 _left ) = 0;
+    virtual ::sal_Int32 SAL_CALL getAnimation() = 0;
+    virtual void SAL_CALL setAnimation( ::sal_Int32 _animation ) = 0;
+
+    // Methods
+    virtual ::rtl::OUString SAL_CALL Name() = 0;
+
+    static inline ::css::uno::Type const & SAL_CALL static_type(void * = 0);
+
+protected:
+    ~XAssistant() SAL_NOEXCEPT {} // avoid warnings about virtual members and non-virtual dtor
+};
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::ooo::vba::XAssistant const *);
+} }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::uno::Reference< ::ooo::vba::XAssistant > *);
+
+#endif

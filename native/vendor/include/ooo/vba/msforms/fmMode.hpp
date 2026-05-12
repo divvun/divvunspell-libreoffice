@@ -1,0 +1,6 @@
+#ifndef INCLUDED_OOO_VBA_MSFORMS_FMMODE_HPP
+#define INCLUDED_OOO_VBA_MSFORMS_FMMODE_HPP
+
+#include "ooo/vba/msforms/fmMode.hdl"
+
+#endif // INCLUDED_OOO_VBA_MSFORMS_FMMODE_HPP

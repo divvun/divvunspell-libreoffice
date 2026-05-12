@@ -1,0 +1,25 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDSEEKVIEW_HDL
+#define INCLUDED_OOO_VBA_WORD_WDSEEKVIEW_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdSeekView {
+
+static const ::sal_Int32 wdSeekCurrentPageFooter = (sal_Int32)10;
+static const ::sal_Int32 wdSeekCurrentPageHeader = (sal_Int32)9;
+static const ::sal_Int32 wdSeekEndnotes = (sal_Int32)8;
+static const ::sal_Int32 wdSeekEvenPagesFooter = (sal_Int32)6;
+static const ::sal_Int32 wdSeekEvenPagesHeader = (sal_Int32)3;
+static const ::sal_Int32 wdSeekFirstPageFooter = (sal_Int32)5;
+static const ::sal_Int32 wdSeekFirstPageHeader = (sal_Int32)2;
+static const ::sal_Int32 wdSeekFootnotes = (sal_Int32)7;
+static const ::sal_Int32 wdSeekMainDocument = (sal_Int32)0;
+static const ::sal_Int32 wdSeekPrimaryFooter = (sal_Int32)4;
+static const ::sal_Int32 wdSeekPrimaryHeader = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDSEEKVIEW_HDL

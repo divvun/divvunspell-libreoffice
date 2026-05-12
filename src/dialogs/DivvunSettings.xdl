@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dlg:window PUBLIC "-//OpenOffice.org//DTD OfficeDocument 1.0//EN" "dialog.dtd">
+<dlg:window xmlns:dlg="http://openoffice.org/2000/dialog" xmlns:script="http://openoffice.org/2000/script" dlg:id="DivvunSettings" dlg:left="0" dlg:top="0" dlg:width="400" dlg:height="300" dlg:closeable="true" dlg:moveable="true" dlg:title="DivvunSpell">
+  <dlg:bulletinboard/>
+</dlg:window>

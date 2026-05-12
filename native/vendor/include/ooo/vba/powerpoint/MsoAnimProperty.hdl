@@ -1,0 +1,57 @@
+#ifndef INCLUDED_OOO_VBA_POWERPOINT_MSOANIMPROPERTY_HDL
+#define INCLUDED_OOO_VBA_POWERPOINT_MSOANIMPROPERTY_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace powerpoint { namespace MsoAnimProperty {
+
+static const ::sal_Int32 msoAnimColor = (sal_Int32)7;
+static const ::sal_Int32 msoAnimHeight = (sal_Int32)4;
+static const ::sal_Int32 msoAnimNone = (sal_Int32)0;
+static const ::sal_Int32 msoAnimOpacity = (sal_Int32)5;
+static const ::sal_Int32 msoAnimRotation = (sal_Int32)6;
+static const ::sal_Int32 msoAnimShapeFillBackColor = (sal_Int32)1007;
+static const ::sal_Int32 msoAnimShapeFillColor = (sal_Int32)1005;
+static const ::sal_Int32 msoAnimShapeFillOn = (sal_Int32)1004;
+static const ::sal_Int32 msoAnimShapeFillOpacity = (sal_Int32)1006;
+static const ::sal_Int32 msoAnimShapeLineColor = (sal_Int32)1009;
+static const ::sal_Int32 msoAnimShapeLineOn = (sal_Int32)1008;
+static const ::sal_Int32 msoAnimShapePictureBrightness = (sal_Int32)1001;
+static const ::sal_Int32 msoAnimShapePictureContrast = (sal_Int32)1000;
+static const ::sal_Int32 msoAnimShapePictureGamma = (sal_Int32)1002;
+static const ::sal_Int32 msoAnimShapePictureGrayscale = (sal_Int32)1003;
+static const ::sal_Int32 msoAnimShapeShadowColor = (sal_Int32)1012;
+static const ::sal_Int32 msoAnimShapeShadowOffsetX = (sal_Int32)1014;
+static const ::sal_Int32 msoAnimShapeShadowOffsetY = (sal_Int32)1015;
+static const ::sal_Int32 msoAnimShapeShadowOn = (sal_Int32)1010;
+static const ::sal_Int32 msoAnimShapeShadowOpacity = (sal_Int32)1013;
+static const ::sal_Int32 msoAnimShapeShadowType = (sal_Int32)1011;
+static const ::sal_Int32 msoAnimTextBulletCharacter = (sal_Int32)111;
+static const ::sal_Int32 msoAnimTextBulletColor = (sal_Int32)114;
+static const ::sal_Int32 msoAnimTextBulletFontName = (sal_Int32)112;
+static const ::sal_Int32 msoAnimTextBulletNumber = (sal_Int32)113;
+static const ::sal_Int32 msoAnimTextBulletRelativeSize = (sal_Int32)115;
+static const ::sal_Int32 msoAnimTextBulletStyle = (sal_Int32)116;
+static const ::sal_Int32 msoAnimTextBulletType = (sal_Int32)117;
+static const ::sal_Int32 msoAnimTextFontBold = (sal_Int32)100;
+static const ::sal_Int32 msoAnimTextFontColor = (sal_Int32)101;
+static const ::sal_Int32 msoAnimTextFontEmboss = (sal_Int32)102;
+static const ::sal_Int32 msoAnimTextFontItalic = (sal_Int32)103;
+static const ::sal_Int32 msoAnimTextFontName = (sal_Int32)104;
+static const ::sal_Int32 msoAnimTextFontShadow = (sal_Int32)105;
+static const ::sal_Int32 msoAnimTextFontSize = (sal_Int32)106;
+static const ::sal_Int32 msoAnimTextFontStrikeThrough = (sal_Int32)110;
+static const ::sal_Int32 msoAnimTextFontSubscript = (sal_Int32)107;
+static const ::sal_Int32 msoAnimTextFontSuperscript = (sal_Int32)108;
+static const ::sal_Int32 msoAnimTextFontUnderline = (sal_Int32)109;
+static const ::sal_Int32 msoAnimVisibility = (sal_Int32)8;
+static const ::sal_Int32 msoAnimWidth = (sal_Int32)3;
+static const ::sal_Int32 msoAnimX = (sal_Int32)1;
+static const ::sal_Int32 msoAnimY = (sal_Int32)2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_POWERPOINT_MSOANIMPROPERTY_HDL

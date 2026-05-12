@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLPAGEBREAK_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLPAGEBREAK_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlPageBreak {
+
+static const ::sal_Int32 xlPageBreakAutomatic = (sal_Int32)-4105;
+static const ::sal_Int32 xlPageBreakManual = (sal_Int32)-4135;
+static const ::sal_Int32 xlPageBreakNone = (sal_Int32)-4142;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLPAGEBREAK_HDL

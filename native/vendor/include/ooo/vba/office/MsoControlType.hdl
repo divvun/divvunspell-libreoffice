@@ -1,0 +1,41 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOCONTROLTYPE_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOCONTROLTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoControlType {
+
+static const ::sal_Int32 msoControlActiveX = (sal_Int32)22;
+static const ::sal_Int32 msoControlAutoCompleteCombo = (sal_Int32)26;
+static const ::sal_Int32 msoControlButton = (sal_Int32)1;
+static const ::sal_Int32 msoControlButtonDropdown = (sal_Int32)5;
+static const ::sal_Int32 msoControlButtonPopup = (sal_Int32)12;
+static const ::sal_Int32 msoControlComboBox = (sal_Int32)4;
+static const ::sal_Int32 msoControlCustom = (sal_Int32)0;
+static const ::sal_Int32 msoControlDropdown = (sal_Int32)3;
+static const ::sal_Int32 msoControlEdit = (sal_Int32)2;
+static const ::sal_Int32 msoControlExpandingGrid = (sal_Int32)16;
+static const ::sal_Int32 msoControlGauge = (sal_Int32)19;
+static const ::sal_Int32 msoControlGenericDropdown = (sal_Int32)8;
+static const ::sal_Int32 msoControlGraphicCombo = (sal_Int32)20;
+static const ::sal_Int32 msoControlGraphicDropdown = (sal_Int32)9;
+static const ::sal_Int32 msoControlGraphicPopup = (sal_Int32)11;
+static const ::sal_Int32 msoControlGrid = (sal_Int32)18;
+static const ::sal_Int32 msoControlLabel = (sal_Int32)15;
+static const ::sal_Int32 msoControlLabelEx = (sal_Int32)24;
+static const ::sal_Int32 msoControlOCXDropdown = (sal_Int32)7;
+static const ::sal_Int32 msoControlPane = (sal_Int32)21;
+static const ::sal_Int32 msoControlPopup = (sal_Int32)10;
+static const ::sal_Int32 msoControlSpinner = (sal_Int32)23;
+static const ::sal_Int32 msoControlSplitButtonMRUPopup = (sal_Int32)14;
+static const ::sal_Int32 msoControlSplitButtonPopup = (sal_Int32)13;
+static const ::sal_Int32 msoControlSplitDropdown = (sal_Int32)6;
+static const ::sal_Int32 msoControlSplitExpandingGrid = (sal_Int32)17;
+static const ::sal_Int32 msoControlWorkPane = (sal_Int32)25;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOCONTROLTYPE_HDL

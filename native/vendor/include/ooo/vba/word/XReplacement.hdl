@@ -1,0 +1,46 @@
+#ifndef INCLUDED_OOO_VBA_WORD_XREPLACEMENT_HDL
+#define INCLUDED_OOO_VBA_WORD_XREPLACEMENT_HDL
+
+#include "sal/config.h"
+
+#include "ooo/vba/XHelperInterface.hdl"
+#include "com/sun/star/uno/Reference.h"
+#include "cppu/macros.hxx"
+#include "rtl/ustring.hxx"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace ooo { namespace vba { namespace word {
+
+class SAL_NO_VTABLE SAL_DLLPUBLIC_RTTI XReplacement : public ::ooo::vba::XHelperInterface
+{
+public:
+#if defined LIBO_INTERNAL_ONLY
+    XReplacement() = default;
+    XReplacement(XReplacement const &) = default;
+    XReplacement(XReplacement &&) = default;
+    XReplacement & operator =(XReplacement const &) = default;
+    XReplacement & operator =(XReplacement &&) = default;
+#endif
+
+
+    // Attributes
+    virtual ::rtl::OUString SAL_CALL getText() = 0;
+    virtual void SAL_CALL setText( const ::rtl::OUString& _text ) = 0;
+
+    // Methods
+    virtual void SAL_CALL ClearFormatting() = 0;
+
+    static inline ::css::uno::Type const & SAL_CALL static_type(void * = 0);
+
+protected:
+    ~XReplacement() SAL_NOEXCEPT {} // avoid warnings about virtual members and non-virtual dtor
+};
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::ooo::vba::word::XReplacement const *);
+} } }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::uno::Reference< ::ooo::vba::word::XReplacement > *);
+
+#endif

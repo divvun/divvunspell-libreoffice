@@ -1,0 +1,111 @@
+#ifndef INCLUDED_OOO_VBA_POWERPOINT_PPENTRYEFFECT_HDL
+#define INCLUDED_OOO_VBA_POWERPOINT_PPENTRYEFFECT_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace powerpoint { namespace PpEntryEffect {
+
+static const ::sal_Int32 ppEffectAppear = (sal_Int32)3844;
+static const ::sal_Int32 ppEffectBlindsHorizontal = (sal_Int32)769;
+static const ::sal_Int32 ppEffectBlindsVertical = (sal_Int32)770;
+static const ::sal_Int32 ppEffectBoxIn = (sal_Int32)3074;
+static const ::sal_Int32 ppEffectBoxOut = (sal_Int32)3073;
+static const ::sal_Int32 ppEffectCheckerboardAcross = (sal_Int32)1025;
+static const ::sal_Int32 ppEffectCheckerboardDown = (sal_Int32)1026;
+static const ::sal_Int32 ppEffectCircleOut = (sal_Int32)3845;
+static const ::sal_Int32 ppEffectCombHorizontal = (sal_Int32)3847;
+static const ::sal_Int32 ppEffectCombVertical = (sal_Int32)3848;
+static const ::sal_Int32 ppEffectCoverDown = (sal_Int32)1284;
+static const ::sal_Int32 ppEffectCoverLeft = (sal_Int32)1281;
+static const ::sal_Int32 ppEffectCoverLeftDown = (sal_Int32)1287;
+static const ::sal_Int32 ppEffectCoverLeftUp = (sal_Int32)1285;
+static const ::sal_Int32 ppEffectCoverRight = (sal_Int32)1283;
+static const ::sal_Int32 ppEffectCoverRightDown = (sal_Int32)1288;
+static const ::sal_Int32 ppEffectCoverRightUp = (sal_Int32)1286;
+static const ::sal_Int32 ppEffectCoverUp = (sal_Int32)1282;
+static const ::sal_Int32 ppEffectCrawlFromDown = (sal_Int32)3344;
+static const ::sal_Int32 ppEffectCrawlFromLeft = (sal_Int32)3341;
+static const ::sal_Int32 ppEffectCrawlFromRight = (sal_Int32)3343;
+static const ::sal_Int32 ppEffectCrawlFromUp = (sal_Int32)3342;
+static const ::sal_Int32 ppEffectCut = (sal_Int32)257;
+static const ::sal_Int32 ppEffectCutThroughBlack = (sal_Int32)258;
+static const ::sal_Int32 ppEffectDiamondOut = (sal_Int32)3846;
+static const ::sal_Int32 ppEffectDissolve = (sal_Int32)1537;
+static const ::sal_Int32 ppEffectFade = (sal_Int32)1793;
+static const ::sal_Int32 ppEffectFadeSmoothly = (sal_Int32)3849;
+static const ::sal_Int32 ppEffectFlashOnceFast = (sal_Int32)3841;
+static const ::sal_Int32 ppEffectFlashOnceMedium = (sal_Int32)3842;
+static const ::sal_Int32 ppEffectFlashOnceSlow = (sal_Int32)3843;
+static const ::sal_Int32 ppEffectFlyFromBottom = (sal_Int32)3332;
+static const ::sal_Int32 ppEffectFlyFromBottomLeft = (sal_Int32)3335;
+static const ::sal_Int32 ppEffectFlyFromBottomRight = (sal_Int32)3336;
+static const ::sal_Int32 ppEffectFlyFromLeft = (sal_Int32)3329;
+static const ::sal_Int32 ppEffectFlyFromRight = (sal_Int32)3331;
+static const ::sal_Int32 ppEffectFlyFromTop = (sal_Int32)3330;
+static const ::sal_Int32 ppEffectFlyFromTopLeft = (sal_Int32)3333;
+static const ::sal_Int32 ppEffectFlyFromTopRight = (sal_Int32)3334;
+static const ::sal_Int32 ppEffectMixed = (sal_Int32)-2;
+static const ::sal_Int32 ppEffectNewsflash = (sal_Int32)3850;
+static const ::sal_Int32 ppEffectNone = (sal_Int32)0;
+static const ::sal_Int32 ppEffectPeekFromDown = (sal_Int32)3338;
+static const ::sal_Int32 ppEffectPeekFromLeft = (sal_Int32)3337;
+static const ::sal_Int32 ppEffectPeekFromRight = (sal_Int32)3339;
+static const ::sal_Int32 ppEffectPeekFromUp = (sal_Int32)3340;
+static const ::sal_Int32 ppEffectPlusOut = (sal_Int32)3851;
+static const ::sal_Int32 ppEffectPushDown = (sal_Int32)3852;
+static const ::sal_Int32 ppEffectPushLeft = (sal_Int32)3853;
+static const ::sal_Int32 ppEffectPushRight = (sal_Int32)3854;
+static const ::sal_Int32 ppEffectPushUp = (sal_Int32)3855;
+static const ::sal_Int32 ppEffectRandom = (sal_Int32)513;
+static const ::sal_Int32 ppEffectRandomBarsHorizontal = (sal_Int32)2305;
+static const ::sal_Int32 ppEffectRandomBarsVertical = (sal_Int32)2306;
+static const ::sal_Int32 ppEffectSpiral = (sal_Int32)3357;
+static const ::sal_Int32 ppEffectSplitHorizontalIn = (sal_Int32)3586;
+static const ::sal_Int32 ppEffectSplitHorizontalOut = (sal_Int32)3585;
+static const ::sal_Int32 ppEffectSplitVerticalIn = (sal_Int32)3588;
+static const ::sal_Int32 ppEffectSplitVerticalOut = (sal_Int32)3587;
+static const ::sal_Int32 ppEffectStretchAcross = (sal_Int32)3351;
+static const ::sal_Int32 ppEffectStretchDown = (sal_Int32)3355;
+static const ::sal_Int32 ppEffectStretchLeft = (sal_Int32)3352;
+static const ::sal_Int32 ppEffectStretchRight = (sal_Int32)3354;
+static const ::sal_Int32 ppEffectStretchUp = (sal_Int32)3353;
+static const ::sal_Int32 ppEffectStripsDownLeft = (sal_Int32)2563;
+static const ::sal_Int32 ppEffectStripsDownRight = (sal_Int32)2564;
+static const ::sal_Int32 ppEffectStripsLeftDown = (sal_Int32)2567;
+static const ::sal_Int32 ppEffectStripsLeftUp = (sal_Int32)2565;
+static const ::sal_Int32 ppEffectStripsRightDown = (sal_Int32)2568;
+static const ::sal_Int32 ppEffectStripsRightUp = (sal_Int32)2566;
+static const ::sal_Int32 ppEffectStripsUpLeft = (sal_Int32)2561;
+static const ::sal_Int32 ppEffectStripsUpRight = (sal_Int32)2562;
+static const ::sal_Int32 ppEffectSwivel = (sal_Int32)3356;
+static const ::sal_Int32 ppEffectUncoverDown = (sal_Int32)2052;
+static const ::sal_Int32 ppEffectUncoverLeft = (sal_Int32)2049;
+static const ::sal_Int32 ppEffectUncoverLeftDown = (sal_Int32)2055;
+static const ::sal_Int32 ppEffectUncoverLeftUp = (sal_Int32)2053;
+static const ::sal_Int32 ppEffectUncoverRight = (sal_Int32)2051;
+static const ::sal_Int32 ppEffectUncoverRightDown = (sal_Int32)2056;
+static const ::sal_Int32 ppEffectUncoverRightUp = (sal_Int32)2054;
+static const ::sal_Int32 ppEffectUncoverUp = (sal_Int32)2050;
+static const ::sal_Int32 ppEffectWedge = (sal_Int32)3856;
+static const ::sal_Int32 ppEffectWheel1Spoke = (sal_Int32)3857;
+static const ::sal_Int32 ppEffectWheel2Spokes = (sal_Int32)3858;
+static const ::sal_Int32 ppEffectWheel3Spokes = (sal_Int32)3859;
+static const ::sal_Int32 ppEffectWheel4Spokes = (sal_Int32)3860;
+static const ::sal_Int32 ppEffectWheel8Spokes = (sal_Int32)3861;
+static const ::sal_Int32 ppEffectWipeDown = (sal_Int32)2820;
+static const ::sal_Int32 ppEffectWipeLeft = (sal_Int32)2817;
+static const ::sal_Int32 ppEffectWipeRight = (sal_Int32)2819;
+static const ::sal_Int32 ppEffectWipeUp = (sal_Int32)2818;
+static const ::sal_Int32 ppEffectZoomBottom = (sal_Int32)3350;
+static const ::sal_Int32 ppEffectZoomCenter = (sal_Int32)3349;
+static const ::sal_Int32 ppEffectZoomIn = (sal_Int32)3345;
+static const ::sal_Int32 ppEffectZoomInSlightly = (sal_Int32)3346;
+static const ::sal_Int32 ppEffectZoomOut = (sal_Int32)3347;
+static const ::sal_Int32 ppEffectZoomOutSlightly = (sal_Int32)3348;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_POWERPOINT_PPENTRYEFFECT_HDL

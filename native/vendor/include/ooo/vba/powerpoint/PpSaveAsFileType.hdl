@@ -1,0 +1,36 @@
+#ifndef INCLUDED_OOO_VBA_POWERPOINT_PPSAVEASFILETYPE_HDL
+#define INCLUDED_OOO_VBA_POWERPOINT_PPSAVEASFILETYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace powerpoint { namespace PpSaveAsFileType {
+
+static const ::sal_Int32 ppSaveAsAddIn = (sal_Int32)8;
+static const ::sal_Int32 ppSaveAsBMP = (sal_Int32)19;
+static const ::sal_Int32 ppSaveAsDefault = (sal_Int32)11;
+static const ::sal_Int32 ppSaveAsEMF = (sal_Int32)23;
+static const ::sal_Int32 ppSaveAsGIF = (sal_Int32)16;
+static const ::sal_Int32 ppSaveAsHTML = (sal_Int32)12;
+static const ::sal_Int32 ppSaveAsHTMLDual = (sal_Int32)14;
+static const ::sal_Int32 ppSaveAsHTMLv3 = (sal_Int32)13;
+static const ::sal_Int32 ppSaveAsJPG = (sal_Int32)17;
+static const ::sal_Int32 ppSaveAsMetaFile = (sal_Int32)15;
+static const ::sal_Int32 ppSaveAsPNG = (sal_Int32)18;
+static const ::sal_Int32 ppSaveAsPowerPoint3 = (sal_Int32)4;
+static const ::sal_Int32 ppSaveAsPowerPoint4 = (sal_Int32)3;
+static const ::sal_Int32 ppSaveAsPowerPoint4FarEast = (sal_Int32)10;
+static const ::sal_Int32 ppSaveAsPowerPoint7 = (sal_Int32)2;
+static const ::sal_Int32 ppSaveAsPresForReview = (sal_Int32)22;
+static const ::sal_Int32 ppSaveAsPresentation = (sal_Int32)1;
+static const ::sal_Int32 ppSaveAsRTF = (sal_Int32)6;
+static const ::sal_Int32 ppSaveAsShow = (sal_Int32)7;
+static const ::sal_Int32 ppSaveAsTIF = (sal_Int32)21;
+static const ::sal_Int32 ppSaveAsTemplate = (sal_Int32)5;
+static const ::sal_Int32 ppSaveAsWebArchive = (sal_Int32)20;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_POWERPOINT_PPSAVEASFILETYPE_HDL

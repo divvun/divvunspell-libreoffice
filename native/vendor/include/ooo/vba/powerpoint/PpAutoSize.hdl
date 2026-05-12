@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_POWERPOINT_PPAUTOSIZE_HDL
+#define INCLUDED_OOO_VBA_POWERPOINT_PPAUTOSIZE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace powerpoint { namespace PpAutoSize {
+
+static const ::sal_Int32 ppAutoSizeMixed = (sal_Int32)-2;
+static const ::sal_Int32 ppAutoSizeNone = (sal_Int32)0;
+static const ::sal_Int32 ppAutoSizeShapeToFitText = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_POWERPOINT_PPAUTOSIZE_HDL

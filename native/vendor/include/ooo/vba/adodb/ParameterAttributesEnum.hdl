@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_ADODB_PARAMETERATTRIBUTESENUM_HDL
+#define INCLUDED_OOO_VBA_ADODB_PARAMETERATTRIBUTESENUM_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace adodb { namespace ParameterAttributesEnum {
+
+static const ::sal_Int32 adParamLong = (sal_Int32)128;
+static const ::sal_Int32 adParamNullable = (sal_Int32)64;
+static const ::sal_Int32 adParamSigned = (sal_Int32)16;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_ADODB_PARAMETERATTRIBUTESENUM_HDL

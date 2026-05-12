@@ -1,0 +1,23 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDSELECTIONTYPE_HDL
+#define INCLUDED_OOO_VBA_WORD_WDSELECTIONTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdSelectionType {
+
+static const ::sal_Int32 wdNoSelection = (sal_Int32)0;
+static const ::sal_Int32 wdSelectionBlock = (sal_Int32)6;
+static const ::sal_Int32 wdSelectionColumn = (sal_Int32)4;
+static const ::sal_Int32 wdSelectionFrame = (sal_Int32)3;
+static const ::sal_Int32 wdSelectionIP = (sal_Int32)1;
+static const ::sal_Int32 wdSelectionInlineShape = (sal_Int32)7;
+static const ::sal_Int32 wdSelectionNormal = (sal_Int32)2;
+static const ::sal_Int32 wdSelectionRow = (sal_Int32)5;
+static const ::sal_Int32 wdSelectionShape = (sal_Int32)8;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDSELECTIONTYPE_HDL

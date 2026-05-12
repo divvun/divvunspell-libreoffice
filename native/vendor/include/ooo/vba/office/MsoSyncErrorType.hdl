@@ -1,0 +1,31 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOSYNCERRORTYPE_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOSYNCERRORTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoSyncErrorType {
+
+static const ::sal_Int32 msoSyncErrorCouldNotCompare = (sal_Int32)13;
+static const ::sal_Int32 msoSyncErrorCouldNotConnect = (sal_Int32)2;
+static const ::sal_Int32 msoSyncErrorCouldNotOpen = (sal_Int32)11;
+static const ::sal_Int32 msoSyncErrorCouldNotResolve = (sal_Int32)14;
+static const ::sal_Int32 msoSyncErrorCouldNotUpdate = (sal_Int32)12;
+static const ::sal_Int32 msoSyncErrorFileInUse = (sal_Int32)6;
+static const ::sal_Int32 msoSyncErrorFileNotFound = (sal_Int32)4;
+static const ::sal_Int32 msoSyncErrorFileTooLarge = (sal_Int32)5;
+static const ::sal_Int32 msoSyncErrorNoNetwork = (sal_Int32)15;
+static const ::sal_Int32 msoSyncErrorNone = (sal_Int32)0;
+static const ::sal_Int32 msoSyncErrorOutOfSpace = (sal_Int32)3;
+static const ::sal_Int32 msoSyncErrorUnauthorizedUser = (sal_Int32)1;
+static const ::sal_Int32 msoSyncErrorUnknown = (sal_Int32)16;
+static const ::sal_Int32 msoSyncErrorUnknownDownload = (sal_Int32)10;
+static const ::sal_Int32 msoSyncErrorUnknownUpload = (sal_Int32)9;
+static const ::sal_Int32 msoSyncErrorVirusDownload = (sal_Int32)8;
+static const ::sal_Int32 msoSyncErrorVirusUpload = (sal_Int32)7;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOSYNCERRORTYPE_HDL

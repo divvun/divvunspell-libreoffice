@@ -1,0 +1,21 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDREVISEDPROPERTIESMARK_HDL
+#define INCLUDED_OOO_VBA_WORD_WDREVISEDPROPERTIESMARK_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdRevisedPropertiesMark {
+
+static const ::sal_Int32 wdRevisedPropertiesMarkBold = (sal_Int32)1;
+static const ::sal_Int32 wdRevisedPropertiesMarkColorOnly = (sal_Int32)5;
+static const ::sal_Int32 wdRevisedPropertiesMarkDoubleUnderline = (sal_Int32)4;
+static const ::sal_Int32 wdRevisedPropertiesMarkItalic = (sal_Int32)2;
+static const ::sal_Int32 wdRevisedPropertiesMarkNone = (sal_Int32)0;
+static const ::sal_Int32 wdRevisedPropertiesMarkStrikeThrough = (sal_Int32)6;
+static const ::sal_Int32 wdRevisedPropertiesMarkUnderline = (sal_Int32)3;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDREVISEDPROPERTIESMARK_HDL

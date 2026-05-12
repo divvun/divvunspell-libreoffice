@@ -1,0 +1,22 @@
+#ifndef INCLUDED_OOO_VBA_ADODB_CONNECTMODEENUM_HDL
+#define INCLUDED_OOO_VBA_ADODB_CONNECTMODEENUM_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace adodb { namespace ConnectModeEnum {
+
+static const ::sal_Int32 adModeRead = (sal_Int32)1;
+static const ::sal_Int32 adModeReadWrite = (sal_Int32)3;
+static const ::sal_Int32 adModeShareDenyNone = (sal_Int32)16;
+static const ::sal_Int32 adModeShareDenyRead = (sal_Int32)4;
+static const ::sal_Int32 adModeShareDenyWrite = (sal_Int32)8;
+static const ::sal_Int32 adModeShareExclusive = (sal_Int32)12;
+static const ::sal_Int32 adModeUnknown = (sal_Int32)0;
+static const ::sal_Int32 adModeWrite = (sal_Int32)2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_ADODB_CONNECTMODEENUM_HDL

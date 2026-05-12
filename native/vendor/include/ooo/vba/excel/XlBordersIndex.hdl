@@ -1,0 +1,22 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLBORDERSINDEX_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLBORDERSINDEX_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlBordersIndex {
+
+static const ::sal_Int32 xlDiagonalDown = (sal_Int32)5;
+static const ::sal_Int32 xlDiagonalUp = (sal_Int32)6;
+static const ::sal_Int32 xlEdgeBottom = (sal_Int32)9;
+static const ::sal_Int32 xlEdgeLeft = (sal_Int32)7;
+static const ::sal_Int32 xlEdgeRight = (sal_Int32)10;
+static const ::sal_Int32 xlEdgeTop = (sal_Int32)8;
+static const ::sal_Int32 xlInsideHorizontal = (sal_Int32)12;
+static const ::sal_Int32 xlInsideVertical = (sal_Int32)11;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLBORDERSINDEX_HDL

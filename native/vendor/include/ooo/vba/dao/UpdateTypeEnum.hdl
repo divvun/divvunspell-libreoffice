@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_DAO_UPDATETYPEENUM_HDL
+#define INCLUDED_OOO_VBA_DAO_UPDATETYPEENUM_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace dao { namespace UpdateTypeEnum {
+
+static const ::sal_Int32 dbUpdateBatch = (sal_Int32)4;
+static const ::sal_Int32 dbUpdateCurrentRecord = (sal_Int32)2;
+static const ::sal_Int32 dbUpdateRegular = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_DAO_UPDATETYPEENUM_HDL

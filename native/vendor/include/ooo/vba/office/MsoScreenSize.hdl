@@ -1,0 +1,25 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOSCREENSIZE_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOSCREENSIZE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoScreenSize {
+
+static const ::sal_Int32 msoScreenSize1024x768 = (sal_Int32)4;
+static const ::sal_Int32 msoScreenSize1152x882 = (sal_Int32)5;
+static const ::sal_Int32 msoScreenSize1152x900 = (sal_Int32)6;
+static const ::sal_Int32 msoScreenSize1280x1024 = (sal_Int32)7;
+static const ::sal_Int32 msoScreenSize1600x1200 = (sal_Int32)8;
+static const ::sal_Int32 msoScreenSize1800x1440 = (sal_Int32)9;
+static const ::sal_Int32 msoScreenSize1920x1200 = (sal_Int32)10;
+static const ::sal_Int32 msoScreenSize544x376 = (sal_Int32)0;
+static const ::sal_Int32 msoScreenSize640x480 = (sal_Int32)1;
+static const ::sal_Int32 msoScreenSize720x512 = (sal_Int32)2;
+static const ::sal_Int32 msoScreenSize800x600 = (sal_Int32)3;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOSCREENSIZE_HDL

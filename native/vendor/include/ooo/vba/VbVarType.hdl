@@ -1,0 +1,32 @@
+#ifndef INCLUDED_OOO_VBA_VBVARTYPE_HDL
+#define INCLUDED_OOO_VBA_VBVARTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace VbVarType {
+
+static const ::sal_Int32 vbArray = (sal_Int32)8192;
+static const ::sal_Int32 vbBoolean = (sal_Int32)11;
+static const ::sal_Int32 vbByte = (sal_Int32)17;
+static const ::sal_Int32 vbCurrency = (sal_Int32)6;
+static const ::sal_Int32 vbDataObject = (sal_Int32)13;
+static const ::sal_Int32 vbDate = (sal_Int32)7;
+static const ::sal_Int32 vbDecimal = (sal_Int32)14;
+static const ::sal_Int32 vbDouble = (sal_Int32)5;
+static const ::sal_Int32 vbEmpty = (sal_Int32)0;
+static const ::sal_Int32 vbError = (sal_Int32)10;
+static const ::sal_Int32 vbInteger = (sal_Int32)2;
+static const ::sal_Int32 vbLong = (sal_Int32)3;
+static const ::sal_Int32 vbNull = (sal_Int32)1;
+static const ::sal_Int32 vbObject = (sal_Int32)9;
+static const ::sal_Int32 vbSingle = (sal_Int32)4;
+static const ::sal_Int32 vbString = (sal_Int32)8;
+static const ::sal_Int32 vbUserDefinedType = (sal_Int32)36;
+static const ::sal_Int32 vbVariant = (sal_Int32)12;
+
+} } }
+
+#endif // INCLUDED_OOO_VBA_VBVARTYPE_HDL

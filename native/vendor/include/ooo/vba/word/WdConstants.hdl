@@ -1,0 +1,21 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDCONSTANTS_HDL
+#define INCLUDED_OOO_VBA_WORD_WDCONSTANTS_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdConstants {
+
+static const ::sal_Int32 wdAutoPosition = (sal_Int32)0;
+static const ::sal_Int32 wdBackward = (sal_Int32)-1073741823;
+static const ::sal_Int32 wdCreatorCode = (sal_Int32)1297307460;
+static const ::sal_Int32 wdFirst = (sal_Int32)1;
+static const ::sal_Int32 wdForward = (sal_Int32)1073741823;
+static const ::sal_Int32 wdToggle = (sal_Int32)9999998;
+static const ::sal_Int32 wdUndefined = (sal_Int32)9999999;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDCONSTANTS_HDL

@@ -1,0 +1,25 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLDATALABELPOSITION_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLDATALABELPOSITION_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlDataLabelPosition {
+
+static const ::sal_Int32 xlLabelPositionAbove = (sal_Int32)0;
+static const ::sal_Int32 xlLabelPositionBelow = (sal_Int32)1;
+static const ::sal_Int32 xlLabelPositionBestFit = (sal_Int32)5;
+static const ::sal_Int32 xlLabelPositionCenter = (sal_Int32)-4108;
+static const ::sal_Int32 xlLabelPositionCustom = (sal_Int32)7;
+static const ::sal_Int32 xlLabelPositionInsideBase = (sal_Int32)4;
+static const ::sal_Int32 xlLabelPositionInsideEnd = (sal_Int32)3;
+static const ::sal_Int32 xlLabelPositionLeft = (sal_Int32)-4131;
+static const ::sal_Int32 xlLabelPositionMixed = (sal_Int32)6;
+static const ::sal_Int32 xlLabelPositionOutsideEnd = (sal_Int32)2;
+static const ::sal_Int32 xlLabelPositionRight = (sal_Int32)-4152;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLDATALABELPOSITION_HDL

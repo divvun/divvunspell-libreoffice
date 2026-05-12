@@ -1,0 +1,16 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDAUTOVERSIONS_HDL
+#define INCLUDED_OOO_VBA_WORD_WDAUTOVERSIONS_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdAutoVersions {
+
+static const ::sal_Int32 wdAutoVersionOff = (sal_Int32)0;
+static const ::sal_Int32 wdAutoVersionOnClose = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDAUTOVERSIONS_HDL

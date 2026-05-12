@@ -1,0 +1,62 @@
+#ifndef INCLUDED_OOO_VBA_WORD_XSTYLE_HDL
+#define INCLUDED_OOO_VBA_WORD_XSTYLE_HDL
+
+#include "sal/config.h"
+
+#include "com/sun/star/script/XDefaultProperty.hdl"
+#include "ooo/vba/XHelperInterface.hdl"
+namespace ooo { namespace vba { namespace word { class XFont; } } }
+namespace ooo { namespace vba { namespace word { class XParagraphFormat; } } }
+#include "com/sun/star/uno/Any.h"
+#include "com/sun/star/uno/Reference.h"
+#include "cppu/macros.hxx"
+#include "rtl/ustring.hxx"
+#include "sal/types.h"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace ooo { namespace vba { namespace word {
+
+class SAL_NO_VTABLE SAL_DLLPUBLIC_RTTI XStyle : public ::ooo::vba::XHelperInterface, public ::css::script::XDefaultProperty
+{
+public:
+#if defined LIBO_INTERNAL_ONLY
+    XStyle() = default;
+    XStyle(XStyle const &) = default;
+    XStyle(XStyle &&) = default;
+    XStyle & operator =(XStyle const &) = default;
+    XStyle & operator =(XStyle &&) = default;
+#endif
+
+
+    // Attributes
+    virtual ::rtl::OUString SAL_CALL getName() = 0;
+    virtual void SAL_CALL setName( const ::rtl::OUString& _name ) = 0;
+    virtual ::sal_Int32 SAL_CALL getLanguageID() = 0;
+    virtual void SAL_CALL setLanguageID( ::sal_Int32 _languageid ) = 0;
+    virtual ::sal_Int32 SAL_CALL getType() = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::word::XFont > SAL_CALL getFont() = 0;
+    virtual ::rtl::OUString SAL_CALL getNameLocal() = 0;
+    virtual void SAL_CALL setNameLocal( const ::rtl::OUString& _namelocal ) = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::word::XParagraphFormat > SAL_CALL getParagraphFormat() = 0;
+    virtual ::sal_Bool SAL_CALL getAutomaticallyUpdate() = 0;
+    virtual void SAL_CALL setAutomaticallyUpdate( ::sal_Bool _automaticallyupdate ) = 0;
+    virtual ::css::uno::Any SAL_CALL getBaseStyle() = 0;
+    virtual void SAL_CALL setBaseStyle( const ::css::uno::Any& _basestyle ) = 0;
+    virtual ::css::uno::Any SAL_CALL getNextParagraphStyle() = 0;
+    virtual void SAL_CALL setNextParagraphStyle( const ::css::uno::Any& _nextparagraphstyle ) = 0;
+    virtual ::sal_Int32 SAL_CALL getListLevelNumber() = 0;
+
+    static inline ::css::uno::Type const & SAL_CALL static_type(void * = 0);
+
+protected:
+    ~XStyle() SAL_NOEXCEPT {} // avoid warnings about virtual members and non-virtual dtor
+};
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::ooo::vba::word::XStyle const *);
+} } }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::uno::Reference< ::ooo::vba::word::XStyle > *);
+
+#endif

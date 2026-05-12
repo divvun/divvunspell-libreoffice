@@ -1,0 +1,21 @@
+#ifndef INCLUDED_OOO_VBA_ACCESS_ACDATAOBJECTTYPE_HDL
+#define INCLUDED_OOO_VBA_ACCESS_ACDATAOBJECTTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace access { namespace AcDataObjectType {
+
+static const ::sal_Int32 acActiveDataObject = (sal_Int32)-1;
+static const ::sal_Int32 acDataForm = (sal_Int32)2;
+static const ::sal_Int32 acDataFunction = (sal_Int32)10;
+static const ::sal_Int32 acDataQuery = (sal_Int32)1;
+static const ::sal_Int32 acDataServerView = (sal_Int32)7;
+static const ::sal_Int32 acDataStoredProcedure = (sal_Int32)9;
+static const ::sal_Int32 acDataTable = (sal_Int32)0;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_ACCESS_ACDATAOBJECTTYPE_HDL

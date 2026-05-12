@@ -1,0 +1,18 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLAXISCROSSES_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLAXISCROSSES_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlAxisCrosses {
+
+static const ::sal_Int32 xlAxisCrossesAutomatic = (sal_Int32)-4105;
+static const ::sal_Int32 xlAxisCrossesCustom = (sal_Int32)-4114;
+static const ::sal_Int32 xlAxisCrossesMaximum = (sal_Int32)2;
+static const ::sal_Int32 xlAxisCrossesMinimum = (sal_Int32)4;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLAXISCROSSES_HDL

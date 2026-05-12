@@ -1,0 +1,75 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XGLOBALS_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XGLOBALS_HDL
+
+#include "sal/config.h"
+
+#include "com/sun/star/uno/XInterface.hdl"
+namespace ooo { namespace vba { class XAssistant; } }
+namespace ooo { namespace vba { namespace excel { class XApplication; } } }
+namespace ooo { namespace vba { namespace excel { class XRange; } } }
+namespace ooo { namespace vba { namespace excel { class XWindow; } } }
+namespace ooo { namespace vba { namespace excel { class XWorkbook; } } }
+namespace ooo { namespace vba { namespace excel { class XWorksheet; } } }
+#include "com/sun/star/uno/Any.h"
+#include "com/sun/star/uno/Reference.h"
+#include "cppu/macros.hxx"
+#include "rtl/ustring.hxx"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace ooo { namespace vba { namespace excel {
+
+class SAL_NO_VTABLE SAL_DLLPUBLIC_RTTI XGlobals : public ::css::uno::XInterface
+{
+public:
+#if defined LIBO_INTERNAL_ONLY
+    XGlobals() = default;
+    XGlobals(XGlobals const &) = default;
+    XGlobals(XGlobals &&) = default;
+    XGlobals & operator =(XGlobals const &) = default;
+    XGlobals & operator =(XGlobals &&) = default;
+#endif
+
+
+    // Attributes
+    virtual ::css::uno::Reference< ::ooo::vba::excel::XWorkbook > SAL_CALL getActiveWorkbook() = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::excel::XWorksheet > SAL_CALL getActiveSheet() = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::excel::XWindow > SAL_CALL getActiveWindow() = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::excel::XRange > SAL_CALL getActiveCell() = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::XAssistant > SAL_CALL getAssistant() = 0;
+    virtual ::css::uno::Any SAL_CALL getSelection() = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::excel::XWorkbook > SAL_CALL getThisWorkbook() = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::excel::XApplication > SAL_CALL getExcel() = 0;
+    virtual ::css::uno::Any SAL_CALL getDebug() = 0;
+
+    // Methods
+    virtual void SAL_CALL Calculate() = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::excel::XRange > SAL_CALL Cells( const ::css::uno::Any& RowIndex, const ::css::uno::Any& ColumnIndex ) = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::excel::XRange > SAL_CALL Columns( const ::css::uno::Any& Index ) = 0;
+    virtual ::css::uno::Any SAL_CALL CommandBars( const ::css::uno::Any& Index ) = 0;
+    virtual ::css::uno::Any SAL_CALL Evaluate( const ::rtl::OUString& Name ) = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::excel::XRange > SAL_CALL Intersect( const ::css::uno::Reference< ::ooo::vba::excel::XRange >& Arg1, const ::css::uno::Reference< ::ooo::vba::excel::XRange >& Arg2, const ::css::uno::Any& Arg3, const ::css::uno::Any& Arg4, const ::css::uno::Any& Arg5, const ::css::uno::Any& Arg6, const ::css::uno::Any& Arg7, const ::css::uno::Any& Arg8, const ::css::uno::Any& Arg9, const ::css::uno::Any& Arg10, const ::css::uno::Any& Arg11, const ::css::uno::Any& Arg12, const ::css::uno::Any& Arg13, const ::css::uno::Any& Arg14, const ::css::uno::Any& Arg15, const ::css::uno::Any& Arg16, const ::css::uno::Any& Arg17, const ::css::uno::Any& Arg18, const ::css::uno::Any& Arg19, const ::css::uno::Any& Arg20, const ::css::uno::Any& Arg21, const ::css::uno::Any& Arg22, const ::css::uno::Any& Arg23, const ::css::uno::Any& Arg24, const ::css::uno::Any& Arg25, const ::css::uno::Any& Arg26, const ::css::uno::Any& Arg27, const ::css::uno::Any& Arg28, const ::css::uno::Any& Arg29, const ::css::uno::Any& Arg30 ) = 0;
+    virtual ::css::uno::Any SAL_CALL WorkSheets( const ::css::uno::Any& Index ) = 0;
+    virtual ::css::uno::Any SAL_CALL WorkBooks( const ::css::uno::Any& Index ) = 0;
+    virtual ::css::uno::Any SAL_CALL WorksheetFunction() = 0;
+    virtual ::css::uno::Any SAL_CALL Windows( const ::css::uno::Any& Index ) = 0;
+    virtual ::css::uno::Any SAL_CALL Sheets( const ::css::uno::Any& Index ) = 0;
+    virtual ::css::uno::Any SAL_CALL Range( const ::css::uno::Any& Cell1, const ::css::uno::Any& Cell2 ) = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::excel::XRange > SAL_CALL Rows( const ::css::uno::Any& Index ) = 0;
+    virtual ::css::uno::Any SAL_CALL Names( const ::css::uno::Any& Index ) = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::excel::XRange > SAL_CALL Union( const ::css::uno::Reference< ::ooo::vba::excel::XRange >& Arg1, const ::css::uno::Reference< ::ooo::vba::excel::XRange >& Arg2, const ::css::uno::Any& Arg3, const ::css::uno::Any& Arg4, const ::css::uno::Any& Arg5, const ::css::uno::Any& Arg6, const ::css::uno::Any& Arg7, const ::css::uno::Any& Arg8, const ::css::uno::Any& Arg9, const ::css::uno::Any& Arg10, const ::css::uno::Any& Arg11, const ::css::uno::Any& Arg12, const ::css::uno::Any& Arg13, const ::css::uno::Any& Arg14, const ::css::uno::Any& Arg15, const ::css::uno::Any& Arg16, const ::css::uno::Any& Arg17, const ::css::uno::Any& Arg18, const ::css::uno::Any& Arg19, const ::css::uno::Any& Arg20, const ::css::uno::Any& Arg21, const ::css::uno::Any& Arg22, const ::css::uno::Any& Arg23, const ::css::uno::Any& Arg24, const ::css::uno::Any& Arg25, const ::css::uno::Any& Arg26, const ::css::uno::Any& Arg27, const ::css::uno::Any& Arg28, const ::css::uno::Any& Arg29, const ::css::uno::Any& Arg30 ) = 0;
+    virtual ::css::uno::Any SAL_CALL MenuBars( const ::css::uno::Any& aIndex ) = 0;
+
+    static inline ::css::uno::Type const & SAL_CALL static_type(void * = 0);
+
+protected:
+    ~XGlobals() SAL_NOEXCEPT {} // avoid warnings about virtual members and non-virtual dtor
+};
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::ooo::vba::excel::XGlobals const *);
+} } }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::uno::Reference< ::ooo::vba::excel::XGlobals > *);
+
+#endif

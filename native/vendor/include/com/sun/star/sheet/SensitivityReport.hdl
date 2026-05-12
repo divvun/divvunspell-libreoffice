@@ -1,0 +1,45 @@
+#ifndef INCLUDED_COM_SUN_STAR_SHEET_SENSITIVITYREPORT_HDL
+#define INCLUDED_COM_SUN_STAR_SHEET_SENSITIVITYREPORT_HDL
+
+#include "sal/config.h"
+
+#include "com/sun/star/uno/Sequence.h"
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace com { namespace sun { namespace star { namespace sheet {
+
+#ifdef _WIN32
+#   pragma pack(push, 8)
+#endif
+
+struct SAL_DLLPUBLIC_RTTI SAL_WARN_UNUSED SensitivityReport {
+    inline SensitivityReport();
+
+    inline SensitivityReport(const ::sal_Bool& HasReport_, const ::css::uno::Sequence< double >& ObjCoefficients_, const ::css::uno::Sequence< double >& ObjReducedCosts_, const ::css::uno::Sequence< double >& ObjAllowableDecreases_, const ::css::uno::Sequence< double >& ObjAllowableIncreases_, const ::css::uno::Sequence< double >& ConstrValues_, const ::css::uno::Sequence< double >& ConstrRHS_, const ::css::uno::Sequence< double >& ConstrShadowPrices_, const ::css::uno::Sequence< double >& ConstrAllowableDecreases_, const ::css::uno::Sequence< double >& ConstrAllowableIncreases_);
+
+    ::sal_Bool HasReport;
+    ::css::uno::Sequence< double > ObjCoefficients;
+    ::css::uno::Sequence< double > ObjReducedCosts;
+    ::css::uno::Sequence< double > ObjAllowableDecreases;
+    ::css::uno::Sequence< double > ObjAllowableIncreases;
+    ::css::uno::Sequence< double > ConstrValues;
+    ::css::uno::Sequence< double > ConstrRHS;
+    ::css::uno::Sequence< double > ConstrShadowPrices;
+    ::css::uno::Sequence< double > ConstrAllowableDecreases;
+    ::css::uno::Sequence< double > ConstrAllowableIncreases;
+};
+
+#ifdef _WIN32
+#   pragma pack(pop)
+#endif
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::css::sheet::SensitivityReport const *);
+} } } }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::sheet::SensitivityReport *);
+
+#endif

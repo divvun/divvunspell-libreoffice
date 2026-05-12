@@ -1,0 +1,49 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDINFORMATION_HDL
+#define INCLUDED_OOO_VBA_WORD_WDINFORMATION_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdInformation {
+
+static const ::sal_Int32 wdActiveEndAdjustedPageNumber = (sal_Int32)1;
+static const ::sal_Int32 wdActiveEndPageNumber = (sal_Int32)3;
+static const ::sal_Int32 wdActiveEndSectionNumber = (sal_Int32)2;
+static const ::sal_Int32 wdAtEndOfRowMarker = (sal_Int32)31;
+static const ::sal_Int32 wdCapsLock = (sal_Int32)21;
+static const ::sal_Int32 wdEndOfRangeColumnNumber = (sal_Int32)17;
+static const ::sal_Int32 wdEndOfRangeRowNumber = (sal_Int32)14;
+static const ::sal_Int32 wdFirstCharacterColumnNumber = (sal_Int32)9;
+static const ::sal_Int32 wdFirstCharacterLineNumber = (sal_Int32)10;
+static const ::sal_Int32 wdFrameIsSelected = (sal_Int32)11;
+static const ::sal_Int32 wdHeaderFooterType = (sal_Int32)33;
+static const ::sal_Int32 wdHorizontalPositionRelativeToPage = (sal_Int32)5;
+static const ::sal_Int32 wdHorizontalPositionRelativeToTextBoundary = (sal_Int32)7;
+static const ::sal_Int32 wdInClipboard = (sal_Int32)38;
+static const ::sal_Int32 wdInCommentPane = (sal_Int32)26;
+static const ::sal_Int32 wdInEndnote = (sal_Int32)36;
+static const ::sal_Int32 wdInFootnote = (sal_Int32)35;
+static const ::sal_Int32 wdInFootnoteEndnotePane = (sal_Int32)25;
+static const ::sal_Int32 wdInHeaderFooter = (sal_Int32)28;
+static const ::sal_Int32 wdInMasterDocument = (sal_Int32)34;
+static const ::sal_Int32 wdInWordMail = (sal_Int32)37;
+static const ::sal_Int32 wdMaximumNumberOfColumns = (sal_Int32)18;
+static const ::sal_Int32 wdMaximumNumberOfRows = (sal_Int32)15;
+static const ::sal_Int32 wdNumLock = (sal_Int32)22;
+static const ::sal_Int32 wdNumberOfPagesInDocument = (sal_Int32)4;
+static const ::sal_Int32 wdOverType = (sal_Int32)23;
+static const ::sal_Int32 wdReferenceOfType = (sal_Int32)32;
+static const ::sal_Int32 wdRevisionMarking = (sal_Int32)24;
+static const ::sal_Int32 wdSelectionMode = (sal_Int32)20;
+static const ::sal_Int32 wdStartOfRangeColumnNumber = (sal_Int32)16;
+static const ::sal_Int32 wdStartOfRangeRowNumber = (sal_Int32)13;
+static const ::sal_Int32 wdVerticalPositionRelativeToPage = (sal_Int32)6;
+static const ::sal_Int32 wdVerticalPositionRelativeToTextBoundary = (sal_Int32)8;
+static const ::sal_Int32 wdWithInTable = (sal_Int32)12;
+static const ::sal_Int32 wdZoomPercentage = (sal_Int32)19;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDINFORMATION_HDL

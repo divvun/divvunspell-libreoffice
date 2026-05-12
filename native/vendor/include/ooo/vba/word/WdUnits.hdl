@@ -1,0 +1,30 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDUNITS_HDL
+#define INCLUDED_OOO_VBA_WORD_WDUNITS_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdUnits {
+
+static const ::sal_Int32 wdCell = (sal_Int32)12;
+static const ::sal_Int32 wdCharacter = (sal_Int32)1;
+static const ::sal_Int32 wdCharacterFormatting = (sal_Int32)13;
+static const ::sal_Int32 wdColumn = (sal_Int32)9;
+static const ::sal_Int32 wdItem = (sal_Int32)16;
+static const ::sal_Int32 wdLine = (sal_Int32)5;
+static const ::sal_Int32 wdParagraph = (sal_Int32)4;
+static const ::sal_Int32 wdParagraphFormatting = (sal_Int32)14;
+static const ::sal_Int32 wdRow = (sal_Int32)10;
+static const ::sal_Int32 wdScreen = (sal_Int32)7;
+static const ::sal_Int32 wdSection = (sal_Int32)8;
+static const ::sal_Int32 wdSentence = (sal_Int32)3;
+static const ::sal_Int32 wdStory = (sal_Int32)6;
+static const ::sal_Int32 wdTable = (sal_Int32)15;
+static const ::sal_Int32 wdWindow = (sal_Int32)11;
+static const ::sal_Int32 wdWord = (sal_Int32)2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDUNITS_HDL

@@ -1,0 +1,20 @@
+#ifndef INCLUDED_OOO_VBA_VBAPPWINSTYLE_HDL
+#define INCLUDED_OOO_VBA_VBAPPWINSTYLE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace VbAppWinStyle {
+
+static const ::sal_Int32 vbHide = (sal_Int32)0;
+static const ::sal_Int32 vbMaximizedFocus = (sal_Int32)3;
+static const ::sal_Int32 vbMinimizedFocus = (sal_Int32)2;
+static const ::sal_Int32 vbMinimizedNoFocus = (sal_Int32)6;
+static const ::sal_Int32 vbNormalFocus = (sal_Int32)1;
+static const ::sal_Int32 vbNormalNoFocus = (sal_Int32)4;
+
+} } }
+
+#endif // INCLUDED_OOO_VBA_VBAPPWINSTYLE_HDL

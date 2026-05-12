@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLWEBSELECTIONTYPE_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLWEBSELECTIONTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlWebSelectionType {
+
+static const ::sal_Int32 xlAllTables = (sal_Int32)2;
+static const ::sal_Int32 xlEntirePage = (sal_Int32)1;
+static const ::sal_Int32 xlSpecifiedTables = (sal_Int32)3;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLWEBSELECTIONTYPE_HDL

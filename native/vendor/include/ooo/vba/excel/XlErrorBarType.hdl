@@ -1,0 +1,19 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLERRORBARTYPE_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLERRORBARTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlErrorBarType {
+
+static const ::sal_Int32 xlErrorBarTypeCustom = (sal_Int32)-4114;
+static const ::sal_Int32 xlErrorBarTypeFixedValue = (sal_Int32)1;
+static const ::sal_Int32 xlErrorBarTypePercent = (sal_Int32)2;
+static const ::sal_Int32 xlErrorBarTypeStDev = (sal_Int32)-4155;
+static const ::sal_Int32 xlErrorBarTypeStError = (sal_Int32)4;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLERRORBARTYPE_HDL

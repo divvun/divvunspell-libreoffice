@@ -1,0 +1,25 @@
+#ifndef INCLUDED_OOO_VBA_ACCESS_ACIMEMODE_HDL
+#define INCLUDED_OOO_VBA_ACCESS_ACIMEMODE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace access { namespace AcImeMode {
+
+static const ::sal_Int32 acImeModeAlpha = (sal_Int32)8;
+static const ::sal_Int32 acImeModeAlphaFull = (sal_Int32)7;
+static const ::sal_Int32 acImeModeDisable = (sal_Int32)3;
+static const ::sal_Int32 acImeModeHangul = (sal_Int32)10;
+static const ::sal_Int32 acImeModeHangulFull = (sal_Int32)9;
+static const ::sal_Int32 acImeModeHiragana = (sal_Int32)4;
+static const ::sal_Int32 acImeModeKatakana = (sal_Int32)5;
+static const ::sal_Int32 acImeModeKatakanaHalf = (sal_Int32)6;
+static const ::sal_Int32 acImeModeNoControl = (sal_Int32)0;
+static const ::sal_Int32 acImeModeOff = (sal_Int32)2;
+static const ::sal_Int32 acImeModeOn = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_ACCESS_ACIMEMODE_HDL

@@ -1,0 +1,15 @@
+#ifndef INCLUDED_OOO_VBA_ADODB_STRINGFORMATENUM_HDL
+#define INCLUDED_OOO_VBA_ADODB_STRINGFORMATENUM_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace adodb { namespace StringFormatEnum {
+
+static const ::sal_Int32 adClipString = (sal_Int32)2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_ADODB_STRINGFORMATENUM_HDL

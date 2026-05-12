@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDALERTLEVEL_HDL
+#define INCLUDED_OOO_VBA_WORD_WDALERTLEVEL_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdAlertLevel {
+
+static const ::sal_Int32 wdAlertsAll = (sal_Int32)-1;
+static const ::sal_Int32 wdAlertsMessageBox = (sal_Int32)-2;
+static const ::sal_Int32 wdAlertsNone = (sal_Int32)0;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDALERTLEVEL_HDL

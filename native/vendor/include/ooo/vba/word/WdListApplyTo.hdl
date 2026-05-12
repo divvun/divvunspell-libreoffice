@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDLISTAPPLYTO_HDL
+#define INCLUDED_OOO_VBA_WORD_WDLISTAPPLYTO_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdListApplyTo {
+
+static const ::sal_Int32 wdListApplyToSelection = (sal_Int32)2;
+static const ::sal_Int32 wdListApplyToThisPointForward = (sal_Int32)1;
+static const ::sal_Int32 wdListApplyToWholeList = (sal_Int32)0;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDLISTAPPLYTO_HDL

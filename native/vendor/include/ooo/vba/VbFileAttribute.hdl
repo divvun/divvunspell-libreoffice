@@ -1,0 +1,22 @@
+#ifndef INCLUDED_OOO_VBA_VBFILEATTRIBUTE_HDL
+#define INCLUDED_OOO_VBA_VBFILEATTRIBUTE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace VbFileAttribute {
+
+static const ::sal_Int32 vbAlias = (sal_Int32)64;
+static const ::sal_Int32 vbArchive = (sal_Int32)32;
+static const ::sal_Int32 vbDirectory = (sal_Int32)16;
+static const ::sal_Int32 vbHidden = (sal_Int32)2;
+static const ::sal_Int32 vbNormal = (sal_Int32)0;
+static const ::sal_Int32 vbReadOnly = (sal_Int32)1;
+static const ::sal_Int32 vbSystem = (sal_Int32)4;
+static const ::sal_Int32 vbVolume = (sal_Int32)8;
+
+} } }
+
+#endif // INCLUDED_OOO_VBA_VBFILEATTRIBUTE_HDL

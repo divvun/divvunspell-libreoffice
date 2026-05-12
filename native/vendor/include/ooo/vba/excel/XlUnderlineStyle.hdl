@@ -1,0 +1,19 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLUNDERLINESTYLE_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLUNDERLINESTYLE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlUnderlineStyle {
+
+static const ::sal_Int32 xlUnderlineStyleDouble = (sal_Int32)-4119;
+static const ::sal_Int32 xlUnderlineStyleDoubleAccounting = (sal_Int32)5;
+static const ::sal_Int32 xlUnderlineStyleNone = (sal_Int32)-4142;
+static const ::sal_Int32 xlUnderlineStyleSingle = (sal_Int32)2;
+static const ::sal_Int32 xlUnderlineStyleSingleAccounting = (sal_Int32)4;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLUNDERLINESTYLE_HDL

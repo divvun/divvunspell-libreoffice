@@ -1,0 +1,46 @@
+#ifndef INCLUDED_OOO_VBA_XVBATOOOEVENTDESCGEN_HDL
+#define INCLUDED_OOO_VBA_XVBATOOOEVENTDESCGEN_HDL
+
+#include "sal/config.h"
+
+#include "com/sun/star/script/ScriptEventDescriptor.hdl"
+namespace com { namespace sun { namespace star { namespace script { class XScriptEventsSupplier; } } } }
+#include "com/sun/star/uno/XInterface.hdl"
+#include "com/sun/star/uno/Reference.h"
+#include "com/sun/star/uno/Sequence.h"
+#include "cppu/macros.hxx"
+#include "rtl/ustring.hxx"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace ooo { namespace vba {
+
+class SAL_NO_VTABLE SAL_DLLPUBLIC_RTTI XVBAToOOEventDescGen : public ::css::uno::XInterface
+{
+public:
+#if defined LIBO_INTERNAL_ONLY
+    XVBAToOOEventDescGen() = default;
+    XVBAToOOEventDescGen(XVBAToOOEventDescGen const &) = default;
+    XVBAToOOEventDescGen(XVBAToOOEventDescGen &&) = default;
+    XVBAToOOEventDescGen & operator =(XVBAToOOEventDescGen const &) = default;
+    XVBAToOOEventDescGen & operator =(XVBAToOOEventDescGen &&) = default;
+#endif
+
+
+    // Methods
+    virtual ::css::uno::Sequence< ::css::script::ScriptEventDescriptor > SAL_CALL getEventDescriptions( const ::rtl::OUString& controlServiceName, const ::rtl::OUString& sCodeName ) = 0;
+    virtual ::css::uno::Reference< ::css::script::XScriptEventsSupplier > SAL_CALL getEventSupplier( const ::css::uno::Reference< ::css::uno::XInterface >& xControl, const ::rtl::OUString& sCodeName ) = 0;
+
+    static inline ::css::uno::Type const & SAL_CALL static_type(void * = 0);
+
+protected:
+    ~XVBAToOOEventDescGen() SAL_NOEXCEPT {} // avoid warnings about virtual members and non-virtual dtor
+};
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::ooo::vba::XVBAToOOEventDescGen const *);
+} }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::uno::Reference< ::ooo::vba::XVBAToOOEventDescGen > *);
+
+#endif

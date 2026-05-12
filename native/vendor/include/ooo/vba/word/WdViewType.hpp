@@ -1,0 +1,6 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDVIEWTYPE_HPP
+#define INCLUDED_OOO_VBA_WORD_WDVIEWTYPE_HPP
+
+#include "ooo/vba/word/WdViewType.hdl"
+
+#endif // INCLUDED_OOO_VBA_WORD_WDVIEWTYPE_HPP

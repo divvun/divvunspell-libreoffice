@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_DAO_EDITMODEENUM_HDL
+#define INCLUDED_OOO_VBA_DAO_EDITMODEENUM_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace dao { namespace EditModeEnum {
+
+static const ::sal_Int32 dbEditAdd = (sal_Int32)2;
+static const ::sal_Int32 dbEditInProgress = (sal_Int32)1;
+static const ::sal_Int32 dbEditNone = (sal_Int32)0;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_DAO_EDITMODEENUM_HDL

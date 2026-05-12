@@ -1,0 +1,26 @@
+#ifndef INCLUDED_OOO_VBA_POWERPOINT_PPPASTEDATATYPE_HDL
+#define INCLUDED_OOO_VBA_POWERPOINT_PPPASTEDATATYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace powerpoint { namespace PpPasteDataType {
+
+static const ::sal_Int32 ppPasteBitmap = (sal_Int32)1;
+static const ::sal_Int32 ppPasteDefault = (sal_Int32)0;
+static const ::sal_Int32 ppPasteEnhancedMetafile = (sal_Int32)2;
+static const ::sal_Int32 ppPasteGIF = (sal_Int32)4;
+static const ::sal_Int32 ppPasteHTML = (sal_Int32)8;
+static const ::sal_Int32 ppPasteJPG = (sal_Int32)5;
+static const ::sal_Int32 ppPasteMetafilePicture = (sal_Int32)3;
+static const ::sal_Int32 ppPasteOLEObject = (sal_Int32)10;
+static const ::sal_Int32 ppPastePNG = (sal_Int32)6;
+static const ::sal_Int32 ppPasteRTF = (sal_Int32)9;
+static const ::sal_Int32 ppPasteShape = (sal_Int32)11;
+static const ::sal_Int32 ppPasteText = (sal_Int32)7;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_POWERPOINT_PPPASTEDATATYPE_HDL

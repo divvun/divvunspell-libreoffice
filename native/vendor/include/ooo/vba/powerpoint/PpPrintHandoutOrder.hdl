@@ -1,0 +1,16 @@
+#ifndef INCLUDED_OOO_VBA_POWERPOINT_PPPRINTHANDOUTORDER_HDL
+#define INCLUDED_OOO_VBA_POWERPOINT_PPPRINTHANDOUTORDER_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace powerpoint { namespace PpPrintHandoutOrder {
+
+static const ::sal_Int32 ppPrintHandoutHorizontalFirst = (sal_Int32)2;
+static const ::sal_Int32 ppPrintHandoutVerticalFirst = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_POWERPOINT_PPPRINTHANDOUTORDER_HDL

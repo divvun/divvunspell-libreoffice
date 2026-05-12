@@ -1,0 +1,21 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOTEXTORIENTATION_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOTEXTORIENTATION_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoTextOrientation {
+
+static const ::sal_Int32 msoTextOrientationDownward = (sal_Int32)3;
+static const ::sal_Int32 msoTextOrientationHorizontal = (sal_Int32)1;
+static const ::sal_Int32 msoTextOrientationHorizontalRotatedFarEast = (sal_Int32)6;
+static const ::sal_Int32 msoTextOrientationMixed = (sal_Int32)-2;
+static const ::sal_Int32 msoTextOrientationUpward = (sal_Int32)2;
+static const ::sal_Int32 msoTextOrientationVertical = (sal_Int32)5;
+static const ::sal_Int32 msoTextOrientationVerticalFarEast = (sal_Int32)4;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOTEXTORIENTATION_HDL

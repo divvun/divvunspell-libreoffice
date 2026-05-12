@@ -1,0 +1,16 @@
+#ifndef INCLUDED_OOO_VBA_ADODB_SEARCHDIRECTIONENUM_HDL
+#define INCLUDED_OOO_VBA_ADODB_SEARCHDIRECTIONENUM_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace adodb { namespace SearchDirectionEnum {
+
+static const ::sal_Int32 adSearchBackward = (sal_Int32)-1;
+static const ::sal_Int32 adSearchForward = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_ADODB_SEARCHDIRECTIONENUM_HDL

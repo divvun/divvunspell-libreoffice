@@ -1,0 +1,18 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDFAREASTLINEBREAKLANGUAGEID_HDL
+#define INCLUDED_OOO_VBA_WORD_WDFAREASTLINEBREAKLANGUAGEID_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdFarEastLineBreakLanguageID {
+
+static const ::sal_Int32 wdLineBreakJapanese = (sal_Int32)1041;
+static const ::sal_Int32 wdLineBreakKorean = (sal_Int32)1042;
+static const ::sal_Int32 wdLineBreakSimplifiedChinese = (sal_Int32)2052;
+static const ::sal_Int32 wdLineBreakTraditionalChinese = (sal_Int32)1028;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDFAREASTLINEBREAKLANGUAGEID_HDL

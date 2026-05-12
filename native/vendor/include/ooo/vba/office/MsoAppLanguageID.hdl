@@ -1,0 +1,19 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOAPPLANGUAGEID_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOAPPLANGUAGEID_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoAppLanguageID {
+
+static const ::sal_Int32 msoLanguageIDExeMode = (sal_Int32)4;
+static const ::sal_Int32 msoLanguageIDHelp = (sal_Int32)3;
+static const ::sal_Int32 msoLanguageIDInstall = (sal_Int32)1;
+static const ::sal_Int32 msoLanguageIDUI = (sal_Int32)2;
+static const ::sal_Int32 msoLanguageIDUIPrevious = (sal_Int32)5;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOAPPLANGUAGEID_HDL

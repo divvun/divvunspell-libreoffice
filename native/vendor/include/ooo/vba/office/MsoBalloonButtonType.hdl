@@ -1,0 +1,30 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOBALLOONBUTTONTYPE_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOBALLOONBUTTONTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoBalloonButtonType {
+
+static const ::sal_Int32 msoBalloonButtonAbort = (sal_Int32)-8;
+static const ::sal_Int32 msoBalloonButtonBack = (sal_Int32)-5;
+static const ::sal_Int32 msoBalloonButtonCancel = (sal_Int32)-2;
+static const ::sal_Int32 msoBalloonButtonClose = (sal_Int32)-12;
+static const ::sal_Int32 msoBalloonButtonIgnore = (sal_Int32)-9;
+static const ::sal_Int32 msoBalloonButtonNext = (sal_Int32)-6;
+static const ::sal_Int32 msoBalloonButtonNo = (sal_Int32)-4;
+static const ::sal_Int32 msoBalloonButtonNull = (sal_Int32)0;
+static const ::sal_Int32 msoBalloonButtonOK = (sal_Int32)-1;
+static const ::sal_Int32 msoBalloonButtonOptions = (sal_Int32)-14;
+static const ::sal_Int32 msoBalloonButtonRetry = (sal_Int32)-7;
+static const ::sal_Int32 msoBalloonButtonSearch = (sal_Int32)-10;
+static const ::sal_Int32 msoBalloonButtonSnooze = (sal_Int32)-11;
+static const ::sal_Int32 msoBalloonButtonTips = (sal_Int32)-13;
+static const ::sal_Int32 msoBalloonButtonYes = (sal_Int32)-3;
+static const ::sal_Int32 msoBalloonButtonYesToAll = (sal_Int32)-15;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOBALLOONBUTTONTYPE_HDL

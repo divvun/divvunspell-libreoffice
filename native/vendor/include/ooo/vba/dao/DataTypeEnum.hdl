@@ -1,0 +1,35 @@
+#ifndef INCLUDED_OOO_VBA_DAO_DATATYPEENUM_HDL
+#define INCLUDED_OOO_VBA_DAO_DATATYPEENUM_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace dao { namespace DataTypeEnum {
+
+static const ::sal_Int32 dbBigInt = (sal_Int32)16;
+static const ::sal_Int32 dbBinary = (sal_Int32)9;
+static const ::sal_Int32 dbBoolean = (sal_Int32)1;
+static const ::sal_Int32 dbByte = (sal_Int32)2;
+static const ::sal_Int32 dbChar = (sal_Int32)18;
+static const ::sal_Int32 dbCurrency = (sal_Int32)5;
+static const ::sal_Int32 dbDate = (sal_Int32)8;
+static const ::sal_Int32 dbDecimal = (sal_Int32)20;
+static const ::sal_Int32 dbDouble = (sal_Int32)7;
+static const ::sal_Int32 dbFloat = (sal_Int32)21;
+static const ::sal_Int32 dbGUID = (sal_Int32)15;
+static const ::sal_Int32 dbInteger = (sal_Int32)3;
+static const ::sal_Int32 dbLong = (sal_Int32)4;
+static const ::sal_Int32 dbLongBinary = (sal_Int32)11;
+static const ::sal_Int32 dbMemo = (sal_Int32)12;
+static const ::sal_Int32 dbNumeric = (sal_Int32)19;
+static const ::sal_Int32 dbSingle = (sal_Int32)6;
+static const ::sal_Int32 dbText = (sal_Int32)10;
+static const ::sal_Int32 dbTime = (sal_Int32)22;
+static const ::sal_Int32 dbTimeStamp = (sal_Int32)23;
+static const ::sal_Int32 dbVarBinary = (sal_Int32)17;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_DAO_DATATYPEENUM_HDL

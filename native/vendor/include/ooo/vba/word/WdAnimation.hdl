@@ -1,0 +1,21 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDANIMATION_HDL
+#define INCLUDED_OOO_VBA_WORD_WDANIMATION_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdAnimation {
+
+static const ::sal_Int32 wdAnimationBlinkingBackground = (sal_Int32)2;
+static const ::sal_Int32 wdAnimationLasVegasLights = (sal_Int32)1;
+static const ::sal_Int32 wdAnimationMarchingBlackAnts = (sal_Int32)4;
+static const ::sal_Int32 wdAnimationMarchingRedAnts = (sal_Int32)5;
+static const ::sal_Int32 wdAnimationNone = (sal_Int32)0;
+static const ::sal_Int32 wdAnimationShimmer = (sal_Int32)6;
+static const ::sal_Int32 wdAnimationSparkleText = (sal_Int32)3;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDANIMATION_HDL

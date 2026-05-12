@@ -1,0 +1,25 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDINLINESHAPETYPE_HDL
+#define INCLUDED_OOO_VBA_WORD_WDINLINESHAPETYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdInlineShapeType {
+
+static const ::sal_Int32 wdInlineShapeEmbeddedOLEObject = (sal_Int32)1;
+static const ::sal_Int32 wdInlineShapeHorizontalLine = (sal_Int32)6;
+static const ::sal_Int32 wdInlineShapeLinkedOLEObject = (sal_Int32)2;
+static const ::sal_Int32 wdInlineShapeLinkedPicture = (sal_Int32)4;
+static const ::sal_Int32 wdInlineShapeLinkedPictureHorizontalLine = (sal_Int32)8;
+static const ::sal_Int32 wdInlineShapeOLEControlObject = (sal_Int32)5;
+static const ::sal_Int32 wdInlineShapeOWSAnchor = (sal_Int32)11;
+static const ::sal_Int32 wdInlineShapePicture = (sal_Int32)3;
+static const ::sal_Int32 wdInlineShapePictureBullet = (sal_Int32)9;
+static const ::sal_Int32 wdInlineShapePictureHorizontalLine = (sal_Int32)7;
+static const ::sal_Int32 wdInlineShapeScriptAnchor = (sal_Int32)10;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDINLINESHAPETYPE_HDL

@@ -1,0 +1,18 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLHTMLTYPE_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLHTMLTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlHtmlType {
+
+static const ::sal_Int32 xlHtmlCalc = (sal_Int32)1;
+static const ::sal_Int32 xlHtmlChart = (sal_Int32)3;
+static const ::sal_Int32 xlHtmlList = (sal_Int32)2;
+static const ::sal_Int32 xlHtmlStatic = (sal_Int32)0;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLHTMLTYPE_HDL

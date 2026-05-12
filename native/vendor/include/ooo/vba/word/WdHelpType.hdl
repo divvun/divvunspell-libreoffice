@@ -1,0 +1,28 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDHELPTYPE_HDL
+#define INCLUDED_OOO_VBA_WORD_WDHELPTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdHelpType {
+
+static const ::sal_Int32 wdHelp = (sal_Int32)0;
+static const ::sal_Int32 wdHelpAbout = (sal_Int32)1;
+static const ::sal_Int32 wdHelpActiveWindow = (sal_Int32)2;
+static const ::sal_Int32 wdHelpContents = (sal_Int32)3;
+static const ::sal_Int32 wdHelpExamplesAndDemos = (sal_Int32)4;
+static const ::sal_Int32 wdHelpHWP = (sal_Int32)13;
+static const ::sal_Int32 wdHelpIchitaro = (sal_Int32)11;
+static const ::sal_Int32 wdHelpIndex = (sal_Int32)5;
+static const ::sal_Int32 wdHelpKeyboard = (sal_Int32)6;
+static const ::sal_Int32 wdHelpPE2 = (sal_Int32)12;
+static const ::sal_Int32 wdHelpPSSHelp = (sal_Int32)7;
+static const ::sal_Int32 wdHelpQuickPreview = (sal_Int32)8;
+static const ::sal_Int32 wdHelpSearch = (sal_Int32)9;
+static const ::sal_Int32 wdHelpUsingHelp = (sal_Int32)10;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDHELPTYPE_HDL

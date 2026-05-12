@@ -1,0 +1,34 @@
+#ifndef INCLUDED_OOO_VBA_VBMSGBOXSTYLE_HDL
+#define INCLUDED_OOO_VBA_VBMSGBOXSTYLE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace VbMsgBoxStyle {
+
+static const ::sal_Int32 vbAbortRetryIgnore = (sal_Int32)2;
+static const ::sal_Int32 vbApplicationModal = (sal_Int32)0;
+static const ::sal_Int32 vbCritical = (sal_Int32)16;
+static const ::sal_Int32 vbDefaultButton1 = (sal_Int32)0;
+static const ::sal_Int32 vbDefaultButton2 = (sal_Int32)256;
+static const ::sal_Int32 vbDefaultButton3 = (sal_Int32)512;
+static const ::sal_Int32 vbDefaultButton4 = (sal_Int32)768;
+static const ::sal_Int32 vbExclamation = (sal_Int32)48;
+static const ::sal_Int32 vbInformation = (sal_Int32)64;
+static const ::sal_Int32 vbMsgBoxHelpButton = (sal_Int32)16384;
+static const ::sal_Int32 vbMsgBoxRight = (sal_Int32)524288;
+static const ::sal_Int32 vbMsgBoxRtlReading = (sal_Int32)1048576;
+static const ::sal_Int32 vbMsgBoxSetForeground = (sal_Int32)65536;
+static const ::sal_Int32 vbOKCancel = (sal_Int32)1;
+static const ::sal_Int32 vbOKOnly = (sal_Int32)0;
+static const ::sal_Int32 vbQuestion = (sal_Int32)32;
+static const ::sal_Int32 vbRetryCancel = (sal_Int32)5;
+static const ::sal_Int32 vbSystemModal = (sal_Int32)4096;
+static const ::sal_Int32 vbYesNo = (sal_Int32)4;
+static const ::sal_Int32 vbYesNoCancel = (sal_Int32)3;
+
+} } }
+
+#endif // INCLUDED_OOO_VBA_VBMSGBOXSTYLE_HDL

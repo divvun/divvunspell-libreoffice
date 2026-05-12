@@ -1,0 +1,19 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOSHAREDWORKSPACETASKSTATUS_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOSHAREDWORKSPACETASKSTATUS_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoSharedWorkspaceTaskStatus {
+
+static const ::sal_Int32 msoSharedWorkspaceTaskStatusCompleted = (sal_Int32)3;
+static const ::sal_Int32 msoSharedWorkspaceTaskStatusDeferred = (sal_Int32)4;
+static const ::sal_Int32 msoSharedWorkspaceTaskStatusInProgress = (sal_Int32)2;
+static const ::sal_Int32 msoSharedWorkspaceTaskStatusNotStarted = (sal_Int32)1;
+static const ::sal_Int32 msoSharedWorkspaceTaskStatusWaiting = (sal_Int32)5;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOSHAREDWORKSPACETASKSTATUS_HDL

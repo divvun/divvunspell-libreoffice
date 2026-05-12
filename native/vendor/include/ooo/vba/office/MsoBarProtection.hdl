@@ -1,0 +1,22 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOBARPROTECTION_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOBARPROTECTION_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoBarProtection {
+
+static const ::sal_Int32 msoBarNoChangeDock = (sal_Int32)16;
+static const ::sal_Int32 msoBarNoChangeVisible = (sal_Int32)8;
+static const ::sal_Int32 msoBarNoCustomize = (sal_Int32)1;
+static const ::sal_Int32 msoBarNoHorizontalDock = (sal_Int32)64;
+static const ::sal_Int32 msoBarNoMove = (sal_Int32)4;
+static const ::sal_Int32 msoBarNoProtection = (sal_Int32)0;
+static const ::sal_Int32 msoBarNoResize = (sal_Int32)2;
+static const ::sal_Int32 msoBarNoVerticalDock = (sal_Int32)32;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOBARPROTECTION_HDL

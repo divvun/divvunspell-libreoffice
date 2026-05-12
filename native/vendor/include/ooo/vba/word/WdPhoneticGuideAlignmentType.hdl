@@ -1,0 +1,20 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDPHONETICGUIDEALIGNMENTTYPE_HDL
+#define INCLUDED_OOO_VBA_WORD_WDPHONETICGUIDEALIGNMENTTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdPhoneticGuideAlignmentType {
+
+static const ::sal_Int32 wdPhoneticGuideAlignmentCenter = (sal_Int32)0;
+static const ::sal_Int32 wdPhoneticGuideAlignmentLeft = (sal_Int32)3;
+static const ::sal_Int32 wdPhoneticGuideAlignmentOneTwoOne = (sal_Int32)2;
+static const ::sal_Int32 wdPhoneticGuideAlignmentRight = (sal_Int32)4;
+static const ::sal_Int32 wdPhoneticGuideAlignmentRightVertical = (sal_Int32)5;
+static const ::sal_Int32 wdPhoneticGuideAlignmentZeroOneZero = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDPHONETICGUIDEALIGNMENTTYPE_HDL

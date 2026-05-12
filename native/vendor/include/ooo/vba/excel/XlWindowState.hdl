@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLWINDOWSTATE_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLWINDOWSTATE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlWindowState {
+
+static const ::sal_Int32 xlMaximized = (sal_Int32)-4137;
+static const ::sal_Int32 xlMinimized = (sal_Int32)-4140;
+static const ::sal_Int32 xlNormal = (sal_Int32)-4143;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLWINDOWSTATE_HDL

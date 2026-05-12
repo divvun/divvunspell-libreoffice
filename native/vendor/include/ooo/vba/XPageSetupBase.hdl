@@ -1,0 +1,51 @@
+#ifndef INCLUDED_OOO_VBA_XPAGESETUPBASE_HDL
+#define INCLUDED_OOO_VBA_XPAGESETUPBASE_HDL
+
+#include "sal/config.h"
+
+#include "ooo/vba/XHelperInterface.hdl"
+#include "com/sun/star/uno/Reference.h"
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace ooo { namespace vba {
+
+class SAL_NO_VTABLE SAL_DLLPUBLIC_RTTI XPageSetupBase : public ::ooo::vba::XHelperInterface
+{
+public:
+#if defined LIBO_INTERNAL_ONLY
+    XPageSetupBase() = default;
+    XPageSetupBase(XPageSetupBase const &) = default;
+    XPageSetupBase(XPageSetupBase &&) = default;
+    XPageSetupBase & operator =(XPageSetupBase const &) = default;
+    XPageSetupBase & operator =(XPageSetupBase &&) = default;
+#endif
+
+
+    // Attributes
+    virtual double SAL_CALL getTopMargin() = 0;
+    virtual void SAL_CALL setTopMargin( double _topmargin ) = 0;
+    virtual double SAL_CALL getBottomMargin() = 0;
+    virtual void SAL_CALL setBottomMargin( double _bottommargin ) = 0;
+    virtual double SAL_CALL getRightMargin() = 0;
+    virtual void SAL_CALL setRightMargin( double _rightmargin ) = 0;
+    virtual double SAL_CALL getLeftMargin() = 0;
+    virtual void SAL_CALL setLeftMargin( double _leftmargin ) = 0;
+    virtual ::sal_Int32 SAL_CALL getOrientation() = 0;
+    virtual void SAL_CALL setOrientation( ::sal_Int32 _orientation ) = 0;
+
+    static inline ::css::uno::Type const & SAL_CALL static_type(void * = 0);
+
+protected:
+    ~XPageSetupBase() SAL_NOEXCEPT {} // avoid warnings about virtual members and non-virtual dtor
+};
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::ooo::vba::XPageSetupBase const *);
+} }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::uno::Reference< ::ooo::vba::XPageSetupBase > *);
+
+#endif

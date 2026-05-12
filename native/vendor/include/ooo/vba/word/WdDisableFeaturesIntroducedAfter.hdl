@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDDISABLEFEATURESINTRODUCEDAFTER_HDL
+#define INCLUDED_OOO_VBA_WORD_WDDISABLEFEATURESINTRODUCEDAFTER_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdDisableFeaturesIntroducedAfter {
+
+static const ::sal_Int32 wd70 = (sal_Int32)0;
+static const ::sal_Int32 wd70FE = (sal_Int32)1;
+static const ::sal_Int32 wd80 = (sal_Int32)2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDDISABLEFEATURESINTRODUCEDAFTER_HDL

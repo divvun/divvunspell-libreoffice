@@ -1,0 +1,18 @@
+#ifndef INCLUDED_OOO_VBA_POWERPOINT_PPSELECTIONTYPE_HDL
+#define INCLUDED_OOO_VBA_POWERPOINT_PPSELECTIONTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace powerpoint { namespace PpSelectionType {
+
+static const ::sal_Int32 ppSelectionNone = (sal_Int32)0;
+static const ::sal_Int32 ppSelectionShapes = (sal_Int32)2;
+static const ::sal_Int32 ppSelectionSlides = (sal_Int32)1;
+static const ::sal_Int32 ppSelectionText = (sal_Int32)3;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_POWERPOINT_PPSELECTIONTYPE_HDL

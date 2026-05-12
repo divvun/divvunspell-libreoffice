@@ -1,0 +1,16 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLSUBTOTOTALLOCATIONTYPE_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLSUBTOTOTALLOCATIONTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlSubtototalLocationType {
+
+static const ::sal_Int32 xlAtBottom = (sal_Int32)2;
+static const ::sal_Int32 xlAtTop = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLSUBTOTOTALLOCATIONTYPE_HDL

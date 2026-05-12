@@ -1,0 +1,51 @@
+#ifndef INCLUDED_OOO_VBA_WORD_XCHECKBOX_HDL
+#define INCLUDED_OOO_VBA_WORD_XCHECKBOX_HDL
+
+#include "sal/config.h"
+
+#include "com/sun/star/script/XDefaultProperty.hdl"
+#include "ooo/vba/XHelperInterface.hdl"
+#include "com/sun/star/uno/Reference.h"
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace ooo { namespace vba { namespace word {
+
+class SAL_NO_VTABLE SAL_DLLPUBLIC_RTTI XCheckBox : public ::ooo::vba::XHelperInterface, public ::css::script::XDefaultProperty
+{
+public:
+#if defined LIBO_INTERNAL_ONLY
+    XCheckBox() = default;
+    XCheckBox(XCheckBox const &) = default;
+    XCheckBox(XCheckBox &&) = default;
+    XCheckBox & operator =(XCheckBox const &) = default;
+    XCheckBox & operator =(XCheckBox &&) = default;
+#endif
+
+
+    // Attributes
+    virtual ::sal_Bool SAL_CALL getValid() = 0;
+    virtual ::sal_Bool SAL_CALL getAutoSize() = 0;
+    virtual void SAL_CALL setAutoSize( ::sal_Bool _autosize ) = 0;
+    virtual ::sal_Bool SAL_CALL getDefault() = 0;
+    virtual void SAL_CALL setDefault( ::sal_Bool _default ) = 0;
+    virtual ::sal_Int32 SAL_CALL getSize() = 0;
+    virtual void SAL_CALL setSize( ::sal_Int32 _size ) = 0;
+    virtual ::sal_Bool SAL_CALL getValue() = 0;
+    virtual void SAL_CALL setValue( ::sal_Bool _value ) = 0;
+
+    static inline ::css::uno::Type const & SAL_CALL static_type(void * = 0);
+
+protected:
+    ~XCheckBox() SAL_NOEXCEPT {} // avoid warnings about virtual members and non-virtual dtor
+};
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::ooo::vba::word::XCheckBox const *);
+} } }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::uno::Reference< ::ooo::vba::word::XCheckBox > *);
+
+#endif

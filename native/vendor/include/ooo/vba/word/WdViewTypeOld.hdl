@@ -1,0 +1,16 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDVIEWTYPEOLD_HDL
+#define INCLUDED_OOO_VBA_WORD_WDVIEWTYPEOLD_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdViewTypeOld {
+
+static const ::sal_Int32 wdOnlineView = (sal_Int32)6;
+static const ::sal_Int32 wdPageView = (sal_Int32)3;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDVIEWTYPEOLD_HDL

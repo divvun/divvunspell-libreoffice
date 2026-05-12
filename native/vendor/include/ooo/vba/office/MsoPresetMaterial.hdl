@@ -1,0 +1,19 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOPRESETMATERIAL_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOPRESETMATERIAL_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoPresetMaterial {
+
+static const ::sal_Int32 msoMaterialMatte = (sal_Int32)1;
+static const ::sal_Int32 msoMaterialMetal = (sal_Int32)3;
+static const ::sal_Int32 msoMaterialPlastic = (sal_Int32)2;
+static const ::sal_Int32 msoMaterialWireFrame = (sal_Int32)4;
+static const ::sal_Int32 msoPresetMaterialMixed = (sal_Int32)-2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOPRESETMATERIAL_HDL

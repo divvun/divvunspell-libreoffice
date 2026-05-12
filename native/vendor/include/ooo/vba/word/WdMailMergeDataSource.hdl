@@ -1,0 +1,21 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDMAILMERGEDATASOURCE_HDL
+#define INCLUDED_OOO_VBA_WORD_WDMAILMERGEDATASOURCE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdMailMergeDataSource {
+
+static const ::sal_Int32 wdMergeInfoFromAccessDDE = (sal_Int32)1;
+static const ::sal_Int32 wdMergeInfoFromExcelDDE = (sal_Int32)2;
+static const ::sal_Int32 wdMergeInfoFromMSQueryDDE = (sal_Int32)3;
+static const ::sal_Int32 wdMergeInfoFromODBC = (sal_Int32)4;
+static const ::sal_Int32 wdMergeInfoFromODSO = (sal_Int32)5;
+static const ::sal_Int32 wdMergeInfoFromWord = (sal_Int32)0;
+static const ::sal_Int32 wdNoMergeInfo = (sal_Int32)-1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDMAILMERGEDATASOURCE_HDL

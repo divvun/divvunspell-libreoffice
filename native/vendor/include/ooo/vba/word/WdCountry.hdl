@@ -1,0 +1,38 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDCOUNTRY_HDL
+#define INCLUDED_OOO_VBA_WORD_WDCOUNTRY_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdCountry {
+
+static const ::sal_Int32 wdArgentina = (sal_Int32)54;
+static const ::sal_Int32 wdBrazil = (sal_Int32)55;
+static const ::sal_Int32 wdCanada = (sal_Int32)2;
+static const ::sal_Int32 wdChile = (sal_Int32)56;
+static const ::sal_Int32 wdChina = (sal_Int32)86;
+static const ::sal_Int32 wdDenmark = (sal_Int32)45;
+static const ::sal_Int32 wdFinland = (sal_Int32)358;
+static const ::sal_Int32 wdFrance = (sal_Int32)33;
+static const ::sal_Int32 wdGermany = (sal_Int32)49;
+static const ::sal_Int32 wdIceland = (sal_Int32)354;
+static const ::sal_Int32 wdItaly = (sal_Int32)39;
+static const ::sal_Int32 wdJapan = (sal_Int32)81;
+static const ::sal_Int32 wdKorea = (sal_Int32)82;
+static const ::sal_Int32 wdLatinAmerica = (sal_Int32)3;
+static const ::sal_Int32 wdMexico = (sal_Int32)52;
+static const ::sal_Int32 wdNetherlands = (sal_Int32)31;
+static const ::sal_Int32 wdNorway = (sal_Int32)47;
+static const ::sal_Int32 wdPeru = (sal_Int32)51;
+static const ::sal_Int32 wdSpain = (sal_Int32)34;
+static const ::sal_Int32 wdSweden = (sal_Int32)46;
+static const ::sal_Int32 wdTaiwan = (sal_Int32)886;
+static const ::sal_Int32 wdUK = (sal_Int32)44;
+static const ::sal_Int32 wdUS = (sal_Int32)1;
+static const ::sal_Int32 wdVenezuela = (sal_Int32)58;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDCOUNTRY_HDL

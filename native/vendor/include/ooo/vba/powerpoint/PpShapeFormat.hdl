@@ -1,0 +1,20 @@
+#ifndef INCLUDED_OOO_VBA_POWERPOINT_PPSHAPEFORMAT_HDL
+#define INCLUDED_OOO_VBA_POWERPOINT_PPSHAPEFORMAT_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace powerpoint { namespace PpShapeFormat {
+
+static const ::sal_Int32 ppShapeFormatBMP = (sal_Int32)3;
+static const ::sal_Int32 ppShapeFormatEMF = (sal_Int32)5;
+static const ::sal_Int32 ppShapeFormatGIF = (sal_Int32)0;
+static const ::sal_Int32 ppShapeFormatJPG = (sal_Int32)1;
+static const ::sal_Int32 ppShapeFormatPNG = (sal_Int32)2;
+static const ::sal_Int32 ppShapeFormatWMF = (sal_Int32)4;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_POWERPOINT_PPSHAPEFORMAT_HDL

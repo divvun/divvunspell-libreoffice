@@ -1,0 +1,18 @@
+#ifndef INCLUDED_OOO_VBA_ADODB_EDITMODEENUM_HDL
+#define INCLUDED_OOO_VBA_ADODB_EDITMODEENUM_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace adodb { namespace EditModeEnum {
+
+static const ::sal_Int32 adEditAdd = (sal_Int32)2;
+static const ::sal_Int32 adEditDelete = (sal_Int32)4;
+static const ::sal_Int32 adEditInProgress = (sal_Int32)1;
+static const ::sal_Int32 adEditNone = (sal_Int32)0;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_ADODB_EDITMODEENUM_HDL

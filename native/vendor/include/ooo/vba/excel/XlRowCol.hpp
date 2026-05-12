@@ -1,0 +1,6 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLROWCOL_HPP
+#define INCLUDED_OOO_VBA_EXCEL_XLROWCOL_HPP
+
+#include "ooo/vba/excel/XlRowCol.hdl"
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLROWCOL_HPP

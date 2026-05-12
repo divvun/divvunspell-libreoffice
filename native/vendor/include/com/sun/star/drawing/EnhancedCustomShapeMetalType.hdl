@@ -1,0 +1,16 @@
+#ifndef INCLUDED_COM_SUN_STAR_DRAWING_ENHANCEDCUSTOMSHAPEMETALTYPE_HDL
+#define INCLUDED_COM_SUN_STAR_DRAWING_ENHANCEDCUSTOMSHAPEMETALTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace com { namespace sun { namespace star { namespace drawing { namespace EnhancedCustomShapeMetalType {
+
+static const ::sal_Int16 MetalMSCompatible = (sal_Int16)1;
+static const ::sal_Int16 MetalODF = (sal_Int16)0;
+
+} } } } }
+
+#endif // INCLUDED_COM_SUN_STAR_DRAWING_ENHANCEDCUSTOMSHAPEMETALTYPE_HDL

@@ -1,0 +1,18 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLTICKMARK_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLTICKMARK_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlTickMark {
+
+static const ::sal_Int32 xlTickMarkCross = (sal_Int32)4;
+static const ::sal_Int32 xlTickMarkInside = (sal_Int32)2;
+static const ::sal_Int32 xlTickMarkNone = (sal_Int32)-4142;
+static const ::sal_Int32 xlTickMarkOutside = (sal_Int32)3;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLTICKMARK_HDL

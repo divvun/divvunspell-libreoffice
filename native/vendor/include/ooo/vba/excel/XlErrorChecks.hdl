@@ -1,0 +1,22 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLERRORCHECKS_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLERRORCHECKS_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlErrorChecks {
+
+static const ::sal_Int32 xlEmptyCellReferences = (sal_Int32)7;
+static const ::sal_Int32 xlEvaluateToError = (sal_Int32)1;
+static const ::sal_Int32 xlInconsistentFormula = (sal_Int32)4;
+static const ::sal_Int32 xlListDataValidation = (sal_Int32)8;
+static const ::sal_Int32 xlNumberAsText = (sal_Int32)3;
+static const ::sal_Int32 xlOmittedCells = (sal_Int32)5;
+static const ::sal_Int32 xlTextDate = (sal_Int32)2;
+static const ::sal_Int32 xlUnlockedFormulaCells = (sal_Int32)6;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLERRORCHECKS_HDL

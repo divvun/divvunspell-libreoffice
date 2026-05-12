@@ -1,0 +1,28 @@
+#ifndef INCLUDED_OOO_VBA_POWERPOINT_PPACTIONTYPE_HDL
+#define INCLUDED_OOO_VBA_POWERPOINT_PPACTIONTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace powerpoint { namespace PpActionType {
+
+static const ::sal_Int32 ppActionEndShow = (sal_Int32)6;
+static const ::sal_Int32 ppActionFirstSlide = (sal_Int32)3;
+static const ::sal_Int32 ppActionHyperlink = (sal_Int32)7;
+static const ::sal_Int32 ppActionLastSlide = (sal_Int32)4;
+static const ::sal_Int32 ppActionLastSlideViewed = (sal_Int32)5;
+static const ::sal_Int32 ppActionMixed = (sal_Int32)-2;
+static const ::sal_Int32 ppActionNamedSlideShow = (sal_Int32)10;
+static const ::sal_Int32 ppActionNextSlide = (sal_Int32)1;
+static const ::sal_Int32 ppActionNone = (sal_Int32)0;
+static const ::sal_Int32 ppActionOLEVerb = (sal_Int32)11;
+static const ::sal_Int32 ppActionPlay = (sal_Int32)12;
+static const ::sal_Int32 ppActionPreviousSlide = (sal_Int32)2;
+static const ::sal_Int32 ppActionRunMacro = (sal_Int32)8;
+static const ::sal_Int32 ppActionRunProgram = (sal_Int32)9;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_POWERPOINT_PPACTIONTYPE_HDL

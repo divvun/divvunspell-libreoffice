@@ -1,0 +1,57 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLFILEFORMAT_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLFILEFORMAT_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlFileFormat {
+
+static const ::sal_Int32 xlAddIn = (sal_Int32)18;
+static const ::sal_Int32 xlCSV = (sal_Int32)6;
+static const ::sal_Int32 xlCSVMSDOS = (sal_Int32)24;
+static const ::sal_Int32 xlCSVMac = (sal_Int32)22;
+static const ::sal_Int32 xlCSVWindows = (sal_Int32)23;
+static const ::sal_Int32 xlCurrentPlatformText = (sal_Int32)-4158;
+static const ::sal_Int32 xlDBF2 = (sal_Int32)7;
+static const ::sal_Int32 xlDBF3 = (sal_Int32)8;
+static const ::sal_Int32 xlDBF4 = (sal_Int32)11;
+static const ::sal_Int32 xlDIF = (sal_Int32)9;
+static const ::sal_Int32 xlExcel2 = (sal_Int32)16;
+static const ::sal_Int32 xlExcel2FarEast = (sal_Int32)27;
+static const ::sal_Int32 xlExcel3 = (sal_Int32)29;
+static const ::sal_Int32 xlExcel4 = (sal_Int32)33;
+static const ::sal_Int32 xlExcel4Workbook = (sal_Int32)35;
+static const ::sal_Int32 xlExcel5 = (sal_Int32)39;
+static const ::sal_Int32 xlExcel7 = (sal_Int32)39;
+static const ::sal_Int32 xlExcel9795 = (sal_Int32)43;
+static const ::sal_Int32 xlHtml = (sal_Int32)44;
+static const ::sal_Int32 xlIntlAddIn = (sal_Int32)26;
+static const ::sal_Int32 xlIntlMacro = (sal_Int32)25;
+static const ::sal_Int32 xlSYLK = (sal_Int32)2;
+static const ::sal_Int32 xlTemplate = (sal_Int32)17;
+static const ::sal_Int32 xlTextMSDOS = (sal_Int32)21;
+static const ::sal_Int32 xlTextMac = (sal_Int32)19;
+static const ::sal_Int32 xlTextPrinter = (sal_Int32)36;
+static const ::sal_Int32 xlTextWindows = (sal_Int32)20;
+static const ::sal_Int32 xlUnicodeText = (sal_Int32)42;
+static const ::sal_Int32 xlWJ2WD1 = (sal_Int32)14;
+static const ::sal_Int32 xlWJ3 = (sal_Int32)40;
+static const ::sal_Int32 xlWJ3FJ3 = (sal_Int32)41;
+static const ::sal_Int32 xlWK1 = (sal_Int32)5;
+static const ::sal_Int32 xlWK1ALL = (sal_Int32)31;
+static const ::sal_Int32 xlWK1FMT = (sal_Int32)30;
+static const ::sal_Int32 xlWK3 = (sal_Int32)15;
+static const ::sal_Int32 xlWK3FM3 = (sal_Int32)32;
+static const ::sal_Int32 xlWK4 = (sal_Int32)38;
+static const ::sal_Int32 xlWKS = (sal_Int32)4;
+static const ::sal_Int32 xlWQ1 = (sal_Int32)34;
+static const ::sal_Int32 xlWebArchive = (sal_Int32)45;
+static const ::sal_Int32 xlWorkbookNormal = (sal_Int32)-4143;
+static const ::sal_Int32 xlWorks2FarEast = (sal_Int32)28;
+static const ::sal_Int32 xlXMLSpreadsheet = (sal_Int32)46;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLFILEFORMAT_HDL

@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLENABLECANCELKEY_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLENABLECANCELKEY_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlEnableCancelKey {
+
+static const ::sal_Int32 xlDisabled = (sal_Int32)0;
+static const ::sal_Int32 xlErrorHandler = (sal_Int32)2;
+static const ::sal_Int32 xlInterrupt = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLENABLECANCELKEY_HDL

@@ -1,0 +1,24 @@
+#ifndef INCLUDED_OOO_VBA_ACCESS_ACTEXTTRANSFERTYPE_HDL
+#define INCLUDED_OOO_VBA_ACCESS_ACTEXTTRANSFERTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace access { namespace AcTextTransferType {
+
+static const ::sal_Int32 acExportDelim = (sal_Int32)2;
+static const ::sal_Int32 acExportFixed = (sal_Int32)3;
+static const ::sal_Int32 acExportHTML = (sal_Int32)8;
+static const ::sal_Int32 acExportMerge = (sal_Int32)4;
+static const ::sal_Int32 acImportDelim = (sal_Int32)0;
+static const ::sal_Int32 acImportFixed = (sal_Int32)1;
+static const ::sal_Int32 acImportHTML = (sal_Int32)7;
+static const ::sal_Int32 acLinkDelim = (sal_Int32)5;
+static const ::sal_Int32 acLinkFixed = (sal_Int32)6;
+static const ::sal_Int32 acLinkHTML = (sal_Int32)9;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_ACCESS_ACTEXTTRANSFERTYPE_HDL

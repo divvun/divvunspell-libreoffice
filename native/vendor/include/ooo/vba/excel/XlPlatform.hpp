@@ -1,0 +1,6 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLPLATFORM_HPP
+#define INCLUDED_OOO_VBA_EXCEL_XLPLATFORM_HPP
+
+#include "ooo/vba/excel/XlPlatform.hdl"
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLPLATFORM_HPP

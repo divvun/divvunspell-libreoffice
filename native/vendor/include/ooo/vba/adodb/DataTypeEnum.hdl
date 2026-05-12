@@ -1,0 +1,54 @@
+#ifndef INCLUDED_OOO_VBA_ADODB_DATATYPEENUM_HDL
+#define INCLUDED_OOO_VBA_ADODB_DATATYPEENUM_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace adodb { namespace DataTypeEnum {
+
+static const ::sal_Int32 adArray = (sal_Int32)8192;
+static const ::sal_Int32 adBSTR = (sal_Int32)8;
+static const ::sal_Int32 adBigInt = (sal_Int32)20;
+static const ::sal_Int32 adBinary = (sal_Int32)128;
+static const ::sal_Int32 adBoolean = (sal_Int32)11;
+static const ::sal_Int32 adChapter = (sal_Int32)136;
+static const ::sal_Int32 adChar = (sal_Int32)129;
+static const ::sal_Int32 adCurrency = (sal_Int32)6;
+static const ::sal_Int32 adDBDate = (sal_Int32)133;
+static const ::sal_Int32 adDBTime = (sal_Int32)134;
+static const ::sal_Int32 adDBTimeStamp = (sal_Int32)135;
+static const ::sal_Int32 adDate = (sal_Int32)7;
+static const ::sal_Int32 adDecimal = (sal_Int32)14;
+static const ::sal_Int32 adDouble = (sal_Int32)5;
+static const ::sal_Int32 adEmpty = (sal_Int32)0;
+static const ::sal_Int32 adError = (sal_Int32)10;
+static const ::sal_Int32 adFileTime = (sal_Int32)64;
+static const ::sal_Int32 adGUID = (sal_Int32)72;
+static const ::sal_Int32 adIDispatch = (sal_Int32)9;
+static const ::sal_Int32 adIUnknown = (sal_Int32)13;
+static const ::sal_Int32 adInteger = (sal_Int32)3;
+static const ::sal_Int32 adLongVarBinary = (sal_Int32)205;
+static const ::sal_Int32 adLongVarChar = (sal_Int32)201;
+static const ::sal_Int32 adLongVarWChar = (sal_Int32)203;
+static const ::sal_Int32 adNumeric = (sal_Int32)131;
+static const ::sal_Int32 adPropVariant = (sal_Int32)138;
+static const ::sal_Int32 adSingle = (sal_Int32)4;
+static const ::sal_Int32 adSmallInt = (sal_Int32)2;
+static const ::sal_Int32 adTinyInt = (sal_Int32)16;
+static const ::sal_Int32 adUnsignedBigInt = (sal_Int32)21;
+static const ::sal_Int32 adUnsignedInt = (sal_Int32)19;
+static const ::sal_Int32 adUnsignedSmallInt = (sal_Int32)18;
+static const ::sal_Int32 adUnsignedTinyInt = (sal_Int32)17;
+static const ::sal_Int32 adUserDefined = (sal_Int32)132;
+static const ::sal_Int32 adVarBinary = (sal_Int32)204;
+static const ::sal_Int32 adVarChar = (sal_Int32)200;
+static const ::sal_Int32 adVarNumeric = (sal_Int32)139;
+static const ::sal_Int32 adVarWChar = (sal_Int32)202;
+static const ::sal_Int32 adVariant = (sal_Int32)12;
+static const ::sal_Int32 adWChar = (sal_Int32)130;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_ADODB_DATATYPEENUM_HDL

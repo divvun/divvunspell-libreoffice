@@ -1,0 +1,19 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDPRINTOUTRANGE_HDL
+#define INCLUDED_OOO_VBA_WORD_WDPRINTOUTRANGE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdPrintOutRange {
+
+static const ::sal_Int32 wdPrintAllDocument = (sal_Int32)0;
+static const ::sal_Int32 wdPrintCurrentPage = (sal_Int32)2;
+static const ::sal_Int32 wdPrintFromTo = (sal_Int32)3;
+static const ::sal_Int32 wdPrintRangeOfPages = (sal_Int32)4;
+static const ::sal_Int32 wdPrintSelection = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDPRINTOUTRANGE_HDL

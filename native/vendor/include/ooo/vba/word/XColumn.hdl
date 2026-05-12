@@ -1,0 +1,46 @@
+#ifndef INCLUDED_OOO_VBA_WORD_XCOLUMN_HDL
+#define INCLUDED_OOO_VBA_WORD_XCOLUMN_HDL
+
+#include "sal/config.h"
+
+#include "ooo/vba/XHelperInterface.hdl"
+#include "com/sun/star/uno/Reference.h"
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace ooo { namespace vba { namespace word {
+
+class SAL_NO_VTABLE SAL_DLLPUBLIC_RTTI XColumn : public ::ooo::vba::XHelperInterface
+{
+public:
+#if defined LIBO_INTERNAL_ONLY
+    XColumn() = default;
+    XColumn(XColumn const &) = default;
+    XColumn(XColumn &&) = default;
+    XColumn & operator =(XColumn const &) = default;
+    XColumn & operator =(XColumn &&) = default;
+#endif
+
+
+    // Attributes
+    virtual ::sal_Int32 SAL_CALL getWidth() = 0;
+    virtual void SAL_CALL setWidth( ::sal_Int32 _width ) = 0;
+
+    // Methods
+    virtual void SAL_CALL Select() = 0;
+
+    static inline ::css::uno::Type const & SAL_CALL static_type(void * = 0);
+
+protected:
+    ~XColumn() SAL_NOEXCEPT {} // avoid warnings about virtual members and non-virtual dtor
+};
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::ooo::vba::word::XColumn const *);
+} } }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::uno::Reference< ::ooo::vba::word::XColumn > *);
+
+#endif

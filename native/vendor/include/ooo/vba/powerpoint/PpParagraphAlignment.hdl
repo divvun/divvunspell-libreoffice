@@ -1,0 +1,22 @@
+#ifndef INCLUDED_OOO_VBA_POWERPOINT_PPPARAGRAPHALIGNMENT_HDL
+#define INCLUDED_OOO_VBA_POWERPOINT_PPPARAGRAPHALIGNMENT_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace powerpoint { namespace PpParagraphAlignment {
+
+static const ::sal_Int32 ppAlignCenter = (sal_Int32)2;
+static const ::sal_Int32 ppAlignDistribute = (sal_Int32)5;
+static const ::sal_Int32 ppAlignJustify = (sal_Int32)4;
+static const ::sal_Int32 ppAlignJustifyLow = (sal_Int32)7;
+static const ::sal_Int32 ppAlignLeft = (sal_Int32)1;
+static const ::sal_Int32 ppAlignRight = (sal_Int32)3;
+static const ::sal_Int32 ppAlignThaiDistribute = (sal_Int32)6;
+static const ::sal_Int32 ppAlignmentMixed = (sal_Int32)-2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_POWERPOINT_PPPARAGRAPHALIGNMENT_HDL

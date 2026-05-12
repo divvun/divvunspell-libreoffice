@@ -1,0 +1,23 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDPARAGRAPHALIGNMENT_HDL
+#define INCLUDED_OOO_VBA_WORD_WDPARAGRAPHALIGNMENT_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdParagraphAlignment {
+
+static const ::sal_Int32 wdAlignParagraphCenter = (sal_Int32)1;
+static const ::sal_Int32 wdAlignParagraphDistribute = (sal_Int32)4;
+static const ::sal_Int32 wdAlignParagraphJustify = (sal_Int32)3;
+static const ::sal_Int32 wdAlignParagraphJustifyHi = (sal_Int32)7;
+static const ::sal_Int32 wdAlignParagraphJustifyLow = (sal_Int32)8;
+static const ::sal_Int32 wdAlignParagraphJustifyMed = (sal_Int32)5;
+static const ::sal_Int32 wdAlignParagraphLeft = (sal_Int32)0;
+static const ::sal_Int32 wdAlignParagraphRight = (sal_Int32)2;
+static const ::sal_Int32 wdAlignParagraphThaiJustify = (sal_Int32)9;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDPARAGRAPHALIGNMENT_HDL

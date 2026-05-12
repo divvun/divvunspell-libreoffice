@@ -1,0 +1,27 @@
+#ifndef INCLUDED_OOO_VBA_ADODB_CURSOROPTIONENUM_HDL
+#define INCLUDED_OOO_VBA_ADODB_CURSOROPTIONENUM_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace adodb { namespace CursorOptionEnum {
+
+static const ::sal_Int32 adAddNew = (sal_Int32)16778240;
+static const ::sal_Int32 adApproxPosition = (sal_Int32)16384;
+static const ::sal_Int32 adBookmark = (sal_Int32)8192;
+static const ::sal_Int32 adDelete = (sal_Int32)16779264;
+static const ::sal_Int32 adFind = (sal_Int32)524288;
+static const ::sal_Int32 adHoldRecords = (sal_Int32)256;
+static const ::sal_Int32 adIndex = (sal_Int32)8388608;
+static const ::sal_Int32 adMovePrevious = (sal_Int32)512;
+static const ::sal_Int32 adNotify = (sal_Int32)262144;
+static const ::sal_Int32 adResync = (sal_Int32)131072;
+static const ::sal_Int32 adSeek = (sal_Int32)4194304;
+static const ::sal_Int32 adUpdate = (sal_Int32)16809984;
+static const ::sal_Int32 adUpdateBatch = (sal_Int32)65536;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_ADODB_CURSOROPTIONENUM_HDL

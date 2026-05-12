@@ -1,0 +1,19 @@
+#ifndef INCLUDED_OOO_VBA_MSFORMS_FMPICTUREALIGNMENT_HDL
+#define INCLUDED_OOO_VBA_MSFORMS_FMPICTUREALIGNMENT_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace msforms { namespace fmPictureAlignment {
+
+static const ::sal_Int32 fmPictureAlignmentBottomLeft = (sal_Int32)3;
+static const ::sal_Int32 fmPictureAlignmentBottomRight = (sal_Int32)4;
+static const ::sal_Int32 fmPictureAlignmentCenter = (sal_Int32)2;
+static const ::sal_Int32 fmPictureAlignmentTopLeft = (sal_Int32)0;
+static const ::sal_Int32 fmPictureAlignmentTopRight = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_MSFORMS_FMPICTUREALIGNMENT_HDL

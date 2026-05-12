@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDROWALIGNMENT_HDL
+#define INCLUDED_OOO_VBA_WORD_WDROWALIGNMENT_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdRowAlignment {
+
+static const ::sal_Int32 wdAlignRowCenter = (sal_Int32)1;
+static const ::sal_Int32 wdAlignRowLeft = (sal_Int32)0;
+static const ::sal_Int32 wdAlignRowRight = (sal_Int32)2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDROWALIGNMENT_HDL

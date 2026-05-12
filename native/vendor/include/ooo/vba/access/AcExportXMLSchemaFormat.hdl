@@ -1,0 +1,16 @@
+#ifndef INCLUDED_OOO_VBA_ACCESS_ACEXPORTXMLSCHEMAFORMAT_HDL
+#define INCLUDED_OOO_VBA_ACCESS_ACEXPORTXMLSCHEMAFORMAT_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace access { namespace AcExportXMLSchemaFormat {
+
+static const ::sal_Int32 acSchemaNone = (sal_Int32)0;
+static const ::sal_Int32 acSchemaXSD = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_ACCESS_ACEXPORTXMLSCHEMAFORMAT_HDL

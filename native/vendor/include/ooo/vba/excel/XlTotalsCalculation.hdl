@@ -1,0 +1,23 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLTOTALSCALCULATION_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLTOTALSCALCULATION_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlTotalsCalculation {
+
+static const ::sal_Int32 xlTotalsCalculationAverage = (sal_Int32)2;
+static const ::sal_Int32 xlTotalsCalculationCount = (sal_Int32)3;
+static const ::sal_Int32 xlTotalsCalculationCountNums = (sal_Int32)4;
+static const ::sal_Int32 xlTotalsCalculationMax = (sal_Int32)6;
+static const ::sal_Int32 xlTotalsCalculationMin = (sal_Int32)5;
+static const ::sal_Int32 xlTotalsCalculationNone = (sal_Int32)0;
+static const ::sal_Int32 xlTotalsCalculationStdDev = (sal_Int32)7;
+static const ::sal_Int32 xlTotalsCalculationSum = (sal_Int32)1;
+static const ::sal_Int32 xlTotalsCalculationVar = (sal_Int32)8;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLTOTALSCALCULATION_HDL

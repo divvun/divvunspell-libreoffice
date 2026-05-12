@@ -1,0 +1,24 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDCHARACTERCASE_HDL
+#define INCLUDED_OOO_VBA_WORD_WDCHARACTERCASE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdCharacterCase {
+
+static const ::sal_Int32 wdFullWidth = (sal_Int32)7;
+static const ::sal_Int32 wdHalfWidth = (sal_Int32)6;
+static const ::sal_Int32 wdHiragana = (sal_Int32)9;
+static const ::sal_Int32 wdKatakana = (sal_Int32)8;
+static const ::sal_Int32 wdLowerCase = (sal_Int32)0;
+static const ::sal_Int32 wdNextCase = (sal_Int32)-1;
+static const ::sal_Int32 wdTitleSentence = (sal_Int32)4;
+static const ::sal_Int32 wdTitleWord = (sal_Int32)2;
+static const ::sal_Int32 wdToggleCase = (sal_Int32)5;
+static const ::sal_Int32 wdUpperCase = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDCHARACTERCASE_HDL

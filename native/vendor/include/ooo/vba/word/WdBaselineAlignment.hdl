@@ -1,0 +1,19 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDBASELINEALIGNMENT_HDL
+#define INCLUDED_OOO_VBA_WORD_WDBASELINEALIGNMENT_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdBaselineAlignment {
+
+static const ::sal_Int32 wdBaselineAlignAuto = (sal_Int32)4;
+static const ::sal_Int32 wdBaselineAlignBaseline = (sal_Int32)2;
+static const ::sal_Int32 wdBaselineAlignCenter = (sal_Int32)1;
+static const ::sal_Int32 wdBaselineAlignFarEast50 = (sal_Int32)3;
+static const ::sal_Int32 wdBaselineAlignTop = (sal_Int32)0;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDBASELINEALIGNMENT_HDL

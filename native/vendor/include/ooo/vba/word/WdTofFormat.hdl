@@ -1,0 +1,20 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDTOFFORMAT_HDL
+#define INCLUDED_OOO_VBA_WORD_WDTOFFORMAT_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdTofFormat {
+
+static const ::sal_Int32 wdTOFCentered = (sal_Int32)3;
+static const ::sal_Int32 wdTOFClassic = (sal_Int32)1;
+static const ::sal_Int32 wdTOFDistinctive = (sal_Int32)2;
+static const ::sal_Int32 wdTOFFormal = (sal_Int32)4;
+static const ::sal_Int32 wdTOFSimple = (sal_Int32)5;
+static const ::sal_Int32 wdTOFTemplate = (sal_Int32)0;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDTOFFORMAT_HDL

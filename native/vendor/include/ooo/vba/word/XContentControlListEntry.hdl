@@ -1,0 +1,54 @@
+#ifndef INCLUDED_OOO_VBA_WORD_XCONTENTCONTROLLISTENTRY_HDL
+#define INCLUDED_OOO_VBA_WORD_XCONTENTCONTROLLISTENTRY_HDL
+
+#include "sal/config.h"
+
+#include "ooo/vba/XHelperInterface.hdl"
+#include "com/sun/star/uno/Reference.h"
+#include "cppu/macros.hxx"
+#include "rtl/ustring.hxx"
+#include "sal/types.h"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace ooo { namespace vba { namespace word {
+
+class SAL_NO_VTABLE SAL_DLLPUBLIC_RTTI XContentControlListEntry : public ::ooo::vba::XHelperInterface
+{
+public:
+#if defined LIBO_INTERNAL_ONLY
+    XContentControlListEntry() = default;
+    XContentControlListEntry(XContentControlListEntry const &) = default;
+    XContentControlListEntry(XContentControlListEntry &&) = default;
+    XContentControlListEntry & operator =(XContentControlListEntry const &) = default;
+    XContentControlListEntry & operator =(XContentControlListEntry &&) = default;
+#endif
+
+
+    // Attributes
+    virtual ::sal_Int32 SAL_CALL getIndex() = 0;
+    virtual void SAL_CALL setIndex( ::sal_Int32 _index ) = 0;
+    virtual ::rtl::OUString SAL_CALL getText() = 0;
+    virtual void SAL_CALL setText( const ::rtl::OUString& _text ) = 0;
+    virtual ::rtl::OUString SAL_CALL getValue() = 0;
+    virtual void SAL_CALL setValue( const ::rtl::OUString& _value ) = 0;
+
+    // Methods
+    virtual void SAL_CALL Delete() = 0;
+    virtual void SAL_CALL MoveDown() = 0;
+    virtual void SAL_CALL MoveUp() = 0;
+    virtual void SAL_CALL Select() = 0;
+
+    static inline ::css::uno::Type const & SAL_CALL static_type(void * = 0);
+
+protected:
+    ~XContentControlListEntry() SAL_NOEXCEPT {} // avoid warnings about virtual members and non-virtual dtor
+};
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::ooo::vba::word::XContentControlListEntry const *);
+} } }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::uno::Reference< ::ooo::vba::word::XContentControlListEntry > *);
+
+#endif

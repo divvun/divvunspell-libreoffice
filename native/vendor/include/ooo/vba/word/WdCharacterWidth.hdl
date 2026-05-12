@@ -1,0 +1,16 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDCHARACTERWIDTH_HDL
+#define INCLUDED_OOO_VBA_WORD_WDCHARACTERWIDTH_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdCharacterWidth {
+
+static const ::sal_Int32 wdWidthFullWidth = (sal_Int32)7;
+static const ::sal_Int32 wdWidthHalfWidth = (sal_Int32)6;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDCHARACTERWIDTH_HDL

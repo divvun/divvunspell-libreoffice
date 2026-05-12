@@ -1,0 +1,45 @@
+#ifndef INCLUDED_OOO_VBA_WORD_XLISTENTRIES_HDL
+#define INCLUDED_OOO_VBA_WORD_XLISTENTRIES_HDL
+
+#include "sal/config.h"
+
+#include "ooo/vba/XCollection.hdl"
+namespace ooo { namespace vba { namespace word { class XListEntry; } } }
+#include "com/sun/star/uno/Any.h"
+#include "com/sun/star/uno/Reference.h"
+#include "cppu/macros.hxx"
+#include "rtl/ustring.hxx"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace ooo { namespace vba { namespace word {
+
+class SAL_NO_VTABLE SAL_DLLPUBLIC_RTTI XListEntries : public ::ooo::vba::XCollection
+{
+public:
+#if defined LIBO_INTERNAL_ONLY
+    XListEntries() = default;
+    XListEntries(XListEntries const &) = default;
+    XListEntries(XListEntries &&) = default;
+    XListEntries & operator =(XListEntries const &) = default;
+    XListEntries & operator =(XListEntries &&) = default;
+#endif
+
+
+    // Methods
+    virtual ::css::uno::Reference< ::ooo::vba::word::XListEntry > SAL_CALL Add( const ::rtl::OUString& Name, const ::css::uno::Any& Index ) = 0;
+    virtual void SAL_CALL Clear() = 0;
+
+    static inline ::css::uno::Type const & SAL_CALL static_type(void * = 0);
+
+protected:
+    ~XListEntries() SAL_NOEXCEPT {} // avoid warnings about virtual members and non-virtual dtor
+};
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::ooo::vba::word::XListEntries const *);
+} } }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::uno::Reference< ::ooo::vba::word::XListEntries > *);
+
+#endif

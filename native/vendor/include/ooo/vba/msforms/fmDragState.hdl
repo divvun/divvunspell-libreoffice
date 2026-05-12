@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_MSFORMS_FMDRAGSTATE_HDL
+#define INCLUDED_OOO_VBA_MSFORMS_FMDRAGSTATE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace msforms { namespace fmDragState {
+
+static const ::sal_Int32 fmDragStateEnter = (sal_Int32)0;
+static const ::sal_Int32 fmDragStateLeave = (sal_Int32)1;
+static const ::sal_Int32 fmDragStateOver = (sal_Int32)2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_MSFORMS_FMDRAGSTATE_HDL

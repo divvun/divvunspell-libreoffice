@@ -1,0 +1,55 @@
+#ifndef INCLUDED_OOO_VBA_WORD_XTEXTINPUT_HDL
+#define INCLUDED_OOO_VBA_WORD_XTEXTINPUT_HDL
+
+#include "sal/config.h"
+
+#include "com/sun/star/script/XDefaultProperty.hdl"
+#include "ooo/vba/XHelperInterface.hdl"
+#include "com/sun/star/uno/Any.h"
+#include "com/sun/star/uno/Reference.h"
+#include "cppu/macros.hxx"
+#include "rtl/ustring.hxx"
+#include "sal/types.h"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace ooo { namespace vba { namespace word {
+
+class SAL_NO_VTABLE SAL_DLLPUBLIC_RTTI XTextInput : public ::ooo::vba::XHelperInterface, public ::css::script::XDefaultProperty
+{
+public:
+#if defined LIBO_INTERNAL_ONLY
+    XTextInput() = default;
+    XTextInput(XTextInput const &) = default;
+    XTextInput(XTextInput &&) = default;
+    XTextInput & operator =(XTextInput const &) = default;
+    XTextInput & operator =(XTextInput &&) = default;
+#endif
+
+
+    // Attributes
+    virtual ::sal_Bool SAL_CALL getValid() = 0;
+    virtual ::rtl::OUString SAL_CALL getDefault() = 0;
+    virtual void SAL_CALL setDefault( const ::rtl::OUString& _default ) = 0;
+    virtual ::rtl::OUString SAL_CALL getFormat() = 0;
+    virtual ::sal_Int32 SAL_CALL getType() = 0;
+    virtual ::sal_Int32 SAL_CALL getWidth() = 0;
+    virtual void SAL_CALL setWidth( ::sal_Int32 _width ) = 0;
+
+    // Methods
+    virtual void SAL_CALL Clear() = 0;
+    virtual void SAL_CALL EditType( ::sal_Int32 Type, const ::css::uno::Any& Default, const ::css::uno::Any& Format, const ::css::uno::Any& Enabled ) = 0;
+
+    static inline ::css::uno::Type const & SAL_CALL static_type(void * = 0);
+
+protected:
+    ~XTextInput() SAL_NOEXCEPT {} // avoid warnings about virtual members and non-virtual dtor
+};
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::ooo::vba::word::XTextInput const *);
+} } }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::uno::Reference< ::ooo::vba::word::XTextInput > *);
+
+#endif

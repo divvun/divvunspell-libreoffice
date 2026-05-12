@@ -1,0 +1,21 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOOLEMENUGROUP_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOOLEMENUGROUP_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoOLEMenuGroup {
+
+static const ::sal_Int32 msoOLEMenuGroupContainer = (sal_Int32)2;
+static const ::sal_Int32 msoOLEMenuGroupEdit = (sal_Int32)1;
+static const ::sal_Int32 msoOLEMenuGroupFile = (sal_Int32)0;
+static const ::sal_Int32 msoOLEMenuGroupHelp = (sal_Int32)5;
+static const ::sal_Int32 msoOLEMenuGroupNone = (sal_Int32)-1;
+static const ::sal_Int32 msoOLEMenuGroupObject = (sal_Int32)3;
+static const ::sal_Int32 msoOLEMenuGroupWindow = (sal_Int32)4;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOOLEMENUGROUP_HDL

@@ -1,0 +1,19 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDTEXTORIENTATION_HDL
+#define INCLUDED_OOO_VBA_WORD_WDTEXTORIENTATION_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdTextOrientation {
+
+static const ::sal_Int32 wdTextOrientationDownward = (sal_Int32)3;
+static const ::sal_Int32 wdTextOrientationHorizontal = (sal_Int32)0;
+static const ::sal_Int32 wdTextOrientationHorizontalRotatedFarEast = (sal_Int32)4;
+static const ::sal_Int32 wdTextOrientationUpward = (sal_Int32)2;
+static const ::sal_Int32 wdTextOrientationVerticalFarEast = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDTEXTORIENTATION_HDL

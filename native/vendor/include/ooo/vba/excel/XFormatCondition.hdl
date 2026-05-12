@@ -1,0 +1,54 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XFORMATCONDITION_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XFORMATCONDITION_HDL
+
+#include "sal/config.h"
+
+#include "ooo/vba/XHelperInterface.hdl"
+namespace ooo { namespace vba { namespace excel { class XFont; } } }
+namespace ooo { namespace vba { namespace excel { class XInterior; } } }
+#include "com/sun/star/uno/Any.h"
+#include "com/sun/star/uno/Reference.h"
+#include "cppu/macros.hxx"
+#include "rtl/ustring.hxx"
+#include "sal/types.h"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace ooo { namespace vba { namespace excel {
+
+class SAL_NO_VTABLE SAL_DLLPUBLIC_RTTI XFormatCondition : public ::ooo::vba::XHelperInterface
+{
+public:
+#if defined LIBO_INTERNAL_ONLY
+    XFormatCondition() = default;
+    XFormatCondition(XFormatCondition const &) = default;
+    XFormatCondition(XFormatCondition &&) = default;
+    XFormatCondition & operator =(XFormatCondition const &) = default;
+    XFormatCondition & operator =(XFormatCondition &&) = default;
+#endif
+
+
+    // Methods
+    virtual void SAL_CALL Delete() = 0;
+    virtual void SAL_CALL Modify( ::sal_Int32 Type, const ::css::uno::Any& Operator, const ::css::uno::Any& Formula1, const ::css::uno::Any& Formula2 ) = 0;
+    virtual ::sal_Int32 SAL_CALL Type() = 0;
+    virtual ::sal_Int32 SAL_CALL Operator() = 0;
+    virtual ::rtl::OUString SAL_CALL Formula1() = 0;
+    virtual ::rtl::OUString SAL_CALL Formula2() = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::excel::XInterior > SAL_CALL Interior() = 0;
+    virtual ::css::uno::Any SAL_CALL Borders( const ::css::uno::Any& Index ) = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::excel::XFont > SAL_CALL Font() = 0;
+
+    static inline ::css::uno::Type const & SAL_CALL static_type(void * = 0);
+
+protected:
+    ~XFormatCondition() SAL_NOEXCEPT {} // avoid warnings about virtual members and non-virtual dtor
+};
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::ooo::vba::excel::XFormatCondition const *);
+} } }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::uno::Reference< ::ooo::vba::excel::XFormatCondition > *);
+
+#endif

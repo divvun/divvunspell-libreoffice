@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_ACCESS_ACSEARCHDIRECTION_HDL
+#define INCLUDED_OOO_VBA_ACCESS_ACSEARCHDIRECTION_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace access { namespace AcSearchDirection {
+
+static const ::sal_Int32 acDown = (sal_Int32)1;
+static const ::sal_Int32 acSearchAll = (sal_Int32)2;
+static const ::sal_Int32 acUp = (sal_Int32)0;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_ACCESS_ACSEARCHDIRECTION_HDL

@@ -1,0 +1,63 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XNAME_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XNAME_HDL
+
+#include "sal/config.h"
+
+#include "ooo/vba/XHelperInterface.hdl"
+namespace ooo { namespace vba { namespace excel { class XRange; } } }
+#include "com/sun/star/uno/Reference.h"
+#include "cppu/macros.hxx"
+#include "rtl/ustring.hxx"
+#include "sal/types.h"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace ooo { namespace vba { namespace excel {
+
+class SAL_NO_VTABLE SAL_DLLPUBLIC_RTTI XName : public ::ooo::vba::XHelperInterface
+{
+public:
+#if defined LIBO_INTERNAL_ONLY
+    XName() = default;
+    XName(XName const &) = default;
+    XName(XName &&) = default;
+    XName & operator =(XName const &) = default;
+    XName & operator =(XName &&) = default;
+#endif
+
+
+    // Attributes
+    virtual ::rtl::OUString SAL_CALL getName() = 0;
+    virtual void SAL_CALL setName( const ::rtl::OUString& _name ) = 0;
+    virtual ::rtl::OUString SAL_CALL getNameLocal() = 0;
+    virtual void SAL_CALL setNameLocal( const ::rtl::OUString& _namelocal ) = 0;
+    virtual ::sal_Bool SAL_CALL getVisible() = 0;
+    virtual void SAL_CALL setVisible( ::sal_Bool _visible ) = 0;
+    virtual ::rtl::OUString SAL_CALL getValue() = 0;
+    virtual void SAL_CALL setValue( const ::rtl::OUString& _value ) = 0;
+    virtual ::rtl::OUString SAL_CALL getRefersTo() = 0;
+    virtual void SAL_CALL setRefersTo( const ::rtl::OUString& _refersto ) = 0;
+    virtual ::rtl::OUString SAL_CALL getRefersToLocal() = 0;
+    virtual void SAL_CALL setRefersToLocal( const ::rtl::OUString& _referstolocal ) = 0;
+    virtual ::rtl::OUString SAL_CALL getRefersToR1C1() = 0;
+    virtual void SAL_CALL setRefersToR1C1( const ::rtl::OUString& _referstor1c1 ) = 0;
+    virtual ::rtl::OUString SAL_CALL getRefersToR1C1Local() = 0;
+    virtual void SAL_CALL setRefersToR1C1Local( const ::rtl::OUString& _referstor1c1local ) = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::excel::XRange > SAL_CALL getRefersToRange() = 0;
+
+    // Methods
+    virtual void SAL_CALL Delete() = 0;
+
+    static inline ::css::uno::Type const & SAL_CALL static_type(void * = 0);
+
+protected:
+    ~XName() SAL_NOEXCEPT {} // avoid warnings about virtual members and non-virtual dtor
+};
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::ooo::vba::excel::XName const *);
+} } }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::uno::Reference< ::ooo::vba::excel::XName > *);
+
+#endif

@@ -1,0 +1,19 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLWINDOWTYPE_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLWINDOWTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlWindowType {
+
+static const ::sal_Int32 xlChartAsWindow = (sal_Int32)5;
+static const ::sal_Int32 xlChartInPlace = (sal_Int32)4;
+static const ::sal_Int32 xlClipboard = (sal_Int32)3;
+static const ::sal_Int32 xlInfo = (sal_Int32)-4129;
+static const ::sal_Int32 xlWorkbook = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLWINDOWTYPE_HDL

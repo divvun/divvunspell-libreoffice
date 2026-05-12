@@ -1,0 +1,26 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDBROWSETARGET_HDL
+#define INCLUDED_OOO_VBA_WORD_WDBROWSETARGET_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdBrowseTarget {
+
+static const ::sal_Int32 wdBrowseComment = (sal_Int32)3;
+static const ::sal_Int32 wdBrowseEdit = (sal_Int32)10;
+static const ::sal_Int32 wdBrowseEndnote = (sal_Int32)5;
+static const ::sal_Int32 wdBrowseField = (sal_Int32)6;
+static const ::sal_Int32 wdBrowseFind = (sal_Int32)11;
+static const ::sal_Int32 wdBrowseFootnote = (sal_Int32)4;
+static const ::sal_Int32 wdBrowseGoTo = (sal_Int32)12;
+static const ::sal_Int32 wdBrowseGraphic = (sal_Int32)8;
+static const ::sal_Int32 wdBrowseHeading = (sal_Int32)9;
+static const ::sal_Int32 wdBrowsePage = (sal_Int32)1;
+static const ::sal_Int32 wdBrowseSection = (sal_Int32)2;
+static const ::sal_Int32 wdBrowseTable = (sal_Int32)7;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDBROWSETARGET_HDL

@@ -1,0 +1,32 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDUNDERLINE_HDL
+#define INCLUDED_OOO_VBA_WORD_WDUNDERLINE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdUnderline {
+
+static const ::sal_Int32 wdUnderlineDash = (sal_Int32)7;
+static const ::sal_Int32 wdUnderlineDashHeavy = (sal_Int32)23;
+static const ::sal_Int32 wdUnderlineDashLong = (sal_Int32)39;
+static const ::sal_Int32 wdUnderlineDashLongHeavy = (sal_Int32)55;
+static const ::sal_Int32 wdUnderlineDotDash = (sal_Int32)9;
+static const ::sal_Int32 wdUnderlineDotDashHeavy = (sal_Int32)25;
+static const ::sal_Int32 wdUnderlineDotDotDash = (sal_Int32)10;
+static const ::sal_Int32 wdUnderlineDotDotDashHeavy = (sal_Int32)26;
+static const ::sal_Int32 wdUnderlineDotted = (sal_Int32)4;
+static const ::sal_Int32 wdUnderlineDottedHeavy = (sal_Int32)20;
+static const ::sal_Int32 wdUnderlineDouble = (sal_Int32)3;
+static const ::sal_Int32 wdUnderlineNone = (sal_Int32)0;
+static const ::sal_Int32 wdUnderlineSingle = (sal_Int32)1;
+static const ::sal_Int32 wdUnderlineThick = (sal_Int32)6;
+static const ::sal_Int32 wdUnderlineWavy = (sal_Int32)11;
+static const ::sal_Int32 wdUnderlineWavyDouble = (sal_Int32)43;
+static const ::sal_Int32 wdUnderlineWavyHeavy = (sal_Int32)27;
+static const ::sal_Int32 wdUnderlineWords = (sal_Int32)2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDUNDERLINE_HDL

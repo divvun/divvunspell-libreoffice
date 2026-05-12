@@ -1,0 +1,46 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDCAPTIONNUMBERSTYLE_HDL
+#define INCLUDED_OOO_VBA_WORD_WDCAPTIONNUMBERSTYLE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdCaptionNumberStyle {
+
+static const ::sal_Int32 wdCaptionNumberStyleArabic = (sal_Int32)0;
+static const ::sal_Int32 wdCaptionNumberStyleArabicFullWidth = (sal_Int32)14;
+static const ::sal_Int32 wdCaptionNumberStyleArabicLetter1 = (sal_Int32)46;
+static const ::sal_Int32 wdCaptionNumberStyleArabicLetter2 = (sal_Int32)48;
+static const ::sal_Int32 wdCaptionNumberStyleChosung = (sal_Int32)25;
+static const ::sal_Int32 wdCaptionNumberStyleGanada = (sal_Int32)24;
+static const ::sal_Int32 wdCaptionNumberStyleHanjaRead = (sal_Int32)41;
+static const ::sal_Int32 wdCaptionNumberStyleHanjaReadDigit = (sal_Int32)42;
+static const ::sal_Int32 wdCaptionNumberStyleHebrewLetter1 = (sal_Int32)45;
+static const ::sal_Int32 wdCaptionNumberStyleHebrewLetter2 = (sal_Int32)47;
+static const ::sal_Int32 wdCaptionNumberStyleHindiArabic = (sal_Int32)51;
+static const ::sal_Int32 wdCaptionNumberStyleHindiCardinalText = (sal_Int32)52;
+static const ::sal_Int32 wdCaptionNumberStyleHindiLetter1 = (sal_Int32)49;
+static const ::sal_Int32 wdCaptionNumberStyleHindiLetter2 = (sal_Int32)50;
+static const ::sal_Int32 wdCaptionNumberStyleKanji = (sal_Int32)10;
+static const ::sal_Int32 wdCaptionNumberStyleKanjiDigit = (sal_Int32)11;
+static const ::sal_Int32 wdCaptionNumberStyleKanjiTraditional = (sal_Int32)16;
+static const ::sal_Int32 wdCaptionNumberStyleLowercaseLetter = (sal_Int32)4;
+static const ::sal_Int32 wdCaptionNumberStyleLowercaseRoman = (sal_Int32)2;
+static const ::sal_Int32 wdCaptionNumberStyleNumberInCircle = (sal_Int32)18;
+static const ::sal_Int32 wdCaptionNumberStyleSimpChinNum2 = (sal_Int32)38;
+static const ::sal_Int32 wdCaptionNumberStyleSimpChinNum3 = (sal_Int32)39;
+static const ::sal_Int32 wdCaptionNumberStyleThaiArabic = (sal_Int32)54;
+static const ::sal_Int32 wdCaptionNumberStyleThaiCardinalText = (sal_Int32)55;
+static const ::sal_Int32 wdCaptionNumberStyleThaiLetter = (sal_Int32)53;
+static const ::sal_Int32 wdCaptionNumberStyleTradChinNum2 = (sal_Int32)34;
+static const ::sal_Int32 wdCaptionNumberStyleTradChinNum3 = (sal_Int32)35;
+static const ::sal_Int32 wdCaptionNumberStyleUppercaseLetter = (sal_Int32)3;
+static const ::sal_Int32 wdCaptionNumberStyleUppercaseRoman = (sal_Int32)1;
+static const ::sal_Int32 wdCaptionNumberStyleVietCardinalText = (sal_Int32)56;
+static const ::sal_Int32 wdCaptionNumberStyleZodiac1 = (sal_Int32)30;
+static const ::sal_Int32 wdCaptionNumberStyleZodiac2 = (sal_Int32)31;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDCAPTIONNUMBERSTYLE_HDL

@@ -1,0 +1,155 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XRANGE_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XRANGE_HDL
+
+#include "sal/config.h"
+
+#include "com/sun/star/container/XEnumerationAccess.hdl"
+#include "com/sun/star/script/XDefaultMethod.hdl"
+#include "com/sun/star/script/XDefaultProperty.hdl"
+#include "com/sun/star/script/XErrorQuery.hdl"
+namespace ooo { namespace vba { namespace excel { class XCharacters; } } }
+namespace ooo { namespace vba { namespace excel { class XComment; } } }
+#include "ooo/vba/excel/XFormat.hdl"
+namespace ooo { namespace vba { namespace excel { class XName; } } }
+namespace ooo { namespace vba { namespace excel { class XRange; } } }
+namespace ooo { namespace vba { namespace excel { class XValidation; } } }
+namespace ooo { namespace vba { namespace excel { class XWorksheet; } } }
+#include "com/sun/star/uno/Any.h"
+#include "com/sun/star/uno/Reference.h"
+#include "com/sun/star/uno/Sequence.h"
+#include "cppu/macros.hxx"
+#include "rtl/ustring.hxx"
+#include "sal/types.h"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace ooo { namespace vba { namespace excel {
+
+class SAL_NO_VTABLE SAL_DLLPUBLIC_RTTI XRange : public ::css::container::XEnumerationAccess, public ::css::script::XDefaultMethod, public ::css::script::XDefaultProperty, public ::css::script::XErrorQuery, public ::ooo::vba::excel::XFormat
+{
+public:
+#if defined LIBO_INTERNAL_ONLY
+    XRange() = default;
+    XRange(XRange const &) = default;
+    XRange(XRange &&) = default;
+    XRange & operator =(XRange const &) = default;
+    XRange & operator =(XRange &&) = default;
+#endif
+
+
+    // Attributes
+    virtual ::css::uno::Any SAL_CALL getValue() = 0;
+    virtual void SAL_CALL setValue( const ::css::uno::Any& _value ) = 0;
+    virtual ::css::uno::Any SAL_CALL getValue2() = 0;
+    virtual void SAL_CALL setValue2( const ::css::uno::Any& _value2 ) = 0;
+    virtual ::css::uno::Any SAL_CALL getFormula() = 0;
+    virtual void SAL_CALL setFormula( const ::css::uno::Any& _formula ) = 0;
+    virtual ::css::uno::Any SAL_CALL getFormulaArray() = 0;
+    virtual void SAL_CALL setFormulaArray( const ::css::uno::Any& _formulaarray ) = 0;
+    virtual ::css::uno::Any SAL_CALL getFormulaR1C1() = 0;
+    virtual void SAL_CALL setFormulaR1C1( const ::css::uno::Any& _formular1c1 ) = 0;
+    virtual ::css::uno::Any SAL_CALL getFormulaLocal() = 0;
+    virtual void SAL_CALL setFormulaLocal( const ::css::uno::Any& _formulalocal ) = 0;
+    virtual ::css::uno::Any SAL_CALL getFormulaR1C1Local() = 0;
+    virtual void SAL_CALL setFormulaR1C1Local( const ::css::uno::Any& _formular1c1local ) = 0;
+    virtual ::sal_Int32 SAL_CALL getCount() = 0;
+    virtual ::sal_Int32 SAL_CALL getRow() = 0;
+    virtual ::sal_Int32 SAL_CALL getColumn() = 0;
+    virtual ::rtl::OUString SAL_CALL getText() = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::excel::XRange > SAL_CALL getEntireRow() = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::excel::XRange > SAL_CALL getEntireColumn() = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::excel::XComment > SAL_CALL getComment() = 0;
+    virtual ::css::uno::Any SAL_CALL getHidden() = 0;
+    virtual void SAL_CALL setHidden( const ::css::uno::Any& _hidden ) = 0;
+    virtual ::css::uno::Any SAL_CALL getColumnWidth() = 0;
+    virtual void SAL_CALL setColumnWidth( const ::css::uno::Any& _columnwidth ) = 0;
+    virtual ::css::uno::Any SAL_CALL getWidth() = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::excel::XWorksheet > SAL_CALL getWorksheet() = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::excel::XName > SAL_CALL getName() = 0;
+    virtual ::css::uno::Any SAL_CALL getRowHeight() = 0;
+    virtual void SAL_CALL setRowHeight( const ::css::uno::Any& _rowheight ) = 0;
+    virtual ::css::uno::Any SAL_CALL getHeight() = 0;
+    virtual ::css::uno::Any SAL_CALL getTop() = 0;
+    virtual ::css::uno::Any SAL_CALL getLeft() = 0;
+    virtual ::css::uno::Any SAL_CALL getPageBreak() = 0;
+    virtual void SAL_CALL setPageBreak( const ::css::uno::Any& _pagebreak ) = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::excel::XValidation > SAL_CALL getValidation() = 0;
+    virtual ::css::uno::Any SAL_CALL getPrefixCharacter() = 0;
+    virtual ::css::uno::Any SAL_CALL getStyle() = 0;
+    virtual void SAL_CALL setStyle( const ::css::uno::Any& _style ) = 0;
+    virtual ::css::uno::Any SAL_CALL getAddIndent() = 0;
+    virtual void SAL_CALL setAddIndent( const ::css::uno::Any& _addindent ) = 0;
+    virtual ::css::uno::Any SAL_CALL getShowDetail() = 0;
+    virtual void SAL_CALL setShowDetail( const ::css::uno::Any& _showdetail ) = 0;
+
+    // Methods
+    virtual ::css::uno::Reference< ::ooo::vba::excel::XComment > SAL_CALL AddComment( const ::css::uno::Any& Text ) = 0;
+    virtual void SAL_CALL Clear() = 0;
+    virtual void SAL_CALL ClearComments() = 0;
+    virtual void SAL_CALL ClearContents() = 0;
+    virtual void SAL_CALL ClearFormats() = 0;
+    virtual ::css::uno::Any SAL_CALL HasFormula() = 0;
+    virtual void SAL_CALL FillLeft() = 0;
+    virtual void SAL_CALL FillRight() = 0;
+    virtual void SAL_CALL FillUp() = 0;
+    virtual void SAL_CALL FillDown() = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::excel::XRange > SAL_CALL Item( const ::css::uno::Any& RowIndex, const ::css::uno::Any& ColumnIndex ) = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::excel::XRange > SAL_CALL Offset( const ::css::uno::Any& RowOffset, const ::css::uno::Any& ColumnOffset ) = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::excel::XRange > SAL_CALL CurrentRegion() = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::excel::XRange > SAL_CALL CurrentArray() = 0;
+    virtual ::rtl::OUString SAL_CALL Characters( const ::css::uno::Any& Start, const ::css::uno::Any& Length ) = 0;
+    virtual ::rtl::OUString SAL_CALL Address( const ::css::uno::Any& RowAbsolute, const ::css::uno::Any& ColumnAbsolute, const ::css::uno::Any& ReferenceStyle, const ::css::uno::Any& External, const ::css::uno::Any& RelativeTo ) = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::excel::XRange > SAL_CALL Cells( const ::css::uno::Any& RowIndex, const ::css::uno::Any& ColumnIndex ) = 0;
+    virtual void SAL_CALL Select() = 0;
+    virtual void SAL_CALL AutoOutline() = 0;
+    virtual void SAL_CALL Activate() = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::excel::XRange > SAL_CALL Rows( const ::css::uno::Any& RowIndex ) = 0;
+    virtual void SAL_CALL Calculate() = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::excel::XRange > SAL_CALL Columns( const ::css::uno::Any& ColumnIndex ) = 0;
+    virtual void SAL_CALL Copy( const ::css::uno::Any& Destination ) = 0;
+    virtual void SAL_CALL Cut( const ::css::uno::Any& Destination ) = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::excel::XRange > SAL_CALL Resize( const ::css::uno::Any& RowSize, const ::css::uno::Any& ColumnSize ) = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::excel::XRange > SAL_CALL Range( const ::css::uno::Any& Cell1, const ::css::uno::Any& Cell2 ) = 0;
+    virtual ::css::uno::Any SAL_CALL getCellRange() = 0;
+    virtual void SAL_CALL PasteSpecial( const ::css::uno::Any& Paste, const ::css::uno::Any& Operation, const ::css::uno::Any& SkipBlanks, const ::css::uno::Any& Transpose ) = 0;
+    virtual ::sal_Bool SAL_CALL Replace( const ::rtl::OUString& What, const ::rtl::OUString& Replacement, const ::css::uno::Any& LookAt, const ::css::uno::Any& SearchOrder, const ::css::uno::Any& MatchCase, const ::css::uno::Any& MatchByte, const ::css::uno::Any& SearchFormat, const ::css::uno::Any& ReplaceFormat ) = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::excel::XRange > SAL_CALL Find( const ::css::uno::Any& What, const ::css::uno::Any& After, const ::css::uno::Any& LookIn, const ::css::uno::Any& LookAt, const ::css::uno::Any& SearchOrder, const ::css::uno::Any& SearchDirection, const ::css::uno::Any& MatchCase, const ::css::uno::Any& MatchByte, const ::css::uno::Any& SearchFormat ) = 0;
+    virtual void SAL_CALL Sort( const ::css::uno::Any& Key1, const ::css::uno::Any& Order1, const ::css::uno::Any& Key2, const ::css::uno::Any& Type, const ::css::uno::Any& Order2, const ::css::uno::Any& Key3, const ::css::uno::Any& Order3, const ::css::uno::Any& Header, const ::css::uno::Any& OrderCustom, const ::css::uno::Any& MatchCase, const ::css::uno::Any& Orientation, const ::css::uno::Any& SortMethod, const ::css::uno::Any& DataOption1, const ::css::uno::Any& DataOption2, const ::css::uno::Any& DataOption3 ) = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::excel::XRange > SAL_CALL End( ::sal_Int32 Direction ) = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::excel::XCharacters > SAL_CALL characters( const ::css::uno::Any& Start, const ::css::uno::Any& Length ) = 0;
+    virtual void SAL_CALL Delete( const ::css::uno::Any& Shift ) = 0;
+    virtual ::css::uno::Any SAL_CALL Areas( const ::css::uno::Any& Item ) = 0;
+    virtual ::css::uno::Any SAL_CALL BorderAround( const ::css::uno::Any& LineStyle, const ::css::uno::Any& Weight, const ::css::uno::Any& ColorIndex, const ::css::uno::Any& Color ) = 0;
+    virtual void SAL_CALL AutoFilter( const ::css::uno::Any& Field, const ::css::uno::Any& Criteria1, const ::css::uno::Any& Operator, const ::css::uno::Any& Criteria2, const ::css::uno::Any& VisibleDropDown ) = 0;
+    virtual void SAL_CALL Insert( const ::css::uno::Any& Shift, const ::css::uno::Any& CopyOrigin ) = 0;
+    virtual void SAL_CALL Autofit() = 0;
+    virtual void SAL_CALL PrintOut( const ::css::uno::Any& From, const ::css::uno::Any& To, const ::css::uno::Any& Copies, const ::css::uno::Any& Preview, const ::css::uno::Any& ActivePrinter, const ::css::uno::Any& PrintToFile, const ::css::uno::Any& Collate, const ::css::uno::Any& PrToFileName ) = 0;
+    virtual void SAL_CALL ExportAsFixedFormat( const ::css::uno::Any& Type, const ::css::uno::Any& FileName, const ::css::uno::Any& Quality, const ::css::uno::Any& IncludeDocProperties, const ::css::uno::Any& IgnorePrintAreas, const ::css::uno::Any& From, const ::css::uno::Any& To, const ::css::uno::Any& OpenAfterPublish, const ::css::uno::Any& FixedFormatExtClassPtr ) = 0;
+    virtual void SAL_CALL AutoFill( const ::css::uno::Reference< ::ooo::vba::excel::XRange >& Destination, const ::css::uno::Any& Type ) = 0;
+    virtual ::sal_Bool SAL_CALL GoalSeek( const ::css::uno::Any& Goal, const ::css::uno::Reference< ::ooo::vba::excel::XRange >& ChangingCell ) = 0;
+    virtual void SAL_CALL ClearOutline() = 0;
+    virtual void SAL_CALL Ungroup() = 0;
+    virtual void SAL_CALL Group() = 0;
+    virtual void SAL_CALL Merge( const ::css::uno::Any& Across ) = 0;
+    virtual void SAL_CALL UnMerge() = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::excel::XRange > SAL_CALL Next() = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::excel::XRange > SAL_CALL Previous() = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::excel::XRange > SAL_CALL SpecialCells( const ::css::uno::Any& Type, const ::css::uno::Any& Value ) = 0;
+    virtual void SAL_CALL RemoveSubtotal() = 0;
+    virtual void SAL_CALL Subtotal( ::sal_Int32 GroupBy, ::sal_Int32 Function, const ::css::uno::Sequence< ::sal_Int32 >& TotalList, const ::css::uno::Any& Replace, const ::css::uno::Any& PageBreaks, const ::css::uno::Any& SummaryBelowData ) = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::excel::XRange > SAL_CALL MergeArea() = 0;
+    virtual ::css::uno::Any SAL_CALL Hyperlinks( const ::css::uno::Any& Index ) = 0;
+
+    static inline ::css::uno::Type const & SAL_CALL static_type(void * = 0);
+
+protected:
+    ~XRange() SAL_NOEXCEPT {} // avoid warnings about virtual members and non-virtual dtor
+};
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::ooo::vba::excel::XRange const *);
+} } }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::uno::Reference< ::ooo::vba::excel::XRange > *);
+
+#endif

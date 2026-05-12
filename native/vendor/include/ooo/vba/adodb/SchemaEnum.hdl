@@ -1,0 +1,56 @@
+#ifndef INCLUDED_OOO_VBA_ADODB_SCHEMAENUM_HDL
+#define INCLUDED_OOO_VBA_ADODB_SCHEMAENUM_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace adodb { namespace SchemaEnum {
+
+static const ::sal_Int32 adSchemaAsserts = (sal_Int32)0;
+static const ::sal_Int32 adSchemaCatalogs = (sal_Int32)1;
+static const ::sal_Int32 adSchemaCharacterSets = (sal_Int32)2;
+static const ::sal_Int32 adSchemaCheckConstraints = (sal_Int32)5;
+static const ::sal_Int32 adSchemaCollations = (sal_Int32)3;
+static const ::sal_Int32 adSchemaColumnPrivileges = (sal_Int32)13;
+static const ::sal_Int32 adSchemaColumns = (sal_Int32)4;
+static const ::sal_Int32 adSchemaColumnsDomainUsage = (sal_Int32)11;
+static const ::sal_Int32 adSchemaConstraintColumnUsage = (sal_Int32)6;
+static const ::sal_Int32 adSchemaConstraintTableUsage = (sal_Int32)7;
+static const ::sal_Int32 adSchemaCubes = (sal_Int32)32;
+static const ::sal_Int32 adSchemaDBInfoKeywords = (sal_Int32)30;
+static const ::sal_Int32 adSchemaDBInfoLiterals = (sal_Int32)31;
+static const ::sal_Int32 adSchemaDimensions = (sal_Int32)33;
+static const ::sal_Int32 adSchemaForeignKeys = (sal_Int32)27;
+static const ::sal_Int32 adSchemaHierarchies = (sal_Int32)34;
+static const ::sal_Int32 adSchemaIndexes = (sal_Int32)12;
+static const ::sal_Int32 adSchemaKeyColumnUsage = (sal_Int32)8;
+static const ::sal_Int32 adSchemaLevels = (sal_Int32)35;
+static const ::sal_Int32 adSchemaMeasures = (sal_Int32)36;
+static const ::sal_Int32 adSchemaMembers = (sal_Int32)38;
+static const ::sal_Int32 adSchemaPrimaryKeys = (sal_Int32)28;
+static const ::sal_Int32 adSchemaProcedureColumns = (sal_Int32)29;
+static const ::sal_Int32 adSchemaProcedureParameters = (sal_Int32)26;
+static const ::sal_Int32 adSchemaProcedures = (sal_Int32)16;
+static const ::sal_Int32 adSchemaProperties = (sal_Int32)37;
+static const ::sal_Int32 adSchemaProviderSpecific = (sal_Int32)-1;
+static const ::sal_Int32 adSchemaProviderTypes = (sal_Int32)22;
+static const ::sal_Int32 adSchemaReferentialConstraints = (sal_Int32)9;
+static const ::sal_Int32 adSchemaReferentialContraints = (sal_Int32)9;
+static const ::sal_Int32 adSchemaSQLLanguages = (sal_Int32)18;
+static const ::sal_Int32 adSchemaSchemata = (sal_Int32)17;
+static const ::sal_Int32 adSchemaStatistics = (sal_Int32)19;
+static const ::sal_Int32 adSchemaTableConstraints = (sal_Int32)10;
+static const ::sal_Int32 adSchemaTablePrivileges = (sal_Int32)14;
+static const ::sal_Int32 adSchemaTables = (sal_Int32)20;
+static const ::sal_Int32 adSchemaTranslations = (sal_Int32)21;
+static const ::sal_Int32 adSchemaTrustees = (sal_Int32)39;
+static const ::sal_Int32 adSchemaUsagePrivileges = (sal_Int32)15;
+static const ::sal_Int32 adSchemaViewColumnUsage = (sal_Int32)24;
+static const ::sal_Int32 adSchemaViewTableUsage = (sal_Int32)25;
+static const ::sal_Int32 adSchemaViews = (sal_Int32)23;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_ADODB_SCHEMAENUM_HDL

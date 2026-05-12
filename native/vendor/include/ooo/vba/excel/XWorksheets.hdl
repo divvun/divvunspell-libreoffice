@@ -1,0 +1,51 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XWORKSHEETS_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XWORKSHEETS_HDL
+
+#include "sal/config.h"
+
+#include "ooo/vba/XCollection.hdl"
+#include "com/sun/star/uno/Any.h"
+#include "com/sun/star/uno/Reference.h"
+#include "cppu/macros.hxx"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace ooo { namespace vba { namespace excel {
+
+class SAL_NO_VTABLE SAL_DLLPUBLIC_RTTI XWorksheets : public ::ooo::vba::XCollection
+{
+public:
+#if defined LIBO_INTERNAL_ONLY
+    XWorksheets() = default;
+    XWorksheets(XWorksheets const &) = default;
+    XWorksheets(XWorksheets &&) = default;
+    XWorksheets & operator =(XWorksheets const &) = default;
+    XWorksheets & operator =(XWorksheets &&) = default;
+#endif
+
+
+    // Attributes
+    virtual ::css::uno::Any SAL_CALL getVisible() = 0;
+    virtual void SAL_CALL setVisible( const ::css::uno::Any& _visible ) = 0;
+
+    // Methods
+    virtual ::css::uno::Any SAL_CALL Add( const ::css::uno::Any& Before, const ::css::uno::Any& After, const ::css::uno::Any& Count, const ::css::uno::Any& Type ) = 0;
+    virtual void SAL_CALL Delete() = 0;
+    virtual void SAL_CALL PrintOut( const ::css::uno::Any& From, const ::css::uno::Any& To, const ::css::uno::Any& Copies, const ::css::uno::Any& Preview, const ::css::uno::Any& ActivePrinter, const ::css::uno::Any& PrintToFile, const ::css::uno::Any& Collate, const ::css::uno::Any& PrToFileName ) = 0;
+    virtual void SAL_CALL Select( const ::css::uno::Any& Replace ) = 0;
+    virtual void SAL_CALL Copy( const ::css::uno::Any& Before, const ::css::uno::Any& After ) = 0;
+    virtual void SAL_CALL PrintPreview( const ::css::uno::Any& EnableChanges ) = 0;
+
+    static inline ::css::uno::Type const & SAL_CALL static_type(void * = 0);
+
+protected:
+    ~XWorksheets() SAL_NOEXCEPT {} // avoid warnings about virtual members and non-virtual dtor
+};
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::ooo::vba::excel::XWorksheets const *);
+} } }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::uno::Reference< ::ooo::vba::excel::XWorksheets > *);
+
+#endif

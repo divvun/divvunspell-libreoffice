@@ -1,0 +1,38 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XHPAGEBREAK_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XHPAGEBREAK_HDL
+
+#include "sal/config.h"
+
+#include "ooo/vba/excel/XPageBreak.hdl"
+#include "com/sun/star/uno/Reference.h"
+#include "cppu/macros.hxx"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace ooo { namespace vba { namespace excel {
+
+class SAL_NO_VTABLE SAL_DLLPUBLIC_RTTI XHPageBreak : public ::ooo::vba::excel::XPageBreak
+{
+public:
+#if defined LIBO_INTERNAL_ONLY
+    XHPageBreak() = default;
+    XHPageBreak(XHPageBreak const &) = default;
+    XHPageBreak(XHPageBreak &&) = default;
+    XHPageBreak & operator =(XHPageBreak const &) = default;
+    XHPageBreak & operator =(XHPageBreak &&) = default;
+#endif
+
+
+    static inline ::css::uno::Type const & SAL_CALL static_type(void * = 0);
+
+protected:
+    ~XHPageBreak() SAL_NOEXCEPT {} // avoid warnings about virtual members and non-virtual dtor
+};
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::ooo::vba::excel::XHPageBreak const *);
+} } }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::uno::Reference< ::ooo::vba::excel::XHPageBreak > *);
+
+#endif

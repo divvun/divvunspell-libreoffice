@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLCHARTGALLERY_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLCHARTGALLERY_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlChartGallery {
+
+static const ::sal_Int32 xlAnyGallery = (sal_Int32)23;
+static const ::sal_Int32 xlBuiltIn = (sal_Int32)21;
+static const ::sal_Int32 xlUserDefined = (sal_Int32)22;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLCHARTGALLERY_HDL

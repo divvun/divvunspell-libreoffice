@@ -1,0 +1,29 @@
+#ifndef INCLUDED_OOO_VBA_ADODB_EVENTREASONENUM_HDL
+#define INCLUDED_OOO_VBA_ADODB_EVENTREASONENUM_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace adodb { namespace EventReasonEnum {
+
+static const ::sal_Int32 adRsnAddNew = (sal_Int32)1;
+static const ::sal_Int32 adRsnClose = (sal_Int32)9;
+static const ::sal_Int32 adRsnDelete = (sal_Int32)2;
+static const ::sal_Int32 adRsnFirstChange = (sal_Int32)11;
+static const ::sal_Int32 adRsnMove = (sal_Int32)10;
+static const ::sal_Int32 adRsnMoveFirst = (sal_Int32)12;
+static const ::sal_Int32 adRsnMoveLast = (sal_Int32)15;
+static const ::sal_Int32 adRsnMoveNext = (sal_Int32)13;
+static const ::sal_Int32 adRsnMovePrevious = (sal_Int32)14;
+static const ::sal_Int32 adRsnRequery = (sal_Int32)7;
+static const ::sal_Int32 adRsnResynch = (sal_Int32)8;
+static const ::sal_Int32 adRsnUndoAddNew = (sal_Int32)5;
+static const ::sal_Int32 adRsnUndoDelete = (sal_Int32)6;
+static const ::sal_Int32 adRsnUndoUpdate = (sal_Int32)4;
+static const ::sal_Int32 adRsnUpdate = (sal_Int32)3;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_ADODB_EVENTREASONENUM_HDL

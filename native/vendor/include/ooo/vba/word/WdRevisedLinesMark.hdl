@@ -1,0 +1,18 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDREVISEDLINESMARK_HDL
+#define INCLUDED_OOO_VBA_WORD_WDREVISEDLINESMARK_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdRevisedLinesMark {
+
+static const ::sal_Int32 wdRevisedLinesMarkLeftBorder = (sal_Int32)1;
+static const ::sal_Int32 wdRevisedLinesMarkNone = (sal_Int32)0;
+static const ::sal_Int32 wdRevisedLinesMarkOutsideBorder = (sal_Int32)3;
+static const ::sal_Int32 wdRevisedLinesMarkRightBorder = (sal_Int32)2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDREVISEDLINESMARK_HDL

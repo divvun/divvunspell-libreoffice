@@ -1,0 +1,23 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDPRINTOUTITEM_HDL
+#define INCLUDED_OOO_VBA_WORD_WDPRINTOUTITEM_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdPrintOutItem {
+
+static const ::sal_Int32 wdPrintAutoTextEntries = (sal_Int32)4;
+static const ::sal_Int32 wdPrintComments = (sal_Int32)2;
+static const ::sal_Int32 wdPrintDocumentContent = (sal_Int32)0;
+static const ::sal_Int32 wdPrintDocumentWithMarkup = (sal_Int32)7;
+static const ::sal_Int32 wdPrintEnvelope = (sal_Int32)6;
+static const ::sal_Int32 wdPrintKeyAssignments = (sal_Int32)5;
+static const ::sal_Int32 wdPrintMarkup = (sal_Int32)2;
+static const ::sal_Int32 wdPrintProperties = (sal_Int32)1;
+static const ::sal_Int32 wdPrintStyles = (sal_Int32)3;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDPRINTOUTITEM_HDL

@@ -1,0 +1,58 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XOLEOBJECT_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XOLEOBJECT_HDL
+
+#include "sal/config.h"
+
+namespace com { namespace sun { namespace star { namespace uno { class XInterface; } } } }
+#include "ooo/vba/XHelperInterface.hdl"
+#include "com/sun/star/uno/Reference.h"
+#include "cppu/macros.hxx"
+#include "rtl/ustring.hxx"
+#include "sal/types.h"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace ooo { namespace vba { namespace excel {
+
+class SAL_NO_VTABLE SAL_DLLPUBLIC_RTTI XOLEObject : public ::ooo::vba::XHelperInterface
+{
+public:
+#if defined LIBO_INTERNAL_ONLY
+    XOLEObject() = default;
+    XOLEObject(XOLEObject const &) = default;
+    XOLEObject(XOLEObject &&) = default;
+    XOLEObject & operator =(XOLEObject const &) = default;
+    XOLEObject & operator =(XOLEObject &&) = default;
+#endif
+
+
+    // Attributes
+    virtual ::css::uno::Reference< ::css::uno::XInterface > SAL_CALL getObject() = 0;
+    virtual ::sal_Bool SAL_CALL getEnabled() = 0;
+    virtual void SAL_CALL setEnabled( ::sal_Bool _enabled ) = 0;
+    virtual ::sal_Bool SAL_CALL getVisible() = 0;
+    virtual void SAL_CALL setVisible( ::sal_Bool _visible ) = 0;
+    virtual double SAL_CALL getLeft() = 0;
+    virtual void SAL_CALL setLeft( double _left ) = 0;
+    virtual double SAL_CALL getTop() = 0;
+    virtual void SAL_CALL setTop( double _top ) = 0;
+    virtual double SAL_CALL getHeight() = 0;
+    virtual void SAL_CALL setHeight( double _height ) = 0;
+    virtual double SAL_CALL getWidth() = 0;
+    virtual void SAL_CALL setWidth( double _width ) = 0;
+    virtual ::rtl::OUString SAL_CALL getLinkedCell() = 0;
+    virtual void SAL_CALL setLinkedCell( const ::rtl::OUString& _linkedcell ) = 0;
+
+    static inline ::css::uno::Type const & SAL_CALL static_type(void * = 0);
+
+protected:
+    ~XOLEObject() SAL_NOEXCEPT {} // avoid warnings about virtual members and non-virtual dtor
+};
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::ooo::vba::excel::XOLEObject const *);
+} } }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::uno::Reference< ::ooo::vba::excel::XOLEObject > *);
+
+#endif

@@ -1,0 +1,19 @@
+#ifndef INCLUDED_OOO_VBA_VBDATETIMEFORMAT_HDL
+#define INCLUDED_OOO_VBA_VBDATETIMEFORMAT_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace VbDateTimeFormat {
+
+static const ::sal_Int32 vbGeneralDate = (sal_Int32)0;
+static const ::sal_Int32 vbLongDate = (sal_Int32)1;
+static const ::sal_Int32 vbLongTime = (sal_Int32)3;
+static const ::sal_Int32 vbShortDate = (sal_Int32)2;
+static const ::sal_Int32 vbShortTime = (sal_Int32)4;
+
+} } }
+
+#endif // INCLUDED_OOO_VBA_VBDATETIMEFORMAT_HDL

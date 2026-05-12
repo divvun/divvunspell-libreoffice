@@ -1,0 +1,87 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOCONDITION_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOCONDITION_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoCondition {
+
+static const ::sal_Int32 msoConditionAnyNumberBetween = (sal_Int32)34;
+static const ::sal_Int32 msoConditionAnytime = (sal_Int32)25;
+static const ::sal_Int32 msoConditionAnytimeBetween = (sal_Int32)26;
+static const ::sal_Int32 msoConditionAtLeast = (sal_Int32)36;
+static const ::sal_Int32 msoConditionAtMost = (sal_Int32)35;
+static const ::sal_Int32 msoConditionBeginsWith = (sal_Int32)11;
+static const ::sal_Int32 msoConditionDoesNotEqual = (sal_Int32)33;
+static const ::sal_Int32 msoConditionEndsWith = (sal_Int32)12;
+static const ::sal_Int32 msoConditionEquals = (sal_Int32)32;
+static const ::sal_Int32 msoConditionEqualsCompleted = (sal_Int32)66;
+static const ::sal_Int32 msoConditionEqualsDeferred = (sal_Int32)68;
+static const ::sal_Int32 msoConditionEqualsHigh = (sal_Int32)60;
+static const ::sal_Int32 msoConditionEqualsInProgress = (sal_Int32)65;
+static const ::sal_Int32 msoConditionEqualsLow = (sal_Int32)58;
+static const ::sal_Int32 msoConditionEqualsNormal = (sal_Int32)59;
+static const ::sal_Int32 msoConditionEqualsNotStarted = (sal_Int32)64;
+static const ::sal_Int32 msoConditionEqualsWaitingForSomeoneElse = (sal_Int32)67;
+static const ::sal_Int32 msoConditionFileTypeAllFiles = (sal_Int32)1;
+static const ::sal_Int32 msoConditionFileTypeBinders = (sal_Int32)6;
+static const ::sal_Int32 msoConditionFileTypeCalendarItem = (sal_Int32)45;
+static const ::sal_Int32 msoConditionFileTypeContactItem = (sal_Int32)46;
+static const ::sal_Int32 msoConditionFileTypeDataConnectionFiles = (sal_Int32)51;
+static const ::sal_Int32 msoConditionFileTypeDatabases = (sal_Int32)7;
+static const ::sal_Int32 msoConditionFileTypeDesignerFiles = (sal_Int32)56;
+static const ::sal_Int32 msoConditionFileTypeDocumentImagingFiles = (sal_Int32)54;
+static const ::sal_Int32 msoConditionFileTypeExcelWorkbooks = (sal_Int32)4;
+static const ::sal_Int32 msoConditionFileTypeJournalItem = (sal_Int32)48;
+static const ::sal_Int32 msoConditionFileTypeMailItem = (sal_Int32)44;
+static const ::sal_Int32 msoConditionFileTypeNoteItem = (sal_Int32)47;
+static const ::sal_Int32 msoConditionFileTypeOfficeFiles = (sal_Int32)2;
+static const ::sal_Int32 msoConditionFileTypeOutlookItems = (sal_Int32)43;
+static const ::sal_Int32 msoConditionFileTypePhotoDrawFiles = (sal_Int32)50;
+static const ::sal_Int32 msoConditionFileTypePowerPointPresentations = (sal_Int32)5;
+static const ::sal_Int32 msoConditionFileTypeProjectFiles = (sal_Int32)53;
+static const ::sal_Int32 msoConditionFileTypePublisherFiles = (sal_Int32)52;
+static const ::sal_Int32 msoConditionFileTypeTaskItem = (sal_Int32)49;
+static const ::sal_Int32 msoConditionFileTypeTemplates = (sal_Int32)8;
+static const ::sal_Int32 msoConditionFileTypeVisioFiles = (sal_Int32)55;
+static const ::sal_Int32 msoConditionFileTypeWebPages = (sal_Int32)57;
+static const ::sal_Int32 msoConditionFileTypeWordDocuments = (sal_Int32)3;
+static const ::sal_Int32 msoConditionFreeText = (sal_Int32)42;
+static const ::sal_Int32 msoConditionInTheLast = (sal_Int32)31;
+static const ::sal_Int32 msoConditionInTheNext = (sal_Int32)30;
+static const ::sal_Int32 msoConditionIncludes = (sal_Int32)9;
+static const ::sal_Int32 msoConditionIncludesFormsOf = (sal_Int32)41;
+static const ::sal_Int32 msoConditionIncludesNearEachOther = (sal_Int32)13;
+static const ::sal_Int32 msoConditionIncludesPhrase = (sal_Int32)10;
+static const ::sal_Int32 msoConditionIsExactly = (sal_Int32)14;
+static const ::sal_Int32 msoConditionIsNo = (sal_Int32)40;
+static const ::sal_Int32 msoConditionIsNot = (sal_Int32)15;
+static const ::sal_Int32 msoConditionIsYes = (sal_Int32)39;
+static const ::sal_Int32 msoConditionLastMonth = (sal_Int32)22;
+static const ::sal_Int32 msoConditionLastWeek = (sal_Int32)19;
+static const ::sal_Int32 msoConditionLessThan = (sal_Int32)38;
+static const ::sal_Int32 msoConditionMoreThan = (sal_Int32)37;
+static const ::sal_Int32 msoConditionNextMonth = (sal_Int32)24;
+static const ::sal_Int32 msoConditionNextWeek = (sal_Int32)21;
+static const ::sal_Int32 msoConditionNotEqualToCompleted = (sal_Int32)71;
+static const ::sal_Int32 msoConditionNotEqualToDeferred = (sal_Int32)73;
+static const ::sal_Int32 msoConditionNotEqualToHigh = (sal_Int32)63;
+static const ::sal_Int32 msoConditionNotEqualToInProgress = (sal_Int32)70;
+static const ::sal_Int32 msoConditionNotEqualToLow = (sal_Int32)61;
+static const ::sal_Int32 msoConditionNotEqualToNormal = (sal_Int32)62;
+static const ::sal_Int32 msoConditionNotEqualToNotStarted = (sal_Int32)69;
+static const ::sal_Int32 msoConditionNotEqualToWaitingForSomeoneElse = (sal_Int32)72;
+static const ::sal_Int32 msoConditionOn = (sal_Int32)27;
+static const ::sal_Int32 msoConditionOnOrAfter = (sal_Int32)28;
+static const ::sal_Int32 msoConditionOnOrBefore = (sal_Int32)29;
+static const ::sal_Int32 msoConditionThisMonth = (sal_Int32)23;
+static const ::sal_Int32 msoConditionThisWeek = (sal_Int32)20;
+static const ::sal_Int32 msoConditionToday = (sal_Int32)17;
+static const ::sal_Int32 msoConditionTomorrow = (sal_Int32)18;
+static const ::sal_Int32 msoConditionYesterday = (sal_Int32)16;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOCONDITION_HDL

@@ -1,0 +1,26 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLMARKERSTYLE_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLMARKERSTYLE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlMarkerStyle {
+
+static const ::sal_Int32 xlMarkerStyleAutomatic = (sal_Int32)-4105;
+static const ::sal_Int32 xlMarkerStyleCircle = (sal_Int32)8;
+static const ::sal_Int32 xlMarkerStyleDash = (sal_Int32)-4115;
+static const ::sal_Int32 xlMarkerStyleDiamond = (sal_Int32)2;
+static const ::sal_Int32 xlMarkerStyleDot = (sal_Int32)-4118;
+static const ::sal_Int32 xlMarkerStyleNone = (sal_Int32)-4142;
+static const ::sal_Int32 xlMarkerStylePicture = (sal_Int32)-4147;
+static const ::sal_Int32 xlMarkerStylePlus = (sal_Int32)9;
+static const ::sal_Int32 xlMarkerStyleSquare = (sal_Int32)1;
+static const ::sal_Int32 xlMarkerStyleStar = (sal_Int32)5;
+static const ::sal_Int32 xlMarkerStyleTriangle = (sal_Int32)3;
+static const ::sal_Int32 xlMarkerStyleX = (sal_Int32)-4168;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLMARKERSTYLE_HDL

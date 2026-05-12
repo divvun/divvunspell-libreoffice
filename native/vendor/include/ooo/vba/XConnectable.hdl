@@ -1,0 +1,46 @@
+#ifndef INCLUDED_OOO_VBA_XCONNECTABLE_HDL
+#define INCLUDED_OOO_VBA_XCONNECTABLE_HDL
+
+#include "sal/config.h"
+
+#include "ooo/vba/TypeAndIID.hdl"
+namespace ooo { namespace vba { class XConnectionPoint; } }
+#include "ooo/vba/XInterfaceWithIID.hdl"
+#include "com/sun/star/uno/Reference.h"
+#include "cppu/macros.hxx"
+#include "rtl/ustring.hxx"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace ooo { namespace vba {
+
+class SAL_NO_VTABLE SAL_DLLPUBLIC_RTTI XConnectable : public ::ooo::vba::XInterfaceWithIID
+{
+public:
+#if defined LIBO_INTERNAL_ONLY
+    XConnectable() = default;
+    XConnectable(XConnectable const &) = default;
+    XConnectable(XConnectable &&) = default;
+    XConnectable & operator =(XConnectable const &) = default;
+    XConnectable & operator =(XConnectable &&) = default;
+#endif
+
+
+    // Methods
+    virtual ::rtl::OUString SAL_CALL GetIIDForClassItselfNotCoclass() = 0;
+    virtual ::ooo::vba::TypeAndIID SAL_CALL GetConnectionPoint() = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::XConnectionPoint > SAL_CALL FindConnectionPoint() = 0;
+
+    static inline ::css::uno::Type const & SAL_CALL static_type(void * = 0);
+
+protected:
+    ~XConnectable() SAL_NOEXCEPT {} // avoid warnings about virtual members and non-virtual dtor
+};
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::ooo::vba::XConnectable const *);
+} }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::uno::Reference< ::ooo::vba::XConnectable > *);
+
+#endif

@@ -1,0 +1,22 @@
+#ifndef INCLUDED_OOO_VBA_ACCESS_ACFORMATCONDITIONOPERATOR_HDL
+#define INCLUDED_OOO_VBA_ACCESS_ACFORMATCONDITIONOPERATOR_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace access { namespace AcFormatConditionOperator {
+
+static const ::sal_Int32 acBetween = (sal_Int32)0;
+static const ::sal_Int32 acEqual = (sal_Int32)2;
+static const ::sal_Int32 acGreaterThan = (sal_Int32)4;
+static const ::sal_Int32 acGreaterThanOrEqual = (sal_Int32)6;
+static const ::sal_Int32 acLessThan = (sal_Int32)5;
+static const ::sal_Int32 acLessThanOrEqual = (sal_Int32)7;
+static const ::sal_Int32 acNotBetween = (sal_Int32)1;
+static const ::sal_Int32 acNotEqual = (sal_Int32)3;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_ACCESS_ACFORMATCONDITIONOPERATOR_HDL

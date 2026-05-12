@@ -1,0 +1,6 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLCMDTYPE_HPP
+#define INCLUDED_OOO_VBA_EXCEL_XLCMDTYPE_HPP
+
+#include "ooo/vba/excel/XlCmdType.hdl"
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLCMDTYPE_HPP

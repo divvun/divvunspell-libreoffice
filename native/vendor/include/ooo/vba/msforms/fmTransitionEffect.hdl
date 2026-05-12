@@ -1,0 +1,27 @@
+#ifndef INCLUDED_OOO_VBA_MSFORMS_FMTRANSITIONEFFECT_HDL
+#define INCLUDED_OOO_VBA_MSFORMS_FMTRANSITIONEFFECT_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace msforms { namespace fmTransitionEffect {
+
+static const ::sal_Int32 fmTransitionEffectCoverDown = (sal_Int32)5;
+static const ::sal_Int32 fmTransitionEffectCoverLeft = (sal_Int32)7;
+static const ::sal_Int32 fmTransitionEffectCoverLeftDown = (sal_Int32)6;
+static const ::sal_Int32 fmTransitionEffectCoverLeftUp = (sal_Int32)8;
+static const ::sal_Int32 fmTransitionEffectCoverRight = (sal_Int32)3;
+static const ::sal_Int32 fmTransitionEffectCoverRightDown = (sal_Int32)4;
+static const ::sal_Int32 fmTransitionEffectCoverRightUp = (sal_Int32)2;
+static const ::sal_Int32 fmTransitionEffectCoverUp = (sal_Int32)1;
+static const ::sal_Int32 fmTransitionEffectNone = (sal_Int32)0;
+static const ::sal_Int32 fmTransitionEffectPushDown = (sal_Int32)11;
+static const ::sal_Int32 fmTransitionEffectPushLeft = (sal_Int32)12;
+static const ::sal_Int32 fmTransitionEffectPushRight = (sal_Int32)10;
+static const ::sal_Int32 fmTransitionEffectPushUp = (sal_Int32)9;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_MSFORMS_FMTRANSITIONEFFECT_HDL

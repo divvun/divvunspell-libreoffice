@@ -1,0 +1,24 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDPARTOFSPEECH_HDL
+#define INCLUDED_OOO_VBA_WORD_WDPARTOFSPEECH_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdPartOfSpeech {
+
+static const ::sal_Int32 wdAdjective = (sal_Int32)0;
+static const ::sal_Int32 wdAdverb = (sal_Int32)2;
+static const ::sal_Int32 wdConjunction = (sal_Int32)5;
+static const ::sal_Int32 wdIdiom = (sal_Int32)8;
+static const ::sal_Int32 wdInterjection = (sal_Int32)7;
+static const ::sal_Int32 wdNoun = (sal_Int32)1;
+static const ::sal_Int32 wdOther = (sal_Int32)9;
+static const ::sal_Int32 wdPreposition = (sal_Int32)6;
+static const ::sal_Int32 wdPronoun = (sal_Int32)4;
+static const ::sal_Int32 wdVerb = (sal_Int32)3;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDPARTOFSPEECH_HDL

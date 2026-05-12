@@ -1,0 +1,68 @@
+#ifndef INCLUDED_OOO_VBA_MSFORMS_XLINEFORMAT_HDL
+#define INCLUDED_OOO_VBA_MSFORMS_XLINEFORMAT_HDL
+
+#include "sal/config.h"
+
+#include "ooo/vba/XHelperInterface.hdl"
+namespace ooo { namespace vba { namespace msforms { class XColorFormat; } } }
+#include "com/sun/star/uno/Reference.h"
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace ooo { namespace vba { namespace msforms {
+
+class SAL_NO_VTABLE SAL_DLLPUBLIC_RTTI XLineFormat : public ::ooo::vba::XHelperInterface
+{
+public:
+#if defined LIBO_INTERNAL_ONLY
+    XLineFormat() = default;
+    XLineFormat(XLineFormat const &) = default;
+    XLineFormat(XLineFormat &&) = default;
+    XLineFormat & operator =(XLineFormat const &) = default;
+    XLineFormat & operator =(XLineFormat &&) = default;
+#endif
+
+
+    // Attributes
+    virtual ::sal_Int32 SAL_CALL getBeginArrowheadStyle() = 0;
+    virtual void SAL_CALL setBeginArrowheadStyle( ::sal_Int32 _beginarrowheadstyle ) = 0;
+    virtual ::sal_Int32 SAL_CALL getBeginArrowheadLength() = 0;
+    virtual void SAL_CALL setBeginArrowheadLength( ::sal_Int32 _beginarrowheadlength ) = 0;
+    virtual ::sal_Int32 SAL_CALL getBeginArrowheadWidth() = 0;
+    virtual void SAL_CALL setBeginArrowheadWidth( ::sal_Int32 _beginarrowheadwidth ) = 0;
+    virtual ::sal_Int32 SAL_CALL getEndArrowheadStylel() = 0;
+    virtual void SAL_CALL setEndArrowheadStylel( ::sal_Int32 _endarrowheadstylel ) = 0;
+    virtual ::sal_Int32 SAL_CALL getEndArrowheadLength() = 0;
+    virtual void SAL_CALL setEndArrowheadLength( ::sal_Int32 _endarrowheadlength ) = 0;
+    virtual ::sal_Int32 SAL_CALL getEndArrowheadWidth() = 0;
+    virtual void SAL_CALL setEndArrowheadWidth( ::sal_Int32 _endarrowheadwidth ) = 0;
+    virtual double SAL_CALL getWeight() = 0;
+    virtual void SAL_CALL setWeight( double _weight ) = 0;
+    virtual ::sal_Bool SAL_CALL getVisible() = 0;
+    virtual void SAL_CALL setVisible( ::sal_Bool _visible ) = 0;
+    virtual double SAL_CALL getTransparency() = 0;
+    virtual void SAL_CALL setTransparency( double _transparency ) = 0;
+    virtual ::sal_Int16 SAL_CALL getStyle() = 0;
+    virtual void SAL_CALL setStyle( ::sal_Int16 _style ) = 0;
+    virtual ::sal_Int32 SAL_CALL getDashStyle() = 0;
+    virtual void SAL_CALL setDashStyle( ::sal_Int32 _dashstyle ) = 0;
+
+    // Methods
+    virtual ::css::uno::Reference< ::ooo::vba::msforms::XColorFormat > SAL_CALL BackColor() = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::msforms::XColorFormat > SAL_CALL ForeColor() = 0;
+
+    static inline ::css::uno::Type const & SAL_CALL static_type(void * = 0);
+
+protected:
+    ~XLineFormat() SAL_NOEXCEPT {} // avoid warnings about virtual members and non-virtual dtor
+};
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::ooo::vba::msforms::XLineFormat const *);
+} } }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::uno::Reference< ::ooo::vba::msforms::XLineFormat > *);
+
+#endif

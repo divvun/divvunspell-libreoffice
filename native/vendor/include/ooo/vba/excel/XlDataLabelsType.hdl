@@ -1,0 +1,20 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLDATALABELSTYPE_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLDATALABELSTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlDataLabelsType {
+
+static const ::sal_Int32 xlDataLabelsShowBubbleSizes = (sal_Int32)6;
+static const ::sal_Int32 xlDataLabelsShowLabel = (sal_Int32)4;
+static const ::sal_Int32 xlDataLabelsShowLabelAndPercent = (sal_Int32)5;
+static const ::sal_Int32 xlDataLabelsShowNone = (sal_Int32)-4142;
+static const ::sal_Int32 xlDataLabelsShowPercent = (sal_Int32)3;
+static const ::sal_Int32 xlDataLabelsShowValue = (sal_Int32)2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLDATALABELSTYPE_HDL

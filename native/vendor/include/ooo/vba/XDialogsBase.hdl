@@ -1,0 +1,46 @@
+#ifndef INCLUDED_OOO_VBA_XDIALOGSBASE_HDL
+#define INCLUDED_OOO_VBA_XDIALOGSBASE_HDL
+
+#include "sal/config.h"
+
+#include "ooo/vba/XHelperInterface.hdl"
+#include "com/sun/star/uno/Any.h"
+#include "com/sun/star/uno/Reference.h"
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace ooo { namespace vba {
+
+class SAL_NO_VTABLE SAL_DLLPUBLIC_RTTI XDialogsBase : public ::ooo::vba::XHelperInterface
+{
+public:
+#if defined LIBO_INTERNAL_ONLY
+    XDialogsBase() = default;
+    XDialogsBase(XDialogsBase const &) = default;
+    XDialogsBase(XDialogsBase &&) = default;
+    XDialogsBase & operator =(XDialogsBase const &) = default;
+    XDialogsBase & operator =(XDialogsBase &&) = default;
+#endif
+
+
+    // Attributes
+    virtual ::sal_Int32 SAL_CALL getCount() = 0;
+
+    // Methods
+    virtual ::css::uno::Any SAL_CALL Item( const ::css::uno::Any& Index ) = 0;
+
+    static inline ::css::uno::Type const & SAL_CALL static_type(void * = 0);
+
+protected:
+    ~XDialogsBase() SAL_NOEXCEPT {} // avoid warnings about virtual members and non-virtual dtor
+};
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::ooo::vba::XDialogsBase const *);
+} }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::uno::Reference< ::ooo::vba::XDialogsBase > *);
+
+#endif

@@ -1,0 +1,94 @@
+#ifndef INCLUDED_OOO_VBA_WORD_XAPPLICATION_HDL
+#define INCLUDED_OOO_VBA_WORD_XAPPLICATION_HDL
+
+#include "sal/config.h"
+
+#include "ooo/vba/XConnectable.hdl"
+namespace ooo { namespace vba { namespace word { class XDocument; } } }
+namespace ooo { namespace vba { namespace word { class XOptions; } } }
+namespace ooo { namespace vba { namespace word { class XSelection; } } }
+namespace ooo { namespace vba { namespace word { class XSystem; } } }
+namespace ooo { namespace vba { namespace word { class XWindow; } } }
+namespace ooo { namespace vba { namespace word { class XWordBasic; } } }
+#include "com/sun/star/uno/Any.h"
+#include "com/sun/star/uno/Reference.h"
+#include "cppu/macros.hxx"
+#include "rtl/ustring.hxx"
+#include "sal/types.h"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace ooo { namespace vba { namespace word {
+
+class SAL_NO_VTABLE SAL_DLLPUBLIC_RTTI XApplication : public ::ooo::vba::XConnectable
+{
+public:
+#if defined LIBO_INTERNAL_ONLY
+    XApplication() = default;
+    XApplication(XApplication const &) = default;
+    XApplication(XApplication &&) = default;
+    XApplication & operator =(XApplication const &) = default;
+    XApplication & operator =(XApplication &&) = default;
+#endif
+
+
+    // Attributes
+    virtual ::css::uno::Reference< ::ooo::vba::word::XDocument > SAL_CALL getActiveDocument() = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::word::XWindow > SAL_CALL getActiveWindow() = 0;
+    virtual ::rtl::OUString SAL_CALL getName() = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::word::XSystem > SAL_CALL getSystem() = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::word::XOptions > SAL_CALL getOptions() = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::word::XSelection > SAL_CALL getSelection() = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::word::XWordBasic > SAL_CALL getWordBasic() = 0;
+    virtual ::sal_Bool SAL_CALL getDisplayAutoCompleteTips() = 0;
+    virtual void SAL_CALL setDisplayAutoCompleteTips( ::sal_Bool _displayautocompletetips ) = 0;
+    virtual ::sal_Int32 SAL_CALL getEnableCancelKey() = 0;
+    virtual void SAL_CALL setEnableCancelKey( ::sal_Int32 _enablecancelkey ) = 0;
+    virtual ::sal_Int32 SAL_CALL getWindowState() = 0;
+    virtual void SAL_CALL setWindowState( ::sal_Int32 _windowstate ) = 0;
+    virtual ::sal_Int32 SAL_CALL getWidth() = 0;
+    virtual void SAL_CALL setWidth( ::sal_Int32 _width ) = 0;
+    virtual ::sal_Int32 SAL_CALL getHeight() = 0;
+    virtual void SAL_CALL setHeight( ::sal_Int32 _height ) = 0;
+    virtual ::sal_Int32 SAL_CALL getLeft() = 0;
+    virtual void SAL_CALL setLeft( ::sal_Int32 _left ) = 0;
+    virtual ::sal_Int32 SAL_CALL getTop() = 0;
+    virtual void SAL_CALL setTop( ::sal_Int32 _top ) = 0;
+    virtual ::rtl::OUString SAL_CALL getStatusBar() = 0;
+    virtual void SAL_CALL setStatusBar( const ::rtl::OUString& _statusbar ) = 0;
+    virtual ::css::uno::Any SAL_CALL getCustomizationContext() = 0;
+    virtual void SAL_CALL setCustomizationContext( const ::css::uno::Any& _customizationcontext ) = 0;
+
+    // Methods
+    virtual ::css::uno::Any SAL_CALL CommandBars( const ::css::uno::Any& Index ) = 0;
+    virtual ::css::uno::Any SAL_CALL Documents( const ::css::uno::Any& Index ) = 0;
+    virtual ::css::uno::Any SAL_CALL Addins( const ::css::uno::Any& Index ) = 0;
+    virtual ::css::uno::Any SAL_CALL Dialogs( const ::css::uno::Any& Index ) = 0;
+    virtual ::css::uno::Any SAL_CALL ListGalleries( const ::css::uno::Any& aIndex ) = 0;
+    virtual float SAL_CALL CentimetersToPoints( float Centimeters ) = 0;
+    virtual float SAL_CALL PointsToCentimeters( float Points ) = 0;
+    virtual float SAL_CALL PixelsToPoints( float Pixels, ::sal_Bool fVertical ) = 0;
+    virtual float SAL_CALL PointsToPixels( float Points, ::sal_Bool fVertical ) = 0;
+    virtual float SAL_CALL InchesToPoints( float Inches ) = 0;
+    virtual float SAL_CALL PointsToInches( float Points ) = 0;
+    virtual float SAL_CALL MillimetersToPoints( float Millimeters ) = 0;
+    virtual float SAL_CALL PointsToMillimeters( float Points ) = 0;
+    virtual float SAL_CALL PicasToPoints( float Picas ) = 0;
+    virtual float SAL_CALL PointsToPicas( float Points ) = 0;
+    virtual void SAL_CALL ShowMe() = 0;
+    virtual void SAL_CALL Resize( ::sal_Int32 Width, ::sal_Int32 Height ) = 0;
+    virtual void SAL_CALL Move( ::sal_Int32 Left, ::sal_Int32 Top ) = 0;
+
+    static inline ::css::uno::Type const & SAL_CALL static_type(void * = 0);
+
+protected:
+    ~XApplication() SAL_NOEXCEPT {} // avoid warnings about virtual members and non-virtual dtor
+};
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::ooo::vba::word::XApplication const *);
+} } }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::uno::Reference< ::ooo::vba::word::XApplication > *);
+
+#endif

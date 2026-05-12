@@ -1,0 +1,19 @@
+#ifndef INCLUDED_OOO_VBA_ADODB_OBJECTSTATEENUM_HDL
+#define INCLUDED_OOO_VBA_ADODB_OBJECTSTATEENUM_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace adodb { namespace ObjectStateEnum {
+
+static const ::sal_Int32 adStateClosed = (sal_Int32)0;
+static const ::sal_Int32 adStateConnecting = (sal_Int32)2;
+static const ::sal_Int32 adStateExecuting = (sal_Int32)4;
+static const ::sal_Int32 adStateFetching = (sal_Int32)8;
+static const ::sal_Int32 adStateOpen = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_ADODB_OBJECTSTATEENUM_HDL

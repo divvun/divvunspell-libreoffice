@@ -1,0 +1,31 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDDEFAULTFILEPATH_HDL
+#define INCLUDED_OOO_VBA_WORD_WDDEFAULTFILEPATH_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdDefaultFilePath {
+
+static const ::sal_Int32 wdAutoRecoverPath = (sal_Int32)5;
+static const ::sal_Int32 wdBorderArtPath = (sal_Int32)19;
+static const ::sal_Int32 wdCurrentFolderPath = (sal_Int32)14;
+static const ::sal_Int32 wdDocumentsPath = (sal_Int32)0;
+static const ::sal_Int32 wdGraphicsFiltersPath = (sal_Int32)10;
+static const ::sal_Int32 wdPicturesPath = (sal_Int32)1;
+static const ::sal_Int32 wdProgramPath = (sal_Int32)9;
+static const ::sal_Int32 wdProofingToolsPath = (sal_Int32)12;
+static const ::sal_Int32 wdStartupPath = (sal_Int32)8;
+static const ::sal_Int32 wdStyleGalleryPath = (sal_Int32)15;
+static const ::sal_Int32 wdTempFilePath = (sal_Int32)13;
+static const ::sal_Int32 wdTextConvertersPath = (sal_Int32)11;
+static const ::sal_Int32 wdToolsPath = (sal_Int32)6;
+static const ::sal_Int32 wdTutorialPath = (sal_Int32)7;
+static const ::sal_Int32 wdUserOptionsPath = (sal_Int32)4;
+static const ::sal_Int32 wdUserTemplatesPath = (sal_Int32)2;
+static const ::sal_Int32 wdWorkgroupTemplatesPath = (sal_Int32)3;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDDEFAULTFILEPATH_HDL

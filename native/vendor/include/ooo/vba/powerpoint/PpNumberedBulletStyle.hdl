@@ -1,0 +1,56 @@
+#ifndef INCLUDED_OOO_VBA_POWERPOINT_PPNUMBEREDBULLETSTYLE_HDL
+#define INCLUDED_OOO_VBA_POWERPOINT_PPNUMBEREDBULLETSTYLE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace powerpoint { namespace PpNumberedBulletStyle {
+
+static const ::sal_Int32 ppBulletAlphaLCParenBoth = (sal_Int32)8;
+static const ::sal_Int32 ppBulletAlphaLCParenRight = (sal_Int32)9;
+static const ::sal_Int32 ppBulletAlphaLCPeriod = (sal_Int32)0;
+static const ::sal_Int32 ppBulletAlphaUCParenBoth = (sal_Int32)10;
+static const ::sal_Int32 ppBulletAlphaUCParenRight = (sal_Int32)11;
+static const ::sal_Int32 ppBulletAlphaUCPeriod = (sal_Int32)1;
+static const ::sal_Int32 ppBulletArabicAbjadDash = (sal_Int32)24;
+static const ::sal_Int32 ppBulletArabicAlphaDash = (sal_Int32)23;
+static const ::sal_Int32 ppBulletArabicDBPeriod = (sal_Int32)29;
+static const ::sal_Int32 ppBulletArabicDBPlain = (sal_Int32)28;
+static const ::sal_Int32 ppBulletArabicParenBoth = (sal_Int32)12;
+static const ::sal_Int32 ppBulletArabicParenRight = (sal_Int32)2;
+static const ::sal_Int32 ppBulletArabicPeriod = (sal_Int32)3;
+static const ::sal_Int32 ppBulletArabicPlain = (sal_Int32)13;
+static const ::sal_Int32 ppBulletCircleNumDBPlain = (sal_Int32)18;
+static const ::sal_Int32 ppBulletCircleNumWDBlackPlain = (sal_Int32)20;
+static const ::sal_Int32 ppBulletCircleNumWDWhitePlain = (sal_Int32)19;
+static const ::sal_Int32 ppBulletHebrewAlphaDash = (sal_Int32)25;
+static const ::sal_Int32 ppBulletHindiAlpha1Period = (sal_Int32)40;
+static const ::sal_Int32 ppBulletHindiAlphaPeriod = (sal_Int32)36;
+static const ::sal_Int32 ppBulletHindiNumParenRight = (sal_Int32)39;
+static const ::sal_Int32 ppBulletHindiNumPeriod = (sal_Int32)37;
+static const ::sal_Int32 ppBulletKanjiKoreanPeriod = (sal_Int32)27;
+static const ::sal_Int32 ppBulletKanjiKoreanPlain = (sal_Int32)26;
+static const ::sal_Int32 ppBulletKanjiSimpChinDBPeriod = (sal_Int32)38;
+static const ::sal_Int32 ppBulletRomanLCParenBoth = (sal_Int32)4;
+static const ::sal_Int32 ppBulletRomanLCParenRight = (sal_Int32)5;
+static const ::sal_Int32 ppBulletRomanLCPeriod = (sal_Int32)6;
+static const ::sal_Int32 ppBulletRomanUCParenBoth = (sal_Int32)14;
+static const ::sal_Int32 ppBulletRomanUCParenRight = (sal_Int32)15;
+static const ::sal_Int32 ppBulletRomanUCPeriod = (sal_Int32)7;
+static const ::sal_Int32 ppBulletSimpChinPeriod = (sal_Int32)17;
+static const ::sal_Int32 ppBulletSimpChinPlain = (sal_Int32)16;
+static const ::sal_Int32 ppBulletStyleMixed = (sal_Int32)-2;
+static const ::sal_Int32 ppBulletThaiAlphaParenBoth = (sal_Int32)32;
+static const ::sal_Int32 ppBulletThaiAlphaParenRight = (sal_Int32)31;
+static const ::sal_Int32 ppBulletThaiAlphaPeriod = (sal_Int32)30;
+static const ::sal_Int32 ppBulletThaiNumParenBoth = (sal_Int32)35;
+static const ::sal_Int32 ppBulletThaiNumParenRight = (sal_Int32)34;
+static const ::sal_Int32 ppBulletThaiNumPeriod = (sal_Int32)33;
+static const ::sal_Int32 ppBulletTradChinPeriod = (sal_Int32)22;
+static const ::sal_Int32 ppBulletTradChinPlain = (sal_Int32)21;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_POWERPOINT_PPNUMBEREDBULLETSTYLE_HDL

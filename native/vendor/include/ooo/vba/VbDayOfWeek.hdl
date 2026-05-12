@@ -1,0 +1,22 @@
+#ifndef INCLUDED_OOO_VBA_VBDAYOFWEEK_HDL
+#define INCLUDED_OOO_VBA_VBDAYOFWEEK_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace VbDayOfWeek {
+
+static const ::sal_Int32 vbFriday = (sal_Int32)6;
+static const ::sal_Int32 vbMonday = (sal_Int32)2;
+static const ::sal_Int32 vbSaturday = (sal_Int32)7;
+static const ::sal_Int32 vbSunday = (sal_Int32)1;
+static const ::sal_Int32 vbThursday = (sal_Int32)5;
+static const ::sal_Int32 vbTuesday = (sal_Int32)3;
+static const ::sal_Int32 vbUseSystemDayOfWeek = (sal_Int32)0;
+static const ::sal_Int32 vbWednesday = (sal_Int32)4;
+
+} } }
+
+#endif // INCLUDED_OOO_VBA_VBDAYOFWEEK_HDL

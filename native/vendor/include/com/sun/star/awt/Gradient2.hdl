@@ -1,0 +1,36 @@
+#ifndef INCLUDED_COM_SUN_STAR_AWT_GRADIENT2_HDL
+#define INCLUDED_COM_SUN_STAR_AWT_GRADIENT2_HDL
+
+#include "sal/config.h"
+
+#include "com/sun/star/awt/ColorStopSequence.hdl"
+#include "com/sun/star/awt/Gradient.hdl"
+#include "cppu/macros.hxx"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace com { namespace sun { namespace star { namespace awt {
+
+#ifdef _WIN32
+#   pragma pack(push, 8)
+#endif
+
+struct SAL_DLLPUBLIC_RTTI SAL_WARN_UNUSED Gradient2: public ::css::awt::Gradient {
+    inline Gradient2();
+
+    inline Gradient2(const ::css::awt::GradientStyle& Style_, const ::sal_Int32& StartColor_, const ::sal_Int32& EndColor_, const ::sal_Int16& Angle_, const ::sal_Int16& Border_, const ::sal_Int16& XOffset_, const ::sal_Int16& YOffset_, const ::sal_Int16& StartIntensity_, const ::sal_Int16& EndIntensity_, const ::sal_Int16& StepCount_, const ::css::uno::Sequence< ::css::awt::ColorStop >& ColorStops_);
+
+    ::css::uno::Sequence< ::css::awt::ColorStop > ColorStops CPPU_GCC3_ALIGN(::css::awt::Gradient);
+};
+
+#ifdef _WIN32
+#   pragma pack(pop)
+#endif
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::css::awt::Gradient2 const *);
+} } } }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::awt::Gradient2 *);
+
+#endif

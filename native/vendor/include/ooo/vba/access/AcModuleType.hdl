@@ -1,0 +1,16 @@
+#ifndef INCLUDED_OOO_VBA_ACCESS_ACMODULETYPE_HDL
+#define INCLUDED_OOO_VBA_ACCESS_ACMODULETYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace access { namespace AcModuleType {
+
+static const ::sal_Int32 acClassModule = (sal_Int32)1;
+static const ::sal_Int32 acStandardModule = (sal_Int32)0;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_ACCESS_ACMODULETYPE_HDL

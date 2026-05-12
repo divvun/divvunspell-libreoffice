@@ -1,0 +1,21 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOLASTMODIFIED_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOLASTMODIFIED_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoLastModified {
+
+static const ::sal_Int32 msoLastModifiedAnyTime = (sal_Int32)7;
+static const ::sal_Int32 msoLastModifiedLastMonth = (sal_Int32)5;
+static const ::sal_Int32 msoLastModifiedLastWeek = (sal_Int32)3;
+static const ::sal_Int32 msoLastModifiedThisMonth = (sal_Int32)6;
+static const ::sal_Int32 msoLastModifiedThisWeek = (sal_Int32)4;
+static const ::sal_Int32 msoLastModifiedToday = (sal_Int32)2;
+static const ::sal_Int32 msoLastModifiedYesterday = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOLASTMODIFIED_HDL

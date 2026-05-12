@@ -1,0 +1,20 @@
+#ifndef INCLUDED_OOO_VBA_DAO_UPDATECRITERIAENUM_HDL
+#define INCLUDED_OOO_VBA_DAO_UPDATECRITERIAENUM_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace dao { namespace UpdateCriteriaEnum {
+
+static const ::sal_Int32 dbCriteriaAllCols = (sal_Int32)4;
+static const ::sal_Int32 dbCriteriaDeleteInsert = (sal_Int32)16;
+static const ::sal_Int32 dbCriteriaKey = (sal_Int32)1;
+static const ::sal_Int32 dbCriteriaModValues = (sal_Int32)2;
+static const ::sal_Int32 dbCriteriaTimestamp = (sal_Int32)8;
+static const ::sal_Int32 dbCriteriaUpdate = (sal_Int32)32;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_DAO_UPDATECRITERIAENUM_HDL

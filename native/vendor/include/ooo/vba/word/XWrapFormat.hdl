@@ -1,0 +1,53 @@
+#ifndef INCLUDED_OOO_VBA_WORD_XWRAPFORMAT_HDL
+#define INCLUDED_OOO_VBA_WORD_XWRAPFORMAT_HDL
+
+#include "sal/config.h"
+
+#include "ooo/vba/XHelperInterface.hdl"
+#include "com/sun/star/uno/Reference.h"
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace ooo { namespace vba { namespace word {
+
+class SAL_NO_VTABLE SAL_DLLPUBLIC_RTTI XWrapFormat : public ::ooo::vba::XHelperInterface
+{
+public:
+#if defined LIBO_INTERNAL_ONLY
+    XWrapFormat() = default;
+    XWrapFormat(XWrapFormat const &) = default;
+    XWrapFormat(XWrapFormat &&) = default;
+    XWrapFormat & operator =(XWrapFormat const &) = default;
+    XWrapFormat & operator =(XWrapFormat &&) = default;
+#endif
+
+
+    // Attributes
+    virtual ::sal_Int32 SAL_CALL getType() = 0;
+    virtual void SAL_CALL setType( ::sal_Int32 _type ) = 0;
+    virtual ::sal_Int32 SAL_CALL getSide() = 0;
+    virtual void SAL_CALL setSide( ::sal_Int32 _side ) = 0;
+    virtual float SAL_CALL getDistanceTop() = 0;
+    virtual void SAL_CALL setDistanceTop( float _distancetop ) = 0;
+    virtual float SAL_CALL getDistanceBottom() = 0;
+    virtual void SAL_CALL setDistanceBottom( float _distancebottom ) = 0;
+    virtual float SAL_CALL getDistanceLeft() = 0;
+    virtual void SAL_CALL setDistanceLeft( float _distanceleft ) = 0;
+    virtual float SAL_CALL getDistanceRight() = 0;
+    virtual void SAL_CALL setDistanceRight( float _distanceright ) = 0;
+
+    static inline ::css::uno::Type const & SAL_CALL static_type(void * = 0);
+
+protected:
+    ~XWrapFormat() SAL_NOEXCEPT {} // avoid warnings about virtual members and non-virtual dtor
+};
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::ooo::vba::word::XWrapFormat const *);
+} } }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::uno::Reference< ::ooo::vba::word::XWrapFormat > *);
+
+#endif

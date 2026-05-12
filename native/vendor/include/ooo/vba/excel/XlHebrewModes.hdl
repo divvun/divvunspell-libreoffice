@@ -1,0 +1,18 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLHEBREWMODES_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLHEBREWMODES_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlHebrewModes {
+
+static const ::sal_Int32 xlHebrewFullScript = (sal_Int32)0;
+static const ::sal_Int32 xlHebrewMixedAuthorizedScript = (sal_Int32)3;
+static const ::sal_Int32 xlHebrewMixedScript = (sal_Int32)2;
+static const ::sal_Int32 xlHebrewPartialScript = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLHEBREWMODES_HDL

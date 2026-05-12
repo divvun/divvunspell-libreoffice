@@ -1,0 +1,22 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOSYNCEVENTTYPE_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOSYNCEVENTTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoSyncEventType {
+
+static const ::sal_Int32 msoSyncEventDownloadFailed = (sal_Int32)2;
+static const ::sal_Int32 msoSyncEventDownloadInitiated = (sal_Int32)0;
+static const ::sal_Int32 msoSyncEventDownloadNoChange = (sal_Int32)6;
+static const ::sal_Int32 msoSyncEventDownloadSucceeded = (sal_Int32)1;
+static const ::sal_Int32 msoSyncEventOffline = (sal_Int32)7;
+static const ::sal_Int32 msoSyncEventUploadFailed = (sal_Int32)5;
+static const ::sal_Int32 msoSyncEventUploadInitiated = (sal_Int32)3;
+static const ::sal_Int32 msoSyncEventUploadSucceeded = (sal_Int32)4;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOSYNCEVENTTYPE_HDL

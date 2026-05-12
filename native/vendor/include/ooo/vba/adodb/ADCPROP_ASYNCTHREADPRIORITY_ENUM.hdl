@@ -1,0 +1,19 @@
+#ifndef INCLUDED_OOO_VBA_ADODB_ADCPROP_ASYNCTHREADPRIORITY_ENUM_HDL
+#define INCLUDED_OOO_VBA_ADODB_ADCPROP_ASYNCTHREADPRIORITY_ENUM_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace adodb { namespace ADCPROP_ASYNCTHREADPRIORITY_ENUM {
+
+static const ::sal_Int32 adPriorityAboveNormal = (sal_Int32)4;
+static const ::sal_Int32 adPriorityBelowNormal = (sal_Int32)2;
+static const ::sal_Int32 adPriorityHighest = (sal_Int32)5;
+static const ::sal_Int32 adPriorityLowest = (sal_Int32)1;
+static const ::sal_Int32 adPriorityNormal = (sal_Int32)3;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_ADODB_ADCPROP_ASYNCTHREADPRIORITY_ENUM_HDL

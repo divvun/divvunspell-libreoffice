@@ -1,0 +1,109 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XWORKSHEET_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XWORKSHEET_HDL
+
+#include "sal/config.h"
+
+#include "com/sun/star/container/XNamed.hdl"
+#include "com/sun/star/lang/XUnoTunnel.hdl"
+#include "com/sun/star/script/XInvocation.hdl"
+#include "ooo/vba/XHelperInterface.hdl"
+namespace ooo { namespace vba { namespace excel { class XOutline; } } }
+namespace ooo { namespace vba { namespace excel { class XPageSetup; } } }
+namespace ooo { namespace vba { namespace excel { class XRange; } } }
+namespace ooo { namespace vba { namespace excel { class XWorksheet; } } }
+#include "com/sun/star/uno/Any.h"
+#include "com/sun/star/uno/Reference.h"
+#include "cppu/macros.hxx"
+#include "rtl/ustring.hxx"
+#include "sal/types.h"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace ooo { namespace vba { namespace excel {
+
+class SAL_NO_VTABLE SAL_DLLPUBLIC_RTTI XWorksheet : public ::ooo::vba::XHelperInterface, public ::css::script::XInvocation, public ::css::container::XNamed, public ::css::lang::XUnoTunnel
+{
+public:
+#if defined LIBO_INTERNAL_ONLY
+    XWorksheet() = default;
+    XWorksheet(XWorksheet const &) = default;
+    XWorksheet(XWorksheet &&) = default;
+    XWorksheet & operator =(XWorksheet const &) = default;
+    XWorksheet & operator =(XWorksheet &&) = default;
+#endif
+
+
+    // Attributes
+    virtual ::sal_Int32 SAL_CALL getVisible() = 0;
+    virtual void SAL_CALL setVisible( ::sal_Int32 _visible ) = 0;
+    virtual ::sal_Int32 SAL_CALL getStandardHeight() = 0;
+    virtual ::sal_Int32 SAL_CALL getStandardWidth() = 0;
+    virtual ::sal_Bool SAL_CALL getProtectionMode() = 0;
+    virtual ::sal_Bool SAL_CALL getProtectContents() = 0;
+    virtual ::sal_Bool SAL_CALL getProtectDrawingObjects() = 0;
+    virtual ::sal_Bool SAL_CALL getProtectScenarios() = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::excel::XRange > SAL_CALL getUsedRange() = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::excel::XWorksheet > SAL_CALL getNext() = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::excel::XWorksheet > SAL_CALL getPrevious() = 0;
+    virtual ::rtl::OUString SAL_CALL getCodeName() = 0;
+    virtual ::sal_Int16 SAL_CALL getIndex() = 0;
+    virtual ::sal_Int32 SAL_CALL getEnableSelection() = 0;
+    virtual void SAL_CALL setEnableSelection( ::sal_Int32 _enableselection ) = 0;
+    virtual ::sal_Bool SAL_CALL getAutoFilterMode() = 0;
+    virtual void SAL_CALL setAutoFilterMode( ::sal_Bool _autofiltermode ) = 0;
+
+    // Methods
+    virtual void SAL_CALL Activate() = 0;
+    virtual void SAL_CALL Calculate() = 0;
+    virtual void SAL_CALL Select() = 0;
+    virtual void SAL_CALL Move( const ::css::uno::Any& Before, const ::css::uno::Any& After ) = 0;
+    virtual void SAL_CALL Copy( const ::css::uno::Any& Before, const ::css::uno::Any& After ) = 0;
+    virtual void SAL_CALL Paste( const ::css::uno::Any& Destination, const ::css::uno::Any& Link ) = 0;
+    virtual void SAL_CALL Delete() = 0;
+    virtual void SAL_CALL Protect( const ::css::uno::Any& Password, const ::css::uno::Any& DrawingObjects, const ::css::uno::Any& Contents, const ::css::uno::Any& Scenarios, const ::css::uno::Any& UserInterfaceOnly ) = 0;
+    virtual void SAL_CALL Unprotect( const ::css::uno::Any& Password ) = 0;
+    virtual void SAL_CALL CheckSpelling( const ::css::uno::Any& CustomDictionary, const ::css::uno::Any& IgnoreUppercase, const ::css::uno::Any& AlwaysSuggest, const ::css::uno::Any& SpellingLang ) = 0;
+    virtual void SAL_CALL ShowDataForm() = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::excel::XRange > SAL_CALL Range( const ::css::uno::Any& Cell1, const ::css::uno::Any& Cell2 ) = 0;
+    virtual ::css::uno::Any SAL_CALL ChartObjects( const ::css::uno::Any& Index ) = 0;
+    virtual ::css::uno::Any SAL_CALL PivotTables( const ::css::uno::Any& Index ) = 0;
+    virtual ::css::uno::Any SAL_CALL Comments( const ::css::uno::Any& Index ) = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::excel::XOutline > SAL_CALL Outline() = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::excel::XPageSetup > SAL_CALL PageSetup() = 0;
+    virtual ::css::uno::Any SAL_CALL HPageBreaks( const ::css::uno::Any& Index ) = 0;
+    virtual ::css::uno::Any SAL_CALL VPageBreaks( const ::css::uno::Any& Index ) = 0;
+    virtual ::css::uno::Any SAL_CALL OLEObjects( const ::css::uno::Any& Index ) = 0;
+    virtual ::css::uno::Any SAL_CALL Shapes( const ::css::uno::Any& Index ) = 0;
+    virtual ::css::uno::Any SAL_CALL Buttons( const ::css::uno::Any& Index ) = 0;
+    virtual ::css::uno::Any SAL_CALL CheckBoxes( const ::css::uno::Any& Index ) = 0;
+    virtual ::css::uno::Any SAL_CALL DropDowns( const ::css::uno::Any& Index ) = 0;
+    virtual ::css::uno::Any SAL_CALL GroupBoxes( const ::css::uno::Any& Index ) = 0;
+    virtual ::css::uno::Any SAL_CALL Labels( const ::css::uno::Any& Index ) = 0;
+    virtual ::css::uno::Any SAL_CALL ListBoxes( const ::css::uno::Any& Index ) = 0;
+    virtual ::css::uno::Any SAL_CALL OptionButtons( const ::css::uno::Any& Index ) = 0;
+    virtual ::css::uno::Any SAL_CALL ScrollBars( const ::css::uno::Any& Index ) = 0;
+    virtual ::css::uno::Any SAL_CALL Spinners( const ::css::uno::Any& Index ) = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::excel::XRange > SAL_CALL Cells( const ::css::uno::Any& RowIndex, const ::css::uno::Any& ColumnIndex ) = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::excel::XRange > SAL_CALL Rows( const ::css::uno::Any& Index ) = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::excel::XRange > SAL_CALL Columns( const ::css::uno::Any& Index ) = 0;
+    virtual ::css::uno::Any SAL_CALL Hyperlinks( const ::css::uno::Any& Index ) = 0;
+    virtual ::css::uno::Any SAL_CALL Names( const ::css::uno::Any& Index ) = 0;
+    virtual ::css::uno::Any SAL_CALL Evaluate( const ::rtl::OUString& Name ) = 0;
+    virtual void SAL_CALL setEnableCalculation( ::sal_Bool EnableCalculation ) = 0;
+    virtual ::sal_Bool SAL_CALL getEnableCalculation() = 0;
+    virtual void SAL_CALL PrintOut( const ::css::uno::Any& From, const ::css::uno::Any& To, const ::css::uno::Any& Copies, const ::css::uno::Any& Preview, const ::css::uno::Any& ActivePrinter, const ::css::uno::Any& PrintToFile, const ::css::uno::Any& Collate, const ::css::uno::Any& PrToFileName, const ::css::uno::Any& IgnorePrintAreas ) = 0;
+    virtual void SAL_CALL ExportAsFixedFormat( const ::css::uno::Any& Type, const ::css::uno::Any& FileName, const ::css::uno::Any& Quality, const ::css::uno::Any& IncludeDocProperties, const ::css::uno::Any& IgnorePrintAreas, const ::css::uno::Any& From, const ::css::uno::Any& To, const ::css::uno::Any& OpenAfterPublish, const ::css::uno::Any& FixedFormatExtClassPtr ) = 0;
+
+    static inline ::css::uno::Type const & SAL_CALL static_type(void * = 0);
+
+protected:
+    ~XWorksheet() SAL_NOEXCEPT {} // avoid warnings about virtual members and non-virtual dtor
+};
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::ooo::vba::excel::XWorksheet const *);
+} } }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::uno::Reference< ::ooo::vba::excel::XWorksheet > *);
+
+#endif

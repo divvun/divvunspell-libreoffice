@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLSHEETVISIBILITY_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLSHEETVISIBILITY_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlSheetVisibility {
+
+static const ::sal_Int32 xlSheetHidden = (sal_Int32)0;
+static const ::sal_Int32 xlSheetVeryHidden = (sal_Int32)2;
+static const ::sal_Int32 xlSheetVisible = (sal_Int32)-1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLSHEETVISIBILITY_HDL

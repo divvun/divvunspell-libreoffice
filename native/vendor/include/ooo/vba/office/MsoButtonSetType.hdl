@@ -1,0 +1,29 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOBUTTONSETTYPE_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOBUTTONSETTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoButtonSetType {
+
+static const ::sal_Int32 msoButtonSetAbortRetryIgnore = (sal_Int32)10;
+static const ::sal_Int32 msoButtonSetBackClose = (sal_Int32)6;
+static const ::sal_Int32 msoButtonSetBackNextClose = (sal_Int32)8;
+static const ::sal_Int32 msoButtonSetBackNextSnooze = (sal_Int32)12;
+static const ::sal_Int32 msoButtonSetCancel = (sal_Int32)2;
+static const ::sal_Int32 msoButtonSetNextClose = (sal_Int32)7;
+static const ::sal_Int32 msoButtonSetNone = (sal_Int32)0;
+static const ::sal_Int32 msoButtonSetOK = (sal_Int32)1;
+static const ::sal_Int32 msoButtonSetOkCancel = (sal_Int32)3;
+static const ::sal_Int32 msoButtonSetRetryCancel = (sal_Int32)9;
+static const ::sal_Int32 msoButtonSetSearchClose = (sal_Int32)11;
+static const ::sal_Int32 msoButtonSetTipsOptionsClose = (sal_Int32)13;
+static const ::sal_Int32 msoButtonSetYesAllNoCancel = (sal_Int32)14;
+static const ::sal_Int32 msoButtonSetYesNo = (sal_Int32)4;
+static const ::sal_Int32 msoButtonSetYesNoCancel = (sal_Int32)5;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOBUTTONSETTYPE_HDL

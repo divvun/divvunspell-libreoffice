@@ -1,0 +1,16 @@
+#ifndef INCLUDED_OOO_VBA_MSFORMS_FMBUTTONEFFECT_HDL
+#define INCLUDED_OOO_VBA_MSFORMS_FMBUTTONEFFECT_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace msforms { namespace fmButtonEffect {
+
+static const ::sal_Int32 fmButtonEffectFlat = (sal_Int32)0;
+static const ::sal_Int32 fmButtonEffectSunken = (sal_Int32)2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_MSFORMS_FMBUTTONEFFECT_HDL

@@ -1,0 +1,35 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLPARAMETERDATATYPE_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLPARAMETERDATATYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlParameterDataType {
+
+static const ::sal_Int32 xlParamTypeBigInt = (sal_Int32)-5;
+static const ::sal_Int32 xlParamTypeBinary = (sal_Int32)-2;
+static const ::sal_Int32 xlParamTypeBit = (sal_Int32)-7;
+static const ::sal_Int32 xlParamTypeChar = (sal_Int32)1;
+static const ::sal_Int32 xlParamTypeDate = (sal_Int32)9;
+static const ::sal_Int32 xlParamTypeDecimal = (sal_Int32)3;
+static const ::sal_Int32 xlParamTypeDouble = (sal_Int32)8;
+static const ::sal_Int32 xlParamTypeFloat = (sal_Int32)6;
+static const ::sal_Int32 xlParamTypeInteger = (sal_Int32)4;
+static const ::sal_Int32 xlParamTypeLongVarBinary = (sal_Int32)-4;
+static const ::sal_Int32 xlParamTypeLongVarChar = (sal_Int32)-1;
+static const ::sal_Int32 xlParamTypeNumeric = (sal_Int32)2;
+static const ::sal_Int32 xlParamTypeReal = (sal_Int32)7;
+static const ::sal_Int32 xlParamTypeSmallInt = (sal_Int32)5;
+static const ::sal_Int32 xlParamTypeTime = (sal_Int32)10;
+static const ::sal_Int32 xlParamTypeTimestamp = (sal_Int32)11;
+static const ::sal_Int32 xlParamTypeTinyInt = (sal_Int32)-6;
+static const ::sal_Int32 xlParamTypeUnknown = (sal_Int32)0;
+static const ::sal_Int32 xlParamTypeVarBinary = (sal_Int32)-3;
+static const ::sal_Int32 xlParamTypeVarChar = (sal_Int32)12;
+static const ::sal_Int32 xlParamTypeWChar = (sal_Int32)-8;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLPARAMETERDATATYPE_HDL

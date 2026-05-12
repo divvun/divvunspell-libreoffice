@@ -1,0 +1,16 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDDATELANGUAGE_HDL
+#define INCLUDED_OOO_VBA_WORD_WDDATELANGUAGE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdDateLanguage {
+
+static const ::sal_Int32 wdDateLanguageBidi = (sal_Int32)10;
+static const ::sal_Int32 wdDateLanguageLatin = (sal_Int32)1033;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDDATELANGUAGE_HDL

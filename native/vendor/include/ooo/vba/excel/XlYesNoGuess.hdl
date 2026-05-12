@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLYESNOGUESS_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLYESNOGUESS_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlYesNoGuess {
+
+static const ::sal_Int32 xlGuess = (sal_Int32)0;
+static const ::sal_Int32 xlNo = (sal_Int32)2;
+static const ::sal_Int32 xlYes = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLYESNOGUESS_HDL

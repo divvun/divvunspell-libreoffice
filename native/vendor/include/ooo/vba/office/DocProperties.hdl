@@ -1,0 +1,19 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_DOCPROPERTIES_HDL
+#define INCLUDED_OOO_VBA_OFFICE_DOCPROPERTIES_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace DocProperties {
+
+static const ::sal_Int32 offPropertyTypeBoolean = (sal_Int32)2;
+static const ::sal_Int32 offPropertyTypeDate = (sal_Int32)3;
+static const ::sal_Int32 offPropertyTypeFloat = (sal_Int32)5;
+static const ::sal_Int32 offPropertyTypeNumber = (sal_Int32)1;
+static const ::sal_Int32 offPropertyTypeString = (sal_Int32)4;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_DOCPROPERTIES_HDL

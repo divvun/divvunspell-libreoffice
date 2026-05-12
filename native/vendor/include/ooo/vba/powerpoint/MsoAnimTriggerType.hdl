@@ -1,0 +1,20 @@
+#ifndef INCLUDED_OOO_VBA_POWERPOINT_MSOANIMTRIGGERTYPE_HDL
+#define INCLUDED_OOO_VBA_POWERPOINT_MSOANIMTRIGGERTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace powerpoint { namespace MsoAnimTriggerType {
+
+static const ::sal_Int32 msoAnimTriggerAfterPrevious = (sal_Int32)3;
+static const ::sal_Int32 msoAnimTriggerMixed = (sal_Int32)-1;
+static const ::sal_Int32 msoAnimTriggerNone = (sal_Int32)0;
+static const ::sal_Int32 msoAnimTriggerOnPageClick = (sal_Int32)1;
+static const ::sal_Int32 msoAnimTriggerOnShapeClick = (sal_Int32)4;
+static const ::sal_Int32 msoAnimTriggerWithPrevious = (sal_Int32)2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_POWERPOINT_MSOANIMTRIGGERTYPE_HDL

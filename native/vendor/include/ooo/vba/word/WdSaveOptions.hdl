@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDSAVEOPTIONS_HDL
+#define INCLUDED_OOO_VBA_WORD_WDSAVEOPTIONS_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdSaveOptions {
+
+static const ::sal_Int32 wdDoNotSaveChanges = (sal_Int32)0;
+static const ::sal_Int32 wdPromptToSaveChanges = (sal_Int32)-2;
+static const ::sal_Int32 wdSaveChanges = (sal_Int32)-1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDSAVEOPTIONS_HDL

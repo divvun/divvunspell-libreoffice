@@ -1,0 +1,21 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLMSAPPLICATION_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLMSAPPLICATION_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlMSApplication {
+
+static const ::sal_Int32 xlMicrosoftAccess = (sal_Int32)4;
+static const ::sal_Int32 xlMicrosoftFoxPro = (sal_Int32)5;
+static const ::sal_Int32 xlMicrosoftMail = (sal_Int32)3;
+static const ::sal_Int32 xlMicrosoftPowerPoint = (sal_Int32)2;
+static const ::sal_Int32 xlMicrosoftProject = (sal_Int32)6;
+static const ::sal_Int32 xlMicrosoftSchedulePlus = (sal_Int32)7;
+static const ::sal_Int32 xlMicrosoftWord = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLMSAPPLICATION_HDL

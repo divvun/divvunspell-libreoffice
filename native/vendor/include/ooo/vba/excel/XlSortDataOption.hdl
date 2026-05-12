@@ -1,0 +1,16 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLSORTDATAOPTION_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLSORTDATAOPTION_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlSortDataOption {
+
+static const ::sal_Int32 xlSortNormal = (sal_Int32)0;
+static const ::sal_Int32 xlSortTextAsNumbers = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLSORTDATAOPTION_HDL

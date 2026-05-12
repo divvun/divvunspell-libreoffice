@@ -1,0 +1,20 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDWRAPTYPE_HDL
+#define INCLUDED_OOO_VBA_WORD_WDWRAPTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdWrapType {
+
+static const ::sal_Int32 wdWrapInline = (sal_Int32)7;
+static const ::sal_Int32 wdWrapNone = (sal_Int32)3;
+static const ::sal_Int32 wdWrapSquare = (sal_Int32)0;
+static const ::sal_Int32 wdWrapThrough = (sal_Int32)2;
+static const ::sal_Int32 wdWrapTight = (sal_Int32)1;
+static const ::sal_Int32 wdWrapTopBottom = (sal_Int32)4;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDWRAPTYPE_HDL

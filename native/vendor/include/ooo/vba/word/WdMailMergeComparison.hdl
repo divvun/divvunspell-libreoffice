@@ -1,0 +1,22 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDMAILMERGECOMPARISON_HDL
+#define INCLUDED_OOO_VBA_WORD_WDMAILMERGECOMPARISON_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdMailMergeComparison {
+
+static const ::sal_Int32 wdMergeIfEqual = (sal_Int32)0;
+static const ::sal_Int32 wdMergeIfGreaterThan = (sal_Int32)3;
+static const ::sal_Int32 wdMergeIfGreaterThanOrEqual = (sal_Int32)5;
+static const ::sal_Int32 wdMergeIfIsBlank = (sal_Int32)6;
+static const ::sal_Int32 wdMergeIfIsNotBlank = (sal_Int32)7;
+static const ::sal_Int32 wdMergeIfLessThan = (sal_Int32)2;
+static const ::sal_Int32 wdMergeIfLessThanOrEqual = (sal_Int32)4;
+static const ::sal_Int32 wdMergeIfNotEqual = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDMAILMERGECOMPARISON_HDL

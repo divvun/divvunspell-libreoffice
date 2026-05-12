@@ -1,0 +1,18 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLBORDERWEIGHT_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLBORDERWEIGHT_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlBorderWeight {
+
+static const ::sal_Int32 xlHairline = (sal_Int32)1;
+static const ::sal_Int32 xlMedium = (sal_Int32)-4138;
+static const ::sal_Int32 xlThick = (sal_Int32)4;
+static const ::sal_Int32 xlThin = (sal_Int32)2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLBORDERWEIGHT_HDL

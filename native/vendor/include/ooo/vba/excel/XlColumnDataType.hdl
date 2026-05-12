@@ -1,0 +1,24 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLCOLUMNDATATYPE_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLCOLUMNDATATYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlColumnDataType {
+
+static const ::sal_Int32 xlDMYFormat = (sal_Int32)4;
+static const ::sal_Int32 xlDYMFormat = (sal_Int32)7;
+static const ::sal_Int32 xlEMDFormat = (sal_Int32)10;
+static const ::sal_Int32 xlGeneralFormat = (sal_Int32)1;
+static const ::sal_Int32 xlMDYFormat = (sal_Int32)3;
+static const ::sal_Int32 xlMYDFormat = (sal_Int32)6;
+static const ::sal_Int32 xlSkipColumn = (sal_Int32)9;
+static const ::sal_Int32 xlTextFormat = (sal_Int32)2;
+static const ::sal_Int32 xlYDMFormat = (sal_Int32)8;
+static const ::sal_Int32 xlYMDFormat = (sal_Int32)5;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLCOLUMNDATATYPE_HDL

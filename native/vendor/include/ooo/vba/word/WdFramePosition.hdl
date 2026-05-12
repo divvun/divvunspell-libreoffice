@@ -1,0 +1,21 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDFRAMEPOSITION_HDL
+#define INCLUDED_OOO_VBA_WORD_WDFRAMEPOSITION_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdFramePosition {
+
+static const ::sal_Int32 wdFrameBottom = (sal_Int32)-999997;
+static const ::sal_Int32 wdFrameCenter = (sal_Int32)-999995;
+static const ::sal_Int32 wdFrameInside = (sal_Int32)-999994;
+static const ::sal_Int32 wdFrameLeft = (sal_Int32)-999998;
+static const ::sal_Int32 wdFrameOutside = (sal_Int32)-999993;
+static const ::sal_Int32 wdFrameRight = (sal_Int32)-999996;
+static const ::sal_Int32 wdFrameTop = (sal_Int32)-999999;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDFRAMEPOSITION_HDL

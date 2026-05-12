@@ -1,0 +1,23 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOFILEDIALOGVIEW_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOFILEDIALOGVIEW_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoFileDialogView {
+
+static const ::sal_Int32 msoFileDialogViewDetails = (sal_Int32)2;
+static const ::sal_Int32 msoFileDialogViewLargeIcons = (sal_Int32)6;
+static const ::sal_Int32 msoFileDialogViewList = (sal_Int32)1;
+static const ::sal_Int32 msoFileDialogViewPreview = (sal_Int32)4;
+static const ::sal_Int32 msoFileDialogViewProperties = (sal_Int32)3;
+static const ::sal_Int32 msoFileDialogViewSmallIcons = (sal_Int32)7;
+static const ::sal_Int32 msoFileDialogViewThumbnail = (sal_Int32)5;
+static const ::sal_Int32 msoFileDialogViewTiles = (sal_Int32)9;
+static const ::sal_Int32 msoFileDialogViewWebView = (sal_Int32)8;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOFILEDIALOGVIEW_HDL

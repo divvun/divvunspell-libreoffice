@@ -1,0 +1,16 @@
+#ifndef INCLUDED_OOO_VBA_ACCESS_ACPRINTCOLOR_HDL
+#define INCLUDED_OOO_VBA_ACCESS_ACPRINTCOLOR_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace access { namespace AcPrintColor {
+
+static const ::sal_Int32 acPRCMColor = (sal_Int32)2;
+static const ::sal_Int32 acPRCMMonochrome = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_ACCESS_ACPRINTCOLOR_HDL

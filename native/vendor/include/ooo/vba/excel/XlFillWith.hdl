@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLFILLWITH_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLFILLWITH_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlFillWith {
+
+static const ::sal_Int32 xlFillWithAll = (sal_Int32)-4104;
+static const ::sal_Int32 xlFillWithContents = (sal_Int32)2;
+static const ::sal_Int32 xlFillWithFormats = (sal_Int32)-4122;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLFILLWITH_HDL

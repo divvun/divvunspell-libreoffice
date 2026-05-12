@@ -1,0 +1,16 @@
+#ifndef INCLUDED_OOO_VBA_ADODB_MARSHALOPTIONSENUM_HDL
+#define INCLUDED_OOO_VBA_ADODB_MARSHALOPTIONSENUM_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace adodb { namespace MarshalOptionsEnum {
+
+static const ::sal_Int32 adMarshalAll = (sal_Int32)0;
+static const ::sal_Int32 adMarshalModifiedOnly = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_ADODB_MARSHALOPTIONSENUM_HDL

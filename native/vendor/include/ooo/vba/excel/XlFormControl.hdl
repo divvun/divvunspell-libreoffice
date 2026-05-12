@@ -1,0 +1,24 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLFORMCONTROL_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLFORMCONTROL_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlFormControl {
+
+static const ::sal_Int32 xlButtonControl = (sal_Int32)0;
+static const ::sal_Int32 xlCheckBox = (sal_Int32)1;
+static const ::sal_Int32 xlDropDown = (sal_Int32)2;
+static const ::sal_Int32 xlEditBox = (sal_Int32)3;
+static const ::sal_Int32 xlGroupBox = (sal_Int32)4;
+static const ::sal_Int32 xlLabel = (sal_Int32)5;
+static const ::sal_Int32 xlListBox = (sal_Int32)6;
+static const ::sal_Int32 xlOptionButton = (sal_Int32)7;
+static const ::sal_Int32 xlScrollBar = (sal_Int32)8;
+static const ::sal_Int32 xlSpinner = (sal_Int32)9;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLFORMCONTROL_HDL

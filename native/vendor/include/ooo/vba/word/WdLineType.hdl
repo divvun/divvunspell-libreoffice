@@ -1,0 +1,16 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDLINETYPE_HDL
+#define INCLUDED_OOO_VBA_WORD_WDLINETYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdLineType {
+
+static const ::sal_Int32 wdTableRow = (sal_Int32)1;
+static const ::sal_Int32 wdTextLine = (sal_Int32)0;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDLINETYPE_HDL

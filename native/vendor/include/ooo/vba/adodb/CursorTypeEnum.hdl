@@ -1,0 +1,19 @@
+#ifndef INCLUDED_OOO_VBA_ADODB_CURSORTYPEENUM_HDL
+#define INCLUDED_OOO_VBA_ADODB_CURSORTYPEENUM_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace adodb { namespace CursorTypeEnum {
+
+static const ::sal_Int32 adOpenDynamic = (sal_Int32)2;
+static const ::sal_Int32 adOpenForwardOnly = (sal_Int32)0;
+static const ::sal_Int32 adOpenKeyset = (sal_Int32)1;
+static const ::sal_Int32 adOpenStatic = (sal_Int32)3;
+static const ::sal_Int32 adOpenUnspecified = (sal_Int32)-1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_ADODB_CURSORTYPEENUM_HDL

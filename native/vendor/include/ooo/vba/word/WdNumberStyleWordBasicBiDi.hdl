@@ -1,0 +1,22 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDNUMBERSTYLEWORDBASICBIDI_HDL
+#define INCLUDED_OOO_VBA_WORD_WDNUMBERSTYLEWORDBASICBIDI_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdNumberStyleWordBasicBiDi {
+
+static const ::sal_Int32 wdCaptionNumberStyleBidiLetter1 = (sal_Int32)49;
+static const ::sal_Int32 wdCaptionNumberStyleBidiLetter2 = (sal_Int32)50;
+static const ::sal_Int32 wdListNumberStyleBidi1 = (sal_Int32)49;
+static const ::sal_Int32 wdListNumberStyleBidi2 = (sal_Int32)50;
+static const ::sal_Int32 wdNoteNumberStyleBidiLetter1 = (sal_Int32)49;
+static const ::sal_Int32 wdNoteNumberStyleBidiLetter2 = (sal_Int32)50;
+static const ::sal_Int32 wdPageNumberStyleBidiLetter1 = (sal_Int32)49;
+static const ::sal_Int32 wdPageNumberStyleBidiLetter2 = (sal_Int32)50;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDNUMBERSTYLEWORDBASICBIDI_HDL

@@ -1,0 +1,6 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDKEY_HPP
+#define INCLUDED_OOO_VBA_WORD_WDKEY_HPP
+
+#include "ooo/vba/word/WdKey.hdl"
+
+#endif // INCLUDED_OOO_VBA_WORD_WDKEY_HPP

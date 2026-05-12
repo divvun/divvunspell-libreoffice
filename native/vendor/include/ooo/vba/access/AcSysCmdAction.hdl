@@ -1,0 +1,27 @@
+#ifndef INCLUDED_OOO_VBA_ACCESS_ACSYSCMDACTION_HDL
+#define INCLUDED_OOO_VBA_ACCESS_ACSYSCMDACTION_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace access { namespace AcSysCmdAction {
+
+static const ::sal_Int32 acSysCmdAccessDir = (sal_Int32)9;
+static const ::sal_Int32 acSysCmdAccessVer = (sal_Int32)7;
+static const ::sal_Int32 acSysCmdClearHelpTopic = (sal_Int32)11;
+static const ::sal_Int32 acSysCmdClearStatus = (sal_Int32)5;
+static const ::sal_Int32 acSysCmdGetObjectState = (sal_Int32)10;
+static const ::sal_Int32 acSysCmdGetWorkgroupFile = (sal_Int32)13;
+static const ::sal_Int32 acSysCmdIniFile = (sal_Int32)8;
+static const ::sal_Int32 acSysCmdInitMeter = (sal_Int32)1;
+static const ::sal_Int32 acSysCmdProfile = (sal_Int32)12;
+static const ::sal_Int32 acSysCmdRemoveMeter = (sal_Int32)3;
+static const ::sal_Int32 acSysCmdRuntime = (sal_Int32)6;
+static const ::sal_Int32 acSysCmdSetStatus = (sal_Int32)4;
+static const ::sal_Int32 acSysCmdUpdateMeter = (sal_Int32)2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_ACCESS_ACSYSCMDACTION_HDL

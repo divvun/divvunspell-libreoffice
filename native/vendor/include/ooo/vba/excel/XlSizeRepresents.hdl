@@ -1,0 +1,16 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLSIZEREPRESENTS_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLSIZEREPRESENTS_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlSizeRepresents {
+
+static const ::sal_Int32 xlSizeIsArea = (sal_Int32)1;
+static const ::sal_Int32 xlSizeIsWidth = (sal_Int32)2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLSIZEREPRESENTS_HDL

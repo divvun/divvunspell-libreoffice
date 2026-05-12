@@ -1,0 +1,16 @@
+#ifndef INCLUDED_OOO_VBA_ACCESS_REFKIND_HDL
+#define INCLUDED_OOO_VBA_ACCESS_REFKIND_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace access { namespace RefKind {
+
+static const ::sal_Int32 Project = (sal_Int32)1;
+static const ::sal_Int32 TypeLib = (sal_Int32)0;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_ACCESS_REFKIND_HDL

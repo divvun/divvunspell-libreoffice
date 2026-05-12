@@ -1,0 +1,23 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDLINEWIDTH_HDL
+#define INCLUDED_OOO_VBA_WORD_WDLINEWIDTH_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdLineWidth {
+
+static const ::sal_Int32 wdLineWidth025pt = (sal_Int32)2;
+static const ::sal_Int32 wdLineWidth050pt = (sal_Int32)4;
+static const ::sal_Int32 wdLineWidth075pt = (sal_Int32)6;
+static const ::sal_Int32 wdLineWidth100pt = (sal_Int32)8;
+static const ::sal_Int32 wdLineWidth150pt = (sal_Int32)12;
+static const ::sal_Int32 wdLineWidth225pt = (sal_Int32)18;
+static const ::sal_Int32 wdLineWidth300pt = (sal_Int32)24;
+static const ::sal_Int32 wdLineWidth450pt = (sal_Int32)36;
+static const ::sal_Int32 wdLineWidth600pt = (sal_Int32)48;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDLINEWIDTH_HDL

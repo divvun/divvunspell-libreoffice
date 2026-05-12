@@ -1,0 +1,18 @@
+#ifndef INCLUDED_OOO_VBA_POWERPOINT_PPEXPORTMODE_HDL
+#define INCLUDED_OOO_VBA_POWERPOINT_PPEXPORTMODE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace powerpoint { namespace PpExportMode {
+
+static const ::sal_Int32 ppClipRelativeToSlide = (sal_Int32)2;
+static const ::sal_Int32 ppRelativeToSlide = (sal_Int32)1;
+static const ::sal_Int32 ppScaleToFit = (sal_Int32)3;
+static const ::sal_Int32 ppScaleXY = (sal_Int32)4;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_POWERPOINT_PPEXPORTMODE_HDL

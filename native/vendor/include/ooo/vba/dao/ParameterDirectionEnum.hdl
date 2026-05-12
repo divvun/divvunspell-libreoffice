@@ -1,0 +1,18 @@
+#ifndef INCLUDED_OOO_VBA_DAO_PARAMETERDIRECTIONENUM_HDL
+#define INCLUDED_OOO_VBA_DAO_PARAMETERDIRECTIONENUM_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace dao { namespace ParameterDirectionEnum {
+
+static const ::sal_Int32 dbParamInput = (sal_Int32)1;
+static const ::sal_Int32 dbParamInputOutput = (sal_Int32)3;
+static const ::sal_Int32 dbParamOutput = (sal_Int32)2;
+static const ::sal_Int32 dbParamReturnValue = (sal_Int32)4;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_DAO_PARAMETERDIRECTIONENUM_HDL

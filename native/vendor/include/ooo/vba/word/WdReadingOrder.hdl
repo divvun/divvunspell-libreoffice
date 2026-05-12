@@ -1,0 +1,16 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDREADINGORDER_HDL
+#define INCLUDED_OOO_VBA_WORD_WDREADINGORDER_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdReadingOrder {
+
+static const ::sal_Int32 wdReadingOrderLtr = (sal_Int32)1;
+static const ::sal_Int32 wdReadingOrderRtl = (sal_Int32)0;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDREADINGORDER_HDL

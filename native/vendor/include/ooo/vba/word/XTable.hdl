@@ -1,0 +1,60 @@
+#ifndef INCLUDED_OOO_VBA_WORD_XTABLE_HDL
+#define INCLUDED_OOO_VBA_WORD_XTABLE_HDL
+
+#include "sal/config.h"
+
+#include "ooo/vba/XHelperInterface.hdl"
+namespace ooo { namespace vba { namespace word { class XRange; } } }
+#include "com/sun/star/uno/Any.h"
+#include "com/sun/star/uno/Reference.h"
+#include "cppu/macros.hxx"
+#include "rtl/ustring.hxx"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace ooo { namespace vba { namespace word {
+
+class SAL_NO_VTABLE SAL_DLLPUBLIC_RTTI XTable : public ::ooo::vba::XHelperInterface
+{
+public:
+#if defined LIBO_INTERNAL_ONLY
+    XTable() = default;
+    XTable(XTable const &) = default;
+    XTable(XTable &&) = default;
+    XTable & operator =(XTable const &) = default;
+    XTable & operator =(XTable &&) = default;
+#endif
+
+
+    // Attributes
+    virtual ::rtl::OUString SAL_CALL getName() = 0;
+    virtual float SAL_CALL getBottomPadding() = 0;
+    virtual void SAL_CALL setBottomPadding( float _bottompadding ) = 0;
+    virtual float SAL_CALL getLeftPadding() = 0;
+    virtual void SAL_CALL setLeftPadding( float _leftpadding ) = 0;
+    virtual float SAL_CALL getRightPadding() = 0;
+    virtual void SAL_CALL setRightPadding( float _rightpadding ) = 0;
+    virtual float SAL_CALL getTopPadding() = 0;
+    virtual void SAL_CALL setTopPadding( float _toppadding ) = 0;
+
+    // Methods
+    virtual ::css::uno::Reference< ::ooo::vba::word::XRange > SAL_CALL Range() = 0;
+    virtual void SAL_CALL Select() = 0;
+    virtual void SAL_CALL Delete() = 0;
+    virtual ::css::uno::Any SAL_CALL Borders( const ::css::uno::Any& Index ) = 0;
+    virtual ::css::uno::Any SAL_CALL Rows( const ::css::uno::Any& aIndex ) = 0;
+    virtual ::css::uno::Any SAL_CALL Columns( const ::css::uno::Any& aIndex ) = 0;
+
+    static inline ::css::uno::Type const & SAL_CALL static_type(void * = 0);
+
+protected:
+    ~XTable() SAL_NOEXCEPT {} // avoid warnings about virtual members and non-virtual dtor
+};
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::ooo::vba::word::XTable const *);
+} } }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::uno::Reference< ::ooo::vba::word::XTable > *);
+
+#endif

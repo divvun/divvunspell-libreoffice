@@ -1,0 +1,18 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLXMLLOADOPTION_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLXMLLOADOPTION_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlXmlLoadOption {
+
+static const ::sal_Int32 xlXmlLoadImportToList = (sal_Int32)2;
+static const ::sal_Int32 xlXmlLoadMapXml = (sal_Int32)3;
+static const ::sal_Int32 xlXmlLoadOpenXml = (sal_Int32)1;
+static const ::sal_Int32 xlXmlLoadPromptUser = (sal_Int32)0;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLXMLLOADOPTION_HDL

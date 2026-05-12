@@ -5,4 +5,10 @@
   <manifest:file-entry
    manifest:media-type="application/vnd.sun.star.uno-components"
    manifest:full-path="DivvunSpell.components"/>
+  <manifest:file-entry
+   manifest:media-type="application/vnd.sun.star.configuration-schema"
+   manifest:full-path="registry/schema/org/openoffice/Office/DivvunSpell.xcs"/>
+  <manifest:file-entry
+   manifest:media-type="application/vnd.sun.star.configuration-data"
+   manifest:full-path="registry/data/org/openoffice/Office/OptionsDialog.xcu"/>
 </manifest:manifest>

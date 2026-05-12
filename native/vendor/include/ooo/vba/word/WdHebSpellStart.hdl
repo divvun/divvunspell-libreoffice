@@ -1,0 +1,18 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDHEBSPELLSTART_HDL
+#define INCLUDED_OOO_VBA_WORD_WDHEBSPELLSTART_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdHebSpellStart {
+
+static const ::sal_Int32 wdFullScript = (sal_Int32)0;
+static const ::sal_Int32 wdMixedAuthorizedScript = (sal_Int32)3;
+static const ::sal_Int32 wdMixedScript = (sal_Int32)2;
+static const ::sal_Int32 wdPartialScript = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDHEBSPELLSTART_HDL

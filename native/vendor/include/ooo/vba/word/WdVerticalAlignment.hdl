@@ -1,0 +1,18 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDVERTICALALIGNMENT_HDL
+#define INCLUDED_OOO_VBA_WORD_WDVERTICALALIGNMENT_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdVerticalAlignment {
+
+static const ::sal_Int32 wdAlignVerticalBottom = (sal_Int32)3;
+static const ::sal_Int32 wdAlignVerticalCenter = (sal_Int32)1;
+static const ::sal_Int32 wdAlignVerticalJustify = (sal_Int32)2;
+static const ::sal_Int32 wdAlignVerticalTop = (sal_Int32)0;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDVERTICALALIGNMENT_HDL

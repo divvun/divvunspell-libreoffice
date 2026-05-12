@@ -1,0 +1,19 @@
+#ifndef INCLUDED_OOO_VBA_POWERPOINT_PPBULLETTYPE_HDL
+#define INCLUDED_OOO_VBA_POWERPOINT_PPBULLETTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace powerpoint { namespace PpBulletType {
+
+static const ::sal_Int32 ppBulletMixed = (sal_Int32)-2;
+static const ::sal_Int32 ppBulletNone = (sal_Int32)0;
+static const ::sal_Int32 ppBulletNumbered = (sal_Int32)2;
+static const ::sal_Int32 ppBulletPicture = (sal_Int32)3;
+static const ::sal_Int32 ppBulletUnnumbered = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_POWERPOINT_PPBULLETTYPE_HDL

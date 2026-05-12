@@ -1,0 +1,16 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLSUBSCRIBETOFORMAT_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLSUBSCRIBETOFORMAT_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlSubscribeToFormat {
+
+static const ::sal_Int32 xlSubscribeToPicture = (sal_Int32)-4147;
+static const ::sal_Int32 xlSubscribeToText = (sal_Int32)-4158;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLSUBSCRIBETOFORMAT_HDL

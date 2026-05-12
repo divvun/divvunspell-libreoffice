@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_ACCESS_ACFORMATCONDITIONTYPE_HDL
+#define INCLUDED_OOO_VBA_ACCESS_ACFORMATCONDITIONTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace access { namespace AcFormatConditionType {
+
+static const ::sal_Int32 acExpression = (sal_Int32)1;
+static const ::sal_Int32 acFieldHasFocus = (sal_Int32)2;
+static const ::sal_Int32 acFieldValue = (sal_Int32)0;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_ACCESS_ACFORMATCONDITIONTYPE_HDL

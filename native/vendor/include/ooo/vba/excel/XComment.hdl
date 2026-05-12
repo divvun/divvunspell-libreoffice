@@ -1,0 +1,56 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XCOMMENT_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XCOMMENT_HDL
+
+#include "sal/config.h"
+
+#include "ooo/vba/XHelperInterface.hdl"
+namespace ooo { namespace vba { namespace excel { class XComment; } } }
+namespace ooo { namespace vba { namespace msforms { class XShape; } } }
+#include "com/sun/star/uno/Any.h"
+#include "com/sun/star/uno/Reference.h"
+#include "cppu/macros.hxx"
+#include "rtl/ustring.hxx"
+#include "sal/types.h"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace ooo { namespace vba { namespace excel {
+
+class SAL_NO_VTABLE SAL_DLLPUBLIC_RTTI XComment : public ::ooo::vba::XHelperInterface
+{
+public:
+#if defined LIBO_INTERNAL_ONLY
+    XComment() = default;
+    XComment(XComment const &) = default;
+    XComment(XComment &&) = default;
+    XComment & operator =(XComment const &) = default;
+    XComment & operator =(XComment &&) = default;
+#endif
+
+
+    // Attributes
+    virtual ::rtl::OUString SAL_CALL getAuthor() = 0;
+    virtual void SAL_CALL setAuthor( const ::rtl::OUString& _author ) = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::msforms::XShape > SAL_CALL getShape() = 0;
+    virtual ::sal_Bool SAL_CALL getVisible() = 0;
+    virtual void SAL_CALL setVisible( ::sal_Bool _visible ) = 0;
+
+    // Methods
+    virtual void SAL_CALL Delete() = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::excel::XComment > SAL_CALL Next() = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::excel::XComment > SAL_CALL Previous() = 0;
+    virtual ::rtl::OUString SAL_CALL Text( const ::css::uno::Any& Text, const ::css::uno::Any& Start, const ::css::uno::Any& Overwrite ) = 0;
+
+    static inline ::css::uno::Type const & SAL_CALL static_type(void * = 0);
+
+protected:
+    ~XComment() SAL_NOEXCEPT {} // avoid warnings about virtual members and non-virtual dtor
+};
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::ooo::vba::excel::XComment const *);
+} } }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::uno::Reference< ::ooo::vba::excel::XComment > *);
+
+#endif

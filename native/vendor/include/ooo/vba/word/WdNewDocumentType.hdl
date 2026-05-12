@@ -1,0 +1,19 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDNEWDOCUMENTTYPE_HDL
+#define INCLUDED_OOO_VBA_WORD_WDNEWDOCUMENTTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdNewDocumentType {
+
+static const ::sal_Int32 wdNewBlankDocument = (sal_Int32)0;
+static const ::sal_Int32 wdNewEmailMessage = (sal_Int32)2;
+static const ::sal_Int32 wdNewFrameset = (sal_Int32)3;
+static const ::sal_Int32 wdNewWebPage = (sal_Int32)1;
+static const ::sal_Int32 wdNewXMLDocument = (sal_Int32)4;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDNEWDOCUMENTTYPE_HDL

@@ -1,0 +1,16 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOBUTTONSTYLEHIDDEN_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOBUTTONSTYLEHIDDEN_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoButtonStyleHidden {
+
+static const ::sal_Int32 msoButtonTextBelow = (sal_Int32)8;
+static const ::sal_Int32 msoButtonWrapText = (sal_Int32)4;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOBUTTONSTYLEHIDDEN_HDL

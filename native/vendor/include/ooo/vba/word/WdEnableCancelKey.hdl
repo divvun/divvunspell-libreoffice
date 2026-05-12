@@ -1,0 +1,16 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDENABLECANCELKEY_HDL
+#define INCLUDED_OOO_VBA_WORD_WDENABLECANCELKEY_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdEnableCancelKey {
+
+static const ::sal_Int32 wdCancelDisabled = (sal_Int32)0;
+static const ::sal_Int32 wdCancelInterrupt = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDENABLECANCELKEY_HDL

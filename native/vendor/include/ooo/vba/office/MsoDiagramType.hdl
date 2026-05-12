@@ -1,0 +1,21 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSODIAGRAMTYPE_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSODIAGRAMTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoDiagramType {
+
+static const ::sal_Int32 msoDiagramCycle = (sal_Int32)2;
+static const ::sal_Int32 msoDiagramMixed = (sal_Int32)-2;
+static const ::sal_Int32 msoDiagramOrgChart = (sal_Int32)1;
+static const ::sal_Int32 msoDiagramPyramid = (sal_Int32)4;
+static const ::sal_Int32 msoDiagramRadial = (sal_Int32)3;
+static const ::sal_Int32 msoDiagramTarget = (sal_Int32)6;
+static const ::sal_Int32 msoDiagramVenn = (sal_Int32)5;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSODIAGRAMTYPE_HDL

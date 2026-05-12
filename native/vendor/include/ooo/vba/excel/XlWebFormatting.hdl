@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLWEBFORMATTING_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLWEBFORMATTING_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlWebFormatting {
+
+static const ::sal_Int32 xlWebFormattingAll = (sal_Int32)1;
+static const ::sal_Int32 xlWebFormattingNone = (sal_Int32)3;
+static const ::sal_Int32 xlWebFormattingRTF = (sal_Int32)2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLWEBFORMATTING_HDL

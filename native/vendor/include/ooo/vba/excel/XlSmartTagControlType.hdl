@@ -1,0 +1,28 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLSMARTTAGCONTROLTYPE_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLSMARTTAGCONTROLTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlSmartTagControlType {
+
+static const ::sal_Int32 xlSmartTagControlActiveX = (sal_Int32)13;
+static const ::sal_Int32 xlSmartTagControlButton = (sal_Int32)6;
+static const ::sal_Int32 xlSmartTagControlCheckbox = (sal_Int32)9;
+static const ::sal_Int32 xlSmartTagControlCombo = (sal_Int32)12;
+static const ::sal_Int32 xlSmartTagControlHelp = (sal_Int32)3;
+static const ::sal_Int32 xlSmartTagControlHelpURL = (sal_Int32)4;
+static const ::sal_Int32 xlSmartTagControlImage = (sal_Int32)8;
+static const ::sal_Int32 xlSmartTagControlLabel = (sal_Int32)7;
+static const ::sal_Int32 xlSmartTagControlLink = (sal_Int32)2;
+static const ::sal_Int32 xlSmartTagControlListbox = (sal_Int32)11;
+static const ::sal_Int32 xlSmartTagControlRadioGroup = (sal_Int32)14;
+static const ::sal_Int32 xlSmartTagControlSeparator = (sal_Int32)5;
+static const ::sal_Int32 xlSmartTagControlSmartTag = (sal_Int32)1;
+static const ::sal_Int32 xlSmartTagControlTextbox = (sal_Int32)10;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLSMARTTAGCONTROLTYPE_HDL

@@ -1,0 +1,24 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDOUTLINELEVEL_HDL
+#define INCLUDED_OOO_VBA_WORD_WDOUTLINELEVEL_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdOutlineLevel {
+
+static const ::sal_Int32 wdOutlineLevel1 = (sal_Int32)1;
+static const ::sal_Int32 wdOutlineLevel2 = (sal_Int32)2;
+static const ::sal_Int32 wdOutlineLevel3 = (sal_Int32)3;
+static const ::sal_Int32 wdOutlineLevel4 = (sal_Int32)4;
+static const ::sal_Int32 wdOutlineLevel5 = (sal_Int32)5;
+static const ::sal_Int32 wdOutlineLevel6 = (sal_Int32)6;
+static const ::sal_Int32 wdOutlineLevel7 = (sal_Int32)7;
+static const ::sal_Int32 wdOutlineLevel8 = (sal_Int32)8;
+static const ::sal_Int32 wdOutlineLevel9 = (sal_Int32)9;
+static const ::sal_Int32 wdOutlineLevelBodyText = (sal_Int32)10;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDOUTLINELEVEL_HDL

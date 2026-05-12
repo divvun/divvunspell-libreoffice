@@ -1,0 +1,20 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLBARSHAPE_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLBARSHAPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlBarShape {
+
+static const ::sal_Int32 xlBox = (sal_Int32)0;
+static const ::sal_Int32 xlConeToMax = (sal_Int32)5;
+static const ::sal_Int32 xlConeToPoint = (sal_Int32)4;
+static const ::sal_Int32 xlCylinder = (sal_Int32)3;
+static const ::sal_Int32 xlPyramidToMax = (sal_Int32)2;
+static const ::sal_Int32 xlPyramidToPoint = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLBARSHAPE_HDL

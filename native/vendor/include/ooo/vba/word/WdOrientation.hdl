@@ -1,0 +1,16 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDORIENTATION_HDL
+#define INCLUDED_OOO_VBA_WORD_WDORIENTATION_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdOrientation {
+
+static const ::sal_Int32 wdOrientLandscape = (sal_Int32)1;
+static const ::sal_Int32 wdOrientPortrait = (sal_Int32)0;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDORIENTATION_HDL

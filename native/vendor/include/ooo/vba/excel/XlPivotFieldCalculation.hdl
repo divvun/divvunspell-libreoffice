@@ -1,0 +1,23 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLPIVOTFIELDCALCULATION_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLPIVOTFIELDCALCULATION_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlPivotFieldCalculation {
+
+static const ::sal_Int32 xlDifferenceFrom = (sal_Int32)2;
+static const ::sal_Int32 xlIndex = (sal_Int32)9;
+static const ::sal_Int32 xlNoAdditionalCalculation = (sal_Int32)-4143;
+static const ::sal_Int32 xlPercentDifferenceFrom = (sal_Int32)4;
+static const ::sal_Int32 xlPercentOf = (sal_Int32)3;
+static const ::sal_Int32 xlPercentOfColumn = (sal_Int32)7;
+static const ::sal_Int32 xlPercentOfRow = (sal_Int32)6;
+static const ::sal_Int32 xlPercentOfTotal = (sal_Int32)8;
+static const ::sal_Int32 xlRunningTotal = (sal_Int32)5;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLPIVOTFIELDCALCULATION_HDL

@@ -1,0 +1,6 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDLISTTYPE_HPP
+#define INCLUDED_OOO_VBA_WORD_WDLISTTYPE_HPP
+
+#include "ooo/vba/word/WdListType.hdl"
+
+#endif // INCLUDED_OOO_VBA_WORD_WDLISTTYPE_HPP

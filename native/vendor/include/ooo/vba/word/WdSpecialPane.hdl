@@ -1,0 +1,33 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDSPECIALPANE_HDL
+#define INCLUDED_OOO_VBA_WORD_WDSPECIALPANE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdSpecialPane {
+
+static const ::sal_Int32 wdPaneComments = (sal_Int32)15;
+static const ::sal_Int32 wdPaneCurrentPageFooter = (sal_Int32)17;
+static const ::sal_Int32 wdPaneCurrentPageHeader = (sal_Int32)16;
+static const ::sal_Int32 wdPaneEndnoteContinuationNotice = (sal_Int32)12;
+static const ::sal_Int32 wdPaneEndnoteContinuationSeparator = (sal_Int32)13;
+static const ::sal_Int32 wdPaneEndnoteSeparator = (sal_Int32)14;
+static const ::sal_Int32 wdPaneEndnotes = (sal_Int32)8;
+static const ::sal_Int32 wdPaneEvenPagesFooter = (sal_Int32)6;
+static const ::sal_Int32 wdPaneEvenPagesHeader = (sal_Int32)3;
+static const ::sal_Int32 wdPaneFirstPageFooter = (sal_Int32)5;
+static const ::sal_Int32 wdPaneFirstPageHeader = (sal_Int32)2;
+static const ::sal_Int32 wdPaneFootnoteContinuationNotice = (sal_Int32)9;
+static const ::sal_Int32 wdPaneFootnoteContinuationSeparator = (sal_Int32)10;
+static const ::sal_Int32 wdPaneFootnoteSeparator = (sal_Int32)11;
+static const ::sal_Int32 wdPaneFootnotes = (sal_Int32)7;
+static const ::sal_Int32 wdPaneNone = (sal_Int32)0;
+static const ::sal_Int32 wdPanePrimaryFooter = (sal_Int32)4;
+static const ::sal_Int32 wdPanePrimaryHeader = (sal_Int32)1;
+static const ::sal_Int32 wdPaneRevisions = (sal_Int32)18;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDSPECIALPANE_HDL

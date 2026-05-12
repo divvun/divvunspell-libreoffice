@@ -1,0 +1,6 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLLOOKAT_HPP
+#define INCLUDED_OOO_VBA_EXCEL_XLLOOKAT_HPP
+
+#include "ooo/vba/excel/XlLookAt.hdl"
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLLOOKAT_HPP

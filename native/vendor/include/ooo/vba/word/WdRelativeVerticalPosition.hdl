@@ -1,0 +1,18 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDRELATIVEVERTICALPOSITION_HDL
+#define INCLUDED_OOO_VBA_WORD_WDRELATIVEVERTICALPOSITION_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdRelativeVerticalPosition {
+
+static const ::sal_Int32 wdRelativeVerticalPositionLine = (sal_Int32)3;
+static const ::sal_Int32 wdRelativeVerticalPositionMargin = (sal_Int32)0;
+static const ::sal_Int32 wdRelativeVerticalPositionPage = (sal_Int32)1;
+static const ::sal_Int32 wdRelativeVerticalPositionParagraph = (sal_Int32)2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDRELATIVEVERTICALPOSITION_HDL

@@ -1,0 +1,19 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLARROWHEADSTYLE_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLARROWHEADSTYLE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlArrowHeadStyle {
+
+static const ::sal_Int32 xlArrowHeadStyleClosed = (sal_Int32)3;
+static const ::sal_Int32 xlArrowHeadStyleDoubleClosed = (sal_Int32)5;
+static const ::sal_Int32 xlArrowHeadStyleDoubleOpen = (sal_Int32)4;
+static const ::sal_Int32 xlArrowHeadStyleNone = (sal_Int32)-4142;
+static const ::sal_Int32 xlArrowHeadStyleOpen = (sal_Int32)2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLARROWHEADSTYLE_HDL

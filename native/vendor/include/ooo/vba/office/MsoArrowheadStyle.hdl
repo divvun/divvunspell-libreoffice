@@ -1,0 +1,21 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOARROWHEADSTYLE_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOARROWHEADSTYLE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoArrowheadStyle {
+
+static const ::sal_Int32 msoArrowheadDiamond = (sal_Int32)5;
+static const ::sal_Int32 msoArrowheadNone = (sal_Int32)1;
+static const ::sal_Int32 msoArrowheadOpen = (sal_Int32)3;
+static const ::sal_Int32 msoArrowheadOval = (sal_Int32)6;
+static const ::sal_Int32 msoArrowheadStealth = (sal_Int32)4;
+static const ::sal_Int32 msoArrowheadStyleMixed = (sal_Int32)-2;
+static const ::sal_Int32 msoArrowheadTriangle = (sal_Int32)2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOARROWHEADSTYLE_HDL

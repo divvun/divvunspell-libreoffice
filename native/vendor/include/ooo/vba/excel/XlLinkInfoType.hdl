@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLLINKINFOTYPE_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLLINKINFOTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlLinkInfoType {
+
+static const ::sal_Int32 xlLinkInfoOLELinks = (sal_Int32)2;
+static const ::sal_Int32 xlLinkInfoPublishers = (sal_Int32)5;
+static const ::sal_Int32 xlLinkInfoSubscribers = (sal_Int32)6;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLLINKINFOTYPE_HDL

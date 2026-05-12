@@ -1,0 +1,85 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XPAGESETUP_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XPAGESETUP_HDL
+
+#include "sal/config.h"
+
+#include "com/sun/star/uno/XInterface.hdl"
+#include "com/sun/star/uno/Any.h"
+#include "com/sun/star/uno/Reference.h"
+#include "cppu/macros.hxx"
+#include "rtl/ustring.hxx"
+#include "sal/types.h"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace ooo { namespace vba { namespace excel {
+
+class SAL_NO_VTABLE SAL_DLLPUBLIC_RTTI XPageSetup : public ::css::uno::XInterface
+{
+public:
+#if defined LIBO_INTERNAL_ONLY
+    XPageSetup() = default;
+    XPageSetup(XPageSetup const &) = default;
+    XPageSetup(XPageSetup &&) = default;
+    XPageSetup & operator =(XPageSetup const &) = default;
+    XPageSetup & operator =(XPageSetup &&) = default;
+#endif
+
+
+    // Attributes
+    virtual ::rtl::OUString SAL_CALL getPrintArea() = 0;
+    virtual void SAL_CALL setPrintArea( const ::rtl::OUString& _printarea ) = 0;
+    virtual double SAL_CALL getHeaderMargin() = 0;
+    virtual void SAL_CALL setHeaderMargin( double _headermargin ) = 0;
+    virtual double SAL_CALL getFooterMargin() = 0;
+    virtual void SAL_CALL setFooterMargin( double _footermargin ) = 0;
+    virtual ::css::uno::Any SAL_CALL getFitToPagesTall() = 0;
+    virtual void SAL_CALL setFitToPagesTall( const ::css::uno::Any& _fittopagestall ) = 0;
+    virtual ::css::uno::Any SAL_CALL getFitToPagesWide() = 0;
+    virtual void SAL_CALL setFitToPagesWide( const ::css::uno::Any& _fittopageswide ) = 0;
+    virtual ::css::uno::Any SAL_CALL getZoom() = 0;
+    virtual void SAL_CALL setZoom( const ::css::uno::Any& _zoom ) = 0;
+    virtual ::rtl::OUString SAL_CALL getLeftHeader() = 0;
+    virtual void SAL_CALL setLeftHeader( const ::rtl::OUString& _leftheader ) = 0;
+    virtual ::rtl::OUString SAL_CALL getCenterHeader() = 0;
+    virtual void SAL_CALL setCenterHeader( const ::rtl::OUString& _centerheader ) = 0;
+    virtual ::rtl::OUString SAL_CALL getRightHeader() = 0;
+    virtual void SAL_CALL setRightHeader( const ::rtl::OUString& _rightheader ) = 0;
+    virtual ::rtl::OUString SAL_CALL getLeftFooter() = 0;
+    virtual void SAL_CALL setLeftFooter( const ::rtl::OUString& _leftfooter ) = 0;
+    virtual ::rtl::OUString SAL_CALL getCenterFooter() = 0;
+    virtual void SAL_CALL setCenterFooter( const ::rtl::OUString& _centerfooter ) = 0;
+    virtual ::rtl::OUString SAL_CALL getRightFooter() = 0;
+    virtual void SAL_CALL setRightFooter( const ::rtl::OUString& _rightfooter ) = 0;
+    virtual ::sal_Int32 SAL_CALL getOrder() = 0;
+    virtual void SAL_CALL setOrder( ::sal_Int32 _order ) = 0;
+    virtual ::sal_Int32 SAL_CALL getFirstPageNumber() = 0;
+    virtual void SAL_CALL setFirstPageNumber( ::sal_Int32 _firstpagenumber ) = 0;
+    virtual ::sal_Bool SAL_CALL getCenterVertically() = 0;
+    virtual void SAL_CALL setCenterVertically( ::sal_Bool _centervertically ) = 0;
+    virtual ::sal_Bool SAL_CALL getCenterHorizontally() = 0;
+    virtual void SAL_CALL setCenterHorizontally( ::sal_Bool _centerhorizontally ) = 0;
+    virtual ::sal_Bool SAL_CALL getPrintHeadings() = 0;
+    virtual void SAL_CALL setPrintHeadings( ::sal_Bool _printheadings ) = 0;
+    virtual ::sal_Bool SAL_CALL getPrintGridlines() = 0;
+    virtual void SAL_CALL setPrintGridlines( ::sal_Bool _printgridlines ) = 0;
+    virtual ::rtl::OUString SAL_CALL getPrintTitleRows() = 0;
+    virtual void SAL_CALL setPrintTitleRows( const ::rtl::OUString& _printtitlerows ) = 0;
+    virtual ::rtl::OUString SAL_CALL getPrintTitleColumns() = 0;
+    virtual void SAL_CALL setPrintTitleColumns( const ::rtl::OUString& _printtitlecolumns ) = 0;
+    virtual ::sal_Int32 SAL_CALL getPaperSize() = 0;
+    virtual void SAL_CALL setPaperSize( ::sal_Int32 _papersize ) = 0;
+
+    static inline ::css::uno::Type const & SAL_CALL static_type(void * = 0);
+
+protected:
+    ~XPageSetup() SAL_NOEXCEPT {} // avoid warnings about virtual members and non-virtual dtor
+};
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::ooo::vba::excel::XPageSetup const *);
+} } }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::uno::Reference< ::ooo::vba::excel::XPageSetup > *);
+
+#endif

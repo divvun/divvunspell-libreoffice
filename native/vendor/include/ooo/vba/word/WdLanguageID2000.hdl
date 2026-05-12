@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDLANGUAGEID2000_HDL
+#define INCLUDED_OOO_VBA_WORD_WDLANGUAGEID2000_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdLanguageID2000 {
+
+static const ::sal_Int32 wdChineseHongKong = (sal_Int32)3076;
+static const ::sal_Int32 wdChineseMacao = (sal_Int32)5124;
+static const ::sal_Int32 wdEnglishTrinidad = (sal_Int32)11273;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDLANGUAGEID2000_HDL

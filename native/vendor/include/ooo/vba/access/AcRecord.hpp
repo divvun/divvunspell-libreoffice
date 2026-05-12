@@ -1,0 +1,6 @@
+#ifndef INCLUDED_OOO_VBA_ACCESS_ACRECORD_HPP
+#define INCLUDED_OOO_VBA_ACCESS_ACRECORD_HPP
+
+#include "ooo/vba/access/AcRecord.hdl"
+
+#endif // INCLUDED_OOO_VBA_ACCESS_ACRECORD_HPP

@@ -1,0 +1,31 @@
+#ifndef INCLUDED_OOO_VBA_DAO_PERMISSIONENUM_HDL
+#define INCLUDED_OOO_VBA_DAO_PERMISSIONENUM_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace dao { namespace PermissionEnum {
+
+static const ::sal_Int32 dbSecCreate = (sal_Int32)1;
+static const ::sal_Int32 dbSecDBAdmin = (sal_Int32)8;
+static const ::sal_Int32 dbSecDBCreate = (sal_Int32)1;
+static const ::sal_Int32 dbSecDBExclusive = (sal_Int32)4;
+static const ::sal_Int32 dbSecDBOpen = (sal_Int32)2;
+static const ::sal_Int32 dbSecDelete = (sal_Int32)65536;
+static const ::sal_Int32 dbSecDeleteData = (sal_Int32)128;
+static const ::sal_Int32 dbSecFullAccess = (sal_Int32)1048575;
+static const ::sal_Int32 dbSecInsertData = (sal_Int32)32;
+static const ::sal_Int32 dbSecNoAccess = (sal_Int32)0;
+static const ::sal_Int32 dbSecReadDef = (sal_Int32)4;
+static const ::sal_Int32 dbSecReadSec = (sal_Int32)131072;
+static const ::sal_Int32 dbSecReplaceData = (sal_Int32)64;
+static const ::sal_Int32 dbSecRetrieveData = (sal_Int32)20;
+static const ::sal_Int32 dbSecWriteDef = (sal_Int32)65548;
+static const ::sal_Int32 dbSecWriteOwner = (sal_Int32)524288;
+static const ::sal_Int32 dbSecWriteSec = (sal_Int32)262144;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_DAO_PERMISSIONENUM_HDL

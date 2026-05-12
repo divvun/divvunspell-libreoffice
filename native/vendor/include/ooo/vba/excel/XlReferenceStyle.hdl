@@ -1,0 +1,16 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLREFERENCESTYLE_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLREFERENCESTYLE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlReferenceStyle {
+
+static const ::sal_Int32 xlA1 = (sal_Int32)1;
+static const ::sal_Int32 xlR1C1 = (sal_Int32)-4150;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLREFERENCESTYLE_HDL

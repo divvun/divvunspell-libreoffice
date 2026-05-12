@@ -1,0 +1,24 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOPRESETLIGHTINGDIRECTION_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOPRESETLIGHTINGDIRECTION_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoPresetLightingDirection {
+
+static const ::sal_Int32 msoLightingBottom = (sal_Int32)8;
+static const ::sal_Int32 msoLightingBottomLeft = (sal_Int32)7;
+static const ::sal_Int32 msoLightingBottomRight = (sal_Int32)9;
+static const ::sal_Int32 msoLightingLeft = (sal_Int32)4;
+static const ::sal_Int32 msoLightingNone = (sal_Int32)5;
+static const ::sal_Int32 msoLightingRight = (sal_Int32)6;
+static const ::sal_Int32 msoLightingTop = (sal_Int32)2;
+static const ::sal_Int32 msoLightingTopLeft = (sal_Int32)1;
+static const ::sal_Int32 msoLightingTopRight = (sal_Int32)3;
+static const ::sal_Int32 msoPresetLightingDirectionMixed = (sal_Int32)-2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOPRESETLIGHTINGDIRECTION_HDL

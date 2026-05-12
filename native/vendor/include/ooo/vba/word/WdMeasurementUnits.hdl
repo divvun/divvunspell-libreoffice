@@ -1,0 +1,19 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDMEASUREMENTUNITS_HDL
+#define INCLUDED_OOO_VBA_WORD_WDMEASUREMENTUNITS_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdMeasurementUnits {
+
+static const ::sal_Int32 wdCentimeters = (sal_Int32)1;
+static const ::sal_Int32 wdInches = (sal_Int32)0;
+static const ::sal_Int32 wdMillimeters = (sal_Int32)2;
+static const ::sal_Int32 wdPicas = (sal_Int32)4;
+static const ::sal_Int32 wdPoints = (sal_Int32)3;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDMEASUREMENTUNITS_HDL

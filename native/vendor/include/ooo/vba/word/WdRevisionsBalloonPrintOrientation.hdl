@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDREVISIONSBALLOONPRINTORIENTATION_HDL
+#define INCLUDED_OOO_VBA_WORD_WDREVISIONSBALLOONPRINTORIENTATION_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdRevisionsBalloonPrintOrientation {
+
+static const ::sal_Int32 wdBalloonPrintOrientationAuto = (sal_Int32)0;
+static const ::sal_Int32 wdBalloonPrintOrientationForceLandscape = (sal_Int32)2;
+static const ::sal_Int32 wdBalloonPrintOrientationPreserve = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDREVISIONSBALLOONPRINTORIENTATION_HDL

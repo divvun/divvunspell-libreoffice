@@ -1,0 +1,21 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDINSERTEDTEXTMARK_HDL
+#define INCLUDED_OOO_VBA_WORD_WDINSERTEDTEXTMARK_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdInsertedTextMark {
+
+static const ::sal_Int32 wdInsertedTextMarkBold = (sal_Int32)1;
+static const ::sal_Int32 wdInsertedTextMarkColorOnly = (sal_Int32)5;
+static const ::sal_Int32 wdInsertedTextMarkDoubleUnderline = (sal_Int32)4;
+static const ::sal_Int32 wdInsertedTextMarkItalic = (sal_Int32)2;
+static const ::sal_Int32 wdInsertedTextMarkNone = (sal_Int32)0;
+static const ::sal_Int32 wdInsertedTextMarkStrikeThrough = (sal_Int32)6;
+static const ::sal_Int32 wdInsertedTextMarkUnderline = (sal_Int32)3;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDINSERTEDTEXTMARK_HDL

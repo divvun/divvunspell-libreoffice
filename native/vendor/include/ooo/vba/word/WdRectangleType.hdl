@@ -1,0 +1,22 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDRECTANGLETYPE_HDL
+#define INCLUDED_OOO_VBA_WORD_WDRECTANGLETYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdRectangleType {
+
+static const ::sal_Int32 wdLineBetweenColumnRectangle = (sal_Int32)5;
+static const ::sal_Int32 wdMarkupRectangle = (sal_Int32)2;
+static const ::sal_Int32 wdMarkupRectangleButton = (sal_Int32)3;
+static const ::sal_Int32 wdPageBorderRectangle = (sal_Int32)4;
+static const ::sal_Int32 wdSelection = (sal_Int32)6;
+static const ::sal_Int32 wdShapeRectangle = (sal_Int32)1;
+static const ::sal_Int32 wdSystem = (sal_Int32)7;
+static const ::sal_Int32 wdTextRectangle = (sal_Int32)0;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDRECTANGLETYPE_HDL

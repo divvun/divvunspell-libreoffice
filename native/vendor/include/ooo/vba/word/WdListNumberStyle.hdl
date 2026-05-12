@@ -1,0 +1,73 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDLISTNUMBERSTYLE_HDL
+#define INCLUDED_OOO_VBA_WORD_WDLISTNUMBERSTYLE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdListNumberStyle {
+
+static const ::sal_Int32 wdListNumberStyleAiueo = (sal_Int32)20;
+static const ::sal_Int32 wdListNumberStyleAiueoHalfWidth = (sal_Int32)12;
+static const ::sal_Int32 wdListNumberStyleArabic = (sal_Int32)0;
+static const ::sal_Int32 wdListNumberStyleArabic1 = (sal_Int32)46;
+static const ::sal_Int32 wdListNumberStyleArabic2 = (sal_Int32)48;
+static const ::sal_Int32 wdListNumberStyleArabicFullWidth = (sal_Int32)14;
+static const ::sal_Int32 wdListNumberStyleArabicLZ = (sal_Int32)22;
+static const ::sal_Int32 wdListNumberStyleBullet = (sal_Int32)23;
+static const ::sal_Int32 wdListNumberStyleCardinalText = (sal_Int32)6;
+static const ::sal_Int32 wdListNumberStyleChosung = (sal_Int32)25;
+static const ::sal_Int32 wdListNumberStyleGBNum1 = (sal_Int32)26;
+static const ::sal_Int32 wdListNumberStyleGBNum2 = (sal_Int32)27;
+static const ::sal_Int32 wdListNumberStyleGBNum3 = (sal_Int32)28;
+static const ::sal_Int32 wdListNumberStyleGBNum4 = (sal_Int32)29;
+static const ::sal_Int32 wdListNumberStyleGanada = (sal_Int32)24;
+static const ::sal_Int32 wdListNumberStyleHangul = (sal_Int32)43;
+static const ::sal_Int32 wdListNumberStyleHanja = (sal_Int32)44;
+static const ::sal_Int32 wdListNumberStyleHanjaRead = (sal_Int32)41;
+static const ::sal_Int32 wdListNumberStyleHanjaReadDigit = (sal_Int32)42;
+static const ::sal_Int32 wdListNumberStyleHebrew1 = (sal_Int32)45;
+static const ::sal_Int32 wdListNumberStyleHebrew2 = (sal_Int32)47;
+static const ::sal_Int32 wdListNumberStyleHindiArabic = (sal_Int32)51;
+static const ::sal_Int32 wdListNumberStyleHindiCardinalText = (sal_Int32)52;
+static const ::sal_Int32 wdListNumberStyleHindiLetter1 = (sal_Int32)49;
+static const ::sal_Int32 wdListNumberStyleHindiLetter2 = (sal_Int32)50;
+static const ::sal_Int32 wdListNumberStyleIroha = (sal_Int32)21;
+static const ::sal_Int32 wdListNumberStyleIrohaHalfWidth = (sal_Int32)13;
+static const ::sal_Int32 wdListNumberStyleKanji = (sal_Int32)10;
+static const ::sal_Int32 wdListNumberStyleKanjiDigit = (sal_Int32)11;
+static const ::sal_Int32 wdListNumberStyleKanjiTraditional = (sal_Int32)16;
+static const ::sal_Int32 wdListNumberStyleKanjiTraditional2 = (sal_Int32)17;
+static const ::sal_Int32 wdListNumberStyleLegal = (sal_Int32)253;
+static const ::sal_Int32 wdListNumberStyleLegalLZ = (sal_Int32)254;
+static const ::sal_Int32 wdListNumberStyleLowercaseLetter = (sal_Int32)4;
+static const ::sal_Int32 wdListNumberStyleLowercaseRoman = (sal_Int32)2;
+static const ::sal_Int32 wdListNumberStyleLowercaseRussian = (sal_Int32)58;
+static const ::sal_Int32 wdListNumberStyleNone = (sal_Int32)255;
+static const ::sal_Int32 wdListNumberStyleNumberInCircle = (sal_Int32)18;
+static const ::sal_Int32 wdListNumberStyleOrdinal = (sal_Int32)5;
+static const ::sal_Int32 wdListNumberStyleOrdinalText = (sal_Int32)7;
+static const ::sal_Int32 wdListNumberStylePictureBullet = (sal_Int32)249;
+static const ::sal_Int32 wdListNumberStyleSimpChinNum1 = (sal_Int32)37;
+static const ::sal_Int32 wdListNumberStyleSimpChinNum2 = (sal_Int32)38;
+static const ::sal_Int32 wdListNumberStyleSimpChinNum3 = (sal_Int32)39;
+static const ::sal_Int32 wdListNumberStyleSimpChinNum4 = (sal_Int32)40;
+static const ::sal_Int32 wdListNumberStyleThaiArabic = (sal_Int32)54;
+static const ::sal_Int32 wdListNumberStyleThaiCardinalText = (sal_Int32)55;
+static const ::sal_Int32 wdListNumberStyleThaiLetter = (sal_Int32)53;
+static const ::sal_Int32 wdListNumberStyleTradChinNum1 = (sal_Int32)33;
+static const ::sal_Int32 wdListNumberStyleTradChinNum2 = (sal_Int32)34;
+static const ::sal_Int32 wdListNumberStyleTradChinNum3 = (sal_Int32)35;
+static const ::sal_Int32 wdListNumberStyleTradChinNum4 = (sal_Int32)36;
+static const ::sal_Int32 wdListNumberStyleUppercaseLetter = (sal_Int32)3;
+static const ::sal_Int32 wdListNumberStyleUppercaseRoman = (sal_Int32)1;
+static const ::sal_Int32 wdListNumberStyleUppercaseRussian = (sal_Int32)59;
+static const ::sal_Int32 wdListNumberStyleVietCardinalText = (sal_Int32)56;
+static const ::sal_Int32 wdListNumberStyleZodiac1 = (sal_Int32)30;
+static const ::sal_Int32 wdListNumberStyleZodiac2 = (sal_Int32)31;
+static const ::sal_Int32 wdListNumberStyleZodiac3 = (sal_Int32)32;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDLISTNUMBERSTYLE_HDL

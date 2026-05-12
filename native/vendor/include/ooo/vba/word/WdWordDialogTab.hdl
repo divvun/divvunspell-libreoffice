@@ -1,0 +1,98 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDWORDDIALOGTAB_HDL
+#define INCLUDED_OOO_VBA_WORD_WDWORDDIALOGTAB_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdWordDialogTab {
+
+static const ::sal_Int32 wdDialogEmailOptionsTabQuoting = (sal_Int32)1900002;
+static const ::sal_Int32 wdDialogEmailOptionsTabSignature = (sal_Int32)1900000;
+static const ::sal_Int32 wdDialogEmailOptionsTabStationary = (sal_Int32)1900001;
+static const ::sal_Int32 wdDialogFilePageSetupTabCharsLines = (sal_Int32)150004;
+static const ::sal_Int32 wdDialogFilePageSetupTabLayout = (sal_Int32)150003;
+static const ::sal_Int32 wdDialogFilePageSetupTabMargins = (sal_Int32)150000;
+static const ::sal_Int32 wdDialogFilePageSetupTabPaper = (sal_Int32)150001;
+static const ::sal_Int32 wdDialogFormatBordersAndShadingTabBorders = (sal_Int32)700000;
+static const ::sal_Int32 wdDialogFormatBordersAndShadingTabPageBorder = (sal_Int32)700001;
+static const ::sal_Int32 wdDialogFormatBordersAndShadingTabShading = (sal_Int32)700002;
+static const ::sal_Int32 wdDialogFormatBulletsAndNumberingTabBulleted = (sal_Int32)1500000;
+static const ::sal_Int32 wdDialogFormatBulletsAndNumberingTabNumbered = (sal_Int32)1500001;
+static const ::sal_Int32 wdDialogFormatBulletsAndNumberingTabOutlineNumbered = (sal_Int32)1500002;
+static const ::sal_Int32 wdDialogFormatDrawingObjectTabColorsAndLines = (sal_Int32)1200000;
+static const ::sal_Int32 wdDialogFormatDrawingObjectTabHR = (sal_Int32)1200007;
+static const ::sal_Int32 wdDialogFormatDrawingObjectTabPicture = (sal_Int32)1200004;
+static const ::sal_Int32 wdDialogFormatDrawingObjectTabPosition = (sal_Int32)1200002;
+static const ::sal_Int32 wdDialogFormatDrawingObjectTabSize = (sal_Int32)1200001;
+static const ::sal_Int32 wdDialogFormatDrawingObjectTabTextbox = (sal_Int32)1200005;
+static const ::sal_Int32 wdDialogFormatDrawingObjectTabWeb = (sal_Int32)1200006;
+static const ::sal_Int32 wdDialogFormatDrawingObjectTabWrapping = (sal_Int32)1200003;
+static const ::sal_Int32 wdDialogFormatFontTabAnimation = (sal_Int32)600002;
+static const ::sal_Int32 wdDialogFormatFontTabCharacterSpacing = (sal_Int32)600001;
+static const ::sal_Int32 wdDialogFormatFontTabFont = (sal_Int32)600000;
+static const ::sal_Int32 wdDialogFormatParagraphTabIndentsAndSpacing = (sal_Int32)1000000;
+static const ::sal_Int32 wdDialogFormatParagraphTabTeisai = (sal_Int32)1000002;
+static const ::sal_Int32 wdDialogFormatParagraphTabTextFlow = (sal_Int32)1000001;
+static const ::sal_Int32 wdDialogInsertIndexAndTablesTabIndex = (sal_Int32)400000;
+static const ::sal_Int32 wdDialogInsertIndexAndTablesTabTableOfAuthorities = (sal_Int32)400003;
+static const ::sal_Int32 wdDialogInsertIndexAndTablesTabTableOfContents = (sal_Int32)400001;
+static const ::sal_Int32 wdDialogInsertIndexAndTablesTabTableOfFigures = (sal_Int32)400002;
+static const ::sal_Int32 wdDialogInsertSymbolTabSpecialCharacters = (sal_Int32)200001;
+static const ::sal_Int32 wdDialogInsertSymbolTabSymbols = (sal_Int32)200000;
+static const ::sal_Int32 wdDialogLetterWizardTabLetterFormat = (sal_Int32)1600000;
+static const ::sal_Int32 wdDialogLetterWizardTabOtherElements = (sal_Int32)1600002;
+static const ::sal_Int32 wdDialogLetterWizardTabRecipientInfo = (sal_Int32)1600001;
+static const ::sal_Int32 wdDialogLetterWizardTabSenderInfo = (sal_Int32)1600003;
+static const ::sal_Int32 wdDialogNoteOptionsTabAllEndnotes = (sal_Int32)300001;
+static const ::sal_Int32 wdDialogNoteOptionsTabAllFootnotes = (sal_Int32)300000;
+static const ::sal_Int32 wdDialogOrganizerTabAutoText = (sal_Int32)500001;
+static const ::sal_Int32 wdDialogOrganizerTabCommandBars = (sal_Int32)500002;
+static const ::sal_Int32 wdDialogOrganizerTabMacros = (sal_Int32)500003;
+static const ::sal_Int32 wdDialogOrganizerTabStyles = (sal_Int32)500000;
+static const ::sal_Int32 wdDialogTablePropertiesTabCell = (sal_Int32)1800003;
+static const ::sal_Int32 wdDialogTablePropertiesTabColumn = (sal_Int32)1800002;
+static const ::sal_Int32 wdDialogTablePropertiesTabRow = (sal_Int32)1800001;
+static const ::sal_Int32 wdDialogTablePropertiesTabTable = (sal_Int32)1800000;
+static const ::sal_Int32 wdDialogTemplates = (sal_Int32)2100000;
+static const ::sal_Int32 wdDialogTemplatesLinkedCSS = (sal_Int32)2100003;
+static const ::sal_Int32 wdDialogTemplatesXMLExpansionPacks = (sal_Int32)2100002;
+static const ::sal_Int32 wdDialogTemplatesXMLSchema = (sal_Int32)2100001;
+static const ::sal_Int32 wdDialogToolsAutoCorrectExceptionsTabFirstLetter = (sal_Int32)1400000;
+static const ::sal_Int32 wdDialogToolsAutoCorrectExceptionsTabHangulAndAlphabet = (sal_Int32)1400002;
+static const ::sal_Int32 wdDialogToolsAutoCorrectExceptionsTabIac = (sal_Int32)1400003;
+static const ::sal_Int32 wdDialogToolsAutoCorrectExceptionsTabInitialCaps = (sal_Int32)1400001;
+static const ::sal_Int32 wdDialogToolsAutoManagerTabAutoCorrect = (sal_Int32)1700000;
+static const ::sal_Int32 wdDialogToolsAutoManagerTabAutoFormat = (sal_Int32)1700003;
+static const ::sal_Int32 wdDialogToolsAutoManagerTabAutoFormatAsYouType = (sal_Int32)1700001;
+static const ::sal_Int32 wdDialogToolsAutoManagerTabAutoText = (sal_Int32)1700002;
+static const ::sal_Int32 wdDialogToolsAutoManagerTabSmartTags = (sal_Int32)1700004;
+static const ::sal_Int32 wdDialogToolsEnvelopesAndLabelsTabEnvelopes = (sal_Int32)800000;
+static const ::sal_Int32 wdDialogToolsEnvelopesAndLabelsTabLabels = (sal_Int32)800001;
+static const ::sal_Int32 wdDialogToolsOptionsTabAcetate = (sal_Int32)1266;
+static const ::sal_Int32 wdDialogToolsOptionsTabBidi = (sal_Int32)1029;
+static const ::sal_Int32 wdDialogToolsOptionsTabCompatibility = (sal_Int32)525;
+static const ::sal_Int32 wdDialogToolsOptionsTabEdit = (sal_Int32)224;
+static const ::sal_Int32 wdDialogToolsOptionsTabFileLocations = (sal_Int32)225;
+static const ::sal_Int32 wdDialogToolsOptionsTabFuzzy = (sal_Int32)790;
+static const ::sal_Int32 wdDialogToolsOptionsTabGeneral = (sal_Int32)203;
+static const ::sal_Int32 wdDialogToolsOptionsTabHangulHanjaConversion = (sal_Int32)786;
+static const ::sal_Int32 wdDialogToolsOptionsTabPrint = (sal_Int32)208;
+static const ::sal_Int32 wdDialogToolsOptionsTabProofread = (sal_Int32)211;
+static const ::sal_Int32 wdDialogToolsOptionsTabSave = (sal_Int32)209;
+static const ::sal_Int32 wdDialogToolsOptionsTabSecurity = (sal_Int32)1361;
+static const ::sal_Int32 wdDialogToolsOptionsTabTrackChanges = (sal_Int32)386;
+static const ::sal_Int32 wdDialogToolsOptionsTabTypography = (sal_Int32)739;
+static const ::sal_Int32 wdDialogToolsOptionsTabUserInfo = (sal_Int32)213;
+static const ::sal_Int32 wdDialogToolsOptionsTabView = (sal_Int32)204;
+static const ::sal_Int32 wdDialogWebOptionsBrowsers = (sal_Int32)2000000;
+static const ::sal_Int32 wdDialogWebOptionsEncoding = (sal_Int32)2000003;
+static const ::sal_Int32 wdDialogWebOptionsFiles = (sal_Int32)2000001;
+static const ::sal_Int32 wdDialogWebOptionsFonts = (sal_Int32)2000004;
+static const ::sal_Int32 wdDialogWebOptionsGeneral = (sal_Int32)2000000;
+static const ::sal_Int32 wdDialogWebOptionsPictures = (sal_Int32)2000002;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDWORDDIALOGTAB_HDL

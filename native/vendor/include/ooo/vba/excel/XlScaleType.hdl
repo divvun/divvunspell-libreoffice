@@ -1,0 +1,16 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLSCALETYPE_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLSCALETYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlScaleType {
+
+static const ::sal_Int32 xlScaleLinear = (sal_Int32)-4132;
+static const ::sal_Int32 xlScaleLogarithmic = (sal_Int32)-4133;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLSCALETYPE_HDL

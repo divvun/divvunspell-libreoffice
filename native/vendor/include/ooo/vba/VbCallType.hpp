@@ -1,0 +1,6 @@
+#ifndef INCLUDED_OOO_VBA_VBCALLTYPE_HPP
+#define INCLUDED_OOO_VBA_VBCALLTYPE_HPP
+
+#include "ooo/vba/VbCallType.hdl"
+
+#endif // INCLUDED_OOO_VBA_VBCALLTYPE_HPP

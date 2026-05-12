@@ -1,0 +1,6 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLDVTYPE_HPP
+#define INCLUDED_OOO_VBA_EXCEL_XLDVTYPE_HPP
+
+#include "ooo/vba/excel/XlDVType.hdl"
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLDVTYPE_HPP

@@ -1,0 +1,43 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDNOTENUMBERSTYLE_HDL
+#define INCLUDED_OOO_VBA_WORD_WDNOTENUMBERSTYLE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdNoteNumberStyle {
+
+static const ::sal_Int32 wdNoteNumberStyleArabic = (sal_Int32)0;
+static const ::sal_Int32 wdNoteNumberStyleArabicFullWidth = (sal_Int32)14;
+static const ::sal_Int32 wdNoteNumberStyleArabicLetter1 = (sal_Int32)46;
+static const ::sal_Int32 wdNoteNumberStyleArabicLetter2 = (sal_Int32)48;
+static const ::sal_Int32 wdNoteNumberStyleHanjaRead = (sal_Int32)41;
+static const ::sal_Int32 wdNoteNumberStyleHanjaReadDigit = (sal_Int32)42;
+static const ::sal_Int32 wdNoteNumberStyleHebrewLetter1 = (sal_Int32)45;
+static const ::sal_Int32 wdNoteNumberStyleHebrewLetter2 = (sal_Int32)47;
+static const ::sal_Int32 wdNoteNumberStyleHindiArabic = (sal_Int32)51;
+static const ::sal_Int32 wdNoteNumberStyleHindiCardinalText = (sal_Int32)52;
+static const ::sal_Int32 wdNoteNumberStyleHindiLetter1 = (sal_Int32)49;
+static const ::sal_Int32 wdNoteNumberStyleHindiLetter2 = (sal_Int32)50;
+static const ::sal_Int32 wdNoteNumberStyleKanji = (sal_Int32)10;
+static const ::sal_Int32 wdNoteNumberStyleKanjiDigit = (sal_Int32)11;
+static const ::sal_Int32 wdNoteNumberStyleKanjiTraditional = (sal_Int32)16;
+static const ::sal_Int32 wdNoteNumberStyleLowercaseLetter = (sal_Int32)4;
+static const ::sal_Int32 wdNoteNumberStyleLowercaseRoman = (sal_Int32)2;
+static const ::sal_Int32 wdNoteNumberStyleNumberInCircle = (sal_Int32)18;
+static const ::sal_Int32 wdNoteNumberStyleSimpChinNum1 = (sal_Int32)37;
+static const ::sal_Int32 wdNoteNumberStyleSimpChinNum2 = (sal_Int32)38;
+static const ::sal_Int32 wdNoteNumberStyleSymbol = (sal_Int32)9;
+static const ::sal_Int32 wdNoteNumberStyleThaiArabic = (sal_Int32)54;
+static const ::sal_Int32 wdNoteNumberStyleThaiCardinalText = (sal_Int32)55;
+static const ::sal_Int32 wdNoteNumberStyleThaiLetter = (sal_Int32)53;
+static const ::sal_Int32 wdNoteNumberStyleTradChinNum1 = (sal_Int32)33;
+static const ::sal_Int32 wdNoteNumberStyleTradChinNum2 = (sal_Int32)34;
+static const ::sal_Int32 wdNoteNumberStyleUppercaseLetter = (sal_Int32)3;
+static const ::sal_Int32 wdNoteNumberStyleUppercaseRoman = (sal_Int32)1;
+static const ::sal_Int32 wdNoteNumberStyleVietCardinalText = (sal_Int32)56;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDNOTENUMBERSTYLE_HDL

@@ -1,0 +1,65 @@
+#ifndef INCLUDED_COM_SUN_STAR_ACCESSIBILITY_ACCESSIBLERELATIONTYPE_HDL
+#define INCLUDED_COM_SUN_STAR_ACCESSIBILITY_ACCESSIBLERELATIONTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace com { namespace sun { namespace star { namespace accessibility {
+
+#if defined LIBO_INTERNAL_ONLY
+
+#if defined __GNUC__
+
+enum class AccessibleRelationType
+{
+
+#else
+
+enum class SAL_DLLPUBLIC_RTTI AccessibleRelationType
+{
+
+#endif
+
+#else
+
+enum SAL_DLLPUBLIC_RTTI AccessibleRelationType
+{
+
+#endif
+    AccessibleRelationType_INVALID = 0,
+    AccessibleRelationType_CONTENT_FLOWS_FROM = 1,
+    AccessibleRelationType_CONTENT_FLOWS_TO = 2,
+    AccessibleRelationType_CONTROLLED_BY = 3,
+    AccessibleRelationType_CONTROLLER_FOR = 4,
+    AccessibleRelationType_LABEL_FOR = 5,
+    AccessibleRelationType_LABELED_BY = 6,
+    AccessibleRelationType_MEMBER_OF = 7,
+    AccessibleRelationType_SUB_WINDOW_OF = 8,
+    AccessibleRelationType_NODE_CHILD_OF = 9,
+    AccessibleRelationType_DESCRIBED_BY = 10,
+    AccessibleRelationType_MAKE_FIXED_SIZE = SAL_MAX_ENUM
+};
+
+#if defined LIBO_INTERNAL_ONLY
+constexpr auto AccessibleRelationType_INVALID = AccessibleRelationType::AccessibleRelationType_INVALID;
+constexpr auto AccessibleRelationType_CONTENT_FLOWS_FROM = AccessibleRelationType::AccessibleRelationType_CONTENT_FLOWS_FROM;
+constexpr auto AccessibleRelationType_CONTENT_FLOWS_TO = AccessibleRelationType::AccessibleRelationType_CONTENT_FLOWS_TO;
+constexpr auto AccessibleRelationType_CONTROLLED_BY = AccessibleRelationType::AccessibleRelationType_CONTROLLED_BY;
+constexpr auto AccessibleRelationType_CONTROLLER_FOR = AccessibleRelationType::AccessibleRelationType_CONTROLLER_FOR;
+constexpr auto AccessibleRelationType_LABEL_FOR = AccessibleRelationType::AccessibleRelationType_LABEL_FOR;
+constexpr auto AccessibleRelationType_LABELED_BY = AccessibleRelationType::AccessibleRelationType_LABELED_BY;
+constexpr auto AccessibleRelationType_MEMBER_OF = AccessibleRelationType::AccessibleRelationType_MEMBER_OF;
+constexpr auto AccessibleRelationType_SUB_WINDOW_OF = AccessibleRelationType::AccessibleRelationType_SUB_WINDOW_OF;
+constexpr auto AccessibleRelationType_NODE_CHILD_OF = AccessibleRelationType::AccessibleRelationType_NODE_CHILD_OF;
+constexpr auto AccessibleRelationType_DESCRIBED_BY = AccessibleRelationType::AccessibleRelationType_DESCRIBED_BY;
+#endif
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::css::accessibility::AccessibleRelationType const *);
+} } } }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::accessibility::AccessibleRelationType *);
+
+#endif

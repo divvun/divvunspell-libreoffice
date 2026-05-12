@@ -1,0 +1,19 @@
+#ifndef INCLUDED_OOO_VBA_POWERPOINT_PPBASELINEALIGNMENT_HDL
+#define INCLUDED_OOO_VBA_POWERPOINT_PPBASELINEALIGNMENT_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace powerpoint { namespace PpBaselineAlignment {
+
+static const ::sal_Int32 ppBaselineAlignBaseline = (sal_Int32)1;
+static const ::sal_Int32 ppBaselineAlignCenter = (sal_Int32)3;
+static const ::sal_Int32 ppBaselineAlignFarEast50 = (sal_Int32)4;
+static const ::sal_Int32 ppBaselineAlignMixed = (sal_Int32)-2;
+static const ::sal_Int32 ppBaselineAlignTop = (sal_Int32)2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_POWERPOINT_PPBASELINEALIGNMENT_HDL

@@ -1,0 +1,18 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOMOVEROW_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOMOVEROW_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoMoveRow {
+
+static const ::sal_Int32 msoMoveRowFirst = (sal_Int32)-4;
+static const ::sal_Int32 msoMoveRowNbr = (sal_Int32)-1;
+static const ::sal_Int32 msoMoveRowNext = (sal_Int32)-2;
+static const ::sal_Int32 msoMoveRowPrev = (sal_Int32)-3;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOMOVEROW_HDL

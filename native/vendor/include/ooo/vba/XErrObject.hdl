@@ -1,0 +1,57 @@
+#ifndef INCLUDED_OOO_VBA_XERROBJECT_HDL
+#define INCLUDED_OOO_VBA_XERROBJECT_HDL
+
+#include "sal/config.h"
+
+#include "com/sun/star/uno/XInterface.hdl"
+#include "com/sun/star/uno/Any.h"
+#include "com/sun/star/uno/Reference.h"
+#include "cppu/macros.hxx"
+#include "rtl/ustring.hxx"
+#include "sal/types.h"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace ooo { namespace vba {
+
+class SAL_NO_VTABLE SAL_DLLPUBLIC_RTTI XErrObject : public ::css::uno::XInterface
+{
+public:
+#if defined LIBO_INTERNAL_ONLY
+    XErrObject() = default;
+    XErrObject(XErrObject const &) = default;
+    XErrObject(XErrObject &&) = default;
+    XErrObject & operator =(XErrObject const &) = default;
+    XErrObject & operator =(XErrObject &&) = default;
+#endif
+
+
+    // Attributes
+    virtual ::sal_Int32 SAL_CALL getNumber() = 0;
+    virtual void SAL_CALL setNumber( ::sal_Int32 _number ) = 0;
+    virtual ::sal_Int32 SAL_CALL getHelpContext() = 0;
+    virtual void SAL_CALL setHelpContext( ::sal_Int32 _helpcontext ) = 0;
+    virtual ::rtl::OUString SAL_CALL getHelpFile() = 0;
+    virtual void SAL_CALL setHelpFile( const ::rtl::OUString& _helpfile ) = 0;
+    virtual ::rtl::OUString SAL_CALL getDescription() = 0;
+    virtual void SAL_CALL setDescription( const ::rtl::OUString& _description ) = 0;
+    virtual ::rtl::OUString SAL_CALL getSource() = 0;
+    virtual void SAL_CALL setSource( const ::rtl::OUString& _source ) = 0;
+
+    // Methods
+    virtual void SAL_CALL Clear() = 0;
+    virtual void SAL_CALL Raise( const ::css::uno::Any& Number, const ::css::uno::Any& Source, const ::css::uno::Any& Description, const ::css::uno::Any& HelpFile, const ::css::uno::Any& HelpContext ) = 0;
+
+    static inline ::css::uno::Type const & SAL_CALL static_type(void * = 0);
+
+protected:
+    ~XErrObject() SAL_NOEXCEPT {} // avoid warnings about virtual members and non-virtual dtor
+};
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::ooo::vba::XErrObject const *);
+} }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::uno::Reference< ::ooo::vba::XErrObject > *);
+
+#endif

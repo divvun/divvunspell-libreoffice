@@ -1,0 +1,22 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLHALIGN_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLHALIGN_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlHAlign {
+
+static const ::sal_Int32 xlHAlignCenter = (sal_Int32)-4108;
+static const ::sal_Int32 xlHAlignCenterAcrossSelection = (sal_Int32)7;
+static const ::sal_Int32 xlHAlignDistributed = (sal_Int32)-4117;
+static const ::sal_Int32 xlHAlignFill = (sal_Int32)5;
+static const ::sal_Int32 xlHAlignGeneral = (sal_Int32)1;
+static const ::sal_Int32 xlHAlignJustify = (sal_Int32)-4130;
+static const ::sal_Int32 xlHAlignLeft = (sal_Int32)-4131;
+static const ::sal_Int32 xlHAlignRight = (sal_Int32)-4152;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLHALIGN_HDL

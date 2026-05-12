@@ -1,0 +1,6 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDRELOCATE_HPP
+#define INCLUDED_OOO_VBA_WORD_WDRELOCATE_HPP
+
+#include "ooo/vba/word/WdRelocate.hdl"
+
+#endif // INCLUDED_OOO_VBA_WORD_WDRELOCATE_HPP

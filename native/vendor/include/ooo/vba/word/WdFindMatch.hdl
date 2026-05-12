@@ -1,0 +1,35 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDFINDMATCH_HDL
+#define INCLUDED_OOO_VBA_WORD_WDFINDMATCH_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdFindMatch {
+
+static const ::sal_Int32 wdMatchAnyCharacter = (sal_Int32)65599;
+static const ::sal_Int32 wdMatchAnyDigit = (sal_Int32)65567;
+static const ::sal_Int32 wdMatchAnyLetter = (sal_Int32)65583;
+static const ::sal_Int32 wdMatchCaretCharacter = (sal_Int32)11;
+static const ::sal_Int32 wdMatchColumnBreak = (sal_Int32)14;
+static const ::sal_Int32 wdMatchCommentMark = (sal_Int32)5;
+static const ::sal_Int32 wdMatchEmDash = (sal_Int32)8212;
+static const ::sal_Int32 wdMatchEnDash = (sal_Int32)8211;
+static const ::sal_Int32 wdMatchEndnoteMark = (sal_Int32)65555;
+static const ::sal_Int32 wdMatchField = (sal_Int32)19;
+static const ::sal_Int32 wdMatchFootnoteMark = (sal_Int32)65554;
+static const ::sal_Int32 wdMatchGraphic = (sal_Int32)1;
+static const ::sal_Int32 wdMatchManualLineBreak = (sal_Int32)65551;
+static const ::sal_Int32 wdMatchManualPageBreak = (sal_Int32)65564;
+static const ::sal_Int32 wdMatchNonbreakingHyphen = (sal_Int32)30;
+static const ::sal_Int32 wdMatchNonbreakingSpace = (sal_Int32)160;
+static const ::sal_Int32 wdMatchOptionalHyphen = (sal_Int32)31;
+static const ::sal_Int32 wdMatchParagraphMark = (sal_Int32)65551;
+static const ::sal_Int32 wdMatchSectionBreak = (sal_Int32)65580;
+static const ::sal_Int32 wdMatchTabCharacter = (sal_Int32)9;
+static const ::sal_Int32 wdMatchWhiteSpace = (sal_Int32)65655;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDFINDMATCH_HDL

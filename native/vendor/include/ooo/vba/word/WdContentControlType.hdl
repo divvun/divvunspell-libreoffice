@@ -1,0 +1,24 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDCONTENTCONTROLTYPE_HDL
+#define INCLUDED_OOO_VBA_WORD_WDCONTENTCONTROLTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdContentControlType {
+
+static const ::sal_Int32 wdContentControlBuildingBlockGallery = (sal_Int32)5;
+static const ::sal_Int32 wdContentControlCheckbox = (sal_Int32)8;
+static const ::sal_Int32 wdContentControlComboBox = (sal_Int32)3;
+static const ::sal_Int32 wdContentControlDate = (sal_Int32)6;
+static const ::sal_Int32 wdContentControlDropdownList = (sal_Int32)4;
+static const ::sal_Int32 wdContentControlGroup = (sal_Int32)7;
+static const ::sal_Int32 wdContentControlPicture = (sal_Int32)2;
+static const ::sal_Int32 wdContentControlRepeatingSection = (sal_Int32)9;
+static const ::sal_Int32 wdContentControlRichText = (sal_Int32)0;
+static const ::sal_Int32 wdContentControlText = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDCONTENTCONTROLTYPE_HDL

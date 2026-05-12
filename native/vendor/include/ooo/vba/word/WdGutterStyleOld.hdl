@@ -1,0 +1,16 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDGUTTERSTYLEOLD_HDL
+#define INCLUDED_OOO_VBA_WORD_WDGUTTERSTYLEOLD_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdGutterStyleOld {
+
+static const ::sal_Int32 wdGutterStyleBidi = (sal_Int32)2;
+static const ::sal_Int32 wdGutterStyleLatin = (sal_Int32)-10;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDGUTTERSTYLEOLD_HDL

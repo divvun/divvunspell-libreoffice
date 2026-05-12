@@ -1,0 +1,55 @@
+#ifndef INCLUDED_OOO_VBA_MSFORMS_XUSERFORM_HDL
+#define INCLUDED_OOO_VBA_MSFORMS_XUSERFORM_HDL
+
+#include "sal/config.h"
+
+#include "com/sun/star/script/XInvocation.hdl"
+#include "com/sun/star/uno/Any.h"
+#include "com/sun/star/uno/Reference.h"
+#include "cppu/macros.hxx"
+#include "rtl/ustring.hxx"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace ooo { namespace vba { namespace msforms {
+
+class SAL_NO_VTABLE SAL_DLLPUBLIC_RTTI XUserForm : public ::css::script::XInvocation
+{
+public:
+#if defined LIBO_INTERNAL_ONLY
+    XUserForm() = default;
+    XUserForm(XUserForm const &) = default;
+    XUserForm(XUserForm &&) = default;
+    XUserForm & operator =(XUserForm const &) = default;
+    XUserForm & operator =(XUserForm &&) = default;
+#endif
+
+
+    // Attributes
+    virtual ::rtl::OUString SAL_CALL getCaption() = 0;
+    virtual void SAL_CALL setCaption( const ::rtl::OUString& _caption ) = 0;
+    virtual double SAL_CALL getInnerWidth() = 0;
+    virtual void SAL_CALL setInnerWidth( double _innerwidth ) = 0;
+    virtual double SAL_CALL getInnerHeight() = 0;
+    virtual void SAL_CALL setInnerHeight( double _innerheight ) = 0;
+
+    // Methods
+    virtual void SAL_CALL Show() = 0;
+    virtual void SAL_CALL Hide() = 0;
+    virtual void SAL_CALL RePaint() = 0;
+    virtual void SAL_CALL UnloadObject() = 0;
+    virtual ::css::uno::Any SAL_CALL Controls( const ::css::uno::Any& index ) = 0;
+
+    static inline ::css::uno::Type const & SAL_CALL static_type(void * = 0);
+
+protected:
+    ~XUserForm() SAL_NOEXCEPT {} // avoid warnings about virtual members and non-virtual dtor
+};
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::ooo::vba::msforms::XUserForm const *);
+} } }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::uno::Reference< ::ooo::vba::msforms::XUserForm > *);
+
+#endif

@@ -1,0 +1,27 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLPICTURECONVERTORTYPE_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLPICTURECONVERTORTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlPictureConvertorType {
+
+static const ::sal_Int32 xlBMP = (sal_Int32)1;
+static const ::sal_Int32 xlCGM = (sal_Int32)7;
+static const ::sal_Int32 xlDRW = (sal_Int32)4;
+static const ::sal_Int32 xlDXF = (sal_Int32)5;
+static const ::sal_Int32 xlEPS = (sal_Int32)8;
+static const ::sal_Int32 xlHGL = (sal_Int32)6;
+static const ::sal_Int32 xlPCT = (sal_Int32)13;
+static const ::sal_Int32 xlPCX = (sal_Int32)10;
+static const ::sal_Int32 xlPIC = (sal_Int32)11;
+static const ::sal_Int32 xlPLT = (sal_Int32)12;
+static const ::sal_Int32 xlTIF = (sal_Int32)9;
+static const ::sal_Int32 xlWMF = (sal_Int32)2;
+static const ::sal_Int32 xlWPG = (sal_Int32)3;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLPICTURECONVERTORTYPE_HDL

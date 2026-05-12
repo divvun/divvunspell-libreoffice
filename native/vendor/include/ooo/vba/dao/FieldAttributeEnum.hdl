@@ -1,0 +1,21 @@
+#ifndef INCLUDED_OOO_VBA_DAO_FIELDATTRIBUTEENUM_HDL
+#define INCLUDED_OOO_VBA_DAO_FIELDATTRIBUTEENUM_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace dao { namespace FieldAttributeEnum {
+
+static const ::sal_Int32 dbAutoIncrField = (sal_Int32)16;
+static const ::sal_Int32 dbDescending = (sal_Int32)1;
+static const ::sal_Int32 dbFixedField = (sal_Int32)1;
+static const ::sal_Int32 dbHyperlinkField = (sal_Int32)32768;
+static const ::sal_Int32 dbSystemField = (sal_Int32)8192;
+static const ::sal_Int32 dbUpdatableField = (sal_Int32)32;
+static const ::sal_Int32 dbVariableField = (sal_Int32)2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_DAO_FIELDATTRIBUTEENUM_HDL

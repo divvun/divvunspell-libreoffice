@@ -1,0 +1,19 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOPICTURECOLORTYPE_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOPICTURECOLORTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoPictureColorType {
+
+static const ::sal_Int32 msoPictureAutomatic = (sal_Int32)1;
+static const ::sal_Int32 msoPictureBlackAndWhite = (sal_Int32)3;
+static const ::sal_Int32 msoPictureGrayscale = (sal_Int32)2;
+static const ::sal_Int32 msoPictureMixed = (sal_Int32)-2;
+static const ::sal_Int32 msoPictureWatermark = (sal_Int32)4;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOPICTURECOLORTYPE_HDL

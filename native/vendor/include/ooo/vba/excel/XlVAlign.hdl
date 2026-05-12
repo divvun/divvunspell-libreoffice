@@ -1,0 +1,19 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLVALIGN_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLVALIGN_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlVAlign {
+
+static const ::sal_Int32 xlVAlignBottom = (sal_Int32)-4107;
+static const ::sal_Int32 xlVAlignCenter = (sal_Int32)-4108;
+static const ::sal_Int32 xlVAlignDistributed = (sal_Int32)-4117;
+static const ::sal_Int32 xlVAlignJustify = (sal_Int32)-4130;
+static const ::sal_Int32 xlVAlignTop = (sal_Int32)-4160;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLVALIGN_HDL

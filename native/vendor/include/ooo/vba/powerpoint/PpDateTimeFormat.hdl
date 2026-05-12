@@ -1,0 +1,29 @@
+#ifndef INCLUDED_OOO_VBA_POWERPOINT_PPDATETIMEFORMAT_HDL
+#define INCLUDED_OOO_VBA_POWERPOINT_PPDATETIMEFORMAT_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace powerpoint { namespace PpDateTimeFormat {
+
+static const ::sal_Int32 ppDateTimeFigureOut = (sal_Int32)14;
+static const ::sal_Int32 ppDateTimeFormatMixed = (sal_Int32)-2;
+static const ::sal_Int32 ppDateTimeHmm = (sal_Int32)10;
+static const ::sal_Int32 ppDateTimeHmmss = (sal_Int32)11;
+static const ::sal_Int32 ppDateTimeMMMMdyyyy = (sal_Int32)4;
+static const ::sal_Int32 ppDateTimeMMMMyy = (sal_Int32)6;
+static const ::sal_Int32 ppDateTimeMMddyyHmm = (sal_Int32)8;
+static const ::sal_Int32 ppDateTimeMMddyyhmmAMPM = (sal_Int32)9;
+static const ::sal_Int32 ppDateTimeMMyy = (sal_Int32)7;
+static const ::sal_Int32 ppDateTimeMdyy = (sal_Int32)1;
+static const ::sal_Int32 ppDateTimedMMMMyyyy = (sal_Int32)3;
+static const ::sal_Int32 ppDateTimedMMMyy = (sal_Int32)5;
+static const ::sal_Int32 ppDateTimeddddMMMMddyyyy = (sal_Int32)2;
+static const ::sal_Int32 ppDateTimehmmAMPM = (sal_Int32)12;
+static const ::sal_Int32 ppDateTimehmmssAMPM = (sal_Int32)13;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_POWERPOINT_PPDATETIMEFORMAT_HDL

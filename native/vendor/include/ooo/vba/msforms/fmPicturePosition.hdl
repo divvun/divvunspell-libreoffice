@@ -1,0 +1,27 @@
+#ifndef INCLUDED_OOO_VBA_MSFORMS_FMPICTUREPOSITION_HDL
+#define INCLUDED_OOO_VBA_MSFORMS_FMPICTUREPOSITION_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace msforms { namespace fmPicturePosition {
+
+static const ::sal_Int32 fmPicturePositionAboveCenter = (sal_Int32)7;
+static const ::sal_Int32 fmPicturePositionAboveLeft = (sal_Int32)6;
+static const ::sal_Int32 fmPicturePositionAboveRight = (sal_Int32)8;
+static const ::sal_Int32 fmPicturePositionBelowCenter = (sal_Int32)10;
+static const ::sal_Int32 fmPicturePositionBelowLeft = (sal_Int32)9;
+static const ::sal_Int32 fmPicturePositionBelowRight = (sal_Int32)11;
+static const ::sal_Int32 fmPicturePositionCenter = (sal_Int32)12;
+static const ::sal_Int32 fmPicturePositionLeftBottom = (sal_Int32)2;
+static const ::sal_Int32 fmPicturePositionLeftCenter = (sal_Int32)1;
+static const ::sal_Int32 fmPicturePositionLeftTop = (sal_Int32)0;
+static const ::sal_Int32 fmPicturePositionRightBottom = (sal_Int32)5;
+static const ::sal_Int32 fmPicturePositionRightCenter = (sal_Int32)4;
+static const ::sal_Int32 fmPicturePositionRightTop = (sal_Int32)3;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_MSFORMS_FMPICTUREPOSITION_HDL

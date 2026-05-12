@@ -1,0 +1,20 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDLINESPACING_HDL
+#define INCLUDED_OOO_VBA_WORD_WDLINESPACING_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdLineSpacing {
+
+static const ::sal_Int32 wdLineSpace1pt5 = (sal_Int32)1;
+static const ::sal_Int32 wdLineSpaceAtLeast = (sal_Int32)3;
+static const ::sal_Int32 wdLineSpaceDouble = (sal_Int32)2;
+static const ::sal_Int32 wdLineSpaceExactly = (sal_Int32)4;
+static const ::sal_Int32 wdLineSpaceMultiple = (sal_Int32)5;
+static const ::sal_Int32 wdLineSpaceSingle = (sal_Int32)0;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDLINESPACING_HDL

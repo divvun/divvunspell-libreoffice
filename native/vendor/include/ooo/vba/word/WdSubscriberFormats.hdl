@@ -1,0 +1,18 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDSUBSCRIBERFORMATS_HDL
+#define INCLUDED_OOO_VBA_WORD_WDSUBSCRIBERFORMATS_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdSubscriberFormats {
+
+static const ::sal_Int32 wdSubscriberBestFormat = (sal_Int32)0;
+static const ::sal_Int32 wdSubscriberPict = (sal_Int32)4;
+static const ::sal_Int32 wdSubscriberRTF = (sal_Int32)1;
+static const ::sal_Int32 wdSubscriberText = (sal_Int32)2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDSUBSCRIBERFORMATS_HDL

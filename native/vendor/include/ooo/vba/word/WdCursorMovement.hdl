@@ -1,0 +1,16 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDCURSORMOVEMENT_HDL
+#define INCLUDED_OOO_VBA_WORD_WDCURSORMOVEMENT_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdCursorMovement {
+
+static const ::sal_Int32 wdCursorMovementLogical = (sal_Int32)0;
+static const ::sal_Int32 wdCursorMovementVisual = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDCURSORMOVEMENT_HDL

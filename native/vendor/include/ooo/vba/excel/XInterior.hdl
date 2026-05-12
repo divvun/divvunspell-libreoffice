@@ -1,0 +1,57 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XINTERIOR_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XINTERIOR_HDL
+
+#include "sal/config.h"
+
+#include "ooo/vba/XHelperInterface.hdl"
+#include "com/sun/star/uno/Any.h"
+#include "com/sun/star/uno/Reference.h"
+#include "cppu/macros.hxx"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace ooo { namespace vba { namespace excel {
+
+class SAL_NO_VTABLE SAL_DLLPUBLIC_RTTI XInterior : public ::ooo::vba::XHelperInterface
+{
+public:
+#if defined LIBO_INTERNAL_ONLY
+    XInterior() = default;
+    XInterior(XInterior const &) = default;
+    XInterior(XInterior &&) = default;
+    XInterior & operator =(XInterior const &) = default;
+    XInterior & operator =(XInterior &&) = default;
+#endif
+
+
+    // Attributes
+    virtual ::css::uno::Any SAL_CALL getColor() = 0;
+    virtual void SAL_CALL setColor( const ::css::uno::Any& _color ) = 0;
+    virtual ::css::uno::Any SAL_CALL getColorIndex() = 0;
+    virtual void SAL_CALL setColorIndex( const ::css::uno::Any& _colorindex ) = 0;
+    virtual ::css::uno::Any SAL_CALL getPattern() = 0;
+    virtual void SAL_CALL setPattern( const ::css::uno::Any& _pattern ) = 0;
+    virtual ::css::uno::Any SAL_CALL getPatternColor() = 0;
+    virtual void SAL_CALL setPatternColor( const ::css::uno::Any& _patterncolor ) = 0;
+    virtual ::css::uno::Any SAL_CALL getPatternColorIndex() = 0;
+    virtual void SAL_CALL setPatternColorIndex( const ::css::uno::Any& _patterncolorindex ) = 0;
+    virtual ::css::uno::Any SAL_CALL getThemeColor() = 0;
+    virtual void SAL_CALL setThemeColor( const ::css::uno::Any& _themecolor ) = 0;
+    virtual ::css::uno::Any SAL_CALL getTintAndShade() = 0;
+    virtual void SAL_CALL setTintAndShade( const ::css::uno::Any& _tintandshade ) = 0;
+    virtual ::css::uno::Any SAL_CALL getPatternTintAndShade() = 0;
+    virtual void SAL_CALL setPatternTintAndShade( const ::css::uno::Any& _patterntintandshade ) = 0;
+
+    static inline ::css::uno::Type const & SAL_CALL static_type(void * = 0);
+
+protected:
+    ~XInterior() SAL_NOEXCEPT {} // avoid warnings about virtual members and non-virtual dtor
+};
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::ooo::vba::excel::XInterior const *);
+} } }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::uno::Reference< ::ooo::vba::excel::XInterior > *);
+
+#endif

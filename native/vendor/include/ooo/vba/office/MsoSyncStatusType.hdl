@@ -1,0 +1,21 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOSYNCSTATUSTYPE_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOSYNCSTATUSTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoSyncStatusType {
+
+static const ::sal_Int32 msoSyncStatusConflict = (sal_Int32)4;
+static const ::sal_Int32 msoSyncStatusError = (sal_Int32)6;
+static const ::sal_Int32 msoSyncStatusLatest = (sal_Int32)1;
+static const ::sal_Int32 msoSyncStatusLocalChanges = (sal_Int32)3;
+static const ::sal_Int32 msoSyncStatusNewerAvailable = (sal_Int32)2;
+static const ::sal_Int32 msoSyncStatusNoSharedWorkspace = (sal_Int32)0;
+static const ::sal_Int32 msoSyncStatusSuspended = (sal_Int32)5;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOSYNCSTATUSTYPE_HDL

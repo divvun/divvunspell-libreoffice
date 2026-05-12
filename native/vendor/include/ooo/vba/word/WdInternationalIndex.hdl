@@ -1,0 +1,24 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDINTERNATIONALINDEX_HDL
+#define INCLUDED_OOO_VBA_WORD_WDINTERNATIONALINDEX_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdInternationalIndex {
+
+static const ::sal_Int32 wd24HourClock = (sal_Int32)21;
+static const ::sal_Int32 wdCurrencyCode = (sal_Int32)20;
+static const ::sal_Int32 wdDateSeparator = (sal_Int32)25;
+static const ::sal_Int32 wdDecimalSeparator = (sal_Int32)18;
+static const ::sal_Int32 wdInternationalAM = (sal_Int32)22;
+static const ::sal_Int32 wdInternationalPM = (sal_Int32)23;
+static const ::sal_Int32 wdListSeparator = (sal_Int32)17;
+static const ::sal_Int32 wdProductLanguageID = (sal_Int32)26;
+static const ::sal_Int32 wdThousandsSeparator = (sal_Int32)19;
+static const ::sal_Int32 wdTimeSeparator = (sal_Int32)24;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDINTERNATIONALINDEX_HDL

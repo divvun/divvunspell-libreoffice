@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLPARAMETERTYPE_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLPARAMETERTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlParameterType {
+
+static const ::sal_Int32 xlConstant = (sal_Int32)1;
+static const ::sal_Int32 xlPrompt = (sal_Int32)0;
+static const ::sal_Int32 xlRange = (sal_Int32)2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLPARAMETERTYPE_HDL

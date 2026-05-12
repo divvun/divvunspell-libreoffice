@@ -1,0 +1,15 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDWORDDIALOGHID_HDL
+#define INCLUDED_OOO_VBA_WORD_WDWORDDIALOGHID_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdWordDialogHID {
+
+static const ::sal_Int32 emptyenum = (sal_Int32)0;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDWORDDIALOGHID_HDL

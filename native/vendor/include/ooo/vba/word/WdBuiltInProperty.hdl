@@ -1,0 +1,44 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDBUILTINPROPERTY_HDL
+#define INCLUDED_OOO_VBA_WORD_WDBUILTINPROPERTY_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdBuiltInProperty {
+
+static const ::sal_Int32 wdPropertyAppName = (sal_Int32)9;
+static const ::sal_Int32 wdPropertyAuthor = (sal_Int32)3;
+static const ::sal_Int32 wdPropertyBytes = (sal_Int32)22;
+static const ::sal_Int32 wdPropertyCategory = (sal_Int32)18;
+static const ::sal_Int32 wdPropertyCharacters = (sal_Int32)16;
+static const ::sal_Int32 wdPropertyCharsWSpaces = (sal_Int32)30;
+static const ::sal_Int32 wdPropertyComments = (sal_Int32)5;
+static const ::sal_Int32 wdPropertyCompany = (sal_Int32)21;
+static const ::sal_Int32 wdPropertyFormat = (sal_Int32)19;
+static const ::sal_Int32 wdPropertyHiddenSlides = (sal_Int32)27;
+static const ::sal_Int32 wdPropertyHyperlinkBase = (sal_Int32)29;
+static const ::sal_Int32 wdPropertyKeywords = (sal_Int32)4;
+static const ::sal_Int32 wdPropertyLastAuthor = (sal_Int32)7;
+static const ::sal_Int32 wdPropertyLines = (sal_Int32)23;
+static const ::sal_Int32 wdPropertyMMClips = (sal_Int32)28;
+static const ::sal_Int32 wdPropertyManager = (sal_Int32)20;
+static const ::sal_Int32 wdPropertyNotes = (sal_Int32)26;
+static const ::sal_Int32 wdPropertyPages = (sal_Int32)14;
+static const ::sal_Int32 wdPropertyParas = (sal_Int32)24;
+static const ::sal_Int32 wdPropertyRevision = (sal_Int32)8;
+static const ::sal_Int32 wdPropertySecurity = (sal_Int32)17;
+static const ::sal_Int32 wdPropertySlides = (sal_Int32)25;
+static const ::sal_Int32 wdPropertySubject = (sal_Int32)2;
+static const ::sal_Int32 wdPropertyTemplate = (sal_Int32)6;
+static const ::sal_Int32 wdPropertyTimeCreated = (sal_Int32)11;
+static const ::sal_Int32 wdPropertyTimeLastPrinted = (sal_Int32)10;
+static const ::sal_Int32 wdPropertyTimeLastSaved = (sal_Int32)12;
+static const ::sal_Int32 wdPropertyTitle = (sal_Int32)1;
+static const ::sal_Int32 wdPropertyVBATotalEdit = (sal_Int32)13;
+static const ::sal_Int32 wdPropertyWords = (sal_Int32)15;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDBUILTINPROPERTY_HDL

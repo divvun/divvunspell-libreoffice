@@ -1,0 +1,18 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDSTYLETYPE_HDL
+#define INCLUDED_OOO_VBA_WORD_WDSTYLETYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdStyleType {
+
+static const ::sal_Int32 wdStyleTypeCharacter = (sal_Int32)2;
+static const ::sal_Int32 wdStyleTypeList = (sal_Int32)4;
+static const ::sal_Int32 wdStyleTypeParagraph = (sal_Int32)1;
+static const ::sal_Int32 wdStyleTypeTable = (sal_Int32)3;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDSTYLETYPE_HDL

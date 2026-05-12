@@ -1,0 +1,19 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOFILENEWSECTION_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOFILENEWSECTION_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoFileNewSection {
+
+static const ::sal_Int32 msoBottomSection = (sal_Int32)4;
+static const ::sal_Int32 msoNew = (sal_Int32)1;
+static const ::sal_Int32 msoNewfromExistingFile = (sal_Int32)2;
+static const ::sal_Int32 msoNewfromTemplate = (sal_Int32)3;
+static const ::sal_Int32 msoOpenDocument = (sal_Int32)0;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOFILENEWSECTION_HDL

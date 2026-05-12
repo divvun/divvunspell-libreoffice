@@ -1,0 +1,48 @@
+#ifndef INCLUDED_OOO_VBA_MSFORMS_XSHAPES_HDL
+#define INCLUDED_OOO_VBA_MSFORMS_XSHAPES_HDL
+
+#include "sal/config.h"
+
+#include "ooo/vba/XCollection.hdl"
+namespace ooo { namespace vba { namespace msforms { class XShapeRange; } } }
+#include "com/sun/star/uno/Any.h"
+#include "com/sun/star/uno/Reference.h"
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace ooo { namespace vba { namespace msforms {
+
+class SAL_NO_VTABLE SAL_DLLPUBLIC_RTTI XShapes : public ::ooo::vba::XCollection
+{
+public:
+#if defined LIBO_INTERNAL_ONLY
+    XShapes() = default;
+    XShapes(XShapes const &) = default;
+    XShapes(XShapes &&) = default;
+    XShapes & operator =(XShapes const &) = default;
+    XShapes & operator =(XShapes &&) = default;
+#endif
+
+
+    // Methods
+    virtual void SAL_CALL SelectAll() = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::msforms::XShapeRange > SAL_CALL Range( const ::css::uno::Any& shapes ) = 0;
+    virtual ::css::uno::Any SAL_CALL AddLine( ::sal_Int32 StartX, ::sal_Int32 StartY, ::sal_Int32 endX, ::sal_Int32 endY ) = 0;
+    virtual ::css::uno::Any SAL_CALL AddShape( ::sal_Int32 ShapeType, ::sal_Int32 StartX, ::sal_Int32 StartY, ::sal_Int32 endX, ::sal_Int32 endY ) = 0;
+    virtual ::css::uno::Any SAL_CALL AddTextbox( ::sal_Int32 Orientation, ::sal_Int32 Left, ::sal_Int32 Top, ::sal_Int32 Width, ::sal_Int32 Height ) = 0;
+
+    static inline ::css::uno::Type const & SAL_CALL static_type(void * = 0);
+
+protected:
+    ~XShapes() SAL_NOEXCEPT {} // avoid warnings about virtual members and non-virtual dtor
+};
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::ooo::vba::msforms::XShapes const *);
+} } }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::uno::Reference< ::ooo::vba::msforms::XShapes > *);
+
+#endif

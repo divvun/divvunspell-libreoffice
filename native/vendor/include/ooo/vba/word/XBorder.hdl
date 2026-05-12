@@ -1,0 +1,43 @@
+#ifndef INCLUDED_OOO_VBA_WORD_XBORDER_HDL
+#define INCLUDED_OOO_VBA_WORD_XBORDER_HDL
+
+#include "sal/config.h"
+
+#include "ooo/vba/XHelperInterface.hdl"
+#include "com/sun/star/uno/Any.h"
+#include "com/sun/star/uno/Reference.h"
+#include "cppu/macros.hxx"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace ooo { namespace vba { namespace word {
+
+class SAL_NO_VTABLE SAL_DLLPUBLIC_RTTI XBorder : public ::ooo::vba::XHelperInterface
+{
+public:
+#if defined LIBO_INTERNAL_ONLY
+    XBorder() = default;
+    XBorder(XBorder const &) = default;
+    XBorder(XBorder &&) = default;
+    XBorder & operator =(XBorder const &) = default;
+    XBorder & operator =(XBorder &&) = default;
+#endif
+
+
+    // Attributes
+    virtual ::css::uno::Any SAL_CALL getLineStyle() = 0;
+    virtual void SAL_CALL setLineStyle( const ::css::uno::Any& _linestyle ) = 0;
+
+    static inline ::css::uno::Type const & SAL_CALL static_type(void * = 0);
+
+protected:
+    ~XBorder() SAL_NOEXCEPT {} // avoid warnings about virtual members and non-virtual dtor
+};
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::ooo::vba::word::XBorder const *);
+} } }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::uno::Reference< ::ooo::vba::word::XBorder > *);
+
+#endif

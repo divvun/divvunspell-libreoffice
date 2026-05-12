@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDREPLACE_HDL
+#define INCLUDED_OOO_VBA_WORD_WDREPLACE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdReplace {
+
+static const ::sal_Int32 wdReplaceAll = (sal_Int32)2;
+static const ::sal_Int32 wdReplaceNone = (sal_Int32)0;
+static const ::sal_Int32 wdReplaceOne = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDREPLACE_HDL

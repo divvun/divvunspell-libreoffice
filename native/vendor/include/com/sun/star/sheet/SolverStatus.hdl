@@ -1,0 +1,19 @@
+#ifndef INCLUDED_COM_SUN_STAR_SHEET_SOLVERSTATUS_HDL
+#define INCLUDED_COM_SUN_STAR_SHEET_SOLVERSTATUS_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace com { namespace sun { namespace star { namespace sheet { namespace SolverStatus {
+
+static const ::sal_Int8 ENGINE_ERROR = (sal_Int8)3;
+static const ::sal_Int8 NONE = (sal_Int8)0;
+static const ::sal_Int8 PARSE_ERROR = (sal_Int8)2;
+static const ::sal_Int8 SOLUTION_FOUND = (sal_Int8)1;
+static const ::sal_Int8 SOLUTION_NOT_FOUND = (sal_Int8)4;
+
+} } } } }
+
+#endif // INCLUDED_COM_SUN_STAR_SHEET_SOLVERSTATUS_HDL

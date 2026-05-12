@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDLISTGALLERYTYPE_HDL
+#define INCLUDED_OOO_VBA_WORD_WDLISTGALLERYTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdListGalleryType {
+
+static const ::sal_Int32 wdBulletGallery = (sal_Int32)1;
+static const ::sal_Int32 wdNumberGallery = (sal_Int32)2;
+static const ::sal_Int32 wdOutlineNumberGallery = (sal_Int32)3;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDLISTGALLERYTYPE_HDL

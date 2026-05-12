@@ -1,0 +1,78 @@
+#ifndef INCLUDED_OOO_VBA_WORD_XRANGE_HDL
+#define INCLUDED_OOO_VBA_WORD_XRANGE_HDL
+
+#include "sal/config.h"
+
+#include "com/sun/star/script/XDefaultProperty.hdl"
+namespace com { namespace sun { namespace star { namespace text { class XTextRange; } } } }
+#include "ooo/vba/XHelperInterface.hdl"
+namespace ooo { namespace vba { namespace word { class XFind; } } }
+namespace ooo { namespace vba { namespace word { class XFont; } } }
+namespace ooo { namespace vba { namespace word { class XListFormat; } } }
+namespace ooo { namespace vba { namespace word { class XParagraphFormat; } } }
+namespace ooo { namespace vba { namespace word { class XRange; } } }
+#include "com/sun/star/uno/Any.h"
+#include "com/sun/star/uno/Reference.h"
+#include "cppu/macros.hxx"
+#include "rtl/ustring.hxx"
+#include "sal/types.h"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace ooo { namespace vba { namespace word {
+
+class SAL_NO_VTABLE SAL_DLLPUBLIC_RTTI XRange : public ::ooo::vba::XHelperInterface, public ::css::script::XDefaultProperty
+{
+public:
+#if defined LIBO_INTERNAL_ONLY
+    XRange() = default;
+    XRange(XRange const &) = default;
+    XRange(XRange &&) = default;
+    XRange & operator =(XRange const &) = default;
+    XRange & operator =(XRange &&) = default;
+#endif
+
+
+    // Attributes
+    virtual ::rtl::OUString SAL_CALL getText() = 0;
+    virtual void SAL_CALL setText( const ::rtl::OUString& _text ) = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::word::XParagraphFormat > SAL_CALL getParagraphFormat() = 0;
+    virtual void SAL_CALL setParagraphFormat( const ::css::uno::Reference< ::ooo::vba::word::XParagraphFormat >& _paragraphformat ) = 0;
+    virtual ::css::uno::Any SAL_CALL getStyle() = 0;
+    virtual void SAL_CALL setStyle( const ::css::uno::Any& _style ) = 0;
+    virtual ::css::uno::Reference< ::css::text::XTextRange > SAL_CALL getXTextRange() = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::word::XFont > SAL_CALL getFont() = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::word::XFind > SAL_CALL getFind() = 0;
+    virtual ::sal_Int32 SAL_CALL getLanguageID() = 0;
+    virtual void SAL_CALL setLanguageID( ::sal_Int32 _languageid ) = 0;
+    virtual ::sal_Int32 SAL_CALL getStart() = 0;
+    virtual void SAL_CALL setStart( ::sal_Int32 _start ) = 0;
+    virtual ::sal_Int32 SAL_CALL getEnd() = 0;
+    virtual void SAL_CALL setEnd( ::sal_Int32 _end ) = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::word::XListFormat > SAL_CALL getListFormat() = 0;
+
+    // Methods
+    virtual void SAL_CALL InsertBreak( const ::css::uno::Any& Type ) = 0;
+    virtual void SAL_CALL Select() = 0;
+    virtual void SAL_CALL InsertParagraph() = 0;
+    virtual void SAL_CALL InsertParagraphBefore() = 0;
+    virtual void SAL_CALL InsertParagraphAfter() = 0;
+    virtual ::css::uno::Any SAL_CALL PageSetup() = 0;
+    virtual ::sal_Bool SAL_CALL InRange( const ::css::uno::Reference< ::ooo::vba::word::XRange >& Range ) = 0;
+    virtual ::css::uno::Any SAL_CALL Revisions( const ::css::uno::Any& index ) = 0;
+    virtual ::css::uno::Any SAL_CALL Sections( const ::css::uno::Any& index ) = 0;
+    virtual ::css::uno::Any SAL_CALL Fields( const ::css::uno::Any& index ) = 0;
+
+    static inline ::css::uno::Type const & SAL_CALL static_type(void * = 0);
+
+protected:
+    ~XRange() SAL_NOEXCEPT {} // avoid warnings about virtual members and non-virtual dtor
+};
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::ooo::vba::word::XRange const *);
+} } }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::uno::Reference< ::ooo::vba::word::XRange > *);
+
+#endif

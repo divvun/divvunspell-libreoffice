@@ -1,0 +1,19 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOCALLOUTDROPTYPE_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOCALLOUTDROPTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoCalloutDropType {
+
+static const ::sal_Int32 msoCalloutDropBottom = (sal_Int32)4;
+static const ::sal_Int32 msoCalloutDropCenter = (sal_Int32)3;
+static const ::sal_Int32 msoCalloutDropCustom = (sal_Int32)1;
+static const ::sal_Int32 msoCalloutDropMixed = (sal_Int32)-2;
+static const ::sal_Int32 msoCalloutDropTop = (sal_Int32)2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOCALLOUTDROPTYPE_HDL

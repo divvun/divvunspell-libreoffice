@@ -1,0 +1,18 @@
+#ifndef INCLUDED_OOO_VBA_ADODB_XACTATTRIBUTEENUM_HDL
+#define INCLUDED_OOO_VBA_ADODB_XACTATTRIBUTEENUM_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace adodb { namespace XactAttributeEnum {
+
+static const ::sal_Int32 adXactAbortRetaining = (sal_Int32)262144;
+static const ::sal_Int32 adXactAsyncPhaseOne = (sal_Int32)524288;
+static const ::sal_Int32 adXactCommitRetaining = (sal_Int32)131072;
+static const ::sal_Int32 adXactSyncPhaseOne = (sal_Int32)1048576;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_ADODB_XACTATTRIBUTEENUM_HDL

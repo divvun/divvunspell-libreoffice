@@ -1,0 +1,36 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLPIVOTFORMATTYPE_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLPIVOTFORMATTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlPivotFormatType {
+
+static const ::sal_Int32 xlPTClassic = (sal_Int32)20;
+static const ::sal_Int32 xlPTNone = (sal_Int32)21;
+static const ::sal_Int32 xlReport1 = (sal_Int32)0;
+static const ::sal_Int32 xlReport10 = (sal_Int32)9;
+static const ::sal_Int32 xlReport2 = (sal_Int32)1;
+static const ::sal_Int32 xlReport3 = (sal_Int32)2;
+static const ::sal_Int32 xlReport4 = (sal_Int32)3;
+static const ::sal_Int32 xlReport5 = (sal_Int32)4;
+static const ::sal_Int32 xlReport6 = (sal_Int32)5;
+static const ::sal_Int32 xlReport7 = (sal_Int32)6;
+static const ::sal_Int32 xlReport8 = (sal_Int32)7;
+static const ::sal_Int32 xlReport9 = (sal_Int32)8;
+static const ::sal_Int32 xlTable1 = (sal_Int32)10;
+static const ::sal_Int32 xlTable10 = (sal_Int32)19;
+static const ::sal_Int32 xlTable2 = (sal_Int32)11;
+static const ::sal_Int32 xlTable3 = (sal_Int32)12;
+static const ::sal_Int32 xlTable4 = (sal_Int32)13;
+static const ::sal_Int32 xlTable5 = (sal_Int32)14;
+static const ::sal_Int32 xlTable6 = (sal_Int32)15;
+static const ::sal_Int32 xlTable7 = (sal_Int32)16;
+static const ::sal_Int32 xlTable8 = (sal_Int32)17;
+static const ::sal_Int32 xlTable9 = (sal_Int32)18;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLPIVOTFORMATTYPE_HDL

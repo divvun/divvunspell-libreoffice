@@ -1,0 +1,34 @@
+#ifndef INCLUDED_OOO_VBA_VBIMESTATUS_HDL
+#define INCLUDED_OOO_VBA_VBIMESTATUS_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace VbIMEStatus {
+
+static const ::sal_Int32 vbIMEAlphaDbl = (sal_Int32)7;
+static const ::sal_Int32 vbIMEAlphaSng = (sal_Int32)8;
+static const ::sal_Int32 vbIMEDisable = (sal_Int32)3;
+static const ::sal_Int32 vbIMEHiragana = (sal_Int32)4;
+static const ::sal_Int32 vbIMEKatakanaDbl = (sal_Int32)5;
+static const ::sal_Int32 vbIMEKatakanaSng = (sal_Int32)6;
+static const ::sal_Int32 vbIMEModeAlpha = (sal_Int32)8;
+static const ::sal_Int32 vbIMEModeAlphaFull = (sal_Int32)7;
+static const ::sal_Int32 vbIMEModeDisable = (sal_Int32)3;
+static const ::sal_Int32 vbIMEModeHangul = (sal_Int32)10;
+static const ::sal_Int32 vbIMEModeHangulFull = (sal_Int32)9;
+static const ::sal_Int32 vbIMEModeHiragana = (sal_Int32)4;
+static const ::sal_Int32 vbIMEModeKatakana = (sal_Int32)5;
+static const ::sal_Int32 vbIMEModeKatakanaHalf = (sal_Int32)6;
+static const ::sal_Int32 vbIMEModeNoControl = (sal_Int32)0;
+static const ::sal_Int32 vbIMEModeOff = (sal_Int32)2;
+static const ::sal_Int32 vbIMEModeOn = (sal_Int32)1;
+static const ::sal_Int32 vbIMENoOp = (sal_Int32)0;
+static const ::sal_Int32 vbIMEOff = (sal_Int32)2;
+static const ::sal_Int32 vbIMEOn = (sal_Int32)1;
+
+} } }
+
+#endif // INCLUDED_OOO_VBA_VBIMESTATUS_HDL

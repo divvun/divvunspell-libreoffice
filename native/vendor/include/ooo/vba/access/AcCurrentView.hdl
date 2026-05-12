@@ -1,0 +1,20 @@
+#ifndef INCLUDED_OOO_VBA_ACCESS_ACCURRENTVIEW_HDL
+#define INCLUDED_OOO_VBA_ACCESS_ACCURRENTVIEW_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace access { namespace AcCurrentView {
+
+static const ::sal_Int32 acCurViewDatasheet = (sal_Int32)2;
+static const ::sal_Int32 acCurViewDesign = (sal_Int32)0;
+static const ::sal_Int32 acCurViewFormBrowse = (sal_Int32)1;
+static const ::sal_Int32 acCurViewPivotChart = (sal_Int32)4;
+static const ::sal_Int32 acCurViewPivotTable = (sal_Int32)3;
+static const ::sal_Int32 acCurViewPreview = (sal_Int32)5;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_ACCESS_ACCURRENTVIEW_HDL

@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDLISTLEVELALIGNMENT_HDL
+#define INCLUDED_OOO_VBA_WORD_WDLISTLEVELALIGNMENT_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdListLevelAlignment {
+
+static const ::sal_Int32 wdListLevelAlignCenter = (sal_Int32)1;
+static const ::sal_Int32 wdListLevelAlignLeft = (sal_Int32)0;
+static const ::sal_Int32 wdListLevelAlignRight = (sal_Int32)2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDLISTLEVELALIGNMENT_HDL

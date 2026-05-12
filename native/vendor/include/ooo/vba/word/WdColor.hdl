@@ -1,0 +1,74 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDCOLOR_HDL
+#define INCLUDED_OOO_VBA_WORD_WDCOLOR_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdColor {
+
+static const ::sal_Int32 wdColorAqua = (sal_Int32)13421619;
+static const ::sal_Int32 wdColorAutomatic = (sal_Int32)-16777216;
+static const ::sal_Int32 wdColorBlack = (sal_Int32)0;
+static const ::sal_Int32 wdColorBlue = (sal_Int32)16711680;
+static const ::sal_Int32 wdColorBlueGray = (sal_Int32)10053222;
+static const ::sal_Int32 wdColorBrightGreen = (sal_Int32)65280;
+static const ::sal_Int32 wdColorBrown = (sal_Int32)13209;
+static const ::sal_Int32 wdColorDarkBlue = (sal_Int32)8388608;
+static const ::sal_Int32 wdColorDarkGreen = (sal_Int32)13056;
+static const ::sal_Int32 wdColorDarkRed = (sal_Int32)128;
+static const ::sal_Int32 wdColorDarkTeal = (sal_Int32)6697728;
+static const ::sal_Int32 wdColorDarkYellow = (sal_Int32)32896;
+static const ::sal_Int32 wdColorGold = (sal_Int32)52479;
+static const ::sal_Int32 wdColorGray05 = (sal_Int32)15987699;
+static const ::sal_Int32 wdColorGray10 = (sal_Int32)15132390;
+static const ::sal_Int32 wdColorGray125 = (sal_Int32)14737632;
+static const ::sal_Int32 wdColorGray15 = (sal_Int32)14277081;
+static const ::sal_Int32 wdColorGray20 = (sal_Int32)13421772;
+static const ::sal_Int32 wdColorGray25 = (sal_Int32)12632256;
+static const ::sal_Int32 wdColorGray30 = (sal_Int32)11776947;
+static const ::sal_Int32 wdColorGray35 = (sal_Int32)10921638;
+static const ::sal_Int32 wdColorGray375 = (sal_Int32)10526880;
+static const ::sal_Int32 wdColorGray40 = (sal_Int32)10066329;
+static const ::sal_Int32 wdColorGray45 = (sal_Int32)9211020;
+static const ::sal_Int32 wdColorGray50 = (sal_Int32)8421504;
+static const ::sal_Int32 wdColorGray55 = (sal_Int32)7566195;
+static const ::sal_Int32 wdColorGray60 = (sal_Int32)6710886;
+static const ::sal_Int32 wdColorGray625 = (sal_Int32)6316128;
+static const ::sal_Int32 wdColorGray65 = (sal_Int32)5855577;
+static const ::sal_Int32 wdColorGray70 = (sal_Int32)5000268;
+static const ::sal_Int32 wdColorGray75 = (sal_Int32)4210752;
+static const ::sal_Int32 wdColorGray80 = (sal_Int32)3355443;
+static const ::sal_Int32 wdColorGray85 = (sal_Int32)2500134;
+static const ::sal_Int32 wdColorGray875 = (sal_Int32)2105376;
+static const ::sal_Int32 wdColorGray90 = (sal_Int32)1644825;
+static const ::sal_Int32 wdColorGray95 = (sal_Int32)789516;
+static const ::sal_Int32 wdColorGreen = (sal_Int32)32768;
+static const ::sal_Int32 wdColorIndigo = (sal_Int32)10040115;
+static const ::sal_Int32 wdColorLavender = (sal_Int32)16751052;
+static const ::sal_Int32 wdColorLightBlue = (sal_Int32)16737843;
+static const ::sal_Int32 wdColorLightGreen = (sal_Int32)13434828;
+static const ::sal_Int32 wdColorLightOrange = (sal_Int32)39423;
+static const ::sal_Int32 wdColorLightTurquoise = (sal_Int32)16777164;
+static const ::sal_Int32 wdColorLightYellow = (sal_Int32)10092543;
+static const ::sal_Int32 wdColorLime = (sal_Int32)52377;
+static const ::sal_Int32 wdColorOliveGreen = (sal_Int32)13107;
+static const ::sal_Int32 wdColorOrange = (sal_Int32)26367;
+static const ::sal_Int32 wdColorPaleBlue = (sal_Int32)16764057;
+static const ::sal_Int32 wdColorPink = (sal_Int32)16711935;
+static const ::sal_Int32 wdColorPlum = (sal_Int32)6697881;
+static const ::sal_Int32 wdColorRed = (sal_Int32)255;
+static const ::sal_Int32 wdColorRose = (sal_Int32)13408767;
+static const ::sal_Int32 wdColorSeaGreen = (sal_Int32)6723891;
+static const ::sal_Int32 wdColorSkyBlue = (sal_Int32)16763904;
+static const ::sal_Int32 wdColorTan = (sal_Int32)10079487;
+static const ::sal_Int32 wdColorTeal = (sal_Int32)8421376;
+static const ::sal_Int32 wdColorTurquoise = (sal_Int32)16776960;
+static const ::sal_Int32 wdColorViolet = (sal_Int32)8388736;
+static const ::sal_Int32 wdColorWhite = (sal_Int32)16777215;
+static const ::sal_Int32 wdColorYellow = (sal_Int32)65535;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDCOLOR_HDL

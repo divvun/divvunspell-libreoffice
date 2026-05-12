@@ -1,0 +1,18 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLDIRECTION_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLDIRECTION_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlDirection {
+
+static const ::sal_Int32 xlDown = (sal_Int32)-4121;
+static const ::sal_Int32 xlToLeft = (sal_Int32)-4159;
+static const ::sal_Int32 xlToRight = (sal_Int32)-4161;
+static const ::sal_Int32 xlUp = (sal_Int32)-4162;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLDIRECTION_HDL

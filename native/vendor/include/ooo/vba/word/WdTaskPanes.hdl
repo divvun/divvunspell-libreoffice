@@ -1,0 +1,28 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDTASKPANES_HDL
+#define INCLUDED_OOO_VBA_WORD_WDTASKPANES_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdTaskPanes {
+
+static const ::sal_Int32 wdTaskPaneDocumentActions = (sal_Int32)7;
+static const ::sal_Int32 wdTaskPaneDocumentProtection = (sal_Int32)6;
+static const ::sal_Int32 wdTaskPaneDocumentUpdates = (sal_Int32)13;
+static const ::sal_Int32 wdTaskPaneFaxService = (sal_Int32)11;
+static const ::sal_Int32 wdTaskPaneFormatting = (sal_Int32)0;
+static const ::sal_Int32 wdTaskPaneHelp = (sal_Int32)9;
+static const ::sal_Int32 wdTaskPaneMailMerge = (sal_Int32)2;
+static const ::sal_Int32 wdTaskPaneResearch = (sal_Int32)10;
+static const ::sal_Int32 wdTaskPaneRevealFormatting = (sal_Int32)1;
+static const ::sal_Int32 wdTaskPaneSearch = (sal_Int32)4;
+static const ::sal_Int32 wdTaskPaneSharedWorkspace = (sal_Int32)8;
+static const ::sal_Int32 wdTaskPaneTranslate = (sal_Int32)3;
+static const ::sal_Int32 wdTaskPaneXMLDocument = (sal_Int32)12;
+static const ::sal_Int32 wdTaskPaneXMLStructure = (sal_Int32)5;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDTASKPANES_HDL

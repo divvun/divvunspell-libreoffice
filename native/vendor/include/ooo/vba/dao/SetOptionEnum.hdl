@@ -1,0 +1,25 @@
+#ifndef INCLUDED_OOO_VBA_DAO_SETOPTIONENUM_HDL
+#define INCLUDED_OOO_VBA_DAO_SETOPTIONENUM_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace dao { namespace SetOptionEnum {
+
+static const ::sal_Int32 dbExclusiveAsyncDelay = (sal_Int32)60;
+static const ::sal_Int32 dbFlushTransactionTimeout = (sal_Int32)66;
+static const ::sal_Int32 dbImplicitCommitSync = (sal_Int32)59;
+static const ::sal_Int32 dbLockDelay = (sal_Int32)63;
+static const ::sal_Int32 dbLockRetry = (sal_Int32)57;
+static const ::sal_Int32 dbMaxBufferSize = (sal_Int32)8;
+static const ::sal_Int32 dbMaxLocksPerFile = (sal_Int32)62;
+static const ::sal_Int32 dbPageTimeout = (sal_Int32)6;
+static const ::sal_Int32 dbRecycleLVs = (sal_Int32)65;
+static const ::sal_Int32 dbSharedAsyncDelay = (sal_Int32)61;
+static const ::sal_Int32 dbUserCommitSync = (sal_Int32)58;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_DAO_SETOPTIONENUM_HDL

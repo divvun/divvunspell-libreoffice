@@ -1,0 +1,30 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDSMARTTAGCONTROLTYPE_HDL
+#define INCLUDED_OOO_VBA_WORD_WDSMARTTAGCONTROLTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdSmartTagControlType {
+
+static const ::sal_Int32 wdControlActiveX = (sal_Int32)13;
+static const ::sal_Int32 wdControlButton = (sal_Int32)6;
+static const ::sal_Int32 wdControlCheckbox = (sal_Int32)9;
+static const ::sal_Int32 wdControlCombo = (sal_Int32)12;
+static const ::sal_Int32 wdControlDocumentFragment = (sal_Int32)14;
+static const ::sal_Int32 wdControlDocumentFragmentURL = (sal_Int32)15;
+static const ::sal_Int32 wdControlHelp = (sal_Int32)3;
+static const ::sal_Int32 wdControlHelpURL = (sal_Int32)4;
+static const ::sal_Int32 wdControlImage = (sal_Int32)8;
+static const ::sal_Int32 wdControlLabel = (sal_Int32)7;
+static const ::sal_Int32 wdControlLink = (sal_Int32)2;
+static const ::sal_Int32 wdControlListbox = (sal_Int32)11;
+static const ::sal_Int32 wdControlRadioGroup = (sal_Int32)16;
+static const ::sal_Int32 wdControlSeparator = (sal_Int32)5;
+static const ::sal_Int32 wdControlSmartTag = (sal_Int32)1;
+static const ::sal_Int32 wdControlTextbox = (sal_Int32)10;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDSMARTTAGCONTROLTYPE_HDL

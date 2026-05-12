@@ -1,0 +1,16 @@
+#ifndef INCLUDED_OOO_VBA_DAO_IDLEENUM_HDL
+#define INCLUDED_OOO_VBA_DAO_IDLEENUM_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace dao { namespace IdleEnum {
+
+static const ::sal_Int32 dbFreeLocks = (sal_Int32)1;
+static const ::sal_Int32 dbRefreshCache = (sal_Int32)8;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_DAO_IDLEENUM_HDL

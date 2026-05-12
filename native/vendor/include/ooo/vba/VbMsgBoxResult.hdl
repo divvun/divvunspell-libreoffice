@@ -1,0 +1,21 @@
+#ifndef INCLUDED_OOO_VBA_VBMSGBOXRESULT_HDL
+#define INCLUDED_OOO_VBA_VBMSGBOXRESULT_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace VbMsgBoxResult {
+
+static const ::sal_Int32 vbAbort = (sal_Int32)3;
+static const ::sal_Int32 vbCancel = (sal_Int32)2;
+static const ::sal_Int32 vbIgnore = (sal_Int32)5;
+static const ::sal_Int32 vbNo = (sal_Int32)7;
+static const ::sal_Int32 vbOK = (sal_Int32)1;
+static const ::sal_Int32 vbRetry = (sal_Int32)4;
+static const ::sal_Int32 vbYes = (sal_Int32)6;
+
+} } }
+
+#endif // INCLUDED_OOO_VBA_VBMSGBOXRESULT_HDL

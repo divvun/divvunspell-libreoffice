@@ -1,0 +1,26 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLCONSOLIDATIONFUNCTION_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLCONSOLIDATIONFUNCTION_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlConsolidationFunction {
+
+static const ::sal_Int32 xlAverage = (sal_Int32)-4106;
+static const ::sal_Int32 xlCount = (sal_Int32)-4112;
+static const ::sal_Int32 xlCountNums = (sal_Int32)-4113;
+static const ::sal_Int32 xlMax = (sal_Int32)-4136;
+static const ::sal_Int32 xlMin = (sal_Int32)-4139;
+static const ::sal_Int32 xlProduct = (sal_Int32)-4149;
+static const ::sal_Int32 xlStDev = (sal_Int32)-4155;
+static const ::sal_Int32 xlStDevP = (sal_Int32)-4156;
+static const ::sal_Int32 xlSum = (sal_Int32)-4157;
+static const ::sal_Int32 xlUnknown = (sal_Int32)1000;
+static const ::sal_Int32 xlVar = (sal_Int32)-4164;
+static const ::sal_Int32 xlVarP = (sal_Int32)-4165;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLCONSOLIDATIONFUNCTION_HDL

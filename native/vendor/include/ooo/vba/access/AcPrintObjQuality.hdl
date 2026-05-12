@@ -1,0 +1,18 @@
+#ifndef INCLUDED_OOO_VBA_ACCESS_ACPRINTOBJQUALITY_HDL
+#define INCLUDED_OOO_VBA_ACCESS_ACPRINTOBJQUALITY_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace access { namespace AcPrintObjQuality {
+
+static const ::sal_Int32 acPRPQDraft = (sal_Int32)-1;
+static const ::sal_Int32 acPRPQHigh = (sal_Int32)-4;
+static const ::sal_Int32 acPRPQLow = (sal_Int32)-2;
+static const ::sal_Int32 acPRPQMedium = (sal_Int32)-3;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_ACCESS_ACPRINTOBJQUALITY_HDL

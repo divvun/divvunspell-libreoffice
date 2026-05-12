@@ -1,0 +1,117 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDBUILTINSTYLE_HDL
+#define INCLUDED_OOO_VBA_WORD_WDBUILTINSTYLE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdBuiltinStyle {
+
+static const ::sal_Int32 wdStyleBlockQuotation = (sal_Int32)-85;
+static const ::sal_Int32 wdStyleBodyText = (sal_Int32)-67;
+static const ::sal_Int32 wdStyleBodyText2 = (sal_Int32)-81;
+static const ::sal_Int32 wdStyleBodyText3 = (sal_Int32)-82;
+static const ::sal_Int32 wdStyleBodyTextFirstIndent = (sal_Int32)-78;
+static const ::sal_Int32 wdStyleBodyTextFirstIndent2 = (sal_Int32)-79;
+static const ::sal_Int32 wdStyleBodyTextIndent = (sal_Int32)-68;
+static const ::sal_Int32 wdStyleBodyTextIndent2 = (sal_Int32)-83;
+static const ::sal_Int32 wdStyleBodyTextIndent3 = (sal_Int32)-84;
+static const ::sal_Int32 wdStyleCaption = (sal_Int32)-35;
+static const ::sal_Int32 wdStyleClosing = (sal_Int32)-64;
+static const ::sal_Int32 wdStyleCommentReference = (sal_Int32)-40;
+static const ::sal_Int32 wdStyleCommentText = (sal_Int32)-31;
+static const ::sal_Int32 wdStyleDate = (sal_Int32)-77;
+static const ::sal_Int32 wdStyleDefaultParagraphFont = (sal_Int32)-66;
+static const ::sal_Int32 wdStyleEmphasis = (sal_Int32)-89;
+static const ::sal_Int32 wdStyleEndnoteReference = (sal_Int32)-43;
+static const ::sal_Int32 wdStyleEndnoteText = (sal_Int32)-44;
+static const ::sal_Int32 wdStyleEnvelopeAddress = (sal_Int32)-37;
+static const ::sal_Int32 wdStyleEnvelopeReturn = (sal_Int32)-38;
+static const ::sal_Int32 wdStyleFooter = (sal_Int32)-33;
+static const ::sal_Int32 wdStyleFootnoteReference = (sal_Int32)-39;
+static const ::sal_Int32 wdStyleFootnoteText = (sal_Int32)-30;
+static const ::sal_Int32 wdStyleHeader = (sal_Int32)-32;
+static const ::sal_Int32 wdStyleHeading1 = (sal_Int32)-2;
+static const ::sal_Int32 wdStyleHeading2 = (sal_Int32)-3;
+static const ::sal_Int32 wdStyleHeading3 = (sal_Int32)-4;
+static const ::sal_Int32 wdStyleHeading4 = (sal_Int32)-5;
+static const ::sal_Int32 wdStyleHeading5 = (sal_Int32)-6;
+static const ::sal_Int32 wdStyleHeading6 = (sal_Int32)-7;
+static const ::sal_Int32 wdStyleHeading7 = (sal_Int32)-8;
+static const ::sal_Int32 wdStyleHeading8 = (sal_Int32)-9;
+static const ::sal_Int32 wdStyleHeading9 = (sal_Int32)-10;
+static const ::sal_Int32 wdStyleHtmlAcronym = (sal_Int32)-96;
+static const ::sal_Int32 wdStyleHtmlAddress = (sal_Int32)-97;
+static const ::sal_Int32 wdStyleHtmlCite = (sal_Int32)-98;
+static const ::sal_Int32 wdStyleHtmlCode = (sal_Int32)-99;
+static const ::sal_Int32 wdStyleHtmlDfn = (sal_Int32)-100;
+static const ::sal_Int32 wdStyleHtmlKbd = (sal_Int32)-101;
+static const ::sal_Int32 wdStyleHtmlNormal = (sal_Int32)-95;
+static const ::sal_Int32 wdStyleHtmlPre = (sal_Int32)-102;
+static const ::sal_Int32 wdStyleHtmlSamp = (sal_Int32)-103;
+static const ::sal_Int32 wdStyleHtmlTt = (sal_Int32)-104;
+static const ::sal_Int32 wdStyleHtmlVar = (sal_Int32)-105;
+static const ::sal_Int32 wdStyleHyperlink = (sal_Int32)-86;
+static const ::sal_Int32 wdStyleHyperlinkFollowed = (sal_Int32)-87;
+static const ::sal_Int32 wdStyleIndex1 = (sal_Int32)-11;
+static const ::sal_Int32 wdStyleIndex2 = (sal_Int32)-12;
+static const ::sal_Int32 wdStyleIndex3 = (sal_Int32)-13;
+static const ::sal_Int32 wdStyleIndex4 = (sal_Int32)-14;
+static const ::sal_Int32 wdStyleIndex5 = (sal_Int32)-15;
+static const ::sal_Int32 wdStyleIndex6 = (sal_Int32)-16;
+static const ::sal_Int32 wdStyleIndex7 = (sal_Int32)-17;
+static const ::sal_Int32 wdStyleIndex8 = (sal_Int32)-18;
+static const ::sal_Int32 wdStyleIndex9 = (sal_Int32)-19;
+static const ::sal_Int32 wdStyleIndexHeading = (sal_Int32)-34;
+static const ::sal_Int32 wdStyleLineNumber = (sal_Int32)-41;
+static const ::sal_Int32 wdStyleList = (sal_Int32)-48;
+static const ::sal_Int32 wdStyleList2 = (sal_Int32)-51;
+static const ::sal_Int32 wdStyleList3 = (sal_Int32)-52;
+static const ::sal_Int32 wdStyleList4 = (sal_Int32)-53;
+static const ::sal_Int32 wdStyleList5 = (sal_Int32)-54;
+static const ::sal_Int32 wdStyleListBullet = (sal_Int32)-49;
+static const ::sal_Int32 wdStyleListBullet2 = (sal_Int32)-55;
+static const ::sal_Int32 wdStyleListBullet3 = (sal_Int32)-56;
+static const ::sal_Int32 wdStyleListBullet4 = (sal_Int32)-57;
+static const ::sal_Int32 wdStyleListBullet5 = (sal_Int32)-58;
+static const ::sal_Int32 wdStyleListContinue = (sal_Int32)-69;
+static const ::sal_Int32 wdStyleListContinue2 = (sal_Int32)-70;
+static const ::sal_Int32 wdStyleListContinue3 = (sal_Int32)-71;
+static const ::sal_Int32 wdStyleListContinue4 = (sal_Int32)-72;
+static const ::sal_Int32 wdStyleListContinue5 = (sal_Int32)-73;
+static const ::sal_Int32 wdStyleListNumber = (sal_Int32)-50;
+static const ::sal_Int32 wdStyleListNumber2 = (sal_Int32)-59;
+static const ::sal_Int32 wdStyleListNumber3 = (sal_Int32)-60;
+static const ::sal_Int32 wdStyleListNumber4 = (sal_Int32)-61;
+static const ::sal_Int32 wdStyleListNumber5 = (sal_Int32)-62;
+static const ::sal_Int32 wdStyleMacroText = (sal_Int32)-46;
+static const ::sal_Int32 wdStyleMessageHeader = (sal_Int32)-74;
+static const ::sal_Int32 wdStyleNavPane = (sal_Int32)-90;
+static const ::sal_Int32 wdStyleNormal = (sal_Int32)-1;
+static const ::sal_Int32 wdStyleNormalIndent = (sal_Int32)-29;
+static const ::sal_Int32 wdStyleNormalTable = (sal_Int32)-106;
+static const ::sal_Int32 wdStyleNoteHeading = (sal_Int32)-80;
+static const ::sal_Int32 wdStylePageNumber = (sal_Int32)-42;
+static const ::sal_Int32 wdStylePlainText = (sal_Int32)-91;
+static const ::sal_Int32 wdStyleSalutation = (sal_Int32)-76;
+static const ::sal_Int32 wdStyleSignature = (sal_Int32)-65;
+static const ::sal_Int32 wdStyleStrong = (sal_Int32)-88;
+static const ::sal_Int32 wdStyleSubtitle = (sal_Int32)-75;
+static const ::sal_Int32 wdStyleTOAHeading = (sal_Int32)-47;
+static const ::sal_Int32 wdStyleTOC1 = (sal_Int32)-20;
+static const ::sal_Int32 wdStyleTOC2 = (sal_Int32)-21;
+static const ::sal_Int32 wdStyleTOC3 = (sal_Int32)-22;
+static const ::sal_Int32 wdStyleTOC4 = (sal_Int32)-23;
+static const ::sal_Int32 wdStyleTOC5 = (sal_Int32)-24;
+static const ::sal_Int32 wdStyleTOC6 = (sal_Int32)-25;
+static const ::sal_Int32 wdStyleTOC7 = (sal_Int32)-26;
+static const ::sal_Int32 wdStyleTOC8 = (sal_Int32)-27;
+static const ::sal_Int32 wdStyleTOC9 = (sal_Int32)-28;
+static const ::sal_Int32 wdStyleTableOfAuthorities = (sal_Int32)-45;
+static const ::sal_Int32 wdStyleTableOfFigures = (sal_Int32)-36;
+static const ::sal_Int32 wdStyleTitle = (sal_Int32)-63;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDBUILTINSTYLE_HDL

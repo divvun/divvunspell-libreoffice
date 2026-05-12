@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOHTMLPROJECTSTATE_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOHTMLPROJECTSTATE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoHTMLProjectState {
+
+static const ::sal_Int32 msoHTMLProjectStateDocumentLocked = (sal_Int32)1;
+static const ::sal_Int32 msoHTMLProjectStateDocumentProjectUnlocked = (sal_Int32)3;
+static const ::sal_Int32 msoHTMLProjectStateProjectLocked = (sal_Int32)2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOHTMLPROJECTSTATE_HDL

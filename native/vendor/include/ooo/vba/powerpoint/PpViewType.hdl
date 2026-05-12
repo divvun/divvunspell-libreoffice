@@ -1,0 +1,26 @@
+#ifndef INCLUDED_OOO_VBA_POWERPOINT_PPVIEWTYPE_HDL
+#define INCLUDED_OOO_VBA_POWERPOINT_PPVIEWTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace powerpoint { namespace PpViewType {
+
+static const ::sal_Int32 ppViewHandoutMaster = (sal_Int32)4;
+static const ::sal_Int32 ppViewMasterThumbnails = (sal_Int32)12;
+static const ::sal_Int32 ppViewNormal = (sal_Int32)9;
+static const ::sal_Int32 ppViewNotesMaster = (sal_Int32)5;
+static const ::sal_Int32 ppViewNotesPage = (sal_Int32)3;
+static const ::sal_Int32 ppViewOutline = (sal_Int32)6;
+static const ::sal_Int32 ppViewPrintPreview = (sal_Int32)10;
+static const ::sal_Int32 ppViewSlide = (sal_Int32)1;
+static const ::sal_Int32 ppViewSlideMaster = (sal_Int32)2;
+static const ::sal_Int32 ppViewSlideSorter = (sal_Int32)7;
+static const ::sal_Int32 ppViewThumbnails = (sal_Int32)11;
+static const ::sal_Int32 ppViewTitleMaster = (sal_Int32)8;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_POWERPOINT_PPVIEWTYPE_HDL

@@ -1,0 +1,16 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOMIXEDTYPE_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOMIXEDTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoMixedType {
+
+static const ::sal_Int32 msoIntegerMixed = (sal_Int32)32768;
+static const ::sal_Int32 msoSingleMixed = SAL_MIN_INT32;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOMIXEDTYPE_HDL

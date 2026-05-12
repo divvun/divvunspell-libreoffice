@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDCAPTIONLABELID_HDL
+#define INCLUDED_OOO_VBA_WORD_WDCAPTIONLABELID_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdCaptionLabelID {
+
+static const ::sal_Int32 wdCaptionEquation = (sal_Int32)-3;
+static const ::sal_Int32 wdCaptionFigure = (sal_Int32)-1;
+static const ::sal_Int32 wdCaptionTable = (sal_Int32)-2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDCAPTIONLABELID_HDL

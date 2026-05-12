@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOLANGUAGEIDHIDDEN_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOLANGUAGEIDHIDDEN_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoLanguageIDHidden {
+
+static const ::sal_Int32 msoLanguageIDChineseHongKong = (sal_Int32)3076;
+static const ::sal_Int32 msoLanguageIDChineseMacao = (sal_Int32)5124;
+static const ::sal_Int32 msoLanguageIDEnglishTrinidad = (sal_Int32)11273;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOLANGUAGEIDHIDDEN_HDL

@@ -1,0 +1,35 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOPRESETTHREEDFORMAT_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOPRESETTHREEDFORMAT_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoPresetThreeDFormat {
+
+static const ::sal_Int32 msoPresetThreeDFormatMixed = (sal_Int32)-2;
+static const ::sal_Int32 msoThreeD1 = (sal_Int32)1;
+static const ::sal_Int32 msoThreeD10 = (sal_Int32)10;
+static const ::sal_Int32 msoThreeD11 = (sal_Int32)11;
+static const ::sal_Int32 msoThreeD12 = (sal_Int32)12;
+static const ::sal_Int32 msoThreeD13 = (sal_Int32)13;
+static const ::sal_Int32 msoThreeD14 = (sal_Int32)14;
+static const ::sal_Int32 msoThreeD15 = (sal_Int32)15;
+static const ::sal_Int32 msoThreeD16 = (sal_Int32)16;
+static const ::sal_Int32 msoThreeD17 = (sal_Int32)17;
+static const ::sal_Int32 msoThreeD18 = (sal_Int32)18;
+static const ::sal_Int32 msoThreeD19 = (sal_Int32)19;
+static const ::sal_Int32 msoThreeD2 = (sal_Int32)2;
+static const ::sal_Int32 msoThreeD20 = (sal_Int32)20;
+static const ::sal_Int32 msoThreeD3 = (sal_Int32)3;
+static const ::sal_Int32 msoThreeD4 = (sal_Int32)4;
+static const ::sal_Int32 msoThreeD5 = (sal_Int32)5;
+static const ::sal_Int32 msoThreeD6 = (sal_Int32)6;
+static const ::sal_Int32 msoThreeD7 = (sal_Int32)7;
+static const ::sal_Int32 msoThreeD8 = (sal_Int32)8;
+static const ::sal_Int32 msoThreeD9 = (sal_Int32)9;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOPRESETTHREEDFORMAT_HDL

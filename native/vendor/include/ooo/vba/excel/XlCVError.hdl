@@ -1,0 +1,21 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLCVERROR_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLCVERROR_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlCVError {
+
+static const ::sal_Int32 xlErrDiv0 = (sal_Int32)2007;
+static const ::sal_Int32 xlErrNA = (sal_Int32)2042;
+static const ::sal_Int32 xlErrName = (sal_Int32)2029;
+static const ::sal_Int32 xlErrNull = (sal_Int32)2000;
+static const ::sal_Int32 xlErrNum = (sal_Int32)2036;
+static const ::sal_Int32 xlErrRef = (sal_Int32)2023;
+static const ::sal_Int32 xlErrValue = (sal_Int32)2015;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLCVERROR_HDL

@@ -1,0 +1,151 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOENCODING_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOENCODING_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoEncoding {
+
+static const ::sal_Int32 msoEncodingArabic = (sal_Int32)1256;
+static const ::sal_Int32 msoEncodingArabicASMO = (sal_Int32)708;
+static const ::sal_Int32 msoEncodingArabicAutoDetect = (sal_Int32)51256;
+static const ::sal_Int32 msoEncodingArabicTransparentASMO = (sal_Int32)720;
+static const ::sal_Int32 msoEncodingAutoDetect = (sal_Int32)50001;
+static const ::sal_Int32 msoEncodingBaltic = (sal_Int32)1257;
+static const ::sal_Int32 msoEncodingCentralEuropean = (sal_Int32)1250;
+static const ::sal_Int32 msoEncodingCyrillic = (sal_Int32)1251;
+static const ::sal_Int32 msoEncodingCyrillicAutoDetect = (sal_Int32)51251;
+static const ::sal_Int32 msoEncodingEBCDICArabic = (sal_Int32)20420;
+static const ::sal_Int32 msoEncodingEBCDICDenmarkNorway = (sal_Int32)20277;
+static const ::sal_Int32 msoEncodingEBCDICFinlandSweden = (sal_Int32)20278;
+static const ::sal_Int32 msoEncodingEBCDICFrance = (sal_Int32)20297;
+static const ::sal_Int32 msoEncodingEBCDICGermany = (sal_Int32)20273;
+static const ::sal_Int32 msoEncodingEBCDICGreek = (sal_Int32)20423;
+static const ::sal_Int32 msoEncodingEBCDICGreekModern = (sal_Int32)875;
+static const ::sal_Int32 msoEncodingEBCDICHebrew = (sal_Int32)20424;
+static const ::sal_Int32 msoEncodingEBCDICIcelandic = (sal_Int32)20871;
+static const ::sal_Int32 msoEncodingEBCDICInternational = (sal_Int32)500;
+static const ::sal_Int32 msoEncodingEBCDICItaly = (sal_Int32)20280;
+static const ::sal_Int32 msoEncodingEBCDICJapaneseKatakanaExtended = (sal_Int32)20290;
+static const ::sal_Int32 msoEncodingEBCDICJapaneseKatakanaExtendedAndJapanese = (sal_Int32)50930;
+static const ::sal_Int32 msoEncodingEBCDICJapaneseLatinExtendedAndJapanese = (sal_Int32)50939;
+static const ::sal_Int32 msoEncodingEBCDICKoreanExtended = (sal_Int32)20833;
+static const ::sal_Int32 msoEncodingEBCDICKoreanExtendedAndKorean = (sal_Int32)50933;
+static const ::sal_Int32 msoEncodingEBCDICLatinAmericaSpain = (sal_Int32)20284;
+static const ::sal_Int32 msoEncodingEBCDICMultilingualROECELatin2 = (sal_Int32)870;
+static const ::sal_Int32 msoEncodingEBCDICRussian = (sal_Int32)20880;
+static const ::sal_Int32 msoEncodingEBCDICSerbianBulgarian = (sal_Int32)21025;
+static const ::sal_Int32 msoEncodingEBCDICSimplifiedChineseExtendedAndSimplifiedChinese = (sal_Int32)50935;
+static const ::sal_Int32 msoEncodingEBCDICThai = (sal_Int32)20838;
+static const ::sal_Int32 msoEncodingEBCDICTurkish = (sal_Int32)20905;
+static const ::sal_Int32 msoEncodingEBCDICTurkishLatin5 = (sal_Int32)1026;
+static const ::sal_Int32 msoEncodingEBCDICUSCanada = (sal_Int32)37;
+static const ::sal_Int32 msoEncodingEBCDICUSCanadaAndJapanese = (sal_Int32)50931;
+static const ::sal_Int32 msoEncodingEBCDICUSCanadaAndTraditionalChinese = (sal_Int32)50937;
+static const ::sal_Int32 msoEncodingEBCDICUnitedKingdom = (sal_Int32)20285;
+static const ::sal_Int32 msoEncodingEUCChineseSimplifiedChinese = (sal_Int32)51936;
+static const ::sal_Int32 msoEncodingEUCJapanese = (sal_Int32)51932;
+static const ::sal_Int32 msoEncodingEUCKorean = (sal_Int32)51949;
+static const ::sal_Int32 msoEncodingEUCTaiwaneseTraditionalChinese = (sal_Int32)51950;
+static const ::sal_Int32 msoEncodingEuropa3 = (sal_Int32)29001;
+static const ::sal_Int32 msoEncodingExtAlphaLowercase = (sal_Int32)21027;
+static const ::sal_Int32 msoEncodingGreek = (sal_Int32)1253;
+static const ::sal_Int32 msoEncodingGreekAutoDetect = (sal_Int32)51253;
+static const ::sal_Int32 msoEncodingHZGBSimplifiedChinese = (sal_Int32)52936;
+static const ::sal_Int32 msoEncodingHebrew = (sal_Int32)1255;
+static const ::sal_Int32 msoEncodingIA5German = (sal_Int32)20106;
+static const ::sal_Int32 msoEncodingIA5IRV = (sal_Int32)20105;
+static const ::sal_Int32 msoEncodingIA5Norwegian = (sal_Int32)20108;
+static const ::sal_Int32 msoEncodingIA5Swedish = (sal_Int32)20107;
+static const ::sal_Int32 msoEncodingISCIIAssamese = (sal_Int32)57006;
+static const ::sal_Int32 msoEncodingISCIIBengali = (sal_Int32)57003;
+static const ::sal_Int32 msoEncodingISCIIDevanagari = (sal_Int32)57002;
+static const ::sal_Int32 msoEncodingISCIIGujarati = (sal_Int32)57010;
+static const ::sal_Int32 msoEncodingISCIIKannada = (sal_Int32)57008;
+static const ::sal_Int32 msoEncodingISCIIMalayalam = (sal_Int32)57009;
+static const ::sal_Int32 msoEncodingISCIIOriya = (sal_Int32)57007;
+static const ::sal_Int32 msoEncodingISCIIPunjabi = (sal_Int32)57011;
+static const ::sal_Int32 msoEncodingISCIITamil = (sal_Int32)57004;
+static const ::sal_Int32 msoEncodingISCIITelugu = (sal_Int32)57005;
+static const ::sal_Int32 msoEncodingISO2022CNSimplifiedChinese = (sal_Int32)50229;
+static const ::sal_Int32 msoEncodingISO2022CNTraditionalChinese = (sal_Int32)50227;
+static const ::sal_Int32 msoEncodingISO2022JPJISX02011989 = (sal_Int32)50222;
+static const ::sal_Int32 msoEncodingISO2022JPJISX02021984 = (sal_Int32)50221;
+static const ::sal_Int32 msoEncodingISO2022JPNoHalfwidthKatakana = (sal_Int32)50220;
+static const ::sal_Int32 msoEncodingISO2022KR = (sal_Int32)50225;
+static const ::sal_Int32 msoEncodingISO6937NonSpacingAccent = (sal_Int32)20269;
+static const ::sal_Int32 msoEncodingISO885915Latin9 = (sal_Int32)28605;
+static const ::sal_Int32 msoEncodingISO88591Latin1 = (sal_Int32)28591;
+static const ::sal_Int32 msoEncodingISO88592CentralEurope = (sal_Int32)28592;
+static const ::sal_Int32 msoEncodingISO88593Latin3 = (sal_Int32)28593;
+static const ::sal_Int32 msoEncodingISO88594Baltic = (sal_Int32)28594;
+static const ::sal_Int32 msoEncodingISO88595Cyrillic = (sal_Int32)28595;
+static const ::sal_Int32 msoEncodingISO88596Arabic = (sal_Int32)28596;
+static const ::sal_Int32 msoEncodingISO88597Greek = (sal_Int32)28597;
+static const ::sal_Int32 msoEncodingISO88598Hebrew = (sal_Int32)28598;
+static const ::sal_Int32 msoEncodingISO88598HebrewLogical = (sal_Int32)38598;
+static const ::sal_Int32 msoEncodingISO88599Turkish = (sal_Int32)28599;
+static const ::sal_Int32 msoEncodingJapaneseAutoDetect = (sal_Int32)50932;
+static const ::sal_Int32 msoEncodingJapaneseShiftJIS = (sal_Int32)932;
+static const ::sal_Int32 msoEncodingKOI8R = (sal_Int32)20866;
+static const ::sal_Int32 msoEncodingKOI8U = (sal_Int32)21866;
+static const ::sal_Int32 msoEncodingKorean = (sal_Int32)949;
+static const ::sal_Int32 msoEncodingKoreanAutoDetect = (sal_Int32)50949;
+static const ::sal_Int32 msoEncodingKoreanJohab = (sal_Int32)1361;
+static const ::sal_Int32 msoEncodingMacArabic = (sal_Int32)10004;
+static const ::sal_Int32 msoEncodingMacCroatia = (sal_Int32)10082;
+static const ::sal_Int32 msoEncodingMacCyrillic = (sal_Int32)10007;
+static const ::sal_Int32 msoEncodingMacGreek1 = (sal_Int32)10006;
+static const ::sal_Int32 msoEncodingMacHebrew = (sal_Int32)10005;
+static const ::sal_Int32 msoEncodingMacIcelandic = (sal_Int32)10079;
+static const ::sal_Int32 msoEncodingMacJapanese = (sal_Int32)10001;
+static const ::sal_Int32 msoEncodingMacKorean = (sal_Int32)10003;
+static const ::sal_Int32 msoEncodingMacLatin2 = (sal_Int32)10029;
+static const ::sal_Int32 msoEncodingMacRoman = (sal_Int32)10000;
+static const ::sal_Int32 msoEncodingMacRomania = (sal_Int32)10010;
+static const ::sal_Int32 msoEncodingMacSimplifiedChineseGB2312 = (sal_Int32)10008;
+static const ::sal_Int32 msoEncodingMacTraditionalChineseBig5 = (sal_Int32)10002;
+static const ::sal_Int32 msoEncodingMacTurkish = (sal_Int32)10081;
+static const ::sal_Int32 msoEncodingMacUkraine = (sal_Int32)10017;
+static const ::sal_Int32 msoEncodingOEMArabic = (sal_Int32)864;
+static const ::sal_Int32 msoEncodingOEMBaltic = (sal_Int32)775;
+static const ::sal_Int32 msoEncodingOEMCanadianFrench = (sal_Int32)863;
+static const ::sal_Int32 msoEncodingOEMCyrillic = (sal_Int32)855;
+static const ::sal_Int32 msoEncodingOEMCyrillicII = (sal_Int32)866;
+static const ::sal_Int32 msoEncodingOEMGreek437G = (sal_Int32)737;
+static const ::sal_Int32 msoEncodingOEMHebrew = (sal_Int32)862;
+static const ::sal_Int32 msoEncodingOEMIcelandic = (sal_Int32)861;
+static const ::sal_Int32 msoEncodingOEMModernGreek = (sal_Int32)869;
+static const ::sal_Int32 msoEncodingOEMMultilingualLatinI = (sal_Int32)850;
+static const ::sal_Int32 msoEncodingOEMMultilingualLatinII = (sal_Int32)852;
+static const ::sal_Int32 msoEncodingOEMNordic = (sal_Int32)865;
+static const ::sal_Int32 msoEncodingOEMPortuguese = (sal_Int32)860;
+static const ::sal_Int32 msoEncodingOEMTurkish = (sal_Int32)857;
+static const ::sal_Int32 msoEncodingOEMUnitedStates = (sal_Int32)437;
+static const ::sal_Int32 msoEncodingSimplifiedChineseAutoDetect = (sal_Int32)50936;
+static const ::sal_Int32 msoEncodingSimplifiedChineseGB18030 = (sal_Int32)54936;
+static const ::sal_Int32 msoEncodingSimplifiedChineseGBK = (sal_Int32)936;
+static const ::sal_Int32 msoEncodingT61 = (sal_Int32)20261;
+static const ::sal_Int32 msoEncodingTaiwanCNS = (sal_Int32)20000;
+static const ::sal_Int32 msoEncodingTaiwanEten = (sal_Int32)20002;
+static const ::sal_Int32 msoEncodingTaiwanIBM5550 = (sal_Int32)20003;
+static const ::sal_Int32 msoEncodingTaiwanTCA = (sal_Int32)20001;
+static const ::sal_Int32 msoEncodingTaiwanTeleText = (sal_Int32)20004;
+static const ::sal_Int32 msoEncodingTaiwanWang = (sal_Int32)20005;
+static const ::sal_Int32 msoEncodingThai = (sal_Int32)874;
+static const ::sal_Int32 msoEncodingTraditionalChineseAutoDetect = (sal_Int32)50950;
+static const ::sal_Int32 msoEncodingTraditionalChineseBig5 = (sal_Int32)950;
+static const ::sal_Int32 msoEncodingTurkish = (sal_Int32)1254;
+static const ::sal_Int32 msoEncodingUSASCII = (sal_Int32)20127;
+static const ::sal_Int32 msoEncodingUTF7 = (sal_Int32)65000;
+static const ::sal_Int32 msoEncodingUTF8 = (sal_Int32)65001;
+static const ::sal_Int32 msoEncodingUnicodeBigEndian = (sal_Int32)1201;
+static const ::sal_Int32 msoEncodingUnicodeLittleEndian = (sal_Int32)1200;
+static const ::sal_Int32 msoEncodingVietnamese = (sal_Int32)1258;
+static const ::sal_Int32 msoEncodingWestern = (sal_Int32)1252;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOENCODING_HDL

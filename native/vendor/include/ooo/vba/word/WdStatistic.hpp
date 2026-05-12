@@ -1,0 +1,6 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDSTATISTIC_HPP
+#define INCLUDED_OOO_VBA_WORD_WDSTATISTIC_HPP
+
+#include "ooo/vba/word/WdStatistic.hdl"
+
+#endif // INCLUDED_OOO_VBA_WORD_WDSTATISTIC_HPP

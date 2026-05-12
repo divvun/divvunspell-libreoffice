@@ -1,0 +1,24 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDDICTIONARYTYPE_HDL
+#define INCLUDED_OOO_VBA_WORD_WDDICTIONARYTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdDictionaryType {
+
+static const ::sal_Int32 wdGrammar = (sal_Int32)1;
+static const ::sal_Int32 wdHangulHanjaConversion = (sal_Int32)8;
+static const ::sal_Int32 wdHangulHanjaConversionCustom = (sal_Int32)9;
+static const ::sal_Int32 wdHyphenation = (sal_Int32)3;
+static const ::sal_Int32 wdSpelling = (sal_Int32)0;
+static const ::sal_Int32 wdSpellingComplete = (sal_Int32)4;
+static const ::sal_Int32 wdSpellingCustom = (sal_Int32)5;
+static const ::sal_Int32 wdSpellingLegal = (sal_Int32)6;
+static const ::sal_Int32 wdSpellingMedical = (sal_Int32)7;
+static const ::sal_Int32 wdThesaurus = (sal_Int32)2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDDICTIONARYTYPE_HDL

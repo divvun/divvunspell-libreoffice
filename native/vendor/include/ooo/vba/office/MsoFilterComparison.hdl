@@ -1,0 +1,24 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOFILTERCOMPARISON_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOFILTERCOMPARISON_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoFilterComparison {
+
+static const ::sal_Int32 msoFilterComparisonContains = (sal_Int32)8;
+static const ::sal_Int32 msoFilterComparisonEqual = (sal_Int32)0;
+static const ::sal_Int32 msoFilterComparisonGreaterThan = (sal_Int32)3;
+static const ::sal_Int32 msoFilterComparisonGreaterThanEqual = (sal_Int32)5;
+static const ::sal_Int32 msoFilterComparisonIsBlank = (sal_Int32)6;
+static const ::sal_Int32 msoFilterComparisonIsNotBlank = (sal_Int32)7;
+static const ::sal_Int32 msoFilterComparisonLessThan = (sal_Int32)2;
+static const ::sal_Int32 msoFilterComparisonLessThanEqual = (sal_Int32)4;
+static const ::sal_Int32 msoFilterComparisonNotContains = (sal_Int32)9;
+static const ::sal_Int32 msoFilterComparisonNotEqual = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOFILTERCOMPARISON_HDL

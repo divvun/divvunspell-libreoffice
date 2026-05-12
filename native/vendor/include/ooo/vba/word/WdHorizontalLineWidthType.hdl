@@ -1,0 +1,16 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDHORIZONTALLINEWIDTHTYPE_HDL
+#define INCLUDED_OOO_VBA_WORD_WDHORIZONTALLINEWIDTHTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdHorizontalLineWidthType {
+
+static const ::sal_Int32 wdHorizontalLineFixedWidth = (sal_Int32)-2;
+static const ::sal_Int32 wdHorizontalLinePercentWidth = (sal_Int32)-1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDHORIZONTALLINEWIDTHTYPE_HDL

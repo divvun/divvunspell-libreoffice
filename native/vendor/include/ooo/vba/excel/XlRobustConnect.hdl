@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLROBUSTCONNECT_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLROBUSTCONNECT_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlRobustConnect {
+
+static const ::sal_Int32 xlAlways = (sal_Int32)1;
+static const ::sal_Int32 xlAsRequired = (sal_Int32)0;
+static const ::sal_Int32 xlNever = (sal_Int32)2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLROBUSTCONNECT_HDL

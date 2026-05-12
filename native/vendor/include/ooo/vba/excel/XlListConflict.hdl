@@ -1,0 +1,18 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLLISTCONFLICT_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLLISTCONFLICT_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlListConflict {
+
+static const ::sal_Int32 xlListConflictDialog = (sal_Int32)0;
+static const ::sal_Int32 xlListConflictDiscardAllConflicts = (sal_Int32)2;
+static const ::sal_Int32 xlListConflictError = (sal_Int32)3;
+static const ::sal_Int32 xlListConflictRetryAllConflicts = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLLISTCONFLICT_HDL

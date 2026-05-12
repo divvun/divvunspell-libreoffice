@@ -1,0 +1,58 @@
+#ifndef INCLUDED_COM_SUN_STAR_DOCUMENT_XDOCUMENTPROPERTIES2_HDL
+#define INCLUDED_COM_SUN_STAR_DOCUMENT_XDOCUMENTPROPERTIES2_HDL
+
+#include "sal/config.h"
+
+#include "com/sun/star/document/XDocumentProperties.hdl"
+#include "com/sun/star/uno/Reference.h"
+#include "com/sun/star/uno/Sequence.h"
+#include "cppu/macros.hxx"
+#include "rtl/ustring.hxx"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace com { namespace sun { namespace star { namespace document {
+
+class SAL_NO_VTABLE SAL_DLLPUBLIC_RTTI XDocumentProperties2 : public ::css::document::XDocumentProperties
+{
+public:
+#if defined LIBO_INTERNAL_ONLY
+    XDocumentProperties2() = default;
+    XDocumentProperties2(XDocumentProperties2 const &) = default;
+    XDocumentProperties2(XDocumentProperties2 &&) = default;
+    XDocumentProperties2 & operator =(XDocumentProperties2 const &) = default;
+    XDocumentProperties2 & operator =(XDocumentProperties2 &&) = default;
+#endif
+
+
+    // Attributes
+    virtual ::css::uno::Sequence< ::rtl::OUString > SAL_CALL getContributor() = 0;
+    virtual void SAL_CALL setContributor( const ::css::uno::Sequence< ::rtl::OUString >& _contributor ) = 0;
+    virtual ::rtl::OUString SAL_CALL getCoverage() = 0;
+    virtual void SAL_CALL setCoverage( const ::rtl::OUString& _coverage ) = 0;
+    virtual ::rtl::OUString SAL_CALL getIdentifier() = 0;
+    virtual void SAL_CALL setIdentifier( const ::rtl::OUString& _identifier ) = 0;
+    virtual ::css::uno::Sequence< ::rtl::OUString > SAL_CALL getPublisher() = 0;
+    virtual void SAL_CALL setPublisher( const ::css::uno::Sequence< ::rtl::OUString >& _publisher ) = 0;
+    virtual ::css::uno::Sequence< ::rtl::OUString > SAL_CALL getRelation() = 0;
+    virtual void SAL_CALL setRelation( const ::css::uno::Sequence< ::rtl::OUString >& _relation ) = 0;
+    virtual ::rtl::OUString SAL_CALL getRights() = 0;
+    virtual void SAL_CALL setRights( const ::rtl::OUString& _rights ) = 0;
+    virtual ::rtl::OUString SAL_CALL getSource() = 0;
+    virtual void SAL_CALL setSource( const ::rtl::OUString& _source ) = 0;
+    virtual ::rtl::OUString SAL_CALL getType() = 0;
+    virtual void SAL_CALL setType( const ::rtl::OUString& _type ) = 0;
+
+    static inline ::css::uno::Type const & SAL_CALL static_type(void * = 0);
+
+protected:
+    ~XDocumentProperties2() SAL_NOEXCEPT {} // avoid warnings about virtual members and non-virtual dtor
+};
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::css::document::XDocumentProperties2 const *);
+} } } }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::uno::Reference< ::css::document::XDocumentProperties2 > *);
+
+#endif

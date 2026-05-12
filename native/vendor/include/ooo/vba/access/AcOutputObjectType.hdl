@@ -1,0 +1,23 @@
+#ifndef INCLUDED_OOO_VBA_ACCESS_ACOUTPUTOBJECTTYPE_HDL
+#define INCLUDED_OOO_VBA_ACCESS_ACOUTPUTOBJECTTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace access { namespace AcOutputObjectType {
+
+static const ::sal_Int32 acOutputDataAccessPage = (sal_Int32)6;
+static const ::sal_Int32 acOutputForm = (sal_Int32)2;
+static const ::sal_Int32 acOutputFunction = (sal_Int32)10;
+static const ::sal_Int32 acOutputModule = (sal_Int32)5;
+static const ::sal_Int32 acOutputQuery = (sal_Int32)1;
+static const ::sal_Int32 acOutputReport = (sal_Int32)3;
+static const ::sal_Int32 acOutputServerView = (sal_Int32)7;
+static const ::sal_Int32 acOutputStoredProcedure = (sal_Int32)9;
+static const ::sal_Int32 acOutputTable = (sal_Int32)0;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_ACCESS_ACOUTPUTOBJECTTYPE_HDL

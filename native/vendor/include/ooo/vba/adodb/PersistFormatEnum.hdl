@@ -1,0 +1,16 @@
+#ifndef INCLUDED_OOO_VBA_ADODB_PERSISTFORMATENUM_HDL
+#define INCLUDED_OOO_VBA_ADODB_PERSISTFORMATENUM_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace adodb { namespace PersistFormatEnum {
+
+static const ::sal_Int32 adPersistADTG = (sal_Int32)0;
+static const ::sal_Int32 adPersistXML = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_ADODB_PERSISTFORMATENUM_HDL

@@ -1,0 +1,63 @@
+#ifndef INCLUDED_OOO_VBA_XFONTBASE_HDL
+#define INCLUDED_OOO_VBA_XFONTBASE_HDL
+
+#include "sal/config.h"
+
+#include "ooo/vba/XHelperInterface.hdl"
+#include "com/sun/star/uno/Any.h"
+#include "com/sun/star/uno/Reference.h"
+#include "cppu/macros.hxx"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace ooo { namespace vba {
+
+class SAL_NO_VTABLE SAL_DLLPUBLIC_RTTI XFontBase : public ::ooo::vba::XHelperInterface
+{
+public:
+#if defined LIBO_INTERNAL_ONLY
+    XFontBase() = default;
+    XFontBase(XFontBase const &) = default;
+    XFontBase(XFontBase &&) = default;
+    XFontBase & operator =(XFontBase const &) = default;
+    XFontBase & operator =(XFontBase &&) = default;
+#endif
+
+
+    // Attributes
+    virtual ::css::uno::Any SAL_CALL getSize() = 0;
+    virtual void SAL_CALL setSize( const ::css::uno::Any& _size ) = 0;
+    virtual ::css::uno::Any SAL_CALL getColorIndex() = 0;
+    virtual void SAL_CALL setColorIndex( const ::css::uno::Any& _colorindex ) = 0;
+    virtual ::css::uno::Any SAL_CALL getColor() = 0;
+    virtual void SAL_CALL setColor( const ::css::uno::Any& _color ) = 0;
+    virtual ::css::uno::Any SAL_CALL getBold() = 0;
+    virtual void SAL_CALL setBold( const ::css::uno::Any& _bold ) = 0;
+    virtual ::css::uno::Any SAL_CALL getUnderline() = 0;
+    virtual void SAL_CALL setUnderline( const ::css::uno::Any& _underline ) = 0;
+    virtual ::css::uno::Any SAL_CALL getStrikethrough() = 0;
+    virtual void SAL_CALL setStrikethrough( const ::css::uno::Any& _strikethrough ) = 0;
+    virtual ::css::uno::Any SAL_CALL getShadow() = 0;
+    virtual void SAL_CALL setShadow( const ::css::uno::Any& _shadow ) = 0;
+    virtual ::css::uno::Any SAL_CALL getItalic() = 0;
+    virtual void SAL_CALL setItalic( const ::css::uno::Any& _italic ) = 0;
+    virtual ::css::uno::Any SAL_CALL getSubscript() = 0;
+    virtual void SAL_CALL setSubscript( const ::css::uno::Any& _subscript ) = 0;
+    virtual ::css::uno::Any SAL_CALL getSuperscript() = 0;
+    virtual void SAL_CALL setSuperscript( const ::css::uno::Any& _superscript ) = 0;
+    virtual ::css::uno::Any SAL_CALL getName() = 0;
+    virtual void SAL_CALL setName( const ::css::uno::Any& _name ) = 0;
+
+    static inline ::css::uno::Type const & SAL_CALL static_type(void * = 0);
+
+protected:
+    ~XFontBase() SAL_NOEXCEPT {} // avoid warnings about virtual members and non-virtual dtor
+};
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::ooo::vba::XFontBase const *);
+} }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::uno::Reference< ::ooo::vba::XFontBase > *);
+
+#endif

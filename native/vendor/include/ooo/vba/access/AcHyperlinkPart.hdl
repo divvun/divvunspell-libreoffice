@@ -1,0 +1,20 @@
+#ifndef INCLUDED_OOO_VBA_ACCESS_ACHYPERLINKPART_HDL
+#define INCLUDED_OOO_VBA_ACCESS_ACHYPERLINKPART_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace access { namespace AcHyperlinkPart {
+
+static const ::sal_Int32 acAddress = (sal_Int32)2;
+static const ::sal_Int32 acDisplayText = (sal_Int32)1;
+static const ::sal_Int32 acDisplayedValue = (sal_Int32)0;
+static const ::sal_Int32 acFullAddress = (sal_Int32)5;
+static const ::sal_Int32 acScreenTip = (sal_Int32)4;
+static const ::sal_Int32 acSubAddress = (sal_Int32)3;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_ACCESS_ACHYPERLINKPART_HDL

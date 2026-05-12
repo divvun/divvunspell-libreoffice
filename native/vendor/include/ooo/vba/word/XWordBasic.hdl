@@ -1,0 +1,61 @@
+#ifndef INCLUDED_OOO_VBA_WORD_XWORDBASIC_HDL
+#define INCLUDED_OOO_VBA_WORD_XWORDBASIC_HDL
+
+#include "sal/config.h"
+
+#include "com/sun/star/uno/XInterface.hdl"
+#include "com/sun/star/uno/Any.h"
+#include "com/sun/star/uno/Reference.h"
+#include "cppu/macros.hxx"
+#include "rtl/ustring.hxx"
+#include "sal/types.h"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace ooo { namespace vba { namespace word {
+
+class SAL_NO_VTABLE SAL_DLLPUBLIC_RTTI XWordBasic : public ::css::uno::XInterface
+{
+public:
+#if defined LIBO_INTERNAL_ONLY
+    XWordBasic() = default;
+    XWordBasic(XWordBasic const &) = default;
+    XWordBasic(XWordBasic &&) = default;
+    XWordBasic & operator =(XWordBasic const &) = default;
+    XWordBasic & operator =(XWordBasic &&) = default;
+#endif
+
+
+    // Attributes
+    virtual ::sal_Int32 SAL_CALL getMailMergeMainDocumentType() = 0;
+    virtual void SAL_CALL setMailMergeMainDocumentType( ::sal_Int32 _mailmergemaindocumenttype ) = 0;
+
+    // Methods
+    virtual void SAL_CALL FileOpen( const ::rtl::OUString& Name, const ::css::uno::Any& ConfirmConversions, const ::css::uno::Any& ReadOnly, const ::css::uno::Any& AddToMru, const ::css::uno::Any& PasswordDoc, const ::css::uno::Any& PasswordDot, const ::css::uno::Any& Revert, const ::css::uno::Any& WritePasswordDoc, const ::css::uno::Any& WritePasswordDot ) = 0;
+    virtual void SAL_CALL FileSave() = 0;
+    virtual void SAL_CALL FileSaveAs( const ::css::uno::Any& Name, const ::css::uno::Any& Format, const ::css::uno::Any& LockAnnot, const ::css::uno::Any& Password, const ::css::uno::Any& AddToMru, const ::css::uno::Any& WritePassword, const ::css::uno::Any& RecommendReadOnly, const ::css::uno::Any& EmbedFonts, const ::css::uno::Any& NativePictureFormat, const ::css::uno::Any& FormsData, const ::css::uno::Any& SaveAsAOCELetter ) = 0;
+    virtual void SAL_CALL FileClose( const ::css::uno::Any& Save ) = 0;
+    virtual void SAL_CALL ToolsOptionsView( const ::css::uno::Any& DraftFont, const ::css::uno::Any& WrapToWindow, const ::css::uno::Any& PicturePlaceHolders, const ::css::uno::Any& FieldCodes, const ::css::uno::Any& BookMarks, const ::css::uno::Any& FieldShading, const ::css::uno::Any& StatusBar, const ::css::uno::Any& HScroll, const ::css::uno::Any& VScroll, const ::css::uno::Any& StyleAreaWidth, const ::css::uno::Any& Tabs, const ::css::uno::Any& Spaces, const ::css::uno::Any& Paras, const ::css::uno::Any& Hyphens, const ::css::uno::Any& Hidden, const ::css::uno::Any& ShowAll, const ::css::uno::Any& Drawings, const ::css::uno::Any& Anchors, const ::css::uno::Any& TextBoundaries, const ::css::uno::Any& VRuler, const ::css::uno::Any& Highlight ) = 0;
+    virtual ::css::uno::Any SAL_CALL WindowName( const ::css::uno::Any& Number ) = 0;
+    virtual ::css::uno::Any SAL_CALL ExistingBookmark( const ::rtl::OUString& Name ) = 0;
+    virtual void SAL_CALL MailMergeOpenDataSource( const ::rtl::OUString& Name, const ::css::uno::Any& Format, const ::css::uno::Any& ConfirmConversions, const ::css::uno::Any& ReadOnly, const ::css::uno::Any& LinkToSource, const ::css::uno::Any& AddToRecentFiles, const ::css::uno::Any& PasswordDocument, const ::css::uno::Any& PasswordTemplate, const ::css::uno::Any& Revert, const ::css::uno::Any& WritePasswordDocument, const ::css::uno::Any& WritePasswordTemplate, const ::css::uno::Any& Connection, const ::css::uno::Any& SQLStatement, const ::css::uno::Any& SQLStatement1, const ::css::uno::Any& OpenExclusive, const ::css::uno::Any& SubType ) = 0;
+    virtual ::css::uno::Any SAL_CALL AppMaximize( const ::css::uno::Any& WindowName, const ::css::uno::Any& State ) = 0;
+    virtual ::css::uno::Any SAL_CALL DocMaximize( const ::css::uno::Any& State ) = 0;
+    virtual void SAL_CALL AppShow( const ::css::uno::Any& WindowName ) = 0;
+    virtual ::css::uno::Any SAL_CALL AppCount() = 0;
+    virtual void SAL_CALL MsgBox( const ::rtl::OUString& Prompt ) = 0;
+    virtual void SAL_CALL ScreenUpdating( const ::css::uno::Any& On ) = 0;
+
+    static inline ::css::uno::Type const & SAL_CALL static_type(void * = 0);
+
+protected:
+    ~XWordBasic() SAL_NOEXCEPT {} // avoid warnings about virtual members and non-virtual dtor
+};
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::ooo::vba::word::XWordBasic const *);
+} } }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::uno::Reference< ::ooo::vba::word::XWordBasic > *);
+
+#endif

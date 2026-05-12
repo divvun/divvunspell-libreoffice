@@ -1,0 +1,57 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XHYPERLINK_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XHYPERLINK_HDL
+
+#include "sal/config.h"
+
+#include "ooo/vba/XHelperInterface.hdl"
+namespace ooo { namespace vba { namespace excel { class XRange; } } }
+namespace ooo { namespace vba { namespace msforms { class XShape; } } }
+#include "com/sun/star/uno/Reference.h"
+#include "cppu/macros.hxx"
+#include "rtl/ustring.hxx"
+#include "sal/types.h"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace ooo { namespace vba { namespace excel {
+
+class SAL_NO_VTABLE SAL_DLLPUBLIC_RTTI XHyperlink : public ::ooo::vba::XHelperInterface
+{
+public:
+#if defined LIBO_INTERNAL_ONLY
+    XHyperlink() = default;
+    XHyperlink(XHyperlink const &) = default;
+    XHyperlink(XHyperlink &&) = default;
+    XHyperlink & operator =(XHyperlink const &) = default;
+    XHyperlink & operator =(XHyperlink &&) = default;
+#endif
+
+
+    // Attributes
+    virtual ::rtl::OUString SAL_CALL getName() = 0;
+    virtual void SAL_CALL setName( const ::rtl::OUString& _name ) = 0;
+    virtual ::rtl::OUString SAL_CALL getAddress() = 0;
+    virtual void SAL_CALL setAddress( const ::rtl::OUString& _address ) = 0;
+    virtual ::rtl::OUString SAL_CALL getSubAddress() = 0;
+    virtual void SAL_CALL setSubAddress( const ::rtl::OUString& _subaddress ) = 0;
+    virtual ::rtl::OUString SAL_CALL getScreenTip() = 0;
+    virtual void SAL_CALL setScreenTip( const ::rtl::OUString& _screentip ) = 0;
+    virtual ::rtl::OUString SAL_CALL getTextToDisplay() = 0;
+    virtual void SAL_CALL setTextToDisplay( const ::rtl::OUString& _texttodisplay ) = 0;
+    virtual ::sal_Int32 SAL_CALL getType() = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::excel::XRange > SAL_CALL getRange() = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::msforms::XShape > SAL_CALL getShape() = 0;
+
+    static inline ::css::uno::Type const & SAL_CALL static_type(void * = 0);
+
+protected:
+    ~XHyperlink() SAL_NOEXCEPT {} // avoid warnings about virtual members and non-virtual dtor
+};
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::ooo::vba::excel::XHyperlink const *);
+} } }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::uno::Reference< ::ooo::vba::excel::XHyperlink > *);
+
+#endif

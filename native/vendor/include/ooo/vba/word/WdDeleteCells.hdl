@@ -1,0 +1,18 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDDELETECELLS_HDL
+#define INCLUDED_OOO_VBA_WORD_WDDELETECELLS_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdDeleteCells {
+
+static const ::sal_Int32 wdDeleteCellsEntireColumn = (sal_Int32)3;
+static const ::sal_Int32 wdDeleteCellsEntireRow = (sal_Int32)2;
+static const ::sal_Int32 wdDeleteCellsShiftLeft = (sal_Int32)0;
+static const ::sal_Int32 wdDeleteCellsShiftUp = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDDELETECELLS_HDL

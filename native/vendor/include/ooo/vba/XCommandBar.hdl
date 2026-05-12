@@ -1,0 +1,55 @@
+#ifndef INCLUDED_OOO_VBA_XCOMMANDBAR_HDL
+#define INCLUDED_OOO_VBA_XCOMMANDBAR_HDL
+
+#include "sal/config.h"
+
+#include "ooo/vba/XHelperInterface.hdl"
+#include "com/sun/star/uno/Any.h"
+#include "com/sun/star/uno/Reference.h"
+#include "cppu/macros.hxx"
+#include "rtl/ustring.hxx"
+#include "sal/types.h"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace ooo { namespace vba {
+
+class SAL_NO_VTABLE SAL_DLLPUBLIC_RTTI XCommandBar : public ::ooo::vba::XHelperInterface
+{
+public:
+#if defined LIBO_INTERNAL_ONLY
+    XCommandBar() = default;
+    XCommandBar(XCommandBar const &) = default;
+    XCommandBar(XCommandBar &&) = default;
+    XCommandBar & operator =(XCommandBar const &) = default;
+    XCommandBar & operator =(XCommandBar &&) = default;
+#endif
+
+
+    // Attributes
+    virtual ::rtl::OUString SAL_CALL getName() = 0;
+    virtual void SAL_CALL setName( const ::rtl::OUString& _name ) = 0;
+    virtual ::sal_Bool SAL_CALL getVisible() = 0;
+    virtual void SAL_CALL setVisible( ::sal_Bool _visible ) = 0;
+    virtual ::sal_Bool SAL_CALL getEnabled() = 0;
+    virtual void SAL_CALL setEnabled( ::sal_Bool _enabled ) = 0;
+
+    // Methods
+    virtual void SAL_CALL Delete() = 0;
+    virtual ::css::uno::Any SAL_CALL Controls( const ::css::uno::Any& Index ) = 0;
+    virtual ::sal_Int32 SAL_CALL Type() = 0;
+    virtual ::css::uno::Any SAL_CALL FindControl( const ::css::uno::Any& Type, const ::css::uno::Any& Id, const ::css::uno::Any& Tag, const ::css::uno::Any& Visible, const ::css::uno::Any& Recursive ) = 0;
+
+    static inline ::css::uno::Type const & SAL_CALL static_type(void * = 0);
+
+protected:
+    ~XCommandBar() SAL_NOEXCEPT {} // avoid warnings about virtual members and non-virtual dtor
+};
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::ooo::vba::XCommandBar const *);
+} }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::uno::Reference< ::ooo::vba::XCommandBar > *);
+
+#endif

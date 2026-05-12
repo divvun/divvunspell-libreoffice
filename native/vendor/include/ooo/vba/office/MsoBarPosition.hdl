@@ -1,0 +1,21 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOBARPOSITION_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOBARPOSITION_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoBarPosition {
+
+static const ::sal_Int32 msoBarBottom = (sal_Int32)3;
+static const ::sal_Int32 msoBarFloating = (sal_Int32)4;
+static const ::sal_Int32 msoBarLeft = (sal_Int32)0;
+static const ::sal_Int32 msoBarMenuBar = (sal_Int32)6;
+static const ::sal_Int32 msoBarPopup = (sal_Int32)5;
+static const ::sal_Int32 msoBarRight = (sal_Int32)2;
+static const ::sal_Int32 msoBarTop = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOBARPOSITION_HDL

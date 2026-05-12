@@ -1,0 +1,6 @@
+#ifndef INCLUDED_OOO_VBA_VBQUERYCLOSE_HPP
+#define INCLUDED_OOO_VBA_VBQUERYCLOSE_HPP
+
+#include "ooo/vba/VbQueryClose.hdl"
+
+#endif // INCLUDED_OOO_VBA_VBQUERYCLOSE_HPP

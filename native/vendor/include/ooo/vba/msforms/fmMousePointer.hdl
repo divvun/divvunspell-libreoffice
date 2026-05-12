@@ -1,0 +1,29 @@
+#ifndef INCLUDED_OOO_VBA_MSFORMS_FMMOUSEPOINTER_HDL
+#define INCLUDED_OOO_VBA_MSFORMS_FMMOUSEPOINTER_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace msforms { namespace fmMousePointer {
+
+static const ::sal_Int32 fmMousePointerAppStarting = (sal_Int32)13;
+static const ::sal_Int32 fmMousePointerArrow = (sal_Int32)1;
+static const ::sal_Int32 fmMousePointerCross = (sal_Int32)2;
+static const ::sal_Int32 fmMousePointerCustom = (sal_Int32)99;
+static const ::sal_Int32 fmMousePointerDefault = (sal_Int32)0;
+static const ::sal_Int32 fmMousePointerHelp = (sal_Int32)14;
+static const ::sal_Int32 fmMousePointerHourGlass = (sal_Int32)11;
+static const ::sal_Int32 fmMousePointerIBeam = (sal_Int32)3;
+static const ::sal_Int32 fmMousePointerNoDrop = (sal_Int32)12;
+static const ::sal_Int32 fmMousePointerSizeAll = (sal_Int32)15;
+static const ::sal_Int32 fmMousePointerSizeNESW = (sal_Int32)6;
+static const ::sal_Int32 fmMousePointerSizeNS = (sal_Int32)7;
+static const ::sal_Int32 fmMousePointerSizeNWSE = (sal_Int32)8;
+static const ::sal_Int32 fmMousePointerSizeWE = (sal_Int32)9;
+static const ::sal_Int32 fmMousePointerUpArrow = (sal_Int32)10;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_MSFORMS_FMMOUSEPOINTER_HDL

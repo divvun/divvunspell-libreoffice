@@ -1,0 +1,15 @@
+#ifndef INCLUDED_OOO_VBA_DAO_COMMITTRANSOPTIONSENUM_HDL
+#define INCLUDED_OOO_VBA_DAO_COMMITTRANSOPTIONSENUM_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace dao { namespace CommitTransOptionsEnum {
+
+static const ::sal_Int32 dbForceOSFlush = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_DAO_COMMITTRANSOPTIONSENUM_HDL

@@ -1,0 +1,21 @@
+#ifndef INCLUDED_OOO_VBA_DAO_RELATIONATTRIBUTEENUM_HDL
+#define INCLUDED_OOO_VBA_DAO_RELATIONATTRIBUTEENUM_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace dao { namespace RelationAttributeEnum {
+
+static const ::sal_Int32 dbRelationDeleteCascade = (sal_Int32)4096;
+static const ::sal_Int32 dbRelationDontEnforce = (sal_Int32)2;
+static const ::sal_Int32 dbRelationInherited = (sal_Int32)4;
+static const ::sal_Int32 dbRelationLeft = (sal_Int32)16777216;
+static const ::sal_Int32 dbRelationRight = (sal_Int32)33554432;
+static const ::sal_Int32 dbRelationUnique = (sal_Int32)1;
+static const ::sal_Int32 dbRelationUpdateCascade = (sal_Int32)256;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_DAO_RELATIONATTRIBUTEENUM_HDL

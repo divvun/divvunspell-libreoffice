@@ -1,0 +1,20 @@
+#ifndef INCLUDED_OOO_VBA_ADODB_CERESYNCENUM_HDL
+#define INCLUDED_OOO_VBA_ADODB_CERESYNCENUM_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace adodb { namespace CEResyncEnum {
+
+static const ::sal_Int32 adResyncAll = (sal_Int32)15;
+static const ::sal_Int32 adResyncAutoIncrement = (sal_Int32)1;
+static const ::sal_Int32 adResyncConflicts = (sal_Int32)2;
+static const ::sal_Int32 adResyncInserts = (sal_Int32)8;
+static const ::sal_Int32 adResyncNone = (sal_Int32)0;
+static const ::sal_Int32 adResyncUpdates = (sal_Int32)4;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_ADODB_CERESYNCENUM_HDL

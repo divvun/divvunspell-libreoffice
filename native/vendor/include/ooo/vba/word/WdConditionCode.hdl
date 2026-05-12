@@ -1,0 +1,26 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDCONDITIONCODE_HDL
+#define INCLUDED_OOO_VBA_WORD_WDCONDITIONCODE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdConditionCode {
+
+static const ::sal_Int32 wdEvenColumnBanding = (sal_Int32)7;
+static const ::sal_Int32 wdEvenRowBanding = (sal_Int32)3;
+static const ::sal_Int32 wdFirstColumn = (sal_Int32)4;
+static const ::sal_Int32 wdFirstRow = (sal_Int32)0;
+static const ::sal_Int32 wdLastColumn = (sal_Int32)5;
+static const ::sal_Int32 wdLastRow = (sal_Int32)1;
+static const ::sal_Int32 wdNECell = (sal_Int32)8;
+static const ::sal_Int32 wdNWCell = (sal_Int32)9;
+static const ::sal_Int32 wdOddColumnBanding = (sal_Int32)6;
+static const ::sal_Int32 wdOddRowBanding = (sal_Int32)2;
+static const ::sal_Int32 wdSECell = (sal_Int32)10;
+static const ::sal_Int32 wdSWCell = (sal_Int32)11;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDCONDITIONCODE_HDL

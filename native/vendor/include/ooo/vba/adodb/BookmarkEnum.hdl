@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_ADODB_BOOKMARKENUM_HDL
+#define INCLUDED_OOO_VBA_ADODB_BOOKMARKENUM_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace adodb { namespace BookmarkEnum {
+
+static const ::sal_Int32 adBookmarkCurrent = (sal_Int32)0;
+static const ::sal_Int32 adBookmarkFirst = (sal_Int32)1;
+static const ::sal_Int32 adBookmarkLast = (sal_Int32)2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_ADODB_BOOKMARKENUM_HDL

@@ -1,0 +1,16 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDROUTINGSLIPDELIVERY_HDL
+#define INCLUDED_OOO_VBA_WORD_WDROUTINGSLIPDELIVERY_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdRoutingSlipDelivery {
+
+static const ::sal_Int32 wdAllAtOnce = (sal_Int32)1;
+static const ::sal_Int32 wdOneAfterAnother = (sal_Int32)0;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDROUTINGSLIPDELIVERY_HDL

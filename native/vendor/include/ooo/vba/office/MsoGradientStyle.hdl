@@ -1,0 +1,22 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOGRADIENTSTYLE_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOGRADIENTSTYLE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoGradientStyle {
+
+static const ::sal_Int32 msoGradientDiagonalDown = (sal_Int32)4;
+static const ::sal_Int32 msoGradientDiagonalUp = (sal_Int32)3;
+static const ::sal_Int32 msoGradientFromCenter = (sal_Int32)7;
+static const ::sal_Int32 msoGradientFromCorner = (sal_Int32)5;
+static const ::sal_Int32 msoGradientFromTitle = (sal_Int32)6;
+static const ::sal_Int32 msoGradientHorizontal = (sal_Int32)1;
+static const ::sal_Int32 msoGradientMixed = (sal_Int32)-2;
+static const ::sal_Int32 msoGradientVertical = (sal_Int32)2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOGRADIENTSTYLE_HDL

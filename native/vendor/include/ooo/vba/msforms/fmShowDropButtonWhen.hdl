@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_MSFORMS_FMSHOWDROPBUTTONWHEN_HDL
+#define INCLUDED_OOO_VBA_MSFORMS_FMSHOWDROPBUTTONWHEN_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace msforms { namespace fmShowDropButtonWhen {
+
+static const ::sal_Int32 fmShowDropButtonWhenAlways = (sal_Int32)2;
+static const ::sal_Int32 fmShowDropButtonWhenFocus = (sal_Int32)1;
+static const ::sal_Int32 fmShowDropButtonWhenNever = (sal_Int32)0;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_MSFORMS_FMSHOWDROPBUTTONWHEN_HDL

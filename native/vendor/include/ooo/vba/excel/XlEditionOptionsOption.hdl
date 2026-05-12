@@ -1,0 +1,22 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLEDITIONOPTIONSOPTION_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLEDITIONOPTIONSOPTION_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlEditionOptionsOption {
+
+static const ::sal_Int32 xlAutomaticUpdate = (sal_Int32)4;
+static const ::sal_Int32 xlCancel = (sal_Int32)1;
+static const ::sal_Int32 xlChangeAttributes = (sal_Int32)6;
+static const ::sal_Int32 xlManualUpdate = (sal_Int32)5;
+static const ::sal_Int32 xlOpenSource = (sal_Int32)3;
+static const ::sal_Int32 xlSelect = (sal_Int32)3;
+static const ::sal_Int32 xlSendPublisher = (sal_Int32)2;
+static const ::sal_Int32 xlUpdateSubscriber = (sal_Int32)2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLEDITIONOPTIONSOPTION_HDL

@@ -1,0 +1,61 @@
+#ifndef INCLUDED_OOO_VBA_MSFORMS_XLISTBOX_HDL
+#define INCLUDED_OOO_VBA_MSFORMS_XLISTBOX_HDL
+
+#include "sal/config.h"
+
+#include "com/sun/star/uno/XInterface.hdl"
+namespace ooo { namespace vba { namespace msforms { class XNewFont; } } }
+#include "com/sun/star/uno/Any.h"
+#include "com/sun/star/uno/Reference.h"
+#include "cppu/macros.hxx"
+#include "rtl/ustring.hxx"
+#include "sal/types.h"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace ooo { namespace vba { namespace msforms {
+
+class SAL_NO_VTABLE SAL_DLLPUBLIC_RTTI XListBox : public ::css::uno::XInterface
+{
+public:
+#if defined LIBO_INTERNAL_ONLY
+    XListBox() = default;
+    XListBox(XListBox const &) = default;
+    XListBox(XListBox &&) = default;
+    XListBox & operator =(XListBox const &) = default;
+    XListBox & operator =(XListBox &&) = default;
+#endif
+
+
+    // Attributes
+    virtual ::css::uno::Any SAL_CALL getValue() = 0;
+    virtual void SAL_CALL setValue( const ::css::uno::Any& _value ) = 0;
+    virtual ::rtl::OUString SAL_CALL getText() = 0;
+    virtual void SAL_CALL setText( const ::rtl::OUString& _text ) = 0;
+    virtual ::sal_Int32 SAL_CALL getMultiSelect() = 0;
+    virtual void SAL_CALL setMultiSelect( ::sal_Int32 _multiselect ) = 0;
+    virtual ::css::uno::Any SAL_CALL getListIndex() = 0;
+    virtual void SAL_CALL setListIndex( const ::css::uno::Any& _listindex ) = 0;
+    virtual ::sal_Int32 SAL_CALL getListCount() = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::msforms::XNewFont > SAL_CALL getFont() = 0;
+
+    // Methods
+    virtual void SAL_CALL AddItem( const ::css::uno::Any& pvargItem, const ::css::uno::Any& pvargIndex ) = 0;
+    virtual void SAL_CALL removeItem( const ::css::uno::Any& index ) = 0;
+    virtual void SAL_CALL Clear() = 0;
+    virtual ::css::uno::Any SAL_CALL Selected( ::sal_Int32 index ) = 0;
+    virtual ::css::uno::Any SAL_CALL List( const ::css::uno::Any& pvargIndex, const ::css::uno::Any& pvarColumn ) = 0;
+
+    static inline ::css::uno::Type const & SAL_CALL static_type(void * = 0);
+
+protected:
+    ~XListBox() SAL_NOEXCEPT {} // avoid warnings about virtual members and non-virtual dtor
+};
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::ooo::vba::msforms::XListBox const *);
+} } }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::uno::Reference< ::ooo::vba::msforms::XListBox > *);
+
+#endif

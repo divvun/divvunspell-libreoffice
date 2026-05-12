@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLPIVOTFIELDDATATYPE_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLPIVOTFIELDDATATYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlPivotFieldDataType {
+
+static const ::sal_Int32 xlDate = (sal_Int32)2;
+static const ::sal_Int32 xlNumber = (sal_Int32)-4145;
+static const ::sal_Int32 xlText = (sal_Int32)-4158;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLPIVOTFIELDDATATYPE_HDL

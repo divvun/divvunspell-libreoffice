@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLTEXTQUALIFIER_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLTEXTQUALIFIER_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlTextQualifier {
+
+static const ::sal_Int32 xlTextQualifierDoubleQuote = (sal_Int32)1;
+static const ::sal_Int32 xlTextQualifierNone = (sal_Int32)-4142;
+static const ::sal_Int32 xlTextQualifierSingleQuote = (sal_Int32)2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLTEXTQUALIFIER_HDL

@@ -1,0 +1,18 @@
+#ifndef INCLUDED_OOO_VBA_DAO_LOCKTYPEENUM_HDL
+#define INCLUDED_OOO_VBA_DAO_LOCKTYPEENUM_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace dao { namespace LockTypeEnum {
+
+static const ::sal_Int32 dbOptimistic = (sal_Int32)3;
+static const ::sal_Int32 dbOptimisticBatch = (sal_Int32)5;
+static const ::sal_Int32 dbOptimisticValue = (sal_Int32)1;
+static const ::sal_Int32 dbPessimistic = (sal_Int32)2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_DAO_LOCKTYPEENUM_HDL

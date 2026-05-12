@@ -1,0 +1,22 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDCALENDARTYPE_HDL
+#define INCLUDED_OOO_VBA_WORD_WDCALENDARTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdCalendarType {
+
+static const ::sal_Int32 wdCalendarArabic = (sal_Int32)1;
+static const ::sal_Int32 wdCalendarChina = (sal_Int32)3;
+static const ::sal_Int32 wdCalendarHebrew = (sal_Int32)2;
+static const ::sal_Int32 wdCalendarJapan = (sal_Int32)4;
+static const ::sal_Int32 wdCalendarKorean = (sal_Int32)6;
+static const ::sal_Int32 wdCalendarSakaEra = (sal_Int32)7;
+static const ::sal_Int32 wdCalendarThai = (sal_Int32)5;
+static const ::sal_Int32 wdCalendarWestern = (sal_Int32)0;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDCALENDARTYPE_HDL

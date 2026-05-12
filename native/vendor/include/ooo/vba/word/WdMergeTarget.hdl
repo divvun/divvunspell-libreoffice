@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDMERGETARGET_HDL
+#define INCLUDED_OOO_VBA_WORD_WDMERGETARGET_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdMergeTarget {
+
+static const ::sal_Int32 wdMergeTargetCurrent = (sal_Int32)1;
+static const ::sal_Int32 wdMergeTargetNew = (sal_Int32)2;
+static const ::sal_Int32 wdMergeTargetSelected = (sal_Int32)0;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDMERGETARGET_HDL

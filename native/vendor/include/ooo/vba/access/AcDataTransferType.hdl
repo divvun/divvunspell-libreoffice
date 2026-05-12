@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_ACCESS_ACDATATRANSFERTYPE_HDL
+#define INCLUDED_OOO_VBA_ACCESS_ACDATATRANSFERTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace access { namespace AcDataTransferType {
+
+static const ::sal_Int32 acExport = (sal_Int32)1;
+static const ::sal_Int32 acImport = (sal_Int32)0;
+static const ::sal_Int32 acLink = (sal_Int32)2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_ACCESS_ACDATATRANSFERTYPE_HDL

@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_ACCESS_ACSHOWTOOLBAR_HDL
+#define INCLUDED_OOO_VBA_ACCESS_ACSHOWTOOLBAR_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace access { namespace AcShowToolbar {
+
+static const ::sal_Int32 acToolbarNo = (sal_Int32)2;
+static const ::sal_Int32 acToolbarWhereApprop = (sal_Int32)1;
+static const ::sal_Int32 acToolbarYes = (sal_Int32)0;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_ACCESS_ACSHOWTOOLBAR_HDL

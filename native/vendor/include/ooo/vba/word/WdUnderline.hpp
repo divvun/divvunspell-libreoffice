@@ -1,0 +1,6 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDUNDERLINE_HPP
+#define INCLUDED_OOO_VBA_WORD_WDUNDERLINE_HPP
+
+#include "ooo/vba/word/WdUnderline.hdl"
+
+#endif // INCLUDED_OOO_VBA_WORD_WDUNDERLINE_HPP

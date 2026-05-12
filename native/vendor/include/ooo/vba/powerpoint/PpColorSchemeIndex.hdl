@@ -1,0 +1,24 @@
+#ifndef INCLUDED_OOO_VBA_POWERPOINT_PPCOLORSCHEMEINDEX_HDL
+#define INCLUDED_OOO_VBA_POWERPOINT_PPCOLORSCHEMEINDEX_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace powerpoint { namespace PpColorSchemeIndex {
+
+static const ::sal_Int32 ppAccent1 = (sal_Int32)6;
+static const ::sal_Int32 ppAccent2 = (sal_Int32)7;
+static const ::sal_Int32 ppAccent3 = (sal_Int32)8;
+static const ::sal_Int32 ppBackground = (sal_Int32)1;
+static const ::sal_Int32 ppFill = (sal_Int32)5;
+static const ::sal_Int32 ppForeground = (sal_Int32)2;
+static const ::sal_Int32 ppNotSchemeColor = (sal_Int32)0;
+static const ::sal_Int32 ppSchemeColorMixed = (sal_Int32)-2;
+static const ::sal_Int32 ppShadow = (sal_Int32)3;
+static const ::sal_Int32 ppTitle = (sal_Int32)4;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_POWERPOINT_PPCOLORSCHEMEINDEX_HDL

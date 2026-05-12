@@ -1,0 +1,35 @@
+#ifndef INCLUDED_OOO_VBA_ADODB_ERRORVALUEENUM_HDL
+#define INCLUDED_OOO_VBA_ADODB_ERRORVALUEENUM_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace adodb { namespace ErrorValueEnum {
+
+static const ::sal_Int32 adErrBoundToCommand = (sal_Int32)3707;
+static const ::sal_Int32 adErrDataConversion = (sal_Int32)3421;
+static const ::sal_Int32 adErrFeatureNotAvailable = (sal_Int32)3251;
+static const ::sal_Int32 adErrIllegalOperation = (sal_Int32)3219;
+static const ::sal_Int32 adErrInTransaction = (sal_Int32)3246;
+static const ::sal_Int32 adErrInvalidArgument = (sal_Int32)3001;
+static const ::sal_Int32 adErrInvalidConnection = (sal_Int32)3709;
+static const ::sal_Int32 adErrInvalidParamInfo = (sal_Int32)3708;
+static const ::sal_Int32 adErrItemNotFound = (sal_Int32)3265;
+static const ::sal_Int32 adErrNoCurrentRecord = (sal_Int32)3021;
+static const ::sal_Int32 adErrNotExecuting = (sal_Int32)3715;
+static const ::sal_Int32 adErrNotReentrant = (sal_Int32)3710;
+static const ::sal_Int32 adErrObjectClosed = (sal_Int32)3704;
+static const ::sal_Int32 adErrObjectInCollection = (sal_Int32)3367;
+static const ::sal_Int32 adErrObjectNotSet = (sal_Int32)3420;
+static const ::sal_Int32 adErrObjectOpen = (sal_Int32)3705;
+static const ::sal_Int32 adErrOperationCancelled = (sal_Int32)3712;
+static const ::sal_Int32 adErrProviderNotFound = (sal_Int32)3706;
+static const ::sal_Int32 adErrStillConnecting = (sal_Int32)3713;
+static const ::sal_Int32 adErrStillExecuting = (sal_Int32)3711;
+static const ::sal_Int32 adErrUnsafeOperation = (sal_Int32)3716;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_ADODB_ERRORVALUEENUM_HDL

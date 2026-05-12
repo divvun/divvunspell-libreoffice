@@ -1,0 +1,16 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLCOPYPICTUREFORMAT_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLCOPYPICTUREFORMAT_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlCopyPictureFormat {
+
+static const ::sal_Int32 xlBitmap = (sal_Int32)2;
+static const ::sal_Int32 xlPicture = (sal_Int32)-4147;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLCOPYPICTUREFORMAT_HDL

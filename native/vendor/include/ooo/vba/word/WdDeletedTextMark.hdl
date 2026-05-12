@@ -1,0 +1,24 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDDELETEDTEXTMARK_HDL
+#define INCLUDED_OOO_VBA_WORD_WDDELETEDTEXTMARK_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdDeletedTextMark {
+
+static const ::sal_Int32 wdDeletedTextMarkBold = (sal_Int32)5;
+static const ::sal_Int32 wdDeletedTextMarkCaret = (sal_Int32)2;
+static const ::sal_Int32 wdDeletedTextMarkColorOnly = (sal_Int32)9;
+static const ::sal_Int32 wdDeletedTextMarkDoubleUnderline = (sal_Int32)8;
+static const ::sal_Int32 wdDeletedTextMarkHidden = (sal_Int32)0;
+static const ::sal_Int32 wdDeletedTextMarkItalic = (sal_Int32)6;
+static const ::sal_Int32 wdDeletedTextMarkNone = (sal_Int32)4;
+static const ::sal_Int32 wdDeletedTextMarkPound = (sal_Int32)3;
+static const ::sal_Int32 wdDeletedTextMarkStrikeThrough = (sal_Int32)1;
+static const ::sal_Int32 wdDeletedTextMarkUnderline = (sal_Int32)7;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDDELETEDTEXTMARK_HDL

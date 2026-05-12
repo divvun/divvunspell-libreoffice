@@ -1,0 +1,21 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDINDEXFILTER_HDL
+#define INCLUDED_OOO_VBA_WORD_WDINDEXFILTER_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdIndexFilter {
+
+static const ::sal_Int32 wdIndexFilterAiueo = (sal_Int32)1;
+static const ::sal_Int32 wdIndexFilterAkasatana = (sal_Int32)2;
+static const ::sal_Int32 wdIndexFilterChosung = (sal_Int32)3;
+static const ::sal_Int32 wdIndexFilterFull = (sal_Int32)6;
+static const ::sal_Int32 wdIndexFilterLow = (sal_Int32)4;
+static const ::sal_Int32 wdIndexFilterMedium = (sal_Int32)5;
+static const ::sal_Int32 wdIndexFilterNone = (sal_Int32)0;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDINDEXFILTER_HDL

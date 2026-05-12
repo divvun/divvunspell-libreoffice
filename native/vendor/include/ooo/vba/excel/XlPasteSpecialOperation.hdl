@@ -1,0 +1,19 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLPASTESPECIALOPERATION_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLPASTESPECIALOPERATION_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlPasteSpecialOperation {
+
+static const ::sal_Int32 xlPasteSpecialOperationAdd = (sal_Int32)2;
+static const ::sal_Int32 xlPasteSpecialOperationDivide = (sal_Int32)5;
+static const ::sal_Int32 xlPasteSpecialOperationMultiply = (sal_Int32)4;
+static const ::sal_Int32 xlPasteSpecialOperationNone = (sal_Int32)-4142;
+static const ::sal_Int32 xlPasteSpecialOperationSubtract = (sal_Int32)3;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLPASTESPECIALOPERATION_HDL

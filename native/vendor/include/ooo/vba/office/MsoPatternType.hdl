@@ -1,0 +1,63 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOPATTERNTYPE_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOPATTERNTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoPatternType {
+
+static const ::sal_Int32 msoPattern10Percent = (sal_Int32)2;
+static const ::sal_Int32 msoPattern20Percent = (sal_Int32)3;
+static const ::sal_Int32 msoPattern25Percent = (sal_Int32)4;
+static const ::sal_Int32 msoPattern30Percent = (sal_Int32)5;
+static const ::sal_Int32 msoPattern40Percent = (sal_Int32)6;
+static const ::sal_Int32 msoPattern50Percent = (sal_Int32)7;
+static const ::sal_Int32 msoPattern5Percent = (sal_Int32)1;
+static const ::sal_Int32 msoPattern60Percent = (sal_Int32)8;
+static const ::sal_Int32 msoPattern70Percent = (sal_Int32)9;
+static const ::sal_Int32 msoPattern75Percent = (sal_Int32)10;
+static const ::sal_Int32 msoPattern80Percent = (sal_Int32)11;
+static const ::sal_Int32 msoPattern90Percent = (sal_Int32)12;
+static const ::sal_Int32 msoPatternDarkDownwardDiagonal = (sal_Int32)15;
+static const ::sal_Int32 msoPatternDarkHorizontal = (sal_Int32)13;
+static const ::sal_Int32 msoPatternDarkUpwardDiagonal = (sal_Int32)16;
+static const ::sal_Int32 msoPatternDarkVertical = (sal_Int32)14;
+static const ::sal_Int32 msoPatternDashedDownwardDiagonal = (sal_Int32)28;
+static const ::sal_Int32 msoPatternDashedHorizontal = (sal_Int32)32;
+static const ::sal_Int32 msoPatternDashedUpwardDiagonal = (sal_Int32)27;
+static const ::sal_Int32 msoPatternDashedVertical = (sal_Int32)31;
+static const ::sal_Int32 msoPatternDiagonalBrick = (sal_Int32)40;
+static const ::sal_Int32 msoPatternDivot = (sal_Int32)46;
+static const ::sal_Int32 msoPatternDottedDiamond = (sal_Int32)24;
+static const ::sal_Int32 msoPatternDottedGrid = (sal_Int32)45;
+static const ::sal_Int32 msoPatternHorizontalBrick = (sal_Int32)35;
+static const ::sal_Int32 msoPatternLargeCheckerBoard = (sal_Int32)36;
+static const ::sal_Int32 msoPatternLargeConfetti = (sal_Int32)33;
+static const ::sal_Int32 msoPatternLargeGrid = (sal_Int32)34;
+static const ::sal_Int32 msoPatternLightDownwardDiagonal = (sal_Int32)21;
+static const ::sal_Int32 msoPatternLightHorizontal = (sal_Int32)19;
+static const ::sal_Int32 msoPatternLightUpwardDiagonal = (sal_Int32)22;
+static const ::sal_Int32 msoPatternLightVertical = (sal_Int32)20;
+static const ::sal_Int32 msoPatternMixed = (sal_Int32)-2;
+static const ::sal_Int32 msoPatternNarrowHorizontal = (sal_Int32)30;
+static const ::sal_Int32 msoPatternNarrowVertical = (sal_Int32)29;
+static const ::sal_Int32 msoPatternOutlinedDiamond = (sal_Int32)41;
+static const ::sal_Int32 msoPatternPlaid = (sal_Int32)42;
+static const ::sal_Int32 msoPatternShingle = (sal_Int32)47;
+static const ::sal_Int32 msoPatternSmallCheckerBoard = (sal_Int32)17;
+static const ::sal_Int32 msoPatternSmallConfetti = (sal_Int32)37;
+static const ::sal_Int32 msoPatternSmallGrid = (sal_Int32)23;
+static const ::sal_Int32 msoPatternSolidDiamond = (sal_Int32)39;
+static const ::sal_Int32 msoPatternSphere = (sal_Int32)43;
+static const ::sal_Int32 msoPatternTrellis = (sal_Int32)18;
+static const ::sal_Int32 msoPatternWave = (sal_Int32)48;
+static const ::sal_Int32 msoPatternWeave = (sal_Int32)44;
+static const ::sal_Int32 msoPatternWideDownwardDiagonal = (sal_Int32)25;
+static const ::sal_Int32 msoPatternWideUpwardDiagonal = (sal_Int32)26;
+static const ::sal_Int32 msoPatternZigZag = (sal_Int32)38;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOPATTERNTYPE_HDL

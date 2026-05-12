@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOEXTRUSIONCOLORTYPE_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOEXTRUSIONCOLORTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoExtrusionColorType {
+
+static const ::sal_Int32 msoExtrusionColorAutomatic = (sal_Int32)1;
+static const ::sal_Int32 msoExtrusionColorCustom = (sal_Int32)2;
+static const ::sal_Int32 msoExtrusionColorTypeMixed = (sal_Int32)-2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOEXTRUSIONCOLORTYPE_HDL

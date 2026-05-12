@@ -1,0 +1,19 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDTOAFORMAT_HDL
+#define INCLUDED_OOO_VBA_WORD_WDTOAFORMAT_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdToaFormat {
+
+static const ::sal_Int32 wdTOAClassic = (sal_Int32)1;
+static const ::sal_Int32 wdTOADistinctive = (sal_Int32)2;
+static const ::sal_Int32 wdTOAFormal = (sal_Int32)3;
+static const ::sal_Int32 wdTOASimple = (sal_Int32)4;
+static const ::sal_Int32 wdTOATemplate = (sal_Int32)0;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDTOAFORMAT_HDL

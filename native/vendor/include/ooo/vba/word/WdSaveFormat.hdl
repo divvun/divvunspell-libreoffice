@@ -1,0 +1,27 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDSAVEFORMAT_HDL
+#define INCLUDED_OOO_VBA_WORD_WDSAVEFORMAT_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdSaveFormat {
+
+static const ::sal_Int32 wdFormatDOSText = (sal_Int32)4;
+static const ::sal_Int32 wdFormatDOSTextLineBreaks = (sal_Int32)5;
+static const ::sal_Int32 wdFormatDocument = (sal_Int32)0;
+static const ::sal_Int32 wdFormatEncodedText = (sal_Int32)7;
+static const ::sal_Int32 wdFormatFilteredHTML = (sal_Int32)10;
+static const ::sal_Int32 wdFormatHTML = (sal_Int32)8;
+static const ::sal_Int32 wdFormatRTF = (sal_Int32)6;
+static const ::sal_Int32 wdFormatTemplate = (sal_Int32)1;
+static const ::sal_Int32 wdFormatText = (sal_Int32)2;
+static const ::sal_Int32 wdFormatTextLineBreaks = (sal_Int32)3;
+static const ::sal_Int32 wdFormatUnicodeText = (sal_Int32)7;
+static const ::sal_Int32 wdFormatWebArchive = (sal_Int32)9;
+static const ::sal_Int32 wdFormatXML = (sal_Int32)11;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDSAVEFORMAT_HDL

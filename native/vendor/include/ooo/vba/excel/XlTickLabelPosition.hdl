@@ -1,0 +1,18 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLTICKLABELPOSITION_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLTICKLABELPOSITION_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlTickLabelPosition {
+
+static const ::sal_Int32 xlTickLabelPositionHigh = (sal_Int32)-4127;
+static const ::sal_Int32 xlTickLabelPositionLow = (sal_Int32)-4134;
+static const ::sal_Int32 xlTickLabelPositionNextToAxis = (sal_Int32)4;
+static const ::sal_Int32 xlTickLabelPositionNone = (sal_Int32)-4142;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLTICKLABELPOSITION_HDL

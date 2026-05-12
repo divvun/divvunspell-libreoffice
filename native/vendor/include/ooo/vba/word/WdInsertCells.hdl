@@ -1,0 +1,18 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDINSERTCELLS_HDL
+#define INCLUDED_OOO_VBA_WORD_WDINSERTCELLS_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdInsertCells {
+
+static const ::sal_Int32 wdInsertCellsEntireColumn = (sal_Int32)3;
+static const ::sal_Int32 wdInsertCellsEntireRow = (sal_Int32)2;
+static const ::sal_Int32 wdInsertCellsShiftDown = (sal_Int32)1;
+static const ::sal_Int32 wdInsertCellsShiftRight = (sal_Int32)0;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDINSERTCELLS_HDL

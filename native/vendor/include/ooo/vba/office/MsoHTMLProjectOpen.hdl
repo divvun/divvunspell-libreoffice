@@ -1,0 +1,16 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOHTMLPROJECTOPEN_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOHTMLPROJECTOPEN_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoHTMLProjectOpen {
+
+static const ::sal_Int32 msoHTMLProjectOpenSourceView = (sal_Int32)1;
+static const ::sal_Int32 msoHTMLProjectOpenTextView = (sal_Int32)2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOHTMLPROJECTOPEN_HDL

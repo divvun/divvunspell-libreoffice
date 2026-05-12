@@ -1,0 +1,18 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOFAREASTLINEBREAKLANGUAGEID_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOFAREASTLINEBREAKLANGUAGEID_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoFarEastLineBreakLanguageID {
+
+static const ::sal_Int32 MsoFarEastLineBreakLanguageJapanese = (sal_Int32)1041;
+static const ::sal_Int32 MsoFarEastLineBreakLanguageKorean = (sal_Int32)1042;
+static const ::sal_Int32 MsoFarEastLineBreakLanguageSimplifiedChinese = (sal_Int32)2052;
+static const ::sal_Int32 MsoFarEastLineBreakLanguageTraditionalChinese = (sal_Int32)1028;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOFAREASTLINEBREAKLANGUAGEID_HDL

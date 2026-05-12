@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLPIVOTTABLEVERSIONLIST_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLPIVOTTABLEVERSIONLIST_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlPivotTableVersionList {
+
+static const ::sal_Int32 xlPivotTableVersion10 = (sal_Int32)1;
+static const ::sal_Int32 xlPivotTableVersion2000 = (sal_Int32)0;
+static const ::sal_Int32 xlPivotTableVersionCurrent = (sal_Int32)-1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLPIVOTTABLEVERSIONLIST_HDL

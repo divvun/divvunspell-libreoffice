@@ -1,0 +1,21 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOFILLTYPE_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOFILLTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoFillType {
+
+static const ::sal_Int32 msoFillBackground = (sal_Int32)5;
+static const ::sal_Int32 msoFillGradient = (sal_Int32)3;
+static const ::sal_Int32 msoFillMixed = (sal_Int32)-2;
+static const ::sal_Int32 msoFillPatterned = (sal_Int32)2;
+static const ::sal_Int32 msoFillPicture = (sal_Int32)6;
+static const ::sal_Int32 msoFillSolid = (sal_Int32)1;
+static const ::sal_Int32 msoFillTextured = (sal_Int32)4;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOFILLTYPE_HDL

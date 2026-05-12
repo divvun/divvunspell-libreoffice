@@ -1,0 +1,18 @@
+#ifndef INCLUDED_OOO_VBA_POWERPOINT_PPFOLLOWCOLORS_HDL
+#define INCLUDED_OOO_VBA_POWERPOINT_PPFOLLOWCOLORS_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace powerpoint { namespace PpFollowColors {
+
+static const ::sal_Int32 ppFollowColorsMixed = (sal_Int32)-2;
+static const ::sal_Int32 ppFollowColorsNone = (sal_Int32)0;
+static const ::sal_Int32 ppFollowColorsScheme = (sal_Int32)1;
+static const ::sal_Int32 ppFollowColorsTextAndBackground = (sal_Int32)2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_POWERPOINT_PPFOLLOWCOLORS_HDL

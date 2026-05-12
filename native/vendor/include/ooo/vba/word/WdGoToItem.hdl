@@ -1,0 +1,31 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDGOTOITEM_HDL
+#define INCLUDED_OOO_VBA_WORD_WDGOTOITEM_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdGoToItem {
+
+static const ::sal_Int32 wdGoToBookmark = (sal_Int32)-1;
+static const ::sal_Int32 wdGoToComment = (sal_Int32)6;
+static const ::sal_Int32 wdGoToEndnote = (sal_Int32)5;
+static const ::sal_Int32 wdGoToEquation = (sal_Int32)10;
+static const ::sal_Int32 wdGoToField = (sal_Int32)7;
+static const ::sal_Int32 wdGoToFootnote = (sal_Int32)4;
+static const ::sal_Int32 wdGoToGrammaticalError = (sal_Int32)14;
+static const ::sal_Int32 wdGoToGraphic = (sal_Int32)8;
+static const ::sal_Int32 wdGoToHeading = (sal_Int32)11;
+static const ::sal_Int32 wdGoToLine = (sal_Int32)3;
+static const ::sal_Int32 wdGoToObject = (sal_Int32)9;
+static const ::sal_Int32 wdGoToPage = (sal_Int32)1;
+static const ::sal_Int32 wdGoToPercent = (sal_Int32)12;
+static const ::sal_Int32 wdGoToProofreadingError = (sal_Int32)15;
+static const ::sal_Int32 wdGoToSection = (sal_Int32)0;
+static const ::sal_Int32 wdGoToSpellingError = (sal_Int32)13;
+static const ::sal_Int32 wdGoToTable = (sal_Int32)2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDGOTOITEM_HDL

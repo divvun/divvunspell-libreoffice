@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLOBJECTSIZE_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLOBJECTSIZE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlObjectSize {
+
+static const ::sal_Int32 xlFitToPage = (sal_Int32)2;
+static const ::sal_Int32 xlFullPage = (sal_Int32)3;
+static const ::sal_Int32 xlScreenSize = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLOBJECTSIZE_HDL

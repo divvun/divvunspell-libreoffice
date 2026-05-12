@@ -1,0 +1,19 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLSHEETTYPE_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLSHEETTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlSheetType {
+
+static const ::sal_Int32 xlChart = (sal_Int32)-4109;
+static const ::sal_Int32 xlDialogSheet = (sal_Int32)-4116;
+static const ::sal_Int32 xlExcel4IntlMacroSheet = (sal_Int32)4;
+static const ::sal_Int32 xlExcel4MacroSheet = (sal_Int32)3;
+static const ::sal_Int32 xlWorksheet = (sal_Int32)-4167;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLSHEETTYPE_HDL

@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOSYNCAVAILABLETYPE_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOSYNCAVAILABLETYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoSyncAvailableType {
+
+static const ::sal_Int32 msoSyncAvailableAnywhere = (sal_Int32)2;
+static const ::sal_Int32 msoSyncAvailableNone = (sal_Int32)0;
+static const ::sal_Int32 msoSyncAvailableOffline = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOSYNCAVAILABLETYPE_HDL

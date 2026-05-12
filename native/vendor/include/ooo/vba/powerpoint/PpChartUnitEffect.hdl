@@ -1,0 +1,20 @@
+#ifndef INCLUDED_OOO_VBA_POWERPOINT_PPCHARTUNITEFFECT_HDL
+#define INCLUDED_OOO_VBA_POWERPOINT_PPCHARTUNITEFFECT_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace powerpoint { namespace PpChartUnitEffect {
+
+static const ::sal_Int32 ppAnimateByCategory = (sal_Int32)2;
+static const ::sal_Int32 ppAnimateByCategoryElements = (sal_Int32)4;
+static const ::sal_Int32 ppAnimateBySeries = (sal_Int32)1;
+static const ::sal_Int32 ppAnimateBySeriesElements = (sal_Int32)3;
+static const ::sal_Int32 ppAnimateChartAllAtOnce = (sal_Int32)5;
+static const ::sal_Int32 ppAnimateChartMixed = (sal_Int32)-2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_POWERPOINT_PPCHARTUNITEFFECT_HDL

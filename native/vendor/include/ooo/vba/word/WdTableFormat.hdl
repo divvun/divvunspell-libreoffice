@@ -1,0 +1,57 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDTABLEFORMAT_HDL
+#define INCLUDED_OOO_VBA_WORD_WDTABLEFORMAT_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdTableFormat {
+
+static const ::sal_Int32 wdTableFormat3DEffects1 = (sal_Int32)32;
+static const ::sal_Int32 wdTableFormat3DEffects2 = (sal_Int32)33;
+static const ::sal_Int32 wdTableFormat3DEffects3 = (sal_Int32)34;
+static const ::sal_Int32 wdTableFormatClassic1 = (sal_Int32)4;
+static const ::sal_Int32 wdTableFormatClassic2 = (sal_Int32)5;
+static const ::sal_Int32 wdTableFormatClassic3 = (sal_Int32)6;
+static const ::sal_Int32 wdTableFormatClassic4 = (sal_Int32)7;
+static const ::sal_Int32 wdTableFormatColorful1 = (sal_Int32)8;
+static const ::sal_Int32 wdTableFormatColorful2 = (sal_Int32)9;
+static const ::sal_Int32 wdTableFormatColorful3 = (sal_Int32)10;
+static const ::sal_Int32 wdTableFormatColumns1 = (sal_Int32)11;
+static const ::sal_Int32 wdTableFormatColumns2 = (sal_Int32)12;
+static const ::sal_Int32 wdTableFormatColumns3 = (sal_Int32)13;
+static const ::sal_Int32 wdTableFormatColumns4 = (sal_Int32)14;
+static const ::sal_Int32 wdTableFormatColumns5 = (sal_Int32)15;
+static const ::sal_Int32 wdTableFormatContemporary = (sal_Int32)35;
+static const ::sal_Int32 wdTableFormatElegant = (sal_Int32)36;
+static const ::sal_Int32 wdTableFormatGrid1 = (sal_Int32)16;
+static const ::sal_Int32 wdTableFormatGrid2 = (sal_Int32)17;
+static const ::sal_Int32 wdTableFormatGrid3 = (sal_Int32)18;
+static const ::sal_Int32 wdTableFormatGrid4 = (sal_Int32)19;
+static const ::sal_Int32 wdTableFormatGrid5 = (sal_Int32)20;
+static const ::sal_Int32 wdTableFormatGrid6 = (sal_Int32)21;
+static const ::sal_Int32 wdTableFormatGrid7 = (sal_Int32)22;
+static const ::sal_Int32 wdTableFormatGrid8 = (sal_Int32)23;
+static const ::sal_Int32 wdTableFormatList1 = (sal_Int32)24;
+static const ::sal_Int32 wdTableFormatList2 = (sal_Int32)25;
+static const ::sal_Int32 wdTableFormatList3 = (sal_Int32)26;
+static const ::sal_Int32 wdTableFormatList4 = (sal_Int32)27;
+static const ::sal_Int32 wdTableFormatList5 = (sal_Int32)28;
+static const ::sal_Int32 wdTableFormatList6 = (sal_Int32)29;
+static const ::sal_Int32 wdTableFormatList7 = (sal_Int32)30;
+static const ::sal_Int32 wdTableFormatList8 = (sal_Int32)31;
+static const ::sal_Int32 wdTableFormatNone = (sal_Int32)0;
+static const ::sal_Int32 wdTableFormatProfessional = (sal_Int32)37;
+static const ::sal_Int32 wdTableFormatSimple1 = (sal_Int32)1;
+static const ::sal_Int32 wdTableFormatSimple2 = (sal_Int32)2;
+static const ::sal_Int32 wdTableFormatSimple3 = (sal_Int32)3;
+static const ::sal_Int32 wdTableFormatSubtle1 = (sal_Int32)38;
+static const ::sal_Int32 wdTableFormatSubtle2 = (sal_Int32)39;
+static const ::sal_Int32 wdTableFormatWeb1 = (sal_Int32)40;
+static const ::sal_Int32 wdTableFormatWeb2 = (sal_Int32)41;
+static const ::sal_Int32 wdTableFormatWeb3 = (sal_Int32)42;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDTABLEFORMAT_HDL

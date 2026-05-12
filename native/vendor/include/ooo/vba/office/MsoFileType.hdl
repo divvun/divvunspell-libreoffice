@@ -1,0 +1,37 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOFILETYPE_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOFILETYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoFileType {
+
+static const ::sal_Int32 msoFileTypeAllFiles = (sal_Int32)1;
+static const ::sal_Int32 msoFileTypeBinders = (sal_Int32)6;
+static const ::sal_Int32 msoFileTypeCalendarItem = (sal_Int32)11;
+static const ::sal_Int32 msoFileTypeContactItem = (sal_Int32)12;
+static const ::sal_Int32 msoFileTypeDataConnectionFiles = (sal_Int32)17;
+static const ::sal_Int32 msoFileTypeDatabases = (sal_Int32)7;
+static const ::sal_Int32 msoFileTypeDesignerFiles = (sal_Int32)22;
+static const ::sal_Int32 msoFileTypeDocumentImagingFiles = (sal_Int32)20;
+static const ::sal_Int32 msoFileTypeExcelWorkbooks = (sal_Int32)4;
+static const ::sal_Int32 msoFileTypeJournalItem = (sal_Int32)14;
+static const ::sal_Int32 msoFileTypeMailItem = (sal_Int32)10;
+static const ::sal_Int32 msoFileTypeNoteItem = (sal_Int32)13;
+static const ::sal_Int32 msoFileTypeOfficeFiles = (sal_Int32)2;
+static const ::sal_Int32 msoFileTypeOutlookItems = (sal_Int32)9;
+static const ::sal_Int32 msoFileTypePhotoDrawFiles = (sal_Int32)16;
+static const ::sal_Int32 msoFileTypePowerPointPresentations = (sal_Int32)5;
+static const ::sal_Int32 msoFileTypeProjectFiles = (sal_Int32)19;
+static const ::sal_Int32 msoFileTypePublisherFiles = (sal_Int32)18;
+static const ::sal_Int32 msoFileTypeTaskItem = (sal_Int32)15;
+static const ::sal_Int32 msoFileTypeTemplates = (sal_Int32)8;
+static const ::sal_Int32 msoFileTypeVisioFiles = (sal_Int32)21;
+static const ::sal_Int32 msoFileTypeWebPages = (sal_Int32)23;
+static const ::sal_Int32 msoFileTypeWordDocuments = (sal_Int32)3;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOFILETYPE_HDL

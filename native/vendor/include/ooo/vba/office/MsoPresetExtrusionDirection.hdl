@@ -1,0 +1,24 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOPRESETEXTRUSIONDIRECTION_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOPRESETEXTRUSIONDIRECTION_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoPresetExtrusionDirection {
+
+static const ::sal_Int32 msoExtrusionBottom = (sal_Int32)2;
+static const ::sal_Int32 msoExtrusionBottomLeft = (sal_Int32)3;
+static const ::sal_Int32 msoExtrusionBottomRight = (sal_Int32)1;
+static const ::sal_Int32 msoExtrusionLeft = (sal_Int32)6;
+static const ::sal_Int32 msoExtrusionNone = (sal_Int32)5;
+static const ::sal_Int32 msoExtrusionRight = (sal_Int32)4;
+static const ::sal_Int32 msoExtrusionTop = (sal_Int32)8;
+static const ::sal_Int32 msoExtrusionTopLeft = (sal_Int32)9;
+static const ::sal_Int32 msoExtrusionTopRight = (sal_Int32)7;
+static const ::sal_Int32 msoPresetExtrusionDirectionMixed = (sal_Int32)-2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOPRESETEXTRUSIONDIRECTION_HDL

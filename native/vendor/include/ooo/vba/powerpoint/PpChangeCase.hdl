@@ -1,0 +1,19 @@
+#ifndef INCLUDED_OOO_VBA_POWERPOINT_PPCHANGECASE_HDL
+#define INCLUDED_OOO_VBA_POWERPOINT_PPCHANGECASE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace powerpoint { namespace PpChangeCase {
+
+static const ::sal_Int32 ppCaseLower = (sal_Int32)2;
+static const ::sal_Int32 ppCaseSentence = (sal_Int32)1;
+static const ::sal_Int32 ppCaseTitle = (sal_Int32)4;
+static const ::sal_Int32 ppCaseToggle = (sal_Int32)5;
+static const ::sal_Int32 ppCaseUpper = (sal_Int32)3;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_POWERPOINT_PPCHANGECASE_HDL

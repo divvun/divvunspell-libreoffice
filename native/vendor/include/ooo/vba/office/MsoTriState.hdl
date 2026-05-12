@@ -1,0 +1,19 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOTRISTATE_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOTRISTATE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoTriState {
+
+static const ::sal_Int32 msoCTrue = (sal_Int32)1;
+static const ::sal_Int32 msoFalse = (sal_Int32)0;
+static const ::sal_Int32 msoTriStateMixed = (sal_Int32)-2;
+static const ::sal_Int32 msoTriStateToggle = (sal_Int32)-3;
+static const ::sal_Int32 msoTrue = (sal_Int32)-1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOTRISTATE_HDL

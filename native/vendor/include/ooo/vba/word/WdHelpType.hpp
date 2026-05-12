@@ -1,0 +1,6 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDHELPTYPE_HPP
+#define INCLUDED_OOO_VBA_WORD_WDHELPTYPE_HPP
+
+#include "ooo/vba/word/WdHelpType.hdl"
+
+#endif // INCLUDED_OOO_VBA_WORD_WDHELPTYPE_HPP

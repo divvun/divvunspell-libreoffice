@@ -1,0 +1,26 @@
+#ifndef INCLUDED_OOO_VBA_ACCESS_ACOBJECTTYPE_HDL
+#define INCLUDED_OOO_VBA_ACCESS_ACOBJECTTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace access { namespace AcObjectType {
+
+static const ::sal_Int32 acDataAccessPage = (sal_Int32)6;
+static const ::sal_Int32 acDefault = (sal_Int32)-1;
+static const ::sal_Int32 acDiagram = (sal_Int32)8;
+static const ::sal_Int32 acForm = (sal_Int32)2;
+static const ::sal_Int32 acFunction = (sal_Int32)10;
+static const ::sal_Int32 acMacro = (sal_Int32)4;
+static const ::sal_Int32 acModule = (sal_Int32)5;
+static const ::sal_Int32 acQuery = (sal_Int32)1;
+static const ::sal_Int32 acReport = (sal_Int32)3;
+static const ::sal_Int32 acServerView = (sal_Int32)7;
+static const ::sal_Int32 acStoredProcedure = (sal_Int32)9;
+static const ::sal_Int32 acTable = (sal_Int32)0;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_ACCESS_ACOBJECTTYPE_HDL

@@ -1,0 +1,19 @@
+#ifndef INCLUDED_OOO_VBA_ADODB_COMPAREENUM_HDL
+#define INCLUDED_OOO_VBA_ADODB_COMPAREENUM_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace adodb { namespace CompareEnum {
+
+static const ::sal_Int32 adCompareEqual = (sal_Int32)1;
+static const ::sal_Int32 adCompareGreaterThan = (sal_Int32)2;
+static const ::sal_Int32 adCompareLessThan = (sal_Int32)0;
+static const ::sal_Int32 adCompareNotComparable = (sal_Int32)4;
+static const ::sal_Int32 adCompareNotEqual = (sal_Int32)3;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_ADODB_COMPAREENUM_HDL

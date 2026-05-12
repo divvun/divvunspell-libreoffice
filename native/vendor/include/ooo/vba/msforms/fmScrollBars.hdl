@@ -1,0 +1,18 @@
+#ifndef INCLUDED_OOO_VBA_MSFORMS_FMSCROLLBARS_HDL
+#define INCLUDED_OOO_VBA_MSFORMS_FMSCROLLBARS_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace msforms { namespace fmScrollBars {
+
+static const ::sal_Int32 fmScrollBarsBoth = (sal_Int32)3;
+static const ::sal_Int32 fmScrollBarsHorizontal = (sal_Int32)1;
+static const ::sal_Int32 fmScrollBarsNone = (sal_Int32)0;
+static const ::sal_Int32 fmScrollBarsVertical = (sal_Int32)2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_MSFORMS_FMSCROLLBARS_HDL

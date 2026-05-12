@@ -1,0 +1,66 @@
+#ifndef INCLUDED_OOO_VBA_WORD_XLISTLEVEL_HDL
+#define INCLUDED_OOO_VBA_WORD_XLISTLEVEL_HDL
+
+#include "sal/config.h"
+
+#include "ooo/vba/XHelperInterface.hdl"
+namespace ooo { namespace vba { namespace word { class XFont; } } }
+#include "com/sun/star/uno/Reference.h"
+#include "cppu/macros.hxx"
+#include "rtl/ustring.hxx"
+#include "sal/types.h"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace ooo { namespace vba { namespace word {
+
+class SAL_NO_VTABLE SAL_DLLPUBLIC_RTTI XListLevel : public ::ooo::vba::XHelperInterface
+{
+public:
+#if defined LIBO_INTERNAL_ONLY
+    XListLevel() = default;
+    XListLevel(XListLevel const &) = default;
+    XListLevel(XListLevel &&) = default;
+    XListLevel & operator =(XListLevel const &) = default;
+    XListLevel & operator =(XListLevel &&) = default;
+#endif
+
+
+    // Attributes
+    virtual ::sal_Int32 SAL_CALL getAlignment() = 0;
+    virtual void SAL_CALL setAlignment( ::sal_Int32 _alignment ) = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::word::XFont > SAL_CALL getFont() = 0;
+    virtual void SAL_CALL setFont( const ::css::uno::Reference< ::ooo::vba::word::XFont >& _font ) = 0;
+    virtual ::sal_Int32 SAL_CALL getIndex() = 0;
+    virtual ::rtl::OUString SAL_CALL getLinkedStyle() = 0;
+    virtual void SAL_CALL setLinkedStyle( const ::rtl::OUString& _linkedstyle ) = 0;
+    virtual ::rtl::OUString SAL_CALL getNumberFormat() = 0;
+    virtual void SAL_CALL setNumberFormat( const ::rtl::OUString& _numberformat ) = 0;
+    virtual float SAL_CALL getNumberPosition() = 0;
+    virtual void SAL_CALL setNumberPosition( float _numberposition ) = 0;
+    virtual ::sal_Int32 SAL_CALL getNumberStyle() = 0;
+    virtual void SAL_CALL setNumberStyle( ::sal_Int32 _numberstyle ) = 0;
+    virtual ::sal_Int32 SAL_CALL getResetOnHigher() = 0;
+    virtual void SAL_CALL setResetOnHigher( ::sal_Int32 _resetonhigher ) = 0;
+    virtual ::sal_Int32 SAL_CALL getStartAt() = 0;
+    virtual void SAL_CALL setStartAt( ::sal_Int32 _startat ) = 0;
+    virtual float SAL_CALL getTabPosition() = 0;
+    virtual void SAL_CALL setTabPosition( float _tabposition ) = 0;
+    virtual float SAL_CALL getTextPosition() = 0;
+    virtual void SAL_CALL setTextPosition( float _textposition ) = 0;
+    virtual ::sal_Int32 SAL_CALL getTrailingCharacter() = 0;
+    virtual void SAL_CALL setTrailingCharacter( ::sal_Int32 _trailingcharacter ) = 0;
+
+    static inline ::css::uno::Type const & SAL_CALL static_type(void * = 0);
+
+protected:
+    ~XListLevel() SAL_NOEXCEPT {} // avoid warnings about virtual members and non-virtual dtor
+};
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::ooo::vba::word::XListLevel const *);
+} } }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::uno::Reference< ::ooo::vba::word::XListLevel > *);
+
+#endif

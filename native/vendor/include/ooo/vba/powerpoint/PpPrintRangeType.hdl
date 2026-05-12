@@ -1,0 +1,19 @@
+#ifndef INCLUDED_OOO_VBA_POWERPOINT_PPPRINTRANGETYPE_HDL
+#define INCLUDED_OOO_VBA_POWERPOINT_PPPRINTRANGETYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace powerpoint { namespace PpPrintRangeType {
+
+static const ::sal_Int32 ppPrintAll = (sal_Int32)1;
+static const ::sal_Int32 ppPrintCurrent = (sal_Int32)3;
+static const ::sal_Int32 ppPrintNamedSlideShow = (sal_Int32)5;
+static const ::sal_Int32 ppPrintSelection = (sal_Int32)2;
+static const ::sal_Int32 ppPrintSlideRange = (sal_Int32)4;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_POWERPOINT_PPPRINTRANGETYPE_HDL

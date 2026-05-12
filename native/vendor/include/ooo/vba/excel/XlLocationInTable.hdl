@@ -1,0 +1,23 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLLOCATIONINTABLE_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLLOCATIONINTABLE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlLocationInTable {
+
+static const ::sal_Int32 xlColumnHeader = (sal_Int32)-4110;
+static const ::sal_Int32 xlColumnItem = (sal_Int32)5;
+static const ::sal_Int32 xlDataHeader = (sal_Int32)3;
+static const ::sal_Int32 xlDataItem = (sal_Int32)7;
+static const ::sal_Int32 xlPageHeader = (sal_Int32)2;
+static const ::sal_Int32 xlPageItem = (sal_Int32)6;
+static const ::sal_Int32 xlRowHeader = (sal_Int32)-4153;
+static const ::sal_Int32 xlRowItem = (sal_Int32)4;
+static const ::sal_Int32 xlTableBody = (sal_Int32)8;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLLOCATIONINTABLE_HDL

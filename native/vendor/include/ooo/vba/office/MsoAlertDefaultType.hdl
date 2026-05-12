@@ -1,0 +1,19 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOALERTDEFAULTTYPE_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOALERTDEFAULTTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoAlertDefaultType {
+
+static const ::sal_Int32 msoAlertDefaultFifth = (sal_Int32)4;
+static const ::sal_Int32 msoAlertDefaultFirst = (sal_Int32)0;
+static const ::sal_Int32 msoAlertDefaultFourth = (sal_Int32)3;
+static const ::sal_Int32 msoAlertDefaultSecond = (sal_Int32)1;
+static const ::sal_Int32 msoAlertDefaultThird = (sal_Int32)2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOALERTDEFAULTTYPE_HDL

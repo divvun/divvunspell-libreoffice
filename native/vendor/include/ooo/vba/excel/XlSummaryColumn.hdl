@@ -1,0 +1,16 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLSUMMARYCOLUMN_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLSUMMARYCOLUMN_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlSummaryColumn {
+
+static const ::sal_Int32 xlSummaryOnLeft = (sal_Int32)-4131;
+static const ::sal_Int32 xlSummaryOnRight = (sal_Int32)-4152;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLSUMMARYCOLUMN_HDL

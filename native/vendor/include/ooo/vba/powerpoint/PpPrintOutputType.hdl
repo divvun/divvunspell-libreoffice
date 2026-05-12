@@ -1,0 +1,24 @@
+#ifndef INCLUDED_OOO_VBA_POWERPOINT_PPPRINTOUTPUTTYPE_HDL
+#define INCLUDED_OOO_VBA_POWERPOINT_PPPRINTOUTPUTTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace powerpoint { namespace PpPrintOutputType {
+
+static const ::sal_Int32 ppPrintOutputBuildSlides = (sal_Int32)7;
+static const ::sal_Int32 ppPrintOutputFourSlideHandouts = (sal_Int32)8;
+static const ::sal_Int32 ppPrintOutputNineSlideHandouts = (sal_Int32)9;
+static const ::sal_Int32 ppPrintOutputNotesPages = (sal_Int32)5;
+static const ::sal_Int32 ppPrintOutputOneSlideHandouts = (sal_Int32)10;
+static const ::sal_Int32 ppPrintOutputOutline = (sal_Int32)6;
+static const ::sal_Int32 ppPrintOutputSixSlideHandouts = (sal_Int32)4;
+static const ::sal_Int32 ppPrintOutputSlides = (sal_Int32)1;
+static const ::sal_Int32 ppPrintOutputThreeSlideHandouts = (sal_Int32)3;
+static const ::sal_Int32 ppPrintOutputTwoSlideHandouts = (sal_Int32)2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_POWERPOINT_PPPRINTOUTPUTTYPE_HDL

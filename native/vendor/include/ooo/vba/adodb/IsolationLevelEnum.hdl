@@ -1,0 +1,23 @@
+#ifndef INCLUDED_OOO_VBA_ADODB_ISOLATIONLEVELENUM_HDL
+#define INCLUDED_OOO_VBA_ADODB_ISOLATIONLEVELENUM_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace adodb { namespace IsolationLevelEnum {
+
+static const ::sal_Int32 adXactBrowse = (sal_Int32)256;
+static const ::sal_Int32 adXactChaos = (sal_Int32)16;
+static const ::sal_Int32 adXactCursorStability = (sal_Int32)4096;
+static const ::sal_Int32 adXactIsolated = (sal_Int32)1048576;
+static const ::sal_Int32 adXactReadCommitted = (sal_Int32)4096;
+static const ::sal_Int32 adXactReadUncommitted = (sal_Int32)256;
+static const ::sal_Int32 adXactRepeatableRead = (sal_Int32)65536;
+static const ::sal_Int32 adXactSerializable = (sal_Int32)1048576;
+static const ::sal_Int32 adXactUnspecified = (sal_Int32)-1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_ADODB_ISOLATIONLEVELENUM_HDL

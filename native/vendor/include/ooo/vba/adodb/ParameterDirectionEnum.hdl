@@ -1,0 +1,19 @@
+#ifndef INCLUDED_OOO_VBA_ADODB_PARAMETERDIRECTIONENUM_HDL
+#define INCLUDED_OOO_VBA_ADODB_PARAMETERDIRECTIONENUM_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace adodb { namespace ParameterDirectionEnum {
+
+static const ::sal_Int32 adParamInput = (sal_Int32)1;
+static const ::sal_Int32 adParamInputOutput = (sal_Int32)3;
+static const ::sal_Int32 adParamOutput = (sal_Int32)2;
+static const ::sal_Int32 adParamReturnValue = (sal_Int32)4;
+static const ::sal_Int32 adParamUnknown = (sal_Int32)0;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_ADODB_PARAMETERDIRECTIONENUM_HDL

@@ -1,0 +1,31 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDRECOVERYTYPE_HDL
+#define INCLUDED_OOO_VBA_WORD_WDRECOVERYTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdRecoveryType {
+
+static const ::sal_Int32 wdChart = (sal_Int32)14;
+static const ::sal_Int32 wdChartLinked = (sal_Int32)15;
+static const ::sal_Int32 wdChartPicture = (sal_Int32)13;
+static const ::sal_Int32 wdFormatOriginalFormatting = (sal_Int32)16;
+static const ::sal_Int32 wdFormatPlainText = (sal_Int32)22;
+static const ::sal_Int32 wdFormatSurroundingFormattingWithEmphasis = (sal_Int32)20;
+static const ::sal_Int32 wdListCombineWithExistingList = (sal_Int32)24;
+static const ::sal_Int32 wdListContinueNumbering = (sal_Int32)7;
+static const ::sal_Int32 wdListDontMerge = (sal_Int32)25;
+static const ::sal_Int32 wdListRestartNumbering = (sal_Int32)8;
+static const ::sal_Int32 wdPasteDefault = (sal_Int32)0;
+static const ::sal_Int32 wdSingleCellTable = (sal_Int32)6;
+static const ::sal_Int32 wdSingleCellText = (sal_Int32)5;
+static const ::sal_Int32 wdTableAppendTable = (sal_Int32)10;
+static const ::sal_Int32 wdTableInsertAsRows = (sal_Int32)11;
+static const ::sal_Int32 wdTableOriginalFormatting = (sal_Int32)12;
+static const ::sal_Int32 wdTableOverwriteCells = (sal_Int32)23;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDRECOVERYTYPE_HDL

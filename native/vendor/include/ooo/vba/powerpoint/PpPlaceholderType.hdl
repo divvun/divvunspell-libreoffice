@@ -1,0 +1,31 @@
+#ifndef INCLUDED_OOO_VBA_POWERPOINT_PPPLACEHOLDERTYPE_HDL
+#define INCLUDED_OOO_VBA_POWERPOINT_PPPLACEHOLDERTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace powerpoint { namespace PpPlaceholderType {
+
+static const ::sal_Int32 ppPlaceholderBitmap = (sal_Int32)9;
+static const ::sal_Int32 ppPlaceholderBody = (sal_Int32)2;
+static const ::sal_Int32 ppPlaceholderCenterTitle = (sal_Int32)3;
+static const ::sal_Int32 ppPlaceholderChart = (sal_Int32)8;
+static const ::sal_Int32 ppPlaceholderDate = (sal_Int32)16;
+static const ::sal_Int32 ppPlaceholderFooter = (sal_Int32)15;
+static const ::sal_Int32 ppPlaceholderHeader = (sal_Int32)14;
+static const ::sal_Int32 ppPlaceholderMediaClip = (sal_Int32)10;
+static const ::sal_Int32 ppPlaceholderMixed = (sal_Int32)-2;
+static const ::sal_Int32 ppPlaceholderObject = (sal_Int32)7;
+static const ::sal_Int32 ppPlaceholderOrgChart = (sal_Int32)11;
+static const ::sal_Int32 ppPlaceholderSlideNumber = (sal_Int32)13;
+static const ::sal_Int32 ppPlaceholderSubtitle = (sal_Int32)4;
+static const ::sal_Int32 ppPlaceholderTable = (sal_Int32)12;
+static const ::sal_Int32 ppPlaceholderTitle = (sal_Int32)1;
+static const ::sal_Int32 ppPlaceholderVerticalBody = (sal_Int32)6;
+static const ::sal_Int32 ppPlaceholderVerticalTitle = (sal_Int32)5;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_POWERPOINT_PPPLACEHOLDERTYPE_HDL

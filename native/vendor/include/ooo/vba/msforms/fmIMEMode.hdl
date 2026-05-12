@@ -1,0 +1,27 @@
+#ifndef INCLUDED_OOO_VBA_MSFORMS_FMIMEMODE_HDL
+#define INCLUDED_OOO_VBA_MSFORMS_FMIMEMODE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace msforms { namespace fmIMEMode {
+
+static const ::sal_Int32 fmIMEModeAlpha = (sal_Int32)8;
+static const ::sal_Int32 fmIMEModeAlphaFull = (sal_Int32)7;
+static const ::sal_Int32 fmIMEModeDisable = (sal_Int32)3;
+static const ::sal_Int32 fmIMEModeHangul = (sal_Int32)10;
+static const ::sal_Int32 fmIMEModeHangulFull = (sal_Int32)9;
+static const ::sal_Int32 fmIMEModeHanzi = (sal_Int32)12;
+static const ::sal_Int32 fmIMEModeHanziFull = (sal_Int32)11;
+static const ::sal_Int32 fmIMEModeHiragana = (sal_Int32)4;
+static const ::sal_Int32 fmIMEModeKatakana = (sal_Int32)5;
+static const ::sal_Int32 fmIMEModeKatakanaHalf = (sal_Int32)6;
+static const ::sal_Int32 fmIMEModeNoControl = (sal_Int32)0;
+static const ::sal_Int32 fmIMEModeOff = (sal_Int32)2;
+static const ::sal_Int32 fmIMEModeOn = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_MSFORMS_FMIMEMODE_HDL

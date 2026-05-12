@@ -1,0 +1,20 @@
+#ifndef INCLUDED_OOO_VBA_ACCESS_ACFORMVIEW_HDL
+#define INCLUDED_OOO_VBA_ACCESS_ACFORMVIEW_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace access { namespace AcFormView {
+
+static const ::sal_Int32 acDesign = (sal_Int32)1;
+static const ::sal_Int32 acFormDS = (sal_Int32)3;
+static const ::sal_Int32 acFormPivotChart = (sal_Int32)5;
+static const ::sal_Int32 acFormPivotTable = (sal_Int32)4;
+static const ::sal_Int32 acNormal = (sal_Int32)0;
+static const ::sal_Int32 acPreview = (sal_Int32)2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_ACCESS_ACFORMVIEW_HDL

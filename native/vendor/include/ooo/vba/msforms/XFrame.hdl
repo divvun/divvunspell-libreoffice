@@ -1,0 +1,54 @@
+#ifndef INCLUDED_OOO_VBA_MSFORMS_XFRAME_HDL
+#define INCLUDED_OOO_VBA_MSFORMS_XFRAME_HDL
+
+#include "sal/config.h"
+
+#include "com/sun/star/uno/XInterface.hdl"
+namespace ooo { namespace vba { namespace msforms { class XNewFont; } } }
+#include "com/sun/star/uno/Any.h"
+#include "com/sun/star/uno/Reference.h"
+#include "cppu/macros.hxx"
+#include "rtl/ustring.hxx"
+#include "sal/types.h"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace ooo { namespace vba { namespace msforms {
+
+class SAL_NO_VTABLE SAL_DLLPUBLIC_RTTI XFrame : public ::css::uno::XInterface
+{
+public:
+#if defined LIBO_INTERNAL_ONLY
+    XFrame() = default;
+    XFrame(XFrame const &) = default;
+    XFrame(XFrame &&) = default;
+    XFrame & operator =(XFrame const &) = default;
+    XFrame & operator =(XFrame &&) = default;
+#endif
+
+
+    // Attributes
+    virtual ::rtl::OUString SAL_CALL getCaption() = 0;
+    virtual void SAL_CALL setCaption( const ::rtl::OUString& _caption ) = 0;
+    virtual ::sal_Int32 SAL_CALL getSpecialEffect() = 0;
+    virtual void SAL_CALL setSpecialEffect( ::sal_Int32 _specialeffect ) = 0;
+    virtual ::sal_Int32 SAL_CALL getBorderStyle() = 0;
+    virtual void SAL_CALL setBorderStyle( ::sal_Int32 _borderstyle ) = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::msforms::XNewFont > SAL_CALL getFont() = 0;
+
+    // Methods
+    virtual ::css::uno::Any SAL_CALL Controls( const ::css::uno::Any& Index ) = 0;
+
+    static inline ::css::uno::Type const & SAL_CALL static_type(void * = 0);
+
+protected:
+    ~XFrame() SAL_NOEXCEPT {} // avoid warnings about virtual members and non-virtual dtor
+};
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::ooo::vba::msforms::XFrame const *);
+} } }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::uno::Reference< ::ooo::vba::msforms::XFrame > *);
+
+#endif

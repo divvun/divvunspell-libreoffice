@@ -1,0 +1,19 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDHEADINGSEPARATOR_HDL
+#define INCLUDED_OOO_VBA_WORD_WDHEADINGSEPARATOR_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdHeadingSeparator {
+
+static const ::sal_Int32 wdHeadingSeparatorBlankLine = (sal_Int32)1;
+static const ::sal_Int32 wdHeadingSeparatorLetter = (sal_Int32)2;
+static const ::sal_Int32 wdHeadingSeparatorLetterFull = (sal_Int32)4;
+static const ::sal_Int32 wdHeadingSeparatorLetterLow = (sal_Int32)3;
+static const ::sal_Int32 wdHeadingSeparatorNone = (sal_Int32)0;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDHEADINGSEPARATOR_HDL

@@ -1,0 +1,23 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDMERGESUBTYPE_HDL
+#define INCLUDED_OOO_VBA_WORD_WDMERGESUBTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdMergeSubType {
+
+static const ::sal_Int32 wdMergeSubTypeAccess = (sal_Int32)1;
+static const ::sal_Int32 wdMergeSubTypeOAL = (sal_Int32)2;
+static const ::sal_Int32 wdMergeSubTypeOLEDBText = (sal_Int32)5;
+static const ::sal_Int32 wdMergeSubTypeOLEDBWord = (sal_Int32)3;
+static const ::sal_Int32 wdMergeSubTypeOther = (sal_Int32)0;
+static const ::sal_Int32 wdMergeSubTypeOutlook = (sal_Int32)6;
+static const ::sal_Int32 wdMergeSubTypeWord = (sal_Int32)7;
+static const ::sal_Int32 wdMergeSubTypeWord2000 = (sal_Int32)8;
+static const ::sal_Int32 wdMergeSubTypeWorks = (sal_Int32)4;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDMERGESUBTYPE_HDL

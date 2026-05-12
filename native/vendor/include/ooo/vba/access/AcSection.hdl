@@ -1,0 +1,23 @@
+#ifndef INCLUDED_OOO_VBA_ACCESS_ACSECTION_HDL
+#define INCLUDED_OOO_VBA_ACCESS_ACSECTION_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace access { namespace AcSection {
+
+static const ::sal_Int32 acDetail = (sal_Int32)0;
+static const ::sal_Int32 acFooter = (sal_Int32)2;
+static const ::sal_Int32 acGroupLevel1Footer = (sal_Int32)6;
+static const ::sal_Int32 acGroupLevel1Header = (sal_Int32)5;
+static const ::sal_Int32 acGroupLevel2Footer = (sal_Int32)8;
+static const ::sal_Int32 acGroupLevel2Header = (sal_Int32)7;
+static const ::sal_Int32 acHeader = (sal_Int32)1;
+static const ::sal_Int32 acPageFooter = (sal_Int32)4;
+static const ::sal_Int32 acPageHeader = (sal_Int32)3;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_ACCESS_ACSECTION_HDL

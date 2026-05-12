@@ -1,0 +1,15 @@
+#ifndef INCLUDED_COM_SUN_STAR_AWT_COLORSTOPSEQUENCE_HDL
+#define INCLUDED_COM_SUN_STAR_AWT_COLORSTOPSEQUENCE_HDL
+
+#include "sal/config.h"
+
+#include "com/sun/star/awt/ColorStop.hdl"
+#include "com/sun/star/uno/Sequence.h"
+#include "cppu/macros.hxx"
+
+namespace com { namespace sun { namespace star { namespace awt {
+
+typedef ::css::uno::Sequence< ::css::awt::ColorStop > ColorStopSequence;
+
+} } } }
+#endif // INCLUDED_COM_SUN_STAR_AWT_COLORSTOPSEQUENCE_HDL

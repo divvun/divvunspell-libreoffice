@@ -1,0 +1,26 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOBALLOONERRORTYPE_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOBALLOONERRORTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoBalloonErrorType {
+
+static const ::sal_Int32 msoBalloonErrorBadCharacter = (sal_Int32)8;
+static const ::sal_Int32 msoBalloonErrorBadPictureRef = (sal_Int32)4;
+static const ::sal_Int32 msoBalloonErrorBadReference = (sal_Int32)5;
+static const ::sal_Int32 msoBalloonErrorButtonModeless = (sal_Int32)7;
+static const ::sal_Int32 msoBalloonErrorButtonlessModal = (sal_Int32)6;
+static const ::sal_Int32 msoBalloonErrorCOMFailure = (sal_Int32)9;
+static const ::sal_Int32 msoBalloonErrorCharNotTopmostForModal = (sal_Int32)10;
+static const ::sal_Int32 msoBalloonErrorNone = (sal_Int32)0;
+static const ::sal_Int32 msoBalloonErrorOther = (sal_Int32)1;
+static const ::sal_Int32 msoBalloonErrorOutOfMemory = (sal_Int32)3;
+static const ::sal_Int32 msoBalloonErrorTooBig = (sal_Int32)2;
+static const ::sal_Int32 msoBalloonErrorTooManyControls = (sal_Int32)11;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOBALLOONERRORTYPE_HDL

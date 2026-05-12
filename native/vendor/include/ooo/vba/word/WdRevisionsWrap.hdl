@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDREVISIONSWRAP_HDL
+#define INCLUDED_OOO_VBA_WORD_WDREVISIONSWRAP_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdRevisionsWrap {
+
+static const ::sal_Int32 wdWrapAlways = (sal_Int32)1;
+static const ::sal_Int32 wdWrapAsk = (sal_Int32)2;
+static const ::sal_Int32 wdWrapNever = (sal_Int32)0;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDREVISIONSWRAP_HDL

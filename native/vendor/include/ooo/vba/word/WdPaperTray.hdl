@@ -1,0 +1,29 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDPAPERTRAY_HDL
+#define INCLUDED_OOO_VBA_WORD_WDPAPERTRAY_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdPaperTray {
+
+static const ::sal_Int32 wdPrinterAutomaticSheetFeed = (sal_Int32)7;
+static const ::sal_Int32 wdPrinterDefaultBin = (sal_Int32)0;
+static const ::sal_Int32 wdPrinterEnvelopeFeed = (sal_Int32)5;
+static const ::sal_Int32 wdPrinterFormSource = (sal_Int32)15;
+static const ::sal_Int32 wdPrinterLargeCapacityBin = (sal_Int32)11;
+static const ::sal_Int32 wdPrinterLargeFormatBin = (sal_Int32)10;
+static const ::sal_Int32 wdPrinterLowerBin = (sal_Int32)2;
+static const ::sal_Int32 wdPrinterManualEnvelopeFeed = (sal_Int32)6;
+static const ::sal_Int32 wdPrinterManualFeed = (sal_Int32)4;
+static const ::sal_Int32 wdPrinterMiddleBin = (sal_Int32)3;
+static const ::sal_Int32 wdPrinterOnlyBin = (sal_Int32)1;
+static const ::sal_Int32 wdPrinterPaperCassette = (sal_Int32)14;
+static const ::sal_Int32 wdPrinterSmallFormatBin = (sal_Int32)9;
+static const ::sal_Int32 wdPrinterTractorFeed = (sal_Int32)8;
+static const ::sal_Int32 wdPrinterUpperBin = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDPAPERTRAY_HDL

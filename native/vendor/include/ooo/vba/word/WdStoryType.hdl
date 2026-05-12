@@ -1,0 +1,31 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDSTORYTYPE_HDL
+#define INCLUDED_OOO_VBA_WORD_WDSTORYTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdStoryType {
+
+static const ::sal_Int32 wdCommentsStory = (sal_Int32)4;
+static const ::sal_Int32 wdEndnoteContinuationNoticeStory = (sal_Int32)17;
+static const ::sal_Int32 wdEndnoteContinuationSeparatorStory = (sal_Int32)16;
+static const ::sal_Int32 wdEndnoteSeparatorStory = (sal_Int32)15;
+static const ::sal_Int32 wdEndnotesStory = (sal_Int32)3;
+static const ::sal_Int32 wdEvenPagesFooterStory = (sal_Int32)8;
+static const ::sal_Int32 wdEvenPagesHeaderStory = (sal_Int32)6;
+static const ::sal_Int32 wdFirstPageFooterStory = (sal_Int32)11;
+static const ::sal_Int32 wdFirstPageHeaderStory = (sal_Int32)10;
+static const ::sal_Int32 wdFootnoteContinuationNoticeStory = (sal_Int32)14;
+static const ::sal_Int32 wdFootnoteContinuationSeparatorStory = (sal_Int32)13;
+static const ::sal_Int32 wdFootnoteSeparatorStory = (sal_Int32)12;
+static const ::sal_Int32 wdFootnotesStory = (sal_Int32)2;
+static const ::sal_Int32 wdMainTextStory = (sal_Int32)1;
+static const ::sal_Int32 wdPrimaryFooterStory = (sal_Int32)9;
+static const ::sal_Int32 wdPrimaryHeaderStory = (sal_Int32)7;
+static const ::sal_Int32 wdTextFrameStory = (sal_Int32)5;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDSTORYTYPE_HDL

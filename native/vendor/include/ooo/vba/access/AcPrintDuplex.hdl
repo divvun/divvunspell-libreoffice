@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_ACCESS_ACPRINTDUPLEX_HDL
+#define INCLUDED_OOO_VBA_ACCESS_ACPRINTDUPLEX_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace access { namespace AcPrintDuplex {
+
+static const ::sal_Int32 acPRDPHorizontal = (sal_Int32)2;
+static const ::sal_Int32 acPRDPSimplex = (sal_Int32)1;
+static const ::sal_Int32 acPRDPVertical = (sal_Int32)3;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_ACCESS_ACPRINTDUPLEX_HDL

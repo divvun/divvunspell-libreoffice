@@ -1,0 +1,20 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLQUERYTYPE_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLQUERYTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlQueryType {
+
+static const ::sal_Int32 xlADORecordset = (sal_Int32)7;
+static const ::sal_Int32 xlDAORecordset = (sal_Int32)2;
+static const ::sal_Int32 xlODBCQuery = (sal_Int32)1;
+static const ::sal_Int32 xlOLEDBQuery = (sal_Int32)5;
+static const ::sal_Int32 xlTextImport = (sal_Int32)6;
+static const ::sal_Int32 xlWebQuery = (sal_Int32)4;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLQUERYTYPE_HDL

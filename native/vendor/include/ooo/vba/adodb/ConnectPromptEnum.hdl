@@ -1,0 +1,18 @@
+#ifndef INCLUDED_OOO_VBA_ADODB_CONNECTPROMPTENUM_HDL
+#define INCLUDED_OOO_VBA_ADODB_CONNECTPROMPTENUM_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace adodb { namespace ConnectPromptEnum {
+
+static const ::sal_Int32 adPromptAlways = (sal_Int32)1;
+static const ::sal_Int32 adPromptComplete = (sal_Int32)2;
+static const ::sal_Int32 adPromptCompleteRequired = (sal_Int32)3;
+static const ::sal_Int32 adPromptNever = (sal_Int32)4;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_ADODB_CONNECTPROMPTENUM_HDL

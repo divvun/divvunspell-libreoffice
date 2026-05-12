@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLARROWHEADLENGTH_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLARROWHEADLENGTH_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlArrowHeadLength {
+
+static const ::sal_Int32 xlArrowHeadLengthLong = (sal_Int32)3;
+static const ::sal_Int32 xlArrowHeadLengthMedium = (sal_Int32)-4138;
+static const ::sal_Int32 xlArrowHeadLengthShort = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLARROWHEADLENGTH_HDL

@@ -1,0 +1,25 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLLINKSTATUS_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLLINKSTATUS_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlLinkStatus {
+
+static const ::sal_Int32 xlLinkStatusCopiedValues = (sal_Int32)10;
+static const ::sal_Int32 xlLinkStatusIndeterminate = (sal_Int32)5;
+static const ::sal_Int32 xlLinkStatusInvalidName = (sal_Int32)7;
+static const ::sal_Int32 xlLinkStatusMissingFile = (sal_Int32)1;
+static const ::sal_Int32 xlLinkStatusMissingSheet = (sal_Int32)2;
+static const ::sal_Int32 xlLinkStatusNotStarted = (sal_Int32)6;
+static const ::sal_Int32 xlLinkStatusOK = (sal_Int32)0;
+static const ::sal_Int32 xlLinkStatusOld = (sal_Int32)3;
+static const ::sal_Int32 xlLinkStatusSourceNotCalculated = (sal_Int32)4;
+static const ::sal_Int32 xlLinkStatusSourceNotOpen = (sal_Int32)8;
+static const ::sal_Int32 xlLinkStatusSourceOpen = (sal_Int32)9;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLLINKSTATUS_HDL

@@ -1,0 +1,28 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDREVISIONTYPE_HDL
+#define INCLUDED_OOO_VBA_WORD_WDREVISIONTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdRevisionType {
+
+static const ::sal_Int32 wdNoRevision = (sal_Int32)0;
+static const ::sal_Int32 wdRevisionConflict = (sal_Int32)7;
+static const ::sal_Int32 wdRevisionDelete = (sal_Int32)2;
+static const ::sal_Int32 wdRevisionDisplayField = (sal_Int32)5;
+static const ::sal_Int32 wdRevisionInsert = (sal_Int32)1;
+static const ::sal_Int32 wdRevisionParagraphNumber = (sal_Int32)4;
+static const ::sal_Int32 wdRevisionParagraphProperty = (sal_Int32)10;
+static const ::sal_Int32 wdRevisionProperty = (sal_Int32)3;
+static const ::sal_Int32 wdRevisionReconcile = (sal_Int32)6;
+static const ::sal_Int32 wdRevisionReplace = (sal_Int32)9;
+static const ::sal_Int32 wdRevisionSectionProperty = (sal_Int32)12;
+static const ::sal_Int32 wdRevisionStyle = (sal_Int32)8;
+static const ::sal_Int32 wdRevisionStyleDefinition = (sal_Int32)13;
+static const ::sal_Int32 wdRevisionTableProperty = (sal_Int32)11;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDREVISIONTYPE_HDL

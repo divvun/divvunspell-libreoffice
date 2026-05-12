@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLPIVOTTABLEMISSINGITEMS_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLPIVOTTABLEMISSINGITEMS_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlPivotTableMissingItems {
+
+static const ::sal_Int32 xlMissingItemsDefault = (sal_Int32)-1;
+static const ::sal_Int32 xlMissingItemsMax = (sal_Int32)32500;
+static const ::sal_Int32 xlMissingItemsNone = (sal_Int32)0;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLPIVOTTABLEMISSINGITEMS_HDL

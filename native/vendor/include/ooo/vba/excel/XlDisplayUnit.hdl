@@ -1,0 +1,23 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLDISPLAYUNIT_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLDISPLAYUNIT_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlDisplayUnit {
+
+static const ::sal_Int32 xlHundredMillions = (sal_Int32)-8;
+static const ::sal_Int32 xlHundredThousands = (sal_Int32)-5;
+static const ::sal_Int32 xlHundreds = (sal_Int32)-2;
+static const ::sal_Int32 xlMillionMillions = (sal_Int32)-10;
+static const ::sal_Int32 xlMillions = (sal_Int32)-6;
+static const ::sal_Int32 xlTenMillions = (sal_Int32)-7;
+static const ::sal_Int32 xlTenThousands = (sal_Int32)-4;
+static const ::sal_Int32 xlThousandMillions = (sal_Int32)-9;
+static const ::sal_Int32 xlThousands = (sal_Int32)-3;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLDISPLAYUNIT_HDL

@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOCOMMANDBARBUTTONHYPERLINKTYPE_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOCOMMANDBARBUTTONHYPERLINKTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoCommandBarButtonHyperlinkType {
+
+static const ::sal_Int32 msoCommandBarButtonHyperlinkInsertPicture = (sal_Int32)2;
+static const ::sal_Int32 msoCommandBarButtonHyperlinkNone = (sal_Int32)0;
+static const ::sal_Int32 msoCommandBarButtonHyperlinkOpen = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOCOMMANDBARBUTTONHYPERLINKTYPE_HDL

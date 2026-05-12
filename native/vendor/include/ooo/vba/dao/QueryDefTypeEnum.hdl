@@ -1,0 +1,27 @@
+#ifndef INCLUDED_OOO_VBA_DAO_QUERYDEFTYPEENUM_HDL
+#define INCLUDED_OOO_VBA_DAO_QUERYDEFTYPEENUM_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace dao { namespace QueryDefTypeEnum {
+
+static const ::sal_Int32 dbQAction = (sal_Int32)240;
+static const ::sal_Int32 dbQAppend = (sal_Int32)64;
+static const ::sal_Int32 dbQCompound = (sal_Int32)160;
+static const ::sal_Int32 dbQCrosstab = (sal_Int32)16;
+static const ::sal_Int32 dbQDDL = (sal_Int32)96;
+static const ::sal_Int32 dbQDelete = (sal_Int32)32;
+static const ::sal_Int32 dbQMakeTable = (sal_Int32)80;
+static const ::sal_Int32 dbQProcedure = (sal_Int32)224;
+static const ::sal_Int32 dbQSPTBulk = (sal_Int32)144;
+static const ::sal_Int32 dbQSQLPassThrough = (sal_Int32)112;
+static const ::sal_Int32 dbQSelect = (sal_Int32)0;
+static const ::sal_Int32 dbQSetOperation = (sal_Int32)128;
+static const ::sal_Int32 dbQUpdate = (sal_Int32)48;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_DAO_QUERYDEFTYPEENUM_HDL

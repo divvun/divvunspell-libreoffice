@@ -1,0 +1,27 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDREFERENCEKIND_HDL
+#define INCLUDED_OOO_VBA_WORD_WDREFERENCEKIND_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdReferenceKind {
+
+static const ::sal_Int32 wdContentText = (sal_Int32)-1;
+static const ::sal_Int32 wdEndnoteNumber = (sal_Int32)6;
+static const ::sal_Int32 wdEndnoteNumberFormatted = (sal_Int32)17;
+static const ::sal_Int32 wdEntireCaption = (sal_Int32)2;
+static const ::sal_Int32 wdFootnoteNumber = (sal_Int32)5;
+static const ::sal_Int32 wdFootnoteNumberFormatted = (sal_Int32)16;
+static const ::sal_Int32 wdNumberFullContext = (sal_Int32)-4;
+static const ::sal_Int32 wdNumberNoContext = (sal_Int32)-3;
+static const ::sal_Int32 wdNumberRelativeContext = (sal_Int32)-2;
+static const ::sal_Int32 wdOnlyCaptionText = (sal_Int32)4;
+static const ::sal_Int32 wdOnlyLabelAndNumber = (sal_Int32)3;
+static const ::sal_Int32 wdPageNumber = (sal_Int32)7;
+static const ::sal_Int32 wdPosition = (sal_Int32)15;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDREFERENCEKIND_HDL

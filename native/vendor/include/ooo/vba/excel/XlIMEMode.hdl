@@ -1,0 +1,25 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLIMEMODE_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLIMEMODE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlIMEMode {
+
+static const ::sal_Int32 xlIMEModeAlpha = (sal_Int32)8;
+static const ::sal_Int32 xlIMEModeAlphaFull = (sal_Int32)7;
+static const ::sal_Int32 xlIMEModeDisable = (sal_Int32)3;
+static const ::sal_Int32 xlIMEModeHangul = (sal_Int32)10;
+static const ::sal_Int32 xlIMEModeHangulFull = (sal_Int32)9;
+static const ::sal_Int32 xlIMEModeHiragana = (sal_Int32)4;
+static const ::sal_Int32 xlIMEModeKatakana = (sal_Int32)5;
+static const ::sal_Int32 xlIMEModeKatakanaHalf = (sal_Int32)6;
+static const ::sal_Int32 xlIMEModeNoControl = (sal_Int32)0;
+static const ::sal_Int32 xlIMEModeOff = (sal_Int32)2;
+static const ::sal_Int32 xlIMEModeOn = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLIMEMODE_HDL

@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLPRINTLOCATION_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLPRINTLOCATION_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlPrintLocation {
+
+static const ::sal_Int32 xlPrintInPlace = (sal_Int32)16;
+static const ::sal_Int32 xlPrintNoComments = (sal_Int32)-4142;
+static const ::sal_Int32 xlPrintSheetEnd = (sal_Int32)1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLPRINTLOCATION_HDL

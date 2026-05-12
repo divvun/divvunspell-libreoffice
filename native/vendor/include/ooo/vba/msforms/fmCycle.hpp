@@ -1,0 +1,6 @@
+#ifndef INCLUDED_OOO_VBA_MSFORMS_FMCYCLE_HPP
+#define INCLUDED_OOO_VBA_MSFORMS_FMCYCLE_HPP
+
+#include "ooo/vba/msforms/fmCycle.hdl"
+
+#endif // INCLUDED_OOO_VBA_MSFORMS_FMCYCLE_HPP

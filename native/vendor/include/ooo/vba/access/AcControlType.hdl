@@ -1,0 +1,33 @@
+#ifndef INCLUDED_OOO_VBA_ACCESS_ACCONTROLTYPE_HDL
+#define INCLUDED_OOO_VBA_ACCESS_ACCONTROLTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace access { namespace AcControlType {
+
+static const ::sal_Int32 acBoundObjectFrame = (sal_Int32)108;
+static const ::sal_Int32 acCheckBox = (sal_Int32)106;
+static const ::sal_Int32 acComboBox = (sal_Int32)111;
+static const ::sal_Int32 acCommandButton = (sal_Int32)104;
+static const ::sal_Int32 acCustomControl = (sal_Int32)119;
+static const ::sal_Int32 acImage = (sal_Int32)103;
+static const ::sal_Int32 acLabel = (sal_Int32)100;
+static const ::sal_Int32 acLine = (sal_Int32)102;
+static const ::sal_Int32 acListBox = (sal_Int32)110;
+static const ::sal_Int32 acObjectFrame = (sal_Int32)114;
+static const ::sal_Int32 acOptionButton = (sal_Int32)105;
+static const ::sal_Int32 acOptionGroup = (sal_Int32)107;
+static const ::sal_Int32 acPage = (sal_Int32)124;
+static const ::sal_Int32 acPageBreak = (sal_Int32)118;
+static const ::sal_Int32 acRectangle = (sal_Int32)101;
+static const ::sal_Int32 acSubform = (sal_Int32)112;
+static const ::sal_Int32 acTabCtl = (sal_Int32)123;
+static const ::sal_Int32 acTextBox = (sal_Int32)109;
+static const ::sal_Int32 acToggleButton = (sal_Int32)122;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_ACCESS_ACCONTROLTYPE_HDL

@@ -1,0 +1,19 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDLINEENDINGTYPE_HDL
+#define INCLUDED_OOO_VBA_WORD_WDLINEENDINGTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdLineEndingType {
+
+static const ::sal_Int32 wdCRLF = (sal_Int32)0;
+static const ::sal_Int32 wdCROnly = (sal_Int32)1;
+static const ::sal_Int32 wdLFCR = (sal_Int32)3;
+static const ::sal_Int32 wdLFOnly = (sal_Int32)2;
+static const ::sal_Int32 wdLSPS = (sal_Int32)4;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDLINEENDINGTYPE_HDL

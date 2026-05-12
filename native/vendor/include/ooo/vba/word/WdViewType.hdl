@@ -1,0 +1,21 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDVIEWTYPE_HDL
+#define INCLUDED_OOO_VBA_WORD_WDVIEWTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdViewType {
+
+static const ::sal_Int32 wdMasterView = (sal_Int32)5;
+static const ::sal_Int32 wdNormalView = (sal_Int32)1;
+static const ::sal_Int32 wdOutlineView = (sal_Int32)2;
+static const ::sal_Int32 wdPrintPreview = (sal_Int32)4;
+static const ::sal_Int32 wdPrintView = (sal_Int32)3;
+static const ::sal_Int32 wdReadingView = (sal_Int32)7;
+static const ::sal_Int32 wdWebView = (sal_Int32)6;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDVIEWTYPE_HDL

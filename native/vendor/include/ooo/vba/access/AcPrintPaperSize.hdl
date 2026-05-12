@@ -1,0 +1,56 @@
+#ifndef INCLUDED_OOO_VBA_ACCESS_ACPRINTPAPERSIZE_HDL
+#define INCLUDED_OOO_VBA_ACCESS_ACPRINTPAPERSIZE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace access { namespace AcPrintPaperSize {
+
+static const ::sal_Int32 acPRPS10x14 = (sal_Int32)16;
+static const ::sal_Int32 acPRPS11x17 = (sal_Int32)17;
+static const ::sal_Int32 acPRPSA3 = (sal_Int32)8;
+static const ::sal_Int32 acPRPSA4 = (sal_Int32)9;
+static const ::sal_Int32 acPRPSA4Small = (sal_Int32)10;
+static const ::sal_Int32 acPRPSA5 = (sal_Int32)11;
+static const ::sal_Int32 acPRPSB4 = (sal_Int32)12;
+static const ::sal_Int32 acPRPSB5 = (sal_Int32)13;
+static const ::sal_Int32 acPRPSCSheet = (sal_Int32)24;
+static const ::sal_Int32 acPRPSDSheet = (sal_Int32)25;
+static const ::sal_Int32 acPRPSESheet = (sal_Int32)26;
+static const ::sal_Int32 acPRPSEnv10 = (sal_Int32)20;
+static const ::sal_Int32 acPRPSEnv11 = (sal_Int32)21;
+static const ::sal_Int32 acPRPSEnv12 = (sal_Int32)22;
+static const ::sal_Int32 acPRPSEnv14 = (sal_Int32)23;
+static const ::sal_Int32 acPRPSEnv9 = (sal_Int32)19;
+static const ::sal_Int32 acPRPSEnvB4 = (sal_Int32)33;
+static const ::sal_Int32 acPRPSEnvB5 = (sal_Int32)34;
+static const ::sal_Int32 acPRPSEnvB6 = (sal_Int32)35;
+static const ::sal_Int32 acPRPSEnvC3 = (sal_Int32)29;
+static const ::sal_Int32 acPRPSEnvC4 = (sal_Int32)30;
+static const ::sal_Int32 acPRPSEnvC5 = (sal_Int32)28;
+static const ::sal_Int32 acPRPSEnvC6 = (sal_Int32)31;
+static const ::sal_Int32 acPRPSEnvC65 = (sal_Int32)32;
+static const ::sal_Int32 acPRPSEnvDL = (sal_Int32)27;
+static const ::sal_Int32 acPRPSEnvItaly = (sal_Int32)36;
+static const ::sal_Int32 acPRPSEnvMonarch = (sal_Int32)37;
+static const ::sal_Int32 acPRPSEnvPersonal = (sal_Int32)38;
+static const ::sal_Int32 acPRPSExecutive = (sal_Int32)7;
+static const ::sal_Int32 acPRPSFanfoldLglGerman = (sal_Int32)41;
+static const ::sal_Int32 acPRPSFanfoldStdGerman = (sal_Int32)40;
+static const ::sal_Int32 acPRPSFanfoldUS = (sal_Int32)39;
+static const ::sal_Int32 acPRPSFolio = (sal_Int32)14;
+static const ::sal_Int32 acPRPSLedger = (sal_Int32)4;
+static const ::sal_Int32 acPRPSLegal = (sal_Int32)5;
+static const ::sal_Int32 acPRPSLetter = (sal_Int32)1;
+static const ::sal_Int32 acPRPSLetterSmall = (sal_Int32)2;
+static const ::sal_Int32 acPRPSNote = (sal_Int32)18;
+static const ::sal_Int32 acPRPSQuarto = (sal_Int32)15;
+static const ::sal_Int32 acPRPSStatement = (sal_Int32)6;
+static const ::sal_Int32 acPRPSTabloid = (sal_Int32)3;
+static const ::sal_Int32 acPRPSUser = (sal_Int32)256;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_ACCESS_ACPRINTPAPERSIZE_HDL

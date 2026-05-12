@@ -1,0 +1,6 @@
+#ifndef INCLUDED_OOO_VBA_ACCESS_REFKIND_HPP
+#define INCLUDED_OOO_VBA_ACCESS_REFKIND_HPP
+
+#include "ooo/vba/access/RefKind.hdl"
+
+#endif // INCLUDED_OOO_VBA_ACCESS_REFKIND_HPP

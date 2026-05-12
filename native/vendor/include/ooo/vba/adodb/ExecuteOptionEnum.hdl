@@ -1,0 +1,19 @@
+#ifndef INCLUDED_OOO_VBA_ADODB_EXECUTEOPTIONENUM_HDL
+#define INCLUDED_OOO_VBA_ADODB_EXECUTEOPTIONENUM_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace adodb { namespace ExecuteOptionEnum {
+
+static const ::sal_Int32 adAsyncExecute = (sal_Int32)16;
+static const ::sal_Int32 adAsyncFetch = (sal_Int32)32;
+static const ::sal_Int32 adAsyncFetchNonBlocking = (sal_Int32)64;
+static const ::sal_Int32 adExecuteNoRecords = (sal_Int32)128;
+static const ::sal_Int32 adOptionUnspecified = (sal_Int32)-1;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_ADODB_EXECUTEOPTIONENUM_HDL

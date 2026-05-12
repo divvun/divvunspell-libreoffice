@@ -1,0 +1,18 @@
+#ifndef INCLUDED_OOO_VBA_DAO_SYNCHRONIZETYPEENUM_HDL
+#define INCLUDED_OOO_VBA_DAO_SYNCHRONIZETYPEENUM_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace dao { namespace SynchronizeTypeEnum {
+
+static const ::sal_Int32 dbRepExportChanges = (sal_Int32)1;
+static const ::sal_Int32 dbRepImpExpChanges = (sal_Int32)4;
+static const ::sal_Int32 dbRepImportChanges = (sal_Int32)2;
+static const ::sal_Int32 dbRepSyncInternet = (sal_Int32)16;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_DAO_SYNCHRONIZETYPEENUM_HDL

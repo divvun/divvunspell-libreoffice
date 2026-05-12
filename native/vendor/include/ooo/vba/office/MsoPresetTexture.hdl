@@ -1,0 +1,39 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOPRESETTEXTURE_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOPRESETTEXTURE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoPresetTexture {
+
+static const ::sal_Int32 msoPresetTextureMixed = (sal_Int32)-2;
+static const ::sal_Int32 msoTextureBlueTissuePaper = (sal_Int32)17;
+static const ::sal_Int32 msoTextureBouquet = (sal_Int32)20;
+static const ::sal_Int32 msoTextureBrownMarble = (sal_Int32)11;
+static const ::sal_Int32 msoTextureCanvas = (sal_Int32)2;
+static const ::sal_Int32 msoTextureCork = (sal_Int32)21;
+static const ::sal_Int32 msoTextureDenim = (sal_Int32)3;
+static const ::sal_Int32 msoTextureFishFossil = (sal_Int32)7;
+static const ::sal_Int32 msoTextureGranite = (sal_Int32)12;
+static const ::sal_Int32 msoTextureGreenMarble = (sal_Int32)9;
+static const ::sal_Int32 msoTextureMediumWood = (sal_Int32)24;
+static const ::sal_Int32 msoTextureNewsprint = (sal_Int32)13;
+static const ::sal_Int32 msoTextureOak = (sal_Int32)23;
+static const ::sal_Int32 msoTexturePaperBag = (sal_Int32)6;
+static const ::sal_Int32 msoTexturePapyrus = (sal_Int32)1;
+static const ::sal_Int32 msoTextureParchment = (sal_Int32)15;
+static const ::sal_Int32 msoTexturePinkTissuePaper = (sal_Int32)18;
+static const ::sal_Int32 msoTexturePurpleMesh = (sal_Int32)19;
+static const ::sal_Int32 msoTextureRecycledPaper = (sal_Int32)14;
+static const ::sal_Int32 msoTextureSand = (sal_Int32)8;
+static const ::sal_Int32 msoTextureStationery = (sal_Int32)16;
+static const ::sal_Int32 msoTextureWalnut = (sal_Int32)22;
+static const ::sal_Int32 msoTextureWaterDroplets = (sal_Int32)5;
+static const ::sal_Int32 msoTextureWhiteMarble = (sal_Int32)10;
+static const ::sal_Int32 msoTextureWovenMat = (sal_Int32)4;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOPRESETTEXTURE_HDL

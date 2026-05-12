@@ -1,0 +1,76 @@
+#ifndef INCLUDED_OOO_VBA_MSFORMS_XSHAPERANGE_HDL
+#define INCLUDED_OOO_VBA_MSFORMS_XSHAPERANGE_HDL
+
+#include "sal/config.h"
+
+#include "ooo/vba/XCollection.hdl"
+namespace ooo { namespace vba { namespace msforms { class XFillFormat; } } }
+namespace ooo { namespace vba { namespace msforms { class XLineFormat; } } }
+namespace ooo { namespace vba { namespace msforms { class XShape; } } }
+#include "com/sun/star/uno/Any.h"
+#include "com/sun/star/uno/Reference.h"
+#include "cppu/macros.hxx"
+#include "rtl/ustring.hxx"
+#include "sal/types.h"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace ooo { namespace vba { namespace msforms {
+
+class SAL_NO_VTABLE SAL_DLLPUBLIC_RTTI XShapeRange : public ::ooo::vba::XCollection
+{
+public:
+#if defined LIBO_INTERNAL_ONLY
+    XShapeRange() = default;
+    XShapeRange(XShapeRange const &) = default;
+    XShapeRange(XShapeRange &&) = default;
+    XShapeRange & operator =(XShapeRange const &) = default;
+    XShapeRange & operator =(XShapeRange &&) = default;
+#endif
+
+
+    // Attributes
+    virtual ::rtl::OUString SAL_CALL getName() = 0;
+    virtual void SAL_CALL setName( const ::rtl::OUString& _name ) = 0;
+    virtual double SAL_CALL getHeight() = 0;
+    virtual void SAL_CALL setHeight( double _height ) = 0;
+    virtual double SAL_CALL getWidth() = 0;
+    virtual void SAL_CALL setWidth( double _width ) = 0;
+    virtual double SAL_CALL getLeft() = 0;
+    virtual void SAL_CALL setLeft( double _left ) = 0;
+    virtual double SAL_CALL getTop() = 0;
+    virtual void SAL_CALL setTop( double _top ) = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::msforms::XLineFormat > SAL_CALL getLine() = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::msforms::XFillFormat > SAL_CALL getFill() = 0;
+    virtual ::sal_Bool SAL_CALL getLockAspectRatio() = 0;
+    virtual void SAL_CALL setLockAspectRatio( ::sal_Bool _lockaspectratio ) = 0;
+    virtual ::sal_Bool SAL_CALL getLockAnchor() = 0;
+    virtual void SAL_CALL setLockAnchor( ::sal_Bool _lockanchor ) = 0;
+    virtual ::sal_Int32 SAL_CALL getRelativeHorizontalPosition() = 0;
+    virtual void SAL_CALL setRelativeHorizontalPosition( ::sal_Int32 _relativehorizontalposition ) = 0;
+    virtual ::sal_Int32 SAL_CALL getRelativeVerticalPosition() = 0;
+    virtual void SAL_CALL setRelativeVerticalPosition( ::sal_Int32 _relativeverticalposition ) = 0;
+
+    // Methods
+    virtual ::css::uno::Any SAL_CALL TextFrame() = 0;
+    virtual ::css::uno::Any SAL_CALL WrapFormat() = 0;
+    virtual void SAL_CALL Select() = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::msforms::XShape > SAL_CALL Group() = 0;
+    virtual void SAL_CALL IncrementRotation( double Increment ) = 0;
+    virtual void SAL_CALL IncrementLeft( double Increment ) = 0;
+    virtual void SAL_CALL IncrementTop( double Increment ) = 0;
+    virtual void SAL_CALL ZOrder( ::sal_Int32 ZOrderCmd ) = 0;
+
+    static inline ::css::uno::Type const & SAL_CALL static_type(void * = 0);
+
+protected:
+    ~XShapeRange() SAL_NOEXCEPT {} // avoid warnings about virtual members and non-virtual dtor
+};
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::ooo::vba::msforms::XShapeRange const *);
+} } }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::uno::Reference< ::ooo::vba::msforms::XShapeRange > *);
+
+#endif

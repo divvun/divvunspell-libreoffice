@@ -1,0 +1,20 @@
+#ifndef INCLUDED_OOO_VBA_ADODB_SEEKENUM_HDL
+#define INCLUDED_OOO_VBA_ADODB_SEEKENUM_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace adodb { namespace SeekEnum {
+
+static const ::sal_Int32 adSeekAfter = (sal_Int32)8;
+static const ::sal_Int32 adSeekAfterEQ = (sal_Int32)4;
+static const ::sal_Int32 adSeekBefore = (sal_Int32)32;
+static const ::sal_Int32 adSeekBeforeEQ = (sal_Int32)16;
+static const ::sal_Int32 adSeekFirstEQ = (sal_Int32)1;
+static const ::sal_Int32 adSeekLastEQ = (sal_Int32)2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_ADODB_SEEKENUM_HDL

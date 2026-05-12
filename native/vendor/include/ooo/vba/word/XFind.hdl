@@ -1,0 +1,69 @@
+#ifndef INCLUDED_OOO_VBA_WORD_XFIND_HDL
+#define INCLUDED_OOO_VBA_WORD_XFIND_HDL
+
+#include "sal/config.h"
+
+#include "ooo/vba/XHelperInterface.hdl"
+#include "com/sun/star/uno/Any.h"
+#include "com/sun/star/uno/Reference.h"
+#include "cppu/macros.hxx"
+#include "rtl/ustring.hxx"
+#include "sal/types.h"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace ooo { namespace vba { namespace word {
+
+class SAL_NO_VTABLE SAL_DLLPUBLIC_RTTI XFind : public ::ooo::vba::XHelperInterface
+{
+public:
+#if defined LIBO_INTERNAL_ONLY
+    XFind() = default;
+    XFind(XFind const &) = default;
+    XFind(XFind &&) = default;
+    XFind & operator =(XFind const &) = default;
+    XFind & operator =(XFind &&) = default;
+#endif
+
+
+    // Attributes
+    virtual ::rtl::OUString SAL_CALL getText() = 0;
+    virtual void SAL_CALL setText( const ::rtl::OUString& _text ) = 0;
+    virtual ::css::uno::Any SAL_CALL getReplacement() = 0;
+    virtual void SAL_CALL setReplacement( const ::css::uno::Any& _replacement ) = 0;
+    virtual ::sal_Bool SAL_CALL getForward() = 0;
+    virtual void SAL_CALL setForward( ::sal_Bool _forward ) = 0;
+    virtual ::sal_Int32 SAL_CALL getWrap() = 0;
+    virtual void SAL_CALL setWrap( ::sal_Int32 _wrap ) = 0;
+    virtual ::sal_Bool SAL_CALL getFormat() = 0;
+    virtual void SAL_CALL setFormat( ::sal_Bool _format ) = 0;
+    virtual ::sal_Bool SAL_CALL getMatchCase() = 0;
+    virtual void SAL_CALL setMatchCase( ::sal_Bool _matchcase ) = 0;
+    virtual ::sal_Bool SAL_CALL getMatchWholeWord() = 0;
+    virtual void SAL_CALL setMatchWholeWord( ::sal_Bool _matchwholeword ) = 0;
+    virtual ::sal_Bool SAL_CALL getMatchWildcards() = 0;
+    virtual void SAL_CALL setMatchWildcards( ::sal_Bool _matchwildcards ) = 0;
+    virtual ::sal_Bool SAL_CALL getMatchSoundsLike() = 0;
+    virtual void SAL_CALL setMatchSoundsLike( ::sal_Bool _matchsoundslike ) = 0;
+    virtual ::sal_Bool SAL_CALL getMatchAllWordForms() = 0;
+    virtual void SAL_CALL setMatchAllWordForms( ::sal_Bool _matchallwordforms ) = 0;
+    virtual ::css::uno::Any SAL_CALL getStyle() = 0;
+    virtual void SAL_CALL setStyle( const ::css::uno::Any& _style ) = 0;
+
+    // Methods
+    virtual ::sal_Bool SAL_CALL Execute( const ::css::uno::Any& FindText, const ::css::uno::Any& MatchCase, const ::css::uno::Any& MatchWholeWord, const ::css::uno::Any& MatchWildcards, const ::css::uno::Any& MatchSoundsLike, const ::css::uno::Any& MatchAllWordForms, const ::css::uno::Any& Forward, const ::css::uno::Any& Wrap, const ::css::uno::Any& Format, const ::css::uno::Any& ReplaceWith, const ::css::uno::Any& Replace, const ::css::uno::Any& MatchKashida, const ::css::uno::Any& MatchDiacritics, const ::css::uno::Any& MatchAlefHamza, const ::css::uno::Any& MatchControl, const ::css::uno::Any& MatchPrefix, const ::css::uno::Any& MatchSuffix, const ::css::uno::Any& MatchPhrase, const ::css::uno::Any& IgnoreSpace, const ::css::uno::Any& IgnorePunct ) = 0;
+    virtual void SAL_CALL ClearFormatting() = 0;
+
+    static inline ::css::uno::Type const & SAL_CALL static_type(void * = 0);
+
+protected:
+    ~XFind() SAL_NOEXCEPT {} // avoid warnings about virtual members and non-virtual dtor
+};
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::ooo::vba::word::XFind const *);
+} } }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::uno::Reference< ::ooo::vba::word::XFind > *);
+
+#endif

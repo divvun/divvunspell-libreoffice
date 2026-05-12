@@ -1,0 +1,24 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLPASTETYPE_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLPASTETYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlPasteType {
+
+static const ::sal_Int32 xlPasteAll = (sal_Int32)-4104;
+static const ::sal_Int32 xlPasteAllExceptBorders = (sal_Int32)7;
+static const ::sal_Int32 xlPasteColumnWidths = (sal_Int32)8;
+static const ::sal_Int32 xlPasteComments = (sal_Int32)-4144;
+static const ::sal_Int32 xlPasteFormats = (sal_Int32)-4122;
+static const ::sal_Int32 xlPasteFormulas = (sal_Int32)-4123;
+static const ::sal_Int32 xlPasteFormulasAndNumberFormats = (sal_Int32)11;
+static const ::sal_Int32 xlPasteValidation = (sal_Int32)6;
+static const ::sal_Int32 xlPasteValues = (sal_Int32)-4163;
+static const ::sal_Int32 xlPasteValuesAndNumberFormats = (sal_Int32)12;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLPASTETYPE_HDL

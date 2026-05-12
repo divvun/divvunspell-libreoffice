@@ -1,0 +1,58 @@
+#ifndef INCLUDED_OOO_VBA_MSFORMS_XNEWFONT_HDL
+#define INCLUDED_OOO_VBA_MSFORMS_XNEWFONT_HDL
+
+#include "sal/config.h"
+
+#include "com/sun/star/uno/XInterface.hdl"
+#include "com/sun/star/uno/Reference.h"
+#include "cppu/macros.hxx"
+#include "rtl/ustring.hxx"
+#include "sal/types.h"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace ooo { namespace vba { namespace msforms {
+
+class SAL_NO_VTABLE SAL_DLLPUBLIC_RTTI XNewFont : public ::css::uno::XInterface
+{
+public:
+#if defined LIBO_INTERNAL_ONLY
+    XNewFont() = default;
+    XNewFont(XNewFont const &) = default;
+    XNewFont(XNewFont &&) = default;
+    XNewFont & operator =(XNewFont const &) = default;
+    XNewFont & operator =(XNewFont &&) = default;
+#endif
+
+
+    // Attributes
+    virtual ::rtl::OUString SAL_CALL getName() = 0;
+    virtual void SAL_CALL setName( const ::rtl::OUString& _name ) = 0;
+    virtual double SAL_CALL getSize() = 0;
+    virtual void SAL_CALL setSize( double _size ) = 0;
+    virtual ::sal_Int16 SAL_CALL getCharset() = 0;
+    virtual void SAL_CALL setCharset( ::sal_Int16 _charset ) = 0;
+    virtual ::sal_Int16 SAL_CALL getWeight() = 0;
+    virtual void SAL_CALL setWeight( ::sal_Int16 _weight ) = 0;
+    virtual ::sal_Bool SAL_CALL getBold() = 0;
+    virtual void SAL_CALL setBold( ::sal_Bool _bold ) = 0;
+    virtual ::sal_Bool SAL_CALL getItalic() = 0;
+    virtual void SAL_CALL setItalic( ::sal_Bool _italic ) = 0;
+    virtual ::sal_Bool SAL_CALL getUnderline() = 0;
+    virtual void SAL_CALL setUnderline( ::sal_Bool _underline ) = 0;
+    virtual ::sal_Bool SAL_CALL getStrikethrough() = 0;
+    virtual void SAL_CALL setStrikethrough( ::sal_Bool _strikethrough ) = 0;
+
+    static inline ::css::uno::Type const & SAL_CALL static_type(void * = 0);
+
+protected:
+    ~XNewFont() SAL_NOEXCEPT {} // avoid warnings about virtual members and non-virtual dtor
+};
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::ooo::vba::msforms::XNewFont const *);
+} } }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::uno::Reference< ::ooo::vba::msforms::XNewFont > *);
+
+#endif

@@ -1,0 +1,19 @@
+#ifndef INCLUDED_OOO_VBA_ADODB_PROPERTYATTRIBUTESENUM_HDL
+#define INCLUDED_OOO_VBA_ADODB_PROPERTYATTRIBUTESENUM_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace adodb { namespace PropertyAttributesEnum {
+
+static const ::sal_Int32 adPropNotSupported = (sal_Int32)0;
+static const ::sal_Int32 adPropOptional = (sal_Int32)2;
+static const ::sal_Int32 adPropRead = (sal_Int32)512;
+static const ::sal_Int32 adPropRequired = (sal_Int32)1;
+static const ::sal_Int32 adPropWrite = (sal_Int32)1024;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_ADODB_PROPERTYATTRIBUTESENUM_HDL

@@ -1,0 +1,63 @@
+#ifndef INCLUDED_OOO_VBA_XAPPLICATIONBASE_HDL
+#define INCLUDED_OOO_VBA_XAPPLICATIONBASE_HDL
+
+#include "sal/config.h"
+
+#include "ooo/vba/XHelperInterface.hdl"
+#include "com/sun/star/uno/Any.h"
+#include "com/sun/star/uno/Reference.h"
+#include "cppu/macros.hxx"
+#include "rtl/ustring.hxx"
+#include "sal/types.h"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace ooo { namespace vba {
+
+class SAL_NO_VTABLE SAL_DLLPUBLIC_RTTI XApplicationBase : public ::ooo::vba::XHelperInterface
+{
+public:
+#if defined LIBO_INTERNAL_ONLY
+    XApplicationBase() = default;
+    XApplicationBase(XApplicationBase const &) = default;
+    XApplicationBase(XApplicationBase &&) = default;
+    XApplicationBase & operator =(XApplicationBase const &) = default;
+    XApplicationBase & operator =(XApplicationBase &&) = default;
+#endif
+
+
+    // Attributes
+    virtual ::sal_Bool SAL_CALL getScreenUpdating() = 0;
+    virtual void SAL_CALL setScreenUpdating( ::sal_Bool _screenupdating ) = 0;
+    virtual ::sal_Bool SAL_CALL getDisplayStatusBar() = 0;
+    virtual void SAL_CALL setDisplayStatusBar( ::sal_Bool _displaystatusbar ) = 0;
+    virtual ::sal_Bool SAL_CALL getInteractive() = 0;
+    virtual void SAL_CALL setInteractive( ::sal_Bool _interactive ) = 0;
+    virtual ::sal_Bool SAL_CALL getVisible() = 0;
+    virtual void SAL_CALL setVisible( ::sal_Bool _visible ) = 0;
+    virtual ::rtl::OUString SAL_CALL getCaption() = 0;
+    virtual void SAL_CALL setCaption( const ::rtl::OUString& _caption ) = 0;
+    virtual ::rtl::OUString SAL_CALL getVersion() = 0;
+    virtual ::css::uno::Any SAL_CALL getVBE() = 0;
+
+    // Methods
+    virtual void SAL_CALL Quit() = 0;
+    virtual void SAL_CALL OnKey( const ::rtl::OUString& Key, const ::css::uno::Any& Procedure ) = 0;
+    virtual ::css::uno::Any SAL_CALL CommandBars( const ::css::uno::Any& Index ) = 0;
+    virtual ::css::uno::Any SAL_CALL Run( const ::rtl::OUString& MacroName, const ::css::uno::Any& varg1, const ::css::uno::Any& varg2, const ::css::uno::Any& varg3, const ::css::uno::Any& varg4, const ::css::uno::Any& varg5, const ::css::uno::Any& varg6, const ::css::uno::Any& varg7, const ::css::uno::Any& varg8, const ::css::uno::Any& varg9, const ::css::uno::Any& varg10, const ::css::uno::Any& varg11, const ::css::uno::Any& varg12, const ::css::uno::Any& varg13, const ::css::uno::Any& varg14, const ::css::uno::Any& varg15, const ::css::uno::Any& varg16, const ::css::uno::Any& varg17, const ::css::uno::Any& varg18, const ::css::uno::Any& varg19, const ::css::uno::Any& varg20, const ::css::uno::Any& varg21, const ::css::uno::Any& varg22, const ::css::uno::Any& varg23, const ::css::uno::Any& varg24, const ::css::uno::Any& varg25, const ::css::uno::Any& varg26, const ::css::uno::Any& varg27, const ::css::uno::Any& varg28, const ::css::uno::Any& varg29, const ::css::uno::Any& varg30 ) = 0;
+    virtual void SAL_CALL OnTime( const ::css::uno::Any& EarliestTime, const ::rtl::OUString& Procedure, const ::css::uno::Any& LatestTime, const ::css::uno::Any& Schedule ) = 0;
+    virtual void SAL_CALL Undo() = 0;
+
+    static inline ::css::uno::Type const & SAL_CALL static_type(void * = 0);
+
+protected:
+    ~XApplicationBase() SAL_NOEXCEPT {} // avoid warnings about virtual members and non-virtual dtor
+};
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::ooo::vba::XApplicationBase const *);
+} }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::uno::Reference< ::ooo::vba::XApplicationBase > *);
+
+#endif

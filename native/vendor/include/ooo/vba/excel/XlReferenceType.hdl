@@ -1,0 +1,18 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLREFERENCETYPE_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLREFERENCETYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlReferenceType {
+
+static const ::sal_Int32 xlAbsRowRelColumn = (sal_Int32)2;
+static const ::sal_Int32 xlAbsolute = (sal_Int32)1;
+static const ::sal_Int32 xlRelRowAbsColumn = (sal_Int32)3;
+static const ::sal_Int32 xlRelative = (sal_Int32)4;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLREFERENCETYPE_HDL

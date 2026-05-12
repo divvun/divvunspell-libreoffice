@@ -1,0 +1,101 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XWINDOW_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XWINDOW_HDL
+
+#include "sal/config.h"
+
+#include "com/sun/star/uno/XInterface.hdl"
+namespace ooo { namespace vba { namespace excel { class XPane; } } }
+namespace ooo { namespace vba { namespace excel { class XRange; } } }
+namespace ooo { namespace vba { namespace excel { class XWorksheet; } } }
+#include "com/sun/star/uno/Any.h"
+#include "com/sun/star/uno/Reference.h"
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace ooo { namespace vba { namespace excel {
+
+class SAL_NO_VTABLE SAL_DLLPUBLIC_RTTI XWindow : public ::css::uno::XInterface
+{
+public:
+#if defined LIBO_INTERNAL_ONLY
+    XWindow() = default;
+    XWindow(XWindow const &) = default;
+    XWindow(XWindow &&) = default;
+    XWindow & operator =(XWindow const &) = default;
+    XWindow & operator =(XWindow &&) = default;
+#endif
+
+
+    // Attributes
+    virtual ::css::uno::Any SAL_CALL getCaption() = 0;
+    virtual void SAL_CALL setCaption( const ::css::uno::Any& _caption ) = 0;
+    virtual ::sal_Bool SAL_CALL getDisplayGridlines() = 0;
+    virtual void SAL_CALL setDisplayGridlines( ::sal_Bool _displaygridlines ) = 0;
+    virtual ::sal_Bool SAL_CALL getDisplayHeadings() = 0;
+    virtual void SAL_CALL setDisplayHeadings( ::sal_Bool _displayheadings ) = 0;
+    virtual ::sal_Bool SAL_CALL getDisplayHorizontalScrollBar() = 0;
+    virtual void SAL_CALL setDisplayHorizontalScrollBar( ::sal_Bool _displayhorizontalscrollbar ) = 0;
+    virtual ::sal_Bool SAL_CALL getDisplayOutline() = 0;
+    virtual void SAL_CALL setDisplayOutline( ::sal_Bool _displayoutline ) = 0;
+    virtual ::sal_Bool SAL_CALL getDisplayVerticalScrollBar() = 0;
+    virtual void SAL_CALL setDisplayVerticalScrollBar( ::sal_Bool _displayverticalscrollbar ) = 0;
+    virtual ::sal_Bool SAL_CALL getDisplayWorkbookTabs() = 0;
+    virtual void SAL_CALL setDisplayWorkbookTabs( ::sal_Bool _displayworkbooktabs ) = 0;
+    virtual ::sal_Bool SAL_CALL getFreezePanes() = 0;
+    virtual void SAL_CALL setFreezePanes( ::sal_Bool _freezepanes ) = 0;
+    virtual ::sal_Bool SAL_CALL getSplit() = 0;
+    virtual void SAL_CALL setSplit( ::sal_Bool _split ) = 0;
+    virtual ::sal_Int32 SAL_CALL getSplitColumn() = 0;
+    virtual void SAL_CALL setSplitColumn( ::sal_Int32 _splitcolumn ) = 0;
+    virtual double SAL_CALL getSplitHorizontal() = 0;
+    virtual void SAL_CALL setSplitHorizontal( double _splithorizontal ) = 0;
+    virtual ::sal_Int32 SAL_CALL getSplitRow() = 0;
+    virtual void SAL_CALL setSplitRow( ::sal_Int32 _splitrow ) = 0;
+    virtual double SAL_CALL getSplitVertical() = 0;
+    virtual void SAL_CALL setSplitVertical( double _splitvertical ) = 0;
+    virtual ::css::uno::Any SAL_CALL getScrollColumn() = 0;
+    virtual void SAL_CALL setScrollColumn( const ::css::uno::Any& _scrollcolumn ) = 0;
+    virtual ::css::uno::Any SAL_CALL getScrollRow() = 0;
+    virtual void SAL_CALL setScrollRow( const ::css::uno::Any& _scrollrow ) = 0;
+    virtual ::css::uno::Any SAL_CALL getView() = 0;
+    virtual void SAL_CALL setView( const ::css::uno::Any& _view ) = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::excel::XRange > SAL_CALL getVisibleRange() = 0;
+    virtual ::css::uno::Any SAL_CALL getWindowState() = 0;
+    virtual void SAL_CALL setWindowState( const ::css::uno::Any& _windowstate ) = 0;
+    virtual ::css::uno::Any SAL_CALL getZoom() = 0;
+    virtual void SAL_CALL setZoom( const ::css::uno::Any& _zoom ) = 0;
+    virtual double SAL_CALL getTabRatio() = 0;
+    virtual void SAL_CALL setTabRatio( double _tabratio ) = 0;
+
+    // Methods
+    virtual ::css::uno::Any SAL_CALL SelectedSheets( const ::css::uno::Any& Index ) = 0;
+    virtual void SAL_CALL SmallScroll( const ::css::uno::Any& Down, const ::css::uno::Any& Up, const ::css::uno::Any& ToRight, const ::css::uno::Any& ToLeft ) = 0;
+    virtual void SAL_CALL LargeScroll( const ::css::uno::Any& Down, const ::css::uno::Any& Up, const ::css::uno::Any& ToRight, const ::css::uno::Any& ToLeft ) = 0;
+    virtual void SAL_CALL ScrollWorkbookTabs( const ::css::uno::Any& Sheets, const ::css::uno::Any& Position ) = 0;
+    virtual void SAL_CALL Activate() = 0;
+    virtual void SAL_CALL Close( const ::css::uno::Any& SaveChanges, const ::css::uno::Any& FileName, const ::css::uno::Any& RouteWorkBook ) = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::excel::XRange > SAL_CALL ActiveCell() = 0;
+    virtual ::css::uno::Any SAL_CALL Selection() = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::excel::XRange > SAL_CALL RangeSelection() = 0;
+    virtual ::sal_Int32 SAL_CALL PointsToScreenPixelsX( ::sal_Int32 Points ) = 0;
+    virtual ::sal_Int32 SAL_CALL PointsToScreenPixelsY( ::sal_Int32 Points ) = 0;
+    virtual void SAL_CALL PrintOut( const ::css::uno::Any& From, const ::css::uno::Any& To, const ::css::uno::Any& Copies, const ::css::uno::Any& Preview, const ::css::uno::Any& ActivePrinter, const ::css::uno::Any& PrintToFile, const ::css::uno::Any& Collate, const ::css::uno::Any& PrToFileName ) = 0;
+    virtual void SAL_CALL PrintPreview( const ::css::uno::Any& EnableChanges ) = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::excel::XWorksheet > SAL_CALL ActiveSheet() = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::excel::XPane > SAL_CALL ActivePane() = 0;
+
+    static inline ::css::uno::Type const & SAL_CALL static_type(void * = 0);
+
+protected:
+    ~XWindow() SAL_NOEXCEPT {} // avoid warnings about virtual members and non-virtual dtor
+};
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::ooo::vba::excel::XWindow const *);
+} } }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::uno::Reference< ::ooo::vba::excel::XWindow > *);
+
+#endif

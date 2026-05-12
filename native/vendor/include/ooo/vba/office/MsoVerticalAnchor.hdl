@@ -1,0 +1,20 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOVERTICALANCHOR_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOVERTICALANCHOR_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoVerticalAnchor {
+
+static const ::sal_Int32 msoAnchorBottom = (sal_Int32)4;
+static const ::sal_Int32 msoAnchorBottomBaseLine = (sal_Int32)5;
+static const ::sal_Int32 msoAnchorMiddle = (sal_Int32)3;
+static const ::sal_Int32 msoAnchorTop = (sal_Int32)1;
+static const ::sal_Int32 msoAnchorTopBaseline = (sal_Int32)2;
+static const ::sal_Int32 msoVerticalAnchorMixed = (sal_Int32)-2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOVERTICALANCHOR_HDL

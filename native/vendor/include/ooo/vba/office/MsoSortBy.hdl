@@ -1,0 +1,19 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOSORTBY_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOSORTBY_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoSortBy {
+
+static const ::sal_Int32 msoSortByFileName = (sal_Int32)1;
+static const ::sal_Int32 msoSortByFileType = (sal_Int32)3;
+static const ::sal_Int32 msoSortByLastModified = (sal_Int32)4;
+static const ::sal_Int32 msoSortByNone = (sal_Int32)5;
+static const ::sal_Int32 msoSortBySize = (sal_Int32)2;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOSORTBY_HDL

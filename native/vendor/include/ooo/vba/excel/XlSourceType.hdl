@@ -1,0 +1,22 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLSOURCETYPE_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLSOURCETYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlSourceType {
+
+static const ::sal_Int32 xlSourceAutoFilter = (sal_Int32)3;
+static const ::sal_Int32 xlSourceChart = (sal_Int32)5;
+static const ::sal_Int32 xlSourcePivotTable = (sal_Int32)6;
+static const ::sal_Int32 xlSourcePrintArea = (sal_Int32)2;
+static const ::sal_Int32 xlSourceQuery = (sal_Int32)7;
+static const ::sal_Int32 xlSourceRange = (sal_Int32)4;
+static const ::sal_Int32 xlSourceSheet = (sal_Int32)1;
+static const ::sal_Int32 xlSourceWorkbook = (sal_Int32)0;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLSOURCETYPE_HDL

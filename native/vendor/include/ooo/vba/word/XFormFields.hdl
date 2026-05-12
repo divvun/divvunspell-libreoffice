@@ -1,0 +1,43 @@
+#ifndef INCLUDED_OOO_VBA_WORD_XFORMFIELDS_HDL
+#define INCLUDED_OOO_VBA_WORD_XFORMFIELDS_HDL
+
+#include "sal/config.h"
+
+#include "ooo/vba/XCollection.hdl"
+#include "com/sun/star/uno/Reference.h"
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace ooo { namespace vba { namespace word {
+
+class SAL_NO_VTABLE SAL_DLLPUBLIC_RTTI XFormFields : public ::ooo::vba::XCollection
+{
+public:
+#if defined LIBO_INTERNAL_ONLY
+    XFormFields() = default;
+    XFormFields(XFormFields const &) = default;
+    XFormFields(XFormFields &&) = default;
+    XFormFields & operator =(XFormFields const &) = default;
+    XFormFields & operator =(XFormFields &&) = default;
+#endif
+
+
+    // Attributes
+    virtual ::sal_Bool SAL_CALL getShaded() = 0;
+    virtual void SAL_CALL setShaded( ::sal_Bool _shaded ) = 0;
+
+    static inline ::css::uno::Type const & SAL_CALL static_type(void * = 0);
+
+protected:
+    ~XFormFields() SAL_NOEXCEPT {} // avoid warnings about virtual members and non-virtual dtor
+};
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::ooo::vba::word::XFormFields const *);
+} } }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::uno::Reference< ::ooo::vba::word::XFormFields > *);
+
+#endif

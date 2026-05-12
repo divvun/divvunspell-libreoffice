@@ -1,0 +1,21 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDTABLEPOSITION_HDL
+#define INCLUDED_OOO_VBA_WORD_WDTABLEPOSITION_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdTablePosition {
+
+static const ::sal_Int32 wdTableBottom = (sal_Int32)-999997;
+static const ::sal_Int32 wdTableCenter = (sal_Int32)-999995;
+static const ::sal_Int32 wdTableInside = (sal_Int32)-999994;
+static const ::sal_Int32 wdTableLeft = (sal_Int32)-999998;
+static const ::sal_Int32 wdTableOutside = (sal_Int32)-999993;
+static const ::sal_Int32 wdTableRight = (sal_Int32)-999996;
+static const ::sal_Int32 wdTableTop = (sal_Int32)-999999;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDTABLEPOSITION_HDL

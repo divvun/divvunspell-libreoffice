@@ -1,0 +1,18 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLDATASERIESDATE_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLDATASERIESDATE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlDataSeriesDate {
+
+static const ::sal_Int32 xlDay = (sal_Int32)1;
+static const ::sal_Int32 xlMonth = (sal_Int32)3;
+static const ::sal_Int32 xlWeekday = (sal_Int32)2;
+static const ::sal_Int32 xlYear = (sal_Int32)4;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLDATASERIESDATE_HDL

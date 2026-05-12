@@ -1,0 +1,23 @@
+#ifndef INCLUDED_OOO_VBA_VBSTRCONV_HDL
+#define INCLUDED_OOO_VBA_VBSTRCONV_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace VbStrConv {
+
+static const ::sal_Int32 vbFromUnicode = (sal_Int32)128;
+static const ::sal_Int32 vbHiragana = (sal_Int32)32;
+static const ::sal_Int32 vbKatakana = (sal_Int32)16;
+static const ::sal_Int32 vbLowerCase = (sal_Int32)2;
+static const ::sal_Int32 vbNarrow = (sal_Int32)8;
+static const ::sal_Int32 vbProperCase = (sal_Int32)3;
+static const ::sal_Int32 vbUnicode = (sal_Int32)64;
+static const ::sal_Int32 vbUpperCase = (sal_Int32)1;
+static const ::sal_Int32 vbWide = (sal_Int32)4;
+
+} } }
+
+#endif // INCLUDED_OOO_VBA_VBSTRCONV_HDL

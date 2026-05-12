@@ -1,0 +1,18 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLWBATEMPLATE_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLWBATEMPLATE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlWBATemplate {
+
+static const ::sal_Int32 xlWBATChart = (sal_Int32)-4109;
+static const ::sal_Int32 xlWBATExcel4IntlMacroSheet = (sal_Int32)4;
+static const ::sal_Int32 xlWBATExcel4MacroSheet = (sal_Int32)3;
+static const ::sal_Int32 xlWBATWorksheet = (sal_Int32)-4167;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLWBATEMPLATE_HDL

@@ -1,0 +1,19 @@
+#ifndef INCLUDED_OOO_VBA_ACCESS_ACFILEFORMAT_HDL
+#define INCLUDED_OOO_VBA_ACCESS_ACFILEFORMAT_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace access { namespace AcFileFormat {
+
+static const ::sal_Int32 acFileFormatAccess2 = (sal_Int32)2;
+static const ::sal_Int32 acFileFormatAccess2000 = (sal_Int32)9;
+static const ::sal_Int32 acFileFormatAccess2002 = (sal_Int32)10;
+static const ::sal_Int32 acFileFormatAccess95 = (sal_Int32)7;
+static const ::sal_Int32 acFileFormatAccess97 = (sal_Int32)8;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_ACCESS_ACFILEFORMAT_HDL

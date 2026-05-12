@@ -1,0 +1,17 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XLPRIORITY_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XLPRIORITY_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace excel { namespace XlPriority {
+
+static const ::sal_Int32 xlPriorityHigh = (sal_Int32)-4127;
+static const ::sal_Int32 xlPriorityLow = (sal_Int32)-4134;
+static const ::sal_Int32 xlPriorityNormal = (sal_Int32)-4143;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_EXCEL_XLPRIORITY_HDL

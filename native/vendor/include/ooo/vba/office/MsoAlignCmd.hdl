@@ -1,0 +1,20 @@
+#ifndef INCLUDED_OOO_VBA_OFFICE_MSOALIGNCMD_HDL
+#define INCLUDED_OOO_VBA_OFFICE_MSOALIGNCMD_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace office { namespace MsoAlignCmd {
+
+static const ::sal_Int32 msoAlignBottoms = (sal_Int32)5;
+static const ::sal_Int32 msoAlignCenters = (sal_Int32)1;
+static const ::sal_Int32 msoAlignLefts = (sal_Int32)0;
+static const ::sal_Int32 msoAlignMiddles = (sal_Int32)4;
+static const ::sal_Int32 msoAlignRights = (sal_Int32)2;
+static const ::sal_Int32 msoAlignTops = (sal_Int32)3;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_OFFICE_MSOALIGNCMD_HDL

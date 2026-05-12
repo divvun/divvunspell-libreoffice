@@ -1,0 +1,39 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDLINESTYLE_HDL
+#define INCLUDED_OOO_VBA_WORD_WDLINESTYLE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdLineStyle {
+
+static const ::sal_Int32 wdLineStyleDashDot = (sal_Int32)5;
+static const ::sal_Int32 wdLineStyleDashDotDot = (sal_Int32)6;
+static const ::sal_Int32 wdLineStyleDashDotStroked = (sal_Int32)20;
+static const ::sal_Int32 wdLineStyleDashLargeGap = (sal_Int32)4;
+static const ::sal_Int32 wdLineStyleDashSmallGap = (sal_Int32)3;
+static const ::sal_Int32 wdLineStyleDot = (sal_Int32)2;
+static const ::sal_Int32 wdLineStyleDouble = (sal_Int32)7;
+static const ::sal_Int32 wdLineStyleDoubleWavy = (sal_Int32)19;
+static const ::sal_Int32 wdLineStyleEmboss3D = (sal_Int32)21;
+static const ::sal_Int32 wdLineStyleEngrave3D = (sal_Int32)22;
+static const ::sal_Int32 wdLineStyleInset = (sal_Int32)24;
+static const ::sal_Int32 wdLineStyleNone = (sal_Int32)0;
+static const ::sal_Int32 wdLineStyleOutset = (sal_Int32)23;
+static const ::sal_Int32 wdLineStyleSingle = (sal_Int32)1;
+static const ::sal_Int32 wdLineStyleSingleWavy = (sal_Int32)18;
+static const ::sal_Int32 wdLineStyleThickThinLargeGap = (sal_Int32)16;
+static const ::sal_Int32 wdLineStyleThickThinMedGap = (sal_Int32)13;
+static const ::sal_Int32 wdLineStyleThickThinSmallGap = (sal_Int32)10;
+static const ::sal_Int32 wdLineStyleThinThickLargeGap = (sal_Int32)15;
+static const ::sal_Int32 wdLineStyleThinThickMedGap = (sal_Int32)12;
+static const ::sal_Int32 wdLineStyleThinThickSmallGap = (sal_Int32)9;
+static const ::sal_Int32 wdLineStyleThinThickThinLargeGap = (sal_Int32)17;
+static const ::sal_Int32 wdLineStyleThinThickThinMedGap = (sal_Int32)14;
+static const ::sal_Int32 wdLineStyleThinThickThinSmallGap = (sal_Int32)11;
+static const ::sal_Int32 wdLineStyleTriple = (sal_Int32)8;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDLINESTYLE_HDL

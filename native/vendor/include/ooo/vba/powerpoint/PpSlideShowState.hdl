@@ -1,0 +1,19 @@
+#ifndef INCLUDED_OOO_VBA_POWERPOINT_PPSLIDESHOWSTATE_HDL
+#define INCLUDED_OOO_VBA_POWERPOINT_PPSLIDESHOWSTATE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace powerpoint { namespace PpSlideShowState {
+
+static const ::sal_Int32 ppSlideShowBlackScreen = (sal_Int32)3;
+static const ::sal_Int32 ppSlideShowDone = (sal_Int32)5;
+static const ::sal_Int32 ppSlideShowPaused = (sal_Int32)2;
+static const ::sal_Int32 ppSlideShowRunning = (sal_Int32)1;
+static const ::sal_Int32 ppSlideShowWhiteScreen = (sal_Int32)4;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_POWERPOINT_PPSLIDESHOWSTATE_HDL

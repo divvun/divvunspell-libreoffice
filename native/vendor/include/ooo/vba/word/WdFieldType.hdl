@@ -1,0 +1,106 @@
+#ifndef INCLUDED_OOO_VBA_WORD_WDFIELDTYPE_HDL
+#define INCLUDED_OOO_VBA_WORD_WDFIELDTYPE_HDL
+
+#include "sal/config.h"
+
+#include "cppu/macros.hxx"
+#include "sal/types.h"
+
+namespace ooo { namespace vba { namespace word { namespace WdFieldType {
+
+static const ::sal_Int32 wdFieldAddin = (sal_Int32)81;
+static const ::sal_Int32 wdFieldAddressBlock = (sal_Int32)93;
+static const ::sal_Int32 wdFieldAdvance = (sal_Int32)84;
+static const ::sal_Int32 wdFieldAsk = (sal_Int32)38;
+static const ::sal_Int32 wdFieldAuthor = (sal_Int32)17;
+static const ::sal_Int32 wdFieldAutoNum = (sal_Int32)54;
+static const ::sal_Int32 wdFieldAutoNumLegal = (sal_Int32)53;
+static const ::sal_Int32 wdFieldAutoNumOutline = (sal_Int32)52;
+static const ::sal_Int32 wdFieldAutoText = (sal_Int32)79;
+static const ::sal_Int32 wdFieldAutoTextList = (sal_Int32)89;
+static const ::sal_Int32 wdFieldBarCode = (sal_Int32)63;
+static const ::sal_Int32 wdFieldBidiOutline = (sal_Int32)92;
+static const ::sal_Int32 wdFieldComments = (sal_Int32)19;
+static const ::sal_Int32 wdFieldCompare = (sal_Int32)80;
+static const ::sal_Int32 wdFieldCreateDate = (sal_Int32)21;
+static const ::sal_Int32 wdFieldDDE = (sal_Int32)45;
+static const ::sal_Int32 wdFieldDDEAuto = (sal_Int32)46;
+static const ::sal_Int32 wdFieldData = (sal_Int32)40;
+static const ::sal_Int32 wdFieldDatabase = (sal_Int32)78;
+static const ::sal_Int32 wdFieldDate = (sal_Int32)31;
+static const ::sal_Int32 wdFieldDocProperty = (sal_Int32)85;
+static const ::sal_Int32 wdFieldDocVariable = (sal_Int32)64;
+static const ::sal_Int32 wdFieldEditTime = (sal_Int32)25;
+static const ::sal_Int32 wdFieldEmbed = (sal_Int32)58;
+static const ::sal_Int32 wdFieldEmpty = (sal_Int32)-1;
+static const ::sal_Int32 wdFieldExpression = (sal_Int32)34;
+static const ::sal_Int32 wdFieldFileName = (sal_Int32)29;
+static const ::sal_Int32 wdFieldFileSize = (sal_Int32)69;
+static const ::sal_Int32 wdFieldFillIn = (sal_Int32)39;
+static const ::sal_Int32 wdFieldFootnoteRef = (sal_Int32)5;
+static const ::sal_Int32 wdFieldFormCheckBox = (sal_Int32)71;
+static const ::sal_Int32 wdFieldFormDropDown = (sal_Int32)83;
+static const ::sal_Int32 wdFieldFormTextInput = (sal_Int32)70;
+static const ::sal_Int32 wdFieldFormula = (sal_Int32)49;
+static const ::sal_Int32 wdFieldGlossary = (sal_Int32)47;
+static const ::sal_Int32 wdFieldGoToButton = (sal_Int32)50;
+static const ::sal_Int32 wdFieldGreetingLine = (sal_Int32)94;
+static const ::sal_Int32 wdFieldHTMLActiveX = (sal_Int32)91;
+static const ::sal_Int32 wdFieldHyperlink = (sal_Int32)88;
+static const ::sal_Int32 wdFieldIf = (sal_Int32)7;
+static const ::sal_Int32 wdFieldImport = (sal_Int32)55;
+static const ::sal_Int32 wdFieldInclude = (sal_Int32)36;
+static const ::sal_Int32 wdFieldIncludePicture = (sal_Int32)67;
+static const ::sal_Int32 wdFieldIncludeText = (sal_Int32)68;
+static const ::sal_Int32 wdFieldIndex = (sal_Int32)8;
+static const ::sal_Int32 wdFieldIndexEntry = (sal_Int32)4;
+static const ::sal_Int32 wdFieldInfo = (sal_Int32)14;
+static const ::sal_Int32 wdFieldKeyWord = (sal_Int32)18;
+static const ::sal_Int32 wdFieldLastSavedBy = (sal_Int32)20;
+static const ::sal_Int32 wdFieldLink = (sal_Int32)56;
+static const ::sal_Int32 wdFieldListNum = (sal_Int32)90;
+static const ::sal_Int32 wdFieldMacroButton = (sal_Int32)51;
+static const ::sal_Int32 wdFieldMergeField = (sal_Int32)59;
+static const ::sal_Int32 wdFieldMergeRec = (sal_Int32)44;
+static const ::sal_Int32 wdFieldMergeSeq = (sal_Int32)75;
+static const ::sal_Int32 wdFieldNext = (sal_Int32)41;
+static const ::sal_Int32 wdFieldNextIf = (sal_Int32)42;
+static const ::sal_Int32 wdFieldNoteRef = (sal_Int32)72;
+static const ::sal_Int32 wdFieldNumChars = (sal_Int32)28;
+static const ::sal_Int32 wdFieldNumPages = (sal_Int32)26;
+static const ::sal_Int32 wdFieldNumWords = (sal_Int32)27;
+static const ::sal_Int32 wdFieldOCX = (sal_Int32)87;
+static const ::sal_Int32 wdFieldPage = (sal_Int32)33;
+static const ::sal_Int32 wdFieldPageRef = (sal_Int32)37;
+static const ::sal_Int32 wdFieldPrint = (sal_Int32)48;
+static const ::sal_Int32 wdFieldPrintDate = (sal_Int32)23;
+static const ::sal_Int32 wdFieldPrivate = (sal_Int32)77;
+static const ::sal_Int32 wdFieldQuote = (sal_Int32)35;
+static const ::sal_Int32 wdFieldRef = (sal_Int32)3;
+static const ::sal_Int32 wdFieldRefDoc = (sal_Int32)11;
+static const ::sal_Int32 wdFieldRevisionNum = (sal_Int32)24;
+static const ::sal_Int32 wdFieldSaveDate = (sal_Int32)22;
+static const ::sal_Int32 wdFieldSection = (sal_Int32)65;
+static const ::sal_Int32 wdFieldSectionPages = (sal_Int32)66;
+static const ::sal_Int32 wdFieldSequence = (sal_Int32)12;
+static const ::sal_Int32 wdFieldSet = (sal_Int32)6;
+static const ::sal_Int32 wdFieldShape = (sal_Int32)95;
+static const ::sal_Int32 wdFieldSkipIf = (sal_Int32)43;
+static const ::sal_Int32 wdFieldStyleRef = (sal_Int32)10;
+static const ::sal_Int32 wdFieldSubject = (sal_Int32)16;
+static const ::sal_Int32 wdFieldSubscriber = (sal_Int32)82;
+static const ::sal_Int32 wdFieldSymbol = (sal_Int32)57;
+static const ::sal_Int32 wdFieldTOA = (sal_Int32)73;
+static const ::sal_Int32 wdFieldTOAEntry = (sal_Int32)74;
+static const ::sal_Int32 wdFieldTOC = (sal_Int32)13;
+static const ::sal_Int32 wdFieldTOCEntry = (sal_Int32)9;
+static const ::sal_Int32 wdFieldTemplate = (sal_Int32)30;
+static const ::sal_Int32 wdFieldTime = (sal_Int32)32;
+static const ::sal_Int32 wdFieldTitle = (sal_Int32)15;
+static const ::sal_Int32 wdFieldUserAddress = (sal_Int32)62;
+static const ::sal_Int32 wdFieldUserInitials = (sal_Int32)61;
+static const ::sal_Int32 wdFieldUserName = (sal_Int32)60;
+
+} } } }
+
+#endif // INCLUDED_OOO_VBA_WORD_WDFIELDTYPE_HDL

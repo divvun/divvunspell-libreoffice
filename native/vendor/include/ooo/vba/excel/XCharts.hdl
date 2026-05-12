@@ -1,0 +1,44 @@
+#ifndef INCLUDED_OOO_VBA_EXCEL_XCHARTS_HDL
+#define INCLUDED_OOO_VBA_EXCEL_XCHARTS_HDL
+
+#include "sal/config.h"
+
+#include "ooo/vba/XCollection.hdl"
+namespace ooo { namespace vba { namespace excel { class XChart; } } }
+#include "com/sun/star/uno/Any.h"
+#include "com/sun/star/uno/Reference.h"
+#include "cppu/macros.hxx"
+
+namespace com { namespace sun { namespace star { namespace uno { class Type; } } } }
+
+namespace ooo { namespace vba { namespace excel {
+
+class SAL_NO_VTABLE SAL_DLLPUBLIC_RTTI XCharts : public ::ooo::vba::XCollection
+{
+public:
+#if defined LIBO_INTERNAL_ONLY
+    XCharts() = default;
+    XCharts(XCharts const &) = default;
+    XCharts(XCharts &&) = default;
+    XCharts & operator =(XCharts const &) = default;
+    XCharts & operator =(XCharts &&) = default;
+#endif
+
+
+    // Methods
+    virtual ::css::uno::Any SAL_CALL Add() = 0;
+    virtual ::css::uno::Reference< ::ooo::vba::excel::XChart > SAL_CALL getActiveChart() = 0;
+
+    static inline ::css::uno::Type const & SAL_CALL static_type(void * = 0);
+
+protected:
+    ~XCharts() SAL_NOEXCEPT {} // avoid warnings about virtual members and non-virtual dtor
+};
+
+
+inline ::css::uno::Type const & cppu_detail_getUnoType(SAL_UNUSED_PARAMETER ::ooo::vba::excel::XCharts const *);
+} } }
+
+SAL_DEPRECATED("use cppu::UnoType") inline ::css::uno::Type const & SAL_CALL getCppuType(const ::css::uno::Reference< ::ooo::vba::excel::XCharts > *);
+
+#endif
