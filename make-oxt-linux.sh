@@ -20,10 +20,10 @@ if [ ! -f "$RUNTIME_INC/divvun_runtime.h" ]; then
     exit 1
 fi
 
-(cd "$HERE/native" && make RUNTIME_LIB="$RUNTIME_LIB" RUNTIME_INC="$RUNTIME_INC")
-COMPONENT_DYLIB="$HERE/native/divvunspell.uno.dylib"
-if [ ! -f "$COMPONENT_DYLIB" ]; then
-    echo "Built UNO component not found at $COMPONENT_DYLIB" >&2
+(cd "$HERE/native" && make -f Makefile.linux RUNTIME_LIB="$RUNTIME_LIB" RUNTIME_INC="$RUNTIME_INC")
+COMPONENT_SO="$HERE/native/divvunspell.uno.so"
+if [ ! -f "$COMPONENT_SO" ]; then
+    echo "Built UNO component not found at $COMPONENT_SO" >&2
     exit 1
 fi
 
@@ -31,9 +31,12 @@ STAGE="$(mktemp -d)"
 trap 'rm -rf "$STAGE"' EXIT
 
 rsync -a --exclude='__pycache__' --exclude='*.pyc' "$HERE/src/" "$STAGE/"
-cp "$COMPONENT_DYLIB" "$STAGE/divvunspell.uno.dylib"
-strip -x "$STAGE/divvunspell.uno.dylib"
+cp "$COMPONENT_SO" "$STAGE/divvunspell.uno.so"
+strip --strip-unneeded "$STAGE/divvunspell.uno.so"
 
-rm -f "$HERE/macos.oxt"
-(cd "$STAGE" && zip -qr "$HERE/macos.oxt" .)
-echo "Wrote $HERE/macos.oxt"
+# Rewrite the platform-specific URI in DivvunSpell.components (.dylib -> .so).
+sed -i 's/divvunspell\.uno\.dylib/divvunspell.uno.so/' "$STAGE/DivvunSpell.components"
+
+rm -f "$HERE/linux.oxt"
+(cd "$STAGE" && zip -qr "$HERE/linux.oxt" .)
+echo "Wrote $HERE/linux.oxt"

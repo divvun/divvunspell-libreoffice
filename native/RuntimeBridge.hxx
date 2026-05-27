@@ -1,27 +1,18 @@
 #pragma once
 
-#include <cstddef>
-#include <cstdint>
+#include <divvun_runtime.h>
+
 #include <string>
 #include <string_view>
 
 namespace divvun {
 
-struct RustSlice {
-    void* ptr;
-    std::uintptr_t len;
-};
-
-using ErrorCallback = void (*)(void* ptr, std::uintptr_t len);
-
-// Singleton bridge to libdivvun_runtime.dylib. dlopen lazily on first use,
-// looks up the DRT_* symbols, hides ownership and the error-callback dance.
+// Thin façade over the canonical DRT_* ABI: marshals std::string_view <->
+// rust_slice_t, owns the thread-local error callback, converts Rust errors
+// into exceptions, and frees Rust-allocated return slices.
 class RuntimeBridge {
 public:
     static RuntimeBridge& instance();
-
-    bool ready() const { return mReady; }
-    const std::string& loadError() const { return mLoadError; }
 
     void* bundleFromBundle(std::string_view path);
     void* bundleFromPath(std::string_view path);
@@ -33,33 +24,9 @@ public:
     void pipelineDrop(void* handle);
 
 private:
-    RuntimeBridge();
+    RuntimeBridge() = default;
     RuntimeBridge(const RuntimeBridge&) = delete;
     RuntimeBridge& operator=(const RuntimeBridge&) = delete;
-
-    void load();
-
-    void* mLib = nullptr;
-    bool mReady = false;
-    std::string mLoadError;
-
-    using FnBundleFromBundle = void* (*)(RustSlice, ErrorCallback);
-    using FnBundleFromPath   = void* (*)(RustSlice, ErrorCallback);
-    using FnBundleCreate     = void* (*)(void*, RustSlice, ErrorCallback);
-    using FnBundleDrop       = void  (*)(void*);
-    using FnPipelineDrop     = void  (*)(void*);
-    using FnPipelineForward  = RustSlice (*)(void*, RustSlice, ErrorCallback);
-    using FnBundleErrPrefs   = RustSlice (*)(void*, RustSlice, ErrorCallback);
-    using FnVecDrop          = void  (*)(RustSlice);
-
-    FnBundleFromBundle  mBundleFromBundle  = nullptr;
-    FnBundleFromPath    mBundleFromPath    = nullptr;
-    FnBundleCreate      mBundleCreate      = nullptr;
-    FnBundleDrop        mBundleDrop        = nullptr;
-    FnPipelineDrop      mPipelineDrop      = nullptr;
-    FnPipelineForward   mPipelineForward   = nullptr;
-    FnBundleErrPrefs    mBundleErrorPrefs  = nullptr;
-    FnVecDrop           mVecDrop           = nullptr;
 };
 
 class RuntimeError : public std::exception {

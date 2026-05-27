@@ -1,9 +1,9 @@
 #include "DivvunSpellChecker.hxx"
 #include "Engine.hxx"
+#include "Platform.hxx"
 
 #include <com/sun/star/linguistic2/SpellFailure.hpp>
 #include <rtl/ustring.hxx>
-#include <syslog.h>
 
 using namespace ::com::sun::star;
 
@@ -56,7 +56,7 @@ uno::Sequence<::rtl::OUString> SAL_CALL DivvunSpellAlternatives::getAlternatives
 // ===== DivvunSpellChecker =====
 
 DivvunSpellChecker::DivvunSpellChecker() {
-    syslog(LOG_NOTICE, "DivvunSpellChecker init");
+    logLine("DivvunSpellChecker init");
 }
 
 DivvunSpellChecker::~DivvunSpellChecker() = default;

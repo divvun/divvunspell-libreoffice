@@ -1,6 +1,7 @@
 #include "DivvunProofreader.hxx"
 #include "Engine.hxx"
 #include "ErrorClass.hxx"
+#include "Platform.hxx"
 
 #include <com/sun/star/linguistic2/ProofreadingResult.hpp>
 #include <com/sun/star/linguistic2/SingleProofreadingError.hpp>
@@ -9,7 +10,6 @@
 
 #include <nlohmann/json.hpp>
 #include <sstream>
-#include <syslog.h>
 
 using namespace ::com::sun::star;
 
@@ -37,7 +37,7 @@ std::string bcp47Tag(const lang::Locale& loc) {
 } // namespace
 
 DivvunProofreader::DivvunProofreader() {
-    syslog(LOG_NOTICE, "DivvunProofreader init");
+    logLine("DivvunProofreader init");
 }
 
 DivvunProofreader::~DivvunProofreader() = default;
@@ -118,7 +118,7 @@ linguistic2::ProofreadingResult SAL_CALL DivvunProofreader::doProofreading(
     try {
         responseJson = Engine::instance().run(tag, chunkUtf8);
     } catch (const RuntimeError& e) {
-        syslog(LOG_NOTICE, "doProofreading runtime error: %s", e.what());
+        logLine(std::string("doProofreading runtime error: ") + e.what());
         return result;
     }
     if (responseJson.empty()) return result;
@@ -127,7 +127,7 @@ linguistic2::ProofreadingResult SAL_CALL DivvunProofreader::doProofreading(
     try {
         parsed = nlohmann::json::parse(responseJson);
     } catch (const std::exception& e) {
-        syslog(LOG_NOTICE, "doProofreading json parse error: %s", e.what());
+        logLine(std::string("doProofreading json parse error: ") + e.what());
         return result;
     }
 

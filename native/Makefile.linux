@@ -1,0 +1,61 @@
+# Build the divvunspell.uno.so UNO C++ component for Linux.
+#
+# Mirrors Makefile (macOS); differences are the output extension, UNO platform
+# define (LINUX vs MACOSX), and the linker invocation: on Linux we tell the
+# linker to defer object-file undefined symbols to dlopen-time (LO supplies
+# the UNO symbols when it loads the component), matching macOS's
+# -undefined dynamic_lookup behaviour.
+#
+# Invoke with: make -f Makefile.linux
+
+ifndef RUNTIME_LIB
+  ifndef DIVVUN_RUNTIME_DIR
+    $(error Set DIVVUN_RUNTIME_DIR (or RUNTIME_LIB and RUNTIME_INC) to point at the divvun-runtime checkout)
+  endif
+  RUNTIME_LIB := $(DIVVUN_RUNTIME_DIR)/target/release
+endif
+ifndef RUNTIME_INC
+  ifndef DIVVUN_RUNTIME_DIR
+    $(error Set DIVVUN_RUNTIME_DIR (or RUNTIME_LIB and RUNTIME_INC) to point at the divvun-runtime checkout)
+  endif
+  RUNTIME_INC := $(DIVVUN_RUNTIME_DIR)/bindings/c
+endif
+RUNTIME_LIB_FILE = $(RUNTIME_LIB)/libdivvun_runtime.a
+
+VENDOR_INC = vendor/include
+VENDOR_NLOHMANN = vendor
+
+CXX        ?= g++
+CXXSTD     ?= -std=c++17
+OPT        ?= -O2
+
+CXXFLAGS = $(CXXSTD) $(OPT) -fPIC -fvisibility=hidden \
+           -DUNX -DLINUX -D_PTHREADS \
+           -I$(VENDOR_INC) -I$(VENDOR_NLOHMANN) -I$(RUNTIME_INC) -I.
+
+LDFLAGS = -shared \
+          -Wl,--unresolved-symbols=ignore-in-object-files \
+          -Wl,-soname,divvunspell.uno.so
+
+# divvun-runtime's std + transitive C deps. Authoritative list comes from:
+#   cargo rustc --release --features ffi --crate-type staticlib -- --print native-static-libs
+# in divvun-runtime. Extend below if link emits "undefined reference".
+RUNTIME_LIBS = -lpthread -ldl -lm -lrt -lstdc++
+
+SRCS = component.cxx DivvunProofreader.cxx DivvunSpellChecker.cxx SettingsDialog.cxx Engine.cxx RuntimeBridge.cxx Platform.cxx
+OBJS = $(SRCS:.cxx=.o)
+
+TARGET = divvunspell.uno.so
+
+.PHONY: all clean
+
+all: $(TARGET)
+
+$(TARGET): $(OBJS) $(RUNTIME_LIB_FILE)
+	$(CXX) $(LDFLAGS) -o $@ $(OBJS) $(RUNTIME_LIB_FILE) $(RUNTIME_LIBS)
+
+%.o: %.cxx
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+
+clean:
+	rm -f $(OBJS) $(TARGET)

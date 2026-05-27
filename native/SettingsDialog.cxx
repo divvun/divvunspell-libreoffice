@@ -1,11 +1,11 @@
 #include "SettingsDialog.hxx"
 #include "Engine.hxx"
+#include "Platform.hxx"
 
 #include <com/sun/star/awt/Rectangle.hpp>
 #include <com/sun/star/awt/PosSize.hpp>
 #include <com/sun/star/lang/XMultiComponentFactory.hpp>
 #include <rtl/ustring.hxx>
-#include <syslog.h>
 
 #include <set>
 #include <sstream>
@@ -37,7 +37,7 @@ void setProp(const uno::Reference<beans::XPropertySet>& props,
 SettingsDialog::SettingsDialog(const uno::Reference<uno::XComponentContext>& ctx)
     : mCtx(ctx)
 {
-    syslog(LOG_NOTICE, "DivvunSpell SettingsDialog handler init");
+    logLine("DivvunSpell SettingsDialog handler init");
 }
 
 SettingsDialog::~SettingsDialog() = default;
@@ -99,12 +99,12 @@ void SettingsDialog::populate(const uno::Reference<awt::XWindow>& window) {
 
     uno::Reference<awt::XControl> ctl(window, uno::UNO_QUERY);
     if (!ctl.is()) {
-        syslog(LOG_NOTICE, "SettingsDialog: window is not XControl");
+        logLine("SettingsDialog: window is not XControl");
         return;
     }
     uno::Reference<awt::XControlContainer> container(ctl, uno::UNO_QUERY);
     if (!container.is()) {
-        syslog(LOG_NOTICE, "SettingsDialog: window is not XControlContainer");
+        logLine("SettingsDialog: window is not XControlContainer");
         return;
     }
     uno::Reference<awt::XWindowPeer> peer = ctl->getPeer();
@@ -127,10 +127,12 @@ void SettingsDialog::populate(const uno::Reference<awt::XWindow>& window) {
             uno::Reference<awt::XControl> c(label, uno::UNO_QUERY);
             if (c.is()) {
                 uno::Reference<beans::XPropertySet> p(c->getModel(), uno::UNO_QUERY);
-                if (p.is()) setProp(p, "Label",
-                    ::rtl::OUString::createFromAscii(
-                        "No DivvunSpell bundles installed in /Library/Services or "
-                        "/Library/Application Support/Divvun"));
+                if (p.is()) {
+                    std::ostringstream msg;
+                    msg << "No DivvunSpell bundles installed in:";
+                    for (const auto& dir : divvun::bundleSearchPaths()) msg << "\n    " << dir;
+                    setProp(p, "Label", toOU(msg.str()));
+                }
             }
         }
         mPopulated = true;
@@ -175,7 +177,7 @@ void SettingsDialog::populate(const uno::Reference<awt::XWindow>& window) {
         }
         y += 6;
     }
-    syslog(LOG_NOTICE, "SettingsDialog populated %zu checkboxes", mCheckBoxByName.size());
+    logLine("SettingsDialog populated " + std::to_string(mCheckBoxByName.size()) + " checkboxes");
     mPopulated = true;
 }
 
@@ -201,7 +203,7 @@ void SettingsDialog::readBackAndApply(const uno::Reference<awt::XWindow>& window
     for (const auto& tag : tagsTouched) {
         Engine::instance().setIgnoredRules(tag, ignoredByTag[tag]);
     }
-    syslog(LOG_NOTICE, "SettingsDialog applied %zu tag(s)", tagsTouched.size());
+    logLine("SettingsDialog applied " + std::to_string(tagsTouched.size()) + " tag(s)");
 }
 
 ::sal_Bool SAL_CALL SettingsDialog::callHandlerMethod(

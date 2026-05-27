@@ -27,7 +27,8 @@ public:
     static Engine& instance();
 
     // Globally accessible trace logger. Reads DIVVUNSPELL_TRACE env at first use.
-    // Writes to /tmp/divvunspell-libreoffice.log + syslog when enabled.
+    // Routes through divvun::logLine (per-platform: temp-dir log file, plus
+    // syslog on POSIX).
     static bool traceEnabled();
     static void trace(const std::string& msg);
 

@@ -1,31 +1,20 @@
 #include "Engine.hxx"
 #include "ErrorClass.hxx"
+#include "Platform.hxx"
 
 #include <nlohmann/json.hpp>
 
 #include <algorithm>
 #include <cstdlib>
-#include <dlfcn.h>
 #include <filesystem>
 #include <fstream>
 #include <sstream>
-#include <syslog.h>
 
 namespace divvun {
 
 namespace {
 
 namespace fs = std::filesystem;
-
-std::vector<std::string> bundleSearchPaths() {
-    std::vector<std::string> out;
-    out.emplace_back("/Library/Services");
-    out.emplace_back("/Library/Application Support/Divvun");
-    if (const char* home = std::getenv("HOME")) {
-        out.emplace_back(std::string(home) + "/Library/Application Support/Divvun");
-    }
-    return out;
-}
 
 std::string toBcp47Tag(std::string s) {
     std::replace(s.begin(), s.end(), '_', '-');
@@ -37,24 +26,15 @@ std::string baseTag(const std::string& tag) {
     return pos == std::string::npos ? tag : tag.substr(0, pos);
 }
 
-void logLine(const std::string& msg) {
-    syslog(LOG_NOTICE, "%s", msg.c_str());
-    std::ofstream f("/tmp/divvunspell-libreoffice.log", std::ios::app);
-    if (f) f << msg << '\n';
-}
-
 std::string truncatedForLog(std::string_view s, size_t max = 1000) {
     if (s.size() <= max) return std::string(s);
     return std::string(s.substr(0, max)) + "...[truncated " + std::to_string(s.size() - max) + " bytes]";
 }
 
 std::string locatesJsonPath() {
-    Dl_info info{};
-    if (dladdr(reinterpret_cast<void*>(&toBcp47Tag), &info) != 0 && info.dli_fname) {
-        fs::path self(info.dli_fname);
-        return (self.parent_path() / "locales.json").string();
-    }
-    return "locales.json";
+    auto dir = componentDir();
+    if (dir.empty()) return "locales.json";
+    return (fs::path(dir) / "locales.json").string();
 }
 
 void scanInto(const std::string& base, std::map<std::string, std::string>& out) {
@@ -103,10 +83,6 @@ void Engine::trace(const std::string& msg) {
 }
 
 Engine::Engine() {
-    if (!RuntimeBridge::instance().ready()) {
-        logLine("Engine: runtime not ready: " + RuntimeBridge::instance().loadError());
-        return;
-    }
     scanBundlePaths();
 
     auto path = locatesJsonPath();
@@ -158,7 +134,7 @@ void Engine::scanBundlePaths() {
 }
 
 bool Engine::ready() const {
-    return RuntimeBridge::instance().ready();
+    return true;
 }
 
 bool Engine::hasTag(const std::string& tag) const {
@@ -383,9 +359,7 @@ void Engine::resetIgnoredRules() {
 }
 
 std::string Engine::prefsPath() const {
-    std::string base = "/tmp";
-    if (const char* home = std::getenv("HOME")) base = home;
-    return base + "/Library/Application Support/Divvun/divvunspell-prefs.json";
+    return divvun::prefsPath();
 }
 
 void Engine::loadPrefs() {
