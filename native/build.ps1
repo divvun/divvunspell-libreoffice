@@ -1,7 +1,9 @@
-# Build the divvunspell.uno.dll UNO C++ component for Windows (MSVC).
+# Build the divvunspell.uno.dll UNO C++ component for Windows.
 #
-# Run from a Developer Command Prompt for VS, or invoke after vcvars64.bat,
-# so cl.exe and link.exe are on PATH.
+# Uses LLVM's clang-cl + lld-link (drop-in MSVC-compatible compiler / linker
+# that ship inside VS BuildTools under VC\Tools\Llvm). Run from a Developer
+# Command Prompt for VS, or invoke vcvars64.bat (or msvc-env) first so the
+# LLVM bin dir is on PATH and INCLUDE / LIB are populated.
 #
 # Inputs:
 #   -RuntimeLib  Absolute path to divvun_runtime.lib (the Rust staticlib).
@@ -47,8 +49,11 @@ try {
     if (-not (Test-Path (Join-Path $RuntimeInc "divvun_runtime.h"))) {
         throw "Runtime FFI header not found at $RuntimeInc\divvun_runtime.h."
     }
-    if (-not (Get-Command cl.exe -ErrorAction SilentlyContinue)) {
-        throw "cl.exe not on PATH. Run from a Developer Command Prompt or invoke vcvars64.bat first."
+    if (-not (Get-Command clang-cl.exe -ErrorAction SilentlyContinue)) {
+        throw "clang-cl.exe not on PATH. Run from a Developer Command Prompt or invoke vcvars64.bat (or msvc-env) first; the LLVM toolset ships inside VS BuildTools."
+    }
+    if (-not (Get-Command lld-link.exe -ErrorAction SilentlyContinue)) {
+        throw "lld-link.exe not on PATH. Same fix as clang-cl above."
     }
 
     $vendorInc = "vendor\include"
@@ -91,9 +96,9 @@ try {
             $needs = (Get-Item $src).LastWriteTime -gt (Get-Item $obj).LastWriteTime
         }
         if ($needs) {
-            Write-Host "cl $src"
-            & cl.exe @cxxFlags /c $src "/Fo$obj"
-            if ($LASTEXITCODE -ne 0) { throw "cl.exe failed on $src" }
+            Write-Host "clang-cl $src"
+            & clang-cl.exe @cxxFlags /c $src "/Fo$obj"
+            if ($LASTEXITCODE -ne 0) { throw "clang-cl.exe failed on $src" }
         }
         $objs += $obj
     }
@@ -118,17 +123,17 @@ try {
     )
 
     # UNO discovers the component via `component_getFactory`; without a .def
-    # MSVC would only export __declspec(dllexport) symbols, which our source
-    # uses via SAL_DLLPUBLIC_EXPORT, so the .def is belt-and-braces.
+    # lld-link would only export __declspec(dllexport) symbols, which our
+    # source uses via SAL_DLLPUBLIC_EXPORT, so the .def is belt-and-braces.
     Set-Content -Path divvunspell.uno.def -Encoding ASCII -Value @"
 LIBRARY divvunspell.uno
 EXPORTS
     component_getFactory
 "@
 
-    Write-Host "link divvunspell.uno.dll"
-    & link.exe @linkFlags @objs $RuntimeLibFile @systemLibs
-    if ($LASTEXITCODE -ne 0) { throw "link.exe failed" }
+    Write-Host "lld-link divvunspell.uno.dll"
+    & lld-link.exe @linkFlags @objs $RuntimeLibFile @systemLibs
+    if ($LASTEXITCODE -ne 0) { throw "lld-link.exe failed" }
 
     Write-Host "Built $here\divvunspell.uno.dll"
 } finally {
