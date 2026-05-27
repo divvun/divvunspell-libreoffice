@@ -41,23 +41,14 @@ void scanInto(const std::string& base, std::map<std::string, std::string>& out) 
     std::error_code ec;
     if (!fs::is_directory(base, ec)) return;
 
-    for (auto it = fs::recursive_directory_iterator(base, fs::directory_options::skip_permission_denied, ec);
-         !ec && it != fs::recursive_directory_iterator(); it.increment(ec)) {
+    for (auto it = fs::directory_iterator(base, fs::directory_options::skip_permission_denied, ec);
+         !ec && it != fs::directory_iterator(); it.increment(ec)) {
         const auto& entry = *it;
         if (entry.is_regular_file(ec) && entry.path().extension() == ".drb") {
             auto tag = toBcp47Tag(entry.path().stem().string());
             out.try_emplace(tag, entry.path().string());
             auto bt = baseTag(tag);
             if (bt != tag) out.try_emplace(bt, entry.path().string());
-        } else if (entry.is_directory(ec)) {
-            std::error_code mec;
-            if (fs::is_regular_file(entry.path() / "pipeline.json", mec)) {
-                auto tag = toBcp47Tag(entry.path().filename().string());
-                out.try_emplace(tag, entry.path().string());
-                auto bt = baseTag(tag);
-                if (bt != tag) out.try_emplace(bt, entry.path().string());
-                it.disable_recursion_pending();
-            }
         }
     }
 }
@@ -183,13 +174,7 @@ void* Engine::ensureBundleLocked(const std::string& resolvedTag) {
     if (bit != mBundles.end()) return bit->second;
     auto pit = mBundlePaths.find(resolvedTag);
     if (pit == mBundlePaths.end()) return nullptr;
-    const auto& path = pit->second;
-    void* bundle;
-    if (path.size() >= 4 && path.compare(path.size() - 4, 4, ".drb") == 0) {
-        bundle = RuntimeBridge::instance().bundleFromBundle(path);
-    } else {
-        bundle = RuntimeBridge::instance().bundleFromPath(path);
-    }
+    void* bundle = RuntimeBridge::instance().bundleFromBundle(pit->second);
     mBundles.emplace(resolvedTag, bundle);
     return bundle;
 }

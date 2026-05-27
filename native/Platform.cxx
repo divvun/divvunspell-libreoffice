@@ -94,27 +94,26 @@ std::vector<std::string> bundleSearchPaths() {
     std::vector<std::string> out;
 #if defined(_WIN32)
     if (auto pd = envOrEmpty("ProgramData"); !pd.empty()) {
-        out.emplace_back(pd + "\\Divvun");
+        out.emplace_back(pd + "\\Divvun\\Grammar");
     }
     if (auto local = envOrEmpty("LOCALAPPDATA"); !local.empty()) {
-        out.emplace_back(local + "\\Divvun");
+        out.emplace_back(local + "\\Divvun\\Grammar");
     }
     if (auto roaming = envOrEmpty("APPDATA"); !roaming.empty()) {
-        out.emplace_back(roaming + "\\Divvun");
+        out.emplace_back(roaming + "\\Divvun\\Grammar");
     }
 #elif defined(__APPLE__)
-    out.emplace_back("/Library/Services");
-    out.emplace_back("/Library/Application Support/Divvun");
+    out.emplace_back("/Library/Application Support/Divvun/Grammar");
     if (auto home = envOrEmpty("HOME"); !home.empty()) {
-        out.emplace_back(home + "/Library/Application Support/Divvun");
+        out.emplace_back(home + "/Library/Application Support/Divvun/Grammar");
     }
 #else // Linux / other XDG-style POSIX
-    out.emplace_back("/usr/share/divvun");
-    out.emplace_back("/usr/local/share/divvun");
+    out.emplace_back("/usr/share/divvun/grammar");
+    out.emplace_back("/usr/local/share/divvun/grammar");
     if (auto xdg = envOrEmpty("XDG_DATA_HOME"); !xdg.empty()) {
-        out.emplace_back(xdg + "/divvun");
+        out.emplace_back(xdg + "/divvun/grammar");
     } else if (auto home = envOrEmpty("HOME"); !home.empty()) {
-        out.emplace_back(home + "/.local/share/divvun");
+        out.emplace_back(home + "/.local/share/divvun/grammar");
     }
 #endif
     return out;
