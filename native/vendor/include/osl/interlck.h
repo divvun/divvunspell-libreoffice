@@ -71,7 +71,9 @@ SAL_DLLPUBLIC oslInterlockedCount SAL_CALL osl_decrementInterlockedCount(oslInte
 #if HAVE_GCC_BUILTIN_ATOMIC
 #    define osl_atomic_increment(p)  __sync_add_and_fetch((p), 1)
 #elif defined _WIN32
-#    define osl_atomic_increment(p)  _InterlockedIncrement(p)
+/* sal_Int32 is `int`; _InterlockedIncrement takes `volatile long *`.
+   cl.exe permits the silent conversion; clang-cl rejects it. */
+#    define osl_atomic_increment(p)  _InterlockedIncrement((volatile long *)(p))
 #else
 #    define osl_atomic_increment(p) osl_incrementInterlockedCount((p))
 #endif
@@ -90,7 +92,7 @@ SAL_DLLPUBLIC oslInterlockedCount SAL_CALL osl_decrementInterlockedCount(oslInte
 #if HAVE_GCC_BUILTIN_ATOMIC
 #    define osl_atomic_decrement(p) __sync_sub_and_fetch((p), 1)
 #elif defined _WIN32
-#    define osl_atomic_decrement(p)  _InterlockedDecrement(p)
+#    define osl_atomic_decrement(p)  _InterlockedDecrement((volatile long *)(p))
 #else
 #    define osl_atomic_decrement(p) osl_decrementInterlockedCount((p))
 #endif
