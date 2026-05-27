@@ -64,7 +64,7 @@ try {
         '/std:c++17',
         '/EHsc',
         '/O2',
-        '/MD',                          # /MD matches what Rust's MSVC target links against
+        '/MT',                          # /MT matches divvun-runtime's MSVC target (crt-static = +crt-static)
         '/DWIN32',
         '/D_WINDOWS',
         '/DWNT',                        # LO/UNO Windows platform define
@@ -111,7 +111,9 @@ try {
         'ntdll.lib', 'userenv.lib', 'ws2_32.lib', 'iphlpapi.lib',
         'dbghelp.lib', 'shell32.lib', 'ole32.lib', 'oleaut32.lib',
         'bcrypt.lib', 'ncrypt.lib', 'secur32.lib', 'crypt32.lib',
-        'msvcrt.lib', 'legacy_stdio_definitions.lib'
+        'legacy_stdio_definitions.lib'
+        # No msvcrt.lib here: /MT pulls in libcmt.lib (static CRT) via
+        # auto-link pragmas. Adding msvcrt.lib (dynamic CRT) would conflict.
     )
 
     $linkFlags = @(
