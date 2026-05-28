@@ -35,6 +35,11 @@ try {
         return
     }
 
+    # Always discard stale intermediates. The compile-cache check below uses
+    # .cxx-vs-.obj mtimes only, which doesn't detect flag changes (e.g. /MD
+    # → /MT) and leaves objects with the wrong CRT linkage in place.
+    Get-ChildItem -Filter "*.obj" -ErrorAction SilentlyContinue | Remove-Item -Force
+
     if (-not $RuntimeLib -or -not $RuntimeInc) {
         if (-not $DivvunRuntimeDir) {
             throw "Set -DivvunRuntimeDir or `$env:DIVVUN_RUNTIME_DIR` (or pass both -RuntimeLib and -RuntimeInc) to point at the divvun-runtime checkout."
