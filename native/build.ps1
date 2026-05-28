@@ -121,12 +121,24 @@ try {
         # auto-link pragmas. Adding msvcrt.lib (dynamic CRT) would conflict.
     )
 
+    # UNO runtime import libs vendored under vendor/lib/. PE requires a .lib
+    # at link time even for symbols that get resolved by LO at load.
+    $unoLibPath = "vendor\lib"
+    $unoLibs = @(
+        'isal.lib',
+        'icppu.lib',
+        'icppuhelper.lib',
+        'isalhelper.lib',
+        'ipurpenvhelper.lib'
+    )
+
     $linkFlags = @(
         '/nologo',
         '/DLL',
         '/MACHINE:X64',
         '/OUT:divvunspell.uno.dll',
-        '/DEF:divvunspell.uno.def'
+        '/DEF:divvunspell.uno.def',
+        "/LIBPATH:$unoLibPath"
     )
 
     # UNO discovers the component via `component_getFactory`; without a .def
@@ -139,7 +151,7 @@ EXPORTS
 "@
 
     Write-Host "lld-link divvunspell.uno.dll"
-    & lld-link.exe @linkFlags @objs $RuntimeLibFile @systemLibs
+    & lld-link.exe @linkFlags @objs $RuntimeLibFile @unoLibs @systemLibs
     if ($LASTEXITCODE -ne 0) { throw "lld-link.exe failed" }
 
     Write-Host "Built $here\divvunspell.uno.dll"
