@@ -9,7 +9,10 @@ namespace divvun {
 // Safe to call before any other Engine state exists.
 void logLine(const std::string& msg);
 
-// Directories scanned for installed Divvun bundles (.drb or pipeline.json).
+// Directories scanned for installed Divvun proofing bundles. On macOS these are
+// the Services dirs holding no.divvun.proofing.<tag>.bundle (the Engine scan
+// descends into Contents/Resources for the .drb); on Windows/Linux they are a
+// flat Divvun/Proofing dir of <tag>.drb files.
 // Order matters: earlier entries win on tag collisions.
 std::vector<std::string> bundleSearchPaths();
 

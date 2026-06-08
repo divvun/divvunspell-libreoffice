@@ -94,26 +94,29 @@ std::vector<std::string> bundleSearchPaths() {
     std::vector<std::string> out;
 #if defined(_WIN32)
     if (auto pd = envOrEmpty("ProgramData"); !pd.empty()) {
-        out.emplace_back(pd + "\\Divvun\\Grammar");
+        out.emplace_back(pd + "\\Divvun\\Proofing");
     }
     if (auto local = envOrEmpty("LOCALAPPDATA"); !local.empty()) {
-        out.emplace_back(local + "\\Divvun\\Grammar");
+        out.emplace_back(local + "\\Divvun\\Proofing");
     }
     if (auto roaming = envOrEmpty("APPDATA"); !roaming.empty()) {
-        out.emplace_back(roaming + "\\Divvun\\Grammar");
+        out.emplace_back(roaming + "\\Divvun\\Proofing");
     }
 #elif defined(__APPLE__)
-    out.emplace_back("/Library/Application Support/Divvun/Grammar");
+    // Proofing bundles live in the Services dir alongside MacDivvun's, as
+    // no.divvun.proofing.<tag>.bundle/Contents/Resources/<tag>.drb. Engine's
+    // scan descends into them.
+    out.emplace_back("/Library/Services");
     if (auto home = envOrEmpty("HOME"); !home.empty()) {
-        out.emplace_back(home + "/Library/Application Support/Divvun/Grammar");
+        out.emplace_back(home + "/Library/Services");
     }
 #else // Linux / other XDG-style POSIX
-    out.emplace_back("/usr/share/divvun/grammar");
-    out.emplace_back("/usr/local/share/divvun/grammar");
+    out.emplace_back("/usr/share/divvun/proofing");
+    out.emplace_back("/usr/local/share/divvun/proofing");
     if (auto xdg = envOrEmpty("XDG_DATA_HOME"); !xdg.empty()) {
-        out.emplace_back(xdg + "/divvun/grammar");
+        out.emplace_back(xdg + "/divvun/proofing");
     } else if (auto home = envOrEmpty("HOME"); !home.empty()) {
-        out.emplace_back(home + "/.local/share/divvun/grammar");
+        out.emplace_back(home + "/.local/share/divvun/proofing");
     }
 #endif
     return out;

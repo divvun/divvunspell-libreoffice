@@ -37,6 +37,48 @@ std::string locatesJsonPath() {
     return (fs::path(dir) / "locales.json").string();
 }
 
+void addDrb(const fs::path& p, std::map<std::string, std::string>& out) {
+    auto tag = toBcp47Tag(p.stem().string());
+    out.try_emplace(tag, p.string());
+    auto bt = baseTag(tag);
+    if (bt != tag) out.try_emplace(bt, p.string());
+}
+
+#if defined(__APPLE__)
+
+// On macOS the .drb files live inside service bundles in the Services dir:
+//   <base>/no.divvun.proofing.<tag>.bundle/Contents/Resources/<tag>.drb
+// Mirror MacDivvun: walk bundles matching the no.divvun.proofing. prefix and
+// scan their Contents/Resources for .drb files.
+void scanInto(const std::string& base, std::map<std::string, std::string>& out) {
+    static const std::string kPrefix = "no.divvun.proofing.";
+    static const std::string kSuffix = ".bundle";
+
+    std::error_code ec;
+    if (!fs::is_directory(base, ec)) return;
+
+    for (auto it = fs::directory_iterator(base, fs::directory_options::skip_permission_denied, ec);
+         !ec && it != fs::directory_iterator(); it.increment(ec)) {
+        const auto name = it->path().filename().string();
+        if (name.size() < kPrefix.size() + kSuffix.size()) continue;
+        if (name.compare(0, kPrefix.size(), kPrefix) != 0) continue;
+        if (name.compare(name.size() - kSuffix.size(), kSuffix.size(), kSuffix) != 0) continue;
+
+        const auto resources = it->path() / "Contents" / "Resources";
+        std::error_code rec;
+        if (!fs::is_directory(resources, rec)) continue;
+        for (auto rit = fs::directory_iterator(resources, fs::directory_options::skip_permission_denied, rec);
+             !rec && rit != fs::directory_iterator(); rit.increment(rec)) {
+            if (rit->is_regular_file(rec) && rit->path().extension() == ".drb") {
+                addDrb(rit->path(), out);
+            }
+        }
+    }
+}
+
+#else
+
+// Windows/Linux: flat <tag>.drb files directly in the proofing dir.
 void scanInto(const std::string& base, std::map<std::string, std::string>& out) {
     std::error_code ec;
     if (!fs::is_directory(base, ec)) return;
@@ -45,13 +87,12 @@ void scanInto(const std::string& base, std::map<std::string, std::string>& out) 
          !ec && it != fs::directory_iterator(); it.increment(ec)) {
         const auto& entry = *it;
         if (entry.is_regular_file(ec) && entry.path().extension() == ".drb") {
-            auto tag = toBcp47Tag(entry.path().stem().string());
-            out.try_emplace(tag, entry.path().string());
-            auto bt = baseTag(tag);
-            if (bt != tag) out.try_emplace(bt, entry.path().string());
+            addDrb(entry.path(), out);
         }
     }
 }
+
+#endif
 
 } // namespace
 
