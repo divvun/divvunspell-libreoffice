@@ -1,25 +1,34 @@
 #!/bin/sh
 set -ex
 
-rm -rf tmp || echo "no tmp dir; continuing"
-rm -rf build || echo "no build dir; continuing"
+HERE="$(cd "$(dirname "$0")" && pwd)"
+REPO="$(dirname "$HERE")"
+
+rm -rf "$HERE/tmp" "$HERE/build" "$HERE/payload"
 
 PKG_NAME="LibreOfficeOXT.pkg"
 
-mkdir -p divvunspell-libreoffice.bundle/Contents/Resources
-cp divvunspell.oxt divvunspell-libreoffice.bundle/Contents/Resources
-cp Info.plist divvunspell-libreoffice.bundle/Contents
+# Universal oxtreg binary.
+(cd "$REPO/oxtreg" && cargo build --release --target aarch64-apple-darwin && cargo build --release --target x86_64-apple-darwin)
+mkdir -p "$HERE/payload"
+lipo -create \
+    "$REPO/oxtreg/target/aarch64-apple-darwin/release/oxtreg" \
+    "$REPO/oxtreg/target/x86_64-apple-darwin/release/oxtreg" \
+    -output "$HERE/payload/oxtreg"
 
-VERSION=`/usr/libexec/PlistBuddy -c "Print CFBundleShortVersionString" "divvunspell-libreoffice.bundle/Contents/Info.plist"`
+cp "$HERE/divvunspell.oxt" "$HERE/payload/divvunspell.oxt"
 
-pkgbuild --component divvunspell-libreoffice.bundle \
+VERSION=`/usr/libexec/PlistBuddy -c "Print CFBundleShortVersionString" "$HERE/Info.plist"`
+
+pkgbuild --root "$HERE/payload" \
+    --identifier no.divvun.LibreOfficeOXT \
     --ownership recommended \
-    --install-location "/Library/Application Support/divvun-libreoffice" \
+    --install-location "/Library/Application Support/Divvun/LibreOffice" \
     --version $VERSION \
-    --scripts scripts \
-    no.divvun.LibreOfficeOXT.pkg
+    --scripts "$HERE/scripts" \
+    "$HERE/no.divvun.LibreOfficeOXT.pkg"
 
-productbuild --distribution dist.xml \
+productbuild --distribution "$HERE/dist.xml" \
     --version $VERSION \
-    --package-path . \
-    $PKG_NAME
+    --package-path "$HERE" \
+    "$HERE/$PKG_NAME"

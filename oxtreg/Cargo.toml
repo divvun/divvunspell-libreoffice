@@ -1,0 +1,17 @@
+[package]
+name = "oxtreg"
+version = "0.1.0"
+edition = "2024"
+license = "MIT OR Apache-2.0"
+description = "Registers LibreOffice OXT extensions by writing the user-profile cache directly, without unopkg"
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+zip = { version = "2", default-features = false, features = ["deflate"] }
+quick-xml = "0.37"
+rand = "0.9"
+
+[profile.release]
+opt-level = "s"
+lto = true
+strip = true

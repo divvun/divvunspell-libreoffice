@@ -1,15 +1,29 @@
 #!/usr/bin/env bash
+# Registers the OXT into the console user's LibreOffice profile using oxtreg
+# (our own registration tool — no unopkg, no LibreOffice tooling involved).
+set -u
 
-find /Applications -name Xcode.app -prune -false -o -type f -name soffice \
--exec bash -c '
-set -e
-set -o pipefail
-realpath() {
-  /usr/bin/python3 -c "import os; import sys; print(os.path.realpath(sys.argv[1]))" $1
+PAYLOAD="/Library/Application Support/Divvun/LibreOffice"
+
+# Clean up the legacy install method, which unzipped the extension into the
+# LibreOffice app bundle (breaking its code signature). Best effort.
+find /Applications -maxdepth 3 -type d -name "extensions" -path "*/Contents/Resources/*" 2>/dev/null |
+while IFS= read -r ext_dir; do
+    rm -rf "$ext_dir/divvunspell"
+done
+rm -rf "/Library/Application Support/divvun-libreoffice"
+
+# Register for the user actually sitting at the machine. The installer runs
+# as root; the LO profile is per-user.
+CONSOLE_USER="$(stat -f%Su /dev/console)"
+if [ -z "$CONSOLE_USER" ] || [ "$CONSOLE_USER" = "root" ]; then
+    echo "postinstall: no console user; extension will register on next manual run of oxtreg" >&2
+    exit 0
+fi
+
+sudo -u "$CONSOLE_USER" -H "$PAYLOAD/oxtreg" install "$PAYLOAD/divvunspell.oxt" || {
+    echo "postinstall: oxtreg failed for $CONSOLE_USER" >&2
+    exit 1
 }
-x=`dirname {}`
-x=`realpath $x/../Resources/extensions`
-mkdir -p $x/divvunspell
-cd $x/divvunspell
-unzip -o "/Library/Application Support/divvun-libreoffice/divvunspell-libreoffice.bundle/Contents/Resources/divvunspell.oxt"
-' \;
+
+exit 0

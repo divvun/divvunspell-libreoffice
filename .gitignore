@@ -4,3 +4,6 @@
 *.o
 *.dylib
 .DS_Store
+core/
+oxtreg/target/
+macos/payload/
