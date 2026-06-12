@@ -146,9 +146,23 @@ linguistic2::ProofreadingResult SAL_CALL DivvunProofreader::doProofreading(
         auto title   = err.value("title", std::string{});
         auto descr   = err.value("description", std::string{});
 
+        // Offsets are UTF-16 code units relative to the sentence chunk. Bad
+        // offsets handed to LO walk out-of-range text ranges and crash it, so
+        // drop anything that doesn't fit the chunk (clamping would still
+        // underline the wrong text).
+        const sal_Int32 chunkLen = chunkOU.getLength();
+        auto start = err.value("start", std::int64_t{-1});
+        auto end   = err.value("end", std::int64_t{-1});
+        if (start < 0 || end <= start || end > chunkLen) {
+            logLine("doProofreading: dropping error " + errorId + " with bad range ["
+                    + std::to_string(start) + "," + std::to_string(end) + ") chunkLen="
+                    + std::to_string(chunkLen));
+            continue;
+        }
+
         auto& spe = arr[idx++];
-        spe.nErrorStart = nStartOfSentencePosition + err.value("start", 0);
-        spe.nErrorLength = err.value("end", 0) - err.value("start", 0);
+        spe.nErrorStart = nStartOfSentencePosition + static_cast<sal_Int32>(start);
+        spe.nErrorLength = static_cast<sal_Int32>(end - start);
         spe.nErrorType = text::TextMarkupType::PROOFREADING;
         spe.aShortComment = !title.empty() ? toOUString(title) : toOUString(errorId);
         spe.aFullComment = toOUString(descr);

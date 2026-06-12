@@ -190,20 +190,15 @@ std::string Engine::buildConfigJsonLocked(const std::string& tag) const {
     return j.dump();
 }
 
+// Erasing only drops the map's reference: in-flight Engine::run calls hold
+// their own shared_ptr, so the handle/lock outlive the erase until they finish.
 void Engine::dropPipelineForTagLocked(const std::string& tag) {
-    auto it = mPipelines.find(tag);
-    if (it != mPipelines.end()) {
-        RuntimeBridge::instance().pipelineDrop(it->second);
-        mPipelines.erase(it);
-    }
-    mPipelineLocks.erase(tag);
+    mPipelines.erase(tag);
     mSpellCache.erase(tag);
 }
 
 void Engine::dropAllPipelinesLocked() {
-    for (auto& [tag, h] : mPipelines) RuntimeBridge::instance().pipelineDrop(h);
     mPipelines.clear();
-    mPipelineLocks.clear();
 }
 
 void Engine::dropSpellCacheLocked() {
@@ -224,8 +219,7 @@ std::string Engine::run(const std::string& tag, std::string_view text) {
     if (!ready()) return {};
     auto resolved = resolveTag(tag);
 
-    void* handle = nullptr;
-    std::mutex* tagLock = nullptr;
+    std::shared_ptr<PipelineEntry> entry;
     {
         std::lock_guard<std::mutex> lk(mLock);
         auto pit = mBundlePaths.find(resolved);
@@ -233,16 +227,14 @@ std::string Engine::run(const std::string& tag, std::string_view text) {
 
         auto hit = mPipelines.find(resolved);
         if (hit != mPipelines.end()) {
-            handle = hit->second;
-            tagLock = mPipelineLocks[resolved].get();
+            entry = hit->second;
         } else {
             void* bundle = ensureBundleLocked(resolved);
             if (!bundle) return {};
             auto config = buildConfigJsonLocked(resolved);
-            handle = RuntimeBridge::instance().bundleCreate(bundle, config);
-            mPipelines.emplace(resolved, handle);
-            mPipelineLocks.emplace(resolved, std::make_unique<std::mutex>());
-            tagLock = mPipelineLocks[resolved].get();
+            entry = std::make_shared<PipelineEntry>(
+                RuntimeBridge::instance().bundleCreate(bundle, config));
+            mPipelines.emplace(resolved, entry);
         }
     }
 
@@ -251,8 +243,8 @@ std::string Engine::run(const std::string& tag, std::string_view text) {
     }
     std::string out;
     {
-        std::lock_guard<std::mutex> tl(*tagLock);
-        out = RuntimeBridge::instance().pipelineForward(handle, text);
+        std::lock_guard<std::mutex> tl(entry->lock);
+        out = RuntimeBridge::instance().pipelineForward(entry->handle, text);
     }
     if (traceEnabled()) {
         trace("forward[" + resolved + "] out: " + truncatedForLog(out));

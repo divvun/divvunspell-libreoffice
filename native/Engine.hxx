@@ -22,6 +22,20 @@ struct SpellResult {
     std::vector<std::string> suggestions;
 };
 
+// Shared-ownership wrapper for a runtime pipeline handle and its forward()
+// serialization lock. Engine::run copies the shared_ptr out of the map under
+// mLock, so dropPipelineForTag* can erase the map entry while a forward is in
+// flight: the Rust handle and the mutex stay alive until the last user is done.
+struct PipelineEntry {
+    explicit PipelineEntry(void* h) : handle(h) {}
+    ~PipelineEntry() { RuntimeBridge::instance().pipelineDrop(handle); }
+    PipelineEntry(const PipelineEntry&) = delete;
+    PipelineEntry& operator=(const PipelineEntry&) = delete;
+
+    void* handle;
+    std::mutex lock;
+};
+
 class Engine {
 public:
     static Engine& instance();
@@ -87,8 +101,7 @@ private:
     mutable std::mutex mLock;
     std::map<std::string, std::string> mBundlePaths;             // tag -> file/dir
     std::map<std::string, void*> mBundles;                       // tag -> bundle*
-    std::map<std::string, void*> mPipelines;                     // tag -> handle*
-    std::map<std::string, std::unique_ptr<std::mutex>> mPipelineLocks;
+    std::map<std::string, std::shared_ptr<PipelineEntry>> mPipelines;
     std::map<std::string, std::set<std::string>> mIgnoredByTag;  // tag -> ignored category ids
 
     std::map<std::string, std::vector<std::string>> mLocaleVariants; // from locales.json
