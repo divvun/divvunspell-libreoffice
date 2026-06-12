@@ -182,6 +182,9 @@ std::string Engine::resolveTag(const std::string& tag) const {
 
 std::string Engine::buildConfigJsonLocked(const std::string& tag) const {
     nlohmann::json suggest = { {"encoding", "utf-16"} };
+    // Messages in the checked language; the runtime falls back to "en" and
+    // then any loaded bundle on its own.
+    suggest["locales"] = nlohmann::json::array({ tag });
     auto it = mIgnoredByTag.find(tag);
     if (it != mIgnoredByTag.end() && !it->second.empty()) {
         suggest["ignore"] = std::vector<std::string>(it->second.begin(), it->second.end());
@@ -304,6 +307,7 @@ Engine::errorPreferences(const std::string& tag, const std::string& uiLocale) {
 
     nlohmann::json locales = nlohmann::json::array();
     if (!uiLocale.empty()) locales.push_back(uiLocale);
+    if (resolved != uiLocale) locales.push_back(resolved);
     if (uiLocale != "en") locales.push_back("en");
 
     std::string responseJson;
