@@ -186,7 +186,7 @@ std::string Engine::buildConfigJsonLocked(const std::string& tag) const {
     if (it != mIgnoredByTag.end() && !it->second.empty()) {
         suggest["ignore"] = std::vector<std::string>(it->second.begin(), it->second.end());
     }
-    nlohmann::json j = { {"suggest", suggest} };
+    nlohmann::json j = { {"suggestions", suggest} };
     return j.dump();
 }
 
