@@ -38,6 +38,13 @@ struct Cli {
     #[arg(long, global = true)]
     profile: Option<PathBuf>,
 
+    /// Register into the shared (all-users) extension cache of the given
+    /// LibreOffice installation directory instead of the per-user profile.
+    /// The cache is written under <DIR>/share/uno_packages/cache. Takes
+    /// precedence over --profile.
+    #[arg(long, global = true, value_name = "LIBREOFFICE_DIR")]
+    shared: Option<PathBuf>,
+
     #[command(subcommand)]
     command: Command,
 }
@@ -81,11 +88,27 @@ pub fn atomic_write(path: &Path, data: &[u8]) -> io::Result<()> {
 
 struct Cache {
     root: PathBuf, // .../uno_packages/cache
+    // The bootstrap variable LO expands the rc-terms from. User and shared
+    // caches share an identical on-disk layout; only this prefix differs.
+    cache_var: &'static str,
 }
 
 impl Cache {
-    fn new(profile: &Path) -> Cache {
-        Cache { root: profile.join("uno_packages/cache") }
+    /// Per-user profile cache (`$UNO_USER_PACKAGES_CACHE`).
+    fn user(profile: &Path) -> Cache {
+        Cache {
+            root: profile.join("uno_packages/cache"),
+            cache_var: "UNO_USER_PACKAGES_CACHE",
+        }
+    }
+
+    /// Shared (all-users) cache of a LibreOffice installation:
+    /// `$UNO_SHARED_PACKAGES_CACHE` = `<install>/share/uno_packages/cache`.
+    fn shared(install_dir: &Path) -> Cache {
+        Cache {
+            root: install_dir.join("share/uno_packages/cache"),
+            cache_var: "UNO_SHARED_PACKAGES_CACHE",
+        }
     }
 
     fn pmap_path(&self) -> PathBuf {
@@ -101,8 +124,8 @@ impl Cache {
     }
 
     /// rc-term for a path under the activation dir, as LO writes it.
-    fn rcterm(temp_name: &str, oxt_file: &str, sub: &str) -> String {
-        let mut s = format!("$UNO_USER_PACKAGES_CACHE/uno_packages/{}_/{}", temp_name, oxt_file);
+    fn rcterm(&self, temp_name: &str, oxt_file: &str, sub: &str) -> String {
+        let mut s = format!("${}/uno_packages/{}_/{}", self.cache_var, temp_name, oxt_file);
         if !sub.is_empty() {
             s.push('/');
             s.push_str(sub);
@@ -176,7 +199,7 @@ fn install(cache: &Cache, oxt_path: &Path) -> io::Result<()> {
     )?;
 
     // Backend registrations, driven by the manifest media-types.
-    let mut unorc = Unorc::load(&cache.backend_dir(COMPONENT_BACKEND))?;
+    let mut unorc = Unorc::load(&cache.backend_dir(COMPONENT_BACKEND), cache.cache_var)?;
     let mut ini = ConfigmgrIni::load(&cache.backend_dir(CONFIGURATION_BACKEND))?;
     let mut confdb = ConfDb::load(&cache.backend_dir(CONFIGURATION_BACKEND))?;
     let mut bundledb = BundleDb::load(&cache.backend_dir(BUNDLE_BACKEND))?;
@@ -194,7 +217,7 @@ fn install(cache: &Cache, oxt_path: &Path) -> io::Result<()> {
 
     let mut bundle_items = Vec::new();
     for entry in ordered {
-        let rcterm = Cache::rcterm(&temp_name, &oxt_file, &entry.full_path);
+        let rcterm = cache.rcterm(&temp_name, &oxt_file, &entry.full_path);
         let url = Cache::expand_url(&rcterm);
         match entry.media_type.as_str() {
             MT_COMPONENTS => unorc.services.push(format!("?{rcterm}")),
@@ -216,7 +239,7 @@ fn install(cache: &Cache, oxt_path: &Path) -> io::Result<()> {
         bundle_items.push(BundleItem { url, media_type: entry.media_type.clone() });
     }
     bundledb.extensions.push(BundleExtension {
-        url: Cache::expand_url(&Cache::rcterm(&temp_name, &oxt_file, "")),
+        url: Cache::expand_url(&cache.rcterm(&temp_name, &oxt_file, "")),
         items: bundle_items,
     });
 
@@ -257,7 +280,7 @@ fn uninstall_locked(cache: &Cache, entries: &mut pmap::Entries, identifier: &str
     // Anything referencing the activation dir is this extension's.
     let needle = format!("/{}_/", entry.temporary_name);
 
-    let mut unorc = Unorc::load(&cache.backend_dir(COMPONENT_BACKEND))?;
+    let mut unorc = Unorc::load(&cache.backend_dir(COMPONENT_BACKEND), cache.cache_var)?;
     unorc.services.retain(|t| !t.contains(&needle));
     unorc.save()?;
 
@@ -302,11 +325,18 @@ fn list(cache: &Cache) -> io::Result<()> {
 
 fn main() {
     let cli = Cli::parse();
-    let profile = cli.profile.or_else(default_profile).unwrap_or_else(|| {
-        eprintln!("error: could not determine the LibreOffice profile directory; pass --profile");
-        std::process::exit(2);
-    });
-    let cache = Cache::new(&profile);
+    let cache = match cli.shared.as_deref() {
+        Some(install_dir) => Cache::shared(install_dir),
+        None => {
+            let profile = cli.profile.clone().or_else(default_profile).unwrap_or_else(|| {
+                eprintln!(
+                    "error: could not determine the LibreOffice profile directory; pass --profile or --shared"
+                );
+                std::process::exit(2);
+            });
+            Cache::user(&profile)
+        }
+    };
 
     let result = match &cli.command {
         Command::Install { oxt } => install(&cache, oxt),

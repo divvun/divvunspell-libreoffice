@@ -59,18 +59,21 @@ fn read_to_string_opt(path: &Path) -> io::Result<String> {
 /// unorc: keeps ORIGIN constant, edits the UNO_SERVICES token list.
 pub struct Unorc {
     path: PathBuf,
+    // Bootstrap variable for the ORIGIN line (user vs shared cache).
+    cache_var: &'static str,
     pub services: Vec<String>,
 }
 
 impl Unorc {
-    pub fn load(backend_dir: &Path) -> io::Result<Unorc> {
+    pub fn load(backend_dir: &Path, cache_var: &'static str) -> io::Result<Unorc> {
         let path = backend_dir.join("unorc");
         let content = read_to_string_opt(&path)?;
-        Ok(Unorc { path, services: read_tokens(&content, "UNO_SERVICES=") })
+        Ok(Unorc { path, cache_var, services: read_tokens(&content, "UNO_SERVICES=") })
     }
 
     pub fn save(&self) -> io::Result<()> {
-        let mut buf = format!("ORIGIN=$UNO_USER_PACKAGES_CACHE/registry/{}\n", COMPONENT_BACKEND);
+        let mut buf =
+            format!("ORIGIN=${}/registry/{}\n", self.cache_var, COMPONENT_BACKEND);
         if !self.services.is_empty() {
             buf.push_str("UNO_SERVICES=");
             buf.push_str(&self.services.join(" "));
