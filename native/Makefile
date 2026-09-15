@@ -37,6 +37,17 @@ LDFLAGS = -shared $(ARCH) \
           -Wl,-undefined,dynamic_lookup \
           -install_name @rpath/divvunspell.uno.dylib
 
+# divvun-runtime's transitive native deps. To re-derive the authoritative list:
+#   cargo rustc --release --features ffi --crate-type staticlib -- --print native-static-libs
+#
+# Careful: that command *rebuilds and replaces* target/release/libdivvun_runtime.a
+# with a non-canonical artifact, and it does not set the env `./x build-lib`
+# does. Most visibly, build/util.ts exports LZMA_API_STATIC=1, which makes
+# lzma-sys compile its vendored xz into the archive instead of linking the
+# host's liblzma; build without it and you get an archive with undefined
+# lzma_* that looks like it needs -llzma here. It does not. Always re-run
+# `./x build-lib` afterwards, and don't add libs based on a list derived that
+# way -- check against a canonically built archive with nm first.
 RUNTIME_FRAMEWORKS = -framework CoreFoundation \
                      -framework Foundation \
                      -framework CoreML \

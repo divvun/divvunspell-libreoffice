@@ -111,6 +111,18 @@ try {
     # Authoritative system-libs list comes from running
     #   cargo rustc --release --features ffi --crate-type staticlib -- --print native-static-libs
     # inside divvun-runtime on the same host. Extend here if link emits LNK2019.
+    #
+    # Careful: that command *rebuilds and replaces* the staticlib with a
+    # non-canonical artifact, and it does not set the env `./x build-lib` does.
+    # Most visibly, build/util.ts exports LZMA_API_STATIC=1, which makes
+    # lzma-sys compile its vendored xz into divvun_runtime.lib rather than
+    # linking a system liblzma; build without it and the list gains an lzma
+    # entry that a canonically built lib does not need. Re-run `./x build-lib`
+    # afterwards, and don't add libs based on a list derived that way.
+    #
+    # Unlike the Unix links, which defer unresolved symbols to dlopen, PE
+    # resolves everything here -- a missing lib is an LNK2019 at build time,
+    # not a silent failure inside LibreOffice.
     $systemLibs = @(
         'kernel32.lib', 'user32.lib', 'gdi32.lib', 'advapi32.lib',
         'ntdll.lib', 'userenv.lib', 'ws2_32.lib', 'iphlpapi.lib',
