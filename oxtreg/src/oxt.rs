@@ -19,17 +19,17 @@ pub struct Oxt {
     pub entries: Vec<ManifestEntry>,
 }
 
-fn local_name(qname: &[u8]) -> &[u8] {
-    match qname.iter().rposition(|&b| b == b':') {
+fn local_name(qname: &str) -> &str {
+    match qname.rfind(':') {
         Some(i) => &qname[i + 1..],
         None => qname,
     }
 }
 
-fn attr_by_local_name(e: &quick_xml::events::BytesStart, name: &[u8]) -> Option<String> {
+fn attr_by_local_name(e: &quick_xml::events::BytesStart, name: &str) -> Option<String> {
     for attr in e.attributes().flatten() {
         if local_name(attr.key.as_ref()) == name {
-            return Some(String::from_utf8_lossy(&attr.value).into_owned());
+            return Some(attr.value.into_owned());
         }
     }
     None
@@ -42,8 +42,8 @@ fn parse_description(xml: &str) -> (Option<String>, Option<String>) {
     loop {
         match reader.read_event() {
             Ok(Event::Start(e)) | Ok(Event::Empty(e)) => match local_name(e.name().as_ref()) {
-                b"identifier" => identifier = attr_by_local_name(&e, b"value"),
-                b"version" => version = attr_by_local_name(&e, b"value"),
+                "identifier" => identifier = attr_by_local_name(&e, "value"),
+                "version" => version = attr_by_local_name(&e, "value"),
                 _ => {}
             },
             Ok(Event::Eof) | Err(_) => break,
@@ -59,10 +59,10 @@ fn parse_manifest(xml: &str) -> Vec<ManifestEntry> {
     loop {
         match reader.read_event() {
             Ok(Event::Start(e)) | Ok(Event::Empty(e)) => {
-                if local_name(e.name().as_ref()) == b"file-entry" {
+                if local_name(e.name().as_ref()) == "file-entry" {
                     if let (Some(full_path), Some(media_type)) = (
-                        attr_by_local_name(&e, b"full-path"),
-                        attr_by_local_name(&e, b"media-type"),
+                        attr_by_local_name(&e, "full-path"),
+                        attr_by_local_name(&e, "media-type"),
                     ) {
                         entries.push(ManifestEntry { full_path, media_type });
                     }

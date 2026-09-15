@@ -119,8 +119,8 @@ impl ConfigmgrIni {
 
 // ===== backenddb.xml files =====
 
-fn local_name(qname: &[u8]) -> &[u8] {
-    match qname.iter().rposition(|&b| b == b':') {
+fn local_name(qname: &str) -> &str {
+    match qname.rfind(':') {
         Some(i) => &qname[i + 1..],
         None => qname,
     }
@@ -128,8 +128,8 @@ fn local_name(qname: &[u8]) -> &[u8] {
 
 fn url_attr(e: &quick_xml::events::BytesStart) -> Option<String> {
     for attr in e.attributes().flatten() {
-        if local_name(attr.key.as_ref()) == b"url" {
-            return Some(String::from_utf8_lossy(&attr.value).into_owned());
+        if local_name(attr.key.as_ref()) == "url" {
+            return Some(attr.value.into_owned());
         }
     }
     None
@@ -165,19 +165,19 @@ impl BundleDb {
                 match reader.read_event() {
                     Ok(Event::Start(e)) | Ok(Event::Empty(e)) => {
                         match local_name(e.name().as_ref()) {
-                            b"extension" => {
+                            "extension" => {
                                 cur = Some(BundleExtension {
                                     url: url_attr(&e).unwrap_or_default(),
                                     items: Vec::new(),
                                 })
                             }
-                            b"url" => text_target = Some("url"),
-                            b"media-type" => text_target = Some("media-type"),
+                            "url" => text_target = Some("url"),
+                            "media-type" => text_target = Some("media-type"),
                             _ => {}
                         }
                     }
                     Ok(Event::Text(t)) => {
-                        let text = String::from_utf8_lossy(&t).into_owned();
+                        let text = t.into_inner().into_owned();
                         match text_target.take() {
                             Some("url") => cur_item_url = Some(text),
                             Some("media-type") => {
@@ -190,7 +190,7 @@ impl BundleDb {
                         }
                     }
                     Ok(Event::End(e)) => {
-                        if local_name(e.name().as_ref()) == b"extension" {
+                        if local_name(e.name().as_ref()) == "extension" {
                             if let Some(ext) = cur.take() {
                                 extensions.push(ext);
                             }
@@ -249,8 +249,8 @@ impl ConfDb {
                 match reader.read_event() {
                     Ok(Event::Start(e)) | Ok(Event::Empty(e)) => {
                         match local_name(e.name().as_ref()) {
-                            b"configuration" => cur_url = url_attr(&e),
-                            b"ini-entry" => in_ini = true,
+                            "configuration" => cur_url = url_attr(&e),
+                            "ini-entry" => in_ini = true,
                             _ => {}
                         }
                     }
@@ -259,7 +259,7 @@ impl ConfDb {
                             if let Some(url) = cur_url.take() {
                                 entries.push(ConfEntry {
                                     url,
-                                    ini_entry: String::from_utf8_lossy(&t).into_owned(),
+                                    ini_entry: t.into_inner().into_owned(),
                                 });
                             }
                             in_ini = false;

@@ -139,7 +139,7 @@ impl Cache {
 }
 
 fn generate_temp_name(packages_dir: &Path) -> String {
-    use rand::Rng;
+    use rand::RngExt;
     let mut rng = rand::rng();
     loop {
         let suffix: String =
