@@ -20,6 +20,11 @@ public:
     std::string pipelineForward(void* handle, std::string_view input);
     std::string bundleErrorPreferences(void* bundle, std::string_view localesJson);
 
+    // Archive metadata, by path: reads the box trailer only, so this is cheap
+    // enough to call for every installed bundle during the startup scan.
+    // Returns empty when the attribute is absent.
+    std::string bundleMetadataAttr(std::string_view path, std::string_view key);
+
     void bundleDrop(void* bundle);
     void pipelineDrop(void* handle);
 

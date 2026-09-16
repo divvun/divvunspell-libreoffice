@@ -88,6 +88,7 @@ private:
     Engine& operator=(const Engine&) = delete;
 
     void scanBundlePaths();
+    void loadBundleLocales();
     std::string buildConfigJsonLocked(const std::string& tag) const;
     void dropPipelineForTagLocked(const std::string& tag);
     void dropAllPipelinesLocked();
@@ -103,6 +104,12 @@ private:
     std::map<std::string, void*> mBundles;                       // tag -> bundle*
     std::map<std::string, std::shared_ptr<PipelineEntry>> mPipelines;
     std::map<std::string, std::set<std::string>> mIgnoredByTag;  // tag -> ignored category ids
+
+    // Base tag -> full BCP-47 tags the bundle declares via its drb.locales
+    // attribute. Authoritative when present: it comes from the language's own
+    // manifest. Bundles built before that attribute existed are absent here and
+    // fall back to mLocaleVariants.
+    std::map<std::string, std::vector<std::string>> mBundleLocales;
 
     std::map<std::string, std::vector<std::string>> mLocaleVariants; // from locales.json
 

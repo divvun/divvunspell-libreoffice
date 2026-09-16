@@ -116,6 +116,7 @@ void Engine::trace(const std::string& msg) {
 
 Engine::Engine() {
     scanBundlePaths();
+    loadBundleLocales();
 
     auto path = locatesJsonPath();
     std::ifstream f(path);
@@ -163,6 +164,34 @@ Engine::~Engine() {
 
 void Engine::scanBundlePaths() {
     for (auto& base : bundleSearchPaths()) scanInto(base, mBundlePaths);
+}
+
+// Read each bundle's declared locales. This only touches the archive's metadata
+// trailer, not its pipeline, so it stays cheap enough to do for every installed
+// bundle at startup — loading them here would parse gigabytes.
+void Engine::loadBundleLocales() {
+    std::set<std::string> visited;
+    for (const auto& [tag, path] : mBundlePaths) {
+        // addDrb registers both the full tag and its base against one file.
+        if (!visited.insert(path).second) continue;
+
+        std::string csv;
+        try {
+            csv = RuntimeBridge::instance().bundleMetadataAttr(path, "drb.locales");
+        } catch (const RuntimeError& e) {
+            logLine("Engine: could not read drb.locales from " + path + ": " + e.what());
+            continue;
+        }
+        if (csv.empty()) continue; // built before the attribute existed
+
+        std::vector<std::string> tags;
+        std::istringstream ss(csv);
+        std::string item;
+        while (std::getline(ss, item, ',')) {
+            if (!item.empty()) tags.push_back(toBcp47Tag(item));
+        }
+        if (!tags.empty()) mBundleLocales[baseTag(tag)] = std::move(tags);
+    }
 }
 
 bool Engine::ready() const {
@@ -266,6 +295,27 @@ std::vector<LocaleTag> Engine::locales() const {
             out.push_back({ tag.substr(0, pos), tag.substr(pos + 1) });
         } else {
             out.push_back({ tag, "" });
+            // The bundle's own declaration wins: it comes from the language's
+            // manifest, where locales.json is a snapshot of LibreOffice's table
+            // taken once and never regenerated.
+            auto bit = mBundleLocales.find(tag);
+            if (bit != mBundleLocales.end()) {
+                for (const auto& full : bit->second) {
+                    auto pos = full.find('-');
+                    // LocaleTag holds only language+country. Anything richer
+                    // (script or extension subtags) needs the qlt/Variant form
+                    // LibreOffice expects, which this cannot express, so drop
+                    // it loudly rather than truncate it into the wrong locale.
+                    if (pos == std::string::npos
+                        || full.find('-', pos + 1) != std::string::npos) {
+                        logLine("Engine: skipping unsupported locale tag " + full
+                                + " declared by bundle " + tag);
+                        continue;
+                    }
+                    out.push_back({ full.substr(0, pos), full.substr(pos + 1) });
+                }
+                continue;
+            }
             auto vit = mLocaleVariants.find(tag);
             if (vit != mLocaleVariants.end()) {
                 for (const auto& country : vit->second) {
