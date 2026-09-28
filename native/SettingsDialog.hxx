@@ -4,24 +4,26 @@
 #include <com/sun/star/awt/XControl.hpp>
 #include <com/sun/star/awt/XControlContainer.hpp>
 #include <com/sun/star/awt/XControlModel.hpp>
-#include <com/sun/star/awt/XCheckBox.hpp>
+#include <com/sun/star/awt/XItemListener.hpp>
 #include <com/sun/star/awt/XWindow.hpp>
-#include <com/sun/star/awt/XWindowPeer.hpp>
-#include <com/sun/star/awt/XToolkit.hpp>
 #include <com/sun/star/beans/XPropertySet.hpp>
+#include <com/sun/star/container/XNameContainer.hpp>
 #include <com/sun/star/lang/XServiceInfo.hpp>
 #include <com/sun/star/uno/XComponentContext.hpp>
-#include <cppuhelper/implbase2.hxx>
+#include <cppuhelper/implbase3.hxx>
 #include <rtl/ustring.hxx>
 
+#include <initializer_list>
 #include <map>
 #include <string>
+#include <vector>
 
 namespace divvun {
 
 class SettingsDialog
-    : public ::cppu::WeakImplHelper2<
+    : public ::cppu::WeakImplHelper3<
         ::com::sun::star::awt::XContainerWindowEventHandler,
+        ::com::sun::star::awt::XItemListener,
         ::com::sun::star::lang::XServiceInfo>
 {
 public:
@@ -41,33 +43,42 @@ public:
         const ::rtl::OUString& methodName) override;
     virtual ::com::sun::star::uno::Sequence<::rtl::OUString> SAL_CALL getSupportedMethodNames() override;
 
+    // XItemListener: the language dropdown.
+    virtual void SAL_CALL itemStateChanged(const ::com::sun::star::awt::ItemEvent& event) override;
+    virtual void SAL_CALL disposing(const ::com::sun::star::lang::EventObject& event) override;
+
     static constexpr const char* IMPL_NAME = "no.divvun.SettingsDialog";
-    // Custom service name that LO's OptionsDialog framework will instantiate
-    // when the user navigates to our page; matches the EventHandlerService in
-    // OptionsDialog.xcu.
+    // Must not be a LibreOffice service name: registering under one (it once
+    // claimed com.sun.star.awt.ContainerWindowProvider) replaces LO's own
+    // implementation. Matches EventHandlerService in OptionsDialog.xcu.
     static constexpr const char* SERVICE_NAME = "no.divvun.SettingsDialogHandler";
 
     static ::com::sun::star::uno::Reference<::com::sun::star::uno::XInterface> SAL_CALL
     create(const ::com::sun::star::uno::Reference<::com::sun::star::uno::XComponentContext>& ctx);
 
 private:
+    // One checkbox per distinct category title: bundles give several
+    // categories the same title, and separate rows for them are
+    // indistinguishable.
     struct CheckBoxRef {
         std::string tag;
-        std::string categoryId;
+        std::vector<std::string> categoryIds;
     };
 
     void populate(const ::com::sun::star::uno::Reference<::com::sun::star::awt::XWindow>& window);
     void readBackAndApply(const ::com::sun::star::uno::Reference<::com::sun::star::awt::XWindow>& window);
+    void showLanguage(size_t index);
 
-    ::com::sun::star::uno::Reference<::com::sun::star::uno::XInterface>
-    addControl(const ::com::sun::star::uno::Reference<::com::sun::star::awt::XControlContainer>& container,
-               const ::com::sun::star::uno::Reference<::com::sun::star::awt::XToolkit>& toolkit,
-               const ::com::sun::star::uno::Reference<::com::sun::star::awt::XWindowPeer>& parentPeer,
-               const ::rtl::OUString& modelService,
-               const ::rtl::OUString& name,
-               int x, int y, int w, int h);
+    void addModel(const ::com::sun::star::uno::Reference<::com::sun::star::awt::XControlModel>& dialogModel,
+                  const char* modelService,
+                  const std::string& name,
+                  sal_Int32 x, sal_Int32 y, sal_Int32 w, sal_Int32 h,
+                  std::initializer_list<std::pair<const char*, ::com::sun::star::uno::Any>> props);
 
     ::com::sun::star::uno::Reference<::com::sun::star::uno::XComponentContext> mCtx;
+    ::com::sun::star::uno::Reference<::com::sun::star::awt::XControlContainer> mContainer;
+    std::vector<std::string> mTags;
+    std::map<std::string, std::vector<std::string>> mCheckBoxNamesByTag;
     std::map<std::string, CheckBoxRef> mCheckBoxByName;
     bool mPopulated = false;
 };

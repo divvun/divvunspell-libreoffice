@@ -349,9 +349,12 @@ Engine::errorPreferences(const std::string& tag, const std::string& uiLocale) {
     }
 
     void* bundle = nullptr;
-    {
+    try {
         std::lock_guard<std::mutex> lk(mLock);
         bundle = ensureBundleLocked(resolved);
+    } catch (const RuntimeError& e) {
+        logLine("Engine::errorPreferences bundle load failed for " + resolved + ": " + e.what());
+        return {};
     }
     if (!bundle) return {};
 

@@ -8,7 +8,7 @@
       <service name="com.sun.star.linguistic2.Proofreader"/>
     </implementation>
     <implementation name="no.divvun.SettingsDialog">
-      <service name="com.sun.star.awt.ContainerWindowProvider"/>
+      <service name="no.divvun.SettingsDialogHandler"/>
     </implementation>
   </component>
 </components>
