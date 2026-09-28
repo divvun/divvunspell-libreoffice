@@ -58,7 +58,8 @@ public:
     std::string run(const std::string& tag, std::string_view text);
 
     // Per-word spell check, with caching. Returns valid=true and empty suggestions
-    // when no spell-class error covers the entire word.
+    // when the pipeline reports no spell-class error. Input containing
+    // whitespace is always invalid.
     SpellResult spellCheck(const std::string& tag, const std::string& word);
 
     // Returns all locale tags + variants from locales.json expansion.

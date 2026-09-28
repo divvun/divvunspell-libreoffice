@@ -485,6 +485,14 @@ void Engine::savePrefs() const {
 
 SpellResult Engine::spellCheck(const std::string& tag, const std::string& word) {
     if (!ready() || word.empty()) return {true, {}};
+
+    // Writer re-checks a misspelled word joined with a neighbour ("okta okta")
+    // to find multi-word dictionary entries, and drops the underline when that
+    // comes back valid. The pipeline would only say every token in it is
+    // spelled correctly, which is not the same thing, and we have no
+    // multi-word entries, so reject these outright.
+    if (word.find_first_of(" \t\r\n") != std::string::npos) return {false, {}};
+
     auto resolved = resolveTag(tag);
 
     {
