@@ -82,6 +82,11 @@ public:
     // Implements XProofreader.resetIgnoreRules(): clears every tag's set.
     void resetIgnoredRules();
 
+    // Language grammar messages are requested in. Empty means the checked
+    // language itself.
+    std::string messageLocale() const;
+    void setMessageLocale(const std::string& locale);
+
 private:
     Engine();
     ~Engine();
@@ -105,6 +110,7 @@ private:
     std::map<std::string, void*> mBundles;                       // tag -> bundle*
     std::map<std::string, std::shared_ptr<PipelineEntry>> mPipelines;
     std::map<std::string, std::set<std::string>> mIgnoredByTag;  // tag -> ignored category ids
+    std::string mMessageLocale;
 
     // Base tag -> full BCP-47 tags the bundle declares via its drb.locales
     // attribute. Authoritative when present: it comes from the language's own

@@ -3,6 +3,9 @@
 #include "Platform.hxx"
 
 #include <com/sun/star/awt/XListBox.hpp>
+#include <com/sun/star/beans/NamedValue.hpp>
+#include <com/sun/star/container/XNameAccess.hpp>
+#include <com/sun/star/lang/XMultiComponentFactory.hpp>
 #include <com/sun/star/lang/XMultiServiceFactory.hpp>
 #include <rtl/ustring.hxx>
 
@@ -46,6 +49,53 @@ constexpr sal_Int32 kHeight = 290;
 constexpr sal_Int32 kMargin = 6;
 constexpr sal_Int32 kListHeight = 14;
 constexpr sal_Int32 kRowHeight = 11;
+
+// Languages offered for grammar messages besides the installed bundles
+// own. A bundle without messages in the chosen language falls back to the
+// checked language and then English, so offering one it lacks is harmless.
+const char* const kExtraMessageLocales[] = { "en", "nb", "nn", "sv", "fi" };
+
+std::string languageName(const std::string& code) {
+    static const std::map<std::string, std::string> names = {
+        {"en", "English"},
+        {"fi", "Finnish"},
+        {"nb", "Norwegian Bokm\u00e5l"},
+        {"nn", "Norwegian Nynorsk"},
+        {"se", "Northern Sami"},
+        {"sjd", "Kildin Sami"},
+        {"sma", "Southern Sami"},
+        {"smj", "Lule Sami"},
+        {"smn", "Inari Sami"},
+        {"sms", "Skolt Sami"},
+        {"sv", "Swedish"},
+    };
+    auto it = names.find(code);
+    return it == names.end() ? code : it->second + " (" + code + ")";
+}
+
+// LibreOffice's UI language, e.g. "nb-NO"; empty when it follows the system.
+std::string uiLocale(const uno::Reference<uno::XComponentContext>& ctx) {
+    try {
+        uno::Reference<lang::XMultiServiceFactory> provider(
+            ctx->getServiceManager()->createInstanceWithContext(
+                ::rtl::OUString::createFromAscii("com.sun.star.configuration.ConfigurationProvider"), ctx),
+            uno::UNO_QUERY_THROW);
+        uno::Sequence<uno::Any> args(1);
+        args.getArray()[0] <<= beans::NamedValue(
+            ::rtl::OUString::createFromAscii("nodepath"),
+            uno::makeAny(::rtl::OUString::createFromAscii("/org.openoffice.Setup/L10N")));
+        uno::Reference<container::XNameAccess> node(
+            provider->createInstanceWithArguments(
+                ::rtl::OUString::createFromAscii("com.sun.star.configuration.ConfigurationAccess"), args),
+            uno::UNO_QUERY_THROW);
+        ::rtl::OUString locale;
+        node->getByName(::rtl::OUString::createFromAscii("ooLocale")) >>= locale;
+        return fromOU(locale);
+    } catch (const uno::Exception& e) {
+        logLine("SettingsDialog: could not read UI locale: " + fromOU(e.Message));
+        return {};
+    }
+}
 
 } // namespace
 
@@ -127,27 +177,62 @@ void SettingsDialog::populate(const uno::Reference<awt::XWindow>& window) {
         return;
     }
 
-    addModel(dialogModel, "com.sun.star.awt.UnoControlFixedTextModel",
-             "languageLabel", kMargin, kMargin + 2, 50, kRowHeight,
-             {{"Label", uno::makeAny(toOU("Language:"))}});
+    const sal_Int32 labelWidth = 80;
+    const sal_Int32 listX = kMargin + labelWidth;
+    const sal_Int32 listWidth = 150;
 
+    addModel(dialogModel, "com.sun.star.awt.UnoControlFixedTextModel",
+             "languageLabel", kMargin, kMargin + 2, labelWidth, kRowHeight,
+             {{"Label", uno::makeAny(toOU("Language:"))}});
     uno::Sequence<::rtl::OUString> items(static_cast<sal_Int32>(mTags.size()));
-    for (size_t i = 0; i < mTags.size(); ++i) items.getArray()[i] = toOU(mTags[i]);
-    uno::Sequence<sal_Int16> selected(1);
-    selected.getArray()[0] = 0;
+    for (size_t i = 0; i < mTags.size(); ++i) items.getArray()[i] = toOU(languageName(mTags[i]));
     addModel(dialogModel, "com.sun.star.awt.UnoControlListBoxModel",
-             "language", 60, kMargin, 120, kListHeight,
+             "language", listX, kMargin, listWidth, kListHeight,
              {{"Dropdown", uno::makeAny(true)},
               {"LineCount", uno::makeAny(sal_Int16(10))},
               {"StringItemList", uno::makeAny(items)},
-              {"SelectedItems", uno::makeAny(selected)}});
+              {"SelectedItems", uno::makeAny(uno::Sequence<sal_Int16>{0})}});
 
-    const sal_Int32 top = kMargin + kListHeight + kMargin;
+    // Feedback language: "" means the checked language itself.
+    const std::string messageLocale = Engine::instance().messageLocale();
+    mFeedbackCodes = {""};
+    for (const auto& tag : mTags) mFeedbackCodes.push_back(tag);
+    for (const char* code : kExtraMessageLocales) {
+        if (std::find(mFeedbackCodes.begin(), mFeedbackCodes.end(), code) == mFeedbackCodes.end())
+            mFeedbackCodes.push_back(code);
+    }
+    if (std::find(mFeedbackCodes.begin(), mFeedbackCodes.end(), messageLocale) == mFeedbackCodes.end())
+        mFeedbackCodes.push_back(messageLocale);
+
+    uno::Sequence<::rtl::OUString> feedbackItems(static_cast<sal_Int32>(mFeedbackCodes.size()));
+    sal_Int16 feedbackSelected = 0;
+    for (size_t i = 0; i < mFeedbackCodes.size(); ++i) {
+        const auto& code = mFeedbackCodes[i];
+        feedbackItems.getArray()[i] = toOU(code.empty() ? "Same as the text" : languageName(code));
+        if (code == messageLocale) feedbackSelected = static_cast<sal_Int16>(i);
+    }
+    const sal_Int32 feedbackY = kMargin + kListHeight + 4;
+    addModel(dialogModel, "com.sun.star.awt.UnoControlFixedTextModel",
+             "feedbackLabel", kMargin, feedbackY + 2, labelWidth, kRowHeight,
+             {{"Label", uno::makeAny(toOU("Feedback language:"))}});
+    addModel(dialogModel, "com.sun.star.awt.UnoControlListBoxModel",
+             "feedback", listX, feedbackY, listWidth, kListHeight,
+             {{"Dropdown", uno::makeAny(true)},
+              {"LineCount", uno::makeAny(sal_Int16(12))},
+              {"StringItemList", uno::makeAny(feedbackItems)},
+              {"SelectedItems", uno::makeAny(uno::Sequence<sal_Int16>{feedbackSelected})}});
+
+    // Category titles in the feedback language when one is chosen, otherwise
+    // in LibreOffice's own UI language.
+    std::string titleLocale = messageLocale.empty() ? uiLocale(mCtx) : messageLocale;
+    if (titleLocale.empty()) titleLocale = "en";
+
+    const sal_Int32 top = feedbackY + kListHeight + kMargin;
     const sal_Int32 rows = (kHeight - top - kMargin) / kRowHeight;
     int idx = 0;
 
     for (const auto& tag : mTags) {
-        auto prefs = Engine::instance().errorPreferences(tag, "en");
+        auto prefs = Engine::instance().errorPreferences(tag, titleLocale);
         auto ignored = Engine::instance().ignoredRules(tag);
 
         std::vector<std::pair<std::string, std::vector<std::string>>> groups;
@@ -184,8 +269,15 @@ void SettingsDialog::populate(const uno::Reference<awt::XWindow>& window) {
                 + std::to_string(count) + " checkboxes, " + std::to_string(cols) + " column(s)");
     }
 
+    // A dropdown's SelectedItems set on the model before its control exists
+    // doesn't show, so select on the controls as well.
     uno::Reference<awt::XListBox> listBox(mContainer->getControl(toOU("language")), uno::UNO_QUERY);
-    if (listBox.is()) listBox->addItemListener(this);
+    if (listBox.is()) {
+        listBox->selectItemPos(0, true);
+        listBox->addItemListener(this);
+    }
+    uno::Reference<awt::XListBox> feedbackBox(mContainer->getControl(toOU("feedback")), uno::UNO_QUERY);
+    if (feedbackBox.is()) feedbackBox->selectItemPos(feedbackSelected, true);
     showLanguage(0);
     mPopulated = true;
 }
@@ -232,6 +324,17 @@ void SettingsDialog::readBackAndApply(const uno::Reference<awt::XWindow>& window
 
     for (const auto& tag : tagsTouched) {
         Engine::instance().setIgnoredRules(tag, ignoredByTag[tag]);
+    }
+
+    uno::Reference<beans::XPropertySet> feedback;
+    if (names->hasByName(toOU("feedback"))) feedback.set(names->getByName(toOU("feedback")), uno::UNO_QUERY);
+    if (feedback.is()) {
+        uno::Sequence<sal_Int16> selected;
+        feedback->getPropertyValue(::rtl::OUString::createFromAscii("SelectedItems")) >>= selected;
+        if (selected.getLength() == 1 && selected[0] >= 0
+            && static_cast<size_t>(selected[0]) < mFeedbackCodes.size()) {
+            Engine::instance().setMessageLocale(mFeedbackCodes[selected[0]]);
+        }
     }
     logLine("SettingsDialog applied " + std::to_string(tagsTouched.size()) + " tag(s)");
 }

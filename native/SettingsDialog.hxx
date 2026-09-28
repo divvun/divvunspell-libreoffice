@@ -78,6 +78,7 @@ private:
     ::com::sun::star::uno::Reference<::com::sun::star::uno::XComponentContext> mCtx;
     ::com::sun::star::uno::Reference<::com::sun::star::awt::XControlContainer> mContainer;
     std::vector<std::string> mTags;
+    std::vector<std::string> mFeedbackCodes;
     std::map<std::string, std::vector<std::string>> mCheckBoxNamesByTag;
     std::map<std::string, CheckBoxRef> mCheckBoxByName;
     bool mPopulated = false;

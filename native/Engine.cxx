@@ -211,9 +211,12 @@ std::string Engine::resolveTag(const std::string& tag) const {
 
 std::string Engine::buildConfigJsonLocked(const std::string& tag) const {
     nlohmann::json suggest = { {"encoding", "utf-16"} };
-    // Messages in the checked language; the runtime falls back to "en" and
-    // then any loaded bundle on its own.
-    suggest["locales"] = nlohmann::json::array({ tag });
+    // Messages in the user's chosen language, else the checked language; the
+    // runtime falls back to "en" and then any loaded bundle on its own.
+    auto locales = nlohmann::json::array();
+    if (!mMessageLocale.empty() && mMessageLocale != tag) locales.push_back(mMessageLocale);
+    locales.push_back(tag);
+    suggest["locales"] = locales;
     auto it = mIgnoredByTag.find(tag);
     if (it != mIgnoredByTag.end() && !it->second.empty()) {
         suggest["ignore"] = std::vector<std::string>(it->second.begin(), it->second.end());
@@ -433,6 +436,22 @@ void Engine::resetIgnoredRules() {
     logLine("Engine: ignore rules reset");
 }
 
+std::string Engine::messageLocale() const {
+    std::lock_guard<std::mutex> lk(mLock);
+    return mMessageLocale;
+}
+
+void Engine::setMessageLocale(const std::string& locale) {
+    {
+        std::lock_guard<std::mutex> lk(mLock);
+        if (mMessageLocale == locale) return;
+        mMessageLocale = locale;
+        dropAllPipelinesLocked();
+    }
+    savePrefs();
+    logLine("Engine: message locale set to " + (locale.empty() ? std::string("<checked language>") : locale));
+}
+
 std::string Engine::prefsPath() const {
     return divvun::prefsPath();
 }
@@ -443,7 +462,11 @@ void Engine::loadPrefs() {
     try {
         nlohmann::json j;
         f >> j;
-        if (!j.is_object() || !j.contains("ignored") || !j["ignored"].is_object()) return;
+        if (!j.is_object()) return;
+        if (j.contains("messageLocale") && j["messageLocale"].is_string()) {
+            mMessageLocale = j["messageLocale"].get<std::string>();
+        }
+        if (!j.contains("ignored") || !j["ignored"].is_object()) return;
         for (auto& [tag, arr] : j["ignored"].items()) {
             if (!arr.is_array()) continue;
             std::set<std::string> set;
@@ -469,6 +492,7 @@ void Engine::savePrefs() const {
         for (const auto& [tag, set] : mIgnoredByTag) {
             ignored[tag] = std::vector<std::string>(set.begin(), set.end());
         }
+        j["messageLocale"] = mMessageLocale;
     }
     j["ignored"] = ignored;
 
