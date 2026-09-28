@@ -11,7 +11,7 @@
             <value xml:lang="en-US">DivvunSpell</value>
           </prop>
           <prop oor:name="OptionsPage">
-            <value>%origin%/../../../../../dialogs/DivvunSettings.xdl</value>
+            <value>vnd.sun.star.extension://no.divvun.DivvunSpell/dialogs/DivvunSettings.xdl</value>
           </prop>
           <prop oor:name="EventHandlerService">
             <value>no.divvun.SettingsDialogHandler</value>
