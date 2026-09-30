@@ -4,15 +4,23 @@
 #include "Strings.hxx"
 #include "UiLocale.hxx"
 
-#include <com/sun/star/awt/XLayoutConstrains.hpp>
+#include <com/sun/star/awt/Key.hpp>
+#include <com/sun/star/awt/KeyEvent.hpp>
+#include <com/sun/star/awt/MouseButton.hpp>
+#include <com/sun/star/awt/MouseEvent.hpp>
 #include <com/sun/star/awt/XListBox.hpp>
+#include <com/sun/star/awt/grid/DefaultGridColumnModel.hpp>
+#include <com/sun/star/awt/grid/DefaultGridDataModel.hpp>
+#include <com/sun/star/awt/grid/GridSelectionEvent.hpp>
+#include <com/sun/star/awt/grid/XGridColumn.hpp>
+#include <com/sun/star/awt/grid/XGridColumnModel.hpp>
 #include <com/sun/star/container/XNameAccess.hpp>
 #include <com/sun/star/i18n/Collator.hpp>
 #include <com/sun/star/i18n/CollatorOptions.hpp>
 #include <com/sun/star/lang/Locale.hpp>
 #include <com/sun/star/lang/XMultiServiceFactory.hpp>
-#include <com/sun/star/style/VerticalAlignment.hpp>
-#include <com/sun/star/util/MeasureUnit.hpp>
+#include <com/sun/star/style/HorizontalAlignment.hpp>
+#include <com/sun/star/view/SelectionType.hpp>
 #include <rtl/ustring.hxx>
 
 #include <algorithm>
@@ -55,7 +63,15 @@ constexpr sal_Int32 kHeight = 290;
 constexpr sal_Int32 kMargin = 6;
 constexpr sal_Int32 kListHeight = 14;
 constexpr sal_Int32 kRowHeight = 11;
-constexpr sal_Int32 kMaxColumns = 3;
+constexpr sal_Int32 kCheckColumnWidth = 14;
+// Enough for three wrapped lines of the selected category's title.
+constexpr sal_Int32 kTitleHeight = 26;
+
+// The tick column's cells: text rather than images, so they follow the theme
+// and screen readers read them.
+uno::Any checkMark(bool ticked) {
+    return uno::makeAny(::rtl::OUString(sal_Unicode(ticked ? 0x2611 : 0x2610)));
+}
 
 lang::Locale toLocale(const std::string& tag) {
     lang::Locale locale;
@@ -214,12 +230,14 @@ void SettingsDialog::populate(const uno::Reference<awt::XWindow>& window) {
               {"SelectedItems", uno::makeAny(uno::Sequence<sal_Int16>{feedbackSelected})}});
 
     mDialogModel = dialogModel;
-    mUnits.set(window, uno::UNO_QUERY);
-    mCheckBoxTop = feedbackY + kListHeight + kMargin;
-    for (const auto& tag : mTags) {
-        mUnticked[tag] = Engine::instance().ignoredRules(tag);
-        buildCheckBoxes(tag);
-    }
+    for (const auto& tag : mTags) mUnticked[tag] = Engine::instance().ignoredRules(tag);
+
+    const sal_Int32 gridY = feedbackY + kListHeight + kMargin;
+    const sal_Int32 titleY = kHeight - kMargin - kTitleHeight;
+    addGrid(kMargin, gridY, kWidth - 2 * kMargin, titleY - 4 - gridY);
+    addModel(dialogModel, "com.sun.star.awt.UnoControlFixedTextModel",
+             "categoryTitle", kMargin, titleY, kWidth - 2 * kMargin, kTitleHeight,
+             {{"MultiLine", uno::makeAny(true)}});
 
     // A dropdown's SelectedItems set on the model before its control exists
     // doesn't show, so select on the controls as well.
@@ -233,8 +251,45 @@ void SettingsDialog::populate(const uno::Reference<awt::XWindow>& window) {
         mFeedbackBox->selectItemPos(feedbackSelected, true);
         mFeedbackBox->addItemListener(this);
     }
+    mGrid.set(mContainer->getControl(toOU("categories")), uno::UNO_QUERY);
+    uno::Reference<awt::XWindow> gridWindow(mGrid, uno::UNO_QUERY);
+    if (gridWindow.is()) {
+        gridWindow->addMouseListener(this);
+        gridWindow->addKeyListener(this);
+    }
+    uno::Reference<awt::grid::XGridRowSelection> selection(mGrid, uno::UNO_QUERY);
+    if (selection.is()) selection->addSelectionListener(this);
     showLanguage(0);
     mPopulated = true;
+}
+
+// The categories as a tick column and a title column. Unlike the page itself
+// the grid scrolls, and it shows a title too long for its row as a tooltip.
+void SettingsDialog::addGrid(sal_Int32 x, sal_Int32 y, sal_Int32 w, sal_Int32 h) {
+    uno::Reference<awt::grid::XGridColumnModel> columns = awt::grid::DefaultGridColumnModel::create(mCtx);
+    uno::Reference<awt::grid::XGridColumn> check = columns->createColumn();
+    check->setColumnWidth(kCheckColumnWidth);
+    check->setFlexibility(0);
+    check->setResizeable(false);
+    check->setHorizontalAlign(style::HorizontalAlignment_CENTER);
+    columns->addColumn(check);
+    uno::Reference<awt::grid::XGridColumn> title = columns->createColumn();
+    title->setColumnWidth(w - kCheckColumnWidth);
+    title->setFlexibility(1);
+    title->setResizeable(false);
+    columns->addColumn(title);
+
+    mGridData = awt::grid::DefaultGridDataModel::create(mCtx);
+    addModel(mDialogModel, "com.sun.star.awt.grid.UnoControlGridModel", "categories", x, y, w, h,
+             {{"ShowColumnHeader", uno::makeAny(false)},
+              {"ShowRowHeader", uno::makeAny(false)},
+              {"UseGridLines", uno::makeAny(false)},
+              {"VScroll", uno::makeAny(true)},
+              {"HScroll", uno::makeAny(false)},
+              {"SelectionModel", uno::makeAny(view::SelectionType_SINGLE)},
+              {"RowHeight", uno::makeAny(kRowHeight)},
+              {"ColumnModel", uno::makeAny(columns)},
+              {"GridDataModel", uno::makeAny(mGridData)}});
 }
 
 // Feedback choices for a proofing language: the text's own language, the UI
@@ -294,12 +349,9 @@ std::string SettingsDialog::titleLocale(const std::string& tag) const {
     return locale.empty() ? "en" : locale;
 }
 
-void SettingsDialog::buildCheckBoxes(const std::string& tag) {
-    const std::string prefix = "chk_" + std::to_string(++mGeneration) + "_";
+void SettingsDialog::fillGrid(const std::string& tag) {
     const std::string locale = titleLocale(tag);
-
     auto prefs = Engine::instance().errorPreferences(tag, locale);
-    const auto& unticked = mUnticked[tag];
 
     TitleGroups groups;
     std::map<std::string, size_t> groupByTitle;
@@ -315,148 +367,60 @@ void SettingsDialog::buildCheckBoxes(const std::string& tag) {
     }
     sortByTitle(mCtx, locale, groups);
 
-    std::vector<std::string> names;
-    std::vector<std::string> titles;
-    for (const auto& [shown, ids] : groups) {
-        std::string name = prefix + std::to_string(names.size());
-        bool allUnticked = std::all_of(ids.begin(), ids.end(),
-                                       [&](const std::string& id) { return unticked.count(id) > 0; });
-        addModel(mDialogModel, "com.sun.star.awt.UnoControlCheckBoxModel", name,
-                 kMargin, mCheckBoxTop, kWidth - 2 * kMargin, kRowHeight,
-                 {{"Label", uno::makeAny(toOU(shown))},
-                  {"MultiLine", uno::makeAny(true)},
-                  {"VerticalAlign", uno::makeAny(style::VerticalAlignment_TOP)},
-                  {"State", uno::makeAny(allUnticked ? sal_Int16(0) : sal_Int16(1))}});
-        mCheckBoxByName[name] = {tag, ids};
-        mCheckBoxNamesByTag[tag].push_back(name);
-        names.push_back(name);
-        titles.push_back(shown);
+    mRows.clear();
+    uno::Sequence<uno::Any> headings(static_cast<sal_Int32>(groups.size()));
+    uno::Sequence<uno::Sequence<uno::Any>> cells(static_cast<sal_Int32>(groups.size()));
+    for (auto& [shown, ids] : groups) {
+        mRows.push_back({tag, std::move(shown), std::move(ids)});
+        const CategoryRow& row = mRows.back();
+        uno::Sequence<uno::Any> rowCells(2);
+        rowCells.getArray()[0] = checkMark(isTicked(row));
+        rowCells.getArray()[1] = uno::makeAny(toOU(row.title));
+        cells.getArray()[mRows.size() - 1] = rowCells;
     }
-    layoutCheckBoxes(names, titles);
+    if (mGridData.is()) {
+        mGridData->removeAllRows();
+        mGridData->addRows(headings, cells);
+    }
+    showTitle(-1);
     logLine("SettingsDialog " + tag + ": " + std::to_string(prefs.size()) + " categories in "
-            + std::to_string(groups.size()) + " checkboxes, titles in " + locale);
+            + std::to_string(groups.size()) + " rows, titles in " + locale);
 }
 
-// Height in APPFONT a checkbox needs to show its whole title wrapped to the
-// given width.
-sal_Int32 SettingsDialog::measureHeight(const std::string& name, const std::string& title,
-                                        sal_Int32 width) const
-{
-    try {
-        uno::Reference<awt::XControl> control;
-        if (mContainer.is()) control = mContainer->getControl(toOU(name));
-        uno::Reference<awt::XLayoutConstrains> layout(control, uno::UNO_QUERY);
-        if (layout.is() && mUnits.is()) {
-            awt::Size px = mUnits->convertSizeToPixel(awt::Size(width, kRowHeight), util::MeasureUnit::APPFONT);
-            if (px.Width > 0) {
-                awt::Size fit = layout->calcAdjustedSize(awt::Size(px.Width, 1));
-                awt::Size logic = mUnits->convertSizeToLogic(fit, util::MeasureUnit::APPFONT);
-                if (logic.Height > 0) return std::max(kRowHeight, logic.Height + 2);
-            }
-        }
-    } catch (const uno::Exception& e) {
-        logLine("SettingsDialog: measuring " + name + " failed: " + fromOU(e.Message));
+// A row shows unticked only when all its categories are.
+bool SettingsDialog::isTicked(const CategoryRow& row) const {
+    auto it = mUnticked.find(row.tag);
+    if (it == mUnticked.end()) return true;
+    return !std::all_of(row.categoryIds.begin(), row.categoryIds.end(),
+                        [&](const std::string& id) { return it->second.count(id) > 0; });
+}
+
+void SettingsDialog::toggleRow(sal_Int32 index) {
+    if (index < 0 || static_cast<size_t>(index) >= mRows.size()) return;
+    const CategoryRow& row = mRows[index];
+    const bool tick = !isTicked(row);
+    auto& unticked = mUnticked[row.tag];
+    for (const auto& id : row.categoryIds) {
+        if (tick) unticked.erase(id);
+        else unticked.insert(id);
     }
-
-    // An APPFONT unit is a quarter of an average character wide and an eighth
-    // of a line high; the check box itself takes about 12.
-    sal_Int32 chars = 0;
-    for (unsigned char c : title) if ((c & 0xC0) != 0x80) ++chars;
-    const sal_Int32 textWidth = std::max<sal_Int32>(1, width - 12);
-    const sal_Int32 lines = std::max<sal_Int32>(1, (chars * 4 + textWidth - 1) / textWidth);
-    return std::max(kRowHeight, lines * 8 + 3);
+    if (mGridData.is()) mGridData->updateCellData(0, index, checkMark(tick));
 }
 
-// Fewest columns that show every title in full, wrapped where needed. When
-// even kMaxColumns can't, titles are cut to one line in as many columns as it
-// takes, with the full title as a tooltip.
-void SettingsDialog::layoutCheckBoxes(const std::vector<std::string>& names,
-                                      const std::vector<std::string>& titles)
-{
+// The full title of the selected row, wrapped, below the grid.
+void SettingsDialog::showTitle(sal_Int32 index) {
     uno::Reference<container::XNameAccess> models(mDialogModel, uno::UNO_QUERY);
-    if (!models.is() || names.empty()) return;
-    auto modelOf = [&](const std::string& name) {
-        return uno::Reference<beans::XPropertySet>(models->getByName(toOU(name)), uno::UNO_QUERY_THROW);
-    };
-
-    const sal_Int32 width = kWidth - 2 * kMargin;
-    const sal_Int32 height = kHeight - mCheckBoxTop - kMargin;
-    const size_t count = names.size();
-
-    for (sal_Int32 cols = 1; cols <= kMaxColumns; ++cols) {
-        const sal_Int32 colWidth = width / cols;
-        std::vector<sal_Int32> heights(count), columns(count), tops(count);
-        sal_Int32 col = 0, y = 0;
-        bool fits = true;
-        for (size_t i = 0; i < count && fits; ++i) {
-            heights[i] = measureHeight(names[i], titles[i], colWidth - 2);
-            if (y > 0 && y + heights[i] > height) { ++col; y = 0; }
-            fits = col < cols && heights[i] <= height;
-            columns[i] = col;
-            tops[i] = y;
-            y += heights[i];
-        }
-        if (!fits) continue;
-        for (size_t i = 0; i < count; ++i) {
-            auto model = modelOf(names[i]);
-            setProp(model, "PositionX", kMargin + columns[i] * colWidth);
-            setProp(model, "PositionY", mCheckBoxTop + tops[i]);
-            setProp(model, "Width", colWidth - 2);
-            setProp(model, "Height", heights[i]);
-        }
-        return;
-    }
-
-    const sal_Int32 rows = std::max<sal_Int32>(1, height / kRowHeight);
-    const sal_Int32 cols = (static_cast<sal_Int32>(count) + rows - 1) / rows;
-    const sal_Int32 colWidth = width / cols;
-    for (size_t i = 0; i < count; ++i) {
-        const sal_Int32 n = static_cast<sal_Int32>(i);
-        auto model = modelOf(names[i]);
-        setProp(model, "MultiLine", false);
-        setProp(model, "HelpText", toOU(titles[i]));
-        setProp(model, "PositionX", kMargin + (n / rows) * colWidth);
-        setProp(model, "PositionY", mCheckBoxTop + (n % rows) * kRowHeight);
-        setProp(model, "Width", colWidth - 2);
-        setProp(model, "Height", kRowHeight);
-    }
-}
-
-void SettingsDialog::captureCheckBoxStates() {
-    uno::Reference<container::XNameAccess> models(mDialogModel, uno::UNO_QUERY);
-    if (!models.is()) return;
-    for (const auto& [name, ref] : mCheckBoxByName) {
-        if (!models->hasByName(toOU(name))) continue;
-        uno::Reference<beans::XPropertySet> props(models->getByName(toOU(name)), uno::UNO_QUERY);
-        if (!props.is()) continue;
-        sal_Int16 state = 1;
-        props->getPropertyValue(::rtl::OUString::createFromAscii("State")) >>= state;
-        auto& unticked = mUnticked[ref.tag];
-        for (const auto& id : ref.categoryIds) {
-            if (state == 0) unticked.insert(id);
-            else unticked.erase(id);
-        }
-    }
-}
-
-void SettingsDialog::removeCheckBoxes(const std::string& tag) {
-    uno::Reference<container::XNameContainer> models(mDialogModel, uno::UNO_QUERY);
-    for (const auto& name : mCheckBoxNamesByTag[tag]) {
-        if (models.is() && models->hasByName(toOU(name))) models->removeByName(toOU(name));
-        mCheckBoxByName.erase(name);
-    }
-    mCheckBoxNamesByTag.erase(tag);
+    if (!models.is() || !models->hasByName(toOU("categoryTitle"))) return;
+    uno::Reference<beans::XPropertySet> model(models->getByName(toOU("categoryTitle")), uno::UNO_QUERY);
+    if (!model.is()) return;
+    const bool valid = index >= 0 && static_cast<size_t>(index) < mRows.size();
+    setProp(model, "Label", valid ? toOU(mRows[index].title) : ::rtl::OUString());
 }
 
 void SettingsDialog::showLanguage(size_t index) {
-    if (!mContainer.is()) return;
+    if (index >= mTags.size()) return;
     mLanguageIndex = index;
-    for (size_t i = 0; i < mTags.size(); ++i) {
-        for (const auto& name : mCheckBoxNamesByTag[mTags[i]]) {
-            uno::Reference<awt::XWindow> w(mContainer->getControl(toOU(name)), uno::UNO_QUERY);
-            if (w.is()) w->setVisible(i == index);
-        }
-    }
+    fillGrid(mTags[index]);
 }
 
 // Must not throw: an exception escaping into LO aborts the process.
@@ -468,13 +432,11 @@ void SAL_CALL SettingsDialog::itemStateChanged(const awt::ItemEvent& event) {
             if (mLanguageIndex >= mTags.size() || selected >= mFeedbackCodes.size()) return;
             const std::string& tag = mTags[mLanguageIndex];
             mFeedbackByTag[tag] = mFeedbackCodes[selected];
-            captureCheckBoxStates();
-            removeCheckBoxes(tag);
-            buildCheckBoxes(tag);
-            showLanguage(mLanguageIndex);
+            fillGrid(tag);
         } else if (selected < mTags.size()) {
-            showLanguage(selected);
+            // The feedback choice first: it settles the titles' language.
             showFeedbackFor(mTags[selected]);
+            showLanguage(selected);
         }
     } catch (const uno::Exception& e) {
         logLine("SettingsDialog selection change failed: " + fromOU(e.Message));
@@ -485,15 +447,66 @@ void SAL_CALL SettingsDialog::itemStateChanged(const awt::ItemEvent& event) {
     }
 }
 
+// Toolkit listeners run from the main loop after the grid has handled the
+// event itself, so the click has already moved the selection.
+void SAL_CALL SettingsDialog::mousePressed(const awt::MouseEvent& event) {
+    try {
+        if (!mGrid.is() || event.Buttons != awt::MouseButton::LEFT) return;
+        const sal_Int32 row = mGrid->getRowAtPoint(event.X, event.Y);
+        const sal_Int32 column = mGrid->getColumnAtPoint(event.X, event.Y);
+        // Every click on the tick toggles, as on a checkbox; elsewhere in the
+        // row it takes a double-click.
+        if (column == 0 || (column > 0 && event.ClickCount == 2)) toggleRow(row);
+    } catch (const uno::Exception& e) {
+        logLine("SettingsDialog click failed: " + fromOU(e.Message));
+    } catch (const std::exception& e) {
+        logLine(std::string("SettingsDialog click failed: ") + e.what());
+    } catch (...) {
+        logLine("SettingsDialog click failed: unknown exception");
+    }
+}
+
+// The grid binds Ctrl+Space but not Space.
+void SAL_CALL SettingsDialog::keyPressed(const awt::KeyEvent& event) {
+    try {
+        if (!mGrid.is() || event.KeyCode != awt::Key::SPACE || event.Modifiers != 0) return;
+        uno::Reference<awt::grid::XGridRowSelection> selection(mGrid, uno::UNO_QUERY);
+        const auto rows = selection.is() ? selection->getSelectedRows() : uno::Sequence<sal_Int32>();
+        toggleRow(rows.getLength() > 0 ? rows[0] : mGrid->getCurrentRow());
+    } catch (const uno::Exception& e) {
+        logLine("SettingsDialog key press failed: " + fromOU(e.Message));
+    } catch (const std::exception& e) {
+        logLine(std::string("SettingsDialog key press failed: ") + e.what());
+    } catch (...) {
+        logLine("SettingsDialog key press failed: unknown exception");
+    }
+}
+
+void SAL_CALL SettingsDialog::selectionChanged(const awt::grid::GridSelectionEvent& event) {
+    try {
+        showTitle(event.SelectedRowIndexes.getLength() > 0 ? event.SelectedRowIndexes[0] : -1);
+    } catch (const uno::Exception& e) {
+        logLine("SettingsDialog selection failed: " + fromOU(e.Message));
+    } catch (const std::exception& e) {
+        logLine(std::string("SettingsDialog selection failed: ") + e.what());
+    } catch (...) {
+        logLine("SettingsDialog selection failed: unknown exception");
+    }
+}
+
 void SAL_CALL SettingsDialog::disposing(const lang::EventObject&) {
-    mContainer.clear();
-    mLanguageBox.clear();
-    mFeedbackBox.clear();
+    try {
+        mContainer.clear();
+        mLanguageBox.clear();
+        mFeedbackBox.clear();
+        mGrid.clear();
+    } catch (...) {
+        logLine("SettingsDialog disposing failed: unknown exception");
+    }
 }
 
 void SettingsDialog::readBackAndApply() {
     if (!mPopulated) return;
-    captureCheckBoxStates();
     for (const auto& tag : mTags) Engine::instance().setIgnoredRules(tag, mUnticked[tag]);
 
     // The shown language's choice, in case its change event went missing.

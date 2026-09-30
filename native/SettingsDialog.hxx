@@ -5,14 +5,19 @@
 #include <com/sun/star/awt/XControlContainer.hpp>
 #include <com/sun/star/awt/XControlModel.hpp>
 #include <com/sun/star/awt/XItemListener.hpp>
+#include <com/sun/star/awt/XKeyListener.hpp>
 #include <com/sun/star/awt/XListBox.hpp>
-#include <com/sun/star/awt/XUnitConversion.hpp>
+#include <com/sun/star/awt/XMouseListener.hpp>
 #include <com/sun/star/awt/XWindow.hpp>
+#include <com/sun/star/awt/grid/XGridControl.hpp>
+#include <com/sun/star/awt/grid/XGridRowSelection.hpp>
+#include <com/sun/star/awt/grid/XGridSelectionListener.hpp>
+#include <com/sun/star/awt/grid/XMutableGridDataModel.hpp>
 #include <com/sun/star/beans/XPropertySet.hpp>
 #include <com/sun/star/container/XNameContainer.hpp>
 #include <com/sun/star/lang/XServiceInfo.hpp>
 #include <com/sun/star/uno/XComponentContext.hpp>
-#include <cppuhelper/implbase3.hxx>
+#include <cppuhelper/implbase6.hxx>
 #include <rtl/ustring.hxx>
 
 #include <initializer_list>
@@ -24,9 +29,12 @@
 namespace divvun {
 
 class SettingsDialog
-    : public ::cppu::WeakImplHelper3<
+    : public ::cppu::WeakImplHelper6<
         ::com::sun::star::awt::XContainerWindowEventHandler,
         ::com::sun::star::awt::XItemListener,
+        ::com::sun::star::awt::XMouseListener,
+        ::com::sun::star::awt::XKeyListener,
+        ::com::sun::star::awt::grid::XGridSelectionListener,
         ::com::sun::star::lang::XServiceInfo>
 {
 public:
@@ -48,6 +56,18 @@ public:
 
     // XItemListener: the language and feedback language dropdowns.
     virtual void SAL_CALL itemStateChanged(const ::com::sun::star::awt::ItemEvent& event) override;
+
+    // XMouseListener, XKeyListener: ticking categories in the grid.
+    virtual void SAL_CALL mousePressed(const ::com::sun::star::awt::MouseEvent& event) override;
+    virtual void SAL_CALL mouseReleased(const ::com::sun::star::awt::MouseEvent&) override {}
+    virtual void SAL_CALL mouseEntered(const ::com::sun::star::awt::MouseEvent&) override {}
+    virtual void SAL_CALL mouseExited(const ::com::sun::star::awt::MouseEvent&) override {}
+    virtual void SAL_CALL keyPressed(const ::com::sun::star::awt::KeyEvent& event) override;
+    virtual void SAL_CALL keyReleased(const ::com::sun::star::awt::KeyEvent&) override {}
+
+    // XGridSelectionListener: shows the selected category's full title.
+    virtual void SAL_CALL selectionChanged(const ::com::sun::star::awt::grid::GridSelectionEvent& event) override;
+
     virtual void SAL_CALL disposing(const ::com::sun::star::lang::EventObject& event) override;
 
     static constexpr const char* IMPL_NAME = "no.divvun.SettingsDialog";
@@ -60,11 +80,12 @@ public:
     create(const ::com::sun::star::uno::Reference<::com::sun::star::uno::XComponentContext>& ctx);
 
 private:
-    // One checkbox per distinct category title: bundles give several
+    // One grid row per distinct category title: bundles give several
     // categories the same title, and separate rows for them are
     // indistinguishable.
-    struct CheckBoxRef {
+    struct CategoryRow {
         std::string tag;
+        std::string title;
         std::vector<std::string> categoryIds;
     };
 
@@ -74,12 +95,11 @@ private:
     ::com::sun::star::uno::Sequence<::rtl::OUString> feedbackItemsFor(const std::string& tag, sal_Int16& selected);
     void showFeedbackFor(const std::string& tag);
     std::string titleLocale(const std::string& tag) const;
-    void buildCheckBoxes(const std::string& tag);
-    void layoutCheckBoxes(const std::vector<std::string>& names,
-                          const std::vector<std::string>& titles);
-    sal_Int32 measureHeight(const std::string& name, const std::string& title, sal_Int32 width) const;
-    void captureCheckBoxStates();
-    void removeCheckBoxes(const std::string& tag);
+    void addGrid(sal_Int32 x, sal_Int32 y, sal_Int32 w, sal_Int32 h);
+    void fillGrid(const std::string& tag);
+    bool isTicked(const CategoryRow& row) const;
+    void toggleRow(sal_Int32 row);
+    void showTitle(sal_Int32 row);
 
     void addModel(const ::com::sun::star::uno::Reference<::com::sun::star::awt::XControlModel>& dialogModel,
                   const char* modelService,
@@ -90,9 +110,10 @@ private:
     ::com::sun::star::uno::Reference<::com::sun::star::uno::XComponentContext> mCtx;
     ::com::sun::star::uno::Reference<::com::sun::star::awt::XControlContainer> mContainer;
     ::com::sun::star::uno::Reference<::com::sun::star::awt::XControlModel> mDialogModel;
-    ::com::sun::star::uno::Reference<::com::sun::star::awt::XUnitConversion> mUnits;
     ::com::sun::star::uno::Reference<::com::sun::star::awt::XListBox> mLanguageBox;
     ::com::sun::star::uno::Reference<::com::sun::star::awt::XListBox> mFeedbackBox;
+    ::com::sun::star::uno::Reference<::com::sun::star::awt::grid::XGridControl> mGrid;
+    ::com::sun::star::uno::Reference<::com::sun::star::awt::grid::XMutableGridDataModel> mGridData;
     // LibreOffice's UI language, which the page's own text is shown in.
     std::string mUiLocale;
     std::vector<std::string> mTags;
@@ -100,14 +121,12 @@ private:
     // language: "" for the text's own, Engine::kSameAsUi, or a locale code.
     std::vector<std::string> mFeedbackCodes;
     std::map<std::string, std::string> mFeedbackByTag;
-    std::map<std::string, std::vector<std::string>> mCheckBoxNamesByTag;
-    std::map<std::string, CheckBoxRef> mCheckBoxByName;
+    // The grid's rows, for the shown language.
+    std::vector<CategoryRow> mRows;
     // Unticked category ids per tag, kept per category rather than per
-    // checkbox so they survive rebuilds that regroup the titles.
+    // row so they survive rebuilds that regroup the titles.
     std::map<std::string, std::set<std::string>> mUnticked;
     size_t mLanguageIndex = 0;
-    sal_Int32 mCheckBoxTop = 0;
-    unsigned mGeneration = 0;
     bool mRefreshingFeedback = false;
     bool mPopulated = false;
 };
