@@ -90,7 +90,9 @@ try {
         'SettingsDialog.cxx',
         'Engine.cxx',
         'RuntimeBridge.cxx',
-        'Platform.cxx'
+        'Platform.cxx',
+        'UiLocale.cxx',
+        'Strings.cxx'
     )
 
     $objs = @()

@@ -1,6 +1,7 @@
 #include "DivvunSpellChecker.hxx"
 #include "Engine.hxx"
 #include "Platform.hxx"
+#include "UiLocale.hxx"
 
 #include <com/sun/star/linguistic2/SpellFailure.hpp>
 #include <rtl/ustring.hxx>
@@ -140,8 +141,9 @@ void SAL_CALL DivvunSpellChecker::initialize(const uno::Sequence<uno::Any>& /*ar
 }
 
 uno::Reference<uno::XInterface> SAL_CALL DivvunSpellChecker::create(
-    const uno::Reference<uno::XComponentContext>& /*ctx*/)
+    const uno::Reference<uno::XComponentContext>& ctx)
 {
+    publishUiLocale(ctx);
     return static_cast<cppu::OWeakObject*>(new DivvunSpellChecker());
 }
 

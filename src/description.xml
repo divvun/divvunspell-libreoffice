@@ -3,6 +3,7 @@
   <identifier value="no.divvun.DivvunSpell"/>
   <version value="0.5.0"/>
   <display-name>
+    <!-- Translations: one <name lang="..."> per UI language. -->
     <name lang="en">DivvunSpell</name>
   </display-name>
 </description>

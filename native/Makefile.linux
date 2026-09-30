@@ -54,7 +54,7 @@ LDFLAGS = -shared \
 # and don't add libs based on a list derived that way.
 RUNTIME_LIBS = -lpthread -ldl -lm -lrt -lstdc++
 
-SRCS = component.cxx DivvunProofreader.cxx DivvunSpellChecker.cxx SettingsDialog.cxx Engine.cxx RuntimeBridge.cxx Platform.cxx
+SRCS = component.cxx DivvunProofreader.cxx DivvunSpellChecker.cxx SettingsDialog.cxx Engine.cxx RuntimeBridge.cxx Platform.cxx UiLocale.cxx Strings.cxx
 OBJS = $(SRCS:.cxx=.o)
 
 TARGET = divvunspell.uno.so

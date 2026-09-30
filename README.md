@@ -12,6 +12,14 @@ There's no way of installing the OXT automatically using Divvun Manager, it must
 
 The data used in the listing can be found [here](docs/index.md).
 
+## Translating
+
+The settings page follows LibreOffice's user interface language, falling back to English. To add a language:
+
+- `native/Strings.cxx`: copy the `en` block in the table and translate its strings and language names.
+- `src/registry/data/org/openoffice/Office/OptionsDialog.xcu`: add a `<value xml:lang="...">` to the `Label` of the Options tree entry.
+- `src/description.xml`: add a `<name lang="...">` to `display-name` for the Extension Manager.
+
 ## License
 
 The repository for `divvunspell-libreoffice` is licensed under either of

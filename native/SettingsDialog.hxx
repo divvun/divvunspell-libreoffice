@@ -5,6 +5,8 @@
 #include <com/sun/star/awt/XControlContainer.hpp>
 #include <com/sun/star/awt/XControlModel.hpp>
 #include <com/sun/star/awt/XItemListener.hpp>
+#include <com/sun/star/awt/XListBox.hpp>
+#include <com/sun/star/awt/XUnitConversion.hpp>
 #include <com/sun/star/awt/XWindow.hpp>
 #include <com/sun/star/beans/XPropertySet.hpp>
 #include <com/sun/star/container/XNameContainer.hpp>
@@ -15,6 +17,7 @@
 
 #include <initializer_list>
 #include <map>
+#include <set>
 #include <string>
 #include <vector>
 
@@ -43,7 +46,7 @@ public:
         const ::rtl::OUString& methodName) override;
     virtual ::com::sun::star::uno::Sequence<::rtl::OUString> SAL_CALL getSupportedMethodNames() override;
 
-    // XItemListener: the language dropdown.
+    // XItemListener: the language and feedback language dropdowns.
     virtual void SAL_CALL itemStateChanged(const ::com::sun::star::awt::ItemEvent& event) override;
     virtual void SAL_CALL disposing(const ::com::sun::star::lang::EventObject& event) override;
 
@@ -66,8 +69,17 @@ private:
     };
 
     void populate(const ::com::sun::star::uno::Reference<::com::sun::star::awt::XWindow>& window);
-    void readBackAndApply(const ::com::sun::star::uno::Reference<::com::sun::star::awt::XWindow>& window);
+    void readBackAndApply();
     void showLanguage(size_t index);
+    ::com::sun::star::uno::Sequence<::rtl::OUString> feedbackItemsFor(const std::string& tag, sal_Int16& selected);
+    void showFeedbackFor(const std::string& tag);
+    std::string titleLocale(const std::string& tag) const;
+    void buildCheckBoxes(const std::string& tag);
+    void layoutCheckBoxes(const std::vector<std::string>& names,
+                          const std::vector<std::string>& titles);
+    sal_Int32 measureHeight(const std::string& name, const std::string& title, sal_Int32 width) const;
+    void captureCheckBoxStates();
+    void removeCheckBoxes(const std::string& tag);
 
     void addModel(const ::com::sun::star::uno::Reference<::com::sun::star::awt::XControlModel>& dialogModel,
                   const char* modelService,
@@ -77,10 +89,26 @@ private:
 
     ::com::sun::star::uno::Reference<::com::sun::star::uno::XComponentContext> mCtx;
     ::com::sun::star::uno::Reference<::com::sun::star::awt::XControlContainer> mContainer;
+    ::com::sun::star::uno::Reference<::com::sun::star::awt::XControlModel> mDialogModel;
+    ::com::sun::star::uno::Reference<::com::sun::star::awt::XUnitConversion> mUnits;
+    ::com::sun::star::uno::Reference<::com::sun::star::awt::XListBox> mLanguageBox;
+    ::com::sun::star::uno::Reference<::com::sun::star::awt::XListBox> mFeedbackBox;
+    // LibreOffice's UI language, which the page's own text is shown in.
+    std::string mUiLocale;
     std::vector<std::string> mTags;
+    // Feedback choices listed for the shown language, and the choice per
+    // language: "" for the text's own, Engine::kSameAsUi, or a locale code.
     std::vector<std::string> mFeedbackCodes;
+    std::map<std::string, std::string> mFeedbackByTag;
     std::map<std::string, std::vector<std::string>> mCheckBoxNamesByTag;
     std::map<std::string, CheckBoxRef> mCheckBoxByName;
+    // Unticked category ids per tag, kept per category rather than per
+    // checkbox so they survive rebuilds that regroup the titles.
+    std::map<std::string, std::set<std::string>> mUnticked;
+    size_t mLanguageIndex = 0;
+    sal_Int32 mCheckBoxTop = 0;
+    unsigned mGeneration = 0;
+    bool mRefreshingFeedback = false;
     bool mPopulated = false;
 };
 

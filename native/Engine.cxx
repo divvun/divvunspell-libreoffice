@@ -5,6 +5,7 @@
 #include <nlohmann/json.hpp>
 
 #include <algorithm>
+#include <cctype>
 #include <cstdlib>
 #include <filesystem>
 #include <fstream>
@@ -24,6 +25,14 @@ std::string toBcp47Tag(std::string s) {
 std::string baseTag(const std::string& tag) {
     auto pos = tag.find('-');
     return pos == std::string::npos ? tag : tag.substr(0, pos);
+}
+
+// Lower-cased, '-'-separated, for comparing locale tags.
+std::string normalizedTag(std::string s) {
+    std::replace(s.begin(), s.end(), '_', '-');
+    std::transform(s.begin(), s.end(), s.begin(),
+                   [](unsigned char c) { return static_cast<char>(std::tolower(c)); });
+    return s;
 }
 
 std::string truncatedForLog(std::string_view s, size_t max = 1000) {
@@ -209,12 +218,13 @@ std::string Engine::resolveTag(const std::string& tag) const {
     return baseTag(tag);
 }
 
-std::string Engine::buildConfigJsonLocked(const std::string& tag) const {
+std::string Engine::buildConfigJsonLocked(const std::string& tag) {
     nlohmann::json suggest = { {"encoding", "utf-16"} };
     // Messages in the user's chosen language, else the checked language; the
     // runtime falls back to "en" and then any loaded bundle on its own.
     auto locales = nlohmann::json::array();
-    if (!mMessageLocale.empty() && mMessageLocale != tag) locales.push_back(mMessageLocale);
+    const auto messages = effectiveMessageLocaleLocked(tag, messageLocaleLocked(tag));
+    if (messages != tag) locales.push_back(messages);
     locales.push_back(tag);
     suggest["locales"] = locales;
     auto it = mIgnoredByTag.find(tag);
@@ -230,6 +240,15 @@ std::string Engine::buildConfigJsonLocked(const std::string& tag) const {
 void Engine::dropPipelineForTagLocked(const std::string& tag) {
     mPipelines.erase(tag);
     mSpellCache.erase(tag);
+}
+
+// Settings are kept per base tag, but a bundle filed under a full tag gets
+// its pipeline keyed by that.
+void Engine::dropPipelinesForBaseTagLocked(const std::string& base) {
+    for (auto it = mPipelines.begin(); it != mPipelines.end();) {
+        if (baseTag(it->first) == base) it = mPipelines.erase(it);
+        else ++it;
+    }
 }
 
 void Engine::dropAllPipelinesLocked() {
@@ -436,20 +455,95 @@ void Engine::resetIgnoredRules() {
     logLine("Engine: ignore rules reset");
 }
 
-std::string Engine::messageLocale() const {
-    std::lock_guard<std::mutex> lk(mLock);
-    return mMessageLocale;
+std::string Engine::messageLocaleLocked(const std::string& tag) const {
+    auto it = mMessageLocaleByTag.find(baseTag(tag));
+    return it == mMessageLocaleByTag.end() ? std::string{} : it->second;
 }
 
-void Engine::setMessageLocale(const std::string& locale) {
+std::string Engine::messageLocale(const std::string& tag) const {
+    std::lock_guard<std::mutex> lk(mLock);
+    return messageLocaleLocked(tag);
+}
+
+void Engine::setMessageLocale(const std::string& tag, const std::string& locale) {
+    const auto base = baseTag(tag);
     {
         std::lock_guard<std::mutex> lk(mLock);
-        if (mMessageLocale == locale) return;
-        mMessageLocale = locale;
-        dropAllPipelinesLocked();
+        if (messageLocaleLocked(base) == locale) return;
+        if (locale.empty()) mMessageLocaleByTag.erase(base);
+        else mMessageLocaleByTag[base] = locale;
+        dropPipelinesForBaseTagLocked(base);
     }
     savePrefs();
-    logLine("Engine: message locale set to " + (locale.empty() ? std::string("<checked language>") : locale));
+    logLine("Engine: message locale for " + base + " set to "
+            + (locale.empty() ? std::string("<checked language>") : locale));
+}
+
+// Not cached when the bundle fails to load, so a later call can retry.
+const std::vector<std::string>& Engine::messageLocalesLocked(const std::string& resolvedTag) {
+    static const std::vector<std::string> kNone;
+    auto cached = mMessageLocalesCache.find(resolvedTag);
+    if (cached != mMessageLocalesCache.end()) return cached->second;
+
+    void* bundle = nullptr;
+    try {
+        bundle = ensureBundleLocked(resolvedTag);
+    } catch (const RuntimeError& e) {
+        logLine("Engine::messageLocales bundle load failed for " + resolvedTag + ": " + e.what());
+        return kNone;
+    }
+    if (!bundle) return kNone;
+
+    std::vector<std::string> result;
+    try {
+        auto parsed = nlohmann::json::parse(RuntimeBridge::instance().bundleMessageLocales(bundle));
+        if (parsed.is_array()) {
+            for (auto& v : parsed) if (v.is_string()) result.push_back(v.get<std::string>());
+        }
+    } catch (const std::exception& e) {
+        logLine("Engine::messageLocales failed for " + resolvedTag + ": " + e.what());
+    }
+    return mMessageLocalesCache[resolvedTag] = std::move(result);
+}
+
+std::vector<std::string> Engine::messageLocales(const std::string& tag) {
+    if (!ready()) return {};
+    std::lock_guard<std::mutex> lk(mLock);
+    return messageLocalesLocked(resolveTag(tag));
+}
+
+std::string Engine::effectiveMessageLocaleLocked(const std::string& resolvedTag, const std::string& setting) {
+    if (setting.empty()) return resolvedTag;
+    if (setting != kSameAsUi) return setting;
+    if (mUiLocale.empty()) return resolvedTag;
+
+    // An exact match first, then by language alone: "nb-NO" gets "nb".
+    const auto& available = messageLocalesLocked(resolvedTag);
+    const auto ui = normalizedTag(mUiLocale);
+    for (const auto& code : available) {
+        if (normalizedTag(code) == ui) return code;
+    }
+    for (const auto& code : available) {
+        if (baseTag(normalizedTag(code)) == baseTag(ui)) return code;
+    }
+    return resolvedTag;
+}
+
+std::string Engine::effectiveMessageLocale(const std::string& tag, const std::string& setting) {
+    std::lock_guard<std::mutex> lk(mLock);
+    return effectiveMessageLocaleLocked(resolveTag(tag), setting);
+}
+
+void Engine::setUiLocale(const std::string& locale) {
+    {
+        std::lock_guard<std::mutex> lk(mLock);
+        if (mUiLocale == locale) return;
+        mUiLocale = locale;
+        for (const auto& [base, setting] : mMessageLocaleByTag) {
+            if (setting == kSameAsUi) dropPipelinesForBaseTagLocked(base);
+        }
+    }
+    logLine("Engine: UI locale is " + (locale.empty() ? std::string("<unknown>") : locale));
 }
 
 std::string Engine::prefsPath() const {
@@ -463,8 +557,19 @@ void Engine::loadPrefs() {
         nlohmann::json j;
         f >> j;
         if (!j.is_object()) return;
-        if (j.contains("messageLocale") && j["messageLocale"].is_string()) {
-            mMessageLocale = j["messageLocale"].get<std::string>();
+        if (j.contains("messageLocale") && j["messageLocale"].is_object()) {
+            for (auto& [tag, code] : j["messageLocale"].items()) {
+                if (code.is_string() && !code.get<std::string>().empty())
+                    mMessageLocaleByTag[tag] = code.get<std::string>();
+            }
+        } else if (j.contains("messageLocale") && j["messageLocale"].is_string()) {
+            // Older files held one setting for every language. Keep it for
+            // each installed one: where a bundle lacks that locale the
+            // runtime falls back to the checked language, as it did then.
+            const auto code = j["messageLocale"].get<std::string>();
+            if (!code.empty()) {
+                for (const auto& [tag, _] : mBundlePaths) mMessageLocaleByTag[baseTag(tag)] = code;
+            }
         }
         if (!j.contains("ignored") || !j["ignored"].is_object()) return;
         for (auto& [tag, arr] : j["ignored"].items()) {
@@ -492,7 +597,7 @@ void Engine::savePrefs() const {
         for (const auto& [tag, set] : mIgnoredByTag) {
             ignored[tag] = std::vector<std::string>(set.begin(), set.end());
         }
-        j["messageLocale"] = mMessageLocale;
+        j["messageLocale"] = mMessageLocaleByTag;
     }
     j["ignored"] = ignored;
 
@@ -510,15 +615,44 @@ void Engine::savePrefs() const {
     if (mec) logLine("Engine::savePrefs rename failed: " + mec.message());
 }
 
+// Results are cached alongside single words. A bundle that can't do the
+// lookup is remembered, so it's logged once and then rejected like before;
+// a bundle that fails to load isn't, so a later call can retry.
+bool Engine::multiWordIsCorrect(const std::string& resolvedTag, const std::string& words) {
+    void* bundle = nullptr;
+    try {
+        std::lock_guard<std::mutex> lk(mLock);
+        if (mNoLexiconLookup.count(resolvedTag)) return false;
+        bundle = ensureBundleLocked(resolvedTag);
+    } catch (const RuntimeError& e) {
+        logLine("Engine::spellCheck bundle load failed for " + resolvedTag + ": " + e.what());
+        return false;
+    }
+    if (!bundle) return false;
+
+    bool valid = false;
+    try {
+        valid = RuntimeBridge::instance().bundleIsCorrect(bundle, words);
+    } catch (const RuntimeError& e) {
+        logLine("Engine::spellCheck lexicon lookup failed for " + resolvedTag + ": " + e.what());
+        std::lock_guard<std::mutex> lk(mLock);
+        mNoLexiconLookup.insert(resolvedTag);
+        return false;
+    }
+
+    {
+        std::lock_guard<std::mutex> lk(mLock);
+        mSpellCache[resolvedTag][words] = SpellResult{valid, {}};
+    }
+    if (traceEnabled()) {
+        trace("spellCheck[" + resolvedTag + "] lexicon word=" + words
+              + " valid=" + (valid ? "true" : "false"));
+    }
+    return valid;
+}
+
 SpellResult Engine::spellCheck(const std::string& tag, const std::string& word) {
     if (!ready() || word.empty()) return {true, {}};
-
-    // Writer re-checks a misspelled word joined with a neighbour ("okta okta")
-    // to find multi-word dictionary entries, and drops the underline when that
-    // comes back valid. The pipeline would only say every token in it is
-    // spelled correctly, which is not the same thing, and we have no
-    // multi-word entries, so reject these outright.
-    if (word.find_first_of(" \t\r\n") != std::string::npos) return {false, {}};
 
     auto resolved = resolveTag(tag);
 
@@ -537,6 +671,15 @@ SpellResult Engine::spellCheck(const std::string& tag, const std::string& word) 
         }
     }
     if (traceEnabled()) trace("spellCheck[" + resolved + "] CACHE MISS word=" + word);
+
+    // Writer re-checks a misspelled word joined with a neighbour ("okta okta")
+    // to find multi-word dictionary entries, and drops the underline when that
+    // comes back valid. The pipeline would only say every token in it is
+    // spelled correctly, which is not the same thing, so ask the speller's
+    // lexicon whether the whole string is one entry.
+    if (word.find_first_of(" \t\r\n") != std::string::npos) {
+        return {multiWordIsCorrect(resolved, word), {}};
+    }
 
     std::string responseJson;
     try {

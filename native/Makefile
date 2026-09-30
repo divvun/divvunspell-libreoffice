@@ -55,7 +55,7 @@ RUNTIME_FRAMEWORKS = -framework CoreFoundation \
                      -framework CoreGraphics
 RUNTIME_LIBS = -lc++ -lobjc -lsqlite3 -liconv
 
-SRCS = component.cxx DivvunProofreader.cxx DivvunSpellChecker.cxx SettingsDialog.cxx Engine.cxx RuntimeBridge.cxx Platform.cxx
+SRCS = component.cxx DivvunProofreader.cxx DivvunSpellChecker.cxx SettingsDialog.cxx Engine.cxx RuntimeBridge.cxx Platform.cxx UiLocale.cxx Strings.cxx
 OBJS = $(SRCS:.cxx=.o)
 
 TARGET = divvunspell.uno.dylib

@@ -85,6 +85,25 @@ std::string RuntimeBridge::bundleErrorPreferences(void* bundle, std::string_view
     return result;
 }
 
+std::string RuntimeBridge::bundleMessageLocales(void* bundle) {
+    clearError();
+    rust_slice_t out = DRT_Bundle_messageLocales(bundle, &errorCallbackTrampoline);
+    throwIfError();
+    std::string result;
+    if (out.data && out.len > 0) {
+        result.assign(static_cast<const char*>(out.data), out.len);
+    }
+    if (out.data) DRT_Vec_drop(out);
+    return result;
+}
+
+bool RuntimeBridge::bundleIsCorrect(void* bundle, std::string_view word) {
+    clearError();
+    bool ok = DRT_Bundle_isCorrect(bundle, toSlice(word), &errorCallbackTrampoline);
+    throwIfError();
+    return ok;
+}
+
 std::string RuntimeBridge::bundleMetadataAttr(std::string_view path, std::string_view key) {
     clearError();
     rust_slice_t out = DRT_Bundle_metadataAttr(toSlice(path), toSlice(key), &errorCallbackTrampoline);

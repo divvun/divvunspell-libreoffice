@@ -19,6 +19,11 @@ public:
     void* bundleCreate(void* bundle, std::string_view configJson);
     std::string pipelineForward(void* handle, std::string_view input);
     std::string bundleErrorPreferences(void* bundle, std::string_view localesJson);
+    // JSON array of the locales the bundle has grammar messages in.
+    std::string bundleMessageLocales(void* bundle);
+    // Whether the bundle's speller has the word as a single lexicon entry
+    // (a multi-word one when it contains a space), without the pipeline.
+    bool bundleIsCorrect(void* bundle, std::string_view word);
 
     // Archive metadata, by path: reads the box trailer only, so this is cheap
     // enough to call for every installed bundle during the startup scan.

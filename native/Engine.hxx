@@ -59,7 +59,8 @@ public:
 
     // Per-word spell check, with caching. Returns valid=true and empty suggestions
     // when the pipeline reports no spell-class error. Input containing
-    // whitespace is always invalid.
+    // whitespace is looked up in the speller's lexicon instead, and is valid
+    // only as a multi-word entry; it never gets suggestions.
     SpellResult spellCheck(const std::string& tag, const std::string& word);
 
     // Returns all locale tags + variants from locales.json expansion.
@@ -82,10 +83,24 @@ public:
     // Implements XProofreader.resetIgnoreRules(): clears every tag's set.
     void resetIgnoredRules();
 
-    // Language grammar messages are requested in. Empty means the checked
-    // language itself.
-    std::string messageLocale() const;
-    void setMessageLocale(const std::string& locale);
+    // Per proofing language, the language grammar messages are requested in:
+    // empty for the checked language itself, kSameAsUi for LibreOffice's UI
+    // language, or an explicit locale code.
+    static constexpr const char* kSameAsUi = "ui";
+    std::string messageLocale(const std::string& tag) const;
+    void setMessageLocale(const std::string& tag, const std::string& locale);
+
+    // Locales the tag's bundle has grammar messages in, sorted. Empty when it
+    // has none or fails to load.
+    std::vector<std::string> messageLocales(const std::string& tag);
+
+    // The locale the tag's messages come out in under the given setting:
+    // kSameAsUi becomes the bundle's match for the UI language, falling back
+    // to the checked language like an empty setting does.
+    std::string effectiveMessageLocale(const std::string& tag, const std::string& setting);
+
+    // LibreOffice's UI language, set from the UNO side; see UiLocale.hxx.
+    void setUiLocale(const std::string& locale);
 
 private:
     Engine();
@@ -95,11 +110,16 @@ private:
 
     void scanBundlePaths();
     void loadBundleLocales();
-    std::string buildConfigJsonLocked(const std::string& tag) const;
+    std::string buildConfigJsonLocked(const std::string& tag);
     void dropPipelineForTagLocked(const std::string& tag);
+    void dropPipelinesForBaseTagLocked(const std::string& base);
+    std::string messageLocaleLocked(const std::string& tag) const;
+    const std::vector<std::string>& messageLocalesLocked(const std::string& resolvedTag);
+    std::string effectiveMessageLocaleLocked(const std::string& resolvedTag, const std::string& setting);
     void dropAllPipelinesLocked();
     void dropSpellCacheLocked();
     void* ensureBundleLocked(const std::string& resolvedTag);
+    bool multiWordIsCorrect(const std::string& resolvedTag, const std::string& words);
 
     void loadPrefs();
     void savePrefs() const;
@@ -110,7 +130,9 @@ private:
     std::map<std::string, void*> mBundles;                       // tag -> bundle*
     std::map<std::string, std::shared_ptr<PipelineEntry>> mPipelines;
     std::map<std::string, std::set<std::string>> mIgnoredByTag;  // tag -> ignored category ids
-    std::string mMessageLocale;
+    std::map<std::string, std::string> mMessageLocaleByTag;      // base tag -> setting; absent = checked language
+    std::map<std::string, std::vector<std::string>> mMessageLocalesCache; // tag -> bundle's message locales
+    std::string mUiLocale;
 
     // Base tag -> full BCP-47 tags the bundle declares via its drb.locales
     // attribute. Authoritative when present: it comes from the language's own
@@ -122,6 +144,9 @@ private:
 
     // Per-tag word cache: tag -> word -> SpellResult.
     std::map<std::string, std::map<std::string, SpellResult>> mSpellCache;
+    // Tags whose bundle can't do a lexicon lookup (no cgspell), so multi-word
+    // input is rejected without asking again.
+    std::set<std::string> mNoLexiconLookup;
 
     // Cached error_preferences result keyed by (tag, uiLocale).
     std::map<std::pair<std::string, std::string>,

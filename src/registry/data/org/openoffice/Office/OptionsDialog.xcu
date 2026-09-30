@@ -8,6 +8,7 @@
             <value>no.divvun.DivvunSpell</value>
           </prop>
           <prop oor:name="Label">
+            <!-- Translations: one <value xml:lang="..."> per UI language. -->
             <value xml:lang="en-US">DivvunSpell</value>
           </prop>
           <prop oor:name="OptionsPage">

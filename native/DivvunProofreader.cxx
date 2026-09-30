@@ -2,6 +2,7 @@
 #include "Engine.hxx"
 #include "ErrorClass.hxx"
 #include "Platform.hxx"
+#include "UiLocale.hxx"
 
 #include <com/sun/star/linguistic2/ProofreadingResult.hpp>
 #include <com/sun/star/linguistic2/SingleProofreadingError.hpp>
@@ -215,8 +216,9 @@ void SAL_CALL DivvunProofreader::initialize(const uno::Sequence<uno::Any>& /*arg
 }
 
 uno::Reference<uno::XInterface> SAL_CALL DivvunProofreader::create(
-    const uno::Reference<uno::XComponentContext>& /*ctx*/)
+    const uno::Reference<uno::XComponentContext>& ctx)
 {
+    publishUiLocale(ctx);
     return static_cast<cppu::OWeakObject*>(new DivvunProofreader());
 }
 
